@@ -1,0 +1,590 @@
+INFO	Title	Acute Lymphoblastic Leukemia (ALL) Data Dictionary
+INFO	Name	all_v1.0
+INFO	Release Notes	<placeholder>
+INFO	Parent Data Model	pcdc_v1.8
+INFO	License	Creative Commons Attribution-NonCommercial 4.0 International License (https://creativecommons.org/licenses/by-nc/4.0/)
+INFO	D4CG Data Modeling Wiki	https://docs.pedscommons.org/
+INFO	Disease Consortium Information	https://commons.cri.uchicago.edu/pcdc/
+INFO	Description	Acute Lymphoblastic Leukemia (ALL) Data Dictionary
+INFO	Total Variables	120
+
+RowType	VariableName	DataType	Tier	VariableSource	VariableDescription	VariableCode	PermissibleValue	ValueSource	ValueDescription	ValueCode	ImplementationNotes	Mappings
+
+DD	Protocol
+TD	Subject Identifier
+TG	Will be included in every table
+VD	PCDC_SUBJECT_ID	String	Mandatory		PCDC Subject Identifier	C69256	_undefined_	_undefined_	_undefined_	_undefined_
+
+
+DD	Protocol
+TD	Subject Characteristics
+TG	One row per subject per study
+VD	HONEST_BROKER_SUBJECT_ID	String	Mandatory		Honest Broker Subject ID	C168949	_undefined_	_undefined_	_undefined_	_undefined_
+VD	DATA_CONTRIBUTOR_ID	Code	Mandatory		Data Contributor ID	C168950	_undefined_	_undefined_	_undefined_	_undefined_
+PD							COG		An identifier assigned to a data contributor.	C39353	
+VD	STUDY_ID	Code	Mandatory		Study Identifier	C83082	_undefined_	_undefined_	_undefined_	_undefined_
+PD							AALL0331		A sequence of characters used to identify, name, or characterize the study.	C178095	
+PD							AALL0232			C178065	
+PD							AALL0434			C178066	
+PD							AALL08B1			C178067	
+PD							AALL03B1			C178068	
+VD	AGE_AT_ENROLLMENT	Number	Mandatory		Age in Days at Enrollment	C168843	_undefined_	_undefined_	_undefined_	_undefined_
+VD	TREATMENT_ARM	Code	Mandatory		Assigned Treatment Arm by Intention-To-Treat	C15538	_undefined_	_undefined_	_undefined_	_undefined_
+VD	ENROLLED_STATUS	Code	Optional		Enrollment Status	C168298	_undefined_	_undefined_	_undefined_	_undefined_
+PD							Enrolled		The current status of the subject's enrollment.	C142715	Note: refers to if subject was enrolled in the study, or subject was not enrolled in the study but received treatment per the study's protocol.
+PD							Not Enrolled			C168929	
+
+
+DD	Protocol
+TD	Disease Phase Timing
+TG	One row per subject per disease phase(s)
+VD	DISEASE_PHASE	Code	Mandatory		Disease Phase	C168878	_undefined_	_undefined_	_undefined_	_undefined_
+PD							Initial Diagnosis		The stage or period of an individual's disease.	C156813	Note: Disease phase could be "Initial Diagnosis" phase, a "Relapse" phase, or a "Progression" phase.
+PD							Relapse			C38155	
+PD							Refractory			C38014	
+VD	DISEASE_PHASE_NUMBER	Number	Mandatory		Disease Phase Number	C173258	_undefined_	_undefined_	_undefined_	_undefined_
+VD	AGE_AT_DISEASE_PHASE	Number	Mandatory		Age in Days at Disease Phase	C168972	_undefined_	_undefined_	_undefined_	_undefined_
+VD	YEAR_AT_DISEASE_PHASE	Number	Mandatory		Year at Disease Phase	C168823	_undefined_	_undefined_	_undefined_	_undefined_
+
+
+DD	Protocol
+TD	Course Timing
+TG	One row per subject per course(s)
+VD	COURSE	Code	Mandatory		Protocol Treatment Course	C168807	_undefined_	_undefined_	_undefined_	_undefined_
+PD							Prephase		The type of protocol treatment course administered.	C168826	
+PD							Induction			C158876	
+PD							Intensification			C173105	
+PD							Consolidation			C15679	
+PD							Stem Cell Transplant Conditioning			C168794	
+PD							Maintenance			C15688	
+PD							Interim Maintenance			C178069	
+PD							Delayed Intensification			C178270	
+PD							Continuation			C123452	
+PD							Investigational Agent			C49135	
+VD	COURSE_NUMBER	Number	Mandatory		Course Number	C166235	_undefined_	_undefined_	_undefined_	_undefined_
+VD	AGE_AT_COURSE_START	Number	Mandatory		Age in Days at Course Start	C168850	_undefined_	_undefined_	_undefined_	_undefined_
+VD	AGE_AT_COURSE_END	Number	Mandatory		Age in Days at Course End	C168851	_undefined_	_undefined_	_undefined_	_undefined_
+
+
+DD	Protocol
+TD	Off Protocol Therapy/Study
+TG	One row per subject per off protocol therapy or off study per reason off
+VD	AGE_OFF	Number	Mandatory		Age in Days When Off Protocol Therapy or Study		_undefined_	_undefined_	_undefined_	_undefined_
+VD	DISEASE_PHASE	Code	Mandatory		Disease Phase	C168878	_undefined_	_undefined_	_undefined_	_undefined_
+PD							Initial Diagnosis		The stage or period of an individual's disease.	C156813	Note: Disease phase could be "Initial Diagnosis" phase, a "Relapse" phase, or a "Progression" phase.
+PD							Relapse			C38155	
+PD							Refractory			C38014	
+VD	DISEASE_PHASE_NUMBER	Number	Mandatory		Disease Phase Number	C173258	_undefined_	_undefined_	_undefined_	_undefined_
+VD	COURSE	Code	Mandatory		Protocol Treatment Course	C168807	_undefined_	_undefined_	_undefined_	_undefined_
+PD							Prephase		The type of protocol treatment course administered.	C168826	
+PD							Induction			C158876	
+PD							Intensification			C173105	
+PD							Consolidation			C158876	
+PD							Stem Cell Transplant Conditioning			C168794	
+PD							Maintenance			C15688	
+PD							Interim Maintenance			C178069	
+PD							Delayed Intensification			C178270	
+PD							Continuation			C123452	
+PD							Investigational Agent			C49135	
+VD	COURSE_NUMBER	Number	Mandatory		Course Number	C166235	_undefined_	_undefined_	_undefined_	_undefined_
+VD	OFF_TYPE	Code	Mandatory		Off Protocol Therapy or Study	C173256	_undefined_	_undefined_	_undefined_	_undefined_
+PD							Protocol Therapy		The code used to designate that the subject went off therapy or off the study.	C173257	
+PD							Study			C29851	
+VD	REASON_OFF	Code	Mandatory		Off Protocol Therapy or Study Reason	C93611	_undefined_	_undefined_	_undefined_	_undefined_
+PD							Death		A coded value specifying why the subject is removed from a study.	C93546	Note: If multiple reasons off, include one observation per reason off.
+PD							Lost to Follow-Up			C70740	
+PD							Completion of Follow-Up			C178071	
+PD							Completion of Planned Therapy			C168935	
+PD							Physician Decision			C48250	
+PD							Ineligible			C40412	
+PD							Withdrawal of Consent			C48271	
+PD							Subject/Guardian Refused Further tTeatment			C168934	
+PD							Subject Non-Compliance			C91752	
+PD							Failure to Attain Remission			C178072	
+PD							Relapse			C38155	
+PD							Adverse Event			C41331	
+PD							Secondary Malignancy Neoplasm			C4968	
+PD							Other			C17649	
+PD							Unknown			C17998	
+PD							Not Reported			C43234	
+VD	ANOTHER_STUDY	Code	Mandatory		Enrolled in Another Therapeutic Study After Off Study	C178073	_undefined_	_undefined_	_undefined_	_undefined_
+PD							No		The subject was enrolled in another therapeutic study after the off protocol study.	C49487	
+PD							Yes			C49488	
+PD							Unknown			C17998	
+PD							Not Reported			C43234	
+
+
+DD	Demographics
+TD	Demographics
+TG	One row per subject
+VD	SEX	Code	Mandatory		Sex	C28421	_undefined_	_undefined_	_undefined_	_undefined_
+PD							Male		The assemblage of physical properties or qualities by which male is distinguished from female; the physical difference between male and female; the distinguishing peculiarity of male or female.	C20197	
+PD							Female			C16576	
+PD							Unknown			C17998	
+PD							Not Reported			C43234	
+VD	RACE	Code	Mandatory		Race	C17049	_undefined_	_undefined_	_undefined_	_undefined_
+PD							American Indian or Alaska Native		An arbitrary classification of a taxonomic group that is a division of a species. It usually arises as a consequence of geographical isolation within a species and is characterized by shared heredity, physical attributes and behavior, and in the case of humans, by common history, nationality, or geographic distribution.	C41259	
+PD							Asian			C41260	
+PD							Black or African American			C16352	
+PD							Multiracial			C67109	
+PD							Native Hawaiian or Other Pacific Islander			C41219	
+PD							White			C41261	
+PD							Other			C17649	
+PD							Unknown			C17998	
+PD							Not Reported			C43234	
+VD	ETHNICITY	Code	Mandatory		Ethnicity	C16564	_undefined_	_undefined_	_undefined_	_undefined_
+PD							Hispanic or Latino		A social group characterized by a distinctive social and cultural tradition that is maintained from generation to generation. Members share a common history and origin and a sense of identification with the group. They have similar and distinctive features in their lifestyle habits and shared experiences. They often have a common genetic heritage which may be reflected in their experience of health and disease.	C17459	
+PD							Not Hispanic or Latino			C41222	
+PD							Unknown			C17998	
+PD							Not Reported			C43234	
+
+
+DD	Demographics
+TD	Medical History
+TG	One row per subject per prior medical history
+VD	MEDICAL_HISTORY	Code	Mandatory		Medical History		_undefined_	_undefined_	_undefined_	_undefined_
+PD							Trisomy 21			C43224	
+PD							Unknown			C17998	
+PD							Not Reported			C48660	
+
+
+DD	Demographics
+TD	Survival Characteristics
+TG	One row per subject per cause of death, per treatment type, per cause of death detail
+VD	AGE_AT_LKSS	Number	Mandatory		Age in Days at Last Known Survival Status	C168844	_undefined_	_undefined_	_undefined_	_undefined_
+VD	LKSS	Code	Mandatory		Last Known Survival Status	C168931	_undefined_	_undefined_	_undefined_	_undefined_
+PD							Alive		The individual's last known survival status.	C37987	
+PD							Dead			C28554	
+PD							Unknown			C17998	
+VD	LKSS_WITH_DISEASE	Code	Mandatory		Last Known Survival Status with Disease	C178074	_undefined_	_undefined_	_undefined_	_undefined_
+PD							No		The last know survival status of the individual with the disease.	C49487	
+PD							Yes			C49488	
+PD							Unknown			C17998	
+PD							Not Reported			C43234	
+VD	AGE_LOST_TO_FOLLOW_UP	Number	Mandatory		Age in Days When Lost to Follow-up	C172679	_undefined_	_undefined_	_undefined_	_undefined_
+VD	CAUSE_OF_DEATH	Code	Mandatory		Cause of Death	C81239	_undefined_	_undefined_	_undefined_	_undefined_
+PD							Disease Progression		The circumstance or condition that results in the death of a living being.	C168970	Note: If multiple causes of death, include one observation per cause of death.
+PD							Treatment-Related Mortality			C166165	
+PD							Secondary Malignancy			C4968	
+PD							Other			C17649	
+PD							Unknown			C17998	
+PD							Not Reported			C43234	
+VD	TRM_TYPE	Code	Mandatory		Treatment-Related Mortality Type	C173260	_undefined_	_undefined_	_undefined_	_undefined_
+PD							Stem Cell Transplant		The type of treatment related to the mortality of the subject.	C15431	Note: If multiple treatment types, include one observation per treatment type.
+PD							Other			C17649	
+PD							Unknown			C17998	
+PD							Not Reported			C43234	
+VD	CAUSE_OF_DEATH_DETAIL	Code	Optional		Cause of Death Detail	C168868	_undefined_	_undefined_	_undefined_	_undefined_
+PD							Hemorrhage		Specific details of the cause of death.	C26791	Note: If multiple cause of death details, include one observation per cause of death detail.
+PD							Bacterial Infection			C2890	
+PD							Viral Infection			C3439	
+PD							Fungal Infection			C3245	
+PD							Infection			C128320	
+PD							Immunotherapy-Related			C168874	
+PD							Sinusoidal Obstruction Syndrome			C26793	
+PD							Multi-Organ Failure			C75568	
+PD							Acute Respiratory Distress Syndrome			C3353	
+PD							Graft Versus Host Disease			C3063	
+PD							Other			C17649	
+PD							Unknown			C17998	
+PD							Not Reported			C43234	
+VD	CAUSE_OF_DEATH_RANKING	Code	Mandatory		Cause of Death Ranking	C168932	_undefined_	_undefined_	_undefined_	_undefined_
+PD							Primary		Assigning a weighted relevance to the cause of death.	C99531	Note: Contributory refers to additional cause of death, not necessarily the ordinal ranking of causes of death. There may be multiple secondary causes of death.
+PD							Contributory			C168948	
+PD							Unknown			C17998	
+PD							Not Reported			C43234	
+
+
+DD	Disease Attributes
+TD	Disease Characteristics
+TG	One row per subject per disease phase per disease site
+VD	DISEASE_PHASE	Code	Mandatory		Disease Phase	C168878	_undefined_	_undefined_	_undefined_	_undefined_
+PD							Initial Diagnosis		The stage or period of an individual's disease.	C156813	
+PD							Relapse			C38155	
+PD							Refractory			C38014	
+VD	DISEASE_PHASE_NUMBER	Number	Mandatory		Disease Phase Number	C173258	_undefined_	_undefined_	_undefined_	_undefined_
+VD	ALL_TYPE	Code	Mandatory		ALL Type	C3167	_undefined_	_undefined_	_undefined_	_undefined_
+PD							B-ALL		Leukemia with an acute onset, characterized by the presence of lymphoblasts in the bone marrow and the peripheral blood. It includes the acute B lymphoblastic leukemia and acute T lymphoblastic leukemia.	C8644	
+PD							T-ALL			C3183	
+PD							Acute Leukemia, ambiguous lineage (mixed or biphenotypic)			C7464	
+PD							Mixed Phenotype Acute Leukemia			C82179	
+VD	DISEASE_SITE	Code	Mandatory		Disease Involvement Site	C173263	_undefined_	_undefined_	_undefined_	_undefined_
+PD							Bone Marrow		The anatomic site of the disease.	C12431	Note: If multiple sites of disease involvement, include one observation per site.
+PD							Central Nervous System			C12438	
+PD							Testes			C12412	
+PD							Other			C17649	
+PD							Unknown			C17998	
+PD							Not Reported			C43234	
+VD	CNS_DISEASE_STATUS	Code	Mandatory		Central Nervous System Involvement Status	C116832	_undefined_	_undefined_	_undefined_	_undefined_
+PD							CNS1		The status of central nervous system leukemia at the time of diagnosis.	C116833	
+PD							CNS2			C116834	
+PD							CNS3			C116835	
+PD							CNS2a			C116836	
+PD							CNS2b			C116837	
+PD							CNS2c			C116838	
+PD							CNS3a			C116840	
+PD							CNS3b			C116841	
+PD							CNS3c			C116843	
+PD							Unknown			C17998	
+PD							Not Reported			C43234	
+VD	BULK_MED_MASS	Code	Optional		Bulky Mediastinal Mass	C178075	_undefined_	_undefined_	_undefined_	_undefined_
+PD							No		When the maximum width of a mass is equal or greater than one-third of the internal transverse diameter of the thorax at the level of T5/6 on a PA CXR. Bulk at an alternate site is defined as any mass measuring 10 cm or more by any imaging study.	C49487	
+PD							Yes			C49488	
+PD							Unknown			C17998	
+PD							Not Reported			C43234	
+VD	PRIOR_STEROIDS_WEEK	Code	Mandatory		Subject Received Steroids Within One Week Prior to Diagnosis of Disease Phase	C178076	_undefined_	_undefined_	_undefined_	_undefined_
+PD							No		The subject received steroids within one week prior to diagnosis of the disease phase.	C49487	
+PD							Yes			C49488	
+PD							Unknown			C17998	
+PD							Not Reported			C43234	
+VD	PRIOR_STEROIDS_MONTH	Code	Mandatory		Subject Received Steroids Within One Month Prior to Diagnosis of Disease Phase	C178077	_undefined_	_undefined_	_undefined_	_undefined_
+PD							No		The subject received steroids within one month prior to diagnosis of the disease phase.	C49487	
+PD							Yes			C49488	
+PD							Unknown			C17998	
+PD							Not Reported			C43234	
+
+
+DD	Testing
+TD	Vitals
+TG	One row per subject per vitals sign record
+VD	AGE_AT_VITALS	Number	Optional		Age in Days at Vitals	C154628	_undefined_	_undefined_	_undefined_	_undefined_
+VD	DISEASE_PHASE	Code	Optional		Disease Phase	C168878	_undefined_	_undefined_	_undefined_	_undefined_
+PD							Initial Diagnosis		The stage or period of an individual's disease.	C156813	Note: Disease phase could be "Initial Diagnosis" phase, a "Relapse" phase, or a "Progression" phase.
+PD							Relapse			C38155	
+PD							Refractory			C38014	
+VD	DISEASE_PHASE_NUMBER	Number	Optional		Disease Phase Number	C173258	_undefined_	_undefined_	_undefined_	_undefined_
+VD	COURSE	Code	Optional		Protocol Treatment Course	C168807	_undefined_	_undefined_	_undefined_	_undefined_
+PD							Prephase		The type of protocol treatment course administered.	C168826	
+PD							Induction			C158876	
+PD							Intensification			C173105	
+PD							Consolidation			C158876	
+PD							Stem Cell Transplant Conditioning			C168794	
+PD							Maintenance			C15688	
+PD							Interim Maintenance			C178069	
+PD							Delayed Intensification			C178270	
+PD							Continuation			C123452	
+PD							Investigational Agent			C49135	
+VD	COURSE_NUMBER	Number	Optional		Course Number	C166235	_undefined_	_undefined_	_undefined_	_undefined_
+VD	VITALS_TEST	Code	Optional		Vital Signs Measurement	C49672	_undefined_	_undefined_	_undefined_	_undefined_
+PD							Weight		The act of assessing an individual's current temperature, heart rate, respiratory rate, pulse oxygenation, and blood pressure.	C81328	
+PD							Height			C164634	
+VD	VITALS_RESULT	String	Optional		Vital Signs Result	C83108	_undefined_	_undefined_	_undefined_	_undefined_
+VD	VITALS_RESULT_NUMERIC	Number	Optional		Numeric Vitals Signs Result	C173268	_undefined_	_undefined_	_undefined_	_undefined_
+VD	VITALS_RESULT_UNIT	Code	Optional		Numeric Vitals Signs Result Unit	C49675	_undefined_	_undefined_	_undefined_	_undefined_
+PD							kg		The unit used to record and describe the result of a test investigating a vital sign.	C28252	
+PD							cm			C49668	
+PD							Unknown			C17998	
+PD							Not Reported			C43234	
+
+
+DD	Testing
+TD	Labs
+TG	One row per subject per lab value
+VD	AGE_AT_LAB	Number	Mandatory		Age in Days of Lab Test	C172691	_undefined_	_undefined_	_undefined_	_undefined_
+VD	LAB_CATEGORY	Code	Mandatory		Lab Test Category	C83017	_undefined_	_undefined_	_undefined_	_undefined_
+PD							Peripheral Blood Analysis		A classification of the laboratory test.	C173271	
+PD							Cerebrospinal Fluid Analysis			C173272	
+PD							Bone Marrow Analysis			C173273	
+PD							Unknown			C17998	
+PD							Not Reported			C43234	
+VD	LAB_TEST	Code	Mandatory		Lab Test	C117142	_undefined_	_undefined_	_undefined_	_undefined_
+PD							Platelets		A character or string that represents the full name of the laboratory assessment.	C51951	
+PD							RBC			C51946	
+PD							WBC			C51948	
+PD							Absolute Neutrophil Count			C63321	
+PD							Blasts			C74605	
+PD							Hemoglobin			C64848	
+VD	LAB_SPEC_TYPE	Code	Mandatory		Lab Specimen Type	C83315	_undefined_	_undefined_	_undefined_	_undefined_
+PD							Blood		The type of a material sample taken from a biological entity for laboratory testing.	C17610	
+PD							Cerebrospinal Fluid			C185194	
+PD							Bone Marrow			C164009	
+PD							Other			C17649	
+PD							Unknown			C17998	
+PD							Not Reported			C43234	
+VD	LAB_RESULT	String	Mandatory		Lab Test Result	C36292	_undefined_	_undefined_	_undefined_	_undefined_
+VD	LAB_RESULT_NUMERIC	Number	Mandatory		Numeric Lab Test Result	C70952	_undefined_	_undefined_	_undefined_	_undefined_
+VD	LAB_RESULT_UNIT	Code	Mandatory		Numeric Lab Test Result Unit	C173274	_undefined_	_undefined_	_undefined_	_undefined_
+PD							%		The numeric unit that expresses the lab result.	C48570	
+PD							count/mm3			C173275	
+PD							g/dL			C64783	
+PD							U/L			C67456	
+PD							mm/h			C67419	
+PD							mg/L			C64572	
+PD							Unknown			C17998	
+PD							Not Reported			C43234	
+VD	LAB_METHOD	Code	Mandatory		Lab Test Method	C83312	_undefined_	_undefined_	_undefined_	_undefined_
+PD							Flow Cytometry		A systematic course of action that is performed in order to complete a laboratory test.	C16585	
+PD							Morphology			C17943	
+PD							Other			C17649	
+PD							Unknown			C17998	
+PD							Not Reported			C43234	
+VD	BM_MORPHOLOGY	Code	Mandatory		Bone Marrow Blasts Morphology	C178079	_undefined_	_undefined_	_undefined_	_undefined_
+PD							M1 (less than 5% blasts)		The morphology characteristics of the bone marrow blasts.	C137698	
+PD							M2 (5-25% blasts)			C146709	
+PD							M3 (greater than 25% blasts)			C140330	
+VD	TRAUMATIC_TAP	Code	Mandatory		Lumbar Puncture Artifically Contaminated by Peripheral Blood	C168879	_undefined_	_undefined_	_undefined_	_undefined_
+PD							No		Contamination of a cerebrospinal fluid sample by red blood cells greater than 10/mm3.	C49487	Notes: Traumatic tap is defined as cerebrospinal fluid with greater than 10 RBC/mm3.
+PD							Yes			C49488	
+PD							Unknown			C17998	
+PD							Not Reported			C43234	
+
+
+DD	Testing
+TD	Molecular Analysis
+TG	One row per subject per molecular analysis modality (per molecular abnormality)
+VD	AGE_AT_MOLECULAR_ANALYSIS	Number	Mandatory		Age in Days at Molecular Analysis	C168848	_undefined_	_undefined_	_undefined_	_undefined_
+VD	MOLECULAR_ANALYSIS_METHOD	Code	Mandatory		Molecular Analysis Method	C158954	_undefined_	_undefined_	_undefined_	_undefined_
+PD							Karyotype		A request to enter the specific molecular analysis method used to detect abnormalities in the study.	C25215	
+PD							Fluorescence In Situ Hybridization			C17563	
+PD							Reverse Transcriptase-Polymerase Chain Reaction			C18136	
+PD							Next Generation Sequencing			C101293	
+PD							Other			C17649	
+PD							Unknown			C17998	
+PD							Not Reported			C43234	
+VD	MOLECULAR_ANALYSIS_SAMPLE_SOURCE	Code	Mandatory		Molecular Analysis Sample Source	C178080	_undefined_	_undefined_	_undefined_	_undefined_
+PD							Blood		The anatomic source of the molecular analysis sample.	C17610	
+PD							Bone Marrow			C164009	
+VD	KARYOTYPE_STATUS	Code	Mandatory		Karyotype Status	C168871	_undefined_	_undefined_	_undefined_	_undefined_
+PD							Normal Karyotype		The status of the subject's karyotype.	C173277	
+PD							Abnormal Karyotype			C168875	
+VD	ISCN	String	Mandatory		Karyotype ISCN String	C173278	_undefined_	_undefined_	_undefined_	_undefined_
+VD	NUM_CHROMOSOMES	Number	Mandatory		Number of Chromosomes on Karyotype	C177370	_undefined_	_undefined_	_undefined_	_undefined_
+VD	MOLECULAR_ABNORMALITY	Code	Mandatory		Molecular Abnormality	C3910	_undefined_	_undefined_	_undefined_	_undefined_
+PD							t(9;22)		A molecular or cytogenic abnormality which occurs in either human disease states or disease models.	C117116	Note: If multiple molecular abnormalities, include one observation per molecular abnormality.
+PD							t(1;19)			C128654	
+PD							t(12;21)(p13;q22)			C13727	
+PD							t(4;11)(q21;q23)			C36365	
+PD							MLL Rearrangement (Translocation)			C167144	
+PD							t(8;14)(q24;q32)			C36319	
+PD							Trisomy 10			C81729	
+PD							Trisomy 17			C37865	
+PD							Trisomy 4			C36530	
+PD							iAMP21			C124874	
+VD	CHROMOSOME	String	Mandatory		Chromosome	C13202	_undefined_	_undefined_	_undefined_	_undefined_
+VD	GENE1	String	Mandatory		Gene 1	C173595	_undefined_	_undefined_	_undefined_	_undefined_
+VD	GENE2	String	Mandatory		Gene 2	C171253	_undefined_	_undefined_	_undefined_	_undefined_
+VD	VARIANT_TYPE	Code	Mandatory		Variant Type	C97926	_undefined_	_undefined_	_undefined_	_undefined_
+PD							Translocation		A variation in or modification of the molecular sequence of a gene or gene product.	C3420	
+PD							Inversion			C45589	
+PD							Mutation			C45576	
+PD							Single Nucleotide Variant			C164674	
+PD							Copy Number Alteration			C40207	
+PD							Rearrangement			C21069	
+PD							Deletion			C19296	
+PD							Other			C17649	
+PD							Unknown			C17998	
+PD							Not Reported			C43234	
+VD	GENETIC_SEQ	String	Mandatory		Genetic Sequence	C97927	_undefined_	_undefined_	_undefined_	_undefined_
+VD	AA_MUTATION	String	Mandatory		Amino Acid Mutation	C97928	_undefined_	_undefined_	_undefined_	_undefined_
+VD	MOLECULAR_ABNORMALITY_RESULT	Code	Mandatory		Molecular Abnormality Result	C173596	_undefined_	_undefined_	_undefined_	_undefined_
+PD							Positive		An indicator for whether a molecular analysis procedure was performed and whether the assay detected a molecular abnormality.	C38758	Note: This variable indicates the result of testing for the molecular abnormality listed in MOLECULAR_ABNORMALITY
+PD							Negative			C38757	
+PD							Not Done			C49484	
+PD							Unknown			C17998	
+PD							Not Reported			C43234	
+VD	DNA_INDEX_NUMERIC	Number	Mandatory		Numeric DNA Index	C86972	_undefined_	_undefined_	_undefined_	_undefined_
+VD	TRANSLOCATION_STATUS	Code	Mandatory		Translocation Status	C63326	_undefined_	_undefined_	_undefined_	_undefined_
+PD							Balanced		The finding of the chromosomal translocation analysis.	C6822	
+PD							Unbalanced			C6823	
+PD							Unknown			C17998	
+PD							Not Reported			C43234	
+
+
+DD	Treatment
+TD	Radiation Therapy
+TG	One row per subject per radiation therapy administration
+VD	AGE_AT_RT_START	Number	Mandatory		Age in Days at Start of Radiation Therapy	C172695	_undefined_	_undefined_	_undefined_	_undefined_
+VD	AGE_AT_RT_END	Number	Mandatory		Age in Days at End of Radiation Therapy	C172696	_undefined_	_undefined_	_undefined_	_undefined_
+VD	RT_SITE	Code	Mandatory		Radiation Therapy Site	C173281	_undefined_	_undefined_	_undefined_	_undefined_
+PD							Cranium		The anatomic site of the radiation therapy.	C12789	
+PD							Testes			C12412	
+PD							Unknown			C17998	
+PD							Not Reported			C43234	
+
+
+DD	Treatment
+TD	Stem Cell Transplant
+TG	One row per subject per stem cell transplant
+VD	AGE_AT_SCT	Number	Optional		Age in Days at Stem Cell Transplant	C168853	_undefined_	_undefined_	_undefined_	_undefined_
+VD	SCT_TYPE	Code	Optional		Stem Cell Transplant Type	C168864	_undefined_	_undefined_	_undefined_	_undefined_
+PD							Autologous			C16039	
+PD							Allogeneic			C46089	
+PD							Unknown			C17998	
+PD							Not Reported			C43234	
+VD	SCT_SOURCE	Code	Optional		Stem Cell Transplantation Source	C168864	_undefined_	_undefined_	_undefined_	_undefined_
+PD							Bone Marrow		Stem Cell Transplantion Type	C12431	
+PD							Peripheral Blood			C173496	
+PD							Cord Blood			C13300	
+PD							Other			C17649	
+PD							Unknown			C17998	
+PD							Not Reported			C43234	
+VD	SCT_DONOR_RELATIONSHIP	Code	Optional		Stem Cell Transplant Donor Relationship	C168870	_undefined_	_undefined_	_undefined_	_undefined_
+PD							Biological Sibling		The source of the stem cells for the stem cell transplant.	C100809	
+PD							Biological Parent			C166114	
+PD							Biological Relative			C71384	
+PD							Biologically Unrelated			C130053	
+PD							Unknown			C17998	
+PD							Not Reported			C43234	
+VD	HLA_MATCH	Code	Optional		HLA Match Status	C169009	_undefined_	_undefined_	_undefined_	_undefined_
+PD							Match		A process in which blood or tissue samples are analyzed to determine their human leukocyte antigen (HLA) profiles so that transplant materials can be transferred into a patient with the same or similar profile.	C129972	
+PD							Non-Match			C126298	
+PD							Unknown			C17998	
+PD							Not Reported			C43234	
+VD	NUMBER_HLA	Number	Optional		Number of Evaluated HLAs	C173301	_undefined_	_undefined_	_undefined_	_undefined_
+VD	NUMBER_MATCHES	Number	Optional		Number of Matched HLAs	C173302	_undefined_	_undefined_	_undefined_	_undefined_
+VD	SCT_CONDITIONING_TYPE	Code	Optional		Type of Stem Cell Transplant Conditioning Prior to Transplant	C169014	_undefined_	_undefined_	_undefined_	_undefined_
+PD							Myeloablative		Type of conditioning the subject received prior to stem-cell transplantation.	C131679	
+PD							Reduced Intensity Conditioning/Reduced Toxicity Conditioning			C116471	
+PD							Non-Myeloablative			C62714	
+PD							Other			C17649	
+PD							Unknown			C17998	
+PD							Not Reported			C43234	
+VD	SCT_TBI	Code	Mandatory		Total-Body Irradiation Prior to Stem Cell Transplant	C15350	_undefined_	_undefined_	_undefined_	_undefined_
+PD							No		A therapeutic procedure that involves the irradiation of the whole body with ionizing or non-ionizing radiation.	C49487	
+PD							Yes			C49488	
+PD							Unknown			C17998	
+PD							Not Reported			C43234	
+
+
+DD	Response
+TD	Minimal Residual Disease
+TG	One row per subject per mrd analysis method per mrd marker
+VD	AGE_AT_MRD_ASSESSMENT	Number	Mandatory		Age in Days at Minimal Residual Disease Assessment	C168855	_undefined_	_undefined_	_undefined_	_undefined_
+VD	MRD_METHOD	Code	Mandatory		Minimal Residual Disease Method	C168933	_undefined_	_undefined_	_undefined_	_undefined_
+PD							Flow Cytometry		Modality used to determine minimal residual disease.	C16585	
+PD							Molecular Real-Time Quantitative Polymerase Chain Reaction			C51962	
+PD							Next Generation Sequencing			C101293	
+VD	FLOW_CYTOMETRY_TYPE	Code	Mandatory		Flow Cytometry Type	C173732	_undefined_	_undefined_	_undefined_	_undefined_
+PD							Leukemia-Associated Immunophenotypes		The classification, nature or purpose for a flow cytometry assay.	C168812	
+PD							Unknown			C17998	
+PD							Not Reported			C43234	
+VD	MRD_RESULT	String	Mandatory		Minimal Residual Disease Result	C124433	_undefined_	_undefined_	_undefined_	_undefined_
+VD	MRD_RESULT_NUMERIC	Number	Mandatory		Numeric Minimal Residual Disease Result	C168951	_undefined_	_undefined_	_undefined_	_undefined_
+VD	MRD_RESULT_UNIT	Code	Mandatory		Numeric Minimal Residual Disease Result Unit	C173304	_undefined_	_undefined_	_undefined_	_undefined_
+PD							%		The unit of the minimal residual disease result.	C48570	
+PD							Unknown			C17998	
+PD							Not Reported			C43234	Note: Only fill in this variable if a numeric result is provided in MRD_RESULT_NUMERIC.
+VD	MRD_SENSITIVTY	Number	Mandatory		Minimal Residual Disease Method Sensitivity	C168957	_undefined_	_undefined_	_undefined_	_undefined_
+VD	MRD_SAMPLE_SOURCE	Code	Mandatory		Minimal Residual Disease Sample Source	C168958	_undefined_	_undefined_	_undefined_	_undefined_
+PD							Bone Marrow		Source of sample used for minimal residual disease assessment.	C164009	
+PD							Blood			C41067	
+PD							Other			C17649	
+PD							Unknown			C17998	
+PD							Not Reported			C43234	
+
+
+DD	Events
+TD	Adverse Events
+TG	One row per subject per adverse event per avn site per orthopedic procedure per pathogen per gvhd organ
+VD	AGE_AT_AE	Code	Mandatory		Age in Days at Onset Adverse Event	C172677	_undefined_	_undefined_	_undefined_	_undefined_
+VD	AE_CODE	String	Mandatory		Adverse Event Coded	C173313	_undefined_	_undefined_	_undefined_	_undefined_
+VD	AE_SYSTEM	Code	Mandatory		Adverse Event Grading System	C168872	_undefined_	_undefined_	_undefined_	_undefined_
+PD							CTCAE		The name of the system used to grade the adverse events.	C49704	
+PD							Balis Neuropathy Scale			C178081	
+PD							Other			C17649	
+PD							Unknown			C17998	
+PD							Not Reported			C43234	
+VD	AE_SYSTEM_VERSION	String	Mandatory		Adverse Event Grading System Version	C173314	_undefined_	_undefined_	_undefined_	_undefined_
+VD	AE_GRADE	Code	Mandatory		Adverse Event Severity Grade	C166200	_undefined_	_undefined_	_undefined_	_undefined_
+PD							Grade 1		A numeric value corresponding to the degree of severity of an adverse event.	C41338	
+PD							Grade 2			C41339	
+PD							Grade 3			C41340	
+PD							Grade 4			C41337	
+PD							Grade 5			C48275	
+PD							Unknown			C17998	
+PD							Not Reported			C43234	
+VD	AE_ATTRIBUTION	Code	Optional		Adverse Event Attribution to Product or Procedure	C41358	_undefined_	_undefined_	_undefined_	_undefined_
+PD							Definite		A specific identifiable level (defined qualitatively or quantitatively) of probability of adverse event being caused or associated with the product or procedure administration to a patient.	C53260	
+PD							Probable			C41357	
+PD							Possible			C53258	
+PD							Unlikely			C53257	
+PD							Unrelated			C53256	
+PD							Unknown			C17998	
+PD							Not Reported			C43234	
+VD	AVN_JOINT	Code	Optional		Avascular Necrosis Joint Involvement	C178082	_undefined_	_undefined_	_undefined_	_undefined_
+PD							Ankle (distal tibia, intrinsic ankle bones)		Death of bone tissue in a joint due to temporary or permanent interruption of blood flow.	C32078	Note: If multiple joints affected, include one observation per joint
+PD							Elbow (distal humerus, proximal radius, proximal ulna)			C32497	
+PD							Heel (calcaneus)			C161381	
+PD							Hip (proximal femur)			C32742	
+PD							Knee (distal femur, proximal tibia)			C32898	
+PD							Shoulder (proximal humerus)			C25203	
+PD							Wrist (distal radius, distal ulna, intrinsic wrist bones)			C33894	
+PD							Other			C17649	
+PD							Unknown			C17998	
+PD							Not Reported			C43234	
+VD	AVN_JOINT_LATERALITY	Code	Optional		Avascular Necrosis Joint Laterality	C178083	_undefined_	_undefined_	_undefined_	_undefined_
+PD							Left		A finding descriptive of the laterality of the avascular necrosis in the joints.	C25229	
+PD							Right			C25228	
+PD							Bilateral			C13332	
+PD							Midline			C81170	
+VD	AVN_METHOD	Code	Optional		Avascular Necrosis Method of Evaluation	C178084	_undefined_	_undefined_	_undefined_	_undefined_
+PD							Bone Scan		The method used to determine the diagnosis of the avascular necrosis.	C17646	
+PD							CT			C17204	
+PD							MRI (NMR)			C16809	
+PD							X-Ray			C38101	
+PD							Other			C17649	
+VD	ORTHOPEDIC_PROCEDURE	Code	Optional		Avascular Necrosis Orthopedic Procedures	C178085	_undefined_	_undefined_	_undefined_	_undefined_
+PD							Arthroplasty, Hemi/Resurfacing		Orthopedic procedures to repair avascular necrosis.	C178086	Note: If multiple procedures performed, include one observation per procedure
+PD							Arthroplasty, Total			C178087	
+PD							Bone Graft, Free Vascularized			C178088	
+PD							Bone Graft, Nonvascularized			C178089	
+PD							Chondroplasty			C178090	
+PD							Core Decompression			C157826	
+PD							Osteotomy			C51903	
+PD							Other			C17649	
+VD	AE_PATHOGEN	Code	Optional		Pathogen Causing Infection	C185665	_undefined_	_undefined_	_undefined_	_undefined_
+PD							Bacteria		The pathogen identified as the agent causing the adverse event.	C14187	Note: If multiple pathogens involved, include one observation per pathogen.
+PD							Virus			C14283	
+PD							Fungus			C14209	
+PD							Other			C17649	
+PD							Unknown			C17998	
+PD							Not Reported			C43234	
+VD	INFECTION_CLASSIFICATION	Code	Optional		Infection Site Classification	C178091	_undefined_	_undefined_	_undefined_	_undefined_
+PD							Clinically Documented		The type of evidence regarding the infection type.	C178092	
+PD							Microbiologically Documented Non-Sterile Site			C178093	
+PD							Microbiologically Documented Sterile Site			C178094	
+
+
+DD	Events
+TD	Secondary Malignant Neoplasm
+TG	One row per subject per secondary malignant neoplasm
+VD	AGE_AT_SMN	Number	Mandatory		Age in Days at Secondary Malignant Neoplasm	C168860	_undefined_	_undefined_	_undefined_	_undefined_
+VD	SMN_ICD_O_MORPH	String	Mandatory		SMN ICD-O Morphology Code	C168862	_undefined_	_undefined_	_undefined_	_undefined_
+VD	SMN_ICD_O_TOP	String	Mandatory		SMN ICD-O Topography Code	C168863	_undefined_	_undefined_	_undefined_	_undefined_
+
+
+DD	Treatment
+TD	Non-Protocol Therapy
+TG	One record per subject per non-protocol therapy
+VD	NPT_TIMING	Code	Optional		Non-Protocol Therapy Timing	C175038	_undefined_	_undefined_	_undefined_	_undefined_
+PD							After Study Completion		A description of the timing of when the non-protocol therapy was received.	C175040	
+VD	NPT_TYPE	Code	Optional		Type of Non-Protocol Therapy	C175041	_undefined_	_undefined_	_undefined_	_undefined_
+PD							Chemotherapy		The type of therapy that the patient received outside of the protocol.	C15632	Note: If multiple non-protocol therapies, include one observation per therapy.
+PD							Radiation Therapy			C15313	
+PD							Stem Cell Transplant			C15431	
+PD							Surgery			C17173	
+PD							Immunotherapy			C15262	
+PD							Other			C17649	
+
+
+DD	Disease Attributes
+TD	Histology
+TG	One row per subject per histologic assessment
+VD	AGE_AT_HIST_ASSESSMENT	Number	Optional		Age in Days at Histology Assessment	C175004	_undefined_	_undefined_	_undefined_	_undefined_
+VD	DISEASE_PHASE	Code	Optional		Disease Phase	C168878	_undefined_	_undefined_	_undefined_	_undefined_
+PD							Initial Diagnosis		The stage or period of an individual's disease.	C156813	
+PD							Relapse			C38155	
+PD							Refractory			C38014	
+VD	DISEASE_PHASE_NUMBER	Number	Optional		Disease Phase Number	C173258	_undefined_	_undefined_	_undefined_	_undefined_
+VD	COURSE	Code	Optional		Protocol Treatment Course	C168807	_undefined_	_undefined_	_undefined_	_undefined_
+PD							Prephase		The type of protocol treatment course administered.	C168826	
+PD							Induction			C158876	
+PD							Intensification			C173105	
+PD							Consolidation			C158876	
+PD							Stem Cell Transplant Conditioning			C168794	
+PD							Maintenance			C15688	
+PD							Interim Maintenance			C178069	
+PD							Delayed Intensification			C178270	
+PD							Continuation			C123452	
+PD							Investigational Agent			C49135	
+VD	COURSE_NUMBER	Number	Optional		Course Number	C166235	_undefined_	_undefined_	_undefined_	_undefined_
