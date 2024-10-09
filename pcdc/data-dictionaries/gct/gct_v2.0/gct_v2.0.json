@@ -2,19 +2,18 @@
     "meta": {
         "name": "gct_v2.0",
         "timestamp": "20241009",
-        "sheet_id": "1ePkD-21wWCokR1MClnMrSl0dpj-Dvgid0knn5jfYHCY",
-        "path": "backup/20241009/gct_v2.0.json"
+        "sheet_id": "1ePkD-21wWCokR1MClnMrSl0dpj-Dvgid0knn5jfYHCY"
     },
     "info": {
-        "title": "",
-        "name": "",
-        "release_notes": "",
-        "parent_data_model": "",
-        "license": "",
-        "wiki": "",
-        "consortium_info": "",
-        "description": "",
-        "total": ""
+        "title": "Germ Cell Tumors (GCT) Data Dictionary",
+        "name": "gct_v2.0",
+        "release_notes": "<placeholder>",
+        "parent_data_model": "pcdc_v1.8",
+        "license": "Creative Commons Attribution-NonCommercial 4.0 International License (https://creativecommons.org/licenses/by-nc/4.0/)",
+        "wiki": "https://docs.pedscommons.org/",
+        "consortium_info": "https://commons.cri.uchicago.edu/pcdc/",
+        "description": "Germ Cell Tumors (GCT) Data Dictionary",
+        "total": "157"
     },
     "domains": {
         "protocol": {
@@ -22,9 +21,9 @@
                 "PCDC_SUBJECT_ID": {
                     "type": "String",
                     "tier": "",
-                    "description": "ncit:C69256",
+                    "description": "A unique identifier for a subject in a study.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C69256"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -34,9 +33,9 @@
                 "HONEST_BROKER_SUBJECT_ID": {
                     "type": "String",
                     "tier": "",
-                    "description": "ncit:C168949",
+                    "description": "Subject identifier assigned by the honest broker.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C168949"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -44,9 +43,9 @@
                 "DATA_CONTRIBUTOR_ID": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:C168950",
+                    "description": "An identifier assigned to a data contributor.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C168950"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -54,9 +53,9 @@
                 "STUDY_ID": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:C83082",
+                    "description": "A sequence of characters used to identify, name, or characterize the study.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C83082"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -64,9 +63,9 @@
                 "AGE_AT_ENROLLMENT": {
                     "type": "Number",
                     "tier": "",
-                    "description": "ncit:C168843",
+                    "description": "Age of subject (in days) when the subject enrolled in the study.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C168843"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -74,9 +73,9 @@
                 "YEAR_AT_ENROLLMENT": {
                     "type": "Number",
                     "tier": "",
-                    "description": "ncit:C177353",
+                    "description": "The year at which a subject enrolled in a study.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C177353"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -84,9 +83,9 @@
                 "TREATMENT_ARM": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:C15538",
+                    "description": "A specific treatment plan within a clinical trial that describes the activities a subject will be involved in as he or she progresses through the study.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C15538"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -96,9 +95,9 @@
                 "DISEASE_PHASE": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:C168878",
+                    "description": "The stage or period of an individual's disease.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C168878"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -106,9 +105,9 @@
                 "DISEASE_PHASE_NUMBER": {
                     "type": "Number",
                     "tier": "",
-                    "description": "ncit:C173258",
+                    "description": "The number of the disease phase.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C173258"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -116,9 +115,9 @@
                 "AGE_AT_DISEASE_PHASE": {
                     "type": "Number",
                     "tier": "",
-                    "description": "ncit:C168972",
+                    "description": "Age in days when the diagnosis was made for the Disease Phase.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C168972"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -126,9 +125,9 @@
                 "YEAR_AT_DISEASE_PHASE": {
                     "type": "Number",
                     "tier": "",
-                    "description": "ncit:C168823",
+                    "description": "Year when the diagnosis was made for the Disease Phase.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C168823"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -140,9 +139,9 @@
                 "SEX": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:C28421",
+                    "description": "The assemblage of physical properties or qualities by which male is distinguished from female; the physical difference between male and female; the distinguishing peculiarity of male or female.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C28421"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -150,9 +149,9 @@
                 "RACE": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:C17049",
+                    "description": "An arbitrary classification of a taxonomic group that is a division of a species. It usually arises as a consequence of geographical isolation within a species and is characterized by shared heredity, physical attributes and behavior, and in the case of humans, by common history, nationality, or geographic distribution.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C17049"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -160,9 +159,9 @@
                 "ETHNICITY": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:C16564",
+                    "description": "A social group characterized by a distinctive social and cultural tradition that is maintained from generation to generation. Members share a common history and origin and a sense of identification with the group. They have similar and distinctive features in their lifestyle habits and shared experiences. They often have a common genetic heritage which may be reflected in their experience of health and disease.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C16564"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -172,9 +171,9 @@
                 "MEDICAL_HISTORY": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:C83118",
+                    "description": "The verbatim description of the medical history being reported.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C83118"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -184,7 +183,7 @@
                     "tier": "",
                     "description": "",
                     "codes": [
-                        "_undefined_"
+                        ""
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -194,9 +193,9 @@
                 "AGE_AT_LKSS": {
                     "type": "Number",
                     "tier": "",
-                    "description": "ncit:C168844",
+                    "description": "Age of subject (in days) at the last known survival status.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C168844"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -204,9 +203,9 @@
                 "DISEASE_PHASE": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:C168878",
+                    "description": "The stage or period of an individual's disease.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C168878"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -214,9 +213,9 @@
                 "DISEASE_PHASE_NUMBER": {
                     "type": "Number",
                     "tier": "",
-                    "description": "ncit:C173258",
+                    "description": "The number of the disease phase.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C173258"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -224,9 +223,9 @@
                 "LKSS": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:C168931",
+                    "description": "The individual's last known survival status.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C168931"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -234,9 +233,9 @@
                 "CAUSE_OF_DEATH": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:C81239",
+                    "description": "The circumstance or condition that results in the death of a living being.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C81239"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -248,9 +247,9 @@
                 "DISEASE_PHASE": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:C168878",
+                    "description": "The stage or period of an individual's disease.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C168878"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -258,9 +257,9 @@
                 "DISEASE_PHASE_NUMBER": {
                     "type": "Number",
                     "tier": "",
-                    "description": "ncit:C173258",
+                    "description": "The number of the disease phase.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C173258"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -268,9 +267,9 @@
                 "IGCCC_RISK_GROUP": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:C111073",
+                    "description": "A risk classification system for malignant germ cell tumors developed by the International Germ Cell Cancer Collaborative Group.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C111073"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -278,9 +277,9 @@
                 "MAGIC_RISK_GROUP": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:C177316",
+                    "description": "A risk classification system for extracranial, malignant, pediatric germ cell tumors.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C177316"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -288,9 +287,9 @@
                 "DETECTION_METHOD": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:C173262",
+                    "description": "The method used to detect the extent of the disease involvement.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C173262"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -300,9 +299,9 @@
                 "AGE_AT_TUMOR_ASSESSMENT": {
                     "type": "Number",
                     "tier": "",
-                    "description": "ncit:C174997",
+                    "description": "Age of subject (in days) at tumor assessment.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C174997"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -310,9 +309,9 @@
                 "DISEASE_PHASE": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:C168878",
+                    "description": "The stage or period of an individual's disease.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C168878"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -320,9 +319,9 @@
                 "DISEASE_PHASE_NUMBER": {
                     "type": "Number",
                     "tier": "",
-                    "description": "ncit:C173258",
+                    "description": "The number of the disease phase.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C173258"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -330,9 +329,9 @@
                 "TUMOR_DETECTION_METHOD": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:C117438",
+                    "description": "The technique used to administer the tumor identification assessment.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C117438"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -340,9 +339,9 @@
                 "TUMOR_CLASSIFICATION": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:C174459",
+                    "description": "The classification of a tumor based primarily on histopathological characteristics.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C174459"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -350,9 +349,9 @@
                 "TUMOR_SITE": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:C157120",
+                    "description": "The anatomic site of the tumor.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C157120"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -360,9 +359,9 @@
                 "TUMOR_LATERALITY": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:C119931",
+                    "description": "A qualifier for the side of the body the tumor findings assessment is performed.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C119931"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -370,9 +369,9 @@
                 "NODAL_INVOLVEMENT": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:C36297",
+                    "description": "A finding indicating that a malignant neoplasm has spread to regional lymph nodes.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C36297"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -380,9 +379,9 @@
                 "NODAL_SITE": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:C177358",
+                    "description": "The anatomic site of a tumor node.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C177358"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -392,9 +391,9 @@
                 "AGE_AT_STAGING": {
                     "type": "Number",
                     "tier": "",
-                    "description": "ncit:C177359",
+                    "description": "Age of subject (in days) at the time of the staging assessment.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C177359"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -402,9 +401,9 @@
                 "DISEASE_PHASE": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:C168878",
+                    "description": "The stage or period of an individual's disease.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C168878"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -412,9 +411,9 @@
                 "DISEASE_PHASE_NUMBER": {
                     "type": "Number",
                     "tier": "",
-                    "description": "ncit:C173258",
+                    "description": "The number of the disease phase.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C173258"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -422,9 +421,9 @@
                 "STAGE_SYSTEM": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:C18004",
+                    "description": "A systematic method for clinicopathologic evaluation of tumors.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C18004"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -432,9 +431,9 @@
                 "STAGE": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:C16899",
+                    "description": "The extent of a cancer in the body. Staging is usually based on the size of the tumor, whether lymph nodes contain cancer, and whether the cancer has spread from the original site to other parts of the body.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C16899"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -444,9 +443,9 @@
                 "AGE_AT_HIST_ASSESSMENT": {
                     "type": "Number",
                     "tier": "",
-                    "description": "ncit:C175004",
+                    "description": "Age of subject (in days) at histology assessment.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C175004"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -454,9 +453,9 @@
                 "DISEASE_PHASE": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:168878",
+                    "description": "The stage or period of an individual's disease.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:168878"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -464,9 +463,9 @@
                 "DISEASE_PHASE_NUMBER": {
                     "type": "Number",
                     "tier": "",
-                    "description": "ncit:173258",
+                    "description": "The number of the disease phase.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:173258"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -474,9 +473,9 @@
                 "HIST_ASSESSMENT_REVIEW": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:C177360",
+                    "description": "The name of the institution or  central histological assessment.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C177360"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -484,9 +483,9 @@
                 "HISTOLOGY": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:16681",
+                    "description": "The study of the structure of the cells and their arrangement to constitute tissues and, finally, the association among these to form organs. In pathology, the microscopic process of identifying normal and abnormal morphologic characteristics in tissues, by employing various cytochemical and immunocytochemical stains.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:16681"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -494,9 +493,9 @@
                 "HISTOLOGY_RESULT": {
                     "type": "String",
                     "tier": "",
-                    "description": "ncit:C166246",
+                    "description": "The percentage of tumor tissue in a sample.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C166246"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -504,9 +503,9 @@
                 "HISTOLOGY_RESULT_NUMERIC": {
                     "type": "Number",
                     "tier": "",
-                    "description": "ncit:C177361",
+                    "description": "The numeric value for the histology result.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C177361"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -514,9 +513,9 @@
                 "HISTOLOGY_RESULT_UNIT": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:C177362",
+                    "description": "The unit being used as the measurement for the histology test.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C177362"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -524,9 +523,9 @@
                 "HIST_ICD_O_MORPH": {
                     "type": "String",
                     "tier": "",
-                    "description": "ncit:C176985",
+                    "description": "Codes for the histologic type of the tumor being reported using ICD-O.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C176985"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -534,9 +533,9 @@
                 "HISTOLOGY_GRADE": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:C18000",
+                    "description": "The degree of abnormality of cancer cells, a measure of differentiation, the extent to which cancer cells are similar in appearance and function to healthy cells of the same tissue type. The degree of differentiation often relates to the clinical behavior of the particular tumor. Based on the microscopic findings, tumor grade is commonly described by one of four degrees of severity. Histopathologic grade of a tumor may be used to plan treatment and estimate the future course, outcome, and overall prognosis of disease. Certain types of cancers, such as soft tissue sarcoma, primary brain tumors, lymphomas, and breast have special grading systems.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C18000"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -544,9 +543,9 @@
                 "MATURE_GLIAL_IMPLANTS": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:C177363",
+                    "description": "A nodule of mature glial tissue that develops in the peritoneum. It is usually accompanied by mature or immature ovarian teratoma.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C177363"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -554,9 +553,9 @@
                 "SOMATIC_MALIGNANCY_TYPE": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:C177364",
+                    "description": "A nodule of mature glial tissue that develops in the peritoneum. It is usually accompanied by mature or immature ovarian teratoma.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C177364"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -568,9 +567,9 @@
                 "AGE_AT_VITALS": {
                     "type": "Number",
                     "tier": "",
-                    "description": "ncit:168845",
+                    "description": "Age of subject (in days) when vital signs were recorded.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:168845"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -578,9 +577,9 @@
                 "DISEASE_PHASE": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:168878",
+                    "description": "The stage or period of an individual's disease.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:168878"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -588,9 +587,9 @@
                 "DISEASE_PHASE_NUMBER": {
                     "type": "Number",
                     "tier": "",
-                    "description": "ncit:173258",
+                    "description": "The number of the disease phase.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:173258"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -598,9 +597,9 @@
                 "VITALS_TEST": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:49672",
+                    "description": "The act of assessing an individual's current temperature, heart rate, respiratory rate, pulse oxygenation, and blood pressure.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:49672"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -608,9 +607,9 @@
                 "VITALS_RESULT": {
                     "type": "String",
                     "tier": "",
-                    "description": "ncit:83108",
+                    "description": "The outcome of the vital signs assessment.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:83108"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -618,9 +617,9 @@
                 "VITALS_RESULT_NUMERIC": {
                     "type": "Number",
                     "tier": "",
-                    "description": "ncit:173268",
+                    "description": "The numeric values of the vital signs.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:173268"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -628,9 +627,9 @@
                 "VITALS_RESULT_UNIT": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:49675",
+                    "description": "The unit used to record and describe the result of a test investigating a vital sign.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:49675"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -640,9 +639,9 @@
                 "AGE_AT_LAB": {
                     "type": "Number",
                     "tier": "",
-                    "description": "ncit:172691",
+                    "description": "Age of subject (in days) when the laboratory test was performed.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:172691"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -650,9 +649,9 @@
                 "DISEASE_PHASE": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:168878",
+                    "description": "The stage or period of an individual's disease.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:168878"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -660,9 +659,9 @@
                 "DISEASE_PHASE_NUMBER": {
                     "type": "Number",
                     "tier": "",
-                    "description": "ncit:173258",
+                    "description": "The number of the disease phase.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:173258"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -670,9 +669,9 @@
                 "LAB_CATEGORY": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:C83017",
+                    "description": "A classification of the laboratory test.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C83017"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -680,9 +679,9 @@
                 "LAB_TEST": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:C117142",
+                    "description": "A character or string that represents the full name of the laboratory assessment.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C117142"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -690,9 +689,9 @@
                 "LAB_SPEC_TYPE": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:88315",
+                    "description": "The type of a material sample taken from a biological entity for laboratory testing.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:88315"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -700,9 +699,9 @@
                 "LAB_RESULT": {
                     "type": "String",
                     "tier": "",
-                    "description": "ncit:36292",
+                    "description": "The outcome of a laboratory test.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:36292"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -710,9 +709,9 @@
                 "LAB_RESULT_NUMERIC": {
                     "type": "Number",
                     "tier": "",
-                    "description": "ncit:C70952",
+                    "description": "A numeric representation of a test result.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C70952"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -720,9 +719,9 @@
                 "LAB_RESULT_UNIT": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:C173274",
+                    "description": "The numeric unit that expresses the lab result.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C173274"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -730,9 +729,9 @@
                 "LAB_METHOD": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:83312",
+                    "description": "A systematic course of action that is performed in order to complete a laboratory test.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:83312"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -740,9 +739,9 @@
                 "LAB_SEQ_METHOD": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:C49142",
+                    "description": "The number of molecules of a particular type on or in a cell or part of a cell. Usually applied to specific genes or to plasmids within a bacterium.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C49142"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -750,9 +749,9 @@
                 "THRESHOLD_HIGH": {
                     "type": "Number",
                     "tier": "",
-                    "description": "ncit:C177365",
+                    "description": "The maximum level that must be exceeded for a certain reaction to occur or be manifested.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C177365"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -760,9 +759,9 @@
                 "THRESHOLD_LOW": {
                     "type": "Number",
                     "tier": "",
-                    "description": "ncit:C177366",
+                    "description": "The minimum level that must be attained for a certain reaction to occur or be manifested.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C177366"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -770,9 +769,9 @@
                 "PMID_REF": {
                     "type": "Number",
                     "tier": "",
-                    "description": "ncit:C127797",
+                    "description": "The unique number assigned to an article record that is entered into the PubMed system.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C127797"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -782,9 +781,9 @@
                 "AGE_AT_IHC": {
                     "type": "Number",
                     "tier": "",
-                    "description": "ncit:",
+                    "description": "Age of subject (in days) at immunohistochemistry assessment.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -792,9 +791,9 @@
                 "DISEASE_PHASE": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:168878",
+                    "description": "The stage or period of an individual's disease.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:168878"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -802,9 +801,9 @@
                 "DISEASE_PHASE_NUMBER": {
                     "type": "Number",
                     "tier": "",
-                    "description": "ncit:173258",
+                    "description": "The number of the disease phase.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:173258"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -812,9 +811,9 @@
                 "IHC_TEST": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:C51944",
+                    "description": "A diagnostic test in which an antibody is used to link a cellular antigen specifically to a stain that can be seen with a microscope.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C51944"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -822,9 +821,9 @@
                 "IHC_RESULT": {
                     "type": "String",
                     "tier": "",
-                    "description": "ncit:C175007",
+                    "description": "The result from the immunohistochemical test.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C175007"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -832,9 +831,9 @@
                 "IHC_RESULT_NUMERIC": {
                     "type": "Number",
                     "tier": "",
-                    "description": "ncit:C177368",
+                    "description": "The numerical identifier of an immunohistochemistry specimen assessment result.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C177368"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -844,9 +843,9 @@
                 "AGE_AT_CYTOLOGY": {
                     "type": "Number",
                     "tier": "",
-                    "description": "ncit:C177369",
+                    "description": "Age of subject (in days) at the time of the cytology test.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C177369"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -854,9 +853,9 @@
                 "DISEASE_PHASE": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:168878",
+                    "description": "The stage or period of an individual's disease.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:168878"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -864,9 +863,9 @@
                 "DISEASE_PHASE_NUMBER": {
                     "type": "Number",
                     "tier": "",
-                    "description": "ncit:173258",
+                    "description": "The number of the disease phase.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:173258"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -874,9 +873,9 @@
                 "MALIGNANT_CELLS": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:51944",
+                    "description": "A diagnostic test in which an antibody is used to link a cellular antigen specifically to a stain that can be seen with a microscope.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:51944"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -884,9 +883,9 @@
                 "CYTOLOGY_SPEC_TYPE": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:C70713",
+                    "description": "The type of a material sample taken from a biological entity for testing, diagnostic, propagation, treatment or research purposes. This includes particular types of cellular molecules, cells, tissues, organs, body fluids, embryos, and body excretory substances.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C70713"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -896,9 +895,9 @@
                 "AGE_AT_MOLECULAR_ANALYSIS": {
                     "type": "Number",
                     "tier": "",
-                    "description": "ncit:168848",
+                    "description": "Age of subject (in days) when molecular analysis was performed.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:168848"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -906,9 +905,9 @@
                 "DISEASE_PHASE": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:168878",
+                    "description": "The stage or period of an individual's disease.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:168878"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -916,9 +915,9 @@
                 "DISEASE_PHASE_NUMBER": {
                     "type": "Number",
                     "tier": "",
-                    "description": "ncit:173258",
+                    "description": "The number of the disease phase.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:173258"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -926,9 +925,9 @@
                 "MOLECULAR_ANALYSIS_METHOD": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:C158954",
+                    "description": "A request to enter the specific molecular analysis method used to detect abnormalities in the study.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C158954"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -936,9 +935,9 @@
                 "KARYOTYPE_STATUS": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:C168871",
+                    "description": "The status of the subject's karyotype.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C168871"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -946,9 +945,9 @@
                 "ISCN": {
                     "type": "String",
                     "tier": "",
-                    "description": "ncit:C173278",
+                    "description": "A karyotype finding as classified by the International System for Human Cytogenetic Nomenclature.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C173278"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -956,9 +955,9 @@
                 "NUM_CHROMOSOMES": {
                     "type": "Number",
                     "tier": "",
-                    "description": "ncit:C177370",
+                    "description": "The number of chromosomes upon karyotype analysis.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C177370"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -966,9 +965,9 @@
                 "INDEPEN_AB": {
                     "type": "Number",
                     "tier": "",
-                    "description": "ncit:C173279",
+                    "description": "The number of independent aberrations found in the karyotype during analysis.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C173279"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -976,9 +975,9 @@
                 "MOLECULAR_ABNORMALITY": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:C3910",
+                    "description": "A molecular or cytogenic abnormality which occurs in either human disease states or disease models.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C3910"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -986,9 +985,9 @@
                 "CHROMOSOME": {
                     "type": "String",
                     "tier": "",
-                    "description": "ncit:13202",
+                    "description": "One of the bodies in the cell nucleus that is the bearer of genes, has the form of a delicate chromatin filament during interphase, contracts to form a compact cylinder segmented into two arms by the centromere during metaphase and anaphase stages of cell division, and is capable of reproducing its physical and chemical structure through successive cell divisions.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:13202"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -996,9 +995,9 @@
                 "GENE1": {
                     "type": "String",
                     "tier": "",
-                    "description": "ncit:C17595",
+                    "description": "The gene symbol that represents either a single gene that has a mutation or the gene that comprises the 5' portion of the coding sequence involved in a fusion gene mutation.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C17595"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1006,9 +1005,9 @@
                 "GENE2": {
                     "type": "String",
                     "tier": "",
-                    "description": "ncit:C171253",
+                    "description": "The gene symbol that represents the gene that comprises the 3' portion of the coding sequence for a fusion gene.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C171253"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1016,9 +1015,9 @@
                 "VARIANT_TYPE": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:97926",
+                    "description": "A variation in or modification of the molecular sequence of a gene or gene product.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:97926"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1030,9 +1029,9 @@
                 "AGE_AT_PROCEDURE": {
                     "type": "Number",
                     "tier": "",
-                    "description": "ncit:C175008",
+                    "description": "Age of subject (in days) at procedure.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C175008"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1040,9 +1039,9 @@
                 "DISEASE_PHASE": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:168878",
+                    "description": "The stage or period of an individual's disease.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:168878"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1050,9 +1049,9 @@
                 "DISEASE_PHASE_NUMBER": {
                     "type": "Number",
                     "tier": "",
-                    "description": "ncit:173258",
+                    "description": "The number of the disease phase.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:173258"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1060,9 +1059,9 @@
                 "PROCEDURE_SITE": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:C164323",
+                    "description": "The anatomical site on which surgery was performed.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C164323"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1072,7 +1071,7 @@
                     "tier": "",
                     "description": "",
                     "codes": [
-                        "_undefined_"
+                        ""
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1080,9 +1079,9 @@
                 "PROCEDURE_TYPE": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:C161601",
+                    "description": "A categorization of surgical procedures by type or purpose.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C161601"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1090,9 +1089,9 @@
                 "PROCEDURE_EXTENT": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:C157443",
+                    "description": "The degree to which the lesion has been cut out, or resected.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C157443"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1100,9 +1099,9 @@
                 "MARGINS": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:123560",
+                    "description": "The determination of the presence of actual or potential neoplastic tissue which has been left outside the boundary of a resected specimen within the patient.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:123560"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1112,9 +1111,9 @@
                 "AGE_AT_RT_START": {
                     "type": "Number",
                     "tier": "",
-                    "description": "ncit:172695",
+                    "description": "Age of subject (in days) at the start of radiation therapy.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:172695"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1122,9 +1121,9 @@
                 "AGE_AT_RT_END": {
                     "type": "Number",
                     "tier": "",
-                    "description": "ncit:172696",
+                    "description": "Age of subject (in days) at the end of radiation therapy.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:172696"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1132,9 +1131,9 @@
                 "DISEASE_PHASE": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:168878",
+                    "description": "The stage or period of an individual's disease.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:168878"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1142,9 +1141,9 @@
                 "DISEASE_PHASE_NUMBER": {
                     "type": "Number",
                     "tier": "",
-                    "description": "ncit:173258",
+                    "description": "The number of the disease phase.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:173258"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1152,9 +1151,9 @@
                 "RT_SITE": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:173281",
+                    "description": "The anatomic site of the radiation therapy.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:173281"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1162,9 +1161,9 @@
                 "ENERGY_TYPE": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:C15213",
+                    "description": "Treatment of a disease by means of exposure of the target or the whole body to radiation. Radiation therapy is often used as part of curative therapy and occasionally as a component of palliative treatment for cancer. Other uses include total body irradiation prior to transplantation.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C15213"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1172,9 +1171,9 @@
                 "RT_DOSE": {
                     "type": "Number",
                     "tier": "",
-                    "description": "ncit:173282",
+                    "description": "The total radiation dose administered.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:173282"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1182,9 +1181,9 @@
                 "RT_UNIT": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:18068",
+                    "description": "A unit of measurement of the dose of radiation received or absorbed.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:18068"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1192,9 +1191,9 @@
                 "BOOST": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:C137812",
+                    "description": "One or more extra radiation treatments targeted at the tumor bed, given after the regular sessions of radiation are complete.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C137812"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1202,9 +1201,9 @@
                 "NUM_FRACTION": {
                     "type": "Numeric",
                     "tier": "",
-                    "description": "ncit:C175034",
+                    "description": "The number of divided radiation doses received per day.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C175034"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1214,9 +1213,9 @@
                 "AGE_AT_MEDICATION_START": {
                     "type": "Number",
                     "tier": "",
-                    "description": "ncit:C172692",
+                    "description": "Age of subject (in days) at the start of the concomitant medication administration.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C172692"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1224,9 +1223,9 @@
                 "AGE_AT_MEDICATION_END": {
                     "type": "Number",
                     "tier": "",
-                    "description": "ncit:C172693",
+                    "description": "Age of subject (in days) at the end of the concomitant medication administration.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C172693"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1234,9 +1233,9 @@
                 "DISEASE_PHASE": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:168878",
+                    "description": "The stage or period of an individual's disease.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:168878"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1244,9 +1243,9 @@
                 "DISEASE_PHASE_NUMBER": {
                     "type": "Number",
                     "tier": "",
-                    "description": "ncit:173258",
+                    "description": "The number of the disease phase.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:173258"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1254,9 +1253,9 @@
                 "MEDICATION": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:C70902",
+                    "description": "",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C70902"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1266,9 +1265,9 @@
                 "AGE_AT_SCT": {
                     "type": "Number",
                     "tier": "",
-                    "description": "ncit:168853",
+                    "description": "Age of subject (in days) at the time of stem-cell transplantation.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:168853"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1276,9 +1275,9 @@
                 "DISEASE_PHASE": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:168878",
+                    "description": "The stage or period of an individual's disease.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:168878"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1286,9 +1285,9 @@
                 "DISEASE_PHASE_NUMBER": {
                     "type": "Number",
                     "tier": "",
-                    "description": "ncit:173258",
+                    "description": "The number of the disease phase.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:173258"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1296,9 +1295,9 @@
                 "SCT_CYCLES": {
                     "type": "Number",
                     "tier": "",
-                    "description": "ncit:C177373",
+                    "description": "The total number of stem cell transplant cycles.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C177373"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1308,9 +1307,9 @@
                 "AGE_AT_TOTAL_DOSE_START": {
                     "type": "Number",
                     "tier": "",
-                    "description": "ncit:172698",
+                    "description": "Age of subject (in days) at the start of the total dose calculation.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:172698"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1318,9 +1317,9 @@
                 "AGE_A_TOTAL_DOSE_END": {
                     "type": "Number",
                     "tier": "",
-                    "description": "ncit:172686",
+                    "description": "Age of subject (in days) at the end of the total dose calculation.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:172686"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1328,9 +1327,9 @@
                 "DISEASE_PHASE": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:168878",
+                    "description": "The stage or period of an individual's disease.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:168878"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1338,9 +1337,9 @@
                 "DISEASE_PHASE_NUMBER": {
                     "type": "Number",
                     "tier": "",
-                    "description": "ncit:173258",
+                    "description": "The number of the disease phase.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:173258"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1348,9 +1347,9 @@
                 "ANTINEOPLASTIC_AGENT": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:274",
+                    "description": "A substance that inhibits the maturation, growth or spread of tumor cells.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:274"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1358,9 +1357,9 @@
                 "TOTAL_DOSE_ADMINISTERED": {
                     "type": "Number",
                     "tier": "",
-                    "description": "ncit:94394",
+                    "description": "The total amount of a therapeutic agent administered to a subject over a defined period of time.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:94394"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1368,9 +1367,9 @@
                 "TOTAL_DOSE_UNITS": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:73558",
+                    "description": "The unit of measure for the dosage form.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:73558"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1382,9 +1381,9 @@
                 "AGE_AT_RESPONSE": {
                     "type": "Number",
                     "tier": "",
-                    "description": "ncit:168856",
+                    "description": "Age of subject (in days) when the response assessment was made.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:168856"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1392,9 +1391,9 @@
                 "DISEASE_PHASE": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:168878",
+                    "description": "The stage or period of an individual's disease.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:168878"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1402,9 +1401,9 @@
                 "DISEASE_PHASE_NUMBER": {
                     "type": "Number",
                     "tier": "",
-                    "description": "ncit:173258",
+                    "description": "The number of the disease phase.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:173258"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1412,9 +1411,9 @@
                 "RESPONSE_CATEGORY": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:173306",
+                    "description": "The category used to assess the response to therapy.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:173306"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1422,9 +1421,9 @@
                 "RESPONSE": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:50995",
+                    "description": "The pathologic and/or clinical changes that result from treatment. The changes may include eradication of detectable disease, stabilization of disease, or disease progression.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:50995"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1434,7 +1433,7 @@
                     "tier": "",
                     "description": "",
                     "codes": [
-                        "_undefined_"
+                        ""
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1442,9 +1441,9 @@
                 "RESPONSE_SYSTEM": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:C125932",
+                    "description": "A standard from which a judgment concerning tumor response to therapy can be established.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C125932"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1452,9 +1451,9 @@
                 "RESPONSE_SYSTEM_VERSION": {
                     "type": "String",
                     "tier": "",
-                    "description": "ncit:C175042",
+                    "description": "The version of the response criteria.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C175042"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1466,9 +1465,9 @@
                 "AGE_AT_AE": {
                     "type": "Number",
                     "tier": "",
-                    "description": "ncit:C172677",
+                    "description": "Age of subject (in days) at the onset of the adverse event.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C172677"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1476,9 +1475,9 @@
                 "DISEASE_PHASE": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:168878",
+                    "description": "The stage or period of an individual's disease.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:168878"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1486,9 +1485,9 @@
                 "DISEASE_PHASE_NUMBER": {
                     "type": "Number",
                     "tier": "",
-                    "description": "ncit:173258",
+                    "description": "The number of the disease phase.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:173258"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1496,9 +1495,9 @@
                 "ADVERSE_EVENT": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:C41331",
+                    "description": "Any unfavorable or unintended disease, sign, or symptom (including an abnormal laboratory finding) that is temporally associated with the use of a medical treatment or procedure, and that may or may not be considered related to the medical treatment or procedure. Such events can be related to the intervention, dose, route of administration, patient, or caused by an interaction with another drug(s) or procedure(s).",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C41331"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1506,9 +1505,9 @@
                 "AE_GRADE": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:C166200",
+                    "description": "A numeric value corresponding to the degree of severity of an adverse event.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C166200"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1516,9 +1515,9 @@
                 "AE_ATTRIBUTION": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:C41358",
+                    "description": "A specific identifiable level (defined qualitatively or quantitatively) of probability of adverse event being caused or associated with the product or procedure administration to a patient.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C41358"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1526,9 +1525,9 @@
                 "AE_OUTCOME": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:C49489",
+                    "description": "A condition or event that is attributed to the adverse event and is the result or conclusion of the adverse event.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C49489"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1538,9 +1537,9 @@
                 "AGE_AT_SMN": {
                     "type": "Number",
                     "tier": "",
-                    "description": "ncit:168860",
+                    "description": "Age of subject (in days) at the diagnosis of the secondary malignant neoplasm.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:168860"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1548,9 +1547,9 @@
                 "DISEASE_PHASE": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:168878",
+                    "description": "The stage or period of an individual's disease.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:168878"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1558,9 +1557,9 @@
                 "DISEASE_PHASE_NUMBER": {
                     "type": "Number",
                     "tier": "",
-                    "description": "ncit:173258",
+                    "description": "The number of the disease phase.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:173258"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1568,9 +1567,9 @@
                 "SMN_MORPH_ICDO": {
                     "type": "String",
                     "tier": "",
-                    "description": "ncit:168862",
+                    "description": "ICD-O morphology code of the secondary malignant neoplasm.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:168862"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1578,9 +1577,9 @@
                 "SMN_TOP_ICDO": {
                     "type": "String",
                     "tier": "",
-                    "description": "ncit:168863",
+                    "description": "ICD-O topography code of the secondary malignant neoplasm.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:168863"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1590,9 +1589,9 @@
                 "AGE_AT_GTS": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:C177375",
+                    "description": "Age of subject (in days) at the diagnosis of growing teratoma syndrome.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C177375"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1600,9 +1599,9 @@
                 "DISEASE_PHASE": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:168878",
+                    "description": "The stage or period of an individual's disease.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:168878"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1610,9 +1609,9 @@
                 "DISEASE_PHASE_NUMBER": {
                     "type": "Number",
                     "tier": "",
-                    "description": "ncit:173258",
+                    "description": "The number of the disease phase.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:173258"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1620,9 +1619,9 @@
                 "GTS_TREATMENT": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:C177376",
+                    "description": "The therapy chosen to treat Growing Teratoma Syndrome.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C177376"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1634,7 +1633,7 @@
                     "tier": "",
                     "description": "",
                     "codes": [
-                        "_undefined_"
+                        ""
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1642,9 +1641,9 @@
                 "PRO_MEASURES": {
                     "type": "Code",
                     "tier": "",
-                    "description": "ncit:C177377",
+                    "description": "Survey measures that are completed by the patient which help assess patient status with regards to pain, mobility, quality of life, ability to perform daily tasks or notable events in a clinical study.",
                     "codes": [
-                        "_undefined_"
+                        "ncit:C177377"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
