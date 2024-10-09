@@ -1,0 +1,768 @@
+INFO	Title	Germ Cell Tumors (GCT) Data Dictionary
+INFO	Name	gct_v2.0
+INFO	Release Notes	<placeholder>
+INFO	Parent Data Model	pcdc_v1.8
+INFO	License	Creative Commons Attribution-NonCommercial 4.0 International License (https://creativecommons.org/licenses/by-nc/4.0/)
+INFO	D4CG Data Modeling Wiki	https://docs.pedscommons.org/
+INFO	Disease Consortium Information	https://commons.cri.uchicago.edu/pcdc/
+INFO	Description	Germ Cell Tumors (GCT) Data Dictionary
+INFO	Total Variables	157
+
+RowType	VariableName	DataType	Tier	VariableDescription	VariableCode	PermissibleValue	ValueDescription	ValueCode	ImplementationNotes	Mappings
+
+DD	Protocol
+TD	Subject Identifier
+TG	Will be included in every table
+VD	PCDC_SUBJECT_ID	String		A unique identifier for a subject in a study.	ncit:C69256	_undefined_	_undefined_	_undefined_		
+
+
+DD	Protocol
+TD	Subject Characteristics
+TG	One row per subject per study
+VD	HONEST_BROKER_SUBJECT_ID	String		Subject identifier assigned by the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_		
+VD	DATA_CONTRIBUTOR_ID	Code		An identifier assigned to a data contributor.	ncit:C168950	_undefined_	_undefined_	_undefined_		
+PD						AIEOP	Italian Association of Pediatric Hematology and Oncology	ncit:C168887	
+PD						COG	An NCI-supported clinical cooperative group formed by the merger of the four national pediatric cancer research organizations: the Children's Cancer Group, the Intergroup Rhabdomyosarcoma Study Group, the National Wilms Tumor Study Group, and the Pediatric Oncology Group. The primary objective of the organization is to conduct clinical trials of new therapies for childhood and adolescent cancer. COG develops and coordinates clinical trials conducted at the 238 member institutions that include cancer centers of all major universities and teaching hospitals throughout the U.S. and Canada, as well as sites in Europe and Australia. COG members include over 5000 cancer researchers.	ncit:C39353	
+PD						MRC	A publicly funded organization that is part of United Kingdom Research and Innovation, and is dedicated to improving human health through world-class medical research.	ncit:C168892	
+PD						CCLG	A children's cancer charity and United Kingdom and Ireland's professional association for those involved in the treatment and care of children with cancer.	ncit:C177327	Children’s Cancer and Leukaemia Group
+PD						SFCE	An association founded in France in 2003 which promotes the organization of care and scientific research in the field of childhood and adolescent cancer.	ncit:C177328	Société Française de Lutte contre les Cancers et Leucémies de l'Enfant et de l'Adolescent
+PD						SOPOBE	A society founded in 1981 committed to improve the prognosis of children and adolescents with cancer.	ncit:C177329	Brazilian Society of Pediatric Oncology
+PD						DFCI	An institute founded in 1947 in Boston, Massachusetts, committed to providing treatment for adults and children with cancer, and developing cures with cutting-edge research.	ncit:C177330	
+PD						NRG-Oncology	A leading protocol organization within the National Clinical Trials Network that seeks to improve the lives of cancer patients by conducting practice-changing, multi-institutional clinical and translational research.	ncit:C177331	
+VD	STUDY_ID	Code		A sequence of characters used to identify, name, or characterize the study.	ncit:C83082	_undefined_	_undefined_	_undefined_		
+PD						TCGM2004		ncit:	
+PD						TGM85	The identifier TGM85, assigned to a study in an GCT clinical trial.	ncit:C177332	
+PD						TGM90	The identifier TGM90, assigned to a study in an GCT clinical trial.	ncit:C177333	
+PD						TGM95	The identifier TGM95, assigned to a study in an GCT clinical trial.	ncit:C177334	
+PD						GC1	The identifier GC1, assigned to a study in an GCT clinical trial.	ncit:C177335	
+PD						GC2	The identifier GC2, assigned to a study in an GCT clinical trial.	ncit:C177336	
+PD						GOG0078		ncit:	
+PD						GOG0090		ncit:	
+PD						GOG0116	The identifier GOG116, assigned to a study in an GCT clinical trial.	ncit:C177339	
+PD						P9749	The identifier P9749, assigned to a study in an GCT clinical trial.	ncit:C177340	
+PD						POG9049	The identifier POG9049, assigned to a study in an GCT clinical trial.	ncit:C177341	
+PD						AGCT01P1	The identifier AGCT01P1, assigned to a study in an GCT clinical trial.	ncit:C177342	
+PD						AGCT0132	The identifier AGCT0132, assigned to a study in an GCT clinical trial.	ncit:C177343	
+PD						AGCT0521	The identifier AGCT0521, assigned to a study in an GCT clinical trial.	ncit:C177344	
+PD						TE04	The identifier TE04, assigned to a study in an GCT clinical trial.	ncit:C177345	
+PD						TE05	The identifier TE05, assigned to a study in an GCT clinical trial.	ncit:C177346	
+PD						TE08	The identifier TE08, assigned to a study in an GCT clinical trial.	ncit:C177347	
+PD						TE22	The identifier TE22, assigned to a study in an GCT clinical trial.	ncit:C177348	
+PD						TE09	The identifier TE09, assigned to a study in an GCT clinical trial.	ncit:C177349	
+PD						TE13	The identifier TE13, assigned to a study in an GCT clinical trial.	ncit:C177350	
+PD						TE20	The identifier TE20, assigned to a study in an GCT clinical trial.	ncit:C177351	
+PD						TIP	The identifier TIP, assigned to a study in an GCT clinical trial.	ncit:C177352	
+VD	AGE_AT_ENROLLMENT	Number		Age of subject (in days) when the subject enrolled in the study.	ncit:C168843	_undefined_	_undefined_	_undefined_		
+VD	YEAR_AT_ENROLLMENT	Number		The year at which a subject enrolled in a study.	ncit:C177353	_undefined_	_undefined_	_undefined_		
+VD	TREATMENT_ARM	Code		A specific treatment plan within a clinical trial that describes the activities a subject will be involved in as he or she progresses through the study.	ncit:C15538	_undefined_	_undefined_	_undefined_		
+
+
+DD	Protocol
+TD	Disease Phase Timing
+TG	One row per subject per disease phase
+VD	DISEASE_PHASE	Code		The stage or period of an individual's disease.	ncit:C168878	_undefined_	_undefined_	_undefined_		
+PD						Initial Diagnosis	The first diagnosis of the individual's condition.	ncit:C156813	Note: Disease phase could be "Initial Diagnosis" phase, "Relapse" phase, etc...
+PD						Relapse	The return of a disease after a period of remission.	ncit:C38155	
+VD	DISEASE_PHASE_NUMBER	Number		The number of the disease phase.	ncit:C173258	_undefined_	_undefined_	_undefined_		
+VD	AGE_AT_DISEASE_PHASE	Number		Age in days when the diagnosis was made for the Disease Phase.	ncit:C168972	_undefined_	_undefined_	_undefined_		
+VD	YEAR_AT_DISEASE_PHASE	Number		Year when the diagnosis was made for the Disease Phase.	ncit:C168823	_undefined_	_undefined_	_undefined_		
+
+
+DD	Demographics
+TD	Demographics
+TG	One row per subject
+VD	SEX	Code		The assemblage of physical properties or qualities by which male is distinguished from female; the physical difference between male and female; the distinguishing peculiarity of male or female.	ncit:C28421	_undefined_	_undefined_	_undefined_		
+PD						Male	A person who belongs to the sex that normally produces sperm. The term is used to indicate biological sex distinctions, cultural gender role distinctions, or both.	ncit:C20197	
+PD						Female	A person who belongs to the sex that normally produces ova. The term is used to indicate biological sex distinctions, or cultural gender role distinctions, or both.	ncit:C16576	
+PD						Undifferentiated	Sex could not be determined; not uniquely defined; undifferentiated.	ncit:C41438	
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998	
+PD						Not Reported	Not provided or available.	ncit:C43234	
+VD	RACE	Code		An arbitrary classification of a taxonomic group that is a division of a species. It usually arises as a consequence of geographical isolation within a species and is characterized by shared heredity, physical attributes and behavior, and in the case of humans, by common history, nationality, or geographic distribution.	ncit:C17049	_undefined_	_undefined_	_undefined_		
+PD						American Indian or Alaska Native	A person having origins in any of the original peoples of North and South America (including Central America) and who maintains tribal affiliation or community attachment. (OMB)	ncit:C41259	
+PD						Asian	A person having origins in any of the original peoples of the Far East, Southeast Asia, or the Indian subcontinent, including for example, Cambodia, China, India, Japan, Korea, Malaysia, Pakistan, the Philippine Islands, Thailand, and Vietnam. (OMB)	ncit:C41260	
+PD						Black or African American	A person having origins in any of the Black racial groups of Africa. Terms such as "Haitian" or "Negro" can be used in addition to "Black or African American". (OMB)	ncit:C16352	
+PD						Multiracial	Having ancestors of several or various races.	ncit:C67109	
+PD						Native Hawaiian or Other Pacific Islander	A person having origins in any of the original peoples of Hawaii, Guam, Samoa, or other Pacific Islands. (OMB)	ncit:C41219	
+PD						White	A person having origins in any of the original peoples of Europe, the Middle East, or North Africa. (OMB)	ncit:C41261	
+PD						Other	Different than the one(s) previously specified or mentioned.	ncit:C17649	
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998	
+PD						Not Reported	Not provided or available.	ncit:C43234	
+VD	ETHNICITY	Code		A social group characterized by a distinctive social and cultural tradition that is maintained from generation to generation. Members share a common history and origin and a sense of identification with the group. They have similar and distinctive features in their lifestyle habits and shared experiences. They often have a common genetic heritage which may be reflected in their experience of health and disease.	ncit:C16564	_undefined_	_undefined_	_undefined_		
+PD						Hispanic or Latino	A person of Cuban, Mexican, Puerto Rican, South or Central American, or other Spanish culture or origin, regardless of race. The term, "Spanish origin," can be used in addition to "Hispanic or Latino." (OMB)	ncit:C17459	
+PD						Not Hispanic or Latino	A person not of Cuban, Mexican, Puerto Rican, South or Central American, or other Spanish culture or origin, regardless of race.	ncit:C41222	
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998	
+PD						Not Reported	Not provided or available.	ncit:C43234	
+
+
+DD	Demographics
+TD	Medical History
+TG	One row per subject per prior medical history
+VD	MEDICAL_HISTORY	Code		The verbatim description of the medical history being reported.	ncit:C83118	_undefined_	_undefined_	_undefined_		
+PD						Turner Syndrome	A gonadal dysgenesis syndrome occurring in phenotypic females, characterized by the absence of a part or all of one of the sex chromosomes. Signs and symptoms include short stature, webbing of neck, low-set ears, hypogonadism, and sterility.	ncit:C26900	Note: If subject had multiple medical history conditions, include one observation per condition.
+PD						Klinefelter Syndrome	A sex chromosome disorder caused by the presence of an extra X chromosome in the male karyotype. Affected individuals are infertile and have a small penis and testes. They tend to have tall stature and long legs and may have difficulties with speech and language development. Gynecomastia may be present.	ncit:C34752	
+PD						Swyer Syndrome	A rare syndrome characterized by the presence of a small lung as a result of unilateral post-infectious bronchiolitis obliterans.	ncit:C85178	
+PD						Frasier Syndrome	A condition, which typically presents during adolescence, that is caused by WT-1 mutation, and is characterized by a developmental sex disorder, FSGS, and may be associated with gonadoblastoma.	ncit:C122805	
+PD						Gonadal Dysgenesis	A congenital disorder characterized by the presence of extremely hypoplastic gonads preventing the development of secondary sex characteristics	ncit:C61420	
+PD						Other	Different than the one(s) previously specified or mentioned.	ncit:C17649	
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998	
+VD	MEDICAL_HISTORY_STATUS	Code			ncit:	_undefined_	_undefined_	_undefined_		
+PD						Present	Being or existing in a specified place or at the specified time.	ncit:C25626	
+PD						Absent	Not existing in a specified place at a specified time.	ncit:C48190	
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998	
+PD						Not Reported	Not provided or available.	ncit:C43234	
+
+
+DD	Demographics
+TD	Survival Characteristics
+TG	One row per subject per cause of death
+VD	AGE_AT_LKSS	Number		Age of subject (in days) at the last known survival status.	ncit:C168844	_undefined_	_undefined_	_undefined_		
+VD	DISEASE_PHASE	Code		The stage or period of an individual's disease.	ncit:C168878	_undefined_	_undefined_	_undefined_		
+PD						Initial Diagnosis	The first diagnosis of the individual's condition.	ncit:C156813	Note: Disease phase could be "Initial Diagnosis" phase, "Relapse" phase, etc...
+PD						Relapse	The return of a disease after a period of remission.	ncit:C38155	
+VD	DISEASE_PHASE_NUMBER	Number		The number of the disease phase.	ncit:C173258	_undefined_	_undefined_	_undefined_		
+VD	LKSS	Code		The individual's last known survival status.	ncit:C168931	_undefined_	_undefined_	_undefined_		
+PD						Alive	Showing characteristics of life; displaying signs of life.	ncit:C37987	
+PD						Dead	The cessation of life.	ncit:C28554	
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998	
+VD	CAUSE_OF_DEATH	Code		The circumstance or condition that results in the death of a living being.	ncit:C81239	_undefined_	_undefined_	_undefined_		
+PD						Disease Progression	An indication that the subject has died due to the progression of their disease.	ncit:C168970	Note: If multiple causes of death, include one observation per cause of death.
+PD						Treatment-Related Mortality	A death that is considered to be causally linked to a treatment.	ncit:C166165	
+PD						Secondary Malignancy	A malignant neoplasm that arises from a pre-existing lower grade lesion, or as a result of a primary lesion that has spread to secondary sites, or due to a complication of a cancer treatment.	ncit:C4968	
+PD						Other	Different than the one(s) previously specified or mentioned.	ncit:C17649	
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998	
+PD						Not Reported	Not provided or available.	ncit:C43234	
+
+
+DD	Disease Attributes
+TD	Disease Characteristics
+TG	One row per subject per disease phase per detection method per disease site
+VD	DISEASE_PHASE	Code		The stage or period of an individual's disease.	ncit:C168878	_undefined_	_undefined_	_undefined_		
+PD						Initial Diagnosis	The first diagnosis of the individual's condition.	ncit:C156813	Note: Disease phase could be "Initial Diagnosis" phase, "Relapse" phase, etc...
+PD						Relapse	The return of a disease after a period of remission.	ncit:C38155	
+VD	DISEASE_PHASE_NUMBER	Number		The number of the disease phase.	ncit:C173258	_undefined_	_undefined_	_undefined_		
+VD	IGCCC_RISK_GROUP	Code		A risk classification system for malignant germ cell tumors developed by the International Germ Cell Cancer Collaborative Group.	ncit:C111073	_undefined_	_undefined_	_undefined_		
+PD						IGCCC Good	The good prognosis category refers to testes/retroperitoneal primary and no nonpulmonary visceral metastases and the following markers: AFP less than 1,000 ng/mL, hCG less than 5,000 IU/L and LDH less than 1.5 × ULN.	ncit:C177310	
+PD						IGCCC Intermediate	The intermediate risk group refers to testes/retroperitoneal primary and no nonpulmonary visceral metastases and the following markers: AFP greater than or equal to 1,000 ng/mL and less than or equal to 10,000 ng/mL, or hCG greater than or equal to 5,000 IU/L and less than or equal to 50,000 ng/mL or LDH greater than or equal to 1.5 × ULN and less than or equal to 10 × ULN.	ncit:C177311	
+PD						IGCCC Poor	The poor prognosis category refers to mediastinal primary or nonpulmonary visceral metastases or markers with the following: AFP greater than 10,000 ng/mL or hCG greater than 50,000 IU/L or LDH greater than 10 × ULN.	ncit:C177312	
+PD						Unknown	Not known, not observed, not recorded, or refused.	ncit:C17998	
+PD						Not Reported	Not provided or available.	ncit:C43234	
+VD	MAGIC_RISK_GROUP	Code		A risk classification system for extracranial, malignant, pediatric germ cell tumors.	ncit:C177316	_undefined_	_undefined_	_undefined_		
+PD						Low	The low risk classification refers to age younger than 11 years and extragonadal stage III-IV disease.	ncit:C177354	
+PD						Standard	The standard risk classification refers to four-years-event-free survival of more than 80%.	ncit:C177355	
+PD						Poor	The poor risk classification refers to age equal or older than 11 years, ovarian stage IV disease, and extragonadal stage III-IV disease.	ncit:C177356	
+PD						Unknown	Not known, not observed, not recorded, or refused.	ncit:C17998	
+PD						Not Reported	Not provided or available.	ncit:C43234	
+VD	DETECTION_METHOD	Code		The method used to detect the extent of the disease involvement.	ncit:C173262	_undefined_	_undefined_	_undefined_		
+PD						Tumor Marker	A substance present in or produced by a tumor or by the host, that can be used for differentiating neoplastic from normal tissue based on measurements in body fluids, secretions, cells, and/or tissues. Markers are used in diagnosis, staging and prognosis of cancer, provide an estimation of tumor burden, and serve for monitoring effects of therapy, detecting recurrence, localization of tumors, and screening in general populations.	ncit:C17220	Note: If there were multiple detection methods, include one observation per detection method.
+PD						Imaging	Any technology or method that aids in the visualization of any biological process, cell, tissue or organ for use in screening, diagnosis, surgical procedures or therapy.	ncit:C17369	
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998	
+PD						Not Reported	Not provided or available.	ncit:C43234	
+
+
+DD	Disease Attributes
+TD	Tumor Assessment
+TG	One row per subject per tumor assessment
+VD	AGE_AT_TUMOR_ASSESSMENT	Number		Age of subject (in days) at tumor assessment.	ncit:C174997	_undefined_	_undefined_	_undefined_		
+VD	DISEASE_PHASE	Code		The stage or period of an individual's disease.	ncit:C168878	_undefined_	_undefined_	_undefined_		
+PD						Initial Diagnosis	The first diagnosis of the individual's condition.	ncit:C156813	Note: Disease phase could be "Initial Diagnosis" phase, "Relapse" phase, etc...
+PD						Relapse	The return of a disease after a period of remission.	ncit:C38155	
+VD	DISEASE_PHASE_NUMBER	Number		The number of the disease phase.	ncit:C173258	_undefined_	_undefined_	_undefined_		
+VD	TUMOR_DETECTION_METHOD	Code		The technique used to administer the tumor identification assessment.	ncit:C117438	_undefined_	_undefined_	_undefined_		
+PD						Imaging	Any technology or method that aids in the visualization of any biological process, cell, tissue or organ for use in screening, diagnosis, surgical procedures or therapy.	ncit:C17369	Note: If there were multiple methods, include one observation per method.
+PD						PET	A technique for measuring the gamma radiation produced by collisions of electrons and positrons (anti-electrons) within living tissue. In positron emission tomography (PET), a subject is given a dose of a positron-emitting radionuclide attached to a metabolically active substance (for example, 2-fluoro-2-deoxy-D-glucose (FDG), which is similar to a naturally occurring sugar, glucose, with the addition of a radioactive fluorine atom). When living tissue containing the positron emitter is bombarded by electrons, gamma radiation produced by collisions of electrons and positrons is detected by a scanner, revealing in fine detail the tissue location of the metabolically-active substance administered.	ncit:C17007	
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998	
+PD						Not Reported	Not provided or available.	ncit:C43234	
+VD	TUMOR_CLASSIFICATION	Code		The classification of a tumor based primarily on histopathological characteristics.	ncit:C174459	_undefined_	_undefined_	_undefined_		
+PD						Primary	A tumor at the original site of origin.	ncit:C8509	
+PD						Metastatic	A term referring to the clinical or pathologic observation of a tumor extension from its original site of growth to another anatomic site.	ncit:C14174	
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998	
+PD						Not Reported	Not provided or available.	ncit:C43234	
+VD	TUMOR_SITE	Code		The anatomic site of the tumor.	ncit:C157120	_undefined_	_undefined_	_undefined_		
+PD						Ascitic Fluid	A biospecimen of ascitic fluid.	ncit:C159203	Note: If there were multiple primary sites, include one observation per primary site.
+PD						Bone	Connective tissue that forms the skeletal components of the body.	ncit:C12366	
+PD						Brain	An organ composed of grey and white matter containing billions of neurons that is the center for intelligence and reasoning. It is protected by the bony cranium.	ncit:C12439	
+PD						Cerebrospinal Fluid	The fluid that is contained within the brain ventricles, the subarachnoid space and the central canal of the spinal cord.	ncit:C12692	
+PD						Frontal Cortex	The part of the brain located anterior to the parietal lobes at the front of each cerebral hemisphere.	ncit:C32635	
+PD						Head and Neck	For oncology, an area of the body generally construed to comprise the base of skull and facial bones, sinuses, orbits, salivary glands, oral cavity, oropharynx, larynx, thyroid, facial and neck musculature and lymph nodes draining these areas.	ncit:C12418	
+PD						Liver	A triangular-shaped organ located under the diaphragm in the right hypochondrium. It is the largest internal organ of the body, weighting up to 2 kg. Metabolism and bile secretion are its main functions. It is composed of cells which have the ability to regenerate.	ncit:C12392	
+PD						Lung	One of a pair of viscera occupying the pulmonary cavities of the thorax, the organs of respiration in which aeration of the blood takes place. As a rule, the right lung is slightly larger than the left and is divided into three lobes (an upper, a middle, and a lower or basal), while the left has two lobes (an upper and a lower or basal). Each lung is irregularly conical in shape, presenting a blunt upper extremity (the apex), a concave base following the curve of the diaphragm, an outer convex surface (costal surface), an inner or mediastinal surface (mediastinal surface), a thin and sharp anterior border, and a thick and rounded posterior border.	ncit:C12468	
+PD						Mediastinum	A group of organs surrounded by loose connective tissue, separating the two pleural sacs, between the sternum anteriorly and the vertebral column posteriorly as well as from the thoracic inlet superiorly to the diaphragm inferiorly. The mediastinum contains the heart and pericardium, the bases of the great vessels, the trachea and bronchi, esophagus, thymus, lymph nodes, thoracic duct, phrenic and vagus nerves, and other structures and tissues.	ncit:C12748	
+PD						Occipital Cortex	One of the four regions of cortex in each cerebral hemisphere. It is located posterior to the temporal lobe and inferior to the parietal lobe.	ncit:C12757	
+PD						Peritoneum	The tissue that lines the wall of the abdominal cavity, intestine, mesentery, and pelvic organs. It consists of the parietal peritoneum and the visceral peritoneum.	ncit:C12770	
+PD						Omentum	A fold of peritoneum originating at the stomach and supporting the viscera.	ncit:C33209	
+PD						Ovary	One of the paired female reproductive glands containing the ova or germ cells; the ovary's stroma is a vascular connective tissue containing numbers of ovarian follicles enclosing the ova.	ncit:C12404	
+PD						Parietal Cortex	One of the lobes of the cerebral hemisphere located superiorly to the occipital lobe and posteriorly to the frontal lobe. Cognition and visuospatial processing are its main functions.	ncit:C12766	
+PD						Pineal	A small endocrine gland in the brain, situated beneath the back part of the corpus callosum, that secretes melatonin.	ncit:C12398	
+PD						Retroperitoneum	The back of the abdomen where the kidneys lie and the great blood vessels run.	ncit:C28256	
+PD						Sacrococcygeal	The triangular bone, made up of 5 fused bones of the spine, located in the lower area of the spine between the fifth lumbar vertebra and the coccyx.	ncit:C33506	
+PD						Spinal Cord	The elongated, approximately cylindrical part of the central nervous system of vertebrates that lies in the vertebral canal and from which the spinal nerves emerge.	ncit:C12464	
+PD						Spine	A series of bones, muscles, tendons, and other tissues reaching from the base of the skull to the tailbone. The vertebral column forms the axis of the skeleton and encloses as well as protects the spinal cord and the fluid surrounding the spinal cord.	ncit:C12998	
+PD						Suprasellar/Neurohypophyseal	The anatomical region which includes the sella turcica, pituitary gland, ventral adenohypophysis and dorsal neurohypophysis.	ncit:C177357	
+PD						Temporal Cortex	One of the cerebral lobes. It is located inferior to the frontal and parietal lobes and anterior to the occipital lobe.	ncit:C12797	
+PD						Testis	Either of the paired male reproductive glands that produce the male germ cells and the male hormones.	ncit:C12412	
+PD						Thalamus	An ovoid mass composed predominantly of gray substance and associated laminae of white substance. The thalamus is divided into anterior, medial, and lateral parts. The function of the thalamus is to relay sensory impulses and cerebellar and basal ganglia projections to the cerebral cortex. The thalamus is positioned within the posterior part of the diencephalon forming most of each lateral wall of the third ventricle.	ncit:C12459	
+PD						Vagina	The female genital canal, extending from the uterus to the vulva.	ncit:C12407	
+PD						Other	Different than the one(s) previously specified or mentioned.	ncit:C17649	
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998	
+PD						Not Reported	Not provided or available.	ncit:C43234	
+VD	TUMOR_LATERALITY	Code		A qualifier for the side of the body the tumor findings assessment is performed.	ncit:C119931	_undefined_	_undefined_	_undefined_		
+PD						Left	A finding indicating the tumor location is on the left side of the specimen.	ncit:C25229	ncit:C160200
+PD						Right	A finding indicating the tumor location is on the right side of the specimen.	ncit:C25228	ncit:C160199
+PD						Bilateral	A finding indicating the tumor location is on the both sides of the specimen.	ncit:C13332	ncit:C160201
+PD						Midline	A finding indicating the tumor location is on the midline of the specimen.	ncit:C81170	
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998	
+PD						Not Reported	Not provided or available.	ncit:C43234	
+VD	NODAL_INVOLVEMENT	Code		A finding indicating that a malignant neoplasm has spread to regional lymph nodes.	ncit:C36297	_undefined_	_undefined_	_undefined_		
+PD						No	The non-affirmative response to a question.	ncit:C49487	
+PD						Yes	The affirmative response to a question.	ncit:C49488	
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998	
+PD						Not Reported	Not provided or available.	ncit:C43234	
+VD	NODAL_SITE	Code		The anatomic site of a tumor node.	ncit:C177358	_undefined_	_undefined_	_undefined_		
+PD						Cervix	The lower part of the uterus occupying the region between the isthmus of the uterus and the vagina. It is divided into supravaginal and vaginal portions.	ncit:C12311	
+PD						Mediastinum	A group of organs surrounded by loose connective tissue, separating the two pleural sacs, between the sternum anteriorly and the vertebral column posteriorly as well as from the thoracic inlet superiorly to the diaphragm inferiorly. The mediastinum contains the heart and pericardium, the bases of the great vessels, the trachea and bronchi, esophagus, thymus, lymph nodes, thoracic duct, phrenic and vagus nerves, and other structures and tissues.	ncit:C12748	
+PD						Omentum	A fold of peritoneum originating at the stomach and supporting the viscera.	ncit:C33209	
+PD						Pelvis	The bony, basin-shaped structure formed by the hipbones and the base of the backbone supporting the lower limbs in humans.	ncit:C12767	
+PD						Retroperitoneum	The back of the abdomen where the kidneys lie and the great blood vessels run.	ncit:C28256	
+PD						Other	Different than the one(s) previously specified or mentioned.	ncit:C17649	
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998	
+PD						Not Reported	Not provided or available.	ncit:C43234	
+
+
+DD	Disease Attributes
+TD	Staging
+TG	One row per subject per staging assessment
+VD	AGE_AT_STAGING	Number		Age of subject (in days) at the time of the staging assessment.	ncit:C177359	_undefined_	_undefined_	_undefined_		
+VD	DISEASE_PHASE	Code		The stage or period of an individual's disease.	ncit:C168878	_undefined_	_undefined_	_undefined_		
+PD						Initial Diagnosis	The first diagnosis of the individual's condition.	ncit:C156813	Note: Disease phase could be "Initial Diagnosis" phase, "Relapse" phase, etc...
+PD						Relapse	The return of a disease after a period of remission.	ncit:C38155	
+VD	DISEASE_PHASE_NUMBER	Number		The number of the disease phase.	ncit:C173258	_undefined_	_undefined_	_undefined_		
+VD	STAGE_SYSTEM	Code		A systematic method for clinicopathologic evaluation of tumors.	ncit:C18004	_undefined_	_undefined_	_undefined_		
+PD						FIGO	A staging system for Wilms' Tumor that is based on the postoperative, pre-chemotherapy pathological features and findings relating to the extent of tumor spread.	ncit:C89808	Note: If there were multiple staging systems used, include one observation per staging system
+PD						COG	A system for defining prognosis for gestational trophoblastic neoplasia. In this system, the FIGO stage is represented by an Roman numeral, followed by the modified WHO score depicted as an Arabic numeral and separated by a colon (e.g., Stage II:4, Stage IV:9). Scores of 0-6 are considered low-risk and scores greater than 6 are considered high-risk.	ncit:C39353	
+PD						AJCC	A group formed for the purpose of developing a system of clinical staging for cancer that is acceptable to the American medical profession and is compatible with other accepted classifications.	ncit:C39315	
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998	
+PD						Not Reported	Not provided or available.	ncit:C43234	
+VD	STAGE	Code		The extent of a cancer in the body. Staging is usually based on the size of the tumor, whether lymph nodes contain cancer, and whether the cancer has spread from the original site to other parts of the body.	ncit:C16899	_undefined_	_undefined_	_undefined_		
+PD						Stage I	A FIGO stage term that applies to gynecologic cancers. For cervical cancer, it refers to invasive cancer that is confined to the cervix; for endometrial cancer, it refers to cancer confined to the corpus uteri with no or less than one-half myometrial invasion (IA) or invasion of one-half or more of the myometrium (IB).	ncit:C96244	Note: Tied to stage system.
+PD						Stage II	A FIGO stage term that applies to gynecologic cancers. For cervical cancer, it refers to cancer that invades beyond the cervix, but not to the pelvic wall or lower third of the vagina; for endometrial cancer, it refers to cancer that invades the stromal connective tissue of the cervix, but it does not extend beyond the uterus.	ncit:C96252	
+PD						Stage III	A FIGO stage term that applies to gynecologic cancers. For cervical cancer, it refers to cancer that extends to the pelvic wall, and/or involves the lower third of vagina, and/or causes hydronephrosis or non-functioning kidney; for endometrial cancer, FIGO stage III is subdivided into stages IIIA and IIIB; in FIGO stage IIIA, there is involvement of the serosa and/or the adnexa; for FIGO stage IIIB, there is vaginal or parametrial involvement.	ncit:NCIT:C96255	
+PD						Stage IV	A FIGO stage term that applies to gynecologic cancers. For cervical cancer, it refers to cancer that invades the mucosa of bladder or rectum, and/or extends beyond the true pelvis (FIGO stage IVA), or to cancer with distant metastases (FIGO stage IVB); for endometrial cancer, it refers to cancer that invades the bladder mucosa and/or the bowel mucosa (FIGO stage IVA), or to cancer with distant metastases (FIGO stage IVB).	ncit:NCIT:C96261	
+PD						Stage I	Invasive cancer confined to the original anatomic site of growth without lymph node involvement.	ncit:NCIT:C27966	
+PD						Stage II	Invasive cancer more extensive than stage I, usually involving local lymph nodes without spread to distant anatomic sites.	ncit:NCIT:C28054	
+PD						Stage III	Locally advanced cancer that has spread to nearby organs but not to distant anatomic sites.	ncit:NCIT:C27970	
+PD						Stage IV	Cancer that has spread to distant anatomic sites beyond its original site of growth.	ncit:NCIT:C27971	
+PD						Stage 0	Stage 0 includes: pTis, N0, M0, S0. pTis: Intratubular germ cell neoplasia (carcinoma in situ). N0: regional lymph node metastasis. M0: No distant metastasis. S0: Marker study levels within normal limits. (AJCC 6th and 7th eds.)	ncit:NCIT:C4523	
+PD						Stage I	Stage I includes: pT1-4, N0, M0, SX. pT1: Tumor limited to the testis and epididymis without vascular/lymphatic invasion; tumor may invade into the tunica albuginea but not the tunica vaginalis. pT2: Tumor limited to the testis and epididymis with vascular/lymphatic invasion, or tumor extending through the tunica albuginea with involvement of the tunica vaginalis. pT3: Tumor invades the spermatic cord with or without vascular/lymphatic invasion. pT4: Tumor invades the scrotum with or without vascular/lymphatic invasion. N0: No regional lymph node metastasis. M0: No distant metastasis. SX: Marker studies not available or not performed. (AJCC 6th and 7th eds.)	ncit:NCIT:C7901	
+PD						Stage IA	Stage IA includes: pT1, N0, M0, S0. pT1: Tumor limited to the testis and epididymis without vascular/lymphatic invasion; tumor may invade into the tunica albuginea but not the tunica vaginalis. N0: No regional lymph node metastasis. M0: No distant metastasis. S0: Marker study levels within normal limits. (AJCC 6th and 7th eds.)	ncit:NCIT:C6361	
+PD						Stage IB	Stage IB includes: (pT2, N0, M0, S0); (pT3, N0, M0, S0); (pT4, N0, M0, S0). pT2: Tumor limited to the testis and epididymis with vascular/lymphatic invasion, or tumor extending through the tunica albuginea with involvement of the tunica vaginalis. pT3: Tumor invades the spermatic cord with or without vascular/lymphatic invasion. pT4: Tumor invades the scrotum with or without vascular/lymphatic invasion. N0: No regional lymph node metastasis. M0: No distant metastasis. S0: Marker study levels within normal limits. (AJCC 6th and 7th eds.)	ncit:NCIT:C6362	
+PD						Stage IS	Stage IS includes: Any pT/TX, N0, M0, S1-3. pTX: Primary tumor cannot be assessed. N0: No regional lymph node metastasis. M0: No distant metastasis. S1: LDH less than 1.5 x N (N indicates the upper limit of normal for the LDH assay) and hCG less than 5,000 and AFP less than 1,000. S2: LDH 1.5-10 x N or hCG 5,000-50,000 or AFP 1,000-10,000. S3: LDH more than 10 x N or hCG more than 50,000 or AFP more than 10,000. (AJCC 6th and 7th eds.)	ncit:NCIT:C6363	
+PD						Stage II	Stage II includes: Any pT/TX, N1-3, M0, SX. pTX: Primary tumor cannot be assessed. N1: Metastasis with a lymph node mass 2 cm or less in greatest dimension; or multiple lymph nodes, none more than 2cm in greatest dimension. N2: Metastasis with a lymph node mass more than 2 cm but not more than 5 cm in greatest dimension; or multiple lymph nodes, any one mass greater than 2 cm but not more than 5 cm in greatest dimension. N3: Metastasis with a lymph node mass more than 5 cm in greatest dimension. M0: No distant metastasis. SX: Marker studies not available or not performed. (AJCC 6th and 7th eds.)	ncit:NCIT:C9073	
+PD						Stage IIA	Stage IIA includes: (Any pT/TX, N1, M0, S0); (Any pT/TX, N1, M0, S1). TX: Testicular cancer in which the primary tumor cannot be assessed. N1: Testicular cancer with metastasis with a lymph node mass 2 cm or smaller in greatest dimension and less than or equal to five nodes positive, none larger than 2 cm in greatest dimension. M0: Testicular cancer without evidence of distant metastasis. S0: Marker study levels within normal limits. S1: LDH less than 1.5 x N and hCG (mlU/mL) less than 5,000 and AFP (ng/mL) less than 1,000. N indicates the upper limit of normal for the LDH assay. (AJCC 8th ed.)	ncit:NCIT:C6364	
+PD						Stage IIB	Stage IIB includes: (Any pT/TX, N2, M0, S0); (Any pT/TX, N2, M0, S1). pTX: Primary tumor cannot be assessed. N2: Metastasis with a lymph node mass more than 2 cm but not more than 5 cm in greatest dimension; or multiple lymph nodes, any one mass greater than 2 cm but not more than 5 cm in greatest dimension. M0: No distant metastasis. S0: Marker study levels within normal limits. S1: LDH less than 1.5 x N (N indicates the upper limit of normal for the LDH assay) and hCG less than 5,000 and AFP less than 1,000. (AJCC 6th and 7th eds.)	ncit:NCIT:C6365	
+PD						Stage IIC	Stage IIC includes: (Any pT/TX, N3, M0, S0); (Any pT/TX, N3, M0, S1). pTX: Primary tumor cannot be assessed. N3: Metastasis with a lymph node mass more than 5 cm in greatest dimension. M0: No distant metastasis. S0: Marker study levels within normal limits. S1: LDH less than 1.5 x N (N indicates the upper limit of normal for the LDH assay) and hCG less than 5,000 and AFP less than 1,000. (AJCC 6th and 7th eds.)	ncit:NCIT:C6366	
+PD						Stage III	Stage III includes: Any pT/TX, Any N, M1, SX. M1: Distant metastasis. SX: Marker studies not available or not performed. (AJCC 6th and 7th eds.)	ncit:NCIT:C9074	
+PD						Stage IIIA	Stage IIIA includes: (Any pT/TX, Any N, M1a, S0); (Any pT/TX, Any N, M1a, S1). M1a: Non-regional nodal or pulmonary metastasis. S0: Marker study levels within normal limits. S1: LDH less than 1.5 x N (N indicates the upper limit of normal for the LDH assay) and hCG less than 5,000 and AFP less than 1,000. (AJCC 6th and 7th eds.)	ncit:NCIT:C6369	
+PD						Stage IIIB	Stage IIIB includes: (Any pT/TX, N1-3, M0, S2); (Any pT/TX, Any N, M1a, S2). N1: Metastasis with a lymph node mass 2 cm or less in greatest dimension; or multiple lymph nodes, none more than 2cm in greatest dimension. N2: Metastasis with a lymph node mass more than 2 cm but not more than 5 cm in greatest dimension; or multiple lymph nodes, any one mass greater than 2 cm but not more than 5 cm in greatest dimension. N3: Metastasis with a lymph node mass more than 5 cm in greatest dimension. M0: No distant metastasis. M1a: Non-regional nodal or pulmonary metastasis. S2: LDH 1.5-10 x N (N indicates the upper limit of normal for the LDH assay) or hCG 5,000-50,000 or AFP 1,000-10,000. (AJCC 6th and 7th eds.)	ncit:NCIT:C6368	
+PD						Stage IIIC	Stage IIIC includes: (Any pT/TX, N1-3, M0, S3); (Any pT/TX, Any N, M1a, S3); (Any pT/TX, Any N, M1b, Any S). N1: Metastasis with a lymph node mass 2 cm or less in greatest dimension; or multiple lymph nodes, none more than 2cm in greatest dimension. N2: Metastasis with a lymph node mass more than 2 cm but not more than 5 cm in greatest dimension; or multiple lymph nodes, any one mass greater than 2 cm but not more than 5 cm in greatest dimension. N3: Metastasis with a lymph node mass more than 5 cm in greatest dimension. M0: No distant metastasis. M1a: Non-regional nodal or pulmonary metastasis. M1b: Distant metastasis other than to non-regional lymph nodes and lung. S3: LDH more than 10 x N (N indicates the upper limit of normal for the LDH assay) or hCG more than 50,000 or AFP more than 10,000. (AJCC 6th and 7th eds.)	ncit:NCIT:C6367	
+PD						Unknown	Reported as unknown by the data contributor.	ncit:NCIT:17998	
+PD						Not Reported	Not provided or available.	ncit:NCIT:43234	
+
+
+DD	Disease Attributes
+TD	Histology
+TG	One row per subject per histologic assessment
+VD	AGE_AT_HIST_ASSESSMENT	Number		Age of subject (in days) at histology assessment.	ncit:C175004	_undefined_	_undefined_	_undefined_		
+VD	DISEASE_PHASE	Code		The stage or period of an individual's disease.	ncit:NCIT:168878	_undefined_	_undefined_	_undefined_		
+PD						Initial Diagnosis	The first diagnosis of the individual's condition.	ncit:NCIT:156813	Note: Disease phase could be "Initial Diagnosis" phase, "Relapse" phase, etc...
+PD						Relapse	The return of a disease after a period of remission.	ncit:NCIT:38155	
+VD	DISEASE_PHASE_NUMBER	Number		The number of the disease phase.	ncit:NCIT:173258	_undefined_	_undefined_	_undefined_		
+VD	HIST_ASSESSMENT_REVIEW	Code		The name of the institution or  central histological assessment.	ncit:NCIT:C177360	_undefined_	_undefined_	_undefined_		
+PD						Institutional	An established society, corporation, foundation or other organization founded and united for a specific purpose, e.g. for health-related research; also used to refer to a building or buildings occupied or used by such organization.	ncit:NCIT:C41206	
+PD						Central	Clinical trial conducted according to a single protocol but at more than one site and, therefore, carried out by more than one investigator.	ncit:NCIT:C16104	
+PD						Unknown	Reported as unknown by the data contributor.	ncit:NCIT:17998	
+PD						Not Reported	Not provided or available.	ncit:NCIT:43234	
+VD	HISTOLOGY	Code		The study of the structure of the cells and their arrangement to constitute tissues and, finally, the association among these to form organs. In pathology, the microscopic process of identifying normal and abnormal morphologic characteristics in tissues, by employing various cytochemical and immunocytochemical stains.	ncit:NCIT:16681	_undefined_	_undefined_	_undefined_		
+PD						Seminoma/Dysgerminoma/Germinoma	A term that refers to germinoma, seminoma, or dysgerminoma.	ncit:NCIT:C121618	Note: If multiple histology assessments, include one observation per histological finding.
+PD						Embryonal Carcinoma	A non-seminomatous malignant germ cell tumor characterized by the presence of large germ cells with abundant cytoplasm resembling epithelial cells, geographic necrosis, high mitotic activity, and pseudoglandular and pseudopapillary structures formation. It can arise from the testis, ovary, and extragonadal sites (central nervous system and mediastinum).	ncit:NCIT:C3752	
+PD						Yolk Sac Tumor	A non-seminomatous malignant germ cell tumor composed of primitive germ cells. It is the most common malignant germ cell tumor in the pediatric population. It occurs in the infant testis, ovary, sacrococcygeal region, vagina, uterus, prostate, abdomen, liver, retroperitoneum, thorax, and pineal/third ventricle. The tumor mimics the yolk sac of the embryo and produces alpha-fetoprotein (AFP). Treatment includes: surgical resection, radiation, and chemotherapy. This tumor is very responsive to chemotherapy regimens that include cisplatinum.	ncit:NCIT:C3011	
+PD						Choriocarcinoma	An aggressive malignant tumor arising from trophoblastic cells. The vast majority of cases arise in the uterus and represent gestational choriocarcinomas that derive from placental trophoblastic cells. Approximately half of the cases develop from a complete hydatidiform mole. A minority of cases arise in the testis or the ovaries. There is often marked elevation of human chorionic gonadotropin (hCG) in the blood. Choriocarcinomas disseminate rapidly through the hematogenous route; the lungs are most frequently affected.	ncit:NCIT:C2948	
+PD						Mature Teratoma	A teratoma which may be cystic; it is composed entirely of well differentiated, adult-type mature tissues, without evidence of fetal-type immature tissues (grade 0 teratoma).	ncit:NCIT:C9015	
+PD						Immature Teratoma	A teratoma characterized by the presence of an extensive component of immature, fetal-type tissues.	ncit:NCIT:C4286	
+PD						Gonadoblastoma	A mixed germ cell/sex cord-stromal tumor characterized by the presence of large germ cells which resemble seminoma cells and small cells which resemble Sertoli or granulosa cells. It occurs in the testis and the ovary and is identified in children and adults. It is often associated with gonadal dysgenesis and abnormal karyotype.	ncit:NCIT:C3754	
+PD						Somatic Malignancy	A teratoma which is characterized by morphologic transformation to malignancy and an aggressive clinical course. The malignant component most often is sarcomatous or carcinomatous.	ncit:NCIT:C4289	
+PD						Necrotic Tumor	Necrotic Neoplasm	ncit:NCIT:C36029	
+PD						Teratoma, Not Otherwise Specified	A non-seminomatous germ cell tumor characterized by the presence of various tissues which correspond to the different germinal layers (endoderm, mesoderm, and ectoderm). It occurs in the testis, ovary, and extragonadal sites including central nervous system, mediastinum, lung, and stomach. According to the level of differentiation of the tissues which comprise the tumor, teratomas are classified as benign (grade 0 or 1), immature (grade 2), and malignant (grade 3). Grade 0 teratomas contain only mature elements; grade 1 teratomas have a limited degree of immaturity; grade 2 teratomas have a more extensive degree of immaturity; grade 3 teratomas are composed exclusively of immature tissues. The prognosis depends on patient age, tumor size and grade, and stage.	ncit:NCIT:C3403	
+PD						Mixed Germ Cell Tumor	A malignant germ cell tumor characterized by the presence of at least two different germ cell tumor components. The different germ cell tumor components include choriocarcinoma, embryonal carcinoma, yolk sac tumor, teratoma, and seminoma. It occurs in the ovary, testis, and extragonadal sites including central nervous system and mediastinum.	ncit:NCIT:C4290	
+PD						Malignant Teratoma	A teratoma composed exclusively of immature tissues.	ncit:NCIT:C4287	
+PD						Seminoma	A radiosensitive malignant germ cell tumor found in the testis (especially undescended), and extragonadal sites (anterior mediastinum and pineal gland). It is characterized by the presence of uniform cells with clear or dense cytoplasm which contains glycogen, and by a large nucleus which contains one or more nucleoli. The neoplastic germ cells form aggregates separated by fibrous septa. The fibrous septa contain chronic inflammatory cells, mainly lymphocytes.	ncit:NCIT:C9309	
+PD						Dysgerminoma	A malignant germ cell tumor characterized by the presence of a monotonous primitive germ cell population. The neoplastic cells form aggregates and have an abundant pale cytoplasm and uniform nuclei. The aggregates of the germ cells are separated by fibrous septa which contain inflammatory cells, mostly T-lymphocytes. It arises primarily in the ovaries, but can occur both primarily and secondarily at other sites, particularly the central nervous system. It responds to chemotherapy and radiotherapy. Its prognosis is related to the tumor stage.	ncit:NCIT:C2996	
+PD						Germinoma	A malignant germ cell tumor arising in the central nervous system. It is characterized by the presence of primitive, large malignant germ cells and lymphocytes.	ncit:NCIT:C3753	
+PD						Unknown	Reported as unknown by the data contributor.	ncit:NCIT:17998	
+PD						Not Reported	Not provided or available.	ncit:NCIT:43234	
+VD	HISTOLOGY_RESULT	String		The percentage of tumor tissue in a sample.	ncit:NCIT:C166246	_undefined_	_undefined_	_undefined_		
+VD	HISTOLOGY_RESULT_NUMERIC	Number		The numeric value for the histology result.	ncit:NCIT:C177361	_undefined_	_undefined_	_undefined_		
+VD	HISTOLOGY_RESULT_UNIT	Code		The unit being used as the measurement for the histology test.	ncit:NCIT:C177362	_undefined_	_undefined_	_undefined_		
+PD						%	A unit for expressing a number as a fraction of hundred (on the basis of a rate or proportion per hundred).	ncit:NCIT:C48570	
+PD						Unknown	Reported as unknown by the data contributor.	ncit:NCIT:17998	
+PD						Not Reported	Not provided or available.	ncit:NCIT:43234	
+VD	HIST_ICD_O_MORPH	String		Codes for the histologic type of the tumor being reported using ICD-O.	ncit:NCIT:C176985	_undefined_	_undefined_	_undefined_		
+VD	HISTOLOGY_GRADE	Code		The degree of abnormality of cancer cells, a measure of differentiation, the extent to which cancer cells are similar in appearance and function to healthy cells of the same tissue type. The degree of differentiation often relates to the clinical behavior of the particular tumor. Based on the microscopic findings, tumor grade is commonly described by one of four degrees of severity. Histopathologic grade of a tumor may be used to plan treatment and estimate the future course, outcome, and overall prognosis of disease. Certain types of cancers, such as soft tissue sarcoma, primary brain tumors, lymphomas, and breast have special grading systems.	ncit:NCIT:C18000	_undefined_	_undefined_	_undefined_		
+PD						Grade 1	A morphologic qualifier indicating that a cancerous lesion is well differentiated.	ncit:NCIT:C28077	Note: Only associated with Mature Teratoma.
+PD						Grade 2	A morphologic qualifier indicating that a cancerous lesion is moderately differentiated.	ncit:NCIT:C28078	
+PD						Grade 3	A morphologic qualifier indicating that a cancerous lesion is poorly differentiated.	ncit:NCIT:C28079	
+PD						Unknown	Reported as unknown by the data contributor.	ncit:NCIT:17998	
+PD						Not Reported	Not provided or available.	ncit:NCIT:43234	
+VD	MATURE_GLIAL_IMPLANTS	Code		A nodule of mature glial tissue that develops in the peritoneum. It is usually accompanied by mature or immature ovarian teratoma.	ncit:NCIT:C177363	_undefined_	_undefined_	_undefined_		
+PD						No	The non-affirmative response to a question.	ncit:NCIT:C49487	Note: Only associated with Mature Teratoma.
+PD						Yes	The affirmative response to a question.	ncit:NCIT:C49488	
+PD						Unknown	Reported as unknown by the data contributor.	ncit:NCIT:17998	
+PD						Not Reported	Not provided or available.	ncit:NCIT:43234	
+VD	SOMATIC_MALIGNANCY_TYPE	Code		A nodule of mature glial tissue that develops in the peritoneum. It is usually accompanied by mature or immature ovarian teratoma.	ncit:NCIT:C177364	_undefined_	_undefined_	_undefined_		
+PD						Rhabdomyosarcoma	A rare aggressive malignant mesenchymal neoplasm arising from skeletal muscle. It usually occurs in children and young adults. Only a small percentage of tumors arise in the skeletal muscle of the extremities. The majority arise in other anatomic sites.	ncit:NCIT:C3359	Note: Only associated with Somatic Malignancy.
+PD						Sarcoma, Not Otherwise Specified	A usually aggressive malignant neoplasm of the soft tissue or bone. It arises from muscle, fat, fibrous tissue, bone, cartilage, and blood vessels. Sarcomas occur in both children and adults. The prognosis depends largely on the degree of differentiation (grade) of the neoplasm. Representative subtypes are liposarcoma, leiomyosarcoma, osteosarcoma, and chondrosarcoma.	ncit:NCIT:C9118	
+PD						Adenocarcinoma	A common cancer characterized by the presence of malignant glandular cells. Morphologically, adenocarcinomas are classified according to the growth pattern (e.g., papillary, alveolar) or according to the secreting product (e.g., mucinous, serous). Representative examples of adenocarcinoma are ductal and lobular breast carcinoma, lung adenocarcinoma, renal cell carcinoma, hepatocellular carcinoma (hepatoma), colon adenocarcinoma, and prostate adenocarcinoma.	ncit:NCIT:C2852	
+PD						Primitive Neuroectodermal Tumor	A malignant neoplasm that originates in the neuroectoderm. The neuroectoderm constitutes the portion of the ectoderm of the early embryo that gives rise to the central and peripheral nervous systems and includes some glial cell precursors.	ncit:NCIT:C3716	
+PD						Squamous Cell Carcinoma	A carcinoma arising from squamous epithelial cells. Morphologically, it is characterized by the proliferation of atypical, often pleomorphic squamous cells. Squamous cell carcinomas are graded by the degree of cellular differentiation as well, moderately, or poorly differentiated. Well differentiated carcinomas are usually associated with keratin production and the presence of intercellular bridges between adjacent cells. Representative examples are lung squamous cell carcinoma, skin squamous cell carcinoma, and cervical squamous cell carcinoma.	ncit:NCIT:C2929	
+PD						Malignant Histiocytosis	An antiquated term referring to cases of systemic non-Hodgkin lymphomas which are composed of large, atypical neoplastic lymphoid cells and cases of hemophagocytic syndromes. In the past, cases of anaplastic large cells lymphoma were called malignant histiocytosis.	ncit:NCIT:C7202	
+PD						Other	Different than the one(s) previously specified or mentioned.	ncit:NCIT:C17649	
+PD						Unknown	Reported as unknown by the data contributor.	ncit:NCIT:17998	
+PD						Not Reported	Not provided or available.	ncit:NCIT:43234	
+
+
+DD	Testing
+TD	Vitals
+TG	One row per subject per vitals test
+VD	AGE_AT_VITALS	Number		Age of subject (in days) when vital signs were recorded.	ncit:NCIT:168845	_undefined_	_undefined_	_undefined_		
+VD	DISEASE_PHASE	Code		The stage or period of an individual's disease.	ncit:NCIT:168878	_undefined_	_undefined_	_undefined_		
+PD						Initial Diagnosis	The first diagnosis of the individual's condition.	ncit:NCIT:156813	Note: Disease phase could be "Initial Diagnosis" phase, "Relapse" phase, etc...
+PD						Relapse	The return of a disease after a period of remission.	ncit:NCIT:38155	
+VD	DISEASE_PHASE_NUMBER	Number		The number of the disease phase.	ncit:NCIT:173258	_undefined_	_undefined_	_undefined_		
+VD	VITALS_TEST	Code		The act of assessing an individual's current temperature, heart rate, respiratory rate, pulse oxygenation, and blood pressure.	ncit:NCIT:49672	_undefined_	_undefined_	_undefined_		
+PD						Weight	The weight of a subject.	ncit:NCIT:25208	Note: BMI should only be what is reported on CRF, not calculated from weight and height when submitting data to the PCDC
+PD						Height	The vertical measurement or distance from the base to the top of a subject or participant.	ncit:NCIT:25347	
+VD	VITALS_RESULT	String		The outcome of the vital signs assessment.	ncit:NCIT:83108	_undefined_	_undefined_	_undefined_		
+VD	VITALS_RESULT_NUMERIC	Number		The numeric values of the vital signs.	ncit:NCIT:173268	_undefined_	_undefined_	_undefined_		
+VD	VITALS_RESULT_UNIT	Code		The unit used to record and describe the result of a test investigating a vital sign.	ncit:NCIT:49675	_undefined_	_undefined_	_undefined_		
+PD						kg	A basic SI unit of mass. It is defined as the mass of an international prototype in the form of a platinum-iridium cylinder kept at Sevres in France. A kilogram is equal to 1,000 grams and 2.204 622 6 pounds.	ncit:NCIT:28252	Note: Only fill in this variable if a numeric result is provided in VITALS_RESULT_NUMERIC.
+PD						cm	A basic unit of length in the former CGS version of metric system, equal to one hundredth of a meter or approximately 0.393 700 787 inch	ncit:NCIT:49668	
+PD						Unknown	Reported as unknown by the data contributor.	ncit:NCIT:17998	
+PD						Not Reported	Not provided or available.	ncit:NCIT:43234	
+
+
+DD	Testing
+TD	Labs
+TG	One row per subject per lab test
+VD	AGE_AT_LAB	Number		Age of subject (in days) when the laboratory test was performed.	ncit:NCIT:172691	_undefined_	_undefined_	_undefined_		
+VD	DISEASE_PHASE	Code		The stage or period of an individual's disease.	ncit:NCIT:168878	_undefined_	_undefined_	_undefined_		
+PD						Initial Diagnosis	The first diagnosis of the individual's condition.	ncit:NCIT:156813	Note: Disease phase could be "Initial Diagnosis" phase, "Relapse" phase, etc...
+PD						Relapse	The return of a disease after a period of remission.	ncit:NCIT:38155	
+VD	DISEASE_PHASE_NUMBER	Number		The number of the disease phase.	ncit:NCIT:173258	_undefined_	_undefined_	_undefined_		
+VD	LAB_CATEGORY	Code		A classification of the laboratory test.	ncit:NCIT:C83017	_undefined_	_undefined_	_undefined_		
+PD						Cerebrospinal Fluid Analysis		ncit:	
+PD						microRNA Sequencing		ncit:	
+PD						Other		ncit:	
+PD						Unknown		ncit:	
+PD						Not Reported		ncit:	
+VD	LAB_TEST	Code		A character or string that represents the full name of the laboratory assessment.	ncit:NCIT:C117142	_undefined_	_undefined_	_undefined_		
+PD						LDH	A family of homotetrameric cytoplasmic enzymes involved in the conversion of L-lactate and NAD to pyruvate and NADH in the final step of anaerobic glycolysis. In vertebrates, genes for three different subunits (LDH-A, LDH-B and LDH-C) exist.	ncit:NCIT:C25184	
+PD						AFP	This gene plays a role in fetal progression.	ncit:NCIT:21577	
+PD						β-hCG	A determination of the presence of Choriogonadotropin Beta protein.	ncit:NCIT:64851	
+PD						miR-371a-3p	The human MIR371A wild-type allele is located in the vicinity of 19q13.42 and is approximately 67 bases in length. This allele, which encodes MIR371A pre-miRNA, may be involved in the regulation of target gene expression. Alteration in the expression of this gene is associated with malignant germ cell tumors.	ncit:NCIT:158711	
+PD						miR-372-3p	The human MIR372 wild-type allele is located in the vicinity of 19q13.41 and is approximately 66 bases in length. This allele, which encodes MIR372 pre-miRNA, plays a role in the regulation of gene expression. Alteration in the expression of this gene is associated with development of testicular germ cell tumor and non-small cell lung cancer.	ncit:NCIT:82190	
+PD						miR-373-3p	The human MIR373 wild-type allele is located in the vicinity of 19q13.41 and is approximately 68 bases in length. This allele, which encodes MIR373 pre-miRNA, plays a role in the regulation of gene expression. Alteration in the expression of this gene is associated with development of testicular germ cell tumor and breast cancer.	ncit:NCIT:82191	
+PD						miR-367-3p	The determination of the amount of human microRNA 367-3p present in a sample.	ncit:NCIT:C177302	
+PD						miR-375-3p	Human MIR375 wild-type allele is located in the vicinity of 2q35 and is approximately 70 bases in length. This allele, which encodes MIR375 pre-miRNA, is involved in the modulation of gene expression.	ncit:NCIT:101665	
+PD						cfDNA	DNA that is found in blood plasma and is not associated with cells in the circulation.	ncit:NCIT:C128274	
+VD	LAB_SPEC_TYPE	Code		The type of a material sample taken from a biological entity for laboratory testing.	ncit:NCIT:88315	_undefined_	_undefined_	_undefined_		
+PD						Blood	A small volume of blood removed for testing or storage.	ncit:C17610	
+PD						Serum	A sample of serum collected for analysis.	ncit:C178987	
+PD						Plasma		ncit:	
+PD						Cerebrospinal Fluid		ncit:	
+PD						Peritoneal Fluid		ncit:	
+PD						Unknown	Reported as unknown by the data contributor.	ncit:NCIT:17998	
+PD						Not reported	Not provided or available.	ncit:NCIT:43234	
+VD	LAB_RESULT	String		The outcome of a laboratory test.	ncit:NCIT:36292	_undefined_	_undefined_	_undefined_		
+VD	LAB_RESULT_NUMERIC	Number		A numeric representation of a test result.	ncit:NCIT:C70952	_undefined_	_undefined_	_undefined_		
+VD	LAB_RESULT_UNIT	Code		The numeric unit that expresses the lab result.	ncit:NCIT:C173274	_undefined_	_undefined_	_undefined_		
+PD						U/L	An arbitrary unit of substance concentration equal to the concentration at which one liter of mixture contains one unit of a substance.	ncit:NCIT:C67456	
+PD						ng/mL	A unit of mass concentration defined as the concentration of one microgram of a substance per unit volume of the mixture equal to one liter. The concept also refers to the unit of mass density (volumetric mass) defined as the density of a substance which mass equal to one microgram occupies the volume of one liter.	ncit:NCIT:C67306	
+PD						IU/L	Unit of arbitrary substance concentration (biologic activity concentration) defined as the concentration of one international unit per one liter of the system volume.	ncit:NCIT:C67376	
+PD						Unknown	Reported as unknown by the data contributor.	ncit:NCIT:17998	
+PD						Not Reported	Not provided or available.	ncit:NCIT:43234	
+VD	LAB_METHOD	Code		A systematic course of action that is performed in order to complete a laboratory test.	ncit:NCIT:83312	_undefined_	_undefined_	_undefined_		
+PD						MicroRNA Sequencing	A next-generation or massively parallel high-throughput DNA sequencing-based procedure that can identify and quantify the microRNA sequences present in a biological sample.	ncit:NCIT:C156057	
+PD						qPCR	An application of PCR that measures the products generated during each cycle of the polymerase chain reaction process in order to determine the starting amount of template in the reaction.	ncit:NCIT:C51962	
+PD						ddPCR	A type of digital polymerase chain reaction technique in which the sample is fractionated into thousands of tiny droplets using a water-oil emulsion droplet technology, within which individual PCR reactions occur in each droplet	ncit:NCIT:C166064	
+PD						Cytology	The light microscopic study of normal and abnormal cells in fine needle aspirates (FNAs), body cavity fluids, and smears.	ncit:NCIT:C16491	
+PD						Unknown	Reported as unknown by the data contributor.	ncit:NCIT:17998	
+PD						Not reported	Not provided or available.	ncit:NCIT:43234	
+VD	LAB_SEQ_METHOD	Code		The number of molecules of a particular type on or in a cell or part of a cell. Usually applied to specific genes or to plasmids within a bacterium.	ncit:NCIT:C49142	_undefined_	_undefined_	_undefined_		
+PD						Relative	Considered in comparison with something else; dependent on or interconnected with something else; not absolute.	ncit:NCIT:C45830	Note: Specific to miRNA
+PD						Absolute	Complete and without restriction or qualification; something that does not depend on anything else; not relative.	ncit:NCIT:C45829	
+PD						Unknown	Reported as unknown by the data contributor.	ncit:NCIT:17998	
+PD						Not Reported	Not provided or available.	ncit:NCIT:43234	
+VD	THRESHOLD_HIGH	Number		The maximum level that must be exceeded for a certain reaction to occur or be manifested.	ncit:NCIT:C177365	_undefined_	_undefined_	_undefined_		
+VD	THRESHOLD_LOW	Number		The minimum level that must be attained for a certain reaction to occur or be manifested.	ncit:NCIT:C177366	_undefined_	_undefined_	_undefined_		
+VD	PMID_REF	Number		The unique number assigned to an article record that is entered into the PubMed system.	ncit:NCIT:C127797	_undefined_	_undefined_	_undefined_		
+
+
+DD	Testing
+TD	Immunohistochemistry
+TG	One row per subject per immunohistochemistry finding
+VD	AGE_AT_IHC	Number		Age of subject (in days) at immunohistochemistry assessment.	ncit:	_undefined_	_undefined_	_undefined_		
+VD	DISEASE_PHASE	Code		The stage or period of an individual's disease.	ncit:NCIT:168878	_undefined_	_undefined_	_undefined_		
+PD						Initial Diagnosis	The first diagnosis of the individual's condition.	ncit:NCIT:156813	
+PD						Relapse	The return of a disease after a period of remission.	ncit:NCIT:38155	
+VD	DISEASE_PHASE_NUMBER	Number		The number of the disease phase.	ncit:NCIT:173258	_undefined_	_undefined_	_undefined_		
+VD	IHC_TEST	Code		A diagnostic test in which an antibody is used to link a cellular antigen specifically to a stain that can be seen with a microscope.	ncit:NCIT:C51944	_undefined_	_undefined_	_undefined_		
+PD						CD30	Tumor necrosis factor receptor superfamily member 8 (595 aa, ~ 64 kDa) is encoded by the human TNFRSF8 gene. This protein is involved in ligand-mediated signal transduction, the positive regulation of apoptosis and the inhibition of cell proliferation.	ncit:NCIT:C38906	
+PD						beta-catenin	Catenin beta-1 (781 aa, ~85 kDa) is encoded by the human CTNNB1 gene. This protein is involved in Wnt signaling, adherens junction structure, and the regulation of cell growth.	ncit:NCIT:C17478	
+PD						GPC3	Glypican-3 (580 aa, ~66 kDa) is encoded by the human GPC3 gene. This protein is involved in the mediation of proteoglycan binding to the cell surface.	ncit:NCIT:C88175	
+VD	IHC_RESULT	String		The result from the immunohistochemical test.	ncit:NCIT:C175007	_undefined_	_undefined_	_undefined_		
+VD	IHC_RESULT_NUMERIC	Number		The numerical identifier of an immunohistochemistry specimen assessment result.	ncit:NCIT:C177368	_undefined_	_undefined_	_undefined_		
+
+
+DD	Testing
+TD	Cytology
+TG	One row per subject per cytology finding
+VD	AGE_AT_CYTOLOGY	Number		Age of subject (in days) at the time of the cytology test.	ncit:NCIT:C177369	_undefined_	_undefined_	_undefined_		
+VD	DISEASE_PHASE	Code		The stage or period of an individual's disease.	ncit:NCIT:168878	_undefined_	_undefined_	_undefined_		
+PD						Initial Diagnosis	The first diagnosis of the individual's condition.	ncit:NCIT:156813	Note: Only fill in Disease Phase, Disease Phase Number, Course, and Course Number if "AGE_" not known  Note: Disease Phase could be "Initial Diagnosis" phase, or a "Relapse" phase, etc...
+PD						Relapse	The return of a disease after a period of remission.	ncit:NCIT:38155	
+VD	DISEASE_PHASE_NUMBER	Number		The number of the disease phase.	ncit:NCIT:173258	_undefined_	_undefined_	_undefined_		
+VD	MALIGNANT_CELLS	Code		A diagnostic test in which an antibody is used to link a cellular antigen specifically to a stain that can be seen with a microscope.	ncit:NCIT:51944	_undefined_	_undefined_	_undefined_		
+PD						Present	Being or existing in a specified place or at the specified time.	ncit:NCIT:C25626	
+PD						Absent	Not existing in a specified place at a specified time.	ncit:NCIT:C48190	
+PD						Unknown	Reported as unknown by the data contributor.	ncit:NCIT:17998	
+PD						Not Reported	Not provided or available.	ncit:NCIT:43234	
+VD	CYTOLOGY_SPEC_TYPE	Code		The type of a material sample taken from a biological entity for testing, diagnostic, propagation, treatment or research purposes. This includes particular types of cellular molecules, cells, tissues, organs, body fluids, embryos, and body excretory substances.	ncit:NCIT:C70713	_undefined_	_undefined_	_undefined_		
+PD						Cerebrospinal Fluid	The fluid that is contained within the brain ventricles, the subarachnoid space and the central canal of the spinal cord.	ncit:NCIT:C12692	
+PD						Peritoneal Fluid	The small amount of fluid that is generated in the abdominal cavity to lubricate the peritoneum.	ncit:NCIT:C77612	
+PD						Unknown	Reported as unknown by the data contributor.	ncit:NCIT:17998	
+PD						Not Reported	Not provided or available.	ncit:NCIT:43234	
+
+
+DD	Testing
+TD	Molecular Analysis
+TG	One row per subject per molecular abnormality
+VD	AGE_AT_MOLECULAR_ANALYSIS	Number		Age of subject (in days) when molecular analysis was performed.	ncit:NCIT:168848	_undefined_	_undefined_	_undefined_		
+VD	DISEASE_PHASE	Code		The stage or period of an individual's disease.	ncit:NCIT:168878	_undefined_	_undefined_	_undefined_		
+PD						Initial Diagnosis	The first diagnosis of the individual's condition.	ncit:NCIT:156813	Note: Disease phase could be "Initial Diagnosis" phase, "Relapse" phase, etc...
+PD						Relapse	The return of a disease after a period of remission.	ncit:NCIT:38155	
+VD	DISEASE_PHASE_NUMBER	Number		The number of the disease phase.	ncit:NCIT:173258	_undefined_	_undefined_	_undefined_		
+VD	MOLECULAR_ANALYSIS_METHOD	Code		A request to enter the specific molecular analysis method used to detect abnormalities in the study.	ncit:NCIT:C158954	_undefined_	_undefined_	_undefined_		
+PD						Karyotyping	The preparation, analysis, and interpretation of a karyotype, the representation of the chromosome set of a cell.	ncit:C16768	
+PD						Cytogenetics	The branch of biology that studies the cellular aspects of heredity, especially the chromosomes. Includes the study of disease states caused by numerical and structural chromosome abnormalities.	ncit:C16487	
+PD						Unknown	Not known, not observed, not recorded, or refused.	ncit:C17998	
+PD						Not Reported	Not provided or available.	ncit:C43234	
+VD	KARYOTYPE_STATUS	Code		The status of the subject's karyotype.	ncit:NCIT:C168871	_undefined_	_undefined_	_undefined_		
+PD						Normal Karyotype	The assessment of the karyotype is that it is normal.	ncit:C173277	
+PD						Abnormal Karyotype	Any abnormality in the number, length, centromere position, banding pattern or differences between the sex chromosomes that is not representative of a normal set of chromosomes.	ncit:C168875	
+PD						Unknown	Not known, not observed, not recorded, or refused.	ncit:C17998	
+PD						Not Reported	Not provided or available.	ncit:C43234	
+VD	ISCN	String		A karyotype finding as classified by the International System for Human Cytogenetic Nomenclature.	ncit:NCIT:C173278	_undefined_	_undefined_	_undefined_		
+VD	NUM_CHROMOSOMES	Number		The number of chromosomes upon karyotype analysis.	ncit:NCIT:C177370	_undefined_	_undefined_	_undefined_		
+VD	INDEPEN_AB	Number		The number of independent aberrations found in the karyotype during analysis.	ncit:NCIT:C173279	_undefined_	_undefined_	_undefined_		
+VD	MOLECULAR_ABNORMALITY	Code		A molecular or cytogenic abnormality which occurs in either human disease states or disease models.	ncit:NCIT:C3910	_undefined_	_undefined_	_undefined_		
+PD						45XO	Gonadal dysgenesis in an individual with 46,XX karyotype and female phenotype.	ncit:NCIT:C26900	Note: If multiple molecular abnormalities, include one observation per molecular abnormality.
+PD						45XO w/ Y Chromosomal Material	An abnormal sex chromosome karyotype where the individual is missing a second X chromosome and has some chromosomal material from the Y chromosome. The normal autosomal karyotype is present.	ncit:NCIT:C176781	
+PD						46XX	Gonadal dysgenesis in an individual with 46,XX karyotype and female phenotype.	ncit:NCIT:C120197	
+PD						46XY	Gonadal dysgenesis in an individual with 46.XY karyotype.	ncit:NCIT:C120198	
+PD						47XYY	A condition caused by the presence of an extra Y chromosome resulting in 47,XYY karyotype in an individual with male phenotype. The condition is characterized by tall stature, increased risk of learning disabilities, and delayed development of speech and language. Testicular function and size are normal.	ncit:NCIT:C85237	
+PD						47XXY	A sex chromosome disorder caused by the presence of an extra X chromosome in the male karyotype. Affected individuals are infertile and have a small penis and testes. They tend to have tall stature and long legs and may have difficulties with speech and language development. Gynecomastia may be present.	ncit:NCIT:C34752	
+PD						47XXX	A condition caused by the presence of an extra X chromosome resulting in 47,XXX karyotype in an individual with female phenotype. The condition is characterized by tall stature, increased risk of learning disabilities, and delayed development of speech and language.	ncit:NCIT:C129718	
+PD						48XXXY	A rare sex chromosome abnormality in which a male child has 2 extra X chromosomes.	ncit:NCIT:C89799	
+PD						48XXXX	An abnormal sex chromosome karyotype where the individual has four copies of the X chromosome. The normal autosomal karyotype is present.	ncit:NCIT:C176787	
+PD						Unknown	Reported as unknown by the data contributor.	ncit:NCIT:17998	
+PD						Not Reported	Not provided or available.	ncit:NCIT:43234	
+VD	CHROMOSOME	String		One of the bodies in the cell nucleus that is the bearer of genes, has the form of a delicate chromatin filament during interphase, contracts to form a compact cylinder segmented into two arms by the centromere during metaphase and anaphase stages of cell division, and is capable of reproducing its physical and chemical structure through successive cell divisions.	ncit:NCIT:13202	_undefined_	_undefined_	_undefined_		
+VD	GENE1	String		The gene symbol that represents either a single gene that has a mutation or the gene that comprises the 5' portion of the coding sequence involved in a fusion gene mutation.	ncit:NCIT:C17595	_undefined_	_undefined_	_undefined_		
+VD	GENE2	String		The gene symbol that represents the gene that comprises the 3' portion of the coding sequence for a fusion gene.	ncit:NCIT:C171253	_undefined_	_undefined_	_undefined_		
+VD	VARIANT_TYPE	Code		A variation in or modification of the molecular sequence of a gene or gene product.	ncit:NCIT:97926	_undefined_	_undefined_	_undefined_		
+PD						Translocation	A genetic exchange where a piece of one chromosome is transfered to another chromosome.	ncit:NCIT:3420	Derived by PCDC
+PD						Inversion	A structural change in genomic DNA where the 5' to 3' order of a nucleotide sequence is completely reversed to the 3' to 5' order relative to its adjacent sequences. This inversion is termed either pericentric, if it includes the centromere of a chromosome, or pancentric, if it excludes the centromere. An inversion mutation abnormality may be heritable or occur somatically.	ncit:NCIT:45589	
+PD						Mutation	Any transmissible change in the genetic material of an organism, which can result from radiation, viral infection, transposition, treatment with mutagenic chemicals and errors during DNA replication or meiosis. The effects of mutation range from single base changes to loss or gain of complete chromosomes. As many of the simpler alterations to DNA may be repaired, such changes are only heritable once the change is fixed in the DNA by the process of replication. Mutations may be associated with genetic diversity or with pathologies including cancer.	ncit:NCIT:45576	
+PD						Single Nucleotide Variant	A variation of a single nucleotide at a specific location of the genome due to base substitution, which is found at any frequency in the population.	ncit:NCIT:164674	
+PD						Copy Number Alteration	Variation in the number of copies of a particular sequence within the genetic material of an individual. Large-scale copy number polymorphisms are common and widely distributed in the human genome.	ncit:NCIT:40207	
+PD						Rearrangement	Any process affecting a DNA sequence that results in the gain, loss or exchange of DNA between chromosomes and/or autonomous replicons.	ncit:NCIT:21069	
+PD						Deletion	Any rearrangement to the genomic content that results in the loss of one or more nucleotides of DNA. Deletions are generally irreversible rearrangements. They may alter the reading frame of a gene, or may result in loss of large chromosomal regions.	ncit:NCIT:19296	
+PD						Other	Different than the one(s) previously specified or mentioned.	ncit:NCIT:17649	
+PD						Unknown	Reported as unknown by the data contributor.	ncit:NCIT:17998	
+PD						Not reported	Not provided or available.	ncit:NCIT:43234	
+
+
+DD	Treatment
+TD	Biopsy/Surgical Procedures
+TG	One record per subject per surgical procedure
+VD	AGE_AT_PROCEDURE	Number		Age of subject (in days) at procedure.	ncit:NCIT:C175008	_undefined_	_undefined_	_undefined_		
+VD	DISEASE_PHASE	Code		The stage or period of an individual's disease.	ncit:NCIT:168878	_undefined_	_undefined_	_undefined_		
+PD						Initial Diagnosis	The first diagnosis of the individual's condition.	ncit:NCIT:156813	Note: Disease phase could be "Initial Diagnosis" phase, "Relapse" phase, etc...
+PD						Relapse	The return of a disease after a period of remission.	ncit:NCIT:38155	
+VD	DISEASE_PHASE_NUMBER	Number		The number of the disease phase.	ncit:NCIT:173258	_undefined_	_undefined_	_undefined_		
+VD	PROCEDURE_SITE	Code		The anatomical site on which surgery was performed.	ncit:NCIT:C164323	_undefined_	_undefined_	_undefined_		
+PD						Frontal Cortex	The part of the brain located anterior to the parietal lobes at the front of each cerebral hemisphere.	ncit:NCIT:C32635	Frontal Lobe
+PD						Head and Neck	For oncology, an area of the body generally construed to comprise the base of skull and facial bones, sinuses, orbits, salivary glands, oral cavity, oropharynx, larynx, thyroid, facial and neck musculature and lymph nodes draining these areas.	ncit:NCIT:C12418	
+PD						Liver	A triangular-shaped organ located under the diaphragm in the right hypochondrium. It is the largest internal organ of the body, weighting up to 2 kg. Metabolism and bile secretion are its main functions. It is composed of cells which have the ability to regenerate.	ncit:NCIT:C12392	
+PD						Mediastinum	A group of organs surrounded by loose connective tissue, separating the two pleural sacs, between the sternum anteriorly and the vertebral column posteriorly as well as from the thoracic inlet superiorly to the diaphragm inferiorly. The mediastinum contains the heart and pericardium, the bases of the great vessels, the trachea and bronchi, esophagus, thymus, lymph nodes, thoracic duct, phrenic and vagus nerves, and other structures and tissues.	ncit:NCIT:12748	
+PD						Occipital Cortex	One of the four regions of cortex in each cerebral hemisphere. It is located posterior to the temporal lobe and inferior to the parietal lobe.	ncit:NCIT:12757	Occipital Lobe
+PD						Ovary	One of the paired female reproductive glands containing the ova or germ cells; the ovary's stroma is a vascular connective tissue containing numbers of ovarian follicles enclosing the ova.	ncit:NCIT:C12404	
+PD						Parietal Cortex	One of the lobes of the cerebral hemisphere located superiorly to the occipital lobe and posteriorly to the frontal lobe. Cognition and visuospatial processing are its main functions.	ncit:NCIT:C12766	Parietal Lobe
+PD						Pineal	A small endocrine gland in the brain, situated beneath the back part of the corpus callosum, that secretes melatonin.	ncit:NCIT:C12398	
+PD						Retroperitoneum	The back of the abdomen where the kidneys lie and the great blood vessels run.	ncit:NCIT:28256	
+PD						Sacrococcygeal	The triangular bone, made up of 5 fused bones of the spine, located in the lower area of the spine between the fifth lumbar vertebra and the coccyx.	ncit:NCIT:C33506	
+PD						Spinal Cord	The elongated, approximately cylindrical part of the central nervous system of vertebrates that lies in the vertebral canal and from which the spinal nerves emerge.	ncit:NCIT:12464	
+PD						Suprasellar/Neurohypophyseal	The anatomical region which includes the sella turcica, pituitary gland, ventral adenohypophysis and dorsal neurohypophysis.	ncit:NCIT:C177357	
+PD						Temporal Cortex	One of the cerebral lobes. It is located inferior to the frontal and parietal lobes and anterior to the occipital lobe.	ncit:NCIT:C12797	Temporal Lobe
+PD						Testis	Either of the paired male reproductive glands that produce the male germ cells and the male hormones.	ncit:NCIT:C12412	
+PD						Thalamus	An ovoid mass composed predominantly of gray substance and associated laminae of white substance. The thalamus is divided into anterior, medial, and lateral parts. The function of the thalamus is to relay sensory impulses and cerebellar and basal ganglia projections to the cerebral cortex. The thalamus is positioned within the posterior part of the diencephalon forming most of each lateral wall of the third ventricle.	ncit:NCIT:C12459	
+PD						Vagina	The female genital canal, extending from the uterus to the vulva.	ncit:NCIT:C12407	
+PD						Other	Different than the one(s) previously specified or mentioned.	ncit:NCIT:17649	
+PD						Unknown	Reported as unknown by the data contributor.	ncit:NCIT:17998	
+PD						Not reported	Not provided or available.	ncit:NCIT:43234	
+VD	PROCEDURE_LATERALITY	Code			ncit:	_undefined_	_undefined_	_undefined_		
+PD						Left	Being or located on or directed toward the side of the body to the west when facing north.	ncit:	ncit:C25229
+PD						Right	Being or located on or directed toward the side of the body to the east when facing north.	ncit:	ncit:C25228
+PD						Midline	Affecting both sides of the body or a matched pair of organs.	ncit:	ncit:C13332
+PD						Bilateral	A medial line, especially the medial line or medial plane of the body (or some part of the body).	ncit:	ncit:CC81170
+PD						Unknown		ncit:	
+PD						Not Reported		ncit:	
+VD	PROCEDURE_TYPE	Code		A categorization of surgical procedures by type or purpose.	ncit:NCIT:C161601	_undefined_	_undefined_	_undefined_		
+PD						Surgery	The branch of medical science that treats disease or injury by operative procedures.	ncit:NCIT:C17173	
+PD						Biopsy	The removal of tissue specimens or fluid from the living body for microscopic examination, performed to establish a diagnosis.	ncit:NCIT:C15189	
+PD						Unknown	Reported as unknown by the data contributor.	ncit:NCIT:17998	
+PD						Not reported	Not provided or available.	ncit:NCIT:43234	
+VD	PROCEDURE_EXTENT	Code		The degree to which the lesion has been cut out, or resected.	ncit:NCIT:C157443	_undefined_	_undefined_	_undefined_		
+PD						Gross Total	Surgical removal of an entire visible lesion, with no obvious lesion detected on post-operative evaluation; microscopic residual disease may be present.	ncit:NCIT:C131672	
+PD						Complete Resection	Complete clearance of the tumor with histologically proved negative margins.	ncit:NCIT:C175027	
+PD						Partial Resection	Surgical removal of a part of a lesion; some portion of the lesion is detectable on post-operative evaluation.	ncit:NCIT:C131680	
+PD						Unknown	Reported as unknown by the data contributor.	ncit:NCIT:C17998	
+PD						Not Reported	Not provided or available.	ncit:NCIT:C43234	
+VD	MARGINS	Code		The determination of the presence of actual or potential neoplastic tissue which has been left outside the boundary of a resected specimen within the patient.	ncit:NCIT:123560	_undefined_	_undefined_	_undefined_		
+PD						R0 - Complete Resection, Negative Margins	No detectable presence of residual tumor after treatment	ncit:NCIT:C139578	
+PD						R1 - Complete Resection, Positive Margins	Presence of microscopic residual tumor after treatment.	ncit:NCIT:C139579	
+PD						R2 - Gross Residual Disease	Presence of macroscopic residual tumor after treatment.	ncit:NCIT:C139580	
+PD						Unknown	Reported as unknown by the data contributor.	ncit:NCIT:C17998	
+PD						Not Reported	Not provided or available.	ncit:NCIT:43234	
+
+
+DD	Treatment
+TD	Radiation Therapy
+TG	One row per subject per radiation therapy administration
+VD	AGE_AT_RT_START	Number		Age of subject (in days) at the start of radiation therapy.	ncit:NCIT:172695	_undefined_	_undefined_	_undefined_		
+VD	AGE_AT_RT_END	Number		Age of subject (in days) at the end of radiation therapy.	ncit:NCIT:172696	_undefined_	_undefined_	_undefined_		
+VD	DISEASE_PHASE	Code		The stage or period of an individual's disease.	ncit:NCIT:168878	_undefined_	_undefined_	_undefined_		
+PD						Initial Diagnosis	The first diagnosis of the individual's condition.	ncit:NCIT:156813	Note: Disease phase could be "Initial Diagnosis" phase, "Relapse" phase, etc...
+PD						Relapse	The return of a disease after a period of remission.	ncit:NCIT:38155	
+VD	DISEASE_PHASE_NUMBER	Number		The number of the disease phase.	ncit:NCIT:173258	_undefined_	_undefined_	_undefined_		
+VD	RT_SITE	Code		The anatomic site of the radiation therapy.	ncit:NCIT:173281	_undefined_	_undefined_	_undefined_		
+PD						Frontal Cortex	The part of the brain located anterior to the parietal lobes at the front of each cerebral hemisphere.	ncit:NCIT:C32635	Frontal Lobe
+PD						Head and Neck	For oncology, an area of the body generally construed to comprise the base of skull and facial bones, sinuses, orbits, salivary glands, oral cavity, oropharynx, larynx, thyroid, facial and neck musculature and lymph nodes draining these areas.	ncit:NCIT:C12418	
+PD						Liver	A triangular-shaped organ located under the diaphragm in the right hypochondrium. It is the largest internal organ of the body, weighting up to 2 kg. Metabolism and bile secretion are its main functions. It is composed of cells which have the ability to regenerate.	ncit:NCIT:C12392	
+PD						Mediastinum	A group of organs surrounded by loose connective tissue, separating the two pleural sacs, between the sternum anteriorly and the vertebral column posteriorly as well as from the thoracic inlet superiorly to the diaphragm inferiorly. The mediastinum contains the heart and pericardium, the bases of the great vessels, the trachea and bronchi, esophagus, thymus, lymph nodes, thoracic duct, phrenic and vagus nerves, and other structures and tissues.	ncit:NCIT:12748	
+PD						Occipital Cortex	One of the four regions of cortex in each cerebral hemisphere. It is located posterior to the temporal lobe and inferior to the parietal lobe.	ncit:NCIT:12757	Occipital Lobe
+PD						Ovary	One of the paired female reproductive glands containing the ova or germ cells; the ovary's stroma is a vascular connective tissue containing numbers of ovarian follicles enclosing the ova.	ncit:NCIT:C12404	
+PD						Parietal Cortex	One of the lobes of the cerebral hemisphere located superiorly to the occipital lobe and posteriorly to the frontal lobe. Cognition and visuospatial processing are its main functions.	ncit:NCIT:C12766	Parietal Lobe
+PD						Pineal	A small endocrine gland in the brain, situated beneath the back part of the corpus callosum, that secretes melatonin.	ncit:NCIT:C12398	
+PD						Retroperitoneum	The back of the abdomen where the kidneys lie and the great blood vessels run.	ncit:NCIT:28256	
+PD						Sacrococcygeal	The triangular bone, made up of 5 fused bones of the spine, located in the lower area of the spine between the fifth lumbar vertebra and the coccyx.	ncit:NCIT:C33506	
+PD						Spinal Cord	The elongated, approximately cylindrical part of the central nervous system of vertebrates that lies in the vertebral canal and from which the spinal nerves emerge.	ncit:NCIT:12464	
+PD						Suprasellar/Neurohypophyseal	The anatomical region which includes the sella turcica, pituitary gland, ventral adenohypophysis and dorsal neurohypophysis.	ncit:NCIT:C177357	
+PD						Temporal Cortex	One of the cerebral lobes. It is located inferior to the frontal and parietal lobes and anterior to the occipital lobe.	ncit:NCIT:C12797	Temporal Lobe
+PD						Testes	Either of the paired male reproductive glands that produce the male germ cells and the male hormones.	ncit:NCIT:C12412	
+PD						Thalamus	An ovoid mass composed predominantly of gray substance and associated laminae of white substance. The thalamus is divided into anterior, medial, and lateral parts. The function of the thalamus is to relay sensory impulses and cerebellar and basal ganglia projections to the cerebral cortex. The thalamus is positioned within the posterior part of the diencephalon forming most of each lateral wall of the third ventricle.	ncit:NCIT:C12459	
+PD						Vagina	The female genital canal, extending from the uterus to the vulva.	ncit:NCIT:C12407	
+PD						Unknown	Reported as unknown by the data contributor.	ncit:NCIT:17998	
+PD						Not Reported	Not provided or available.	ncit:NCIT:43234	
+VD	ENERGY_TYPE	Code		Treatment of a disease by means of exposure of the target or the whole body to radiation. Radiation therapy is often used as part of curative therapy and occasionally as a component of palliative treatment for cancer. Other uses include total body irradiation prior to transplantation.	ncit:NCIT:C15213	_undefined_	_undefined_	_undefined_		
+PD						Proton	A type of external beam radiation therapy using a beam of protons. It has the advantage of precisely localizing the radiation dose on the targeted tissue and avoiding damage to the healthy surrounding tissues.	ncit:NCIT:66897	
+PD						Photon	A single unit of electromagnetic radiation, generally considered to be a discrete particle having no mass or charge.	ncit:NCIT:C88112	
+PD						Unknown	Reported as unknown by the data contributor.	ncit:NCIT:17998	
+PD						Not Reported	Not provided or available.	ncit:NCIT:43234	
+VD	RT_DOSE	Number		The total radiation dose administered.	ncit:NCIT:173282	_undefined_	_undefined_	_undefined_		
+VD	RT_UNIT	Code		A unit of measurement of the dose of radiation received or absorbed.	ncit:NCIT:18068	_undefined_	_undefined_	_undefined_		
+PD						Gy	A SI derived unit of absorbed radiation dose. One gray is equal to an absorbed dose of one joule per kilogram of matter, or to 100 rads.	ncit:NCIT:18063	
+PD						Unknown	Reported as unknown by the data contributor.	ncit:NCIT:17998	
+PD						Not Reported	Not provided or available.	ncit:NCIT:43234	
+VD	BOOST	Code		One or more extra radiation treatments targeted at the tumor bed, given after the regular sessions of radiation are complete.	ncit:C137812	_undefined_	_undefined_	_undefined_		
+PD						No	The non-affirmative response to a question.	ncit:NCIT:C49487	
+PD						Yes	The affirmative response to a question.	ncit:NCIT:C49488	
+PD						Unknown	Reported as unknown by the data contributor.	ncit:NCIT:17998	
+PD						Not Reported	Not provided or available.	ncit:NCIT:43234	
+VD	NUM_FRACTION	Numeric		The number of divided radiation doses received per day.	ncit:NCIT:C175034	_undefined_	_undefined_	_undefined_		
+
+
+DD	Treatment
+TD	Concomitant Medications
+TG	One row per subject per concomitant medication
+VD	AGE_AT_MEDICATION_START	Number		Age of subject (in days) at the start of the concomitant medication administration.	ncit:NCIT:C172692	_undefined_	_undefined_	_undefined_		
+VD	AGE_AT_MEDICATION_END	Number		Age of subject (in days) at the end of the concomitant medication administration.	ncit:NCIT:C172693	_undefined_	_undefined_	_undefined_		
+VD	DISEASE_PHASE	Code		The stage or period of an individual's disease.	ncit:NCIT:168878	_undefined_	_undefined_	_undefined_		
+PD						Initial Diagnosis	The first diagnosis of the individual's condition.	ncit:NCIT:156813	
+PD						Relapse	The return of a disease after a period of remission.	ncit:NCIT:38155	
+VD	DISEASE_PHASE_NUMBER	Number		The number of the disease phase.	ncit:NCIT:173258	_undefined_	_undefined_	_undefined_		
+VD	MEDICATION	Code			ncit:NCIT:C70902	_undefined_	_undefined_	_undefined_		
+PD						Sodium Thiosulfate	A water soluble salt and reducing agent that reacts with oxidizing agents.  Although its exact mechanism of action is unknown, thiosulfate likely provides an exogenous source of sulfur, thereby hastening the detoxification of cyanide through the enzyme rhodanese (thiosulfate cyanide sulfurtransferase) which converts cyanide to the relatively nontoxic, excretable thiocyanate ion. In addition, this agent neutralizes the reactive alkylating species of nitrogen mustard, thereby decreasing skin toxicity related to nitrogen mustard extravasation. (NCI04)	ncit:NCIT:C1230	
+
+
+DD	Treatment
+TD	Stem Cell Transplant
+TG	One row per subject per stem-cell transplant
+VD	AGE_AT_SCT	Number		Age of subject (in days) at the time of stem-cell transplantation.	ncit:NCIT:168853	_undefined_	_undefined_	_undefined_		
+VD	DISEASE_PHASE	Code		The stage or period of an individual's disease.	ncit:NCIT:168878	_undefined_	_undefined_	_undefined_		
+PD						Initial Diagnosis	The first diagnosis of the individual's condition.	ncit:NCIT:156813	Note: Disease phase could be "Initial Diagnosis" phase, "Relapse" phase, etc...
+PD						Relapse	The return of a disease after a period of remission.	ncit:NCIT:38155	
+VD	DISEASE_PHASE_NUMBER	Number		The number of the disease phase.	ncit:NCIT:173258	_undefined_	_undefined_	_undefined_		
+VD	SCT_CYCLES	Number		The total number of stem cell transplant cycles.	ncit:NCIT:C177373	_undefined_	_undefined_	_undefined_		
+
+
+DD	Treatment
+TD	Total Dose
+TG	One row per subject per chemotherapy agent
+VD	AGE_AT_TOTAL_DOSE_START	Number		Age of subject (in days) at the start of the total dose calculation.	ncit:NCIT:172698	_undefined_	_undefined_	_undefined_		
+VD	AGE_A_TOTAL_DOSE_END	Number		Age of subject (in days) at the end of the total dose calculation.	ncit:NCIT:172686	_undefined_	_undefined_	_undefined_		
+VD	DISEASE_PHASE	Code		The stage or period of an individual's disease.	ncit:NCIT:168878	_undefined_	_undefined_	_undefined_		
+PD						Initial Diagnosis	The first diagnosis of the individual's condition.	ncit:NCIT:156813	Note: Disease phase could be "Initial Diagnosis" phase, "Relapse" phase, etc...
+PD						Relapse	The return of a disease after a period of remission.	ncit:NCIT:38155	
+VD	DISEASE_PHASE_NUMBER	Number		The number of the disease phase.	ncit:NCIT:173258	_undefined_	_undefined_	_undefined_		
+VD	ANTINEOPLASTIC_AGENT	Code		A substance that inhibits the maturation, growth or spread of tumor cells.	ncit:NCIT:274	_undefined_	_undefined_	_undefined_		
+PD						Amifostine	The trihydrate form of a phosphorylated aminosulfhydryl compound. After dephosphorylation of amifostine by alkaline phosphatase to an active free sulfhydryl (thiol) metabolite, the thiol metabolite binds to and detoxifies cytotoxic platinum-containing metabolites of cisplatin and scavenges free radicals induced by cisplatin and ionizing radiation. The elevated activity of this agent in normal tissues results from both the relative abundance of alkaline phosphatase in normal tissues and the greater vascularity of normal tissues compared to tumor tissues	ncit:NCIT:C488	
+PD						Bleomycin	A mixture of glycopeptide antineoplastic antibiotics isolated from the bacterium Streptomyces verticillus. Bleomycin forms complexes with iron that reduce molecular oxygen to superoxide and hydroxyl radicals which cause single- and double-stranded breaks in DNA; these reactive oxygen species also induce lipid peroxidation, carbohydrate oxidation, and alterations in prostaglandin synthesis and degradation.	ncit:NCIT:C313	
+PD						Carboplatin	A second-generation platinum compound with a broad spectrum of antineoplastic properties. Carboplatin contains a platinum atom complexed with two ammonia groups and a cyclobutane-dicarboxyl residue. This agent is activated intracellularly to form reactive platinum complexes that bind to nucleophilic groups such as GC-rich sites in DNA, thereby inducing intrastrand and interstrand DNA cross-links, as well as DNA-protein cross-links. These carboplatin-induced DNA and protein effects result in apoptosis and cell growth inhibition. This agent possesses tumoricidal activity similar to that of its parent compound, cisplatin, but is more stable and less toxic. (NCI04)	ncit:NCIT:C1282	
+PD						Cisplatin	An alkylating-like inorganic platinum agent (cis-diamminedichloroplatinum) with antineoplastic activity. Cisplatin forms highly reactive, charged, platinum complexes which bind to nucleophilic groups such as GC-rich sites in DNA inducing intrastrand and interstrand DNA cross-links, as well as DNA-protein cross-links. These cross-links result in apoptosis and cell growth inhibition	ncit:NCIT:C376	
+PD						Cyclophosphamide	A synthetic alkylating agent chemically related to the nitrogen mustards with antineoplastic and immunosuppressive activities. In the liver, cyclophosphamide is converted to the active metabolites aldophosphamide and phosphoramide mustard, which bind to DNA, thereby inhibiting DNA replication and initiating cell death.	ncit:NCIT:C405	
+PD						Dactinomycin	A chromopeptide antineoplastic antibiotic isolated from the bacterium Streptomyces parvulus. Dactinomycin intercalates between adjacent guanine-cytosine base pairs, blocking the transcription of DNA by RNA polymerase; it also causes single-strand DNA breaks, possibly via a free-radical intermediate or an interaction with topoisomerase II. (NCI04)	ncit:NCIT:C412	
+PD						Etoposide	A semisynthetic derivative of podophyllotoxin, a substance extracted from the mandrake root Podophyllum peltatum. Possessing potent antineoplastic properties, etoposide binds to and inhibits topoisomerase II and its function in ligating cleaved DNA molecules, resulting in the accumulation of single- or double-strand DNA breaks, the inhibition of DNA replication and transcription, and apoptotic cell death. Etoposide acts primarily in the G2 and S phases of the cell cycle. (NCI04)	ncit:NCIT:C491	
+PD						Etoposide Phosphate	A phosphate salt of a semisynthetic derivative of podophyllotoxin. Etoposide binds to the enzyme topoisomerase II, inducing double-strand DNA breaks, inhibiting DNA repair, and resulting in decreased DNA synthesis and tumor cell proliferation. Cells in the S and G2 phases of the cell cycle are most sensitive to this agent. (NCI04)	ncit:NCIT:C1093	
+PD						Gemcitabine	A broad-spectrum antimetabolite and deoxycytidine analogue with antineoplastic activity. Upon administration, gemcitabine is converted into the active metabolites difluorodeoxycytidine diphosphate (dFdCDP) and difluorodeoxycytidine triphosphate (dFdCTP) by deoxycytidine kinase. dFdCTP competes with deoxycytidine triphosphate (dCTP) and is incorporated into DNA. This locks DNA polymerase thereby resulting in \masked termination\ during DNA replication. On the other hand, dFdCDP inhibits ribonucleotide reductase, thereby decreasing the deoxynucleotide pool available for DNA synthesis. The reduction in the intracellular concentration of dCTP potentiates the incorporation of dFdCTP into DNA.	ncit:NCIT:C66876	
+PD						Ifosfamide	A synthetic analogue of the nitrogen mustard cyclophosphamide with antineoplastic activity. Ifosfamide alkylates and forms DNA crosslinks, thereby preventing DNA strand separation and DNA replication. This agent is a prodrug that must be activated through hydroxylation by hepatic microsomal enzymes. (NCI04)	ncit:NCIT:C564	
+PD						Melphalan	A phenylalanine derivative of nitrogen mustard with antineoplastic activity. Melphalan alkylates DNA at the N7 position of guanine and induces DNA inter-strand cross-linkages, resulting in the inhibition of DNA and RNA synthesis and cytotoxicity against both dividing and non-dividing tumor cells.	ncit:NCIT:C633	
+PD						Paclitaxel	A compound extracted from the Pacific yew tree Taxus brevifolia with antineoplastic activity. Paclitaxel binds to tubulin and inhibits the disassembly of microtubules, thereby resulting in the inhibition of cell division. This agent also induces apoptosis by binding to and blocking the function of the apoptosis inhibitor protein Bcl-2 (B-cell Leukemia 2). (NCI04)	ncit:NCIT:C1411	
+PD						Vinblastine	A natural alkaloid isolated from the plant Vinca rosea Linn. Vinblastine binds to tubulin and inhibits microtubule formation, resulting in disruption of mitotic spindle assembly and arrest of tumor cells in the M phase of the cell cycle. This agent may also interfere with amino acid, cyclic AMP, and glutathione metabolism; calmodulin-dependent Ca++ -transport ATPase activity; cellular respiration; and nucleic acid and lipid biosynthesis. (NCI04)	ncit:NCIT:C930	
+PD						Vincristine	A natural alkaloid isolated from the plant Vinca rosea Linn. Vincristine binds irreversibly to microtubules and spindle proteins in S phase of the cell cycle and interferes with the formation of the mitotic spindle, thereby arresting tumor cells in metaphase. This agent also depolymerizes microtubules and may also interfere with amino acid, cyclic AMP, and glutathione metabolism; calmodulin-dependent Ca++ -transport ATPase activity; cellular respiration; and nucleic acid and lipid biosynthesis. (NCI04)	ncit:NCIT:C933	
+VD	TOTAL_DOSE_ADMINISTERED	Number		The total amount of a therapeutic agent administered to a subject over a defined period of time.	ncit:NCIT:94394	_undefined_	_undefined_	_undefined_		
+VD	TOTAL_DOSE_UNITS	Code		The unit of measure for the dosage form.	ncit:NCIT:73558	_undefined_	_undefined_	_undefined_		
+PD						mg/m2	A metric unit of areal density equal to approximately 2.94935E-5 ounce per square yard. Also used as a dose calculation unit.	ncit:NCIT:C67402	
+PD						mg/kg	A unit of a mass fraction expressed as a number of milligrams of substance per kilogram of mixture. The unit is also used as a dose calculation unit.	ncit:NCIT:C67401	
+PD						mg	A metric unit of mass equal to one thousandth of a gram or 1000 micrograms. One milligram equals approximately 0.015 432 grain or 35.274 x 10E-6 ounce.	ncit:NCIT:C28253	
+PD						IU	The unitage assigned by the WHO to International Biological Standards - substances, classed as biological according to the criteria provided by WHO Expert Committee on Biological Standardization (e.g. hormones, enzymes, and vaccines), to enable the results of biological and immunological assay procedures to be expressed in the same way throughout the world. The definition of an international unit is generally arbitrary and technical, and has to be officially approved by the International Conference for Unification of Formulae.	ncit:NCIT:C48579	
+PD						Unknown	Reported as unknown by the data contributor.	ncit:NCIT:17998	
+PD						Not reported	Not provided or available.	ncit:NCIT:43234	
+
+
+DD	Response
+TD	Subject Response
+TG	One row per subject per response, per response category
+VD	AGE_AT_RESPONSE	Number		Age of subject (in days) when the response assessment was made.	ncit:NCIT:168856	_undefined_	_undefined_	_undefined_		
+VD	DISEASE_PHASE	Code		The stage or period of an individual's disease.	ncit:NCIT:168878	_undefined_	_undefined_	_undefined_		
+PD						Initial Diagnosis	The first diagnosis of the individual's condition.	ncit:NCIT:156813	Note: Disease phase could be "Initial Diagnosis" phase, "Relapse" phase, etc...
+PD						Relapse	The return of a disease after a period of remission.	ncit:NCIT:38155	
+VD	DISEASE_PHASE_NUMBER	Number		The number of the disease phase.	ncit:NCIT:173258	_undefined_	_undefined_	_undefined_		
+VD	RESPONSE_CATEGORY	Code		The category used to assess the response to therapy.	ncit:NCIT:173306	_undefined_	_undefined_	_undefined_		
+PD						Overall Response	An assessment of the overall response of the disease to the therapy.	ncit:NCIT:C96613	
+PD						Unknown		ncit:	
+PD						Not Reported		ncit:	
+VD	RESPONSE	Code		The pathologic and/or clinical changes that result from treatment. The changes may include eradication of detectable disease, stabilization of disease, or disease progression.	ncit:NCIT:50995	_undefined_	_undefined_	_undefined_		
+PD						Partial Response	A finding indicating that there is a decrease in the size and the extent of tissue involvement by a malignant tumor in a patient.	ncit:NCIT:C18212	
+PD						Stable Disease	Cancer that is neither decreasing nor increasing in extent or severity.	ncit:NCIT:C18213	
+PD						Progressive Disease	A disease process that is increasing in scope or severity.	ncit:NCIT:C35571	
+PD						Complete Response	The disappearance of all signs of cancer in response to treatment.	ncit:NCIT:C4870	
+PD						Unknown	Reported as unknown by the data contributor.	ncit:NCIT:17998	
+PD						Not Reported	Not provided or available.	ncit:NCIT:43234	
+VD	RESPONSE_METHOD	Code			ncit:	_undefined_	_undefined_	_undefined_		
+PD						Imaging	A substance present in or produced by a tumor or by the host, that can be used for differentiating neoplastic from normal tissue based on measurements in body fluids, secretions, cells, and/or tissues. Markers are used in diagnosis, staging and prognosis of cancer, provide an estimation of tumor burden, and serve for monitoring effects of therapy, detecting recurrence, localization of tumors, and screening in general populations.	ncit:NCIT:C17220	
+PD						Tumor Marker	Any technology or method that aids in the visualization of any biological process, cell, tissue or organ for use in screening, diagnosis, surgical procedures or therapy.	ncit:NCIT:C17369	
+PD						Pathology	The medical science, and specialty practice, concerned with all aspects of disease, but with special reference to the essential nature, causes, and development of abnormal conditions, as well as the structural and functional changes that result from the disease processes. Informally used to mean the result of such an examination.	ncit:NCIT:C18189	
+PD						Unknown	Reported as unknown by the data contributor.	ncit:NCIT:C17998	
+PD						Not Reported	Not provided or available.	ncit:NCIT:C43234	
+VD	RESPONSE_SYSTEM	Code		A standard from which a judgment concerning tumor response to therapy can be established.	ncit:NCIT:C125932	_undefined_	_undefined_	_undefined_		
+PD						RECIST	Standard parameters to be used when documenting response of solid tumors to treatment; a set of published rules that define when cancer patients improve ("respond"), stay the same ("stable"), or worsen ("progression") during treatments. (from www.recist.com)	ncit:NCIT:C49164	
+PD						WHO	A United Nations agency established to coordinate international health activities and to help governments improve health services.	ncit:NCIT:C75419	
+PD						Choi	A composite set of criteria developed by Choi et al. using imaging techniques in the evaluation of gastrointestinal stromal tumors response to imatinib mesylate treatment. These criteria integrate changes in tumor size and tumor density.	ncit:NCIT:C122394	
+PD						mRECIST	Modified RECIST criteria for assessment of response in malignant pleural mesothelioma. (Byrne MJ, Nowak AK. Modified RECIST criteria for assessment of response in malignant pleural mesothelioma. Ann Oncol. 2004 Feb;15(2):257-60.)	ncit:NCIT:C126031	
+PD						PERCIST	From RECIST to PERCIST: Evolving considerations for PET response criteria in solid tumors. (Wahl RL, Jacene H, Kasamon Y, Lodge MA. From RECIST to PERCIST: Evolving considerations for PET response criteria in solid tumors. J Nucl Med. 2009 May;50 Suppl 1:122S-50S.)	ncit:NCIT:C126039	
+PD						Unknown	Reported as unknown by the data contributor.	ncit:NCIT:17998	
+PD						Not Reported	Not provided or available.	ncit:NCIT:43234	
+VD	RESPONSE_SYSTEM_VERSION	String		The version of the response criteria.	ncit:NCIT:C175042	_undefined_	_undefined_	_undefined_		
+
+
+DD	Events
+TD	Adverse Events
+TG	One row per subject per adverse event
+VD	AGE_AT_AE	Number		Age of subject (in days) at the onset of the adverse event.	ncit:NCIT:C172677	_undefined_	_undefined_	_undefined_		
+VD	DISEASE_PHASE	Code		The stage or period of an individual's disease.	ncit:NCIT:168878	_undefined_	_undefined_	_undefined_		
+PD						Initial Diagnosis	The first diagnosis of the individual's condition.	ncit:NCIT:156813	
+PD						Relapse	The return of a disease after a period of remission.	ncit:NCIT:38155	
+VD	DISEASE_PHASE_NUMBER	Number		The number of the disease phase.	ncit:NCIT:173258	_undefined_	_undefined_	_undefined_		
+VD	ADVERSE_EVENT	Code		Any unfavorable or unintended disease, sign, or symptom (including an abnormal laboratory finding) that is temporally associated with the use of a medical treatment or procedure, and that may or may not be considered related to the medical treatment or procedure. Such events can be related to the intervention, dose, route of administration, patient, or caused by an interaction with another drug(s) or procedure(s).	ncit:NCIT:C41331	_undefined_	_undefined_	_undefined_		
+PD						Renal Toxicity	Toxicity that impairs or damages the kidney. This condition is often caused by the administration of a pharmaceutical agent that causes damage to the kidney.	ncit:NCIT:C115459	
+PD						Neuropathy	A disorder affecting the cranial nerves or the peripheral nervous system. It manifests with pain, tingling, numbness, and muscle weakness. It may be the result of physical injury, toxic substances, viral diseases, diabetes, renal failure, cancer, and drugs.	ncit:NCIT:C4731	
+PD						Pulmonary Toxicity	Toxicity that impairs or damages the lung(s). This condition is often caused by the administration of a pharmaceutical agent that causes damage to the lungs.	ncit:NCIT:C177374	
+PD						Ototoxicity	Damage to the inner ear as a result of exposure to drugs or chemicals.	ncit:NCIT:C66929	
+PD						Other	Different than the one(s) previously specified or mentioned.	ncit:NCIT:C17649	
+PD						Unknown	Not known, not observed, not recorded, or refused.	ncit:NCIT:C17998	
+PD						Not Reported	Not provided or available.	ncit:NCIT:C43234	
+VD	AE_GRADE	Code		A numeric value corresponding to the degree of severity of an adverse event.	ncit:NCIT:C166200	_undefined_	_undefined_	_undefined_		
+PD						Grade 1	An experience that is usually transient, and requires no special treatment or intervention. The event does not generally interfere with usual daily activities. Includes transient laboratory test alterations.	ncit:NCIT:C41338	
+PD						Grade 2	An experience that is alleviated with simple therapeutic treatments. The event impacts usual daily activities. Includes laboratory test alterations indicating injury, but without long-term risk.	ncit:NCIT:C41339	
+PD						Grade 3	An adverse event experience that requires intensive therapeutic intervention and interrupts usual daily activities.	ncit:NCIT:C41340	
+PD						Grade 4	An adverse event that has life-threatening consequences; for which urgent intervention is indicated; that puts the patient at risk of death at the time of the event if immediate intervention is not undertaken.	ncit:NCIT:C84266	
+PD						Grade 5	The termination of life associated with an adverse event.	ncit:NCIT:C48275	
+PD						Unknown	Not known, not observed, not recorded, or refused.	ncit:NCIT:C17998	
+PD						Not Reported	Not provided or available.	ncit:NCIT:C43234	
+VD	AE_ATTRIBUTION	Code		A specific identifiable level (defined qualitatively or quantitatively) of probability of adverse event being caused or associated with the product or procedure administration to a patient.	ncit:NCIT:C41358	_undefined_	_undefined_	_undefined_		
+PD						Definite	A characteristic used to qualify the adverse event as certainly related to the medical intervention. According to WHO causality assessment criteria of suspected adverse reactions it is applicable to a clinical event, including laboratory test abnormality, occurring in a plausible time relationship to medical intervention, and which cannot be explained by concurrent disease or other interventions. The response to withdrawal of the medical product (dechallenge) should be clinically plausible. The event must be definitive pharmacologically or phenomenologically, using a satisfactory rechallenge procedure if necessary.	ncit:C53260	
+PD						Probable	Probable adverse event relationship to study product or procedure is defined when there is a clear-cut temporal association between product or procedure administration and adverse event, and a potential alternative etiology of the event is not apparent.	ncit:C41357	
+PD						Possible	A characteristic indicating that an adverse event may be related to the medical intervention. According to WHO causality assessment criteria of suspected adverse reactions it is applicable to a clinical event, including laboratory test abnormality, with a reasonable time sequence to administration of the drug, but which could also be explained by concurrent disease or other drugs or chemicals. Information on drug withdrawal may be lacking or unclear.	ncit:C53258	
+PD						Unlikely	A characteristic used to qualify the adverse event as unlikely related to the medical intervention. According to WHO causality assessment criteria of suspected adverse reactions it is applicable to a clinical event, including laboratory test abnormality, with a temporal relationship to the medical intervention which makes a causal relationship improbable, and in which other interventions or underlying disease provide plausible explanations.	ncit:C53257	
+PD						Unrelated	A characteristic used to qualify the adverse event as clearly not related to the medical intervention.	ncit:C53256	
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998	
+PD						Not Reported	Not provided or available.	ncit:C43234	
+VD	AE_OUTCOME	Code		A condition or event that is attributed to the adverse event and is the result or conclusion of the adverse event.	ncit:NCIT:C49489	_undefined_	_undefined_	_undefined_		
+PD						Death, Contributory	Any adverse event contributing to the cause of death.	ncit:NCIT:C168948	
+PD						Death, Noncontributory	The adverse event did not directly contribute to the death of the subject.	ncit:NCIT:C173315	
+PD						Not Yet Recovered	One of the possible results of an adverse event outcome that indicates that the event has not improved or recuperated.	ncit:NCIT:C49494	
+PD						Recovered with Sequelae	One of the possible results of an adverse event outcome where the subject recuperated but retained pathological conditions resulting from the prior disease or injury.	ncit:NCIT:C49495	
+PD						Recovered	One of the possible results of an adverse event outcome that indicates that the event has improved or recuperated.	ncit:NCIT:C49498	
+PD						Unknown	Not known, not observed, not recorded, or refused.	ncit:NCIT:C17998	
+PD						Not Reported	Not provided or available.	ncit:NCIT:C43234	
+
+
+DD	Events
+TD	Secondary Malignant Neoplasm
+TG	One row per subject per secondary malignancy
+VD	AGE_AT_SMN	Number		Age of subject (in days) at the diagnosis of the secondary malignant neoplasm.	ncit:NCIT:168860	_undefined_	_undefined_	_undefined_		
+VD	DISEASE_PHASE	Code		The stage or period of an individual's disease.	ncit:NCIT:168878	_undefined_	_undefined_	_undefined_		
+PD						Initial Diagnosis	The first diagnosis of the individual's condition.	ncit:NCIT:156813	Note: Disease phase could be "Initial Diagnosis" phase, "Relapse" phase, etc...
+PD						Relapse	The return of a disease after a period of remission.	ncit:NCIT:38155	
+VD	DISEASE_PHASE_NUMBER	Number		The number of the disease phase.	ncit:NCIT:173258	_undefined_	_undefined_	_undefined_		
+VD	SMN_MORPH_ICDO	String		ICD-O morphology code of the secondary malignant neoplasm.	ncit:NCIT:168862	_undefined_	_undefined_	_undefined_		
+VD	SMN_TOP_ICDO	String		ICD-O topography code of the secondary malignant neoplasm.	ncit:NCIT:168863	_undefined_	_undefined_	_undefined_		
+
+
+DD	Events
+TD	Growing Teratoma Syndrome
+TG	One row per subject
+VD	AGE_AT_GTS	Code		Age of subject (in days) at the diagnosis of growing teratoma syndrome.	ncit:NCIT:C177375	_undefined_	_undefined_	_undefined_		
+VD	DISEASE_PHASE	Code		The stage or period of an individual's disease.	ncit:NCIT:168878	_undefined_	_undefined_	_undefined_		
+PD						Initial Diagnosis	The first diagnosis of the individual's condition.	ncit:NCIT:156813	Note: Disease phase could be "Initial Diagnosis" phase, "Relapse" phase, etc...
+PD						Relapse	The return of a disease after a period of remission.	ncit:NCIT:38155	
+VD	DISEASE_PHASE_NUMBER	Number		The number of the disease phase.	ncit:NCIT:173258	_undefined_	_undefined_	_undefined_		
+VD	GTS_TREATMENT	Code		The therapy chosen to treat Growing Teratoma Syndrome.	ncit:NCIT:C177376	_undefined_	_undefined_	_undefined_		
+PD						Surgery	The branch of medical science that treats disease or injury by operative procedures.	ncit:NCIT:C17173	
+PD						Chemotherapy	The use of synthetic or naturally-occurring chemicals for the treatment of diseases.	ncit:NCIT:C15632	
+PD						Unknown	Reported as unknown by the data contributor.	ncit:NCIT:17998	
+PD						Not Reported	Not provided or available.	ncit:NCIT:43234	
+
+
+DD	Events
+TD	Patient Reported Outcomes Metadata
+TG	One observation per trial
+VD	STUDY_ID	Code			ncit:	_undefined_	_undefined_	_undefined_		
+PD						TBD		ncit:	
+VD	PRO_MEASURES	Code		Survey measures that are completed by the patient which help assess patient status with regards to pain, mobility, quality of life, ability to perform daily tasks or notable events in a clinical study.	ncit:NCIT:C177377	_undefined_	_undefined_	_undefined_		
+PD						Fact Ntx	A questionnaire tool to assess the neurotoxic effects of cancer therapy.	ncit:C177378	
+PD						PedsQL Multi-Dimensional Fatigue Scale	An 18 item component of the Pediatric Quality of Life Inventory is a generic symptom-specific instrument to measure fatigue in pediatric patients ages 2-18 comprised of General Fatigue, Sleep/Rest Fatigue, and Cognitive Fatigue domains.	ncit:C131369	
+PD						PedsQL 4.0 Generic Core Scale	Child self-report and parent proxy report scales developed to measure health-related quality of life issues in children and adolescents aged 2-18.	ncit:C177379	
+PD						AYA-HEARS	A questionnaire designed to measure hearing loss or problems experienced by patients who have received treatment for cancer.	ncit:C131878	
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998	
+PD						Not Reported	Not provided or available.	ncit:C43234	
