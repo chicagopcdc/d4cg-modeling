@@ -1,0 +1,2272 @@
+{
+    "meta": {
+        "name": "aml_v1.4",
+        "timestamp": "20241010",
+        "sheet_id": "1_KyfeZNsepIxSU0Nzw5Mi8mk1PiKCWlSBjatw0AECQ0"
+    },
+    "info": {
+        "title": "Acute Myeloid Leukemia (AML) Data Dictionary",
+        "name": "aml_v1.4",
+        "release_notes": "",
+        "parent_data_model": "pcdc_v1.8",
+        "license": "Creative Commons Attribution-NonCommercial 4.0 International License (https://creativecommons.org/licenses/by-nc/4.0/)",
+        "wiki": "https://docs.pedscommons.org/",
+        "consortium_info": "https://commons.cri.uchicago.edu/pcdc/",
+        "description": "The AML data dictionary is a consensus data schema built by an international group of pediatric acute myeloid leukemia experts and maintained by Data for the Common Good (D4CG) at the University of Chicago in collaboration with the International Acute Myeloid Leukemia Consortium (INTERACT). It is based on the collective requirements of its contributors.",
+        "total": "227"
+    },
+    "domains": {
+        "protocol": {
+            "subject_identifier": {
+                "PCDC_SUBJECT_ID": {
+                    "type": "String",
+                    "tier": "n/a",
+                    "description": "A unique subject id assigned by the PCDC. Any given individual person will have only one PCDC_SUBJECT_ID regardless of the number of studies in which they appear. If an individual person is on studies from more than one contributor, they may have more than one HONEST_BROKER_SUBJECT_IDs assigned to them by the contributors, but will be resulted to a single PCDC_SUBJECT_ID by PCDC staff.",
+                    "codes": [
+                        "ncit:C175600"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                }
+            },
+            "subject_characteristics": {
+                "HONEST_BROKER_SUBJECT_ID": {
+                    "type": "String",
+                    "tier": "n/a",
+                    "description": "Subject identifier assigned by the honest broker.",
+                    "codes": [
+                        "ncit:C168949"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "DATA_CONTRIBUTOR_ID": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "An identifier assigned to a data contributor.",
+                    "codes": [
+                        "ncit:C168950"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "STUDY_ID": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "Study Identifier",
+                    "codes": [
+                        "ncit:C83082"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "AGE_AT_ENROLLMENT": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "Age in Days at Enrollment",
+                    "codes": [
+                        "ncit:C168843"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "TREATMENT_ARM": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "Assigned Treatment Arm by Intention-To-Treat",
+                    "codes": [
+                        "ncit:C15538"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "ENROLLED_STATUS": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "Enrollment Status",
+                    "codes": [
+                        "ncit:C168928"
+                    ],
+                    "implementation_notes": "This variable indicates if the subject was enrolled in the study, or if the subject was not enrolled in the study but received treatment per the study's protocol.",
+                    "mappings": ""
+                }
+            },
+            "disease_phase_timing": {
+                "DISEASE_PHASE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The stage or period of an individual's disease.",
+                    "codes": [
+                        "ncit:C168878"
+                    ],
+                    "implementation_notes": "Disease phase could be \"Initial Diagnosis\" phase, or a \"Relapse\" phase, etc...",
+                    "mappings": ""
+                },
+                "DISEASE_PHASE_NUMBER": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "The number of the disease phase.",
+                    "codes": [
+                        "ncit:C173258"
+                    ],
+                    "implementation_notes": "Ordinal number of the disease phase, grouped within subcategory. I.e. number Relapse 1, 2, 3, 4, etc...",
+                    "mappings": ""
+                },
+                "AGE_AT_DISEASE_PHASE": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "Age in days when the diagnosis was made for the disease phase.",
+                    "codes": [
+                        "ncit:C168972"
+                    ],
+                    "implementation_notes": "Disease phase could be the \"Initial Diagnosis\" phase, or a \"Relapse\" phase, etc...",
+                    "mappings": ""
+                },
+                "YEAR_AT_DISEASE_PHASE": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "Year when the diagnosis was made for the disease phase.",
+                    "codes": [
+                        "ncit:C168823"
+                    ],
+                    "implementation_notes": "Disease phase could be the \"Initial Diagnosis\" phase, or a \"Relapse\" phase, etc...",
+                    "mappings": ""
+                }
+            },
+            "course_timing": {
+                "COURSE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The type of protocol treatment course administered.",
+                    "codes": [
+                        "ncit:C168807"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "COURSE_NUMBER": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "The number assigned to a course of therapeutic agent administration, indicating where a particular course of treatment falls within a sequence of treatments.",
+                    "codes": [
+                        "ncit:C166235"
+                    ],
+                    "implementation_notes": "Course number is grouped within subcategory. I.e. number Induction 1, 2, 3, 4, etc..., Prephase 1, 2, 3, 4, etc..., Maintenance 1,2,3,4,5,6 etc...",
+                    "mappings": ""
+                },
+                "AGE_AT_COURSE_START": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "Age of subject (in days) at the start of the course.",
+                    "codes": [
+                        "ncit:C168850"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "AGE_AT_COURSE_END": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "Age of subject (in days) at the end of the course.",
+                    "codes": [
+                        "ncit:C168851"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "AGE_AT_COURSE_ANC_500": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "Age of subject (in days) when their neutrophil count exceeded a threshold of 500 (ANC/mm3) during the course.",
+                    "codes": [
+                        "ncit:C168852"
+                    ],
+                    "implementation_notes": "This variable is used as a proxy for the age at course end, when appropriate.",
+                    "mappings": ""
+                }
+            },
+            "off_protocol_therapy/study": {
+                "AGE_OFF": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "Age of subject (in days) when subject was off therapy or study.",
+                    "codes": [
+                        "ncit:C172678"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "DISEASE_PHASE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The stage or period of an individual's disease.",
+                    "codes": [
+                        "ncit:C168878"
+                    ],
+                    "implementation_notes": "Only fill in Disease Phase, Disease Phase Number, Course, and Course Number if \"AGE_\" not known | Disease Phase could be \"Initial Diagnosis\" phase, or a \"Relapse\" phase, etc...",
+                    "mappings": ""
+                },
+                "DISEASE_PHASE_NUMBER": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "The number of the disease phase.",
+                    "codes": [
+                        "ncit:C173258"
+                    ],
+                    "implementation_notes": "Only fill in Disease Phase, Disease Phase Number, Course, and Course Number if \"AGE_\" not known | Ordinal number of the Disease Phase, grouped within subcategory. I.e. number Relapse 1, 2, 3, 4, etc... and Progression 1, 2, 3, 4, etc...",
+                    "mappings": ""
+                },
+                "COURSE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The type of protocol treatment course administered.",
+                    "codes": [
+                        "ncit:C168807"
+                    ],
+                    "implementation_notes": "Only fill in Disease Phase, Disease Phase Number, Course, and Course Number if \"AGE_\" not known",
+                    "mappings": ""
+                },
+                "COURSE_NUMBER": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "The number assigned to a course of therapeutic agent administration, indicating where a particular course of treatment falls within a sequence of treatments.",
+                    "codes": [
+                        "ncit:C166235"
+                    ],
+                    "implementation_notes": "Only fill in Disease Phase, Disease Phase Number, Course, and Course Number if \"AGE_\" not known | Course Number is grouped within subcategory. I.e. number Induction 1, 2, 3, 4, etc..., Prephase 1, 2, 3, 4, etc..., Maintenance 1,2,3,4,5,6 etc...",
+                    "mappings": ""
+                },
+                "OFF_TYPE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The code used to designate that the subject went off therapy or off the study.",
+                    "codes": [
+                        "ncit:C173256"
+                    ],
+                    "implementation_notes": "Off protocol therapy means they have stopped protocol treatment, but are still being followed in the study",
+                    "mappings": ""
+                },
+                "REASON_OFF": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The reason a subject went off the therapy or study.",
+                    "codes": [
+                        "ncit:C173519"
+                    ],
+                    "implementation_notes": "If multiple reasons \"off protocol therapy\" or \"off study\", include one observation per reason.",
+                    "mappings": ""
+                }
+            }
+        },
+        "demographics": {
+            "demographics": {
+                "SEX": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The assemblage of physical properties or qualities by which male is distinguished from female; the physical difference between male and female; the distinguishing peculiarity of male or female.",
+                    "codes": [
+                        "ncit:C28421"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "RACE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "A geographic ancestral origin category that is assigned to a population group based mainly on physical characteristics that are thought to be distinct and inherent.",
+                    "codes": [
+                        "ncit:C17049"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "ETHNICITY": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "A social group characterized by a distinctive social and cultural tradition that is maintained from generation to generation. Members share a common history and origin and a sense of identification with the group. They have similar and distinctive features in their lifestyle habits and shared experiences. They often have a common genetic heritage which may be reflected in their experience of health and disease.",
+                    "codes": [
+                        "ncit:C16564"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                }
+            },
+            "medical_history": {
+                "MEDICAL_HISTORY": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "A health condition or medical problem that was diagnosed or treated before a specific date.",
+                    "codes": [
+                        "ncit:C54056"
+                    ],
+                    "implementation_notes": "If subject had multiple prior medical conditions, include one observation per condition.",
+                    "mappings": ""
+                }
+            },
+            "survival_characteristics": {
+                "AGE_AT_LKSS": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "Age of subject (in days) at the last known survival status.",
+                    "codes": [
+                        "ncit:C168844"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "DISEASE_PHASE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The stage or period of an individual's disease.",
+                    "codes": [
+                        "ncit:C168878"
+                    ],
+                    "implementation_notes": "Disease phase could be \"Initial Diagnosis\" phase, or a \"Relapse\" phase, etc...",
+                    "mappings": ""
+                },
+                "DISEASE_PHASE_NUMBER": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "The number of the disease phase.",
+                    "codes": [
+                        "ncit:C173258"
+                    ],
+                    "implementation_notes": "Ordinal number of the disease phase, grouped within subcategory. I.e. number Relapse 1, 2, 3, 4, etc...",
+                    "mappings": ""
+                },
+                "COURSE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The type of protocol treatment course administered.",
+                    "codes": [
+                        "ncit:C168807"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "COURSE_NUMBER": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "The number assigned to a course of therapeutic agent administration, indicating where a particular course of treatment falls within a sequence of treatments.",
+                    "codes": [
+                        "ncit:C166235"
+                    ],
+                    "implementation_notes": "Course number is grouped within subcategory. I.e. number Induction 1, 2, 3, 4, etc..., Prephase 1, 2, 3, 4, etc..., Maintenance 1,2,3,4,5,6 etc...",
+                    "mappings": ""
+                },
+                "LKSS": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The individual's last known survival status.",
+                    "codes": [
+                        "ncit:C168931"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "AGE_LOST_TO_FOLLOW_UP": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "Age of subject (in days) when the subject was lost to follow-up.",
+                    "codes": [
+                        "ncit:C172679"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "CAUSE_OF_DEATH": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The circumstance or condition that results in the death of a living being.",
+                    "codes": [
+                        "ncit:C81239"
+                    ],
+                    "implementation_notes": "If multiple causes of death, include one observation per cause of death. However, only one cause of death can have the varaiable CAUSE_OF_DEATH_RANKING=Primary. | Only fill in this variable if LKSS is \"Dead\"",
+                    "mappings": ""
+                },
+                "TRM_TYPE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The type of treatment related to the mortality of the subject.",
+                    "codes": [
+                        "ncit:C173260"
+                    ],
+                    "implementation_notes": "If multiple treatment types, include one observation per treatment type. | Only fill in this variable if LKSS is \"Dead\" and CAUSE_OF_DEATH is \"Treatment-related mortality\"",
+                    "mappings": ""
+                },
+                "CAUSE_OF_DEATH_DETAIL": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "Specific details of the cause of death.",
+                    "codes": [
+                        "ncit:C168868"
+                    ],
+                    "implementation_notes": "If multiple cause of death details, include one observation per cause of death detail. | Only fill in this variable if LKSS is \"Dead\"",
+                    "mappings": ""
+                },
+                "CAUSE_OF_DEATH_RANKING": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "Assigning a weighted relevance to the cause of death.",
+                    "codes": [
+                        "ncit:C168932"
+                    ],
+                    "implementation_notes": "There may be multiple contributory causes of death, but only one primary cause of death. | Only fill in this variable if LKSS is \"Dead\"",
+                    "mappings": ""
+                }
+            }
+        },
+        "disease_attributes": {
+            "disease_characteristics": {
+                "DISEASE_PHASE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The stage or period of an individual's disease.",
+                    "codes": [
+                        "ncit:C168878"
+                    ],
+                    "implementation_notes": "Disease phase could be \"Initial Diagnosis\" phase, or a \"Relapse\" phase, etc...",
+                    "mappings": ""
+                },
+                "DISEASE_PHASE_NUMBER": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "The number of the disease phase.",
+                    "codes": [
+                        "ncit:C173258"
+                    ],
+                    "implementation_notes": "Ordinal number of the disease phase, grouped within subcategory. I.e. number Relapse 1, 2, 3, 4, etc...",
+                    "mappings": ""
+                },
+                "FAB_TYPE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "A classification system for acute myeloid leukemias, acute lymphoblastic leukemias, and myelodysplastic syndromes. It is based on the morphologic and cytochemical evaluation of bone marrow and peripheral blood smears.",
+                    "codes": [
+                        "ncit:C91220"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "WHO_AML": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "A classification of acute myeloid leukemia tumors by the World Health Organization (WHO).",
+                    "codes": [
+                        "ncit:C159157"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "DISEASE_SITE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The anatomic site of the disease.",
+                    "codes": [
+                        "ncit:C173263"
+                    ],
+                    "implementation_notes": "If multiple sites of disease involvement, include one observation per site. | For AML, disease sites refer to sites of leukemic involvement and exclude myeloid sarcomas, which are detailed separately",
+                    "mappings": ""
+                },
+                "DETECTION_METHOD": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The method used to detect the extent of the disease involvement.",
+                    "codes": [
+                        "ncit:C173262"
+                    ],
+                    "implementation_notes": "If there were multiple detection methods, include one observation per detection method. If disease site provided, detection method should be linked to each disease site. If no disease sites provided, detection method should be linked to overall disease.",
+                    "mappings": ""
+                },
+                "CNS_DISEASE_STATUS": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The status describing the extent of central nervous system involvement at the time of leukemia diagnosis.",
+                    "codes": [
+                        "ncit:C173264"
+                    ],
+                    "implementation_notes": "Only fill in this variable if DISEASE_SITE is \"Central Nervous System\"",
+                    "mappings": ""
+                },
+                "MPAL": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "An acute leukemia of ambiguous lineage. It is characterized by the presence of either separate populations of blasts of more than one lineage, or one population of blasts co-expressing markers of more than one lineage.",
+                    "codes": [
+                        "ncit:C82179"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "MLDS": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "Acute myeloid leukemia or myelodysplastic syndrome occurring in children with Down syndrome. The acute myeloid leukemia is usually an acute megakaryoblastic leukemia, and is associated with GATA1 gene mutation.",
+                    "codes": [
+                        "ncit:C43223"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "TAM": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "AML diagnosed within four years of a diagnosis of Transient Abnormal Myelopoiesis Associated with Down Syndrome (a myeloid proliferation occurring in newborns with Down syndrome). Transient Abnormal Myelopoiesis Associated with Down Syndrome is clinically and morphologically indistinguishable from acute myeloid leukemia and is associated with GATA1 mutations.",
+                    "codes": [
+                        "ncit:C82339"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "SECONDARY_AML": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "An acute myeloid leukemia secondary to a myelodysplastic syndrome or therapy-related.",
+                    "codes": [
+                        "ncit:C25765"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                }
+            },
+            "myeloid_sarcoma_involvement": {
+                "AGE_AT_DISEASE_PHASE": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "Age of subject (in days) at the disease phase.",
+                    "codes": [
+                        "ncit:C168972"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "DISEASE_PHASE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The stage or period of an individual's disease.",
+                    "codes": [
+                        "ncit:C168878"
+                    ],
+                    "implementation_notes": "Disease phase could be \"Initial Diagnosis\" phase, a \"Relapse\" phase, etc...",
+                    "mappings": ""
+                },
+                "DISEASE_PHASE_NUMBER": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "The number of the disease phase.",
+                    "codes": [
+                        "ncit:C173258"
+                    ],
+                    "implementation_notes": "Ordinal number of the disease phase, grouped within subcategory. I.e. number Relapse 1, 2, 3, 4, etc...",
+                    "mappings": ""
+                },
+                "COURSE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The type of protocol treatment course administered.",
+                    "codes": [
+                        "ncit:C168807"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "COURSE_NUMBER": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "The number assigned to a course of therapeutic agent administration, indicating where a particular course of treatment falls within a sequence of treatments.",
+                    "codes": [
+                        "ncit:C166235"
+                    ],
+                    "implementation_notes": "Course number is grouped within subcategory. I.e. number Induction 1, 2, 3, 4, etc..., Prephase 1, 2, 3, 4, etc..., Maintenance 1,2,3,4,5,6 etc...",
+                    "mappings": ""
+                },
+                "MYELOID_SARCOMA": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "A tumor mass composed of myeloblasts or immature myeloid cells. It occurs in extramedullary sites or the bone.",
+                    "codes": [
+                        "ncit:C3520"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "MYELOID_SARCOMA_SITE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The site of the extramedullary myeloid sarcoma.",
+                    "codes": [
+                        "ncit:C168822"
+                    ],
+                    "implementation_notes": "If multiple myeloid sarcoma sites, include one observation per myeloid sarcoma site.",
+                    "mappings": ""
+                }
+            }
+        },
+        "testing": {
+            "vitals": {
+                "AGE_AT_VITALS": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "Age of subject (in days) when vital signs were recorded.",
+                    "codes": [
+                        "ncit:C168845"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "DISEASE_PHASE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The stage or period of an individual's disease.",
+                    "codes": [
+                        "ncit:C168878"
+                    ],
+                    "implementation_notes": "Only fill in Disease Phase, Disease Phase Number, Course, and Course Number if \"AGE_\" not known | Disease Phase could be \"Initial Diagnosis\" phase, or a \"Relapse\" phase, etc...",
+                    "mappings": ""
+                },
+                "DISEASE_PHASE_NUMBER": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "The number of the disease phase.",
+                    "codes": [
+                        "ncit:C173258"
+                    ],
+                    "implementation_notes": "Ordinal number of the disease phase, grouped within subcategory. I.e. number Relapse 1, 2, 3, 4, etc...",
+                    "mappings": ""
+                },
+                "COURSE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The type of protocol treatment course administered.",
+                    "codes": [
+                        "ncit:C168807"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "COURSE_NUMBER": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "The number assigned to a course of therapeutic agent administration, indicating where a particular course of treatment falls within a sequence of treatments.",
+                    "codes": [
+                        "ncit:C166235"
+                    ],
+                    "implementation_notes": "Course number is grouped within subcategory. I.e. number Induction 1, 2, 3, 4, etc..., Prephase 1, 2, 3, 4, etc..., Maintenance 1,2,3,4,5,6 etc...",
+                    "mappings": ""
+                },
+                "VITALS_TEST": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The act of assessing an individual's current temperature, heart rate, respiratory rate, pulse oxygenation, and blood pressure.",
+                    "codes": [
+                        "ncit:C49672"
+                    ],
+                    "implementation_notes": "BMI should only be what is reported on CRF, not calculated from weight and height when submitting data to the PCDC",
+                    "mappings": ""
+                },
+                "VITALS_RESULT": {
+                    "type": "String",
+                    "tier": "n/a",
+                    "description": "The results of the vital sign measurements.",
+                    "codes": [
+                        "ncit:C173522"
+                    ],
+                    "implementation_notes": "String result can include anything that is not a single numeric result, i.e. \"Positive\", \"Negative\", \"Present\", \"Absent\", \"Yes\", \"No\", \"Elevated,\" \"Depressed\", \"Above threshold\", \"Below threshold\", ranges, as well as bucketed categories, etc... | Only fill in this variable when the available data is anything EXCEPT a single numeric value, and include the entire available data as a string, including units if applicable",
+                    "mappings": ""
+                },
+                "VITALS_RESULT_NUMERIC": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "The numeric values of the vital signs.",
+                    "codes": [
+                        "ncit:C173268"
+                    ],
+                    "implementation_notes": "Only fill in this variable if the available data is a single numeric value.",
+                    "mappings": ""
+                },
+                "VITALS_RESULT_UNIT": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The unit used to record and describe the result of a test investigating a vital sign.",
+                    "codes": [
+                        "ncit:C49675"
+                    ],
+                    "implementation_notes": "Only fill in this variable if a numeric result is provided in VITALS_RESULT_NUMERIC.",
+                    "mappings": ""
+                }
+            },
+            "labs": {
+                "AGE_AT_LAB": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "Age of subject (in days) when the laboratory test was performed.",
+                    "codes": [
+                        "ncit:C172691"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "DISEASE_PHASE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The stage or period of an individual's disease.",
+                    "codes": [
+                        "ncit:C168878"
+                    ],
+                    "implementation_notes": "Disease phase could be \"Initial Diagnosis\" phase, or a \"Relapse\" phase, etc...",
+                    "mappings": ""
+                },
+                "DISEASE_PHASE_NUMBER": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "The number of the disease phase.",
+                    "codes": [
+                        "ncit:C173258"
+                    ],
+                    "implementation_notes": "Ordinal number of the disease phase, grouped within subcategory. I.e. number Relapse 1, 2, 3, 4, etc...",
+                    "mappings": ""
+                },
+                "COURSE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The type of protocol treatment course administered.",
+                    "codes": [
+                        "ncit:C168807"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "COURSE_NUMBER": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "The number assigned to a course of therapeutic agent administration, indicating where a particular course of treatment falls within a sequence of treatments.",
+                    "codes": [
+                        "ncit:C166235"
+                    ],
+                    "implementation_notes": "Course number is grouped within subcategory. I.e. number Induction 1, 2, 3, 4, etc..., Prephase 1, 2, 3, 4, etc..., Maintenance 1,2,3,4,5,6 etc...",
+                    "mappings": ""
+                },
+                "LAB_CATEGORY": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "A classification of the laboratory test.",
+                    "codes": [
+                        "ncit:C83017"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "LAB_TEST": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "A character or string that represents the full name of the laboratory assessment.",
+                    "codes": [
+                        "ncit:C117142"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "LAB_SPEC_TYPE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The type of a material sample taken from a biological entity for laboratory testing.",
+                    "codes": [
+                        "ncit:C83315"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "LAB_RESULT": {
+                    "type": "String",
+                    "tier": "n/a",
+                    "description": "The outcome of a laboratory test.",
+                    "codes": [
+                        "ncit:C36292"
+                    ],
+                    "implementation_notes": "String result can include anything that is not a single numeric result, i.e. \"Positive\", \"Negative\", \"Present\", \"Absent\", \"Yes\", \"No\", \"Elevated,\" \"Depressed\", \"Above threshold\", \"Below threshold\", ranges, as well as bucketed categories, etc... | Only fill in this variable when the available data is anything EXCEPT a single numeric value, and include the entire available data as a string, including units if applicable",
+                    "mappings": ""
+                },
+                "LAB_RESULT_NUMERIC": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "A numeric representation of a test result.",
+                    "codes": [
+                        "ncit:C70952"
+                    ],
+                    "implementation_notes": "Only fill in this variable if the available data is a single numeric value.",
+                    "mappings": ""
+                },
+                "LAB_RESULT_UNIT": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The numeric unit that expresses the lab result.",
+                    "codes": [
+                        "ncit:C173274"
+                    ],
+                    "implementation_notes": "Only fill in this variable if a numeric result is provided in LAB_RESULT_NUMERIC.",
+                    "mappings": ""
+                },
+                "LAB_METHOD": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "A systematic course of action that is performed in order to complete a laboratory test.",
+                    "codes": [
+                        "ncit:C83312"
+                    ],
+                    "implementation_notes": "Only fill in this variable only when relevant, for example if the LAB_TEST is \"Blasts\" and the LAB_SAMPLE_SOURCE is \"Bone Marrow\" - ie bone marrow blasts",
+                    "mappings": ""
+                },
+                "TRAUMATIC_TAP": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "Contamination of a cerebrospinal fluid sample by red blood cells greater than 10/mm3.",
+                    "codes": [
+                        "ncit:C168879"
+                    ],
+                    "implementation_notes": "Notes: For AML Traumatic tap is defined as cerebrospinal fluid with greater than 10 RBC/mm3. | Only fill in this variable if LAB_SAMPLE_SOURCE is \"CSF\"",
+                    "mappings": ""
+                }
+            },
+            "molecular_analysis": {
+                "AGE_AT_MOLECULAR_ANALYSIS": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "Age of subject (in days) when molecular analysis was performed.",
+                    "codes": [
+                        "ncit:C168848"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "DISEASE_PHASE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The stage or period of an individual's disease.",
+                    "codes": [
+                        "ncit:C168878"
+                    ],
+                    "implementation_notes": "Only fill in Disease Phase, Disease Phase Number, Course, and Course Number if \"AGE_\" not known | Disease Phase could be \"Initial Diagnosis\" phase, or a \"Relapse\" phase, etc...",
+                    "mappings": ""
+                },
+                "DISEASE_PHASE_NUMBER": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "The number of the disease phase.",
+                    "codes": [
+                        "ncit:C173258"
+                    ],
+                    "implementation_notes": "Ordinal number of the disease phase, grouped within subcategory. I.e. number Relapse 1, 2, 3, 4, etc...",
+                    "mappings": ""
+                },
+                "COURSE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The type of protocol treatment course administered.",
+                    "codes": [
+                        "ncit:C168807"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "COURSE_NUMBER": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "The number assigned to a course of therapeutic agent administration, indicating where a particular course of treatment falls within a sequence of treatments.",
+                    "codes": [
+                        "ncit:C166235"
+                    ],
+                    "implementation_notes": "Course number is grouped within subcategory. I.e. number Induction 1, 2, 3, 4, etc..., Prephase 1, 2, 3, 4, etc..., Maintenance 1,2,3,4,5,6 etc...",
+                    "mappings": ""
+                },
+                "MOLECULAR_ANALYSIS_METHOD": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "A request to enter the specific molecular analysis method used to detect abnormalities in the study.",
+                    "codes": [
+                        "ncit:C158954"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "ISCN": {
+                    "type": "String",
+                    "tier": "n/a",
+                    "description": "The International System for Human Cytogenetic Nomenclature for the karyotype.",
+                    "codes": [
+                        "ncit:C173278"
+                    ],
+                    "implementation_notes": "Only fill in this variable if MOLECULAR_ANALYSIS_METHOD is \"Karyotype\"",
+                    "mappings": ""
+                },
+                "INDEPEN_AB": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "The number of independent aberrations found in the karyotype during analysis.",
+                    "codes": [
+                        "ncit:C173279"
+                    ],
+                    "implementation_notes": "Only fill in this variable if MOLECULAR_ANALYSIS_METHOD is \"Karyotype\"",
+                    "mappings": ""
+                },
+                "NUM_METAPHASES": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "The number of cells in metaphase during karyotype analysis.",
+                    "codes": [
+                        "ncit:C168918"
+                    ],
+                    "implementation_notes": "Only fill in this variable if MOLECULAR_ANALYSIS_METHOD is \"Karyotype\"",
+                    "mappings": ""
+                },
+                "MOLECULAR_ABNORMALITY": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "A molecular or cytogenic abnormality which occurs in either human disease states or disease models.",
+                    "codes": [
+                        "ncit:C3910"
+                    ],
+                    "implementation_notes": "If multiple molecular abnormalities, include one observation per molecular abnormality.",
+                    "mappings": ""
+                },
+                "CHROMOSOME": {
+                    "type": "String",
+                    "tier": "n/a",
+                    "description": "One of the bodies in the cell nucleus that is the bearer of genes, has the form of a delicate chromatin filament during interphase, contracts to form a compact cylinder segmented into two arms by the centromere during metaphase and anaphase stages of cell division, and is capable of reproducing its physical and chemical structure through successive cell divisions.",
+                    "codes": [
+                        "ncit:C13202"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "GENE1": {
+                    "type": "String",
+                    "tier": "n/a",
+                    "description": "The gene symbol that represents either a single gene that has a mutation or the gene that comprises the 5' portion of the coding sequence involved in a fusion gene mutation.",
+                    "codes": [
+                        "ncit:C173595"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "GENE2": {
+                    "type": "String",
+                    "tier": "n/a",
+                    "description": "The gene symbol that represents the gene that comprises the 3' portion of the coding sequence for a fusion gene.",
+                    "codes": [
+                        "ncit:C171253"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "VARIANT_TYPE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The category or type of variation or abnormality present in an amino acid or nucleic acid sequence.",
+                    "codes": [
+                        "ncit:C173544"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "GENETIC_SEQ": {
+                    "type": "String",
+                    "tier": "n/a",
+                    "description": "A variation in the nucleic acid sequence of a specific gene.",
+                    "codes": [
+                        "ncit:C97927"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "AA_MUTATION": {
+                    "type": "String",
+                    "tier": "n/a",
+                    "description": "A variation in the amino acid sequence of a specific gene product.",
+                    "codes": [
+                        "ncit:C97928"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "MOLECULAR_ABNORMALITY_RESULT": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "An indicator for whether a molecular analysis procedure was performed and whether the assay detected a molecular abnormality.",
+                    "codes": [
+                        "ncit:C173596"
+                    ],
+                    "implementation_notes": "This variable indicates the result of testing for the molecular abnormality listed in MOLECULAR_ABNORMALITY",
+                    "mappings": ""
+                },
+                "ALLELIC_RATIO": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "The determination of the ratio of variant alleles to wild-type alleles present in a sample.",
+                    "codes": [
+                        "ncit:C173545"
+                    ],
+                    "implementation_notes": "Only fill in this variable if the information is available.",
+                    "mappings": ""
+                }
+            },
+            "function_test": {
+                "AGE_AT_FUNCTION TEST": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "Age in Days at Function Test",
+                    "codes": [
+                        ""
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "DISEASE_PHASE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The stage or period of an individual's disease.",
+                    "codes": [
+                        "ncit:C168878"
+                    ],
+                    "implementation_notes": "Only fill in Disease Phase, Disease Phase Number, Course, and Course Number if \"AGE_\" not known | Disease Phase could be \"Initial Diagnosis\" phase, or a \"Relapse\" phase, etc...",
+                    "mappings": ""
+                },
+                "DISEASE_PHASE_NUMBER": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "The number of the disease phase.",
+                    "codes": [
+                        "ncit:C173258"
+                    ],
+                    "implementation_notes": "Ordinal number of the disease phase, grouped within subcategory. I.e. number Relapse 1, 2, 3, 4, etc...",
+                    "mappings": ""
+                },
+                "COURSE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The type of protocol treatment course administered.",
+                    "codes": [
+                        "ncit:C168807"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "COURSE_NUMBER": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "The number assigned to a course of therapeutic agent administration, indicating where a particular course of treatment falls within a sequence of treatments.",
+                    "codes": [
+                        "ncit:C166235"
+                    ],
+                    "implementation_notes": "Course number is grouped within subcategory. I.e. number Induction 1, 2, 3, 4, etc..., Prephase 1, 2, 3, 4, etc..., Maintenance 1,2,3,4,5,6 etc...",
+                    "mappings": ""
+                },
+                "FUNCTION_CATEGORY": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "Function Category",
+                    "codes": [
+                        ""
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "FUNCTION_RESULT": {
+                    "type": "String",
+                    "tier": "n/a",
+                    "description": "Function Test Result",
+                    "codes": [
+                        ""
+                    ],
+                    "implementation_notes": "String result can include anything that is not a single numeric result, i.e. \"Positive\", \"Negative\", \"Present\", \"Absent\", \"Yes\", \"No\", \"Elevated,\" \"Depressed\", \"Above threshold\", \"Below threshold\", ranges, as well as bucketed categories, etc... | Only fill in this variable when the available data is anything EXCEPT a single numeric value, and include the entire available data as a string, including units if applicable",
+                    "mappings": ""
+                },
+                "FUNCTION_TEST": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "Function Result Measurement",
+                    "codes": [
+                        ""
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "FUNCTION_RESULT_NUMERIC": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "Numeric Function Test Result",
+                    "codes": [
+                        ""
+                    ],
+                    "implementation_notes": "Only fill in this variable if the available data is a single numeric value.",
+                    "mappings": ""
+                },
+                "FUNCTION_RESULT_UNIT": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "Numeric Function Test Result Unit",
+                    "codes": [
+                        ""
+                    ],
+                    "implementation_notes": "Only fill in this variable if a numeric result is provided in ECHO_RESULT_NUMERIC.",
+                    "mappings": ""
+                }
+            }
+        },
+        "treatment": {
+            "radiation_therapy": {
+                "AGE_AT_RT_START": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "Age of subject (in days) at the start of radiation therapy.",
+                    "codes": [
+                        "ncit:C172695"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "AGE_AT_RT_END": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "Age of subject (in days) at the end of radiation therapy.",
+                    "codes": [
+                        "ncit:C172696"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "DISEASE_PHASE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The stage or period of an individual's disease.",
+                    "codes": [
+                        "ncit:C168878"
+                    ],
+                    "implementation_notes": "Only fill in Disease Phase, Disease Phase Number, Course, and Course Number if \"AGE_\" not known | Disease Phase could be \"Initial Diagnosis\" phase, or a \"Relapse\" phase, etc...",
+                    "mappings": ""
+                },
+                "DISEASE_PHASE_NUMBER": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "The number of the disease phase.",
+                    "codes": [
+                        "ncit:C173258"
+                    ],
+                    "implementation_notes": "Ordinal number of the disease phase, grouped within subcategory. I.e. number Relapse 1, 2, 3, 4, etc...",
+                    "mappings": ""
+                },
+                "COURSE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The type of protocol treatment course administered.",
+                    "codes": [
+                        "ncit:C168807"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "COURSE_NUMBER": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "The number assigned to a course of therapeutic agent administration, indicating where a particular course of treatment falls within a sequence of treatments.",
+                    "codes": [
+                        "ncit:C166235"
+                    ],
+                    "implementation_notes": "Course number is grouped within subcategory. I.e. number Induction 1, 2, 3, 4, etc..., Prephase 1, 2, 3, 4, etc..., Maintenance 1,2,3,4,5,6 etc...",
+                    "mappings": ""
+                },
+                "RT_SITE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The anatomic site of the radiation therapy.",
+                    "codes": [
+                        "ncit:C173281"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "RT_DOSE": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "The total radiation dose administered.",
+                    "codes": [
+                        "ncit:C173282"
+                    ],
+                    "implementation_notes": "Total dose of radiation over the period encompassed by AGE_AT_RT_START to _AGE_AT_RT_END",
+                    "mappings": ""
+                },
+                "RT_UNIT": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "A unit of measurement of the dose of radiation received or absorbed.",
+                    "codes": [
+                        "ncit:C18068"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                }
+            },
+            "transfusion_medicine_procedure": {
+                "AGE_AT_TMP_START": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "Age of subject (in days) at the start of the transfusion procedure.",
+                    "codes": [
+                        "ncit:C172697"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "DISEASE_PHASE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The stage or period of an individual's disease.",
+                    "codes": [
+                        "ncit:C168878"
+                    ],
+                    "implementation_notes": "Only fill in Disease Phase, Disease Phase Number, Course, and Course Number if \"AGE_\" not known | Disease Phase could be \"Initial Diagnosis\" phase, or a \"Relapse\" phase, etc...",
+                    "mappings": ""
+                },
+                "DISEASE_PHASE_NUMBER": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "The number of the disease phase.",
+                    "codes": [
+                        "ncit:C173258"
+                    ],
+                    "implementation_notes": "Ordinal number of the disease phase, grouped within subcategory. I.e. number Relapse 1, 2, 3, 4, etc...",
+                    "mappings": ""
+                },
+                "COURSE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The type of protocol treatment course administered.",
+                    "codes": [
+                        "ncit:C168807"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "COURSE_NUMBER": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "The number assigned to a course of therapeutic agent administration, indicating where a particular course of treatment falls within a sequence of treatments.",
+                    "codes": [
+                        "ncit:C166235"
+                    ],
+                    "implementation_notes": "Course number is grouped within subcategory. I.e. number Induction 1, 2, 3, 4, etc..., Prephase 1, 2, 3, 4, etc..., Maintenance 1,2,3,4,5,6 etc...",
+                    "mappings": ""
+                },
+                "TMP_TYPE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "An infusion or replacement of blood components.",
+                    "codes": [
+                        "ncit:C173057"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "TMP_PRODUCT": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The type of product intended for transfusion.",
+                    "codes": [
+                        "ncit:C173287"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                }
+            },
+            "cellular_immunotherapy": {
+                "AGE_AT_IMT_START": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "Age of subject (in days) at the start of the immunotherapy.",
+                    "codes": [
+                        "ncit:C173195"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "DISEASE_PHASE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The stage or period of an individual's disease.",
+                    "codes": [
+                        "ncit:C168878"
+                    ],
+                    "implementation_notes": "Only fill in Disease Phase, Disease Phase Number, Course, and Course Number if \"AGE_\" not known | Disease Phase could be \"Initial Diagnosis\" phase, or a \"Relapse\" phase, etc...",
+                    "mappings": ""
+                },
+                "DISEASE_PHASE_NUMBER": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "The number of the disease phase.",
+                    "codes": [
+                        "ncit:C173258"
+                    ],
+                    "implementation_notes": "Ordinal number of the disease phase, grouped within subcategory. I.e. number Relapse 1, 2, 3, 4, etc...",
+                    "mappings": ""
+                },
+                "COURSE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The type of protocol treatment course administered.",
+                    "codes": [
+                        "ncit:C168807"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "COURSE_NUMBER": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "The number assigned to a course of therapeutic agent administration, indicating where a particular course of treatment falls within a sequence of treatments.",
+                    "codes": [
+                        "ncit:C166235"
+                    ],
+                    "implementation_notes": "Course number is grouped within subcategory. I.e. number Induction 1, 2, 3, 4, etc..., Prephase 1, 2, 3, 4, etc..., Maintenance 1,2,3,4,5,6 etc...",
+                    "mappings": ""
+                },
+                "CIMT_TYPE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The type of cellular immunotherapy.",
+                    "codes": [
+                        "ncit:C173289"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                }
+            },
+            "total_dose": {
+                "AGE_AT_TOTAL_DOSE_START": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "Age of subject (in days) at the start of the total dose calculation.",
+                    "codes": [
+                        "ncit:C172698"
+                    ],
+                    "implementation_notes": "For AML, in the case of \"Intrathecal Chemotherapy,\" the age at the start is based on intention-to-treat.",
+                    "mappings": ""
+                },
+                "AGE_AT_TOTAL_DOSE_END": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "Age of subject (in days) at the end of the total dose calculation.",
+                    "codes": [
+                        "ncit:C172686"
+                    ],
+                    "implementation_notes": "For AML, in the case of \"Intrathecal Chemotherapy,\" the age at the end is based on intention-to-treat.",
+                    "mappings": ""
+                },
+                "DISEASE_PHASE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The stage or period of an individual's disease.",
+                    "codes": [
+                        "ncit:C168878"
+                    ],
+                    "implementation_notes": "Only fill in Disease Phase, Disease Phase Number, Course, and Course Number if \"AGE_\" not known | Disease Phase could be \"Initial Diagnosis\" phase, or a \"Relapse\" phase, etc...",
+                    "mappings": ""
+                },
+                "DISEASE_PHASE_NUMBER": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "The number of the disease phase.",
+                    "codes": [
+                        "ncit:C173258"
+                    ],
+                    "implementation_notes": "Ordinal number of the disease phase, grouped within subcategory. I.e. number Relapse 1, 2, 3, 4, etc...",
+                    "mappings": ""
+                },
+                "COURSE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The type of protocol treatment course administered.",
+                    "codes": [
+                        "ncit:C168807"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "COURSE_NUMBER": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "The number assigned to a course of therapeutic agent administration, indicating where a particular course of treatment falls within a sequence of treatments.",
+                    "codes": [
+                        "ncit:C166235"
+                    ],
+                    "implementation_notes": "Course number is grouped within subcategory. I.e. number Induction 1, 2, 3, 4, etc..., Prephase 1, 2, 3, 4, etc..., Maintenance 1,2,3,4,5,6 etc...",
+                    "mappings": ""
+                },
+                "ROUTE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The intended area to be affected by the choice of a particular route of administration of a medication.",
+                    "codes": [
+                        "ncit:C186559"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "ANTINEOPLASTIC_AGENT": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "A substance that inhibits the maturation, growth or spread of tumor cells.",
+                    "codes": [
+                        "ncit:C274"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "NUMBER_DOSES": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "The number of doses.",
+                    "codes": [
+                        "ncit:C173293"
+                    ],
+                    "implementation_notes": "Number of doses of chemotherapy agent administered over the indicated start and end time points | Only fill in this variable if this information is available.",
+                    "mappings": ""
+                },
+                "TOTAL_DOSE_ADMINISTERED": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "The total amount of a therapeutic agent administered to a subject over a defined period of time.",
+                    "codes": [
+                        "ncit:C94394"
+                    ],
+                    "implementation_notes": "Total dose of the chemotherapy agent administered to the subject over the indicated start and end time points. | Only fill in this variable if this information is available.",
+                    "mappings": ""
+                },
+                "TOTAL_DOSE_INTENDED": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "The total dose intended.",
+                    "codes": [
+                        "ncit:C173294"
+                    ],
+                    "implementation_notes": "Intention-to-treat total dose of the chemotherapy agent over the indicated start and end time points. | Only fill in this variable if this information is available.",
+                    "mappings": ""
+                },
+                "TOTAL_DOSE_UNITS": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The units of the total dose.",
+                    "codes": [
+                        "ncit:C173295"
+                    ],
+                    "implementation_notes": "Unit for TOTAL_DOSE_ADMINISTERED and TOTAL_DOSE_INTENDED must be the same.",
+                    "mappings": ""
+                }
+            },
+            "concomitant_medication": {
+                "AGE_AT_MEDICATION_START": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "Age of subject (in days) at the start of the concomitant medication administration.",
+                    "codes": [
+                        "ncit:C172692"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "AGE_AT_MEDICATION_END": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "Age of subject (in days) at the end of the concomitant medication administration.",
+                    "codes": [
+                        "ncit:C172693"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "DISEASE_PHASE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The stage or period of an individual's disease.",
+                    "codes": [
+                        "ncit:C168878"
+                    ],
+                    "implementation_notes": "Only fill in Disease Phase, Disease Phase Number, Course, and Course Number if \"AGE_\" not known | Disease Phase could be \"Initial Diagnosis\" phase, or a \"Relapse\" phase, etc...",
+                    "mappings": ""
+                },
+                "DISEASE_PHASE_NUMBER": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "The number of the disease phase.",
+                    "codes": [
+                        "ncit:C173258"
+                    ],
+                    "implementation_notes": "Ordinal number of the disease phase, grouped within subcategory. I.e. number Relapse 1, 2, 3, 4, etc...",
+                    "mappings": ""
+                },
+                "COURSE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The type of protocol treatment course administered.",
+                    "codes": [
+                        "ncit:C168807"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "COURSE_NUMBER": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "The number assigned to a course of therapeutic agent administration, indicating where a particular course of treatment falls within a sequence of treatments.",
+                    "codes": [
+                        "ncit:C166235"
+                    ],
+                    "implementation_notes": "Course number is grouped within subcategory. I.e. number Induction 1, 2, 3, 4, etc..., Prephase 1, 2, 3, 4, etc..., Maintenance 1,2,3,4,5,6 etc...",
+                    "mappings": ""
+                },
+                "MEDICATION": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "A pharmaceutical agent other than agent(s) tested in a given protocol that is administered to or used by a subject either prior to or during the study. Supportive care and essential ancillary medications required by a treatment regimen should be clearly identified. A protocol complete instructions including appropriate indication, dosage, administration route, schedule, restrictions to use, and any other relevant data should be explicitly stated. Concept also refers to substance(s) used prior or during the study that are not specified by the protocol.",
+                    "codes": [
+                        "ncit:C70902"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "MEDICATION_ADMN_STATUS": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The status of the medication administration.",
+                    "codes": [
+                        "ncit:C173297"
+                    ],
+                    "implementation_notes": "If medication was given, the start and end ages correspond to the time period when it was given. If medication was explicitly NOT given (i.e. only if the explicit decision to not give the medicine is available in the data), leave start and end ages blank, and ony fill in the disease phase (and number) / course (and number) during which the explicit decision to not give the medication occured.",
+                    "mappings": ""
+                }
+            },
+            "stem_cell_transplant": {
+                "AGE_AT_SCT": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "Age of subject (in days) at the time of stem-cell transplantation.",
+                    "codes": [
+                        "ncit:C168853"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "DISEASE_PHASE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The stage or period of an individual's disease.",
+                    "codes": [
+                        "ncit:C168878"
+                    ],
+                    "implementation_notes": "Only fill in Disease Phase, Disease Phase Number, Course, and Course Number if \"AGE_\" not known | Disease Phase could be \"Initial Diagnosis\" phase, or a \"Relapse\" phase, etc...",
+                    "mappings": ""
+                },
+                "DISEASE_PHASE_NUMBER": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "The number of the disease phase.",
+                    "codes": [
+                        "ncit:C173258"
+                    ],
+                    "implementation_notes": "Ordinal number of the disease phase, grouped within subcategory. I.e. number Relapse 1, 2, 3, 4, etc...",
+                    "mappings": ""
+                },
+                "COURSE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The type of protocol treatment course administered.",
+                    "codes": [
+                        "ncit:C168807"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "COURSE_NUMBER": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "The number assigned to a course of therapeutic agent administration, indicating where a particular course of treatment falls within a sequence of treatments.",
+                    "codes": [
+                        "ncit:C166235"
+                    ],
+                    "implementation_notes": "Course number is grouped within subcategory. I.e. number Induction 1, 2, 3, 4, etc..., Prephase 1, 2, 3, 4, etc..., Maintenance 1,2,3,4,5,6 etc...",
+                    "mappings": ""
+                },
+                "SCT_TYPE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "Type of stem-cell transplantation the subject received.",
+                    "codes": [
+                        "ncit:C168864"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "SCT_SOURCE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The source of the stem cells for the stem cell transplant.",
+                    "codes": [
+                        "ncit:C168870"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "SCT_DONOR_RELATIONSHIP": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The biological relationship between the stem cell donor and the recipients.",
+                    "codes": [
+                        "ncit:C168869"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "HLA_MATCH": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "A process in which blood or tissue samples are analyzed to determine their human leukocyte antigen (HLA) profiles so that transplant materials can be transferred into a patient with the same or similar profile.",
+                    "codes": [
+                        "ncit:C169009"
+                    ],
+                    "implementation_notes": "the term should be about the HLA matching result (ie match status), not the process - NCI will massage this term's definition (HLA Match status)",
+                    "mappings": ""
+                },
+                "NUMBER_HLA": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "The number of human leukocyte antigens that were evaluated.",
+                    "codes": [
+                        "ncit:C173301"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "NUMBER_MATCHES": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "The number of human leukocyte antigens that matched between the donor and the recipient.",
+                    "codes": [
+                        "ncit:C173302"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "HLA_A_RESULT": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The extent of HLA-A matching between the donor and the recipient.",
+                    "codes": [
+                        "ncit:C168923"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "HLA_B_RESULT": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The extent of HLA-B matching between the donor and the recipient.",
+                    "codes": [
+                        "ncit:C168924"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "HLA_C_RESULT": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The extent of HLA-C matching between the donor and the recipient.",
+                    "codes": [
+                        "ncit:C168925"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "HLA_DRB1_RESULT": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The extent of HLA-DRB1 matching between the donor and the recipient.",
+                    "codes": [
+                        "ncit:C168926"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "HLA_DQ_RESULT": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The extent of HLA-DQ matching between the donor and the recipient.",
+                    "codes": [
+                        "ncit:C168927"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "SCT_CONDITIONING_TYPE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "Type of conditioning the subject received prior to stem-cell transplantation.",
+                    "codes": [
+                        "ncit:C169014"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "SCT_TBI": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "A therapeutic procedure that involves the irradiation of the whole body with ionizing or non-ionizing radiation.",
+                    "codes": [
+                        "ncit:C15350"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                }
+            }
+        },
+        "response": {
+            "minimal_residual_disease": {
+                "AGE_AT_MRD_ASSESSMENT": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "Age of subject (in days) at assessment of minimal residual disease.",
+                    "codes": [
+                        "ncit:C168855"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "DISEASE_PHASE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The stage or period of an individual's disease.",
+                    "codes": [
+                        "ncit:C168878"
+                    ],
+                    "implementation_notes": "Only fill in Disease Phase, Disease Phase Number, Course, and Course Number if \"AGE_\" not known | Disease Phase could be \"Initial Diagnosis\" phase, or a \"Relapse\" phase, etc...",
+                    "mappings": ""
+                },
+                "DISEASE_PHASE_NUMBER": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "The number of the disease phase.",
+                    "codes": [
+                        "ncit:C173258"
+                    ],
+                    "implementation_notes": "Ordinal number of the disease phase, grouped within subcategory. I.e. number Relapse 1, 2, 3, 4, etc...",
+                    "mappings": ""
+                },
+                "COURSE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The type of protocol treatment course administered.",
+                    "codes": [
+                        "ncit:C168807"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "COURSE_NUMBER": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "The number assigned to a course of therapeutic agent administration, indicating where a particular course of treatment falls within a sequence of treatments.",
+                    "codes": [
+                        "ncit:C166235"
+                    ],
+                    "implementation_notes": "Course number is grouped within subcategory. I.e. number Induction 1, 2, 3, 4, etc..., Prephase 1, 2, 3, 4, etc..., Maintenance 1,2,3,4,5,6 etc...",
+                    "mappings": ""
+                },
+                "MRD_METHOD": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "Modality used to determine minimal residual disease.",
+                    "codes": [
+                        "ncit:C168933"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "FLOW_CYTOMETRY_TYPE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The classification, nature or purpose for a flow cytometry assay.",
+                    "codes": [
+                        "ncit:C173732"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "MRD_RESULT": {
+                    "type": "String",
+                    "tier": "n/a",
+                    "description": "An assessment of the minimal residual disease response to therapy.",
+                    "codes": [
+                        "ncit:C124433"
+                    ],
+                    "implementation_notes": "String result can include anything that is not a single numeric result, i.e. \"Positive\", \"Negative\", \"Present\", \"Absent\", \"Yes\", \"No\", \"Elevated,\" \"Depressed\", \"Above threshold\", \"Below threshold\", ranges, as well as bucketed categories, etc... | Only fill in this variable when the available data is anything EXCEPT a single numeric value, and include the entire available data as a string, including units if applicable",
+                    "mappings": ""
+                },
+                "MRD_RESULT_NUMERIC": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "Minimal residual disease value expressed as a percent, fraction or ratio.",
+                    "codes": [
+                        "ncit:C168951"
+                    ],
+                    "implementation_notes": "Only fill in this variable if the available data is a single numeric value.",
+                    "mappings": ""
+                },
+                "MRD_RESULT_UNIT": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The unit of the minimal residual disease result.",
+                    "codes": [
+                        "ncit:C173304"
+                    ],
+                    "implementation_notes": "Only fill in this variable if a numeric result is provided in MRD_RESULT_NUMERIC.",
+                    "mappings": ""
+                },
+                "MRD_SENSITIVTY": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "Minimal Residual Disease Method Sensitivity",
+                    "codes": [
+                        "ncit:C168957"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "MRD_SAMPLE_SOURCE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "Minimal Residual Disease Sample Source",
+                    "codes": [
+                        "ncit:C168958"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "MRD_MOLECULAR_MARKERS": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "Minimal Residual Disease Molecular Markers",
+                    "codes": [
+                        "ncit:C168895"
+                    ],
+                    "implementation_notes": "If multiple MRD markers, include one observation per marker.",
+                    "mappings": ""
+                }
+            },
+            "subject_response": {
+                "AGE_AT_RESPONSE": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "Age of subject (in days) when the response assessment was made.",
+                    "codes": [
+                        "ncit:C168856"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "DISEASE_PHASE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The stage or period of an individual's disease.",
+                    "codes": [
+                        "ncit:C168878"
+                    ],
+                    "implementation_notes": "Only fill in Disease Phase, Disease Phase Number, Course, and Course Number if \"AGE_\" not known | Disease Phase could be \"Initial Diagnosis\" phase, or a \"Relapse\" phase, etc...",
+                    "mappings": ""
+                },
+                "DISEASE_PHASE_NUMBER": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "The number of the disease phase.",
+                    "codes": [
+                        "ncit:C173258"
+                    ],
+                    "implementation_notes": "Ordinal number of the disease phase, grouped within subcategory. I.e. number Relapse 1, 2, 3, 4, etc...",
+                    "mappings": ""
+                },
+                "COURSE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The type of protocol treatment course administered.",
+                    "codes": [
+                        "ncit:C168807"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "COURSE_NUMBER": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "The number assigned to a course of therapeutic agent administration, indicating where a particular course of treatment falls within a sequence of treatments.",
+                    "codes": [
+                        "ncit:C166235"
+                    ],
+                    "implementation_notes": "Course number is grouped within subcategory. I.e. number Induction 1, 2, 3, 4, etc..., Prephase 1, 2, 3, 4, etc..., Maintenance 1,2,3,4,5,6 etc...",
+                    "mappings": ""
+                },
+                "RESPONSE_CATEGORY": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The category used to assess the response to therapy.",
+                    "codes": [
+                        "ncit:C173306"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "RESPONSE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The pathologic and/or clinical changes that result from treatment. The changes may include eradication of detectable disease, stabilization of disease, or disease progression.",
+                    "codes": [
+                        "ncit:C50995"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "BM_PCT_BLASTS_AT_RESPONSE": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "The percent of cells that were blasts in the subject's bone marrow used to make the response assessment.",
+                    "codes": [
+                        "ncit:C168959"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "BM_ANALYSIS_METHOD_AT_RESPONSE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The modality used to determine the bone marrow percent blasts.",
+                    "codes": [
+                        "ncit:C168960"
+                    ],
+                    "implementation_notes": "Only fill in the variable if a value is available for BM_PCT_BLASTS_AT_RESPONSE",
+                    "mappings": ""
+                },
+                "ANC_AT_RESPONSE": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "The absolute neutrophil count used to make the response assessment.",
+                    "codes": [
+                        "ncit:C168961"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "ANC_THRESHOLD_AT_RESPONSE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "Subject exceeded an absolute neutrophil count threshold of >= 500 (ANC/mm3) at the time of the response assessment.",
+                    "codes": [
+                        "ncit:C168962"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "PLATELET_COUNT_AT_RESPONSE": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "The platelet count used to make the response assessment.",
+                    "codes": [
+                        "ncit:C168963"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "PLATELET_THRESHOLD_AT_RESPONSE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "Subject exceeded a platelet count threshold of >=50,000 (platelets/mm3) at the time of the response assessment.",
+                    "codes": [
+                        "ncit:C168964"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                }
+            }
+        },
+        "events": {
+            "adverse_events": {
+                "AGE_AT_AE": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "Age of subject (in days) at the onset of the adverse event.",
+                    "codes": [
+                        "ncit:C172677"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "DISEASE_PHASE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The stage or period of an individual's disease.",
+                    "codes": [
+                        "ncit:C168878"
+                    ],
+                    "implementation_notes": "Only fill in Disease Phase, Disease Phase Number, Course, and Course Number if \"AGE_\" not known | Disease Phase could be \"Initial Diagnosis\" phase, or a \"Relapse\" phase, etc...",
+                    "mappings": ""
+                },
+                "DISEASE_PHASE_NUMBER": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "The number of the disease phase.",
+                    "codes": [
+                        "ncit:C173258"
+                    ],
+                    "implementation_notes": "Ordinal number of the disease phase, grouped within subcategory. I.e. number Relapse 1, 2, 3, 4, etc...",
+                    "mappings": ""
+                },
+                "COURSE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The type of protocol treatment course administered.",
+                    "codes": [
+                        "ncit:C168807"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "COURSE_NUMBER": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "The number assigned to a course of therapeutic agent administration, indicating where a particular course of treatment falls within a sequence of treatments.",
+                    "codes": [
+                        "ncit:C166235"
+                    ],
+                    "implementation_notes": "Course number is grouped within subcategory. I.e. number Induction 1, 2, 3, 4, etc..., Prephase 1, 2, 3, 4, etc..., Maintenance 1,2,3,4,5,6 etc...",
+                    "mappings": ""
+                },
+                "ADVERSE_EVENT": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "Any unfavorable or unintended disease, sign, or symptom (including an abnormal laboratory finding) that is temporally associated with the use of a medical treatment or procedure, and that may or may not be considered related to the medical treatment or procedure. Such events can be related to the intervention, dose, route of administration, patient, or caused by an interaction with another drug(s) or procedure(s).",
+                    "codes": [
+                        "ncit:C41331"
+                    ],
+                    "implementation_notes": "For AML, COG will omit multiorgan failure, hemorrhage, and neurotoxcity. Infection for AML COG will be CRF question about sterile site",
+                    "mappings": ""
+                },
+                "AE_CODE": {
+                    "type": "String",
+                    "tier": "n/a",
+                    "description": "The code of the adverse event.",
+                    "codes": [
+                        "ncit:C173313"
+                    ],
+                    "implementation_notes": "For AML, include when available if a 1:1 mapping to the ADVERSE_EVENT bucket",
+                    "mappings": ""
+                },
+                "AE_SYSTEM": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The name of the system used to grade the adverse events.",
+                    "codes": [
+                        "ncit:C168872"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "AE_SYSTEM_VERSION": {
+                    "type": "String",
+                    "tier": "n/a",
+                    "description": "The version of the adverse event grading system.",
+                    "codes": [
+                        "ncit:C173314"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "AE_GRADE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "A numeric value corresponding to the degree of severity of an adverse event.",
+                    "codes": [
+                        "ncit:C166200"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "AE_ATTRIBUTION": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "A specific identifiable level (defined qualitatively or quantitatively) of probability of adverse event being caused or associated with the product or procedure administration to a patient.",
+                    "codes": [
+                        "ncit:C41358"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "AE_OUTCOME": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "A condition or event that is attributed to the adverse event and is the result or conclusion of the adverse event.",
+                    "codes": [
+                        "ncit:C49489"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "AE_ICU": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "An indication of whether the subject was admitted to the intensive care unit.",
+                    "codes": [
+                        "ncit:C173316"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "AE_MEDICATION": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The medication related to the adverse event.",
+                    "codes": [
+                        "ncit:C173317"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "AE_INTERVENTION": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The intervention related to the adverse event.",
+                    "codes": [
+                        "ncit:C173318"
+                    ],
+                    "implementation_notes": "changed to general INTERVENTION variable (was previously SOS_INTERVENTION)",
+                    "mappings": ""
+                },
+                "AE_MED_INTERVENTION_DETAIL": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The intervention or medication detail of the adverse event.",
+                    "codes": [
+                        "ncit:C173319"
+                    ],
+                    "implementation_notes": "If multiple medications or interventions performed, include one observation per medication or intervention | Only fill in this variable if MEDICATION and/or INTERVENTION are marker as \"Yes\"",
+                    "mappings": ""
+                },
+                "AE_PATHOGEN": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The pathogen identified as the agent causing the adverse event.",
+                    "codes": [
+                        "ncit:C185665"
+                    ],
+                    "implementation_notes": "If multiple pathogens involved, include one observation per pathogen. | Only fill in this variable if ADVERSE_EVENT is \"Infection.\"",
+                    "mappings": ""
+                },
+                "AE_PATHOGEN_CONFIRMATION": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "An indication that the reported pathogen was confirmed or suspected as the cause of an infection.",
+                    "codes": [
+                        "ncit:C168955"
+                    ],
+                    "implementation_notes": "Only fill in this variable if ADVERSE_EVENT is \"Infection\" and there is a value filled in for PATHOGEN.",
+                    "mappings": ""
+                },
+                "GVHD_ACUITY": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The assessed level of seriousness assigned to the graft vs host disease.",
+                    "codes": [
+                        "ncit:C168861"
+                    ],
+                    "implementation_notes": "Only fill in this variable if ADVERSE_EVENT is \"GVHD.\"",
+                    "mappings": ""
+                },
+                "GVHD_ORGAN": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The organs involved in the graft vs host disease.",
+                    "codes": [
+                        "ncit:C168883"
+                    ],
+                    "implementation_notes": "If multiple organs involved in GVHD, include one observation per organ. | Only fill in this variable if ADVERSE_EVENT is \"GVHD.\"",
+                    "mappings": ""
+                }
+            },
+            "secondary_malignant_neoplasm": {
+                "AGE_AT_SMN": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "Age of subject (in days) at the diagnosis of the secondary malignant neoplasm.",
+                    "codes": [
+                        "ncit:C168860"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "DISEASE_PHASE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The stage or period of an individual's disease.",
+                    "codes": [
+                        "ncit:C168878"
+                    ],
+                    "implementation_notes": "Only fill in Disease Phase, Disease Phase Number, Course, and Course Number if \"AGE_\" not known | Disease Phase could be \"Initial Diagnosis\" phase, or a \"Relapse\" phase, etc...",
+                    "mappings": ""
+                },
+                "DISEASE_PHASE_NUMBER": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "The number of the disease phase.",
+                    "codes": [
+                        "ncit:C173258"
+                    ],
+                    "implementation_notes": "Ordinal number of the disease phase, grouped within subcategory. I.e. number Relapse 1, 2, 3, 4, etc...",
+                    "mappings": ""
+                },
+                "COURSE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The type of protocol treatment course administered.",
+                    "codes": [
+                        "ncit:C168807"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "COURSE_NUMBER": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "The number assigned to a course of therapeutic agent administration, indicating where a particular course of treatment falls within a sequence of treatments.",
+                    "codes": [
+                        "ncit:C166235"
+                    ],
+                    "implementation_notes": "Course number is grouped within subcategory. I.e. number Induction 1, 2, 3, 4, etc..., Prephase 1, 2, 3, 4, etc..., Maintenance 1,2,3,4,5,6 etc...",
+                    "mappings": ""
+                },
+                "SMN_ICD_O_MORPH": {
+                    "type": "String",
+                    "tier": "n/a",
+                    "description": "ICD-O morphology code of the secondary malignant neoplasm.",
+                    "codes": [
+                        "ncit:C168862"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                },
+                "SMN_ICD_O_TOP": {
+                    "type": "String",
+                    "tier": "n/a",
+                    "description": "ICD-O topography code of the secondary malignant neoplasm.",
+                    "codes": [
+                        "ncit:C168863"
+                    ],
+                    "implementation_notes": "",
+                    "mappings": ""
+                }
+            }
+        }
+    }
+}
