@@ -1,7 +1,7 @@
 {
     "meta": {
         "name": "all_v1.0",
-        "timestamp": "20241009",
+        "timestamp": "20241010",
         "sheet_id": "1sTygI0GtyaT2C0iZ9YzXTKRnAcELuV2BblaLGPG0EPc"
     },
     "info": {
@@ -23,7 +23,7 @@
                     "tier": "Mandatory",
                     "description": "A unique subject id assigned by the PCDC. Any given individual person will have only one PCDC_SUBJECT_ID regardless of the number of studies in which they appear. If an individual person is on studies from more than one contributor, they may have more than one HONEST_BROKER_SUBJECT_IDs assigned to them by the contributors, but will be resulted to a single PCDC_SUBJECT_ID by PCDC staff.",
                     "codes": [
-                        "C69256"
+                        "ncit:C69256"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -35,7 +35,7 @@
                     "tier": "Mandatory",
                     "description": "The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a \"re-identification code\"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.",
                     "codes": [
-                        "C168949"
+                        "ncit:C168949"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -45,7 +45,7 @@
                     "tier": "Mandatory",
                     "description": "An identifier assigned to a data contributor.",
                     "codes": [
-                        "C168950"
+                        "ncit:C168950"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -55,7 +55,7 @@
                     "tier": "Mandatory",
                     "description": "A sequence of characters used to identify, name, or characterize the study.",
                     "codes": [
-                        "C83082"
+                        "ncit:C83082"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -65,7 +65,7 @@
                     "tier": "Mandatory",
                     "description": "The age (in days) when the subject enrolled in the study.",
                     "codes": [
-                        "C168843"
+                        "ncit:C168843"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -75,7 +75,7 @@
                     "tier": "Mandatory",
                     "description": "A specific treatment plan within a clinical trial that describes the activities a subject will be involved in as he or she progresses through the study.",
                     "codes": [
-                        "C15538"
+                        "ncit:C15538"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -85,7 +85,7 @@
                     "tier": "Optional",
                     "description": "This variable indicates if the subject was enrolled in the study, or if the subject was not enrolled in the study but received treatment per the study's protocol.",
                     "codes": [
-                        "C168298"
+                        "ncit:C168298"
                     ],
                     "implementation_notes": "Note: refers to if subject was enrolled in the study, or subject was not enrolled in the study but received treatment per the study's protocol.",
                     "mappings": ""
@@ -97,7 +97,7 @@
                     "tier": "Mandatory",
                     "description": "The stage or period of an individual's disease.",
                     "codes": [
-                        "C168878"
+                        "ncit:C168878"
                     ],
                     "implementation_notes": "Note: Disease phase could be \"Initial Diagnosis\" phase, a \"Relapse\" phase, or a \"Progression\" phase.",
                     "mappings": ""
@@ -107,7 +107,7 @@
                     "tier": "Mandatory",
                     "description": "The number of the disease phase.",
                     "codes": [
-                        "C173258"
+                        "ncit:C173258"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -117,7 +117,7 @@
                     "tier": "Mandatory",
                     "description": "Age in days when the diagnosis was made for the disease phase.",
                     "codes": [
-                        "C168972"
+                        "ncit:C168972"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -127,7 +127,7 @@
                     "tier": "Mandatory",
                     "description": "Year when the diagnosis was made for the disease phase.",
                     "codes": [
-                        "C168823"
+                        "ncit:C168823"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -139,7 +139,7 @@
                     "tier": "Mandatory",
                     "description": "The type of protocol treatment course administered.",
                     "codes": [
-                        "C168807"
+                        "ncit:C168807"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -149,7 +149,7 @@
                     "tier": "Mandatory",
                     "description": "The number assigned to a course of therapeutic agent administration, indicating where a particular course of treatment falls within a sequence of treatments.",
                     "codes": [
-                        "C166235"
+                        "ncit:C166235"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -159,7 +159,7 @@
                     "tier": "Mandatory",
                     "description": "Age of subject (in days) at the start of the course.",
                     "codes": [
-                        "C168850"
+                        "ncit:C168850"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -169,7 +169,7 @@
                     "tier": "Mandatory",
                     "description": "Age of subject (in days) at the end of the course.",
                     "codes": [
-                        "C168851"
+                        "ncit:C168851"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -191,7 +191,7 @@
                     "tier": "Mandatory",
                     "description": "The stage or period of an individual's disease.",
                     "codes": [
-                        "C168878"
+                        "ncit:C168878"
                     ],
                     "implementation_notes": "Note: Disease phase could be \"Initial Diagnosis\" phase, a \"Relapse\" phase, or a \"Progression\" phase.",
                     "mappings": ""
@@ -201,7 +201,7 @@
                     "tier": "Mandatory",
                     "description": "The number of the disease phase.",
                     "codes": [
-                        "C173258"
+                        "ncit:C173258"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -211,7 +211,7 @@
                     "tier": "Mandatory",
                     "description": "The type of protocol treatment course administered.",
                     "codes": [
-                        "C168807"
+                        "ncit:C168807"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -221,7 +221,7 @@
                     "tier": "Mandatory",
                     "description": "The number assigned to a course of therapeutic agent administration, indicating where a particular course of treatment falls within a sequence of treatments.",
                     "codes": [
-                        "C166235"
+                        "ncit:C166235"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -231,7 +231,7 @@
                     "tier": "Mandatory",
                     "description": "The code used to designate that the subject went off therapy or off the study.",
                     "codes": [
-                        "C173256"
+                        "ncit:C173256"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -241,7 +241,7 @@
                     "tier": "Mandatory",
                     "description": "A coded value specifying why the subject is removed from a study.",
                     "codes": [
-                        "C93611"
+                        "ncit:C93611"
                     ],
                     "implementation_notes": "Note: If multiple reasons off, include one observation per reason off.",
                     "mappings": ""
@@ -251,7 +251,7 @@
                     "tier": "Mandatory",
                     "description": "The subject was enrolled in another therapeutic study after the off protocol study.",
                     "codes": [
-                        "C178073"
+                        "ncit:C178073"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -265,7 +265,7 @@
                     "tier": "Mandatory",
                     "description": "The assemblage of physical properties or qualities by which male is distinguished from female; the physical difference between male and female; the distinguishing peculiarity of male or female.",
                     "codes": [
-                        "C28421"
+                        "ncit:C28421"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -275,7 +275,7 @@
                     "tier": "Mandatory",
                     "description": "An arbitrary classification of a taxonomic group that is a division of a species. It usually arises as a consequence of geographical isolation within a species and is characterized by shared heredity, physical attributes and behavior, and in the case of humans, by common history, nationality, or geographic distribution.",
                     "codes": [
-                        "C17049"
+                        "ncit:C17049"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -285,7 +285,7 @@
                     "tier": "Mandatory",
                     "description": "A social group characterized by a distinctive social and cultural tradition that is maintained from generation to generation. Members share a common history and origin and a sense of identification with the group. They have similar and distinctive features in their lifestyle habits and shared experiences. They often have a common genetic heritage which may be reflected in their experience of health and disease.",
                     "codes": [
-                        "C16564"
+                        "ncit:C16564"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -309,7 +309,7 @@
                     "tier": "Mandatory",
                     "description": "Age of subject (in days) at the last known survival status.",
                     "codes": [
-                        "C168844"
+                        "ncit:C168844"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -319,7 +319,7 @@
                     "tier": "Mandatory",
                     "description": "The individual's last known survival status.",
                     "codes": [
-                        "C168931"
+                        "ncit:C168931"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -329,7 +329,7 @@
                     "tier": "Mandatory",
                     "description": "The last known survival status of the individual with the disease.",
                     "codes": [
-                        "C178074"
+                        "ncit:C178074"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -339,7 +339,7 @@
                     "tier": "Mandatory",
                     "description": "Age of subject (in days) when the subject was lost to follow-up.",
                     "codes": [
-                        "C172679"
+                        "ncit:C172679"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -349,7 +349,7 @@
                     "tier": "Mandatory",
                     "description": "The circumstance or condition that results in the death of a living being.",
                     "codes": [
-                        "C81239"
+                        "ncit:C81239"
                     ],
                     "implementation_notes": "Note: If multiple causes of death, include one observation per cause of death.",
                     "mappings": ""
@@ -359,7 +359,7 @@
                     "tier": "Mandatory",
                     "description": "The type of treatment related to the mortality of the subject.",
                     "codes": [
-                        "C173260"
+                        "ncit:C173260"
                     ],
                     "implementation_notes": "Note: If multiple treatment types, include one observation per treatment type.",
                     "mappings": ""
@@ -369,7 +369,7 @@
                     "tier": "Optional",
                     "description": "Specific details of the cause of death.",
                     "codes": [
-                        "C168868"
+                        "ncit:C168868"
                     ],
                     "implementation_notes": "Note: If multiple cause of death details, include one observation per cause of death detail.",
                     "mappings": ""
@@ -379,7 +379,7 @@
                     "tier": "Mandatory",
                     "description": "Assigning a weighted relevance to the cause of death.",
                     "codes": [
-                        "C168932"
+                        "ncit:C168932"
                     ],
                     "implementation_notes": "Note: Contributory refers to additional cause of death, not necessarily the ordinal ranking of causes of death. There may be multiple secondary causes of death.",
                     "mappings": ""
@@ -393,7 +393,7 @@
                     "tier": "Mandatory",
                     "description": "The stage or period of an individual's disease.",
                     "codes": [
-                        "C168878"
+                        "ncit:C168878"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -403,7 +403,7 @@
                     "tier": "Mandatory",
                     "description": "The number of the disease phase.",
                     "codes": [
-                        "C173258"
+                        "ncit:C173258"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -413,7 +413,7 @@
                     "tier": "Mandatory",
                     "description": "Leukemia with an acute onset, characterized by the presence of lymphoblasts in the bone marrow and the peripheral blood. It includes the acute B lymphoblastic leukemia and acute T lymphoblastic leukemia.",
                     "codes": [
-                        "C3167"
+                        "ncit:C3167"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -423,7 +423,7 @@
                     "tier": "Mandatory",
                     "description": "The anatomic site of the disease.",
                     "codes": [
-                        "C173263"
+                        "ncit:C173263"
                     ],
                     "implementation_notes": "Note: If multiple sites of disease involvement, include one observation per site.",
                     "mappings": ""
@@ -433,7 +433,7 @@
                     "tier": "Mandatory",
                     "description": "The status of central nervous system leukemia at the time of diagnosis.",
                     "codes": [
-                        "C116832"
+                        "ncit:C116832"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -443,7 +443,7 @@
                     "tier": "Optional",
                     "description": "When the maximum width of a mass is equal or greater than one-third of the internal transverse diameter of the thorax at the level of T5/6 on a PA CXR. Bulk at an alternate site is defined as any mass measuring 10 cm or more by any imaging study.",
                     "codes": [
-                        "C178075"
+                        "ncit:C178075"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -453,7 +453,7 @@
                     "tier": "Mandatory",
                     "description": "The subject received steroids within one week prior to diagnosis of the disease phase.",
                     "codes": [
-                        "C178076"
+                        "ncit:C178076"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -463,7 +463,7 @@
                     "tier": "Mandatory",
                     "description": "The subject received steroids within one month prior to diagnosis of the disease phase.",
                     "codes": [
-                        "C178077"
+                        "ncit:C178077"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -475,7 +475,7 @@
                     "tier": "Optional",
                     "description": "Age of subject (in days) at histology assessment.",
                     "codes": [
-                        "C175004"
+                        "ncit:C175004"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -485,7 +485,7 @@
                     "tier": "Optional",
                     "description": "The stage or period of an individual's disease.",
                     "codes": [
-                        "C168878"
+                        "ncit:C168878"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -495,7 +495,7 @@
                     "tier": "Optional",
                     "description": "The number of the disease phase.",
                     "codes": [
-                        "C173258"
+                        "ncit:C173258"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -505,7 +505,7 @@
                     "tier": "Optional",
                     "description": "The type of protocol treatment course administered.",
                     "codes": [
-                        "C168807"
+                        "ncit:C168807"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -515,7 +515,7 @@
                     "tier": "Optional",
                     "description": "The number assigned to a course of therapeutic agent administration, indicating where a particular course of treatment falls within a sequence of treatments.",
                     "codes": [
-                        "C166235"
+                        "ncit:C166235"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -525,7 +525,7 @@
                     "tier": "Optional",
                     "description": "Codes for the histologic type of the tumor being reported using ICD-O.",
                     "codes": [
-                        "C176985"
+                        "ncit:C176985"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -539,7 +539,7 @@
                     "tier": "Optional",
                     "description": "Vital signs (such as height, weight, and blood pressure) directly measure an individual's current state of attributes.",
                     "codes": [
-                        "C154628"
+                        "ncit:C154628"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -549,7 +549,7 @@
                     "tier": "Optional",
                     "description": "The stage or period of an individual's disease.",
                     "codes": [
-                        "C168878"
+                        "ncit:C168878"
                     ],
                     "implementation_notes": "Note: Disease phase could be \"Initial Diagnosis\" phase, a \"Relapse\" phase, or a \"Progression\" phase.",
                     "mappings": ""
@@ -559,7 +559,7 @@
                     "tier": "Optional",
                     "description": "The number of the disease phase.",
                     "codes": [
-                        "C173258"
+                        "ncit:C173258"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -569,7 +569,7 @@
                     "tier": "Optional",
                     "description": "The type of protocol treatment course administered.",
                     "codes": [
-                        "C168807"
+                        "ncit:C168807"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -579,7 +579,7 @@
                     "tier": "Optional",
                     "description": "The number assigned to a course of therapeutic agent administration, indicating where a particular course of treatment falls within a sequence of treatments.",
                     "codes": [
-                        "C166235"
+                        "ncit:C166235"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -589,7 +589,7 @@
                     "tier": "Optional",
                     "description": "The act of assessing an individual's current temperature, heart rate, respiratory rate, pulse oxygenation, and blood pressure.",
                     "codes": [
-                        "C49672"
+                        "ncit:C49672"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -599,7 +599,7 @@
                     "tier": "Optional",
                     "description": "The outcome of the vital signs assessment.",
                     "codes": [
-                        "C83108"
+                        "ncit:C83108"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -609,7 +609,7 @@
                     "tier": "Optional",
                     "description": "The numeric values of the vital signs.",
                     "codes": [
-                        "C173268"
+                        "ncit:C173268"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -619,7 +619,7 @@
                     "tier": "Optional",
                     "description": "The unit used to record and describe the result of a test investigating a vital sign.",
                     "codes": [
-                        "C49675"
+                        "ncit:C49675"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -631,7 +631,7 @@
                     "tier": "Mandatory",
                     "description": "Age of subject (in days) when the laboratory test was performed.",
                     "codes": [
-                        "C172691"
+                        "ncit:C172691"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -641,7 +641,7 @@
                     "tier": "Mandatory",
                     "description": "A classification of the laboratory test.",
                     "codes": [
-                        "C83017"
+                        "ncit:C83017"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -651,7 +651,7 @@
                     "tier": "Mandatory",
                     "description": "A character or string that represents the full name of the laboratory assessment.",
                     "codes": [
-                        "C117142"
+                        "ncit:C117142"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -661,7 +661,7 @@
                     "tier": "Mandatory",
                     "description": "The type of a material sample taken from a biological entity for laboratory testing.",
                     "codes": [
-                        "C83315"
+                        "ncit:C83315"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -671,7 +671,7 @@
                     "tier": "Mandatory",
                     "description": "The outcome of a laboratory test.",
                     "codes": [
-                        "C36292"
+                        "ncit:C36292"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -681,7 +681,7 @@
                     "tier": "Mandatory",
                     "description": "A numeric representation of a test result.",
                     "codes": [
-                        "C70952"
+                        "ncit:C70952"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -691,7 +691,7 @@
                     "tier": "Mandatory",
                     "description": "The numeric unit that expresses the lab result.",
                     "codes": [
-                        "C173274"
+                        "ncit:C173274"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -701,7 +701,7 @@
                     "tier": "Mandatory",
                     "description": "A systematic course of action that is performed in order to complete a laboratory test.",
                     "codes": [
-                        "C83312"
+                        "ncit:C83312"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -711,7 +711,7 @@
                     "tier": "Mandatory",
                     "description": "The morphology characteristics of the bone marrow blasts.",
                     "codes": [
-                        "C178079"
+                        "ncit:C178079"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -721,7 +721,7 @@
                     "tier": "Mandatory",
                     "description": "Contamination of a cerebrospinal fluid sample by red blood cells greater than 10/mm3.",
                     "codes": [
-                        "C168879"
+                        "ncit:C168879"
                     ],
                     "implementation_notes": "Notes: Traumatic tap is defined as cerebrospinal fluid with greater than 10 RBC/mm3.",
                     "mappings": ""
@@ -733,7 +733,7 @@
                     "tier": "Mandatory",
                     "description": "Age of subject (in days) when molecular analysis was performed.",
                     "codes": [
-                        "C168848"
+                        "ncit:C168848"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -743,7 +743,7 @@
                     "tier": "Mandatory",
                     "description": "Molecular Analysis Method",
                     "codes": [
-                        "C158954"
+                        "ncit:C158954"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -753,7 +753,7 @@
                     "tier": "Mandatory",
                     "description": "The anatomic source of the molecular analysis sample.",
                     "codes": [
-                        "C178080"
+                        "ncit:C178080"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -763,7 +763,7 @@
                     "tier": "Mandatory",
                     "description": "The status of the subject's karyotype.",
                     "codes": [
-                        "C168871"
+                        "ncit:C168871"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -773,7 +773,7 @@
                     "tier": "Mandatory",
                     "description": "A karyotype finding as classified by the International System for Human Cytogenetic Nomenclature.",
                     "codes": [
-                        "C173278"
+                        "ncit:C173278"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -783,7 +783,7 @@
                     "tier": "Mandatory",
                     "description": "The number of chromosomes upon karyotype analysis.",
                     "codes": [
-                        "C177370"
+                        "ncit:C177370"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -793,7 +793,7 @@
                     "tier": "Mandatory",
                     "description": "A molecular or cytogenic abnormality which occurs in either human disease states or disease models.",
                     "codes": [
-                        "C3910"
+                        "ncit:C3910"
                     ],
                     "implementation_notes": "Note: If multiple molecular abnormalities, include one observation per molecular abnormality.",
                     "mappings": ""
@@ -803,7 +803,7 @@
                     "tier": "Mandatory",
                     "description": "One of the bodies in the cell nucleus that is the bearer of genes, has the form of a delicate chromatin filament during interphase, contracts to form a compact cylinder segmented into two arms by the centromere during metaphase and anaphase stages of cell division, and is capable of reproducing its physical and chemical structure through successive cell divisions.",
                     "codes": [
-                        "C13202"
+                        "ncit:C13202"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -813,7 +813,7 @@
                     "tier": "Mandatory",
                     "description": "The gene symbol that represents either a single gene that has a mutation or the gene that comprises the 5' portion of the coding sequence involved in a fusion gene mutation.",
                     "codes": [
-                        "C173595"
+                        "ncit:C173595"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -823,7 +823,7 @@
                     "tier": "Mandatory",
                     "description": "The gene symbol that represents the gene that comprises the 3' portion of the coding sequence for a fusion gene",
                     "codes": [
-                        "C171253"
+                        "ncit:C171253"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -833,7 +833,7 @@
                     "tier": "Mandatory",
                     "description": "A variation in or modification of the molecular sequence of a gene or gene product.",
                     "codes": [
-                        "C97926"
+                        "ncit:C97926"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -843,7 +843,7 @@
                     "tier": "Mandatory",
                     "description": "A variation in the nucleic acid sequence of a specific gene.",
                     "codes": [
-                        "C97927"
+                        "ncit:C97927"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -853,7 +853,7 @@
                     "tier": "Mandatory",
                     "description": "A variation in the sequence of a specific gene product.",
                     "codes": [
-                        "C97928"
+                        "ncit:C97928"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -863,7 +863,7 @@
                     "tier": "Mandatory",
                     "description": "An indicator for whether a molecular analysis procedure was performed and whether the assay detected a molecular abnormality.",
                     "codes": [
-                        "C173596"
+                        "ncit:C173596"
                     ],
                     "implementation_notes": "Note: This variable indicates the result of testing for the molecular abnormality listed in MOLECULAR_ABNORMALITY",
                     "mappings": ""
@@ -873,7 +873,7 @@
                     "tier": "Mandatory",
                     "description": "The ratio of the DNA content or chromosome number in a tumor sample compared to that in a normal sample.",
                     "codes": [
-                        "C86972"
+                        "ncit:C86972"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -883,7 +883,7 @@
                     "tier": "Mandatory",
                     "description": "The finding of the chromosomal translocation analysis.",
                     "codes": [
-                        "C63326"
+                        "ncit:C63326"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -897,7 +897,7 @@
                     "tier": "Mandatory",
                     "description": "Age of subject (in days) at the start of radiation therapy.",
                     "codes": [
-                        "C172695"
+                        "ncit:C172695"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -907,7 +907,7 @@
                     "tier": "Mandatory",
                     "description": "Age of subject (in days) at the end of radiation therapy.",
                     "codes": [
-                        "C172696"
+                        "ncit:C172696"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -917,7 +917,7 @@
                     "tier": "Mandatory",
                     "description": "The anatomic site of the radiation therapy.",
                     "codes": [
-                        "C173281"
+                        "ncit:C173281"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -929,7 +929,7 @@
                     "tier": "Optional",
                     "description": "Age of subject (in days) at the time of stem-cell transplantation.",
                     "codes": [
-                        "C168853"
+                        "ncit:C168853"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -939,7 +939,7 @@
                     "tier": "Optional",
                     "description": "Stem Cell Transplantion Type",
                     "codes": [
-                        "C168864"
+                        "ncit:C168864"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -949,7 +949,7 @@
                     "tier": "Optional",
                     "description": "Stem Cell Transplantion Type",
                     "codes": [
-                        "C168864"
+                        "ncit:C168864"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -959,7 +959,7 @@
                     "tier": "Optional",
                     "description": "Stem Cell Transplant Donor Relationship",
                     "codes": [
-                        "C168870"
+                        "ncit:C168870"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -969,7 +969,7 @@
                     "tier": "Optional",
                     "description": "A process in which blood or tissue samples are analyzed to determine their human leukocyte antigen (HLA) profiles so that transplant materials can be transferred into a patient with the same or similar profile.",
                     "codes": [
-                        "C169009"
+                        "ncit:C169009"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -979,7 +979,7 @@
                     "tier": "Optional",
                     "description": "The number of human leukocyte antigens that were evaluated.",
                     "codes": [
-                        "C173301"
+                        "ncit:C173301"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -989,7 +989,7 @@
                     "tier": "Optional",
                     "description": "The number of human leukocyte antigens that matched between the donor and the recipient.",
                     "codes": [
-                        "C173302"
+                        "ncit:C173302"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -999,7 +999,7 @@
                     "tier": "Optional",
                     "description": "Type of conditioning the subject received prior to stem-cell transplantation.",
                     "codes": [
-                        "C169014"
+                        "ncit:C169014"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1009,7 +1009,7 @@
                     "tier": "Mandatory",
                     "description": "A therapeutic procedure that involves the irradiation of the whole body with ionizing or non-ionizing radiation.",
                     "codes": [
-                        "C15350"
+                        "ncit:C15350"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1021,7 +1021,7 @@
                     "tier": "Optional",
                     "description": "A description of the timing of when the non-protocol therapy was received.",
                     "codes": [
-                        "C175038"
+                        "ncit:C175038"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1031,7 +1031,7 @@
                     "tier": "Optional",
                     "description": "The type of therapy that the patient received outside of the protocol.",
                     "codes": [
-                        "C175041"
+                        "ncit:C175041"
                     ],
                     "implementation_notes": "Note: If multiple non-protocol therapies, include one observation per therapy.",
                     "mappings": ""
@@ -1045,7 +1045,7 @@
                     "tier": "Mandatory",
                     "description": "Age of subject (in days) at assessment of minimal residual disease.",
                     "codes": [
-                        "C168855"
+                        "ncit:C168855"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1055,7 +1055,7 @@
                     "tier": "Mandatory",
                     "description": "Modality used to determine minimal residual disease.",
                     "codes": [
-                        "C168933"
+                        "ncit:C168933"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1065,7 +1065,7 @@
                     "tier": "Mandatory",
                     "description": "The classification, nature or purpose for a flow cytometry assay.",
                     "codes": [
-                        "C173732"
+                        "ncit:C173732"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1075,7 +1075,7 @@
                     "tier": "Mandatory",
                     "description": "An assessment of the minimal residual disease response to therapy.",
                     "codes": [
-                        "C124433"
+                        "ncit:C124433"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1085,7 +1085,7 @@
                     "tier": "Mandatory",
                     "description": "Minimal residual disease value expressed as a percent, fraction or ratio.",
                     "codes": [
-                        "C168951"
+                        "ncit:C168951"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1095,7 +1095,7 @@
                     "tier": "Mandatory",
                     "description": "The unit of the minimal residual disease result.",
                     "codes": [
-                        "C173304"
+                        "ncit:C173304"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1105,7 +1105,7 @@
                     "tier": "Mandatory",
                     "description": "Sensitivity of modality used to determine minimal residual disease.",
                     "codes": [
-                        "C168957"
+                        "ncit:C168957"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1115,7 +1115,7 @@
                     "tier": "Mandatory",
                     "description": "Source of sample used for minimal residual disease assessment.",
                     "codes": [
-                        "C168958"
+                        "ncit:C168958"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1129,7 +1129,7 @@
                     "tier": "Mandatory",
                     "description": "Age of subject (in days) at the onset of the adverse event.",
                     "codes": [
-                        "C172677"
+                        "ncit:C172677"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1139,7 +1139,7 @@
                     "tier": "Mandatory",
                     "description": "The code of the adverse event.",
                     "codes": [
-                        "C173313"
+                        "ncit:C173313"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1149,7 +1149,7 @@
                     "tier": "Mandatory",
                     "description": "The name of the system used to grade the adverse events.",
                     "codes": [
-                        "C168872"
+                        "ncit:C168872"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1159,7 +1159,7 @@
                     "tier": "Mandatory",
                     "description": "The version of the adverse event grading system.",
                     "codes": [
-                        "C173314"
+                        "ncit:C173314"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1169,7 +1169,7 @@
                     "tier": "Mandatory",
                     "description": "A numeric value corresponding to the degree of severity of an adverse event.",
                     "codes": [
-                        "C166200"
+                        "ncit:C166200"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1179,7 +1179,7 @@
                     "tier": "Optional",
                     "description": "A specific identifiable level (defined qualitatively or quantitatively) of probability of adverse event being caused or associated with the product or procedure administration to a patient.",
                     "codes": [
-                        "C41358"
+                        "ncit:C41358"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1189,7 +1189,7 @@
                     "tier": "Optional",
                     "description": "Death of bone tissue in a joint due to temporary or permanent interruption of blood flow.",
                     "codes": [
-                        "C178082"
+                        "ncit:C178082"
                     ],
                     "implementation_notes": "Note: If multiple joints affected, include one observation per joint",
                     "mappings": ""
@@ -1199,7 +1199,7 @@
                     "tier": "Optional",
                     "description": "A finding descriptive of the laterality of the avascular necrosis in the joints.",
                     "codes": [
-                        "C178083"
+                        "ncit:C178083"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1209,7 +1209,7 @@
                     "tier": "Optional",
                     "description": "The method used to determine the diagnosis of the avascular necrosis.",
                     "codes": [
-                        "C178084"
+                        "ncit:C178084"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1219,7 +1219,7 @@
                     "tier": "Optional",
                     "description": "Orthopedic procedures to repair avascular necrosis.",
                     "codes": [
-                        "C178085"
+                        "ncit:C178085"
                     ],
                     "implementation_notes": "Note: If multiple procedures performed, include one observation per procedure",
                     "mappings": ""
@@ -1229,7 +1229,7 @@
                     "tier": "Optional",
                     "description": "The pathogen identified as the agent causing the adverse event.",
                     "codes": [
-                        "C185665"
+                        "ncit:C185665"
                     ],
                     "implementation_notes": "Note: If multiple pathogens involved, include one observation per pathogen.",
                     "mappings": ""
@@ -1239,7 +1239,7 @@
                     "tier": "Optional",
                     "description": "The type of evidence regarding the infection type.",
                     "codes": [
-                        "C178091"
+                        "ncit:C178091"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1251,7 +1251,7 @@
                     "tier": "Mandatory",
                     "description": "Age in Days at Secondary Malignant Neoplasm",
                     "codes": [
-                        "C168860"
+                        "ncit:C168860"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1261,7 +1261,7 @@
                     "tier": "Mandatory",
                     "description": "SMN ICD-O Morphology Code",
                     "codes": [
-                        "C168862"
+                        "ncit:C168862"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
@@ -1271,7 +1271,7 @@
                     "tier": "Mandatory",
                     "description": "SMN ICD-O Topography Code",
                     "codes": [
-                        "C168863"
+                        "ncit:C168863"
                     ],
                     "implementation_notes": "",
                     "mappings": ""
