@@ -11,4 +11,4 @@ Removed concepts:<br>
 None
 
 Modified concepts:<br>
-[aml_v1.1].[Minimal Residual Disease].[MRD_MOLECULAR_MARKERS].[inv(16)(p13q22)] skos:exactMatch [Minimal Residual Disease].[MRD_MOLECULAR_MARKERS].[inv(16)(p13q22) (G2704-G2759)]<br>
+[aml_v1.1].[Minimal Residual Disease].[MRD_MOLECULAR_MARKERS].[inv(16)(p13q22)] skos:exactMatch [aml_v1.2].[Minimal Residual Disease].[MRD_MOLECULAR_MARKERS].[inv(16)(p13q22) (G2704-G2759)]<br>
