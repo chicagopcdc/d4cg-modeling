@@ -1,7 +1,7 @@
 {
     "meta": {
         "name": "aml_v1.2",
-        "timestamp": "20241010",
+        "timestamp": "20241017",
         "sheet_id": "1_KyfeZNsepIxSU0Nzw5Mi8mk1PiKCWlSBjatw0AECQ0"
     },
     "info": {
@@ -3562,7 +3562,7 @@
                                 ""
                             ],
                             "implementation_notes": "",
-                            "mappings": ""
+                            "mappings": "New PV"
                         },
                         "CKIT Mutation - Ex17": {
                             "description": "A molecular genetic abnormality indicating the presence of a mutation in exon 17 of the KIT gene located within 4q11-q12.",
@@ -3978,7 +3978,7 @@
                                 "ncit:C99291"
                             ],
                             "implementation_notes": "",
-                            "mappings": ""
+                            "mappings": "New PV"
                         },
                         "Trisomy 21": {
                             "description": "A chromosomal abnormality consisting of the presence of a third copy of chromosome 21 in somatic cells.",
@@ -3986,7 +3986,7 @@
                                 "ncit:C43224"
                             ],
                             "implementation_notes": "",
-                            "mappings": ""
+                            "mappings": "New PV"
                         },
                         "Trisomy 8": {
                             "description": "A chromosomal abnormality consisting of the presence of a third copy of chromosome 8 in somatic cells.",
@@ -6888,7 +6888,7 @@
                                 ""
                             ],
                             "implementation_notes": "",
-                            "mappings": ""
+                            "mappings": "New PV"
                         },
                         "Unknown": {
                             "description": "",
@@ -7090,7 +7090,7 @@
                                 ""
                             ],
                             "implementation_notes": "t(v;11q23.3)",
-                            "mappings": ""
+                            "mappings": "skos:exactMatch[aml_v1.1].[Minimal Residual Disease].[MRD_MOLECULAR_MARKERS].[inv(16)(p13q22)]"
                         },
                         "inv(3)(q21.3;q26.2)": {
                             "description": "A cytogenetic abnormality that refers to a paracentric inversion involving breakpoints on the long (q23.1 and q26.2) of chromosome 3. It is associated with acute myeloid leukemia.",
@@ -7194,7 +7194,7 @@
                                 ""
                             ],
                             "implementation_notes": "",
-                            "mappings": ""
+                            "mappings": "New PV"
                         },
                         "t(1;11)(q21;q23) / MLL-MLLT11(AF1Q)": {
                             "description": "A cytogenetic abnormality that refers to the translocation of the long arm (q21) of chromosome 1 and the long arm (q23) of chromosome 11. It is associated with KMT2A (MLL)/MLLT11 (AF1Q) fusions, acute myeloid leukemia and some cases of acute lymphoblastic leukemia.",
