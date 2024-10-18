@@ -1,7 +1,7 @@
 {
     "meta": {
         "name": "aml_v1.4",
-        "timestamp": "20241010",
+        "timestamp": "20241018",
         "sheet_id": "1_KyfeZNsepIxSU0Nzw5Mi8mk1PiKCWlSBjatw0AECQ0"
     },
     "info": {
@@ -4082,7 +4082,7 @@
                                 "ncit:C62195"
                             ],
                             "implementation_notes": "",
-                            "mappings": ""
+                            "mappings": "New PD"
                         },
                         "WT1 Mutation": {
                             "description": "A change in the nucleotide sequence of the WT1 gene.",
@@ -7306,7 +7306,7 @@
                                 "ncit:C168759"
                             ],
                             "implementation_notes": "",
-                            "mappings": ""
+                            "mappings": "New PD"
                         },
                         "t(1;22)(RBM15-MKL1)": {
                             "description": "A cytogenetic abnormality that refers to the translocation of the short arm (p13.3) of chromosome 1 and the long arm (q13.1) of chromosome 22. It is associated with RBM15/MRTFA (MKL1) fusions and acute megakaryocytic leukemia.",
@@ -7322,7 +7322,7 @@
                                 "ncit:C168758"
                             ],
                             "implementation_notes": "t(1;22)(p13.3;q13.1)",
-                            "mappings": ""
+                            "mappings": "New PD"
                         },
                         "t(10;11)(p12;q23) / MLL-MLLT10(AF10)": {
                             "description": "",
@@ -7330,7 +7330,7 @@
                                 "ncit:C132102"
                             ],
                             "implementation_notes": "",
-                            "mappings": ""
+                            "mappings": "New PD"
                         },
                         "t(11;15)(p15;q35) / NUP98/JARID1A": {
                             "description": "A cytogenetic abnormality that refers to the translocation of chromosome 11p15 with chromosome 15q35. It results in the formation of NUP98/JARID1A fusion gene. It is associated with the development of acute myeloid leukemia with t(11;15)(p15;q35); NUP98-JARID1A.",
@@ -7354,7 +7354,7 @@
                                 "ncit:C36371"
                             ],
                             "implementation_notes": "",
-                            "mappings": ""
+                            "mappings": "New PD"
                         },
                         "t(11;19)(q23;p13.3) (MLL-ENL)": {
                             "description": "",
@@ -7362,7 +7362,7 @@
                                 "ncit:C36372"
                             ],
                             "implementation_notes": "",
-                            "mappings": ""
+                            "mappings": "New PD"
                         },
                         "t(11;19)(q23;p13) (MLL-ENL)/(MLL-ELL)": {
                             "description": "",
@@ -7370,7 +7370,7 @@
                                 "ncit:C168764"
                             ],
                             "implementation_notes": "",
-                            "mappings": ""
+                            "mappings": "New PD"
                         },
                         "t(15;17)(q24;q21)": {
                             "description": "",
@@ -7378,7 +7378,7 @@
                                 "ncit:C27758"
                             ],
                             "implementation_notes": "",
-                            "mappings": ""
+                            "mappings": "New PD"
                         },
                         "t(16;16)(p13.1;q22)": {
                             "description": "",
@@ -7386,7 +7386,7 @@
                                 "ncit:C27759"
                             ],
                             "implementation_notes": "",
-                            "mappings": ""
+                            "mappings": "New PD"
                         },
                         "t(16;21)(p11;q22) / FUS/ERG": {
                             "description": "A chromosomal translocation involving the FUS gene on chromosome 16p11 and the ERG gene on chromosome 21q22.",
@@ -7490,7 +7490,7 @@
                                 "ncit:C119608"
                             ],
                             "implementation_notes": "",
-                            "mappings": ""
+                            "mappings": "New PD"
                         },
                         "t(9;11)(p22;q23) / MLL-MLLT3(AF9)": {
                             "description": "A cytogenetic abnormality that refers to the translocation of the short arm (p21.3) of chromosome 9 and the long arm (q23.3) of chromosome 11. It is associated with the development of acute myeloid leukemia with the MLLT3-MLL fusion gene transcript.",

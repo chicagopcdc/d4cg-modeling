@@ -1,7 +1,7 @@
 {
     "meta": {
         "name": "aml_v1.3",
-        "timestamp": "20241016",
+        "timestamp": "20241018",
         "sheet_id": "1_KyfeZNsepIxSU0Nzw5Mi8mk1PiKCWlSBjatw0AECQ0"
     },
     "info": {
@@ -148,7 +148,7 @@
                                 ""
                             ],
                             "implementation_notes": "",
-                            "mappings": ""
+                            "mappings": "New PD"
                         },
                         "AMLBFM2019": {
                             "description": "",
@@ -156,7 +156,7 @@
                                 ""
                             ],
                             "implementation_notes": "",
-                            "mappings": ""
+                            "mappings": "New PD"
                         },
                         "AMLBFM2020": {
                             "description": "",
@@ -164,7 +164,7 @@
                                 ""
                             ],
                             "implementation_notes": "",
-                            "mappings": ""
+                            "mappings": "New PD"
                         },
                         "AMLBFM98 Interim 2003": {
                             "description": "",
@@ -172,7 +172,7 @@
                                 ""
                             ],
                             "implementation_notes": "",
-                            "mappings": ""
+                            "mappings": "New PD"
                         },
                         "APL": {
                             "description": "",
@@ -180,7 +180,7 @@
                                 ""
                             ],
                             "implementation_notes": "",
-                            "mappings": ""
+                            "mappings": "New PD"
                         },
                         "NOPHOAML1993": {
                             "description": "",
@@ -188,7 +188,7 @@
                                 ""
                             ],
                             "implementation_notes": "",
-                            "mappings": ""
+                            "mappings": "New PD"
                         },
                         "AAML03P1": {
                             "description": "The identifier AAML03P1, assigned to a study in a clinical trial.",
@@ -1726,7 +1726,7 @@
                                 "ncit:C9288"
                             ],
                             "implementation_notes": "",
-                            "mappings": ""
+                            "mappings": "[aml_v1.2].[Disease Characteristics].[WHO_AML].[AML with t(8;21)(q22;q22.1); RUNX1-RUNX1T1]        skos:exactMatch        [aml_v1.3].[Disease Characteristics].[WHO_AML].[WHO >> Version 4 >> AML with t(8;21)(q22;q22.1); RUNX1-RUNX1T1]"
                         },
                         "WHO >> Version 4 >> AML with inv(16)(p13.1q22) or t(16;16)(p13.1;q22); CBFB-MYH11": {
                             "description": "An acute myeloid leukemia with monocytic and granulocytic differentiation and the presence of a characteristically abnormal eosinophil component in the bone marrow. This type of acute myeloid leukemia has a favorable prognosis. (WHO, 2001)",
@@ -1734,7 +1734,7 @@
                                 "ncit:C9287"
                             ],
                             "implementation_notes": "",
-                            "mappings": ""
+                            "mappings": "[aml_v1.2].[Disease Characteristics].[WHO_AML].[AML with inv(16)(p13.1q22) or t(16;16)(p13.1;q22); CBFB-MYH11] skos:exactMatch [aml_v1.3].[Disease Characteristics].[WHO_AML].[WHO >> Version 4 >> AML with inv(16)(p13.1q22) or t(16;16)(p13.1;q22); CBFB-MYH11]"
                         },
                         "WHO >> Version 4 >> APL with PML-RARA": {
                             "description": "An acute promyelocytic leukemia with PML-RARA fusion occurring in children.",
@@ -1742,7 +1742,7 @@
                                 "ncit:C7968"
                             ],
                             "implementation_notes": "",
-                            "mappings": ""
+                            "mappings": "[aml_v1.2].[Disease Characteristics].[WHO_AML].[APL with PML-RARA] skos:exactMatch [aml_v1.3].[Disease Characteristics].[WHO_AML].[WHO >> Version 4 >> APL with PML-RARA]"
                         },
                         "WHO >> Version 4 >> AML with t(9;11)(p21.3;q23.3); KMT2A-MLLT3": {
                             "description": "An acute myeloid leukemia associated with t(9;11)(p21.3;q23.3) and MLLT3-MLL (KMT2A) fusion protein expression. Morphologically it usually has monocytic features. It may present at any age but it is more commonly seen in children. Patients may present with disseminated intravascular coagulation.",
@@ -1750,7 +1750,7 @@
                                 "ncit:C82403"
                             ],
                             "implementation_notes": "",
-                            "mappings": ""
+                            "mappings": "[aml_v1.2].[Disease Characteristics].[WHO_AML].[AML with t(9;11)(p21.3;q23.3); KMT2A-MLLT3] skos:exactMatch [aml_v1.3].[Disease Characteristics].[WHO_AML].[WHO >> Version 4 >> AML with t(9;11)(p21.3;q23.3); KMT2A-MLLT3]"
                         },
                         "WHO >> Version 5 >> AML with KMT2A Rearrangement": {
                             "description": "An acute myeloid leukemia associated with t(6;9)(p23;q34.1) resulting in DEK-NUP214(CAN) fusion protein expression. It is often associated with multilineage dysplasia and basophilia. It affects both children and adults and it usually has an unfavorable clinical outcome.",
@@ -1758,7 +1758,7 @@
                                 ""
                             ],
                             "implementation_notes": "",
-                            "mappings": ""
+                            "mappings": "New PD"
                         },
                         "WHO >> Version 4 >> AML with t(6;9)(p23;q34.1);DEK-NUP214": {
                             "description": "An acute myeloid leukemia associated with inv(3)(q21.3q26.2) or t(3;3)(q21.3;q26.2) resulting in the reposition of a distal GATA2 enhancer to activate MECOM expression. It may present de novo or follow a myelodysplastic syndrome. The clinical course is aggressive.",
@@ -1766,7 +1766,7 @@
                                 "ncit:C82423"
                             ],
                             "implementation_notes": "",
-                            "mappings": ""
+                            "mappings": "[aml_v1.2].[Disease Characteristics].[WHO_AML].[AML with t(6;9)(p23;q34.1);DEK-NUP214] skos:exactMatch [aml_v1.3].[Disease Characteristics].[WHO_AML].[WHO >> Version 4 >> AML with t(6;9)(p23;q34.1);DEK-NUP214]"
                         },
                         "WHO >> Version 4 >> AML with inv(3)(q21.3q26.2) or t(3;3)(q21.3;q26.2); GATA2, MECOM": {
                             "description": "An acute myeloid leukemia associated with t(1;22)(p13.3;q13.1) resulting in the expression of RBM15-MKL1 fusion protein. It affects infants and children and usually shows megakaryocytic maturation.",
@@ -1774,7 +1774,7 @@
                                 "ncit:C82426"
                             ],
                             "implementation_notes": "",
-                            "mappings": ""
+                            "mappings": "[aml_v1.2].[Disease Characteristics].[WHO_AML].[AML with inv(3)(q21.3q26.2) or t(3;3)(q21.3;q26.2); GATA2, MECOM] skos:exactMatch [aml_v1.3].[Disease Characteristics].[WHO_AML].[WHO >> Version 4 >> AML with inv(3)(q21.3q26.2) or t(3;3)(q21.3;q26.2); GATA2, MECOM]"
                         },
                         "WHO >> Version 4 >> AML (megakaryoblastic) with t(1;22)(p13.3;q13.3); RBM15-MKL1": {
                             "description": "A rare, de novo acute myeloid leukemia in which the blasts harbor BCR-ABL1 translocation in the absence of a history and clinical and laboratory features of chronic myelogenous leukemia.",
@@ -1782,7 +1782,7 @@
                                 "ncit:C82427"
                             ],
                             "implementation_notes": "",
-                            "mappings": ""
+                            "mappings": "[aml_v1.2].[Disease Characteristics].[WHO_AML].[AML (megakaryoblastic) with t(1;22)(p13.3;q13.3); RBM15-MKL1] skos:exactMatch [aml_v1.3].[Disease Characteristics].[WHO_AML].[WHO >> Version 4 >> AML (megakaryoblastic) with t(1;22)(p13.3;q13.3); RBM15-MKL1]"
                         },
                         "WHO >> Version 4 >> Provisional Entity: AML with BCR-ABL1": {
                             "description": "An acute myeloid leukemia with mutation of the nucleophosmin gene. It is usually associated with normal karyotype and frequently has myelomonocytic or monocytic features. It usually responds to induction therapy.",
@@ -1790,7 +1790,7 @@
                                 "ncit:C129785"
                             ],
                             "implementation_notes": "",
-                            "mappings": ""
+                            "mappings": "[aml_v1.2].[Disease Characteristics].[WHO_AML].[Provisional Entity: AML with BCR-ABL1] skos:exactMatch [aml_v1.3].[Disease Characteristics].[WHO_AML].[WHO >> Version 4 >> Provisional Entity: AML with BCR-ABL1]"
                         },
                         "WHO >> Version 4 >> AML with Mutated NPM1": {
                             "description": "An acute myeloid leukemia with double mutations of the CEBPA gene.",
@@ -1798,7 +1798,7 @@
                                 "ncit:C82431"
                             ],
                             "implementation_notes": "",
-                            "mappings": ""
+                            "mappings": "[aml_v1.2].[Disease Characteristics].[WHO_AML].[AML with Mutated NPM1] skos:exactMatch [aml_v1.3].[Disease Characteristics].[WHO_AML].[WHO >> Version 4 >> AML with Mutated NPM1]"
                         },
                         "WHO >> Version 4 >> AML with Biallelic Mutations of CEBPA": {
                             "description": "De novo acute myeloid leukemia with RUNX1 gene mutation, not associated with myelodysplastic syndrome-related cytogenetic abnormalities.",
@@ -1806,7 +1806,7 @@
                                 "ncit:C129782"
                             ],
                             "implementation_notes": "",
-                            "mappings": ""
+                            "mappings": "[aml_v1.2].[Disease Characteristics].[WHO_AML].[AML with Biallelic Mutations of CEBPA] skos:exactMatch [aml_v1.3].[Disease Characteristics].[WHO_AML].[WHO >> Version 4 >> AML with Biallelic Mutations of CEBPA]"
                         },
                         "WHO >> Version 4 >> Provisional Entity: AML with Mutated RUNX1": {
                             "description": "An acute myeloid leukemia with at least 20% blasts in the bone marrow or blood, and either a previous history of myelodysplastic syndrome, multilineage dysplasia or myelodysplastic syndrome-related cytogenetic abnormalities. There is no history of prior cytotoxic therapy for an unrelated disorder, and there is absence of the cytogenetic abnormalities that are present in acute myeloid leukemia with recurrent genetic abnormalities.",
@@ -1814,7 +1814,7 @@
                                 "ncit:C129786"
                             ],
                             "implementation_notes": "",
-                            "mappings": ""
+                            "mappings": "[aml_v1.2].[Disease Characteristics].[WHO_AML].[Provisional Entity: AML with Mutated RUNX1] skos:exactMatch [aml_v1.3].[Disease Characteristics].[WHO_AML].[WHO >> Version 4 >> Provisional Entity: AML with Mutated RUNX1]"
                         },
                         "WHO >> Version 4 >> AML with Myelodysplasia-related Changes": {
                             "description": "Acute myeloid leukemias, myelodysplastic syndromes, and myelodysplastic/myeloproliferative neoplasms arising as a result of the mutagenic effect of chemotherapy agents and/or radiation that are used for the treatment of neoplastic or non-neoplastic disorders.",
@@ -1822,7 +1822,7 @@
                                 "ncit:C7600"
                             ],
                             "implementation_notes": "",
-                            "mappings": ""
+                            "mappings": "[aml_v1.2].[Disease Characteristics].[WHO_AML].[AML with Myelodysplasia-related Changes] skos:exactMatch [aml_v1.3].[Disease Characteristics].[WHO_AML].[WHO >> Version 4 >> AML with Myelodysplasia-related Changes]"
                         },
                         "WHO >> Version 4 >> Therapy-Related Myeloid Neoplasms": {
                             "description": "Acute myeloid leukemias that do not fulfill the criteria for inclusion in the group of acute myeloid leukemias which have recurrent genetic abnormalities or myelodysplastic changes, or are therapy-related. This category includes entities classified according to the French-American-British classification scheme.",
@@ -1830,7 +1830,7 @@
                                 "ncit:C27912"
                             ],
                             "implementation_notes": "",
-                            "mappings": ""
+                            "mappings": "[aml_v1.2].[Disease Characteristics].[WHO_AML].[Therapy-Related Myeloid Neoplasms] skos:exactMatch [aml_v1.3].[Disease Characteristics].[WHO_AML].[WHO >> Version 4 >> Therapy-Related Myeloid Neoplasms]"
                         },
                         "WHO >> Version 4 >> AML with Minimal Differentiation": {
                             "description": "Acute Myeloid Leukemia without Maturation",
@@ -1838,7 +1838,7 @@
                                 "ncit:C8460"
                             ],
                             "implementation_notes": "M0",
-                            "mappings": ""
+                            "mappings": "[aml_v1.2].[Disease Characteristics].[WHO_AML].[AML with Minimal Differentiation] skos:exactMatch [aml_v1.3].[Disease Characteristics].[WHO_AML].[WHO >> Version 4 >> AML with Minimal Differentiation]"
                         },
                         "WHO >> Version 4 >> AML without Maturation": {
                             "description": "Acute Myeloid Leukemia with Maturation",
@@ -1846,7 +1846,7 @@
                                 "ncit:C3249"
                             ],
                             "implementation_notes": "M1",
-                            "mappings": ""
+                            "mappings": "[aml_v1.2].[Disease Characteristics].[WHO_AML].[AML without Maturation] skos:exactMatch [aml_v1.3].[Disease Characteristics].[WHO_AML].[WHO >> Version 4 >> AML without Maturation]"
                         },
                         "WHO >> Version 4 >> AML with Maturation": {
                             "description": "Acute Myelomonocytic Leukemia",
@@ -1854,7 +1854,7 @@
                                 "ncit:C3250"
                             ],
                             "implementation_notes": "M2",
-                            "mappings": ""
+                            "mappings": "[aml_v1.2].[Disease Characteristics].[WHO_AML].[AML with Maturation] skos:exactMatch [aml_v1.3].[Disease Characteristics].[WHO_AML].[WHO >> Version 4 >> AML with Maturation]"
                         },
                         "WHO >> Version 4 >> Acute Myelomonocytic Leukemia": {
                             "description": "Acute myeloid leukemia in which 80% or more of the leukemic cells are of monocytic lineage, including monoblasts, promonocytes, and monocytes. Bleeding disorders are common presenting features.",
@@ -1862,7 +1862,7 @@
                                 "ncit:C7463"
                             ],
                             "implementation_notes": "M4",
-                            "mappings": ""
+                            "mappings": "[aml_v1.2].[Disease Characteristics].[WHO_AML].[Acute Myelomonocytic Leukemia] skos:exactMatch [aml_v1.3].[Disease Characteristics].[WHO_AML].[WHO >> Version 4 >> Acute Myelomonocytic Leukemia]"
                         },
                         "WHO >> Version 4 >> Acute Monoblastic/Monocytic Leukemia": {
                             "description": "Acute erythroid leukemia characterized by the presence of immature erythroid cells in the bone marrow (at least 80% of the cellular component), without evidence of a significant myeloblastic cell population present.",
@@ -1870,7 +1870,7 @@
                                 "ncit:C7318"
                             ],
                             "implementation_notes": "",
-                            "mappings": ""
+                            "mappings": "[aml_v1.2].[Disease Characteristics].[WHO_AML].[Acute Monoblastic/Monocytic Leukemia] skos:exactMatch [aml_v1.3].[Disease Characteristics].[WHO_AML].[WHO >> Version 4 >> Acute Monoblastic/Monocytic Leukemia]"
                         },
                         "WHO >> Version 4 >> Pure Erythroid Leukemia": {
                             "description": "Acute Megakaryoblastic Leukemia",
@@ -1878,7 +1878,7 @@
                                 "ncit:C7467"
                             ],
                             "implementation_notes": "",
-                            "mappings": ""
+                            "mappings": "[aml_v1.2].[Disease Characteristics].[WHO_AML].[Pure Erythroid Leukemia] skos:exactMatch [aml_v1.3].[Disease Characteristics].[WHO_AML].[WHO >> Version 4 >> Pure Erythroid Leukemia]"
                         },
                         "WHO >> Version 4 >> Acute Megakaryoblastic Leukemia": {
                             "description": "A rare acute myeloid leukemia in which the immature cells differentiate towards basophils.",
@@ -1886,7 +1886,7 @@
                                 "ncit:C3170"
                             ],
                             "implementation_notes": "M7",
-                            "mappings": ""
+                            "mappings": "[aml_v1.2].[Disease Characteristics].[WHO_AML].[Acute Megakaryoblastic Leukemia] skos:exactMatch [aml_v1.3].[Disease Characteristics].[WHO_AML].[WHO >> Version 4 >> Acute Megakaryoblastic Leukemia]"
                         },
                         "WHO >> Version 4 >> Acute Basophilic Leukemia": {
                             "description": "An acute myeloid leukemia characterized by bone marrow fibrosis without preexisting primary myelofibrosis.",
@@ -1894,7 +1894,7 @@
                                 "ncit:C3164"
                             ],
                             "implementation_notes": "",
-                            "mappings": ""
+                            "mappings": "[aml_v1.2].[Disease Characteristics].[WHO_AML].[Acute Basophilic Leukemia] skos:exactMatch [aml_v1.3].[Disease Characteristics].[WHO_AML].[WHO >> Version 4 >> Acute Basophilic Leukemia]"
                         },
                         "WHO >> Version 4 >> Acute Panmyelosis with Myelofibrosis": {
                             "description": "A tumor mass composed of myeloblasts or immature myeloid cells. It occurs in extramedullary sites or the bone. (WHO, 2001)",
@@ -1902,7 +1902,7 @@
                                 "ncit:C4344"
                             ],
                             "implementation_notes": "",
-                            "mappings": ""
+                            "mappings": "[aml_v1.2].[Disease Characteristics].[WHO_AML].[Acute Panmyelosis with Myelofibrosis] skos:exactMatch [aml_v1.3].[Disease Characteristics].[WHO_AML].[WHO >> Version 4 >> Acute Panmyelosis with Myelofibrosis]"
                         },
                         "WHO >> Version 4 >> Myeloid Sarcoma": {
                             "description": "Myeloid neoplasms occurring in individuals with Down syndrome. There is an increased risk of acute leukemias in both children and adults with Down syndrome. In particular, the incidence of acute myeloid leukemia in Down syndrome children of less than five years of age is particularly high, it is usually an acute megakaryoblastic leukemia, and is associated with GATA1 gene mutation. This group of disorders also includes the entity transient abnormal myelopoiesis which occurs in neonates and is associated with GATA1 gene mutation.",
@@ -1910,7 +1910,7 @@
                                 "ncit:C3520"
                             ],
                             "implementation_notes": "",
-                            "mappings": ""
+                            "mappings": "[aml_v1.2].[Disease Characteristics].[WHO_AML].[Myeloid Sarcoma] skos:exactMatch [aml_v1.3].[Disease Characteristics].[WHO_AML].[WHO >> Version 4 >> Myeloid Sarcoma]"
                         },
                         "WHO >> Version 4 >> Myeloid Proliferations Related to Down Syndrome": {
                             "description": "A myeloid proliferation occurring in newborns with Down syndrome.  It is clinically and morphologically indistinguishable from acute myeloid leukemia and is associated with GATA1 mutations.  The blasts display morphologic and immunophenotypic features of megakaryocytic lineage.  In the majority of patients the myeloid proliferation undergoes spontaneous remission.",
@@ -1918,7 +1918,7 @@
                                 "ncit:C82338"
                             ],
                             "implementation_notes": "",
-                            "mappings": ""
+                            "mappings": "[aml_v1.2].[Disease Characteristics].[WHO_AML].[Myeloid Proliferations Related to Down Syndrome] skos:exactMatch [aml_v1.3].[Disease Characteristics].[WHO_AML].[WHO >> Version 4 >> Myeloid Proliferations Related to Down Syndrome]"
                         },
                         "WHO >> Version 4 >> Transient Abnormal Myelopoiesis (TAM)": {
                             "description": "Acute myeloid leukemia or myelodysplastic syndrome occurring in children with Down syndrome. The acute myeloid leukemia is usually an acute megakaryoblastic leukemia, and is associated with GATA1 gene mutation.",
@@ -1926,7 +1926,7 @@
                                 "ncit:C82339"
                             ],
                             "implementation_notes": "",
-                            "mappings": ""
+                            "mappings": "[aml_v1.2].[Disease Characteristics].[WHO_AML].[Transient Abnormal Myelopoiesis (TAM)] skos:exactMatch [aml_v1.3].[Disease Characteristics].[WHO_AML].[WHO >> Version 4 >> Transient Abnormal Myelopoiesis (TAM)]"
                         },
                         "WHO >> Version 4 >> Myeloid Leukemia Associated with Down Syndrome": {
                             "description": "Reported as unknown by the data contributor.",
@@ -1934,7 +1934,7 @@
                                 "ncit:C43223"
                             ],
                             "implementation_notes": "",
-                            "mappings": ""
+                            "mappings": "[aml_v1.2].[Disease Characteristics].[WHO_AML].[Myeloid Leukemia Associated with Down Syndrome] skos:exactMatch [aml_v1.3].[Disease Characteristics].[WHO_AML].[WHO >> Version 4 >> Myeloid Leukemia Associated with Down Syndrome]"
                         },
                         "AML, Not Otherwise Specified": {
                             "description": "Acute Myeloid Leukemia with Minimal Differentiation",
@@ -3674,7 +3674,7 @@
                                 ""
                             ],
                             "implementation_notes": "",
-                            "mappings": ""
+                            "mappings": "New PD"
                         },
                         "FLT3 D835N Pathogenic Variant": {
                             "description": "",
@@ -3682,7 +3682,7 @@
                                 ""
                             ],
                             "implementation_notes": "",
-                            "mappings": ""
+                            "mappings": "New PD"
                         },
                         "FLT3 Internal Tandem Duplication": {
                             "description": "A genetic abnormality that arises from duplications of the juxtamembrane portion of the gene and results in constitutive activation of the FLT3 receptor tyrosine kinase protein in early hematopoietic progenitor cells. It is associated with acute myelogenous leukemia where it appears to correlate with a poor prognosis.",
@@ -3762,7 +3762,7 @@
                                 ""
                             ],
                             "implementation_notes": "",
-                            "mappings": ""
+                            "mappings": "New PD"
                         },
                         "MLL-MLLT3 Fusion": {
                             "description": "",
@@ -3770,7 +3770,7 @@
                                 ""
                             ],
                             "implementation_notes": "",
-                            "mappings": ""
+                            "mappings": "New PD"
                         },
                         "Monoallelic CEBPA Gene Mutation": {
                             "description": "The presence of mutations in only one allele of the CEBPA gene.",
@@ -3826,7 +3826,7 @@
                                 ""
                             ],
                             "implementation_notes": "",
-                            "mappings": ""
+                            "mappings": "New PD"
                         },
                         "PTPN11 Mutation": {
                             "description": "Mutation of the protein tyrosine phosphatase, non-receptor type 11 gene. It is seen in cases of juvenile myelomonocytic leukemia.",
@@ -4090,7 +4090,7 @@
                                 "ncit:C17649"
                             ],
                             "implementation_notes": "",
-                            "mappings": ""
+                            "mappings": "New PD"
                         },
                         "Unknown": {
                             "description": "Reported as unknown by the data contributor.",
@@ -4106,7 +4106,7 @@
                                 "ncit:C43234"
                             ],
                             "implementation_notes": "",
-                            "mappings": ""
+                            "mappings": "New PD"
                         }
                     }
                 },

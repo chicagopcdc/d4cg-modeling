@@ -1,7 +1,7 @@
 {
     "meta": {
         "name": "aml_v1.5",
-        "timestamp": "20241010",
+        "timestamp": "20241018",
         "sheet_id": "1_KyfeZNsepIxSU0Nzw5Mi8mk1PiKCWlSBjatw0AECQ0"
     },
     "info": {
@@ -188,7 +188,7 @@
                                 ""
                             ],
                             "implementation_notes": "",
-                            "mappings": "skos:exactMatch [AML].[Subject Characteristics].[STUDY_ID].[AMLBFM2004 Interim]"
+                            "mappings": "[aml_v1.4].[Subject Characteristics].[STUDY_ID].[AMLBFM2004 Interim]  skos:exactMatch [aml_v1.5].[Subject Characteristics].[STUDY_ID].[AML-BFM2004 Interim]"
                         },
                         "AML-BFM2019": {
                             "description": "",
@@ -196,7 +196,7 @@
                                 ""
                             ],
                             "implementation_notes": "",
-                            "mappings": "skos:exactMatch [AML].[Subject Characteristics].[STUDY_ID].[AMLBFM2019]"
+                            "mappings": "[aml_v1.4].[Subject Characteristics].[STUDY_ID].[AMLBFM2019]  skos:exactMatch [aml_v1.5].[Subject Characteristics].[STUDY_ID].[AML-BFM2019]"
                         },
                         "AML-BFM2020": {
                             "description": "",
@@ -204,7 +204,7 @@
                                 ""
                             ],
                             "implementation_notes": "",
-                            "mappings": "skos:exactMatch [AML].[Subject Characteristics].[STUDY_ID].[AMLBFM2020]"
+                            "mappings": "[aml_v1.4].[Subject Characteristics].[STUDY_ID].[AMLBFM2020]  skos:exactMatch [aml_v1.5].[Subject Characteristics].[STUDY_ID].[AML-BFM2020]"
                         },
                         "AML-BFM98 Interim 2003": {
                             "description": "",
@@ -212,7 +212,7 @@
                                 ""
                             ],
                             "implementation_notes": "",
-                            "mappings": "skos:exactMatch [AML].[Subject Characteristics].[STUDY_ID].[AMLBFM98 Interim 2003]"
+                            "mappings": "[aml_v1.4].[Subject Characteristics].[STUDY_ID].[AMLBFM98 Interim 2003]  skos:exactMatch [aml_v1.5].[Subject Characteristics].[STUDY_ID].[AML-BFM98 Interim 2003]"
                         },
                         "APL": {
                             "description": "",
@@ -260,7 +260,7 @@
                                 "ncit:C168939"
                             ],
                             "implementation_notes": "",
-                            "mappings": "skos:exactMatch [AML].[Subject Characteristics].[STUDY_ID].[AMLBFM2004]"
+                            "mappings": "[aml_v1.4].[Subject Characteristics].[STUDY_ID].[AMLBFM2004]  skos:exactMatch [aml_v1.5].[Subject Characteristics].[STUDY_ID].[AML-BFM2004]"
                         },
                         "AML-BFM2012": {
                             "description": "The identifier AMLBFM2012, assigned to a study in an AML clinical trial.",
@@ -268,7 +268,7 @@
                                 "ncit:C173250"
                             ],
                             "implementation_notes": "",
-                            "mappings": "skos:exactMatch [AML].[Subject Characteristics].[STUDY_ID].[AMLBFM2012]"
+                            "mappings": "[aml_v1.4].[Subject Characteristics].[STUDY_ID].[AMLBFM2012]  skos:exactMatch [aml_v1.5].[Subject Characteristics].[STUDY_ID].[AML-BFM2012]"
                         },
                         "AML-BFM Registry2012": {
                             "description": "The identifier AMLBFMRegistry2012, assigned to a study in an AML clinical trial.",
@@ -276,7 +276,7 @@
                                 "ncit:C173251"
                             ],
                             "implementation_notes": "",
-                            "mappings": "skos:exactMatch [AML].[Subject Characteristics].[STUDY_ID].[AMLBFMRegistry2012]"
+                            "mappings": "[aml_v1.4].[Subject Characteristics].[STUDY_ID].[AMLBFMRegistry2012]  skos:exactMatch [aml_v1.5].[Subject Characteristics].[STUDY_ID].[AML-BFM Registry2012]"
                         },
                         "AML-BFM1998": {
                             "description": "The identifier AMLBFM1998, assigned to a study in an AML clinical trial.",
@@ -284,7 +284,7 @@
                                 "ncit:C182032"
                             ],
                             "implementation_notes": "",
-                            "mappings": "skos:exactMatch [AML].[Subject Characteristics].[STUDY_ID].[AMLBFM1998]"
+                            "mappings": "[aml_v1.4].[Subject Characteristics].[STUDY_ID].[AMLBFM1998]  skos:exactMatch [aml_v1.5].[Subject Characteristics].[STUDY_ID].[AML-BFM1998]"
                         },
                         "AML-BFM Registry2017": {
                             "description": "The identifier AMLBFMRegistry2017, assigned to a study in an AML clinical trial.",
@@ -292,7 +292,7 @@
                                 "ncit:C182031"
                             ],
                             "implementation_notes": "",
-                            "mappings": "skos:exactMatch [AML].[Subject Characteristics].[STUDY_ID].[AMLBFMRegistry2017]"
+                            "mappings": "[aml_v1.4].[Subject Characteristics].[STUDY_ID].[AMLBFMRegistry2017]  skos:exactMatch [aml_v1.5].[Subject Characteristics].[STUDY_ID].[AML-BFM Registry2017]"
                         },
                         "SJCRHAML02": {
                             "description": "The identifier SJCRHAML02, assigned to a study in a clinical trial.",
