@@ -1,14 +1,18 @@
 # Release notes for aml_v1.2
 
-Added concepts:<br>
-[Molecular Analysis].[MOLECULAR_ABNORMALITY].[CEBPA Mutation - Mutation Unspecified]<br>
-[Molecular Analysis].[MOLECULAR_ABNORMALITY].[TCF3-PBX1 Fusion]<br>
-[Molecular Analysis].[MOLECULAR_ABNORMALITY].[Trisomy 21]<br>
-[Minimal Residual Disease].[MRD_RESULT_UNIT].[NCN]<br>
-[Minimal Residual Disease].[MRD_MOLECULAR_MARKERS].[RUNX1-RUNXT1 Fusion]<br>
+Added concepts:
+>[Molecular Analysis].[MOLECULAR_ABNORMALITY].[CEBPA Mutation - Mutation Unspecified]
 
-Removed concepts:<br>
-None
+>[Molecular Analysis].[MOLECULAR_ABNORMALITY].[TCF3-PBX1 Fusion]
 
-Modified concepts:<br>
-[aml_v1.1].[Minimal Residual Disease].[MRD_MOLECULAR_MARKERS].[inv(16)(p13q22)] skos:exactMatch [aml_v1.2].[Minimal Residual Disease].[MRD_MOLECULAR_MARKERS].[inv(16)(p13q22) (G2704-G2759)]<br>
+>[Molecular Analysis].[MOLECULAR_ABNORMALITY].[Trisomy 21]
+
+>[Minimal Residual Disease].[MRD_RESULT_UNIT].[NCN]
+
+>[Minimal Residual Disease].[MRD_MOLECULAR_MARKERS].[RUNX1-RUNXT1 Fusion]
+
+Removed concepts:
+>None
+
+Modified concepts:
+>[aml_v1.1].[Minimal Residual Disease].[MRD_MOLECULAR_MARKERS].[inv(16)(p13q22)] skos:exactMatch [aml_v1.2].[Minimal Residual Disease].[MRD_MOLECULAR_MARKERS].[inv(16)(p13q22) (G2704-G2759)]
