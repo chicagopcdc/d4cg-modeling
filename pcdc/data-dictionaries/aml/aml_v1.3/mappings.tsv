@@ -37,4 +37,4 @@ New PD	[aml_v1.3].[Molecular Analysis].[MOLECULAR_ABNORMALITY].[MLL-MLLT3 Fusion
 New PD	[aml_v1.3].[Molecular Analysis].[MOLECULAR_ABNORMALITY].[PML-RARA Fusion]
 New PD	[aml_v1.3].[Molecular Analysis].[MOLECULAR_ABNORMALITY].[Other]
 New PD	[aml_v1.3].[Molecular Analysis].[MOLECULAR_ABNORMALITY].[Not Reported]
-New PD	[aml_v1.3].[Disease Characteristics].[FAB_TYPE].[Unknown]
+Deprecated PD	[aml_v1.3].[Disease Characteristics].[FAB_TYPE].[Unknown]
