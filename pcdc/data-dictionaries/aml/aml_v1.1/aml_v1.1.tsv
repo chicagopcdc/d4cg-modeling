@@ -480,7 +480,7 @@ PD						CEBPA Gene Mutation	Mutation of the CEBPA gene encoding CCAAT/enhancer b
 PD						CKIT Mutation - Ex17	A molecular genetic abnormality indicating the presence of a mutation in exon 17 of the KIT gene located within 4q11-q12.	ncit:C116396		
 PD						CKIT Mutation - Ex8	A molecular genetic abnormality indicating the presence of a mutation in exon 8 of the KIT gene located within 4q11-q12.	ncit:C128660	t(9;11)(p21.3;q23.3)	
 PD						CKIT Mutation - Unspecified	A molecular genetic abnormality that refers to mutation of the c-kit (CD117) proto-oncogene. It is associated with the development of gastrointestinal stromal tumor and gastrointestinal autonomic nerve tumor. It has also been described in acute myeloid leukemias, dysgerminomas, and seminomas.	ncit:C39712		
-PD						del(13q)	A cytogenetic abnormality that refers to the loss of all or part of the long arm of chromosome 13 (13q).	ncit:C36497		New PV
+PD						del(13q)	A cytogenetic abnormality that refers to the loss of all or part of the long arm of chromosome 13 (13q).	ncit:C36497		New PD
 PD						del(13q)(13q14-21)	A cytogenetic abnormality that refers to deletion of chromosome bands 14-21 on the long arm of chromosome 13.	ncit:C168770		
 PD						del(17p)	A cytogenetic abnormality that refers to the loss of all or part of the short arm of chromosome 17 (17p).	ncit:C36499		
 PD						del(5q)(5q31-q32)	A cytogenetic abnormality that refers to deletion of chromosome bands 31-32 on the long arm of chromosome 5.	ncit:C168769		
@@ -515,7 +515,7 @@ PD						t(15;17)(q24;q21)	A chromosomal translocation associated with creation o
 PD						t(16;16)(p13.1;q22)	A chromosomal translocation that involves chromosome 16. It is often associated with the development of acute myeloid leukemia CBFB-MYH11, acute myelomonocytic leukemia with abnormal eosinophils, and granulocytic sarcoma.	ncit:C27759		
 PD						t(16;21)(p11;q22) / FUS/ERG	A chromosomal translocation involving the FUS gene on chromosome 16p11 and the ERG gene on chromosome 21q22.	ncit:C36616		
 PD						t(16;21)(q24;q22) / RUNX1-CBFA2T3	A cytogenetic abnormality that refers to the translocation of the long arm (q24) of chromosome 16 and the long arm (q22) of chromosome 22. It is associated with RUNX1/CBFA2T3 fusions, myelodysplastic syndromes and acute myeloid leukemia.	ncit:C168773		
-PD						t(8;21)(q22;q22) RUNX1/ETO				New PV
+PD						t(8;21)(q22;q22) RUNX1/ETO				New PD
 PD						t(2;12)	A cytogenetic abnormality that involves a translocation between chromosomes 2 and 12.	ncit:C173543		
 PD						t(3;12)(q23;p12.3) / ETV6/EVI1	A cytogenetic abnormality that refers to the translocation of the long arm (q23) of chromosome 3 and the shot arm (p12.3) of chromosome 12. It is associated with ETV6/MECOM (EVI1) fusions, myeloproliferative disorders, myelodysplastic syndromes and acute myelogenous leukemia.	ncit:C168766		
 PD						t(3;3)(q21;q26.2)	A cytogenetic abnormality that refers to the translocation where both breakpoints are on the long arm (q23.1 and q26.2) of chromosome 3. It is associated with acute myeloid leukemia.	ncit:C36406		
@@ -543,8 +543,8 @@ PD						Mutation	Any transmissible change in the genetic material of an organism
 PD						Single Nucleotide Variant	A variation of a single nucleotide at a specific location of the genome due to base substitution, which is found at any frequency in the population.	ncit:C164674		
 PD						Copy Number Alteration	Variation in the number of copies of a particular sequence within the genetic material of an individual. Large-scale copy number polymorphisms are common and widely distributed in the human genome.	ncit:C40207		
 PD						Rearrangement	Any change in the structure of one or more chromosomes.	ncit:C36541		
-PD						Gain	A cytogenetic abnormality that refers to gain of an entire chromosome, a chromosome arm or a chromosomal band.	ncit:C36438		New PV
-PD						Insertion	A chromosomal rearrangement in which a segment a segment of DNA is added internally to a chromosome.	ncit:C6828		New PV
+PD						Gain	A cytogenetic abnormality that refers to gain of an entire chromosome, a chromosome arm or a chromosomal band.	ncit:C36438		New PD
+PD						Insertion	A chromosomal rearrangement in which a segment a segment of DNA is added internally to a chromosome.	ncit:C6828		New PD
 PD						Deletion	Any rearrangement to the genomic content that results in the loss of one or more nucleotides of DNA. Deletions are generally irreversible rearrangements. They may alter the reading frame of a gene, or may result in loss of large chromosomal regions.	ncit:C19296		
 PD						Other	Different than the one(s) previously specified or mentioned.	ncit:C17649		
 PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998		
