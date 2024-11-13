@@ -1,6 +1,6 @@
-# Release notes for nbl_v3.0
+# Release notes for nbl_v1.0
 
-This version was used for the initial release of NBL data into the PCDC, which came from the following studies:
+This version was adapted from the INRGdb data elements (included here as "nbl_legacy") and was used for the initial release of NBL data into the PCDC. This data came from the following studies:
 
 |Data Contributor|Study|
 |---|---|
