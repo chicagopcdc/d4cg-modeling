@@ -1,0 +1,6 @@
+New VD [gct_v1.2].[Subject Characteristics].[EFS_CENSOR_STATUS]
+New PD [gct_v1.2].[Subject Characteristics].[EFS_CENSOR_STATUS].[Censored]
+New PD [gct_v1.2].[Subject Characteristics].[EFS_CENSOR_STATUS].[Not Censored]
+New PD [gct_v1.2].[Subject Characteristics].[EFS_CENSOR_STATUS].[Unknown]
+New PD [gct_v1.2].[Subject Characteristics].[EFS_CENSOR_STATUS].[Not Reported]
+New VD [gct_v1.2].[Subject Characteristics].[AGE_AT_CENSOR_STATUS]
