@@ -8,7 +8,6 @@
         "title": "Monogenic Diabetes (MD) Data Dictionary",
         "name": "md_v1.0",
         "release_notes": "https://github.com/chicagopcdc/d4cg-modeling/tree/main/predict/md_v1.0",
-        "parent_data_model": "pcdc_v1.8",
         "license": "Creative Commons Attribution-NonCommercial 4.0 International License (https://creativecommons.org/licenses/by-nc/4.0/)",
         "wiki": "",
         "consortium_info": "",
