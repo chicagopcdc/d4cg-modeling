@@ -1,0 +1,439 @@
+INFO	Title	Non-rhabdomyosarcoma Soft Tissue Sarcomas (NRSTS) Data Dictionary									
+INFO	Name	nrsts_v1.0									
+INFO	Release Notes	https://github.com/chicagopcdc/d4cg-modeling/tree/main/pcdc/data-dictionaries/nrsts/nrsts_v1.0									
+INFO	Parent Data Model	pcdc_v1.8									
+INFO	License	Creative Commons Attribution-NonCommercial 4.0 International License (https://creativecommons.org/licenses/by-nc/4.0/)									
+INFO	D4CG Data Modeling Wiki	https://docs.pedscommons.org/									
+INFO	Disease Consortium Information	https://commons.cri.uchicago.edu/pcdc/									
+INFO	Description	Non-rhabdomyosarcoma Soft Tissue Sarcomas (NRSTS) Data Dictionary									
+INFO	Total Variables	59									
+											
+RowType	VariableName	DataType	Tier	VariableDescription	VariableCode	PermissibleValue	ValueDescription	ValueCode	ImplementationNotes	Mappings	
+											
+DD	Protocol										
+TD	Subject Identifier										
+TG	Will be included in every table										
+VD	PCDC_SUBJECT_ID	String		PCDC Subject Identifier	C69256	_undefined_	_undefined_	_undefined_			
+											
+											
+DD	Protocol										
+TD	Subject Characteristics										
+TG	One row per subject per study										
+VD	HONEST_BROKER_SUBJECT_ID	String		Honest Broker Subject ID		_undefined_	_undefined_	_undefined_			
+VD	DATA_CONTRIBUTOR_ID	Code		Data Contributor Identifier		_undefined_	_undefined_	_undefined_			
+VD	STUDY_ID	Code		Study Identifier		_undefined_	_undefined_	_undefined_			
+VD	CENSOR_STATUS	Code		Censor Status		_undefined_	_undefined_	_undefined_			
+PD						Subject is censored (i.e. has had no events(s))					
+PD						Subject has had one or more events					
+PD						Unknown					
+VD	TREATMENT_ARM	Code		Assigned Treatment Arm by Intention-To-Treat		_undefined_	_undefined_	_undefined_			
+											
+											
+DD	Protocol										
+TD	Disease Phase Timing										
+TG	One row per subject per disease phase										
+VD	DISEASE_PHASE	Code		Disease Phase		_undefined_	_undefined_	_undefined_		skos:exactMatch [nrsts_v1.0].[EVENT_TYPE]	
+PD						Initial Diagnosis			Note: Disease phase could be "Initial Diagnosis" phase, "Relapse" phase, etc...		
+PD						Relapse					
+PD						Progression					
+VD	DISEASE_PHASE_NUMBER	Number		Disease Phase Number		_undefined_	_undefined_	_undefined_			
+VD	AGE_AT_DISEASE_PHASE	Number		Age in Days at Disease Phase		_undefined_	_undefined_	_undefined_		skos:relatedMatch [nrsts_v1.0].[AGE_AT_DISEASE_PHASE] | skos:relatedMatch [nrsts_v1.0].[AGE_AT_EVENT]	
+VD	AGE_IMPUTED	Code		Year at Disease Phase		_undefined_	_undefined_	_undefined_			
+VD	YEAR_AT_DISEASE_PHASE	Number		Year at Disease Phase		_undefined_	_undefined_	_undefined_		skos:exactMatch [nrsts_v1.0].[YEAR_AT_DISEASE_PHASE]	
+											
+											
+DD	Protocol										
+TD	Course Timing										
+TG	One row per subject per course										
+VD	COURSE	Code		Protocol Treatment Course		_undefined_	_undefined_	_undefined_			
+PD						Prephase					
+PD						Induction					
+PD						Intensification					
+PD						Consolidation					
+PD						Maintenance					
+VD	COURSE_NUMBER	Number		Course Number		_undefined_	_undefined_	_undefined_			
+VD	AGE_AT_COURSE_START	Number		Age in Days at Course Start		_undefined_	_undefined_	_undefined_			
+VD	AGE_AT_COURSE_END	Number		Age in Days at Course End		_undefined_	_undefined_	_undefined_			
+											
+											
+DD	Demographics										
+TD	Demographics										
+TG	One row per subject										
+VD	SEX	Code		Sex		_undefined_	_undefined_	_undefined_		skos:exactMatch [nrsts_v1.0].[SEX]	
+PD						Male					
+PD						Female					
+PD						Unknown					
+VD	RACE	Code		Race		_undefined_	_undefined_	_undefined_		skos:exactMatch [nrsts_v1.0].[RACE]	
+PD						American Indian or Alaska Native					
+PD						Asian					
+PD						Black or African American					
+PD						Multiracial					
+PD						Native Hawaiian or Other Pacific Islander					
+PD						White					
+PD						Other					
+PD						Unknown					
+PD						Not Reported					
+VD	ETHNICITY	Code		Ethnicity		_undefined_	_undefined_	_undefined_		skos:exactMatch [nrsts_v1.0].[ETHNICITY]	
+PD						Hispanic or Latino					
+PD						Not Hispanic or Latino					
+PD						Unknown					
+PD						Not Reported					
+											
+											
+DD	Demographics										
+TD	Medical History										
+TG	One row per subject per pre-existing conditions										
+VD	MEDICAL_HISTORY	Code		Medical History		_undefined_	_undefined_	_undefined_		skos:exactMatch [nrsts_v1.0].[PREDISPOSITION_SITUATIONS]	
+PD						APC					
+PD						Costello					
+PD						DICER1					
+PD						Li-Fraumeni					
+PD						NF-1					
+PD						RB1					
+PD						Secondary Malignancy					
+PD						Other					
+											
+											
+DD	Demographics										
+TD	Survival Characteristics										
+TG	One row per subject per cause of death, per treatment type, per cause of death detail										
+VD	AGE_AT_LKSS	Number		Age in Days at Last Known Survival		_undefined_	_undefined_	_undefined_		skos:exactMatch [nrsts_v1.0].[AGE_AT_DEATH]	
+VD	LKSS	Code		Last Known Survival Status		_undefined_	_undefined_	_undefined_		skos:exactMatch [nrsts_v1.0].[OVERALL_SURVIVAL]	
+PD						Alive					
+PD						Dead					
+PD						Unknown					
+VD	CAUSE_OF_DEATH	Code		Cause of Death		_undefined_	_undefined_	_undefined_		skos:exactMatch [nrsts_v1.0].[CAUSE_OF_DEATH]	
+PD						Disease Progression			Note: If multiple causes of death, include one observation per cause of death. There can only be one record where CAUSE_OF_DEATH_RANKING=Primary.		
+PD						Treatment-Related Mortality					
+PD						Secondary Malignancy					
+PD						Other					
+											
+											
+DD	Disease Attributes										
+TD	Tumor Assessment										
+TG	One row per subject per tumor assessment per tumor site										
+VD	AGE_AT_TUMOR_ASSESSMENT	Number		Age in Days at Tumor Assessment		_undefined_	_undefined_	_undefined_		skos:exactMatch [nrsts_v1.0].[AGE_AT_EVENT]	
+VD	TUMOR_CLASSIFICATION	Code		Tumor Classification		_undefined_	_undefined_	_undefined_		skos:relatedMatch [nrsts_v1.0].[TUMOR_SITE_SPECIFIC] | skos:relatedMatch [nrsts_v1.0].[METASTATIC_SITE]	
+PD						Primary					
+PD						Metastatic					
+VD	TUMOR_SITE	Code		Tumor Site		_undefined_	_undefined_	_undefined_		skos:relatedMatch [nrsts_v1.0].[TUMOR_SITE_SPECIFIC] | skos:relatedMatch [nrsts_v1.0].[METASTATIC_SITE] | skos:relatedMatch [nrsts_v1.0].[RELAPSE_METASTATIC_SITE]	
+PD						Head			Note: If there were multiple primary sites, include one observation per primary site.		
+PD						Neck					
+PD						Chest Wall					
+PD						Abdominal Wall					
+PD						Breast					
+PD						Intrathoracic					
+PD						Intraperitoneal					
+PD						Retroperitoneal					
+PD						Paraspinal					
+PD						Pelvis					
+PD						Urogenital					
+PD						Perineum					
+PD						Shoulder					
+PD						Upper Arm					
+PD						Lower Arm					
+PD						Hand					
+PD						Hip					
+PD						Thigh					
+PD						Leg					
+PD						Foot					
+PD						Lung					
+PD						Liver					
+PD						Bone					
+PD						Bone Marrow					
+PD						Distant Nodes					
+PD						Brain/Leptomeninges					
+PD						Pleura					
+PD						Peritoneum					
+PD						Other					
+PD						Unknown					
+PD						Not Reported					
+VD	TUMOR_SITE_OTHER	String		Tumor Site Other		_undefined_	_undefined_	_undefined_			
+VD	LONGEST_DIAM_DIM1	Number		Longest Diameter of Tumor Dimension 1 (cm)		_undefined_	_undefined_	_undefined_		skos:exactMatch [nrsts_v1.0].[TUMOR_SIZE_DIM_1]	
+VD	LONGEST_DIAM_DIM2	Number		Longest Diameter of Tumor Dimension 2 (cm)		_undefined_	_undefined_	_undefined_		skos:exactMatch [nrsts_v1.0].[TUMOR_SIZE_DIM_2]	
+VD	LONGEST_DIAM_DIM3	Number		Longest Diameter of Tumor Dimension 3 (cm)		_undefined_	_undefined_	_undefined_		skos:exactMatch [nrsts_v1.0].[TUMOR_SIZE_DIM_3]	
+VD	TUMOR_SIZE	Code		Tumor Size		_undefined_	_undefined_	_undefined_		skos:exactMatch [nrsts_v1.0].[TUMOR_SIZE_CATEGORY]	
+PD						<=5 cm					
+PD						>5 cm					
+PD						Unknown					
+VD	INVASIVENESS	Code		Tumor Invasiveness		_undefined_	_undefined_	_undefined_		skos:exactMatch [nrsts_v1.0].[INVASIVENESS]	
+PD						No					
+PD						Yes					
+PD						Unknown					
+VD	DEPTH	Code		Tumor Depth		_undefined_	_undefined_	_undefined_		skos:exactMatch [nrsts_v1.0].[DEPTH]	
+PD						Superficial					
+PD						Deep					
+PD						Unknown					
+											
+											
+DD	Disease Attributes										
+TD	Histology										
+TG	One row per subject per histologic assessment										
+VD	AGE_AT_HIST_ASSESSMENT	Number		Age in Days at Histologic Assessment		_undefined_	_undefined_	_undefined_			
+VD	HISTOLOGY	Code		Histology		_undefined_	_undefined_	_undefined_		skos:exactMatch [nrsts_v1.0].[HISTOLOGY]	
+PD						Atypical lipomatous tumour		icdo:8850/1	Note: If multiple histological findings, include one observation per histological finding.		
+PD						Well differentiated liposarcoma		icdo:8850/3			
+PD						Dedifferentiated liposarcoma		icdo:8858/3			
+PD						Myxoid liposarcoma		icdo:8852/3			
+PD						Pleomorphic liposarcoma		icdo:8854/3			
+PD						Liposarcoma, not otherwise specified		icdo:8850/3			
+PD						Palmar/plantar fibromatosis		icdo:8813/1			
+PD						Desmoid-type fibromatosis		icdo:8821/1			
+PD						Lipofibromatosis		icdo:8851/1			
+PD						Giant cell fibroblastoma		icdo:8834/1			
+PD						Dermatofibrosarcoma protuberans		icdo:8832/1			
+PD						Fibrosarcomatous dermatofibrosarcoma protuberans		icdo:8832/3			
+PD						Pigmented dermatofibrosarcoma protuberans		icdo:8833/1			
+PD						Solitary fibrous tumour		icdo:8815/1			
+PD						Solitary fibrous tumour, malignant		icdo:8815/3			
+PD						Inflammatory myofibroblastic tumour		icdo:8825/1			
+PD						Low-grade myofibroblastic sarcoma		icdo:8825/3			
+PD						Myxoinflammatory fibroblastic sarcoma/Atypical myxoinflammatory fibroblastic tumour		icdo:8811/1			
+PD						Infantile fibrosarcoma		icdo:8814/3			
+PD						Adult fibrosarcoma		icdo:8810/3			
+PD						Myxofibrosarcoma		icdo:8811/3			
+PD						Low-grade fibromyxoid sarcoma		icdo:8840/3			
+PD						Sclerosing epithelioid fibrosarcoma		icdo:8840/3			
+PD						Tenosynovial giant cell tumour localized type		icdo:9252/0			
+PD						Tenosynovial giant cell tumour diffuse type		icdo:9252/1			
+PD						Tenosynovial giant cell tumour malignant		icdo:9252/3			
+PD						Plexiform fibrohistiocytic tumour		icdo:8835/1			
+PD						Giant cell tumour of soft tissues		icdo:9251/1			
+PD						Leiomyosarcoma (excluding skin)		icdo:8890/3			
+PD						Glomus tumour (and variants)		icdo:8711/0			
+PD						Glomangiomatosis		icdo:8711/1			
+PD						Malignant glomus tumour		icdo:8711/3			
+PD						Kaposiform haemangioendothelioma		icdo:9130/1			
+PD						Retiform haemangioendothelioma		icdo:9136/1			
+PD						Papillary intralymphatic angioendothelioma		icdo:9135/1			
+PD						Composite haemangioendothelioma		icdo:9136/1			
+PD						Pseudomyogenic (epithelioid sarcoma-like) haemangioendothelioma		icdo:9136/1			
+PD						Kaposi sarcoma		icdo:9140/3			
+PD						Epithelioid haemangioendothelioma		icdo:9133/3			
+PD						Angiosarcoma of soft tissue		icdo:9120/3			
+PD						Soft tissue chondroma		icdo:9220/0			
+PD						Extraskeletal mesenchymal chondrosarcoma		icdo:9240/3			
+PD						Extraskeletal osteosarcoma		icdo:9180/3			
+PD						Gastrointestinal stromal tumour, uncertain malignant potential		icdo:8936/1			
+PD						Gastrointestinal stromal tumour, malignant		icdo:8936/3			
+PD						Malignant peripheral nerve sheath tumor		icdo:9540/3			
+PD						Epithelioid malignant peripheral nerve sheath tumor		icdo:9542/3			
+PD						Malignant Triton tumour		icdo:9561/3			
+PD						Malignant granular cell tumour		icdo:9580/3			
+PD						Ectomesenchymoma		icdo:8921/3			
+PD						Haemosiderotic fibrolipomatous tumour		icdo:8811/1			
+PD						Atypical fibromyxanthoma		icdo:8830/1			
+PD						Angiomatoid fibrous histiocytoma		icdo:8836/1			
+PD						Ossifying fibromyxoid tumour		icdo:8842/0			
+PD						Ossifying fibromyxoid tumour, malignant		icdo:8842/3			
+PD						Mixed tumour NOS		icdo:8940/0			
+PD						Mixed tumour NOS, malignant		icdo:8940/3			
+PD						Myoepithelioma		icdo:8982/0			
+PD						Myoepithelioma carcinoma		icdo:8982/3			
+PD						Phosphaturic mesenchymal tumour, benign		icdo:8990/0			
+PD						Phosphaturic mesenchymal tumour, malignant		icdo:8990/3			
+PD						Synovial sarcoma NOS		icdo:9040/3			
+PD						Synovial sarcoma, spindle cell		icdo:9041/3			
+PD						Synovial sarcoma, biphasic		icdo:9043/3			
+PD						Epithelioid sarcoma		icdo:8804/3			
+PD						Alveolar soft-part sarcoma		icdo:9581/3			
+PD						Clear cell sarcoma of soft tissue		icdo:9044/3			
+PD						Extraskeletal myxoid chondrosarcoma		icdo:9231/3			
+PD						Desmoplastic small round cell tumour		icdo:8806/3			
+PD						Extra-renal rhabdoid tumor		icdo:8963/3			
+PD						PEComa NOS, benign		icdo:8714/0			
+PD						PEComa NOS, malignant		icdo:8714/3			
+PD						Intimal sarcoma		icdo:9137/3			
+PD						Undifferentiated spindle cell sarcoma		icdo:8801/3			
+PD						Undifferentiated pleomorphic sarcoma		icdo:8802/3			
+PD						Undifferentiated round cell sarcoma		icdo:8803/3			
+PD						Undifferentiated epithelioid sarcoma		icdo:8804/3			
+PD						Undifferentiated sarcoma NOS		icdo:8805/3			
+PD						Other					
+VD	HISTOLOGY_OTHER	String		Histology Other		_undefined_	_undefined_	_undefined_		skos:exactMatch [nrsts_v1.0].[HISTOLOGY_OTHER]	
+VD	HISTOLOGY_GRADE	Code		Histology Grade		_undefined_	_undefined_	_undefined_		skos:exactMatch [nrsts_v1.0].[HISTOLOGY_GRADE]	
+PD						FNCLCC Sarcoma Grade GX			grade cannot be assessed		
+PD						FNCLCC Sarcoma Grade 1					
+PD						FNCLCC Sarcoma Grade 2					
+PD						FNCLCC Sarcoma Grade 3					
+PD						Unknown					
+											
+											
+DD	Testing										
+TD	Molecular Analysis										
+TG	One row per subject per molecular analysis method per molecular abnormality										
+VD	AGE_AT_MOLECULAR_ANALYSIS	Number		Age in Days at Molecular Analysis		_undefined_	_undefined_	_undefined_			
+VD	MITOSES	Code		Mitotic Count		_undefined_	_undefined_	_undefined_		skos:exactMatch [nrsts_v1.0].[MITOSES]	
+PD						Score 1: 0-9 Mitoses per 10 HPF					
+PD						Score 2: 10-19 Mitoses per 10 HPF					
+PD						Score 3: > 19 Mitoses per 10 HPF					
+PD						Unknown					
+VD	MOLECULAR_ABNORMALITY	Code		Molecular Abnormality		_undefined_	_undefined_	_undefined_		skos:exactMatch [nrsts_v1.0].[FUSION_STATUS]	
+PD						FOXO1 Rearranged			Note: If multiple molecular abnormalities, include one observation per molecular abnormality.		
+PD						EWSR1 Rearranged					
+PD						SMARCB1 Deleted/Mutated					
+PD						ETV6 Rearranged					
+PD						ALK Rearranged					
+PD						SSX-SS18					
+PD						CIC-DUX4					
+PD						BCOR-CCNB3					
+PD						EWSR1-ETV1/4					
+PD						FUS-CREB3L2					
+PD						EWSR1-ATF1					
+PD						EWSR1-CREB1					
+PD						EWSR1-PBX1/ZNF44/POU5F1					
+PD						TGFBR3-MGEA5					
+PD						NTRK Rearranged					
+PD						ROS1 Rearranged					
+PD						VGLLA2 Rearranged					
+PD						ASPSCR1-TFE3					
+PD						BCOR ITT Rearranged					
+PD						Other					
+VD	MOLECULAR_ABNORMALITY_OTHER	String		Molecular Abnormality Other		_undefined_	_undefined_	_undefined_		skos:exactMatch [nrsts_v1.0].[FUSION_STATUS_OTHER]	
+VD	CYTODIFFERENTIATION	Code		Cytodifferentiation Score		_undefined_	_undefined_	_undefined_		skos:exactMatch [nrsts_v1.0].[CYTODIFFERENTIATION]	
+PD						1					
+PD						2					
+PD						3					
+											
+											
+DD	Treatment										
+TD	Biopsy/Surgical Procedures										
+TG	One record per subject per biopsy/surgical procedure										
+VD	AGE_AT_SURGERY	Number		Age in Days of Procedure		_undefined_	_undefined_	_undefined_			
+VD	TUMOR_CLASSIFICATION	Code		Tumor Classification		_undefined_	_undefined_	_undefined_		skos:relatedMatch [nrsts_v1.0].[SURGERY_BIOPSY_NODES] | skos:relatedMatch [nrsts_v1.0].[TUMOR_EXTENT]	
+PD						Primary			distant sites?		
+PD						Regional Nodes					
+PD						Metastatic					
+VD	PROCEDURE_SITE	Code		Procedure Site		_undefined_	_undefined_	_undefined_			
+PD						Head					
+PD						Neck					
+PD						Chest Wall					
+PD						Abdominal Wall					
+PD						Breast					
+PD						Intrathoracic					
+PD						Intraperitoneal					
+PD						Retroperitoneal					
+PD						Paraspinal					
+PD						Pelvis					
+PD						Urogenital					
+PD						Perineum					
+PD						Shoulder					
+PD						Upper Arm					
+PD						Lower Arm					
+PD						Hand					
+PD						Hip					
+PD						Thigh					
+PD						Leg					
+PD						Foot					
+PD						Lung					
+PD						Liver					
+PD						Bone					
+PD						Bone Marrow					
+PD						Distant Nodes					
+PD						Brain/Leptomeninges					
+PD						Pleura					
+PD						Peritoneum					
+PD						Other					
+PD						Unknown					
+PD						Not Reported					
+VD	PROCEDURE_TYPE	Code		Procedure Type		_undefined_	_undefined_	_undefined_		skos:relatedMatch [nrsts_v1.0].[DELAYED_SURGERY_EXTENT] | skos:relatedMatch [nrsts_v1.0].[INITIAL_SURGERY_EXTENT]	
+PD						Biopsy					
+PD						Surgery					
+VD	MARGINS	Code		Margins		_undefined_	_undefined_	_undefined_		skos:relatedMatch [nrsts_v1.0].[INITIAL_SURGERY_EXTENT] | skos:relatedMatch [nrsts_v1.0].[DELAYED_SURGERY_EXTENT]	
+PD						R0 - Complete Resection, Negative					
+PD						R1 - Complete Resection, Positive					
+PD						R2 - Gross Residual Disease					
+PD						Unknown					
+PD						Not Reported					
+											
+											
+DD	Treatment										
+TD	Radiation Therapy										
+TG	One row per subject per radiation therapy administration										
+VD	AGE_AT_RT	Number		Age in Days at Start of Radiation Therapy		_undefined_	_undefined_	_undefined_		skos:exactMatch [nrsts_v1.0].[RT_TIMING]	
+VD	TUMOR_CLASSIFICATION	Code		Tumor Classification		_undefined_	_undefined_	_undefined_		skos:relatedMatch [nrsts_v1.0].[RT_PRIMARY] | skos:relatedMatch [nrsts_v1.0].[RT_NODES]	
+PD						Primary			distant sites?		
+PD						Regional Nodes					
+PD						Metastatic					
+VD	RT_SITE	Code		Radiation Therapy Site		_undefined_	_undefined_	_undefined_			
+PD						Head					
+PD						Neck					
+PD						Chest Wall					
+PD						Abdominal Wall					
+PD						Breast					
+PD						Intrathoracic					
+PD						Intraperitoneal					
+PD						Retroperitoneal					
+PD						Paraspinal					
+PD						Pelvis					
+PD						Urogenital					
+PD						Perineum					
+PD						Shoulder					
+PD						Upper Arm					
+PD						Lower Arm					
+PD						Hand					
+PD						Hip					
+PD						Thigh					
+PD						Leg					
+PD						Foot					
+PD						Lung					
+PD						Liver					
+PD						Bone					
+PD						Bone Marrow					
+PD						Distant Nodes					
+PD						Brain/Leptomeninges					
+PD						Pleura					
+PD						Peritoneum					
+PD						Other					
+PD						Unknown					
+PD						Not Reported					
+VD	ENERGY_TYPE	Code		Particles and Energy Type		_undefined_	_undefined_	_undefined_		skos:exactMatch [nrsts_v1.0].[RT_TECHNIQUES]	
+PD						Protons					
+PD						Photon					
+PD						Brachytherapy					
+PD						Unknown					
+PD						Other					
+VD	RT_DOSE	Number		Total Radiation Dose		_undefined_	_undefined_	_undefined_		skos:relatedMatch [nrsts_v1.0].[RT_PRIMARY_DOSAGE] | skos:relatedMatch [nrsts_v1.0].[RT_NODES_DOSAGE]	
+VD	RT_UNIT	Code		Radiation Dose Unit		_undefined_	_undefined_	_undefined_			
+PD						Gy					
+											
+											
+DD	Response										
+TD	Subject Response										
+TG	One row per subject per response assessment per response method										
+VD	AGE_AT_RESPONSE	Number		Age in Days at Response Assessment		_undefined_	_undefined_	_undefined_			
+VD	TX_PRIOR_RESPONSE	Code		Treatment Type Prior to Response Assessment		_undefined_	_undefined_	_undefined_		skos:relatedMatch [nrsts_v1.0].[RESPONSE_IMAGING_CHEMO] | skos:relatedMatch [nrsts_v1.0].[RESPONSE_IMAGING_CHEMO_RT]	
+PD						Chemotherapy					
+PD						Chemoradiotherapy					
+VD	RESPONSE	Code		Response		_undefined_	_undefined_	_undefined_		skos:relatedMatch [nrsts_v1.0].[RESPONSE_IMAGING_CHEMO] | skos:relatedMatch [nrsts_v1.0].[RESPONSE_IMAGING_CHEMO_RT]	
+PD						Partial Response					
+PD						Stable Disease					
+PD						Progressive Disease					
+PD						Complete Response					
+PD						Not Evaluable					
+VD	NECROSIS	Code		Tumor Necrosis		_undefined_	_undefined_	_undefined_		skos:exactMatch [nrsts_v1.0].[NECROSIS]	
+PD						Score 0: No Necrosis					
+PD						<50% Necrosis					
+PD						>=50% Necrosis					
+PD						Unknown					
+VD	NECROSIS_PCT	Number		Tumor Necrosis (%)		_undefined_	_undefined_	_undefined_		skos:exactMatch [nrsts_v1.0].[NECROSIS_PCT]	
+											
+											
+DD	Events										
+TD	Secondary Malignant Neoplasm										
+TG	One row per subject per secondary malignancy										
+VD	AGE_AT_SMN	Number		Age in Days at Secondary Malignant Neoplasm		_undefined_	_undefined_	_undefined_		skos:exactMatch [nrsts_v1.0].[AGE_AT_EVENT]	
+VD	SMN_SITE	Code		SMN Site		_undefined_	_undefined_	_undefined_		skos:exactMatch [nrsts_v1.0].[SECONDARY_MALIGNANCY_SITE]	does this use morphological codes?
+PD						Head/Neck					
+PD						Thorax					
+PD						Limbs					
+PD						Abdomen					
+PD						Pelvis					
+PD						Other					
+PD						Not Reported					
+VD	SMN_TYPE	Code		SMN Type		_undefined_	_undefined_	_undefined_			
+PD						Leukemia					
+PD						Sarcoma					
+PD						Carcinoma					
+PD						Other					
+PD						Not Reported					
