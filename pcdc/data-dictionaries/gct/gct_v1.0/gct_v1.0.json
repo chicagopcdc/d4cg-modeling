@@ -80,7 +80,7 @@
                                 "ncit:C177327"
                             ],
                             "implementation_notes": [
-                                "Children\u2019sCancerandLeukaemiaGroup"
+                                "Children\u2019s Cancer and Leukaemia Group"
                             ],
                             "mappings": []
                         },
@@ -90,7 +90,7 @@
                                 "ncit:C177328"
                             ],
                             "implementation_notes": [
-                                "Soci\u00e9t\u00e9Fran\u00e7aisedeLuttecontrelesCancersetLeuc\u00e9miesdel'Enfantetdel'Adolescent"
+                                "Soci\u00e9t\u00e9 Fran\u00e7aise de Lutte contre les Cancers et Leuc\u00e9mies de l'Enfant et de l'Adolescent"
                             ],
                             "mappings": []
                         },
@@ -100,7 +100,7 @@
                                 "ncit:C177329"
                             ],
                             "implementation_notes": [
-                                "BrazilianSocietyofPediatricOncology"
+                                "Brazilian Society of Pediatric Oncology"
                             ],
                             "mappings": []
                         },
@@ -353,7 +353,7 @@
                                 "ncit:C156813"
                             ],
                             "implementation_notes": [
-                                "Note:Diseasephasecouldbe\"InitialDiagnosis\"phase,\"Relapse\"phase,etc..."
+                                "Note: Disease phase could be \"Initial Diagnosis\" phase, \"Relapse\" phase, etc..."
                             ],
                             "mappings": []
                         },
@@ -599,7 +599,7 @@
                                 "ncit:C26900"
                             ],
                             "implementation_notes": [
-                                "Note:Ifsubjecthadmultiplemedicalhistoryconditions,includeoneobservationpercondition."
+                                "Note: If subject had multiple medical history conditions, include one observation per condition."
                             ],
                             "mappings": []
                         },
@@ -723,7 +723,7 @@
                                 "ncit:C156813"
                             ],
                             "implementation_notes": [
-                                "Note:Diseasephasecouldbe\"InitialDiagnosis\"phase,\"Relapse\"phase,etc..."
+                                "Note: Disease phase could be \"Initial Diagnosis\" phase, \"Relapse\" phase, etc..."
                             ],
                             "mappings": []
                         },
@@ -799,7 +799,7 @@
                                 "ncit:C168970"
                             ],
                             "implementation_notes": [
-                                "Note:Ifmultiplecausesofdeath,includeoneobservationpercauseofdeath."
+                                "Note: If multiple causes of death, include one observation per cause of death."
                             ],
                             "mappings": []
                         },
@@ -865,7 +865,7 @@
                                 "ncit:C156813"
                             ],
                             "implementation_notes": [
-                                "Note:Diseasephasecouldbe\"InitialDiagnosis\"phase,\"Relapse\"phase,etc..."
+                                "Note: Disease phase could be \"Initial Diagnosis\" phase, \"Relapse\" phase, etc..."
                             ],
                             "mappings": []
                         },
@@ -1009,7 +1009,7 @@
                                 "ncit:C17220"
                             ],
                             "implementation_notes": [
-                                "Note:Ifthereweremultipledetectionmethods,includeoneobservationperdetectionmethod."
+                                "Note: If there were multiple detection methods, include one observation per detection method."
                             ],
                             "mappings": []
                         },
@@ -1067,7 +1067,7 @@
                                 "ncit:C156813"
                             ],
                             "implementation_notes": [
-                                "Note:Diseasephasecouldbe\"InitialDiagnosis\"phase,\"Relapse\"phase,etc..."
+                                "Note: Disease phase could be \"Initial Diagnosis\" phase, \"Relapse\" phase, etc..."
                             ],
                             "mappings": []
                         },
@@ -1107,7 +1107,7 @@
                                 "ncit:C17369"
                             ],
                             "implementation_notes": [
-                                "Note:Ifthereweremultiplemethods,includeoneobservationpermethod."
+                                "Note: If there were multiple methods, include one observation per method."
                             ],
                             "mappings": []
                         },
@@ -1197,7 +1197,7 @@
                                 "ncit:C159203"
                             ],
                             "implementation_notes": [
-                                "Note:Ifthereweremultipleprimarysites,includeoneobservationperprimarysite."
+                                "Note: If there were multiple primary sites, include one observation per primary site."
                             ],
                             "mappings": []
                         },
@@ -1619,7 +1619,7 @@
                                 "ncit:C156813"
                             ],
                             "implementation_notes": [
-                                "Note:Diseasephasecouldbe\"InitialDiagnosis\"phase,\"Relapse\"phase,etc..."
+                                "Note: Disease phase could be \"Initial Diagnosis\" phase, \"Relapse\" phase, etc..."
                             ],
                             "mappings": []
                         },
@@ -1659,7 +1659,7 @@
                                 "ncit:C89808"
                             ],
                             "implementation_notes": [
-                                "Note:Ifthereweremultiplestagingsystemsused,includeoneobservationperstagingsystem"
+                                "Note: If there were multiple staging systems used, include one observation per staging system"
                             ],
                             "mappings": []
                         },
@@ -1865,7 +1865,7 @@
                                 "ncit:156813"
                             ],
                             "implementation_notes": [
-                                "Note:Diseasephasecouldbe\"InitialDiagnosis\"phase,\"Relapse\"phase,etc..."
+                                "Note: Disease phase could be \"Initial Diagnosis\" phase, \"Relapse\" phase, etc..."
                             ],
                             "mappings": []
                         },
@@ -1949,7 +1949,7 @@
                                 "ncit:C121618"
                             ],
                             "implementation_notes": [
-                                "Note:Ifmultiplehistologyassessments,includeoneobservationperhistologicalfinding."
+                                "Note: If multiple histology assessments, include one observation per histological finding."
                             ],
                             "mappings": []
                         },
@@ -2165,7 +2165,7 @@
                                 "ncit:C28077"
                             ],
                             "implementation_notes": [
-                                "Note:OnlyassociatedwithMatureTeratoma."
+                                "Note: Only associated with Mature Teratoma."
                             ],
                             "mappings": []
                         },
@@ -2219,7 +2219,7 @@
                                 "ncit:C49487"
                             ],
                             "implementation_notes": [
-                                "Note:OnlyassociatedwithMatureTeratoma."
+                                "Note: Only associated with Mature Teratoma."
                             ],
                             "mappings": []
                         },
@@ -2265,7 +2265,7 @@
                                 "ncit:C3359"
                             ],
                             "implementation_notes": [
-                                "Note:OnlyassociatedwithSomaticMalignancy."
+                                "Note: Only associated with Somatic Malignancy."
                             ],
                             "mappings": []
                         },
@@ -2365,7 +2365,7 @@
                                 "ncit:156813"
                             ],
                             "implementation_notes": [
-                                "Note:Diseasephasecouldbe\"InitialDiagnosis\"phase,\"Relapse\"phase,etc..."
+                                "Note: Disease phase could be \"Initial Diagnosis\" phase, \"Relapse\" phase, etc..."
                             ],
                             "mappings": []
                         },
@@ -2405,7 +2405,7 @@
                                 "ncit:25208"
                             ],
                             "implementation_notes": [
-                                "Note:BMIshouldonlybewhatisreportedonCRF,notcalculatedfromweightandheightwhensubmittingdatatothePCDC"
+                                "Note: BMI should only be what is reported on CRF, not calculated from weight and height when submitting data to the PCDC"
                             ],
                             "mappings": []
                         },
@@ -2455,7 +2455,7 @@
                                 "ncit:28252"
                             ],
                             "implementation_notes": [
-                                "Note:OnlyfillinthisvariableifanumericresultisprovidedinVITALS_RESULT_NUMERIC."
+                                "Note: Only fill in this variable if a numeric result is provided in VITALS_RESULT_NUMERIC."
                             ],
                             "mappings": []
                         },
@@ -2513,7 +2513,7 @@
                                 "ncit:156813"
                             ],
                             "implementation_notes": [
-                                "Note:Diseasephasecouldbe\"InitialDiagnosis\"phase,\"Relapse\"phase,etc..."
+                                "Note: Disease phase could be \"Initial Diagnosis\" phase, \"Relapse\" phase, etc..."
                             ],
                             "mappings": []
                         },
@@ -2873,7 +2873,7 @@
                                 "ncit:C45830"
                             ],
                             "implementation_notes": [
-                                "Note:SpecifictomiRNA"
+                                "Note: Specific to miRNA"
                             ],
                             "mappings": []
                         },
@@ -3067,7 +3067,7 @@
                                 "ncit:156813"
                             ],
                             "implementation_notes": [
-                                "Note:OnlyfillinDiseasePhase,DiseasePhaseNumber,Course,andCourseNumberif\"AGE_\"notknownNote:DiseasePhasecouldbe\"InitialDiagnosis\"phase,ora\"Relapse\"phase,etc..."
+                                "Note: Only fill in Disease Phase, Disease Phase Number, Course, and Course Number if \"AGE_\" not known  Note: Disease Phase could be \"Initial Diagnosis\" phase, or a \"Relapse\" phase, etc..."
                             ],
                             "mappings": []
                         },
@@ -3207,7 +3207,7 @@
                                 "ncit:156813"
                             ],
                             "implementation_notes": [
-                                "Note:Diseasephasecouldbe\"InitialDiagnosis\"phase,\"Relapse\"phase,etc..."
+                                "Note: Disease phase could be \"Initial Diagnosis\" phase, \"Relapse\" phase, etc..."
                             ],
                             "mappings": []
                         },
@@ -3365,7 +3365,7 @@
                                 "ncit:C26900"
                             ],
                             "implementation_notes": [
-                                "Note:Ifmultiplemolecularabnormalities,includeoneobservationpermolecularabnormality."
+                                "Note: If multiple molecular abnormalities, include one observation per molecular abnormality."
                             ],
                             "mappings": []
                         },
@@ -3603,7 +3603,7 @@
                                 "ncit:156813"
                             ],
                             "implementation_notes": [
-                                "Note:Diseasephasecouldbe\"InitialDiagnosis\"phase,\"Relapse\"phase,etc..."
+                                "Note: Disease phase could be \"Initial Diagnosis\" phase, \"Relapse\" phase, etc..."
                             ],
                             "mappings": []
                         },
@@ -3643,7 +3643,7 @@
                                 "ncit:C32635"
                             ],
                             "implementation_notes": [
-                                "FrontalLobe"
+                                "Frontal Lobe"
                             ],
                             "mappings": []
                         },
@@ -3677,7 +3677,7 @@
                                 "ncit:12757"
                             ],
                             "implementation_notes": [
-                                "OccipitalLobe"
+                                "Occipital Lobe"
                             ],
                             "mappings": []
                         },
@@ -3695,7 +3695,7 @@
                                 "ncit:C12766"
                             ],
                             "implementation_notes": [
-                                "ParietalLobe"
+                                "Parietal Lobe"
                             ],
                             "mappings": []
                         },
@@ -3745,7 +3745,7 @@
                                 "ncit:C12797"
                             ],
                             "implementation_notes": [
-                                "TemporalLobe"
+                                "Temporal Lobe"
                             ],
                             "mappings": []
                         },
@@ -4043,7 +4043,7 @@
                                 "ncit:156813"
                             ],
                             "implementation_notes": [
-                                "Note:Diseasephasecouldbe\"InitialDiagnosis\"phase,\"Relapse\"phase,etc..."
+                                "Note: Disease phase could be \"Initial Diagnosis\" phase, \"Relapse\" phase, etc..."
                             ],
                             "mappings": []
                         },
@@ -4083,7 +4083,7 @@
                                 "ncit:C32635"
                             ],
                             "implementation_notes": [
-                                "FrontalLobe"
+                                "Frontal Lobe"
                             ],
                             "mappings": []
                         },
@@ -4117,7 +4117,7 @@
                                 "ncit:12757"
                             ],
                             "implementation_notes": [
-                                "OccipitalLobe"
+                                "Occipital Lobe"
                             ],
                             "mappings": []
                         },
@@ -4135,7 +4135,7 @@
                                 "ncit:C12766"
                             ],
                             "implementation_notes": [
-                                "ParietalLobe"
+                                "Parietal Lobe"
                             ],
                             "mappings": []
                         },
@@ -4185,7 +4185,7 @@
                                 "ncit:C12797"
                             ],
                             "implementation_notes": [
-                                "TemporalLobe"
+                                "Temporal Lobe"
                             ],
                             "mappings": []
                         },
@@ -4483,7 +4483,7 @@
                                 "ncit:156813"
                             ],
                             "implementation_notes": [
-                                "Note:Diseasephasecouldbe\"InitialDiagnosis\"phase,\"Relapse\"phase,etc..."
+                                "Note: Disease phase could be \"Initial Diagnosis\" phase, \"Relapse\" phase, etc..."
                             ],
                             "mappings": []
                         },
@@ -4555,7 +4555,7 @@
                                 "ncit:156813"
                             ],
                             "implementation_notes": [
-                                "Note:Diseasephasecouldbe\"InitialDiagnosis\"phase,\"Relapse\"phase,etc..."
+                                "Note: Disease phase could be \"Initial Diagnosis\" phase, \"Relapse\" phase, etc..."
                             ],
                             "mappings": []
                         },
@@ -4803,7 +4803,7 @@
                                 "ncit:156813"
                             ],
                             "implementation_notes": [
-                                "Note:Diseasephasecouldbe\"InitialDiagnosis\"phase,\"Relapse\"phase,etc..."
+                                "Note: Disease phase could be \"Initial Diagnosis\" phase, \"Relapse\" phase, etc..."
                             ],
                             "mappings": []
                         },
@@ -5403,7 +5403,7 @@
                                 "ncit:156813"
                             ],
                             "implementation_notes": [
-                                "Note:Diseasephasecouldbe\"InitialDiagnosis\"phase,\"Relapse\"phase,etc..."
+                                "Note: Disease phase could be \"Initial Diagnosis\" phase, \"Relapse\" phase, etc..."
                             ],
                             "mappings": []
                         },
@@ -5476,7 +5476,7 @@
                                 "ncit:156813"
                             ],
                             "implementation_notes": [
-                                "Note:Diseasephasecouldbe\"InitialDiagnosis\"phase,\"Relapse\"phase,etc..."
+                                "Note: Disease phase could be \"Initial Diagnosis\" phase, \"Relapse\" phase, etc..."
                             ],
                             "mappings": []
                         },

@@ -80,7 +80,7 @@
                                 "ncit:C177327"
                             ],
                             "implementation_notes": [
-                                "Children\u2019sCancerandLeukaemiaGroup"
+                                "Children\u2019s Cancer and Leukaemia Group"
                             ],
                             "mappings": []
                         },
@@ -90,7 +90,7 @@
                                 "ncit:C177328"
                             ],
                             "implementation_notes": [
-                                "Soci\u00e9t\u00e9Fran\u00e7aisedeLuttecontrelesCancersetLeuc\u00e9miesdel'Enfantetdel'Adolescent"
+                                "Soci\u00e9t\u00e9 Fran\u00e7aise de Lutte contre les Cancers et Leuc\u00e9mies de l'Enfant et de l'Adolescent"
                             ],
                             "mappings": []
                         },
@@ -100,7 +100,7 @@
                                 "ncit:C177329"
                             ],
                             "implementation_notes": [
-                                "BrazilianSocietyofPediatricOncology"
+                                "Brazilian Society of Pediatric Oncology"
                             ],
                             "mappings": []
                         },
@@ -353,7 +353,7 @@
                                 "ncit:C156813"
                             ],
                             "implementation_notes": [
-                                "Note:Diseasephasecouldbe\"InitialDiagnosis\"phase,\"Relapse\"phase,etc..."
+                                "Note: Disease phase could be \"Initial Diagnosis\" phase, \"Relapse\" phase, etc..."
                             ],
                             "mappings": []
                         },
@@ -599,7 +599,7 @@
                                 "ncit:C26900"
                             ],
                             "implementation_notes": [
-                                "Note:Ifsubjecthadmultiplemedicalhistoryconditions,includeoneobservationpercondition."
+                                "Note: If subject had multiple medical history conditions, include one observation per condition."
                             ],
                             "mappings": []
                         },
@@ -723,7 +723,7 @@
                                 "ncit:C156813"
                             ],
                             "implementation_notes": [
-                                "Note:Diseasephasecouldbe\"InitialDiagnosis\"phase,\"Relapse\"phase,etc..."
+                                "Note: Disease phase could be \"Initial Diagnosis\" phase, \"Relapse\" phase, etc..."
                             ],
                             "mappings": []
                         },
@@ -799,7 +799,7 @@
                                 "ncit:C168970"
                             ],
                             "implementation_notes": [
-                                "Note:Ifmultiplecausesofdeath,includeoneobservationpercauseofdeath."
+                                "Note: If multiple causes of death, include one observation per cause of death."
                             ],
                             "mappings": []
                         },
@@ -865,7 +865,7 @@
                                 "ncit:C156813"
                             ],
                             "implementation_notes": [
-                                "Note:Diseasephasecouldbe\"InitialDiagnosis\"phase,\"Relapse\"phase,etc..."
+                                "Note: Disease phase could be \"Initial Diagnosis\" phase, \"Relapse\" phase, etc..."
                             ],
                             "mappings": []
                         },
@@ -1009,7 +1009,7 @@
                                 "ncit:C17220"
                             ],
                             "implementation_notes": [
-                                "Note:Ifthereweremultipledetectionmethods,includeoneobservationperdetectionmethod."
+                                "Note: If there were multiple detection methods, include one observation per detection method."
                             ],
                             "mappings": []
                         },
@@ -1067,7 +1067,7 @@
                                 "ncit:C156813"
                             ],
                             "implementation_notes": [
-                                "Note:Diseasephasecouldbe\"InitialDiagnosis\"phase,\"Relapse\"phase,etc..."
+                                "Note: Disease phase could be \"Initial Diagnosis\" phase, \"Relapse\" phase, etc..."
                             ],
                             "mappings": []
                         },
@@ -1107,7 +1107,7 @@
                                 "ncit:C17369"
                             ],
                             "implementation_notes": [
-                                "Note:Ifthereweremultiplemethods,includeoneobservationpermethod."
+                                "Note: If there were multiple methods, include one observation per method."
                             ],
                             "mappings": []
                         },
@@ -1205,7 +1205,7 @@
                                 "ncit:C159203"
                             ],
                             "implementation_notes": [
-                                "Note:Ifthereweremultipleprimarysites,includeoneobservationperprimarysite."
+                                "Note: If there were multiple primary sites, include one observation per primary site."
                             ],
                             "mappings": []
                         },
@@ -1398,7 +1398,7 @@
                             "codes": [],
                             "implementation_notes": [],
                             "mappings": [
-                                "NewPD"
+                                "[gct_v1.0].[Tumor Assessment].[NODAL_SITE].[Cervix] skos:exactMatch [gct_v1.1].[Tumor Assessment].[TUMOR_SITE].[Cervix Lymph Node]"
                             ]
                         },
                         "Mediastinal Lymph Node": {
@@ -1408,7 +1408,7 @@
                             ],
                             "implementation_notes": [],
                             "mappings": [
-                                "NewPD"
+                                "[gct_v1.0].[Tumor Assessment].[NODAL_SITE].[Mediastinum] skos:exactMatch [gct_v1.1].[Tumor Assessment].[TUMOR_SITE].[Mediastinal Lymph Node]"
                             ]
                         },
                         "Omentum Lymph Node": {
@@ -1416,7 +1416,7 @@
                             "codes": [],
                             "implementation_notes": [],
                             "mappings": [
-                                "NewPD"
+                                "[gct_v1.0].[Tumor Assessment].[NODAL_SITE].[Omentum] skos:exactMatch [gct_v1.1].[Tumor Assessment].[TUMOR_SITE].[Omentum Lymph Node]"
                             ]
                         },
                         "Pelvic Lymph Node": {
@@ -1426,7 +1426,7 @@
                             ],
                             "implementation_notes": [],
                             "mappings": [
-                                "NewPD"
+                                "[gct_v1.0].[Tumor Assessment].[NODAL_SITE].[Pelvis] skos:exactMatch [gct_v1.1].[Tumor Assessment].[TUMOR_SITE].[Pelvic Lymph Node]"
                             ]
                         },
                         "Retroperitoneum Lymph Node": {
@@ -1434,7 +1434,7 @@
                             "codes": [],
                             "implementation_notes": [],
                             "mappings": [
-                                "NewPD"
+                                "[gct_v1.0].[Tumor Assessment].[NODAL_SITE].[Retroperitoneum] skos:exactMatch [gct_v1.1].[Tumor Assessment].[TUMOR_SITE].[Retroperitoneum Lymph Node]"
                             ]
                         },
                         "Other": {
@@ -1442,14 +1442,16 @@
                             "codes": [],
                             "implementation_notes": [],
                             "mappings": [
-                                "NewPD"
+                                "[gct_v1.0].[Tumor Assessment].[NODAL_SITE].[Other] skos:exactMatch [gct_v1.1].[Tumor Assessment].[TUMOR_SITE].[Other]"
                             ]
                         },
                         "Lymph Node": {
                             "description": "",
                             "codes": [],
                             "implementation_notes": [],
-                            "mappings": []
+                            "mappings": [
+                                "New PD"
+                            ]
                         },
                         "Unknown": {
                             "description": "Reported as unknown by the data contributor.",
@@ -1457,7 +1459,9 @@
                                 "ncit:C17998"
                             ],
                             "implementation_notes": [],
-                            "mappings": []
+                            "mappings": [
+                                "[gct_v1.0].[Tumor Assessment].[NODAL_SITE].[Unknown] skos:exactMatch [gct_v1.1].[Tumor Assessment].[TUMOR_SITE].[Unknown]"
+                            ]
                         },
                         "Not Reported": {
                             "description": "Not provided or available.",
@@ -1465,7 +1469,9 @@
                                 "ncit:C43234"
                             ],
                             "implementation_notes": [],
-                            "mappings": []
+                            "mappings": [
+                                "[gct_v1.0].[Tumor Assessment].[NODAL_SITE].[Not Reported] skos:exactMatch [gct_v1.1].[Tumor Assessment].[TUMOR_SITE].[Not Reported]"
+                            ]
                         }
                     }
                 },
@@ -1587,7 +1593,7 @@
                                 "ncit:C156813"
                             ],
                             "implementation_notes": [
-                                "Note:Diseasephasecouldbe\"InitialDiagnosis\"phase,\"Relapse\"phase,etc..."
+                                "Note: Disease phase could be \"Initial Diagnosis\" phase, \"Relapse\" phase, etc..."
                             ],
                             "mappings": []
                         },
@@ -1627,7 +1633,7 @@
                                 "ncit:C89808"
                             ],
                             "implementation_notes": [
-                                "Note:Ifthereweremultiplestagingsystemsused,includeoneobservationperstagingsystem"
+                                "Note: If there were multiple staging systems used, include one observation per staging system"
                             ],
                             "mappings": []
                         },
@@ -1833,7 +1839,7 @@
                                 "ncit:156813"
                             ],
                             "implementation_notes": [
-                                "Note:Diseasephasecouldbe\"InitialDiagnosis\"phase,\"Relapse\"phase,etc..."
+                                "Note: Disease phase could be \"Initial Diagnosis\" phase, \"Relapse\" phase, etc..."
                             ],
                             "mappings": []
                         },
@@ -1917,7 +1923,7 @@
                                 "ncit:C121618"
                             ],
                             "implementation_notes": [
-                                "Note:Ifmultiplehistologyassessments,includeoneobservationperhistologicalfinding."
+                                "Note: If multiple histology assessments, include one observation per histological finding."
                             ],
                             "mappings": []
                         },
@@ -2060,7 +2066,7 @@
                     ],
                     "implementation_notes": [],
                     "mappings": [
-                        "NewVD"
+                        "New VD"
                     ],
                     "permissible_values": {
                         "Ascitic Fluid": {
@@ -2069,10 +2075,10 @@
                                 "ncit:C159203"
                             ],
                             "implementation_notes": [
-                                "Note:Ifthereweremultipleprimarysites,includeoneobservationperprimarysite."
+                                "Note: If there were multiple primary sites, include one observation per primary site."
                             ],
                             "mappings": [
-                                "NewPD"
+                                "New PD"
                             ]
                         },
                         "Bone": {
@@ -2082,7 +2088,7 @@
                             ],
                             "implementation_notes": [],
                             "mappings": [
-                                "NewPD"
+                                "New PD"
                             ]
                         },
                         "Brain": {
@@ -2092,7 +2098,7 @@
                             ],
                             "implementation_notes": [],
                             "mappings": [
-                                "NewPD"
+                                "New PD"
                             ]
                         },
                         "Cerebrospinal Fluid": {
@@ -2102,7 +2108,7 @@
                             ],
                             "implementation_notes": [],
                             "mappings": [
-                                "NewPD"
+                                "New PD"
                             ]
                         },
                         "Frontal Cortex": {
@@ -2112,7 +2118,7 @@
                             ],
                             "implementation_notes": [],
                             "mappings": [
-                                "NewPD"
+                                "New PD"
                             ]
                         },
                         "Head and Neck": {
@@ -2122,7 +2128,7 @@
                             ],
                             "implementation_notes": [],
                             "mappings": [
-                                "NewPD"
+                                "New PD"
                             ]
                         },
                         "Liver": {
@@ -2132,7 +2138,7 @@
                             ],
                             "implementation_notes": [],
                             "mappings": [
-                                "NewPD"
+                                "New PD"
                             ]
                         },
                         "Lung": {
@@ -2142,7 +2148,7 @@
                             ],
                             "implementation_notes": [],
                             "mappings": [
-                                "NewPD"
+                                "New PD"
                             ]
                         },
                         "Mediastinum": {
@@ -2152,7 +2158,7 @@
                             ],
                             "implementation_notes": [],
                             "mappings": [
-                                "NewPD"
+                                "New PD"
                             ]
                         },
                         "Occipital Cortex": {
@@ -2162,7 +2168,7 @@
                             ],
                             "implementation_notes": [],
                             "mappings": [
-                                "NewPD"
+                                "New PD"
                             ]
                         },
                         "Peritoneum": {
@@ -2172,7 +2178,7 @@
                             ],
                             "implementation_notes": [],
                             "mappings": [
-                                "NewPD"
+                                "New PD"
                             ]
                         },
                         "Omentum": {
@@ -2182,7 +2188,7 @@
                             ],
                             "implementation_notes": [],
                             "mappings": [
-                                "NewPD"
+                                "New PD"
                             ]
                         },
                         "Ovary": {
@@ -2192,7 +2198,7 @@
                             ],
                             "implementation_notes": [],
                             "mappings": [
-                                "NewPD"
+                                "New PD"
                             ]
                         },
                         "Parietal Cortex": {
@@ -2202,7 +2208,7 @@
                             ],
                             "implementation_notes": [],
                             "mappings": [
-                                "NewPD"
+                                "New PD"
                             ]
                         },
                         "Pineal": {
@@ -2212,7 +2218,7 @@
                             ],
                             "implementation_notes": [],
                             "mappings": [
-                                "NewPD"
+                                "New PD"
                             ]
                         },
                         "Retroperitoneum": {
@@ -2222,7 +2228,7 @@
                             ],
                             "implementation_notes": [],
                             "mappings": [
-                                "NewPD"
+                                "New PD"
                             ]
                         },
                         "Sacrococcygeal": {
@@ -2232,7 +2238,7 @@
                             ],
                             "implementation_notes": [],
                             "mappings": [
-                                "NewPD"
+                                "New PD"
                             ]
                         },
                         "Spinal Cord": {
@@ -2242,7 +2248,7 @@
                             ],
                             "implementation_notes": [],
                             "mappings": [
-                                "NewPD"
+                                "New PD"
                             ]
                         },
                         "Spine": {
@@ -2252,7 +2258,7 @@
                             ],
                             "implementation_notes": [],
                             "mappings": [
-                                "NewPD"
+                                "New PD"
                             ]
                         },
                         "Suprasellar/Neurohypophyseal": {
@@ -2262,7 +2268,7 @@
                             ],
                             "implementation_notes": [],
                             "mappings": [
-                                "NewPD"
+                                "New PD"
                             ]
                         },
                         "Temporal Cortex": {
@@ -2272,7 +2278,7 @@
                             ],
                             "implementation_notes": [],
                             "mappings": [
-                                "NewPD"
+                                "New PD"
                             ]
                         },
                         "Testis": {
@@ -2282,7 +2288,7 @@
                             ],
                             "implementation_notes": [],
                             "mappings": [
-                                "NewPD"
+                                "New PD"
                             ]
                         },
                         "Thalamus": {
@@ -2292,7 +2298,7 @@
                             ],
                             "implementation_notes": [],
                             "mappings": [
-                                "NewPD"
+                                "New PD"
                             ]
                         },
                         "Vagina": {
@@ -2302,7 +2308,7 @@
                             ],
                             "implementation_notes": [],
                             "mappings": [
-                                "NewPD"
+                                "New PD"
                             ]
                         },
                         "Cervix Lymph Node": {
@@ -2310,7 +2316,7 @@
                             "codes": [],
                             "implementation_notes": [],
                             "mappings": [
-                                "NewPD"
+                                "New PD"
                             ]
                         },
                         "Mediastinal Lymph Node": {
@@ -2320,7 +2326,7 @@
                             ],
                             "implementation_notes": [],
                             "mappings": [
-                                "NewPD"
+                                "New PD"
                             ]
                         },
                         "Omentum Lymph Node": {
@@ -2328,7 +2334,7 @@
                             "codes": [],
                             "implementation_notes": [],
                             "mappings": [
-                                "NewPD"
+                                "New PD"
                             ]
                         },
                         "Pelvic Lymph Node": {
@@ -2338,7 +2344,7 @@
                             ],
                             "implementation_notes": [],
                             "mappings": [
-                                "NewPD"
+                                "New PD"
                             ]
                         },
                         "Retroperitoneum Lymph Node": {
@@ -2346,7 +2352,7 @@
                             "codes": [],
                             "implementation_notes": [],
                             "mappings": [
-                                "NewPD"
+                                "New PD"
                             ]
                         },
                         "Lymph Node": {
@@ -2354,7 +2360,7 @@
                             "codes": [],
                             "implementation_notes": [],
                             "mappings": [
-                                "NewPD"
+                                "New PD"
                             ]
                         },
                         "Unknown": {
@@ -2364,7 +2370,7 @@
                             ],
                             "implementation_notes": [],
                             "mappings": [
-                                "NewPD"
+                                "New PD"
                             ]
                         },
                         "Not Reported": {
@@ -2374,7 +2380,7 @@
                             ],
                             "implementation_notes": [],
                             "mappings": [
-                                "NewPD"
+                                "New PD"
                             ]
                         }
                     }
@@ -2461,7 +2467,7 @@
                                 "ncit:C28077"
                             ],
                             "implementation_notes": [
-                                "Note:OnlyassociatedwithMatureTeratoma."
+                                "Note: Only associated with Mature Teratoma."
                             ],
                             "mappings": []
                         },
@@ -2515,7 +2521,7 @@
                                 "ncit:C49487"
                             ],
                             "implementation_notes": [
-                                "Note:OnlyassociatedwithMatureTeratoma."
+                                "Note: Only associated with Mature Teratoma."
                             ],
                             "mappings": []
                         },
@@ -2561,7 +2567,7 @@
                                 "ncit:C3359"
                             ],
                             "implementation_notes": [
-                                "Note:OnlyassociatedwithSomaticMalignancy."
+                                "Note: Only associated with Somatic Malignancy."
                             ],
                             "mappings": []
                         },
@@ -2661,7 +2667,7 @@
                                 "ncit:156813"
                             ],
                             "implementation_notes": [
-                                "Note:Diseasephasecouldbe\"InitialDiagnosis\"phase,\"Relapse\"phase,etc..."
+                                "Note: Disease phase could be \"Initial Diagnosis\" phase, \"Relapse\" phase, etc..."
                             ],
                             "mappings": []
                         },
@@ -2701,7 +2707,7 @@
                                 "ncit:25208"
                             ],
                             "implementation_notes": [
-                                "Note:BMIshouldonlybewhatisreportedonCRF,notcalculatedfromweightandheightwhensubmittingdatatothePCDC"
+                                "Note: BMI should only be what is reported on CRF, not calculated from weight and height when submitting data to the PCDC"
                             ],
                             "mappings": []
                         },
@@ -2751,7 +2757,7 @@
                                 "ncit:28252"
                             ],
                             "implementation_notes": [
-                                "Note:OnlyfillinthisvariableifanumericresultisprovidedinVITALS_RESULT_NUMERIC."
+                                "Note: Only fill in this variable if a numeric result is provided in VITALS_RESULT_NUMERIC."
                             ],
                             "mappings": []
                         },
@@ -2809,7 +2815,7 @@
                                 "ncit:156813"
                             ],
                             "implementation_notes": [
-                                "Note:Diseasephasecouldbe\"InitialDiagnosis\"phase,\"Relapse\"phase,etc..."
+                                "Note: Disease phase could be \"Initial Diagnosis\" phase, \"Relapse\" phase, etc..."
                             ],
                             "mappings": []
                         },
@@ -3173,7 +3179,7 @@
                                 "ncit:C45830"
                             ],
                             "implementation_notes": [
-                                "Note:SpecifictomiRNA"
+                                "Note: Specific to miRNA"
                             ],
                             "mappings": []
                         },
@@ -3367,7 +3373,7 @@
                                 "ncit:156813"
                             ],
                             "implementation_notes": [
-                                "Note:OnlyfillinDiseasePhase,DiseasePhaseNumber,Course,andCourseNumberif\"AGE_\"notknownNote:DiseasePhasecouldbe\"InitialDiagnosis\"phase,ora\"Relapse\"phase,etc..."
+                                "Note: Only fill in Disease Phase, Disease Phase Number, Course, and Course Number if \"AGE_\" not known  Note: Disease Phase could be \"Initial Diagnosis\" phase, or a \"Relapse\" phase, etc..."
                             ],
                             "mappings": []
                         },
@@ -3507,7 +3513,7 @@
                                 "ncit:156813"
                             ],
                             "implementation_notes": [
-                                "Note:Diseasephasecouldbe\"InitialDiagnosis\"phase,\"Relapse\"phase,etc..."
+                                "Note: Disease phase could be \"Initial Diagnosis\" phase, \"Relapse\" phase, etc..."
                             ],
                             "mappings": []
                         },
@@ -3665,7 +3671,7 @@
                                 "ncit:C26900"
                             ],
                             "implementation_notes": [
-                                "Note:Ifmultiplemolecularabnormalities,includeoneobservationpermolecularabnormality."
+                                "Note: If multiple molecular abnormalities, include one observation per molecular abnormality."
                             ],
                             "mappings": []
                         },
@@ -3903,7 +3909,7 @@
                                 "ncit:156813"
                             ],
                             "implementation_notes": [
-                                "Note:Diseasephasecouldbe\"InitialDiagnosis\"phase,\"Relapse\"phase,etc..."
+                                "Note: Disease phase could be \"Initial Diagnosis\" phase, \"Relapse\" phase, etc..."
                             ],
                             "mappings": []
                         },
@@ -3943,7 +3949,7 @@
                                 "ncit:C32635"
                             ],
                             "implementation_notes": [
-                                "FrontalLobe"
+                                "Frontal Lobe"
                             ],
                             "mappings": []
                         },
@@ -3977,7 +3983,7 @@
                                 "ncit:12757"
                             ],
                             "implementation_notes": [
-                                "OccipitalLobe"
+                                "Occipital Lobe"
                             ],
                             "mappings": []
                         },
@@ -3995,7 +4001,7 @@
                                 "ncit:C12766"
                             ],
                             "implementation_notes": [
-                                "ParietalLobe"
+                                "Parietal Lobe"
                             ],
                             "mappings": []
                         },
@@ -4045,7 +4051,7 @@
                                 "ncit:C12797"
                             ],
                             "implementation_notes": [
-                                "TemporalLobe"
+                                "Temporal Lobe"
                             ],
                             "mappings": []
                         },
@@ -4343,7 +4349,7 @@
                                 "ncit:156813"
                             ],
                             "implementation_notes": [
-                                "Note:Diseasephasecouldbe\"InitialDiagnosis\"phase,\"Relapse\"phase,etc..."
+                                "Note: Disease phase could be \"Initial Diagnosis\" phase, \"Relapse\" phase, etc..."
                             ],
                             "mappings": []
                         },
@@ -4383,7 +4389,7 @@
                                 "ncit:C32635"
                             ],
                             "implementation_notes": [
-                                "FrontalLobe"
+                                "Frontal Lobe"
                             ],
                             "mappings": []
                         },
@@ -4417,7 +4423,7 @@
                                 "ncit:12757"
                             ],
                             "implementation_notes": [
-                                "OccipitalLobe"
+                                "Occipital Lobe"
                             ],
                             "mappings": []
                         },
@@ -4435,7 +4441,7 @@
                                 "ncit:C12766"
                             ],
                             "implementation_notes": [
-                                "ParietalLobe"
+                                "Parietal Lobe"
                             ],
                             "mappings": []
                         },
@@ -4485,7 +4491,7 @@
                                 "ncit:C12797"
                             ],
                             "implementation_notes": [
-                                "TemporalLobe"
+                                "Temporal Lobe"
                             ],
                             "mappings": []
                         },
@@ -4783,7 +4789,7 @@
                                 "ncit:156813"
                             ],
                             "implementation_notes": [
-                                "Note:Diseasephasecouldbe\"InitialDiagnosis\"phase,\"Relapse\"phase,etc..."
+                                "Note: Disease phase could be \"Initial Diagnosis\" phase, \"Relapse\" phase, etc..."
                             ],
                             "mappings": []
                         },
@@ -4855,7 +4861,7 @@
                                 "ncit:156813"
                             ],
                             "implementation_notes": [
-                                "Note:Diseasephasecouldbe\"InitialDiagnosis\"phase,\"Relapse\"phase,etc..."
+                                "Note: Disease phase could be \"Initial Diagnosis\" phase, \"Relapse\" phase, etc..."
                             ],
                             "mappings": []
                         },
@@ -5103,7 +5109,7 @@
                                 "ncit:156813"
                             ],
                             "implementation_notes": [
-                                "Note:Diseasephasecouldbe\"InitialDiagnosis\"phase,\"Relapse\"phase,etc..."
+                                "Note: Disease phase could be \"Initial Diagnosis\" phase, \"Relapse\" phase, etc..."
                             ],
                             "mappings": []
                         },
@@ -5703,7 +5709,7 @@
                                 "ncit:156813"
                             ],
                             "implementation_notes": [
-                                "Note:Diseasephasecouldbe\"InitialDiagnosis\"phase,\"Relapse\"phase,etc..."
+                                "Note: Disease phase could be \"Initial Diagnosis\" phase, \"Relapse\" phase, etc..."
                             ],
                             "mappings": []
                         },
@@ -5776,7 +5782,7 @@
                                 "ncit:156813"
                             ],
                             "implementation_notes": [
-                                "Note:Diseasephasecouldbe\"InitialDiagnosis\"phase,\"Relapse\"phase,etc..."
+                                "Note: Disease phase could be \"Initial Diagnosis\" phase, \"Relapse\" phase, etc..."
                             ],
                             "mappings": []
                         },
