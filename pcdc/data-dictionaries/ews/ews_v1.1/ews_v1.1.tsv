@@ -1,0 +1,1112 @@
+INFO	Title	Ewing Sarcoma (EWS) Data Dictionary									
+INFO	Name	ews_v1.1									
+INFO	Release Notes										
+INFO	Parent Data Model	pcdc_v1.8									
+INFO	License	Creative Commons Attribution-NonCommercial 4.0 International License (https://creativecommons.org/licenses/by-nc/4.0/)									
+INFO	D4CG Data Modeling Wiki	https://docs.pedscommons.org/									
+INFO	Disease Consortium Information	https://commons.cri.uchicago.edu/pcdc/									
+INFO	Description	Ewing Sarcoma (EWS) Data Dictionary									
+INFO	Total Variables	192									
+											
+RowType	VariableName	DataType	Tier	VariableDescription	VariableCode	PermissibleValue	ValueDescription	ValueCode	ImplementationNotes	Mappings	Modeling Notes (ignored in processing)
+											
+DD	Protocol										
+TD	Subject Identifier										
+TG	Will be included in every table										
+VD	PCDC_SUBJECT_ID	String	Mandatory	A unique identifier for a subject in a study.	ncit:C69256	_undefined_	_undefined_	_undefined_			
+											
+DD	Protocol										
+TD	Subject Characteristics										
+TG	One row per patient per study										
+VD	HONEST_BROKER_SUBJECT_ID	String	Mandatory	The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.		_undefined_	_undefined_	_undefined_			
+VD	DATA_CONTRIBUTOR_ID	Code	Mandatory	An identifier assigned to a data contributor.	ncit:C168950	_undefined_	_undefined_	_undefined_			
+PD						UK	An information system in the United Kingdom designed for the collection, storage, and management of data on persons with sarcoma.	ncit:C174963	(United Kingdom Sarcoma Registry)		
+PD						GPOH	A research organization in Germany involved in the understanding, diagnosis, treatment and prognosis of pediatric cancers.	ncit:C174960	(German Pediatric Oncology-Hematology Society)		
+PD						SSG	A research organization in Scandinavia involved in the understanding, diagnosis, treatment and prognosis of sarcoma in children and adolescents.	ncit:C174961	(Scandinavian Sarcoma Group)		
+PD						FSG	A research organization in France involved in the understanding, diagnosis, treatment and prognosis of sarcoma in children and adolescents.	ncit:C174962	(French Sarcoma Group)		
+PD						EURO-EWING	A coalition of clinical study groups bringing together active clinicians and scientists in Europe dedicated to improving survival from Ewing sarcoma.	ncit:C174964			
+PD						ISG	A independent, scientific non-profit association formed in 2002 with the purpose of improving the quality of treatment for sarcoma.	ncit:C174965	(Italian Sarcoma Group)		
+PD						CRCTU	A research organization in the United Kingdom specializing in the design and delivery of every aspect of clinical trials of all phases in adults and children, from concept to publication.	ncit:C174966	(Cancer Research Clinical Trials Unit)		
+PD						UCL	A public research university located in London, England.	ncit:C174967	University College of London		
+PD						COG	An NCI-supported clinical cooperative group formed by the merger of the four national pediatric cancer research organizations: the Children's Cancer Group, the Intergroup Rhabdomyosarcoma Study Group, the National Wilms Tumor Study Group, and the Pediatric Oncology Group. The primary objective of the organization is to conduct clinical trials of new therapies for childhood and adolescent cancer. COG develops and coordinates clinical trials conducted at the 238 member institutions that include cancer centers of all major universities and teaching hospitals throughout the U.S. and Canada, as well as sites in Europe and Australia. COG members include over 5000 cancer researchers.	ncit:C39353	Children's Oncology Group		
+VD	STUDY_ID	Code	Mandatory	A sequence of characters used to identify, name, or characterize the study.	ncit:C83082	_undefined_	_undefined_	_undefined_			
+PD						AEWS1221	The identifier AEWS1221, assigned to a study in an EWS clinical trial.	ncit:C174968			
+PD						AEWS0331	The identifier AEWS0331, assigned to a study in an EWS clinical trial.	ncit:C174969			
+PD						AEWS0031	The identifier AEWS0031, assigned to a study in an EWS clinical trial.	ncit:C174970			
+PD						AEWS1031	The identifier AEWS1031, assigned to a study in an EWS clinical trial.	ncit:C174971			
+PD						EE99	The identifier EE99, assigned to a study in an EWS clinical trial.	ncit:C174972			
+PD						EICESS92	The identifier EICESS92, assigned to a study in an EWS clinical trial.	ncit:C174973			
+PD						AEWS07P1	The identifier AEWS07P1, assigned to a study in an EWS clinical trial.	ncit:C174974			
+VD	AGE_AT_ENROLLMENT	Number	Mandatory	Age of subject (in days) when the subject enrolled in the study.	ncit:C168843	_undefined_	_undefined_	_undefined_			
+VD	TREATMENT_ARM	Code	Mandatory	A specific treatment plan within a clinical trial that describes the activities a subject will be involved in as he or she progresses through the study.	ncit:C15538	_undefined_	_undefined_	_undefined_			
+PD						3W-VDC-MESNA+IFO-GCSF/AEWS0031	The treatment arm 3W-VDC-MESNA+IFO-GCSF of EWS study AEWS0031.	ncit:C174975	Note: Contributor provides a descriptive code that the user can understand. For examples see tab "Treatment Arms".		
+PD						2W-VDC-MESNA+IFO-GCSF/AEWS0031	The treatment arm 2W-VDC-MESNA+IFO-GCSF of EWS study AEWS0031.	ncit:C174976			
+PD						VDC/IE/AEWS1221	The treatment arm VDC/IE of EWS study AEWS1221.	ncit:C174977			
+PD						VDC/IE+Ganitumab/AEWS1221	The treatment arm VDC/IE+Ganitumab of EWS study AEWS1221.	ncit:C174978			
+PD						VIDE-Surgery-R1-VAI-VAC/VAI/AEWS0331	The treatment arm VIDE-Surgery-R1-VAI-VAC/VAI of EWS study AEWS0331.	ncit:C174979			
+PD						VIDE-Surgery-R2-VAI-VAI/BuMel/AEWS0331	The treatment arm VIDE-Surgery-R2-VAI-VAI/BuMel of EWS study AEWS0331.	ncit:C174980			
+PD						VIDE-Surgery-R3-VAI-MEME/TreoMel/BuMel/P2/AEWS0331	The treatment arm VIDE-Surgery-R3-VAI-MEME/TreoMel/BuMel/P2 of EWS study AEWS0331.	ncit:C174981			
+PD						VIDEC/AEWS1031	The treatment arm VIDEC of EWS study AEWS1031.	ncit:C174982			
+PD						VIDEC+Topotecan/AEWS1031	The treatment arm VIDEC+Topotecan of EWS study AEWS1031.	ncit:C174983			
+PD						SR/VAIA/EICESS92	The treatment arm SR/VAIA of EWS study EICESS92.	ncit:C174984			
+PD						SR/VACA/EICESS92	The treatment arm SR/VACA of EWS study EICESS92.	ncit:C174985			
+PD						HR/VAIA/EICESS92	The treatment arm HR/VAIA of EWS study EICESS92.	ncit:C174986			
+PD						HR/EVAIA/EICESS92	The treatment arm HR/EVAIA of EWS study EICESS92.	ncit:C174987			
+PD						VAIA-VACA/AEWS07P1	The treatment arm VAIA-VACA of EWS study AEWS07P1.	ncit:C174988			
+PD						VAIA-VAIA/AEWS07P1	The treatment arm VAIA-VAIA of EWS study AEWS07P1.	ncit:C174989			
+PD						EVAIA-EVAIA/AEWS07P1	The treatment arm EVAIA-EVAIA of EWS study AEWS07P1.	ncit:C174990			
+VD	EFS_CENSOR_STATUS	Code	Mandatory	Event-free Survival Censor Status		_undefined_	_undefined_	_undefined_		New VD	
+PD						Censored	The status of individuals in a study when their outcome (event occurrence or time to event) is censored or not censored at the time of analysis or data collection. Censoring occurs when an individual has not experienced the event of interest by the end of the study period or at the time of data analysis, often because they were lost to follow-up, withdrew from the study, or the study ended before the event could occur. In event-free survival analysis, these censored individuals are included in the analysis up to the point of censoring and are essential for estimating survival probabilities and analyzing the time to events.	ncit:C118962		New PD	
+PD						Not Censored				New PD	
+PD						Unknown		ncit:C17998		New PD	
+PD						Not Reported		ncit:C43234		New PD	
+VD	AGE_AT_CENSOR_STATUS	Number	Mandatory	Age at Censor Status		_undefined_	_undefined_	_undefined_		New VD	
+											
+											
+DD	Protocol										
+TD	Disease Phase Timing										
+TG	One row per subject per disease phase(s)										
+VD	DISEASE_PHASE	Code	Mandatory	The stage or period of an individual's disease.	ncit:C168878	_undefined_	_undefined_	_undefined_			
+PD						Initial Diagnosis	The first diagnosis of the individual's condition.	ncit:C156813	Note: Disease phase could be "Initial Diagnosis" phase, or a "Relapse/Progression" phase.		
+PD						Relapse	The return of a disease after a period of remission.	ncit:C38155			
+PD						Progression	A clinical, pathologic, and/or molecular finding indicating that the course of a disease is worsening in terms of extent or severity.	ncit:C35571			
+PD						Relapse/Progression	Either the return of the disease or the progression of the disease.	ncit:C174991			
+VD	DISEASE_PHASE_NUMBER	Number	Mandatory	The number of the disease phase.	ncit:C173258	_undefined_	_undefined_	_undefined_			
+VD	AGE_AT_DISEASE_PHASE	Number	Mandatory	Age of subject (in days) at the disease phase.	ncit:C168972	_undefined_	_undefined_	_undefined_			
+VD	YEAR_AT_DISEASE_PHASE	Number	Mandatory	Year when the diagnosis was made for the disease phase.	ncit:C168823	_undefined_	_undefined_	_undefined_			
+											
+											
+DD	Protocol										
+TD	Course Timing										
+TG	One row per subject per course(s)										
+VD	COURSE	Code	Mandatory	The type of protocol treatment course administered.	ncit:C168807	_undefined_	_undefined_	_undefined_			
+PD						Induction	The first choice of treatment for a particular type of cancer.	ncit:C158876			
+PD						Consolidation	Treatment that is given after initial therapy to kill any remaining cancer cells.	ncit:C15679			
+PD						Maintenance	Continuation of treatment for an extended period of time to prevent relapse.	ncit:C15688			
+VD	COURSE_NUMBER	Number	Mandatory	The number assigned to a course of therapeutic agent administration, indicating where a particular course of treatment falls within a sequence of treatments.	ncit:C166235	_undefined_	_undefined_	_undefined_			
+VD	AGE_AT_TXASSIGN	Number	Mandatory	Age in Days at Treatment Assignment	ncit:C175529	_undefined_	_undefined_	_undefined_			
+VD	AGE_AT_COURSE_START	Number	Mandatory	Age of subject (in days) at the start of the course.	ncit:C168850	_undefined_	_undefined_	_undefined_			
+VD	AGE_AT_COURSE_END	Number	Mandatory	Age of subject (in days) at the end of the course.	ncit:C168851	_undefined_	_undefined_	_undefined_			
+											
+											
+DD	Protocol										
+TD	Off Protocol Therapy/Study										
+TG	One row per subject per off-protocol therapy/study per reason off										
+VD	AGE_OFF	Number	Mandatory	Age of subject (in days) when subject was off therapy or study.	ncit:C172678	_undefined_	_undefined_	_undefined_			
+VD	DISEASE_PHASE	Code	Mandatory	The stage or period of an individual's disease.	ncit:C168878	_undefined_	_undefined_	_undefined_			
+PD						Initial Diagnosis	The first diagnosis of the individual's condition.	ncit:C156813			
+PD						Relapse	The return of a disease after a period of remission.	ncit:C38155			
+PD						Progression	A clinical, pathologic, and/or molecular finding indicating that the course of a disease is worsening in terms of extent or severity.	ncit:C35571			
+PD						Relapse/Progression	Either the return of the disease or the progression of the disease.	ncit:C174991			
+VD	DISEASE_PHASE_NUMBER	Number	Mandatory	The number of the disease phase.	ncit:C173258	_undefined_	_undefined_	_undefined_			
+VD	COURSE	Code	Mandatory	The type of protocol treatment course administered.	ncit:C168807	_undefined_	_undefined_	_undefined_			
+PD						Induction	The first choice of treatment for a particular type of cancer.	ncit:C158876			
+PD						Consolidation	Treatment that is given after initial therapy to kill any remaining cancer cells.	ncit:C15679			
+PD						Maintenance	Continuation of treatment for an extended period of time to prevent relapse.	ncit:C15688			
+VD	COURSE_NUMBER	Number	Mandatory	The number assigned to a course of therapeutic agent administration, indicating where a particular course of treatment falls within a sequence of treatments.	ncit:C166235	_undefined_	_undefined_	_undefined_			
+VD	OFF_TYPE	Code	Mandatory	The code used to designate that the subject went off therapy or off the study.	ncit:C173256	_undefined_	_undefined_	_undefined_			
+PD						Protocol therapy	Off Protocol Therapy	ncit:C173257			
+PD						Study	No longer participating in a study; not being followed and will not be retreated.	ncit:C29851			
+VD	REASON_OFF	Code	Mandatory	A coded value specifying why the subject is removed from a study.	ncit:C93611	_undefined_	_undefined_	_undefined_			
+PD						Death	Specifies whether the life of an entity has ceased.	ncit:C93546	Note: If multiple reasons "off protocol therapy" or "off study", include one observation per reason.		
+PD						Completion of Planned Therapy	The end of the planned treatment.	ncit:C168935			
+PD						Physician Decision	A position, opinion or judgment reached after consideration by a physician with reference to subject.	ncit:C48250			
+PD						Subject/Guardian Refused Further Treatment	The subject or their guardian has refused further treatment.	ncit:C168934			
+PD						Disease Progression	A clinical, pathologic, and/or molecular finding indicating that the course of a disease is worsening in terms of extent or severity.	ncit:C35571			
+PD						Development of SMN	A malignant neoplasm that arises from a pre-existing lower grade lesion, or as a result of a primary lesion that has spread to secondary sites, or due to a complication of a cancer treatment.	ncit:C4968			
+PD						Other	Different than the one(s) previously specified or mentioned.	ncit:C17649			
+											
+											
+DD	Demographics										
+TD	Demographics										
+TG	One row per subject										
+VD	SEX	Code	Mandatory	The assemblage of physical properties or qualities by which male is distinguished from female; the physical difference between male and female; the distinguishing peculiarity of male or female.	ncit:C28421	_undefined_	_undefined_	_undefined_			
+PD						Male	A person who belongs to the sex that normally produces sperm. The term is used to indicate biological sex distinctions, cultural gender role distinctions, or both.	ncit:C20197			
+PD						Female	A person who belongs to the sex that normally produces ova. The term is used to indicate biological sex distinctions, or cultural gender role distinctions, or both.	ncit:C16576			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	RACE	Code	Mandatory	A geographic ancestral origin category that is assigned to a population group based mainly on physical characteristics that are thought to be distinct and inherent.	ncit:C17049	_undefined_	_undefined_	_undefined_			
+PD						American Indian or Alaska Native	A person having origins in any of the original peoples of North and South America (including Central America) and who maintains tribal affiliation or community attachment. (OMB)	ncit:C41259	Note: May not get from some european countries.		
+PD						Asian	A person having origins in any of the original peoples of the Far East, Southeast Asia, or the Indian subcontinent, including for example, Cambodia, China, India, Japan, Korea, Malaysia, Pakistan, the Philippine Islands, Thailand, and Vietnam. (OMB)	ncit:C41260			
+PD						Black or African American	A person having origins in any of the Black racial groups of Africa. Terms such as "Haitian" or "Negro" can be used in addition to "Black or African American". (OMB)	ncit:C16352			
+PD						Multiracial	Having ancestors of several or various races.	ncit:C67109			
+PD						Native Hawaiian or Other Pacific Islander	A person having origins in any of the original peoples of Hawaii, Guam, Samoa, or other Pacific Islands. (OMB)	ncit:C41219			
+PD						White	A person having origins in any of the original peoples of Europe, the Middle East, or North Africa. (OMB)	ncit:C41261			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	ETHNICITY	Code	Mandatory	A social group characterized by a distinctive social and cultural tradition that is maintained from generation to generation. Members share a common history and origin and a sense of identification with the group. They have similar and distinctive features in their lifestyle habits and shared experiences. They often have a common genetic heritage which may be reflected in their experience of health and disease.	ncit:C16564	_undefined_	_undefined_	_undefined_			
+PD						Hispanic or Latino	A person of Cuban, Mexican, Puerto Rican, South or Central American, or other Spanish culture or origin, regardless of race. The term, "Spanish origin," can be used in addition to "Hispanic or Latino." (OMB)	ncit:C17459			
+PD						Not Hispanic or Latino	A person not of Cuban, Mexican, Puerto Rican, South or Central American, or other Spanish culture or origin, regardless of race.	ncit:C41222			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+											
+											
+DD	Demographics										
+TD	Medical History										
+TG	One row per subject per prior medical history										
+VD	MEDICAL_HISTORY	Code	Mandatory	The verbatim description of the medical history being reported.	ncit:C83118	_undefined_	_undefined_	_undefined_			
+PD						Fanconi Anemia	An autosomal recessive genetic disorder characterized by bone marrow failure, skeletal abnormalities, and an increase incidence of development of neoplasias.	ncit:C62505	Note: If subject had multiple prior medical conditions, include one observation per condition.		
+PD						Lynch Syndrome	An autosomal dominant hereditary neoplastic syndrome characterized by the development of colorectal carcinoma and a high risk of developing endometrial carcinoma, gastric carcinoma, ovarian carcinoma, renal pelvis carcinoma, and small intestinal carcinoma. Patients often develop colorectal carcinomas at an early age (mean, 45 years). In the majority of the cases the lesions arise from the proximal colon. At the molecular level, high-frequency microsatellite instability is present.	ncit:C8494			
+PD						Breast and Ovarian Cancer	An autosomal dominant inherited syndrome caused by mutations in the BRCA1 or BRCA2 genes. Patients are at high risk of developing breast cancer, particularly before the age of fifty, high risk of developing a second primary breast cancer, and high risk of developing both breast and ovarian cancer.	ncit:C8493			
+PD						Li-Fraumeni	An autosomal dominant hereditary neoplastic syndrome caused by an alteration in the p53 tumor suppressor gene. It is characterized by the development of malignant neoplasms at various anatomic sites. The malignant neoplasms associated with Li-Fraumeni syndrome include adrenal cortex carcinoma, astrocytic tumors, colorectal carcinoma, gastric carcinoma, malignant breast neoplasms, medulloblastoma, osteosarcoma, and soft tissue sarcomas.	ncit:C3476			
+											
+											
+DD	Demographics										
+TD	Survival Characteristics										
+TG	One row per subject per cause of death, per cause of death detail										
+VD	AGE_AT_LKSS	Number	Mandatory	Age of subject (in days) at the last known survival status.	ncit:C168844	_undefined_	_undefined_	_undefined_			
+VD	DISEASE_PHASE	Code	Mandatory	The stage or period of an individual's disease.	ncit:C168878	_undefined_	_undefined_	_undefined_			
+PD						Initial Diagnosis	The first diagnosis of the individual's condition.	ncit:C156813			
+PD						Relapse	The return of a disease after a period of remission.	ncit:C38155			
+PD						Progression	A clinical, pathologic, and/or molecular finding indicating that the course of a disease is worsening in terms of extent or severity.	ncit:C35571			
+PD						Relapse/Progression	Either the return of the disease or the progression of the disease.	ncit:C174991			
+VD	DISEASE_PHASE_NUMBER	Number	Mandatory	The number of the disease phase.	ncit:C173258	_undefined_	_undefined_	_undefined_			
+VD	COURSE	Code	Mandatory	The type of protocol treatment course administered.	ncit:C168807	_undefined_	_undefined_	_undefined_			
+PD						Induction	The first choice of treatment for a particular type of cancer.	ncit:C158876			
+PD						Consolidation	Treatment that is given after initial therapy to kill any remaining cancer cells.	ncit:C15679			
+PD						Maintenance	Continuation of treatment for an extended period of time to prevent relapse.	ncit:C15688			
+VD	COURSE_NUMBER	Number	Mandatory	The number assigned to a course of therapeutic agent administration, indicating where a particular course of treatment falls within a sequence of treatments.	ncit:C166235	_undefined_	_undefined_	_undefined_			
+VD	LKSS	Code	Mandatory	The individual's last known survival status.	ncit:C168931	_undefined_	_undefined_	_undefined_			
+PD						Alive	Showing characteristics of life; displaying signs of life.	ncit:C37987			
+PD						Dead	The cessation of life.	ncit:C28554			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+VD	CAUSE_OF_DEATH	Code	Mandatory	The circumstance or condition that results in the death of a living being.	ncit:C81239	_undefined_	_undefined_	_undefined_			
+PD						Disease Progression	An indication that the subject has died due to the progression of their disease.	ncit:C168970	Note: If multiple causes of death, include one observation per cause of death. However, only one cause of death can have the varaiable CAUSE_OF_DEATH_RANKING=Primary. Note: Only fill in this variable if LKSS is "Dead".		
+PD						Treatment-Related Mortality	A death that is considered to be causally linked to a treatment.	ncit:C166165			
+PD						Development of SMN	A malignant neoplasm that arises from a pre-existing lower grade lesion, or as a result of a primary lesion that has spread to secondary sites, or due to a complication of a cancer treatment.	ncit:C4968			
+PD						Other	Different than the one(s) previously specified or mentioned.	ncit:C17649			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	CAUSE_OF_DEATH_RANKING	Code	Mandatory	Assigning a weighted relevance to the cause of death.	ncit:C168932	_undefined_	_undefined_	_undefined_			
+PD						Primary	The first significant event which ultimately led to death.	ncit:C99531	Note: There may be multiple contributory causes of death, but only one primary cause of death. Note: Only fill in this variable if LKSS is "Dead".		
+PD						Contributory	Any factor contributing to the cause of death.	ncit:C168948			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+											
+											
+DD	Disease Attributes										
+TD	Disease Characteristics										
+TG	One row per subject per disease phase										
+VD	DISEASE_PHASE	Code	Mandatory	The stage or period of an individual's disease.	ncit:C168878	_undefined_	_undefined_	_undefined_			
+PD						Initial Diagnosis	The first diagnosis of the individual's condition.	ncit:C156813			
+PD						Relapse	The return of a disease after a period of remission.	ncit:C38155			
+PD						Progression	A clinical, pathologic, and/or molecular finding indicating that the course of a disease is worsening in terms of extent or severity.	ncit:C35571			
+PD						Relapse/Progression	Either the return of the disease or the progression of the disease.	ncit:C174991			
+VD	DISEASE_PHASE_NUMBER	Number	Mandatory	The number of the disease phase.	ncit:C173258	_undefined_	_undefined_	_undefined_			
+VD	LANSKY	Code	Optional	The play-performance scale for children is a parent-rated instrument which records usual play activity as the index of performance. It is similar to the Karnofsky Performance Scale for adults.	ncit:C38144	_undefined_	_undefined_	_undefined_			
+PD						100	Full active, normal.	ncit:C69426			
+PD						90	Minor restrictions in physically strenuous activity.	ncit:C69425			
+PD						80	Active, but tires more quickly.	ncit:C69424			
+PD						70	Both greater restriction of and less time spent in play activity.	ncit:C69423			
+PD						60	Up and around, but minimal active play; keeps busy with quieter activities.	ncit:C69422			
+PD						50	Gets dressed, but lies around much of the day; no active play, able to participate in all quiet play and activities.	ncit:C69421			
+PD						40	Mostly in bed; participates in quiet activities.	ncit:C70542			
+PD						30	In bed; needs assistance even for quiet play.	ncit:C70541			
+PD						20	Often sleeping; play entirely limited to very passive activities.	ncit:C70540			
+PD						10	No play; does not get out of bed.	ncit:C70539			
+PD						0	Unresponsive.	ncit:C70538			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	KARNOFSKY	Code	Optional	An index designed for classifying patients 16 years of age or older by their functional impairment.	ncit:C28013	_undefined_	_undefined_	_undefined_			
+PD						100	Normal; no complaints; no evidence of disease.	ncit:C105707			
+PD						90	Able to carry on normal activity; minor signs or symptoms of disease.	ncit:C105709			
+PD						80	Normal activity with effort; some sign or symptoms of disease.	ncit:C105710			
+PD						70	Cares for self; unable to carry on normal activity or do active work.	ncit:C105711			
+PD						60	Requires occasional assistance, but is able to care for most personal needs.	ncit:C105712			
+PD						50	Requires considerable assistance and frequent medical care.	ncit:C105713			
+PD						40	Disabled; requires special care and assistance.	ncit:C105714			
+PD						30	Severely disabled; hospitalization is indicated, although death not imminent.	ncit:C105715			
+PD						20	Very sick; hospitalization necessary; active support treatment is necessary.	ncit:C105716			
+PD						10	Moribund; fatal processes progressing rapidly.	ncit:C105718			
+PD						0	Dead.	ncit:C105720			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	GPOH_SCORE	Code	Optional	A measure of an individual's overall performance status or ability to perform their activities of daily living.	ncit:C174442	_undefined_	_undefined_	_undefined_			
+PD						1 - normal, no complaint	Normal, no complaint.	ncit:C174992			
+PD						2 - mild complaints, but needs no assistance	Mild complaints, but needs no assistance.	ncit:C174993			
+PD						3 - age-appropriate activity severely impaired	Age-appropriate activity severely impaired.	ncit:C174994			
+PD						4 - confined to bed, needs nursing care	Confined to bed, needs nursing care.	ncit:C174995			
+PD						5 - needs intensive care, seriously ill, moribund	Needs intensive care, seriously ill, moribund.	ncit:C174996			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+											
+											
+DD	Disease Attributes										
+TD	Tumor Assessment										
+TG	One row per subject per tumor assessment per tumor site										
+VD	AGE_AT_TUMOR_ASSESSMENT	Number	Mandatory	Age of subject (in days) at tumor assessment.	ncit:C174997	_undefined_	_undefined_	_undefined_			
+VD	DISEASE_PHASE	Code	Mandatory	The stage or period of an individual's disease.	ncit:C168878	_undefined_	_undefined_	_undefined_			
+PD						Initial Diagnosis	The first diagnosis of the individual's condition.	ncit:C156813			
+PD						Relapse	The return of a disease after a period of remission.	ncit:C38155			
+PD						Progression	A clinical, pathologic, and/or molecular finding indicating that the course of a disease is worsening in terms of extent or severity.	ncit:C35571			
+PD						Relapse/Progression	Either the return of the disease or the progression of the disease.	ncit:C174991			
+VD	DISEASE_PHASE_NUMBER	Number	Mandatory	The number of the disease phase.	ncit:C173258	_undefined_	_undefined_	_undefined_			
+VD	COURSE	Code	Mandatory	The type of protocol treatment course administered.	ncit:C168807	_undefined_	_undefined_	_undefined_			
+PD						Induction	The first choice of treatment for a particular type of cancer.	ncit:C158876			
+PD						Consolidation	Treatment that is given after initial therapy to kill any remaining cancer cells.	ncit:C15679			
+PD						Maintenance	Continuation of treatment for an extended period of time to prevent relapse.	ncit:C15688			
+VD	COURSE_NUMBER	Number	Mandatory	The type of protocol treatment course administered.	ncit:C166235	_undefined_	_undefined_	_undefined_			
+VD	TUMOR_DETECTION_METHOD	Code	Optional	The technique used to administer the tumor identification assessment.	ncit:C117438	_undefined_	_undefined_	_undefined_			
+PD						X-Ray	A radiographic procedure using the emission of x-rays to form an image of the structure penetrated by the radiation.	ncit:C38101	Note: If there were multiple methods, include one observation per method.		
+PD						CT Scan	A method of examining structures within the body by scanning them with X rays and using a computer to construct a series of cross-sectional scans along a single axis.	ncit:C17204			
+PD						MRI	Imaging that uses radiofrequency waves and a strong magnetic field rather than x-rays to provide amazingly clear and detailed pictures of internal organs and tissues. The technique is valuable for the diagnosis of many pathologic conditions, including cancer, heart and vascular disease, stroke, and joint and musculoskeletal disorders.	ncit:C16809			
+PD						Imaging, Not Otherwise Specified	Any technology or method that aids in the visualization of any biological process, cell, tissue or organ for use in screening, diagnosis, surgical procedures or therapy.	ncit:C17369			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	TUMOR_CLASSIFICATION	Code	Mandatory	The classification of a tumor based primarily on histopathological characteristics.	ncit:C174459	_undefined_	_undefined_	_undefined_			
+PD						Primary	A tumor at the original site of origin.	ncit:C8509			
+PD						Metastatic	A term referring to the clinical or pathologic observation of a tumor extension from its original site of growth to another anatomic site.	ncit:C14174			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	TUMOR_TISSUE_TYPE	Code	Mandatory	The type of material sample taken from a biological entity for tumor findings assessment testing.	ncit:C119940	_undefined_	_undefined_	_undefined_			
+PD						Bone	Connective tissue that forms the skeletal components of the body.	ncit:C12366			
+PD						Soft Tissue	A general term comprising tissue that is not hardened or calcified; including muscle, fat, blood vessels, nerves, tendons, ligaments and fascia.	ncit:C12471			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	TUMOR_SITE	Code	Mandatory	The anatomic site of the tumor.	ncit:C157120	_undefined_	_undefined_	_undefined_			
+PD						Abdomen	The portion of the body that lies between the thorax and the pelvis.	ncit:C12664			
+PD						Abdominal Wall	The tissues that surround the organs that are present within the abdominal cavity. The abdominal wall tissue is composed of layers of fat, parietal peritoneum, fascia, and muscles.	ncit:C28256			
+PD						Acetabulum	Two cup shaped areas, one each on the lateral side of the lower pelvis that house the head of the femur to form the ball and socket joint of the hip.	ncit:C32042			
+PD						Ankle	A gliding joint between the distal ends of the tibia and fibula and the proximal end of the talus.	ncit:C32078			
+PD						Axilla	The underside concavity where the arm and the shoulder are joined.	ncit:C12674			
+PD						Bone Marrow	The tissue occupying the spaces of bone. It consists of blood vessel sinuses and a network of hematopoietic cells which give rise to the red cells, white cells, and megakaryocytes.	ncit:C12431			
+PD						Brain	An organ composed of grey and white matter containing billions of neurons that is the center for intelligence and reasoning. It is protected by the bony cranium.	ncit:C12439			
+PD						Buttock	Either of the fleshy mounds in the rear pelvic area of the human body formed by the gluteal muscles.	ncit:C89806			
+PD						Calcaneum	The irregular and largest tarsal bone that forms the heel.	ncit:C32250			
+PD						Carpal Bone	Any of the small bones of the wrist joint, located between the radius and the ulna and the metacarpus.	ncit:C12688			
+PD						Central Nervous System	The part of the nervous system that consists of the brain, spinal cord, and meninges.	ncit:C12438			
+PD						Cervical Vertebra	Any one of the seven vertebrae that start with C1, connecting the skull to the spine, and ends with C7, which joins the cervical with the thoracic spine.	ncit:C12693			
+PD						Chest	The anterior side of the thorax from the neck to the abdomen. The shape of the chest is often regarded as potential insight into a disease process, as in the case of barrel chest and respiratory dysfunction.	ncit:C25389			
+PD						Chest Wall	The total system of structures outside the lungs that move as a part of breathing; it includes all structures from the skin to the parietal pleura.	ncit:C62484			
+PD						Clavicle	One of a pair of bones linking the scapula and the sternum. The clavicle is part of the pectoral girdle.	ncit:C12695			
+PD						Coccyx	A small bone located at the bottom of the spine. The coccyx is a result of 3-5 fused rudimentary vertebrae.	ncit:C12696			
+PD						Elbow	A type of hinge joint located between the forearm and upper arm.	ncit:C32497			
+PD						Ethmoid Bone	A light and spongy bone that is cubical in shape. This bone is positioned at the anterior part of the cranium, sitting between the two orbits, at the roof of the nose. It consists of four parts: a horizontal or cribriform plate; a perpendicular plate; and two lateral masses or labyrinths.	ncit:C12711			
+PD						Face	The anterior portion of the head extending from the forehead to the chin and ear to ear. The facial structures contain the eyes, nose and mouth, cheeks and jaws.	ncit:C13071			
+PD						Femur	The upper leg bone positioned between the pelvis and the knee.	ncit:C12717			
+PD						Fibula	The small, lateral calf bone extending from the knee to the ankle.	ncit:C12718			
+PD						Fibular Head	The highest portion of the fibula that articulates with the patella.	ncit:C32719			
+PD						Finger	Any of the digits of the hand.	ncit:C32608			
+PD						Foot	The structure found below the ankle joint required for locomotion.	ncit:C32622			
+PD						Forearm	The structure on the upper limb, between the elbow and the wrist.	ncit:C32628			
+PD						Frontal Bone	A bone of the skull forming the forehead, root of the nose and the roof of both orbits.	ncit:C32635			
+PD						Hand	The distal portion of the upper extremity. It consists of the carpus, metacarpus, and digits.	ncit:C32712			
+PD						Head and Neck	For oncology, an area of the body generally construed to comprise the base of skull and facial bones, sinuses, orbits, salivary glands, oral cavity, oropharynx, larynx, thyroid, facial and neck musculature and lymph nodes draining these areas.	ncit:C12418			
+PD						Hip/Inguinal Region	The lateral prominence of the pelvis from the waist to the thigh.	ncit:C64193			
+PD						Humerus	The upper arm bone between the shoulder and elbow.	ncit:C12731			
+PD						Ilium	The broad, dorsal, upper, and widest of the three principal bones composing either half of the pelvis.	ncit:C32765			
+PD						Intra-Abdominal	The lower region of the anterior abdominal wall located laterally to the pubic region.	ncit:C12726			
+PD						Ischium	The most posterior and ventral bone making up the pelvis.	ncit:C32884			
+PD						Kidney	One of the two bean-shaped organs located on each side of the spine in the retroperitoneum. The right kidney is located below the liver and the left kidney below the diaphragm. The kidneys filter and secret the metabolic products and minerals from the blood, thus maintaining the homeostasis. On the superior pole of each kidney there is an adrenal gland. Each kidney and adrenal gland is surrounded by fat.	ncit:C12415			
+PD						Knee	A joint connecting the lower part of the femur with the upper part of the tibia. The lower part of the femur and the upper part of the tibia are attached to each other by ligaments. Other structures of the knee joint include the upper part of the fibula, located below and parallel to the tibia, and the patella which moves as the knee bends.	ncit:C32898			
+PD						Lacrimal Bone	A small rectangular thin plate forming part of the medial orbit wall. It is located posterior to the frontal process of the maxilla and articulates with the inferior nasal concha, ethmoid, frontal, and maxillary bones.	ncit:C32906			
+PD						Leg	One of the two lower extremities in humans used for locomotion and support.	ncit:C32974			
+PD						Liver	A triangular-shaped organ located under the diaphragm in the right hypochondrium. It is the largest internal organ of the body, weighting up to 2 kg. Metabolism and bile secretion are its main functions. It is composed of cells which have the ability to regenerate.	ncit:C12392			
+PD						Lower Extremity	The limb that is composed of the hip, thigh, leg and foot.	ncit:C12742			
+PD						Lumbar Vertebra	One of the five bones situated between the thoracic vertebrae and the sacrum in the lower part of the spine.	ncit:C12744			
+PD						Lung	One of a pair of viscera occupying the pulmonary cavities of the thorax, the organs of respiration in which aeration of the blood takes place. As a rule, the right lung is slightly larger than the left and is divided into three lobes (an upper, a middle, and a lower or basal), while the left has two lobes (an upper and a lower or basal). Each lung is irregularly conical in shape, presenting a blunt upper extremity (the apex), a concave base following the curve of the diaphragm, an outer convex surface (costal surface), an inner or mediastinal surface (mediastinal surface), a thin and sharp anterior border, and a thick and rounded posterior border.	ncit:C12468			
+PD						Lymph Node	A bean-shaped organ surrounded by a connective tissue capsule. It is part of the lymphatic system and is found throughout the body. It is composed predominantly of lymphocytes and its main function is immune protection.	ncit:C12745			
+PD						Mandible	The lower jaw bone holding the lower teeth.	ncit:C12290			
+PD						Maxilla	The upper jawbone in vertebrates; it is fused to the cranium.	ncit:C26470			
+PD						Mediastinum	An anatomic site along the midline and under the sternum that contains the heart and pericardium, the bases of the great vessels, the trachea and bronchi, esophagus, thymus, lymph nodes, thoracic duct, phrenic and vagus nerves, and other structures and tissues.	ncit:C12748			
+PD						Metacarpus	Any of the five bones between the wrist and the fingers that form the skeleton of the palm.	ncit:C12751			
+PD						Metatarsus	A bone belonging to the middle part of the foot located between toes and ankle. There are 5 metatarsal bones and they are numbered from the medial side.	ncit:C12752			
+PD						Nasal Bone	One of two small oblong bones placed side by side at the middle and upper part of the face.	ncit:C33157			
+PD						Neck	The region that connects the head to the rest of the body.	ncit:C13063			
+PD						Occipital Bone	The trapezoidal-shaped bone that forms the back and part of the base of the skull.	ncit:C12757			
+PD						Parietal Bone	One of two cranial bones that by their union form the sides and roof of the skull.	ncit:C12766			
+PD						Patella	A small flat triangular bone in front of the knee that articulates with the femur and protects the knee joint.	ncit:C33282			
+PD						Pelvis	The bony, basin-shaped structure formed by the hipbones and the base of the backbone supporting the lower limbs in humans.	ncit:C12767			
+PD						Radius Bone	The long bone of the forearm that extends from the lateral aspect of the elbow to the thumb-side of the wrist.	ncit:C12777			
+PD						Retroperitoneum	Occurring in, or located in the retroperitoneum.	ncit:C28256			
+PD						Rib	Any one of the paired bones, 12 on either side, extending from the thoracic vertebrae toward the median line on the ventral aspect of the trunk. The long curved bones which form the rib cage. Generally, ribs 1 to 7 are connected to the sternum by their costal cartilages and are called true ribs, whereas ribs 8 to 12 are termed false ribs.	ncit:C12782			
+PD						Sacral Region	The triangular bone, made up of 5 fused bones of the spine, located in the lower area of the spine between the fifth lumbar vertebra and the coccyx.	ncit:C33508			
+PD						Scalp	The skin which covers the top of the head and which is usually covered by hair.	ncit:C89807			
+PD						Scapula	The flat triangle-shaped bone that connects the humerus with the clavicle in the back of the shoulder.	ncit:C12783			
+PD						Shoulder	The region of the body between the neck and the upper arm.	ncit:C25203			
+PD						Skull	The bones that form the head, made up of the bones of the braincase and face.	ncit:C12789			
+PD						Sphenoid Bone	The butterfly-shaped bone located at the base of the skull that helps to form the orbit of the eye.	ncit:C12790			
+PD						Spinal Cord	The elongated, approximately cylindrical part of the central nervous system of vertebrates that lies in the vertebral canal and from which the spinal nerves emerge.	ncit:C12464			
+PD						Spine	A series of bones, muscles, tendons, and other tissues reaching from the base of the skull to the tailbone. The vertebral column forms the axis of the skeleton and encloses as well as protects the spinal cord and the fluid surrounding the spinal cord.	ncit:C12998			
+PD						Sternum	The long, flat bone connecting with the cartilages of the first seven ribs and the clavicle.	ncit:C12793			
+PD						Talus	The bone of the foot that connects with the tibia and fibula to form the ankle joint.	ncit:C52799			
+PD						Tarsal Bone	Any one of the seven bones forming the instep of the foot.	ncit:C12796			
+PD						Temporal Bone	A large irregular bone situated at the base and side of the skull, connected with the mandible via the temporomandibular joint. The temporal bone consists of the squamous, tympanic and petrous parts. The petrous portion of the temporal bone contains the vestibulocochlear organ of the inner ear.	ncit:C12797			
+PD						Thigh	A part of the lower limb, located between hip and knee.	ncit:C33763			
+PD						Thoracic Vertebra	One of 12 vertebrae in the human vertebral column. The thoracic vertebrae are situated between the seventh cervical vertebra down to the first lumbar vertebra.	ncit:C12798			
+PD						Tibia	A bone located between the femur and the tarsus, being part of the lower leg.	ncit:C12800			
+PD						Ulna	One of the bones that comprise the forearm. The largest aspect articulates with the humerus at the elbow joint and the smallest portion of the ulna articulates with the carpal bones in the wrist.	ncit:C12809			
+PD						Upper Arm	The portion of the upper extremity between the shoulder and the elbow. For clinical purposes this term is also used to refer to the whole superior limb.	ncit:C32141			
+PD						Upper Extremity	The region of the body that includes the arm, the forearm, and hand.	ncit:C12671			
+PD						Wrist	A joint between the distal end of the radius and the proximal row of carpal bones.	ncit:C33894			
+PD						Zygomatic Bone	The union at the zygomaticotemporal suture of the temporal process of the zygomatic one and zygomatic process of the temporal bone.	ncit:C33897			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	TUMOR_LATERALITY	Code	Mandatory	A qualifier for the side of the body the tumor findings assessment is performed.	ncit:C119931	_undefined_	_undefined_	_undefined_			
+PD						Left	Being or located on or directed toward the side of the body to the west when facing north.	ncit:C25229	Note: Could be primary or metastatic tumor.		
+PD						Right	Being or located on or directed toward the side of the body to the east when facing north.	ncit:C25228			
+PD						Bilateral	Affecting both sides of the body or a matched pair of organs.	ncit:C13332			
+PD						Midline	A medial line, especially the medial line or medial plane of the body (or some part of the body).	ncit:C81170			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	SITE_WITHIN_BONE	Code	Optional	The anatomic site within the long bone.	ncit:C174998	_undefined_	_undefined_	_undefined_			
+PD						Distal	Situated farthest from a point of attachment or origin, as of a limb or bone; or directed away from the midline of the body.	ncit:C25237			
+PD						Proximal	Situated nearest to a point of attachment or origin.	ncit:C25236			
+PD						Epiphysis	The round end of the long bones.	ncit:C32529			
+PD						Metaphysis	An area of a long bone located at the junction of the diaphysis and epiphysis, which harbors the epiphyseal plate in immature bones.	ncit:C52723			
+PD						Diaphysis	The shaft of a long bone, located between the two epiphyses; it is cylindrical in shape, with walls of compact bone enclosing a central marrow cavity.	ncit:C32460			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	FRACTURE	Code	Optional	A traumatic injury to the bone in which the continuity of the bone is broken.	ncit:C3046	_undefined_	_undefined_	_undefined_			
+PD						No	The non-affirmative response to a question.	ncit:C49487	Note: Linked to each individual site.		
+PD						Yes	The affirmative response to a question.	ncit:C49488			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	LONGEST_DIAM_DIM1	Number	Mandatory	The longest possible length of a straight line passing through the center of a circular or spheroid object that connects two points on the circumference.	ncit:C96684	_undefined_	_undefined_	_undefined_			
+VD	LONGEST_DIAM_DIM2	Number	Mandatory	The second longest possible length of a straight line passing through the center of a nearly circular or spheroid object that connects two points on the circumference.	ncit:C101702	_undefined_	_undefined_	_undefined_			
+VD	LONGEST_DIAM_DIM3	Number	Mandatory	The third longest possible length of a straight line passing through the center of a nearly circular or spheroid object that connects two points on the circumference.	ncit:C101709	_undefined_	_undefined_	_undefined_			
+VD	COMPUTED_VOLUME	Number	Optional	The International Electrotechnical Commission preferred expression of radiation dose in computed tomography (CT) dosimetry. It is calculated by averaging the radiation dose delivered over x,y and z directions and expressed in the SI unit of Gray (Gy).	ncit:C101138	_undefined_	_undefined_	_undefined_			
+VD	ESTIMATED_VOLUME	Number	Optional	An estimate of the volume.	ncit:C174999	_undefined_	_undefined_	_undefined_			
+VD	TUMOR_VOLUME	Code	Optional	The volume of tumor.	ncit:C94515	_undefined_	_undefined_	_undefined_			
+PD						<200 mL	A finding of a tumor volume that is less than 200 milliters.	ncit:C175000			
+PD						>=200 mL	A finding of a tumor volume that is equal to or greater than 200 milliters.	ncit:C175001			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	JOINT_INVOLVEMENT	Code	Optional	A finding indicating the spread of cancer to a joint.	ncit:C174453	_undefined_	_undefined_	_undefined_			
+PD						No	The non-affirmative response to a question.	ncit:C49487			
+PD						Yes	The affirmative response to a question.	ncit:C49488			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	NODAL_INVOLVEMENT	Code	Optional	A finding indicating the spread of cancer to regional or distant lymph node(s).	ncit:C35529	_undefined_	_undefined_	_undefined_			
+PD						No	The non-affirmative response to a question.	ncit:C49487			
+PD						Yes	The affirmative response to a question.	ncit:C49488			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	SKIP_LESION	Code	Optional	A benign or malignant pathologic process which is patchy and skips areas which are normal (uninvolved by the pathologic process).	ncit:C174454	_undefined_	_undefined_	_undefined_			
+PD						No	The non-affirmative response to a question.	ncit:C49487			
+PD						Yes	The affirmative response to a question.	ncit:C49488			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	IPSILATERAL_NODULES	Code	Optional	A metastatic tumor nodule located in the same side of the organ in which the primary tumor occurred.	ncit:C174455	_undefined_	_undefined_	_undefined_			
+PD						No	The non-affirmative response to a question.	ncit:C49487			
+PD						Yes	The affirmative response to a question.	ncit:C49488			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	PLEURAL_EFFUSION	Code	Optional	Increased amounts of fluid within the pleural cavity. Symptoms include shortness of breath, cough, and chest pain. It is usually caused by lung infections, congestive heart failure, pleural and lung tumors, connective tissue disorders, and trauma.	ncit:C3331	_undefined_	_undefined_	_undefined_			
+PD						No	The non-affirmative response to a question.	ncit:C49487			
+PD						Yes	The affirmative response to a question.	ncit:C49488			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	PLEURAL_CYTOLOGY	Code	Optional	An examination of cells obtained from a sample of pleural fluid.	ncit:C175002	_undefined_	_undefined_	_undefined_			
+PD						Negative	A finding of normality following an examination or investigation looking for the presence of a microorganism, disease, or condition.	ncit:C38757			
+PD						Positive	A finding of abnormality following an examination or observation confirming something, such as the presence of a disease, condition, or microorganism.	ncit:C38758			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	PERITONEAL_EFFUSION	Code	Optional	The abnormal collection of fluid in the peritoneal cavity resulting in ascites.	ncit:C34402	_undefined_	_undefined_	_undefined_			
+PD						No	The non-affirmative response to a question.	ncit:C49487			
+PD						Yes	The affirmative response to a question.	ncit:C49488			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	PERITONEAL_CYTOLOGY	Code	Optional	An examination of cells obtained from a sample of peritoneal fluid.	ncit:C175524	_undefined_	_undefined_	_undefined_			
+PD						Negative	A finding of normality following an examination or investigation looking for the presence of a microorganism, disease, or condition.	ncit:C38757			
+PD						Positive	A finding of abnormality following an examination or observation confirming something, such as the presence of a disease, condition, or microorganism.	ncit:C38758			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	EXTENSION_SITE	Code	Optional	The anatomical location where metastasis was detected.	ncit:C172233	_undefined_	_undefined_	_undefined_			
+PD						Abdominal Wall	The tissues that surround the organs that are present within the abdominal cavity. The abdominal wall tissue is composed of layers of fat, parietal peritoneum, fascia, and muscles.	ncit:C28256			
+PD						Acetabulum	Two cup shaped areas, one each on the lateral side of the lower pelvis that house the head of the femur to form the ball and socket joint of the hip.	ncit:C32042			
+PD						Ankle	A gliding joint between the distal ends of the tibia and fibula and the proximal end of the talus.	ncit:C32078			
+PD						Axilla	The underside concavity where the arm and the shoulder are joined.	ncit:C12674			
+PD						Buttock	Either of the fleshy mounds in the rear pelvic area of the human body formed by the gluteal muscles.	ncit:C89806			
+PD						Calcaneum	The irregular and largest tarsal bone that forms the heel.	ncit:C32250			
+PD						Carpal Bone	Any of the small bones of the wrist joint, located between the radius and the ulna and the metacarpus.	ncit:C12688			
+PD						Cervical Vertebra	Any one of the seven vertebrae that start with C1, connecting the skull to the spine, and ends with C7, which joins the cervical with the thoracic spine.	ncit:C12693			
+PD						Chest wall	The total system of structures outside the lungs that move as a part of breathing; it includes all structures from the skin to the parietal pleura.	ncit:C62484			
+PD						Clavicle	One of a pair of bones linking the scapula and the sternum. The clavicle is part of the pectoral girdle.	ncit:C12695			
+PD						Cranium	The bones that form the head, made up of the bones of the braincase and face.	ncit:C12789			
+PD						Elbow	A type of hinge joint located between the forearm and upper arm.	ncit:C32497			
+PD						Face	The anterior portion of the head extending from the forehead to the chin and ear to ear. The facial structures contain the eyes, nose and mouth, cheeks and jaws.	ncit:C13071			
+PD						Femur	The upper leg bone positioned between the pelvis and the knee.	ncit:C12717			
+PD						Fibula	The small, lateral calf bone extending from the knee to the ankle.	ncit:C12718			
+PD						Finger	Any of the digits of the hand.	ncit:C32608			
+PD						Foot	The structure found below the ankle joint required for locomotion.	ncit:C32622			
+PD						Forearm	The structure on the upper limb, between the elbow and the wrist.	ncit:C32628			
+PD						Hand	The distal portion of the upper extremity. It consists of the carpus, metacarpus, and digits.	ncit:C32712			
+PD						Hip/Inguinal Region	The lateral prominence of the pelvis from the waist to the thigh.	ncit:C64193			
+PD						Humerus	The upper arm bone between the shoulder and elbow.	ncit:C12731			
+PD						Intra-abdominal	The lower region of the anterior abdominal wall located laterally to the pubic region.	ncit:C12726			
+PD						Intraspinal	Within the spine.	ncit:C96908			
+PD						Ischium	The most posterior and ventral bone making up the pelvis.	ncit:C32884			
+PD						Kidney	One of the two bean-shaped organs located on each side of the spine in the retroperitoneum. The right kidney is located below the liver and the left kidney below the diaphragm. The kidneys filter and secret the metabolic products and minerals from the blood, thus maintaining the homeostasis. On the superior pole of each kidney there is an adrenal gland. Each kidney and adrenal gland is surrounded by fat.	ncit:C12415			
+PD						Knee	A joint connecting the lower part of the femur with the upper part of the tibia. The lower part of the femur and the upper part of the tibia are attached to each other by ligaments. Other structures of the knee joint include the upper part of the fibula, located below and parallel to the tibia, and the patella which moves as the knee bends.	ncit:C32898			
+PD						Leg	One of the two lower extremities in humans used for locomotion and support.	ncit:C32974			
+PD						Lumbar Vertebra	One of the five bones situated between the thoracic vertebrae and the sacrum in the lower part of the spine.	ncit:C12744			
+PD						Mandible	The lower jaw bone holding the lower teeth.	ncit:C12290			
+PD						Maxilla	The upper jawbone in vertebrates; it is fused to the cranium.	ncit:C26470			
+PD						Metacarpus	Any of the five bones between the wrist and the fingers that form the skeleton of the palm.	ncit:C12751			
+PD						Metatarsus	A bone belonging to the middle part of the foot located between toes and ankle. There are 5 metatarsal bones and they are numbered from the medial side.	ncit:C12752			
+PD						Neck	The region that connects the head to the rest of the body.	ncit:C13063			
+PD						Pelvis	The bony, basin-shaped structure formed by the hipbones and the base of the backbone supporting the lower limbs in humans.	ncit:C12767			
+PD						Radius Bone	The long bone of the forearm that extends from the lateral aspect of the elbow to the thumb-side of the wrist.	ncit:C12777			
+PD						Retroperitoneum	The back of the abdomen where the kidneys lie and the great blood vessels run.	ncit:C28256			
+PD						Rib	Any one of the paired bones, 12 on either side, extending from the thoracic vertebrae toward the median line on the ventral aspect of the trunk. The long curved bones which form the rib cage. Generally, ribs 1 to 7 are connected to the sternum by their costal cartilages and are called true ribs, whereas ribs 8 to 12 are termed false ribs.	ncit:C12782			
+PD						Sacral Region	The triangular bone, made up of 5 fused bones of the spine, located in the lower area of the spine between the fifth lumbar vertebra and the coccyx.	ncit:C33508			
+PD						Scalp	The skin which covers the top of the head and which is usually covered by hair.	ncit:C89807			
+PD						Scapula	The flat triangle-shaped bone that connects the humerus with the clavicle in the back of the shoulder.	ncit:C12783			
+PD						Shoulder	The region of the body between the neck and the upper arm.	ncit:C25203			
+PD						Sternum	The long, flat bone connecting with the cartilages of the first seven ribs and the clavicle.	ncit:C12793			
+PD						Talus	The bone of the foot that connects with the tibia and fibula to form the ankle joint.	ncit:C52799			
+PD						Thigh	A part of the lower limb, located between hip and knee.	ncit:C33763			
+PD						Thoracic Vertebra	One of 12 vertebrae in the human vertebral column. The thoracic vertebrae are situated between the seventh cervical vertebra down to the first lumbar vertebra.	ncit:C12798			
+PD						Tibia	A bone located between the femur and the tarsus, being part of the lower leg.	ncit:C12800			
+PD						Toe	One of the terminal digits of the foot.	ncit:C33788			
+PD						Ulna	One of the bones that comprise the forearm. The largest aspect articulates with the humerus at the elbow joint and the smallest portion of the ulna articulates with the carpal bones in the wrist.	ncit:C12809			
+PD						Upper Arm	The portion of the upper extremity between the shoulder and the elbow. For clinical purposes this term is also used to refer to the whole superior limb.	ncit:C32141			
+PD						Wrist	A joint between the distal end of the radius and the proximal row of carpal bones.	ncit:C33894			
+PD						Other	Different than the one(s) previously specified or mentioned.	ncit:C17649			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+											
+											
+DD	Disease Attributes										
+TD	Histology										
+TG	One row per subject per histologic assessment										
+VD	AGE_AT_HIST_ASSESSMENT	Number	Mandatory	Age of subject (in days) at histology assessment.	ncit:C175004	_undefined_	_undefined_	_undefined_			
+VD	DISEASE_PHASE	Code	Mandatory	The stage or period of an individual's disease.	ncit:C168878	_undefined_	_undefined_	_undefined_			
+PD						Initial Diagnosis	The first diagnosis of the individual's condition.	ncit:C156813			
+PD						Relapse	The return of a disease after a period of remission.	ncit:C38155			
+PD						Progression	The worsening of a disease over time.	ncit:C17747			
+PD						Relapse/Progression	Either the return of the disease or the progression of the disease.	ncit:C174991			
+VD	DISEASE_PHASE_NUMBER	Number	Mandatory	The number of the disease phase.	ncit:C173258	_undefined_	_undefined_	_undefined_			
+VD	COURSE	Code	Mandatory	The type of protocol treatment course administered.	ncit:C168807	_undefined_	_undefined_	_undefined_			
+PD						Induction	The first choice of treatment for a particular type of cancer.	ncit:C158876			
+PD						Consolidation	Treatment that is given after initial therapy to kill any remaining cancer cells.	ncit:C15679			
+PD						Maintenance	Continuation of treatment for an extended period of time to prevent relapse.	ncit:C15688			
+VD	COURSE_NUMBER	Number	Mandatory	The number assigned to a course of therapeutic agent administration, indicating where a particular course of treatment falls within a sequence of treatments.	ncit:C166235	_undefined_	_undefined_	_undefined_			
+VD	HISTOLOGY	Code	Optional	The study of the structure of the cells and their arrangement to constitute tissues and, finally, the association among these to form organs. In pathology, the microscopic process of identifying normal and abnormal morphologic characteristics in tissues, by employing various cytochemical and immunocytochemical stains.	ncit:C16681	_undefined_	_undefined_	_undefined_			
+PD						Undifferentiated Ewing Tumor	An undifferentiated soft tissue sarcoma characterized by the presence of uniform round or ovoid malignant cells with a high nuclear to cytoplasmic ratio.	ncit:C121799	Note: If multiple histology assessments, include one histology finding.		
+PD						Neuro-Differentiated Ewing Tumor	A small round cell tumor with neural differentiation arising from the soft tissues or bone.	ncit:C9341			
+PD						Large Cell Ewing Tumor	Ewing sarcoma characterized by the presence of large malignant cells with prominent nucleoli and irregular contours.	ncit:C174456			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+											
+											
+DD	Testing										
+TD	Vitals										
+TG	One row per subject per vital record										
+VD	AGE_AT_VITALS	Number	Mandatory	Age of subject (in days) when vital signs were recorded.	ncit:C168845	_undefined_	_undefined_	_undefined_			
+VD	DISEASE_PHASE	Code	Mandatory	The stage or period of an individual's disease.	ncit:C168878	_undefined_	_undefined_	_undefined_			
+PD						Initial Diagnosis	The first diagnosis of the individual's condition.	ncit:C156813			
+PD						Relapse	The return of a disease after a period of remission.	ncit:C38155			
+PD						Progression	A clinical, pathologic, and/or molecular finding indicating that the course of a disease is worsening in terms of extent or severity.	ncit:C35571			
+PD						Relapse/Progression	Either the return of the disease or the progression of the disease.	ncit:C174991			
+VD	DISEASE_PHASE_NUMBER	Number	Mandatory	The number of the disease phase.	ncit:C173258	_undefined_	_undefined_	_undefined_			
+VD	COURSE	Code	Mandatory	The type of protocol treatment course administered.	ncit:C168807	_undefined_	_undefined_	_undefined_			
+PD						Induction	The first choice of treatment for a particular type of cancer.	ncit:C158876			
+PD						Consolidation	Treatment that is given after initial therapy to kill any remaining cancer cells.	ncit:C15679			
+PD						Maintenance	Continuation of treatment for an extended period of time to prevent relapse.	ncit:C15688			
+VD	COURSE_NUMBER	Number	Mandatory	The number assigned to a course of therapeutic agent administration, indicating where a particular course of treatment falls within a sequence of treatments.	ncit:C166235	_undefined_	_undefined_	_undefined_			
+VD	VITALS_TEST	Code	Optional	The act of assessing an individual's current temperature, heart rate, respiratory rate, pulse oxygenation, and blood pressure.	ncit:C49672	_undefined_	_undefined_	_undefined_			
+PD						Weight	The vertical force exerted by a mass as a result of gravity.	ncit:C25208	Note: BMI should only be what is reported on CRF, not calculated from weight and height when submitting data to the PCDC		
+PD						Height	The vertical measurement or distance from the base to the top of an object; the vertical dimension of extension.	ncit:C25347			
+PD						BMI	An individual's weight in kilograms divided by the square of the height in meters.	ncit:C16358			
+PD						BSA	A measure of the 2-dimensional extent of the body surface (i.e., the skin). Body surface area (BSA) can be calculated by mathematical formula or from a chart that relates height to weight. BSA is often an important factor in dosing.	ncit:C25157			
+VD	VITALS_RESULT	String	Optional	The outcome of the vital signs assessment.	ncit:C83108	_undefined_	_undefined_	_undefined_			
+VD	VITALS_RESULT_NUMERIC	Number	Optional	The numeric values of the vital signs.	ncit:C173268	_undefined_	_undefined_	_undefined_			
+VD	VITALS_RESULT_UNIT	Code	Optional	The unit used to record and describe the result of a test investigating a vital sign.	ncit:C49675	_undefined_	_undefined_	_undefined_			
+PD						kg	A basic SI unit of mass. It is defined as the mass of an international prototype in the form of a platinum-iridium cylinder kept at Sevres in France. A kilogram is equal to 1,000 grams and 2.204 622 6 pounds.	ncit:C28252	Note: Only fill in this variable if a numeric result is provided in VITALS_RESULT_NUMERIC.		
+PD						cm	A basic unit of length in the former CGS version of metric system, equal to one hundredth of a meter or approximately 0.393 700 787 inch.	ncit:C49668			
+PD						m2	A SI unit of area measurement equal to a square whose sides are one meter long. Square meter is equal to 10,000 square centimeters; 0.01 are; 1.196 square yards; 10.76 square feet; 1550 square inches.	ncit:C42569			
+PD						kg/m2	The SI derived unit of spread rate of a substance by mass, used also as a measure of area density and as a dose calculation unit.	ncit:C49671			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+											
+											
+DD	Testing										
+TD	Labs										
+TG	One row per subject per lab result										
+VD	AGE_AT_LAB	Number	Mandatory	Age of subject (in days) at laboratory assessment.	ncit:C175005	_undefined_	_undefined_	_undefined_			
+VD	DISEASE_PHASE	Code	Mandatory	The stage or period of an individual's disease.	ncit:C168878	_undefined_	_undefined_	_undefined_			
+PD						Initial Diagnosis	The first diagnosis of the individual's condition.	ncit:C156813			
+PD						Relapse	The return of a disease after a period of remission.	ncit:C38155			
+PD						Progression	A clinical, pathologic, and/or molecular finding indicating that the course of a disease is worsening in terms of extent or severity.	ncit:C35571			
+PD						Relapse/Progression	Either the return of the disease or the progression of the disease.	ncit:C174991			
+VD	DISEASE_PHASE_NUMBER	Number	Mandatory	The number of the disease phase.	ncit:C173258	_undefined_	_undefined_	_undefined_			
+VD	COURSE	Code	Mandatory	The type of protocol treatment course administered.	ncit:C168807	_undefined_	_undefined_	_undefined_			
+PD						Induction	The first choice of treatment for a particular type of cancer.	ncit:C158876			
+PD						Consolidation	Treatment that is given after initial therapy to kill any remaining cancer cells.	ncit:C15679			
+PD						Maintenance	Continuation of treatment for an extended period of time to prevent relapse.	ncit:C15688			
+VD	COURSE_NUMBER	Number	Mandatory	The number assigned to a course of therapeutic agent administration, indicating where a particular course of treatment falls within a sequence of treatments.	ncit:C166235	_undefined_	_undefined_	_undefined_			
+VD	LAB_TEST	Code	Optional	A character or string that represents the full name of the laboratory assessment.	ncit:C117142	_undefined_	_undefined_	_undefined_			
+PD						ESR	A quantitative measurement of the distance that red blood cells travel in one hour in a sample of unclotted blood.	ncit:C74611			
+PD						LDH	A quantitative measurement of the amount of lactate dehydrogenase present in a sample.	ncit:C64855			
+VD	LAB_SPEC_TYPE	Code	Optional	The type of a material sample taken from a biological entity for laboratory testing.	ncit:C83315	_undefined_	_undefined_	_undefined_			
+PD						Blood	A small volume of blood removed for testing or storage.	ncit:C17610			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	LAB_RESULT	String	Optional	Lab Test Result	ncit:C36292	_undefined_	_undefined_	_undefined_			
+VD	LAB_RESULT_NUMERIC	Number	Optional	A numeric representation of a test result.	ncit:C70952	_undefined_	_undefined_	_undefined_			
+VD	LAB_RESULT_UNIT	Code	Optional	The unit of measure for the original laboratory test result.	ncit:C83106	_undefined_	_undefined_	_undefined_			
+PD						U/L	An arbitrary unit of substance concentration equal to the concentration at which one liter of mixture contains one unit of a substance.	ncit:C67456	Note: Only fill in this variable if a numeric result is provided in LAB_RESULT_NUMERIC.		
+PD						mm/h	A unit of both speed (scalar) and velocity (vector), defined as the distance of one millimeter travelled per unit time equal to one hour.	ncit:C67419			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	THRESHOLD_HIGH	Number	Optional	The maximum level that must be exceeded for a certain reaction to occur or be manifested.	ncit:C177365	_undefined_	_undefined_	_undefined_			
+											
+											
+DD	Testing										
+TD	Immunohistochemistry										
+TG	One row per subject per immunohistochemistry finding										
+VD	AGE_AT_IHC	Number	Mandatory	Age of subject (in days) at immunohistochemistry assessment.	ncit:C175006	_undefined_	_undefined_	_undefined_			
+VD	DISEASE_PHASE	Code	Mandatory	The stage or period of an individual's disease.	ncit:C168878	_undefined_	_undefined_	_undefined_			
+PD						Initial Diagnosis	The first diagnosis of the individual's condition.	ncit:C156813			
+PD						Relapse	The return of a disease after a period of remission.	ncit:C38155			
+PD						Progression	A clinical, pathologic, and/or molecular finding indicating that the course of a disease is worsening in terms of extent or severity.	ncit:C35571			
+PD						Relapse/Progression	Either the return of the disease or the progression of the disease.	ncit:C174991			
+VD	DISEASE_PHASE_NUMBER	Number	Mandatory	The number of the disease phase.	ncit:C173258	_undefined_	_undefined_	_undefined_			
+VD	COURSE	Code	Mandatory	The type of protocol treatment course administered.	ncit:C168807	_undefined_	_undefined_	_undefined_			
+PD						Induction	The first choice of treatment for a particular type of cancer.	ncit:C158876			
+PD						Consolidation	Treatment that is given after initial therapy to kill any remaining cancer cells.	ncit:C15679			
+PD						Maintenance	Continuation of treatment for an extended period of time to prevent relapse.	ncit:C15688			
+VD	COURSE_NUMBER	Number	Mandatory	The number assigned to a course of therapeutic agent administration, indicating where a particular course of treatment falls within a sequence of treatments.	ncit:C166235	_undefined_	_undefined_	_undefined_			
+VD	IHC_TEST	Code	Optional	A diagnostic test in which an antibody is used to link a cellular antigen specifically to a stain that can be seen with a microscope.	ncit:C51944	_undefined_	_undefined_	_undefined_			
+PD						PAS	This is an all-round useful stain for many things, including glycogen, mucin, mucoprotein, glycoprotein, as well as fungi. The reaction is based on the oxidation of glycol group to aldehydes by periodate. The schiff's reagent selectively stains the aldehydes to a rose pink color. PAS is useful for outlining tissue structures--basement membranes, capsules, blood vessels, etc.	ncit:C23019			
+PD						S100	A family of low molecular weight proteins that are characterized by the presence of two EF-hand calcium binding domains. These proteins form homodimers that localize either in the cytoplasm or nucleus of neural crest-derived cells and are involved in the regulation of many cellular processes such as cell cycle progression and differentiation.	ncit:C29924			
+PD						NSE	Gamma-enolase (434 aa, ~47 kDa) is encoded by the human ENO2 gene. This protein is involved in glycolysis, neurotrophy and neuroprotection.	ncit:C62216			
+PD						Vimentin	Vimentin (466 aa, ~54 kDa) is encoded by the human VIM gene. This protein plays a role in the localization of organelles and other cellular components.	ncit:C48797			
+PD						Desmin	Desmin (470 aa, ~54 kDa) is encoded by the human DES gene. This protein is involved in the regulation of cytoskeletal dynamics in muscle cells.	ncit:C96450			
+PD						CD99	CD99 antigen (185 aa, ~19 kDa) is encoded by the human CD99 gene. This protein plays a role in cell adhesion.	ncit:C102941			
+PD						FLI-1	Friend leukemia integration 1 transcription factor (452 aa, ~51 kDa) is encoded by the human FLI1 gene. This protein plays a role in the modulation of transcription.	ncit:C18566			
+PD						CD45	Receptor-type tyrosine-protein phosphatase C (1304 aa, ~147 kDa) is encoded by the human PTPRC gene. This protein plays a role in protein dephosphorylation.	ncit:C17282			
+VD	IHC_RESULT	String	Optional	The result from the immunohistochemical test.	ncit:C175007	_undefined_	_undefined_	_undefined_			
+											
+											
+DD	Testing										
+TD	Molecular Analysis										
+TG	One row per subject per molecular abnormality										
+VD	AGE_AT_MOLECULAR_ANALYSIS	Number	Mandatory	Age of subject (in days) when molecular analysis was performed.	ncit:C168848	_undefined_	_undefined_	_undefined_			
+VD	DISEASE_PHASE	Code	Mandatory	The stage or period of an individual's disease.	ncit:C168878	_undefined_	_undefined_	_undefined_			
+PD						Initial Diagnosis	The first diagnosis of the individual's condition.	ncit:C156813			
+PD						Relapse	The return of a disease after a period of remission.	ncit:C38155			
+PD						Progression	A clinical, pathologic, and/or molecular finding indicating that the course of a disease is worsening in terms of extent or severity.	ncit:C35571			
+PD						Relapse/Progression	Either the return of the disease or the progression of the disease.	ncit:C174991			
+VD	DISEASE_PHASE_NUMBER	Number	Mandatory	The number of the disease phase.	ncit:C173258	_undefined_	_undefined_	_undefined_			
+VD	COURSE	Code	Mandatory	The type of protocol treatment course administered.	ncit:C168807	_undefined_	_undefined_	_undefined_			
+PD						Induction	The first choice of treatment for a particular type of cancer.	ncit:C158876			
+PD						Consolidation	Treatment that is given after initial therapy to kill any remaining cancer cells.	ncit:C15679			
+PD						Maintenance	Continuation of treatment for an extended period of time to prevent relapse.	ncit:C15688			
+VD	COURSE_NUMBER	Number	Mandatory	The number assigned to a course of therapeutic agent administration, indicating where a particular course of treatment falls within a sequence of treatments.	ncit:C166235	_undefined_	_undefined_	_undefined_			
+VD	TUMOR_CLASSIFICATION	Code	Mandatory	The classification of a tumor based primarily on histopathological characteristics.	ncit:C174459	_undefined_	_undefined_	_undefined_			
+PD						Primary	A tumor at the original site of origin.	ncit:C8509			
+PD						Metastatic	A malignant solid neoplasm that has spread from its original site of growth to another anatomic site.	ncit:C127155			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	MOLECULAR_ANALYSIS_METHOD	Code	Mandatory	Molecular Analysis Method	ncit:C158954	_undefined_	_undefined_	_undefined_			
+PD						Fluorescence In Situ Hybridization	A physical mapping approach that uses fluorescent tags to detect hybridization of probes within metaphase chromosomes or less condensed somatic interphase chromatin. This technique can be used for identification of chromosomal abnormalities and for gene mapping.	ncit:C17563			
+PD						Polymerase Chain Reaction	A method for amplifying a DNA base sequence using multiple rounds of heat denaturation of the DNA and annealing of oligonucleotide primers complementary to flanking regions in the presence of a heat-stable polymerase. This results in duplication of the targeted DNA region. Newly synthesized DNA strands can subsequently serve as additional templates for the same primer sequences, so that successive rounds of primer annealing, strand elongation, and dissociation produce rapid and highly specific amplification of the desired sequence. PCR also can be used to detect the existence of the defined sequence in a DNA sample.	ncit:C17003			
+PD						Next Generation Sequencing	Technologies that facilitate the rapid determination of the DNA sequence of large numbers of strands or segments of DNA.	ncit:C101293			
+PD						Cytogenetics	The branch of biology that studies the cellular aspects of heredity, especially the chromosomes. Includes the study of disease states caused by numerical and structural chromosome abnormalities.	ncit:C16487			
+PD						Genotyping	The determination of the DNA sequence of an individual.	ncit:C45447			
+PD						Other	Different than the one(s) previously specified or mentioned.	ncit:C17649			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	MOLECULAR_ABNORMALITY	Code	Mandatory	A molecular or cytogenic abnormality which occurs in either human disease states or disease models.	ncit:C3910	_undefined_	_undefined_	_undefined_			
+PD						t(2;16)(q35;p11)	A chromosomal translocation involving the FEV gene at 2q35 and the FUS gene at 16p11.	ncit:C174465	Note: If multiple variants, include one observation per variant.		
+PD						12q Gain	A chromosomal aberration where there are 3 copies of the long arm of chromosome 12. This aberration is associated with 12q duplication syndrome.	ncit:C36441			
+PD						16q Loss	A cytogenetic abnormality that refers to the loss of all or part of the long arm of chromosome 16 (16q).	ncit:C36515			
+PD						1q Gain	A cytogenetic abnormality that refers to allelic gain within the chromosomal arm 1q.	ncit:C36482			
+PD						8q Gain	A chromosomal abnormality that refers to the gain of genetic material in the long arm of chromosome 8.	ncit:C36488			
+PD						BCOR Rearranged	A molecular abnormality indicating rearrangement of the BCOR gene.	ncit:C174461			
+PD						BCOR-MAML3	A fusion gene that results from a chromosomal translocation t(X;4)(p11;q31) which fuses part of exon 15 of the BCOR gene in frame with exon 2 of the MAML3 gene. This fusion is associated with undifferentiated small blue round cell sarcomas.	ncit:C174487			
+PD						CCNB3-BCOR	A fusion gene that results from a paracentric chromosomal inversion inv(X)(p11.4;p11.22) which fuses the stop codon of the BCOR gene to exon 5 of the CCNB3 gene. This fusion is associated with bone sarcomas.	ncit:C139666			
+PD						CDKN2A	A change in the nucleotide sequence of the CDKN2A gene.	ncit:C128817			
+PD						CIC Rearranged	A molecular abnormality indicating rearrangement of the CIC gene.	ncit:C165668			
+PD						CIC-DUX4	A fusion gene that results from a chromosomal translocation t(4;19)(q35;q13) which fuses exon 20 of the CIC gene to exon 1 of the DUX4 gene. This fusion is associated with soft tissue sarcoma.	ncit:C139663			
+PD						CIC-DUX4L10	A fusion gene that results from a chromosomal translocation t(10;19)(q26;q13) which fuses the CIC gene to the DUX4L10 gene, a pseudogene that is member of the DUX4L gene family cluster found at 10q26. This fusion is associated with the CIC-rearranged small blue round cell subtype of soft tissue sarcoma.	ncit:C174463			
+PD						EWSR1 Rearranged	A molecular abnormality indicating rearrangement of the EWSR1 gene.	ncit:C165667			
+PD						EWSR1-ATF1	A fusion gene that results from a chromosomal translocation t(12;22)(q13;q12) which fuses the first 7 or 8 exons of the EWSR1 gene on the 5' side of exon 4 or 5 of the ATF1 gene. This rearrangement is associated with both malignant clear cell sarcoma of the soft tissue and angiomatoid fibrous histiocytoma.	ncit:C99216			
+PD						EWSR1-CREB1	A fusion gene that results from a chromosomal translocation t(2;22)(q34;q12) which fuses the first 7 exons of the EWSR1 gene to the 5' side of exon 7 of the CREB1 gene. This rearrangement is associated with angiomatoid fibrous histiocytoma and rare cases of malignant clear cell sarcoma of the soft tissue.	ncit:C99249			
+PD						EWSR1-DDIT3	A fusion gene that results from a chromosomal translocation t(12;22)(q13;p11) which fuses either the first 7 or the first 10 exons of the EWSR1 gene with exon 2 of the DDIT3 gene. This rearrangement is associated with myxoid liposarcoma.	ncit:C99200			
+PD						EWSR1-ERG	A fusion gene that results from a chromosomal translocation t(21;22)(q21;q12) which fuses the EWSR1 gene with the ERG gene. This rearrangement is associated with both Ewing tumor/peripheral primitive neuroectodermal tumor and desmoplastic small round cell sarcoma.	ncit:C99211			
+PD						EWSR1-ETV1	A fusion gene that results from a chromosomal translocation t(7;22)(p22;q12) which fuses exon 7 of the EWSR1 gene to either exon 10 or 11 of the ETV1 gene. This rearrangement is associated with Ewing sarcoma.	ncit:C99259			
+PD						EWSR1-ETV4	A fusion gene (~2.1 kb) that results from a chromosomal translocation t(17;22)(q21;q12) which fuses the first seven exons of the EWSR1 gene to the last 6 exons of the ETV4 gene. This rearrangement is associated with Ewing sarcoma.	ncit:C99262			
+PD						EWSR1-FEV	A fusion gene that results from a chromosomal translocation t(2;22)(q36;q12) which fuses either the first seven or ten exons of the EWSR1 gene with exon 1 or 2 of the FEV gene. This rearrangement is associated with Ewing tumor/peripheral primitive neuroectodermal tumor.	ncit:C99226			
+PD						EWSR1-FLI1	A fusion gene that results from a chromosomal translocation t(11;22)(q24;q12) which fuses the first seven or ten exons of the EWSR1 gene with exon 5, 6 or 8 of the FLI1 gene. This rearrangement is associated with Ewing tumor/peripheral primitive neuroectodermal tumor.	ncit:C99202			
+PD						EWSR1-KLF17	A rare fusion gene that results from a chromosomal translocation t(1;22)(p34;q12) which fuses portions of the EWSR1 gene with the 5'-untranslated region of the KLF17 gene. This rearrangement is associated with myoepithelial tumors of soft tissue and bone.	ncit:C174474			
+PD						EWSR1-NR4A3	A fusion gene that results from a chromosomal translocation t(9;22)(q22-31;q11-12) which fuses the first half of the EWSR1 gene to the entire coding sequence of the NR4A3 gene. This rearrangement is associated with extraskeletal myxoid chondrosarcomas.	ncit:C99252			
+PD						EWSR1-PBX1	A fusion gene that results from a chromosomal translocation t(1;22)(q23;q12) which fuses exon 8 of the EWSR1 gene to exon 5 of the PBX1 gene. This fusion may be associated with myoepithelioma.	ncit:C139668			
+PD						EWSR1-POU5F1	A fusion gene that results from a chromosomal translocation t(6;22)(p21;q12) which fuses the first six exons of the EWSR1 gene to exon 2 of the POU5F1 gene. This rearrangement is associated with hidradenoma and one case of mucoepidermoid carcinoma of the salivary glands.	ncit:C99256			
+PD						EWSR1-WT1	A fusion gene that results from a chromosomal translocation t(11;22)(p13;q12) which fuses the intron between exons 7 and 8 of the EWSR1 gene with the intron between exons 7 and 8 of the WT1 gene. This rearrangement is associated with desmoplastic small round cell sarcoma.	ncit:C99213			
+PD						EWSR1-ZNF444	A fusion gene that results from a chromosomal translocation t(19;22)(q13;q12) which fuses exon 8 of the EWSR1 gene to exon 5 of the ZNF444 gene. This fusion may be associated with myoepithelioma.	ncit:C139731			
+PD						FUS Rearranged	A molecular abnormality indicating rearrangement of the FUS gene.	ncit:C174462			
+PD						FUS Translocation Present	A cytogenetic abnormality that refers to any translocation involving the FUS gene.	ncit:C168530			
+PD						FUS-DDIT3	A fusion gene that results from a chromosomal translocation t(12;16)(q13;p11) which fuses either the first 5, 7 or 8 exons of the FUS gene with exon 2 of the DDIT3 gene. This rearrangement is associated with myxoid liposarcoma.	ncit:C99279			
+PD						FUS-ERG	A fusion gene that results from a chromosomal translocation t(16;21)(p11;q22) which fuses the FUS gene with the ERG gene. This rearrangement is associated with acute myeloid leukemia.	ncit:C99281			
+PD						FUS-FEV	A fusion gene that results from a chromosomal translocation t(2;16)(q35;p11) which fuses exon 10 of the FUS gene with exon 2 of the FEV gene. This rearrangement is associated with Ewing sarcoma.	ncit:C174466			
+PD						FUS-KLF17	A fusion gene that results from a chromosomal translocation t(1;16)(p34;p11) which fuses either intron 4 or exon 6 of the FUS gene with 5'-untranslated region of the KLF17 gene. This rearrangement is associated with myoepithelial tumors of soft tissue and bone.	ncit:C174473			
+PD						inv(X)(p11.4;p11.22)	A paracentric chromosomal inversion of the short arm of the X chromosome involving the BCOR gene at Xp11.4 and the CCNB3 gene at Xp11.22.	ncit:C174489			
+PD						STAG2	A change in the nucleotide sequence of the STAG2 gene.	ncit:C153513			
+PD						t(1;16)(p34;p11)	A chromosomal translocation involving the KLF17 gene at 1p34 and the FUS gene at 16p11.	ncit:C174475			
+PD						t(1;22)(p34;q12)	A chromosomal translocation involving the KLF17 gene at 1p34 and the EWSR1 gene at 22q12.	ncit:C174476			
+PD						t(1;22)(q23;q12)	A chromosomal translocation involving the PBX1 gene at 1q23 and the EWSR1 gene at 22q12.	ncit:C174477			
+PD						t(10;19)(q26;q13)	A cytogenetic abnormality that refers to the translocation involving the genes CIC (capicua transcriptional suppressor) on chromosome 19 and DUX4L (double homeobox 4-like) on chromosome 10 resulting in CIC-DUX4L fusion.	ncit:C120223			
+PD						t(11;22)(p13;q12)	A chromosomal translocation involving the WT1 gene on chromosome 11p31 and the EWSR1 gene on chromosome 22q12.	ncit:C36375			
+PD						t(11;22)(q24;q12)	A chromosomal translocation involving the FLI1 gene on chromosome 11q24 and the EWSR1 gene on chromosome 22q12.	ncit:C27214			
+PD						t(12;16)(q13;p11)	A chromosomal translocation that involves chromosome 12 and chromosome 16. It is often associated with the development of angiomatoid fibrous histiocytoma or myxoid liposarcoma.	ncit:C36317			
+PD						t(12;22)(q13.12;q12)	A chromosomal translocation involving the ATF1 gene at 12q13.12 and the EWSR1 gene at 22q12.	ncit:C174478			
+PD						t(12;22)(q13.3;q12)	A chromosomal translocation involving the DDIT3 gene at 12q13.3 and the EWSR1 gene at 22q12.	ncit:C174479			
+PD						t(17;22)(q21;q12)	A chromosomal translocation involving the ETV4 gene on chromosome 17q21 and the EWSR1 gene on chromosome 22q12.	ncit:C36369			
+PD						t(19;22)(q13;q12)	A chromosomal translocation involving the ZNF444 gene at 19q13 and the EWSR1 gene at 22q12.	ncit:C174480			
+PD						t(2;22)(q33;q12)	A chromosomal translocation involving the CREB1 gene on chromosome 2q33 and the EWSR1 gene on chromosome 22q12.	ncit:C37249			
+PD						t(2;22)(q34;q12)	A chromosomal translocation involving the CREB1 gene at 2q34 and the EWSR1 gene at 22q12.	ncit:C174481			
+PD						t(16;21)(p11;q22)	A chromosomal translocation involving the FUS gene on chromosome 16p11 and the ERG gene on chromosome 21q22.	ncit:C36616			
+PD						t(21;22)(q22;q12)	A chromosomal translocation associated with Ewing Sarcoma/Peripheral Primitive Neuroectodermal Tumor and Olfactory Neuroblastoma.	ncit:C36367			
+PD						t(4;19)(q25;q13)	A chromosomal translocation involving the CIC gene at 19q13 and a second breakpoint on the long arm of chromosome 4 (4q25).	ncit:C174482			
+PD						t(4;19)(q35;q13)	A cytogenetic abnormality that refers to the translocation involving the genes CIC (capicua transcriptional suppressor) on chromosome 19 and DUX4 (double homeobox 4) on chromosome 4 resulting in CIC-DUX4 fusion.	ncit:C120222			
+PD						t(6;22)(p21;q12)	A chromosomal translocation involving the POU5F1 gene at 6p21 and the EWSR1 gene at 22q12.	ncit:C174483			
+PD						t(7;22)(p22;q12)	A cytogenetic abnormality that refers to the translocation of the short arm (p22) of chromosome 7 and the long arm (q12) of chromosome 22.	ncit:C36368			
+PD						t(9;17)(q22;q11)	A chromosomal translocation involving the NR4A3 gene on chromosome 9q31 and the TAF15 gene on chromosome 17q12.	ncit:C36393			
+PD						t(9;22)(q22;q12)	A chromosomal translocation involving the NR4A3 gene at 9q22 and the EWSR1 gene at 22q12.	ncit:C174484			
+PD						t(X;22((p11;q13)	A chromosomal translocation involving the BCOR gene at Xp11 and the ZC3H7B gene at 22q13.	ncit:C174495			
+PD						t(X;4)(p11;q31)	A chromosomal translocation involving the BCOR gene at Xp11 and the MAML3 gene at 4q31.	ncit:C174490			
+PD						TAF15-NR4A3	A fusion gene that results from a chromosomal translocation t(9;17)(q22;q11) which fuses exon 6 of the TAF15 gene to the entire coding sequence of the NR4A3 gene. This rearrangement is associated with extraskeletal myxoid chondrosarcoma.	ncit:C99501			
+PD						TP53	A change in the nucleotide sequence of the TP53 gene.	ncit:C118396			
+PD						ZC3H7B-BCOR	A fusion gene that results from a chromosomal translocation t(X;22)(p11;q13) which fuses exon 10 of the ZC3H7B gene to either exon 7 or 8 of the BCOR gene. This fusion is associated with both undifferentiated small blue round cell sarcomas and endometrial stromal sarcomas.	ncit:C174491			
+PD						None Detected	An indication that cytogenetic abnormalities were not detected in a sample.	ncit:C158864			
+PD						Other	Different than the one(s) previously specified or mentioned.	ncit:C17649			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	VARIANT_TYPE	Code	Mandatory	A variation in or modification of the molecular sequence of a gene or gene product.	ncit:C97926	_undefined_	_undefined_	_undefined_			
+PD						Translocation	Translocation	ncit:C3420	Note: This does not need to be completed by data submitter - this will be derived post-submission.		
+PD						Inversion	Inversion	ncit:C45589			
+PD						Mutation	Mutation	ncit:C45576			
+PD						Single Nucleotide Variant	Single Nucleotide Variant	ncit:C164674			
+PD						Copy Number Alteration	Copy Number Alteration	ncit:C40207			
+PD						Rearrangement	Rearrangement	ncit:C21069			
+PD						Deletion	Deletion	ncit:C19296			
+PD						Amplification	Amplification	ncit:C25418			
+PD						Other	Other	ncit:C17649			
+PD						Unknown	Unknown	ncit:C17998			
+PD						Not Reported	Not Reported	ncit:C43234			
+VD	CHROMOSOME	String	Mandatory	One of the bodies in the cell nucleus that is the bearer of genes, has the form of a delicate chromatin filament during interphase, contracts to form a compact cylinder segmented into two arms by the centromere during metaphase and anaphase stages of cell division, and is capable of reproducing its physical and chemical structure through successive cell divisions.	ncit:C13202	_undefined_	_undefined_	_undefined_			
+VD	GENE1	Code	Mandatory	The gene symbol that represents either a single gene that has a mutation or the gene that comprises the 5' portion of the coding sequence involved in a fusion gene mutation.	ncit:C173595	_undefined_	_undefined_	_undefined_			
+VD	GENE2	Code	Mandatory	The gene symbol that represents the gene that comprises the 3' portion of the coding sequence for a fusion gene.	ncit:C171253	_undefined_	_undefined_	_undefined_			
+											
+											
+DD	Treatment										
+TD	Biopsy/Surgical Procedures										
+TG	One record per subject per surgery										
+VD	AGE_AT_PROCEDURE	Number	Mandatory	Age of subject (in days) at procedure.	ncit:C175008	_undefined_	_undefined_	_undefined_			
+VD	DISEASE_PHASE	Code	Mandatory	The stage or period of an individual's disease.	ncit:C168878	_undefined_	_undefined_	_undefined_			
+PD						Initial Diagnosis	The first diagnosis of the individual's condition.	ncit:C156813			
+PD						Relapse	The return of a disease after a period of remission.	ncit:C38155			
+PD						Progression	A clinical, pathologic, and/or molecular finding indicating that the course of a disease is worsening in terms of extent or severity.	ncit:C35571			
+PD						Relapse/Progression	Either the return of the disease or the progression of the disease.	ncit:C174991			
+VD	DISEASE_PHASE_NUMBER	Number	Mandatory	The number of the disease phase.	ncit:C173258	_undefined_	_undefined_	_undefined_			
+VD	COURSE	Code	Mandatory	The type of protocol treatment course administered.	ncit:C168807	_undefined_	_undefined_	_undefined_			
+PD						Induction	The first choice of treatment for a particular type of cancer.	ncit:C158876			
+PD						Consolidation	Treatment that is given after initial therapy to kill any remaining cancer cells.	ncit:C15679			
+PD						Maintenance	Continuation of treatment for an extended period of time to prevent relapse.	ncit:C15688			
+VD	COURSE_NUMBER	Number	Mandatory	The number assigned to a course of therapeutic agent administration, indicating where a particular course of treatment falls within a sequence of treatments.	ncit:C166235	_undefined_	_undefined_	_undefined_			
+VD	TUMOR_CLASSIFICATION	Code	Optional	The classification of a tumor based primarily on histopathological characteristics.	ncit:C174459	_undefined_	_undefined_	_undefined_			
+PD						Primary	A tumor at the original site of origin.	ncit:C8509			
+PD						Metastatic	A malignant solid neoplasm that has spread from its original site of growth to another anatomic site.	ncit:C127155			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	TUMOR_TISSUE_TYPE	Code	Mandatory	The type of material sample taken from a biological entity for tumor findings assessment testing.	ncit:C119940	_undefined_	_undefined_	_undefined_			
+PD						Bone	Connective tissue that forms the skeletal components of the body.	ncit:C12366			
+PD						Soft Tissue	A general term comprising tissue that is not hardened or calcified; including muscle, fat, blood vessels, nerves, tendons, ligaments and fascia.	ncit:C12471			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	PROCEDURE_SITE	Code	Mandatory	The anatomical site on which surgery was performed.	ncit:C164323	_undefined_	_undefined_	_undefined_			
+PD						Abdomen	The portion of the body that lies between the thorax and the pelvis.	ncit:C12664			
+PD						Abdominal Wall	The tissues that surround the organs that are present within the abdominal cavity. The abdominal wall tissue is composed of layers of fat, parietal peritoneum, fascia, and muscles.	ncit:C28256			
+PD						Acetabulum	Two cup shaped areas, one each on the lateral side of the lower pelvis that house the head of the femur to form the ball and socket joint of the hip.	ncit:C32042			
+PD						Ankle	A gliding joint between the distal ends of the tibia and fibula and the proximal end of the talus.	ncit:C32078			
+PD						Axilla	The underside concavity where the arm and the shoulder are joined.	ncit:C12674			
+PD						Bone Marrow	The tissue occupying the spaces of bone. It consists of blood vessel sinuses and a network of hematopoietic cells which give rise to the red cells, white cells, and megakaryocytes.	ncit:C12431			
+PD						Brain	An organ composed of grey and white matter containing billions of neurons that is the center for intelligence and reasoning. It is protected by the bony cranium.	ncit:C12439			
+PD						Buttock	Either of the fleshy mounds in the rear pelvic area of the human body formed by the gluteal muscles.	ncit:C89806			
+PD						Calcaneum	The irregular and largest tarsal bone that forms the heel.	ncit:C32250			
+PD						Carpal Bone	Any of the small bones of the wrist joint, located between the radius and the ulna and the metacarpus.	ncit:C12688			
+PD						Central Nervous System	The part of the nervous system that consists of the brain, spinal cord, and meninges.	ncit:C12438			
+PD						Cervical Vertebra	Any one of the seven vertebrae that start with C1, connecting the skull to the spine, and ends with C7, which joins the cervical with the thoracic spine.	ncit:C12693			
+PD						Chest	The anterior side of the thorax from the neck to the abdomen. The shape of the chest is often regarded as potential insight into a disease process, as in the case of barrel chest and respiratory dysfunction.	ncit:C25389			
+PD						Chest Wall	The total system of structures outside the lungs that move as a part of breathing; it includes all structures from the skin to the parietal pleura.	ncit:C62484			
+PD						Clavicle	One of a pair of bones linking the scapula and the sternum. The clavicle is part of the pectoral girdle.	ncit:C12695			
+PD						Coccyx	A small bone located at the bottom of the spine. The coccyx is a result of 3-5 fused rudimentary vertebrae.	ncit:C12696			
+PD						Elbow	A type of hinge joint located between the forearm and upper arm.	ncit:C32497			
+PD						Ethmoid Bone	A light and spongy bone that is cubical in shape. This bone is positioned at the anterior part of the cranium, sitting between the two orbits, at the roof of the nose. It consists of four parts: a horizontal or cribriform plate; a perpendicular plate; and two lateral masses or labyrinths.	ncit:C12711			
+PD						Face	The anterior portion of the head extending from the forehead to the chin and ear to ear. The facial structures contain the eyes, nose and mouth, cheeks and jaws.	ncit:C13071			
+PD						Femur	The upper leg bone positioned between the pelvis and the knee.	ncit:C12717			
+PD						Fibula	The small, lateral calf bone extending from the knee to the ankle.	ncit:C12718			
+PD						Fibular Head	The highest portion of the fibula that articulates with the patella.	ncit:C32719			
+PD						Finger	Any of the digits of the hand.	ncit:C32608			
+PD						Foot	The structure found below the ankle joint required for locomotion.	ncit:C32622			
+PD						Forearm	The structure on the upper limb, between the elbow and the wrist.	ncit:C32628			
+PD						Frontal Bone	A bone of the skull forming the forehead, root of the nose and the roof of both orbits.	ncit:C32635			
+PD						Hand	The distal portion of the upper extremity. It consists of the carpus, metacarpus, and digits.	ncit:C32712			
+PD						Head and Neck	For oncology, an area of the body generally construed to comprise the base of skull and facial bones, sinuses, orbits, salivary glands, oral cavity, oropharynx, larynx, thyroid, facial and neck musculature and lymph nodes draining these areas.	ncit:C12418			
+PD						Hip/Inguinal Region	The lateral prominence of the pelvis from the waist to the thigh.	ncit:C64193			
+PD						Humerus	The upper arm bone between the shoulder and elbow.	ncit:C12731			
+PD						Ilium	The broad, dorsal, upper, and widest of the three principal bones composing either half of the pelvis.	ncit:C32765			
+PD						Intra-Abdominal	The lower region of the anterior abdominal wall located laterally to the pubic region.	ncit:C12726			
+PD						Ischium	The most posterior and ventral bone making up the pelvis.	ncit:C32884			
+PD						Kidney	One of the two bean-shaped organs located on each side of the spine in the retroperitoneum. The right kidney is located below the liver and the left kidney below the diaphragm. The kidneys filter and secret the metabolic products and minerals from the blood, thus maintaining the homeostasis. On the superior pole of each kidney there is an adrenal gland. Each kidney and adrenal gland is surrounded by fat.	ncit:C12415			
+PD						Knee	A joint connecting the lower part of the femur with the upper part of the tibia. The lower part of the femur and the upper part of the tibia are attached to each other by ligaments. Other structures of the knee joint include the upper part of the fibula, located below and parallel to the tibia, and the patella which moves as the knee bends.	ncit:C32898			
+PD						Lacrimal Bone	A small rectangular thin plate forming part of the medial orbit wall. It is located posterior to the frontal process of the maxilla and articulates with the inferior nasal concha, ethmoid, frontal, and maxillary bones.	ncit:C32906			
+PD						Leg	One of the two lower extremities in humans used for locomotion and support.	ncit:C32974			
+PD						Liver	A triangular-shaped organ located under the diaphragm in the right hypochondrium. It is the largest internal organ of the body, weighting up to 2 kg. Metabolism and bile secretion are its main functions. It is composed of cells which have the ability to regenerate.	ncit:C12392			
+PD						Lower Extremity	The limb that is composed of the hip, thigh, leg and foot.	ncit:C12742			
+PD						Lumbar Vertebra	One of the five bones situated between the thoracic vertebrae and the sacrum in the lower part of the spine.	ncit:C12744			
+PD						Lung	One of a pair of viscera occupying the pulmonary cavities of the thorax, the organs of respiration in which aeration of the blood takes place. As a rule, the right lung is slightly larger than the left and is divided into three lobes (an upper, a middle, and a lower or basal), while the left has two lobes (an upper and a lower or basal). Each lung is irregularly conical in shape, presenting a blunt upper extremity (the apex), a concave base following the curve of the diaphragm, an outer convex surface (costal surface), an inner or mediastinal surface (mediastinal surface), a thin and sharp anterior border, and a thick and rounded posterior border.	ncit:C12468			
+PD						Lymph Node	A bean-shaped organ surrounded by a connective tissue capsule. It is part of the lymphatic system and is found throughout the body. It is composed predominantly of lymphocytes and its main function is immune protection.	ncit:C12745			
+PD						Mandible	The lower jaw bone holding the lower teeth.	ncit:C12290			
+PD						Maxilla	The upper jawbone in vertebrates; it is fused to the cranium.	ncit:C26470			
+PD						Mediastinum	An anatomic site along the midline and under the sternum that contains the heart and pericardium, the bases of the great vessels, the trachea and bronchi, esophagus, thymus, lymph nodes, thoracic duct, phrenic and vagus nerves, and other structures and tissues.	ncit:C12748			
+PD						Metacarpus	Any of the five bones between the wrist and the fingers that form the skeleton of the palm.	ncit:C12751			
+PD						Metatarsus	A bone belonging to the middle part of the foot located between toes and ankle. There are 5 metatarsal bones and they are numbered from the medial side.	ncit:C12752			
+PD						Nasal Bone	One of two small oblong bones placed side by side at the middle and upper part of the face.	ncit:C33157			
+PD						Neck	The region that connects the head to the rest of the body.	ncit:C13063			
+PD						Occipital Bone	The trapezoidal-shaped bone that forms the back and part of the base of the skull.	ncit:C12757			
+PD						Parietal Bone	One of two cranial bones that by their union form the sides and roof of the skull.	ncit:C12766			
+PD						Patella	A small flat triangular bone in front of the knee that articulates with the femur and protects the knee joint.	ncit:C33282			
+PD						Pelvis	The bony, basin-shaped structure formed by the hipbones and the base of the backbone supporting the lower limbs in humans.	ncit:C12767			
+PD						Radius Bone	The long bone of the forearm that extends from the lateral aspect of the elbow to the thumb-side of the wrist.	ncit:C12777			
+PD						Retroperitoneum	Occurring in, or located in the retroperitoneum.	ncit:C28256			
+PD						Rib	Any one of the paired bones, 12 on either side, extending from the thoracic vertebrae toward the median line on the ventral aspect of the trunk. The long curved bones which form the rib cage. Generally, ribs 1 to 7 are connected to the sternum by their costal cartilages and are called true ribs, whereas ribs 8 to 12 are termed false ribs.	ncit:C12782			
+PD						Sacral Region	The triangular bone, made up of 5 fused bones of the spine, located in the lower area of the spine between the fifth lumbar vertebra and the coccyx.	ncit:C33508			
+PD						Scalp	The skin which covers the top of the head and which is usually covered by hair.	ncit:C89807			
+PD						Scapula	The flat triangle-shaped bone that connects the humerus with the clavicle in the back of the shoulder.	ncit:C12783			
+PD						Shoulder	The region of the body between the neck and the upper arm.	ncit:C25203			
+PD						Cranium	The bones that form the head, made up of the bones of the braincase and face.	ncit:C12789			
+PD						Sphenoid Bone	The butterfly-shaped bone located at the base of the skull that helps to form the orbit of the eye.	ncit:C12790			
+PD						Spinal Cord	The elongated, approximately cylindrical part of the central nervous system of vertebrates that lies in the vertebral canal and from which the spinal nerves emerge.	ncit:C12464			
+PD						Spine	A series of bones, muscles, tendons, and other tissues reaching from the base of the skull to the tailbone. The vertebral column forms the axis of the skeleton and encloses as well as protects the spinal cord and the fluid surrounding the spinal cord.	ncit:C12998			
+PD						Sternum	The long, flat bone connecting with the cartilages of the first seven ribs and the clavicle.	ncit:C12793			
+PD						Talus	The bone of the foot that connects with the tibia and fibula to form the ankle joint.	ncit:C52799			
+PD						Tarsal Bone	Any one of the seven bones forming the instep of the foot.	ncit:C12796			
+PD						Temporal Bone	A large irregular bone situated at the base and side of the skull, connected with the mandible via the temporomandibular joint. The temporal bone consists of the squamous, tympanic and petrous parts. The petrous portion of the temporal bone contains the vestibulocochlear organ of the inner ear.	ncit:C12797			
+PD						Thigh	A part of the lower limb, located between hip and knee.	ncit:C33763			
+PD						Thoracic Vertebra	One of 12 vertebrae in the human vertebral column. The thoracic vertebrae are situated between the seventh cervical vertebra down to the first lumbar vertebra.	ncit:C12798			
+PD						Tibia	A bone located between the femur and the tarsus, being part of the lower leg.	ncit:C12800			
+PD						Ulna	One of the bones that comprise the forearm. The largest aspect articulates with the humerus at the elbow joint and the smallest portion of the ulna articulates with the carpal bones in the wrist.	ncit:C12809			
+PD						Upper Arm	The portion of the upper extremity between the shoulder and the elbow. For clinical purposes this term is also used to refer to the whole superior limb.	ncit:C32141			
+PD						Upper Extremity	The region of the body that includes the arm, the forearm, and hand.	ncit:C12671			
+PD						Wrist	A joint between the distal end of the radius and the proximal row of carpal bones.	ncit:C33894			
+PD						Zygomatic Bone	The union at the zygomaticotemporal suture of the temporal process of the zygomatic one and zygomatic process of the temporal bone.	ncit:C33897			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	PROCEDURE_LATERALITY	Code	Optional	Laterality: Dominant use or manifestations of one side of the body versus the other; referring to a side of the body or of a structure.	ncit:C25185	_undefined_	_undefined_	_undefined_			
+PD						Left	Being or located on or directed toward the side of the body to the west when facing north.	ncit:C25229			
+PD						Right	Being or located on or directed toward the side of the body to the east when facing north.	ncit:C25228			
+PD						Bilateral	Affecting both sides of the body or a matched pair of organs.	ncit:C13332			
+PD						Midline	A medial line, especially the medial line or medial plane of the body (or some part of the body).	ncit:C81170			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	PROCEDURE_TYPE	Code	Optional	A categorization of surgical procedures by type or purpose.	ncit:C161601	_undefined_	_undefined_	_undefined_			
+PD						Surgery	The branch of medical science that treats disease or injury by operative procedures.	ncit:C17173			
+PD						Biopsy	The removal of tissue specimens or fluid from the living body for microscopic examination, performed to establish a diagnosis.	ncit:C15189			
+PD						Other	Different than the one(s) previously specified or mentioned.	ncit:C17649			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	SURGERY_TYPE_LIMB	Code	Optional	Surgical procedures on a limb.	ncit:C175009	_undefined_	_undefined_	_undefined_			
+PD						Amputation	The surgical removal of all or part of a limb or other appendage.	ncit:C15179			
+PD						Limb-salvage	A procedure to avoid amputation of an arm or leg	ncit:C16042			
+PD						Other	Different than the one(s) previously specified or mentioned.	ncit:C17649			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	AMPUTATION_TYPE	Code	Optional	The surgical removal of all or part of a limb or other appendage.	ncit:C15179	_undefined_	_undefined_	_undefined_			
+PD						Amputation - Through Involved Bone	An amputation through the diseased portion of the bone.	ncit:C175010			
+PD						Amputation - Proximal To Involved Bone	An amputation from the nearest feasible anatomical point to the involved portion of the bone.	ncit:C175011			
+PD						Disarticulation	The surgical separation of bones at a joint.	ncit:C175012			
+PD						Internal Hemipelvectomy	Unilateral removal of the pelvic girdle by resecting the innominate bone while preserving the ipsilateral limb.	ncit:C175013			
+PD						External Hemipelvectomy	Unilateral removal of the pelvic girdle by resection of the innominate bone plus amputation of the ipsilateral limb.	ncit:C175014			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	SURGERY_TYPE_LIMB_SALVAGE	Code	Optional	A procedure to avoid amputation of an arm or leg.	ncit:C16042	_undefined_	_undefined_	_undefined_			
+PD						Intra-Articular Resection	A resection performed within a joint.	ncit:C175015			
+PD						Extra-Articular Resection	A resection that is done outside the joint.	ncit:C175016			
+PD						Intercalary Resection	A resection of a diaphyseal segment with the goal of preserving adjacent joints. This may include portions of the metaphysis and/or epiphysis depending on the extent of disease.	ncit:C175017			
+PD						Internal Hemipelvectomy	Unilateral removal of the pelvic girdle by resecting the innominate bone while preserving the ipsilateral limb.	ncit:C175013			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	RECONSTRUCTION_TYPE	Code	Optional	Surgical restoration of function or form of a part.	ncit:C25351	_undefined_	_undefined_	_undefined_			
+PD						Endoprosthetic	An artificial device inserted to replace a missing part.	ncit:C175018			
+PD						Osteoarticular Allograft	Grafting bone and cartilage that has been obtained from an individual of the same species as the intended recipient.	ncit:C175019			
+PD						Intercalary Allograft	Grafting a segment of long bone that is obtained from an individual of the same species as the intended recipient.	ncit:C175020			
+PD						Allograft-Prosthetic	Grafting a composite of an allograft and a prosthetic device.	ncit:C175021			
+PD						Non-Vascularized Autograft	Harvesting a graft from the intended recipient that has no attached blood supply.	ncit:C175022			
+PD						Vascularized Autograft	Harvesting a graft from the intended recipient that has attached blood supply.	ncit:C175023			
+PD						Allograft + Vascularized Autograft	The combination of a bone graft from a donor of the same species and a graft from the intended recipient that has attached arteries and veins.	ncit:C175024			
+PD						Vascularized Autograft Endoprosthetic Composite	The combination of a graft from the intended recipient that has attached arteries and veins and a prosthetic device intended for implant.	ncit:C175025			
+PD						Arthrodesis	Surgical fixation or immobilization of a joint, performed to allow bones to fuse or join together	ncit:C52007			
+PD						No Surgical Reconstruction	There was no surgical reconstruction performed.	ncit:C175026			
+PD						Other	Different than the one(s) previously specified or mentioned.	ncit:C17649			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	PROCEDURE_EXTENT	Code	Mandatory	The degree to which the lesion has been cut out, or resected.	ncit:C157443	_undefined_	_undefined_	_undefined_			
+PD						Gross Total	Surgical removal of an entire visible lesion, with no obvious lesion detected on post-operative evaluation; microscopic residual disease may be present.	ncit:C131672			
+PD						Complete Resection	Complete clearance of the tumor with histologically proved negative margins.	ncit:C175027			
+PD						Partial Resection	Surgical removal of a part of a lesion; some portion of the lesion is detectable on post-operative evaluation.	ncit:C131680			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	MARGINS	Code	Optional	One of the criteria for assessment of the effectiveness of given surgical procedure in achieving the local control of a neoplasm and the adequacy of tumor removal. It is defined by the tissue plane through which the dissection has been done and the actual or potential neoplastic tissue which has been left outside the boundary of a resected specimen within the patient. There are four types of surgical margins: intracapsular or intralesional, marginal, wide, and radical.	ncit:C41227	_undefined_	_undefined_	_undefined_			
+PD						R0 - Complete Resection, Negative Margins	No detectable presence of residual tumor after treatment	ncit:C139578			
+PD						R1 - Complete Resection, Positive Margins	Presence of microscopic residual tumor after treatment.	ncit:C139579			
+PD						R2 - Gross Residual Disease	Presence of macroscopic residual tumor after treatment.	ncit:C139580			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	BIOPSY_TYPE	Code	Mandatory	The removal of tissue specimens or fluid from the living body for microscopic examination, performed to establish a diagnosis.	ncit:C15189	_undefined_	_undefined_	_undefined_			
+PD						Core Needle	The removal of a tissue sample using a needle with a relatively large diameter, for microscopic examination.	ncit:C15680			
+PD						Incisional Biopsy	A surgical procedure in which part of a lesion is removed for microscopic examination.	ncit:C15386			
+PD						Excisional Biopsy	A surgical procedure in which an entire lesion is removed for microscopic examination.	ncit:C15385			
+PD						Other	Different than the one(s) previously specified or mentioned.	ncit:C17649			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	MET_NON_LUNG_MGMT	Code	Optional	Surgical treatment of metastatic disease not involving the lungs.	ncit:C175028	_undefined_	_undefined_	_undefined_			
+PD						No	The non-affirmative response to a question.	ncit:C49487			
+PD						Yes	The affirmative response to a question.	ncit:C49488			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	MET_LUNG_MGMT	Code	Optional	Surgical treatment of disease metastatic to the lungs.	ncit:C175029	_undefined_	_undefined_	_undefined_			
+PD						Thoracotomy	A surgical procedure in which an large incision is made into the chest wall, for the purpose of accessing organs inside the thoracic cavity.	ncit:C15337			
+PD						Sternotomy	Incision into or through the sternum.	ncit:C25220			
+PD						Video-Assisted Thoroscopic Surgery	Thoracic surgery that is aided by the use of a video camera.	ncit:C63704			
+PD						Other	Different than the one(s) previously specified or mentioned.	ncit:C17649			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	LOCALIZATION_TECHNIQUE	Code	Optional	The process of determining or marking the location or site of a lesion or disease.	ncit:C28264	_undefined_	_undefined_	_undefined_			
+PD						Navigation and Robotics	A surgical technique that uses a specially designed robotic system to aid with the surgical procedure.	ncit:C140885	Note: Only fill in if MET_LUNG_DISEASE_MGMT was completed.		
+PD						Indocyanine Green Fluorescence Angiography	A diagnostic imaging procedure to examine blood flow and associated pathology using intravenous indocyanine green dye.	ncit:C175030			
+PD						Methylene Blue Dye Marking	The use of methylene blue, a commonly used stain to enhance tissue specimens viewed under a microscope.	ncit:C175031			
+PD						Wire Localization	A procedure involving the use of a wire for the localization of a usually non-palpable breast lesion that needs to be surgically removed.	ncit:C91832			
+PD						Other	Different than the one(s) previously specified or mentioned.	ncit:C17649			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	TUMOR_FROM_MARGIN	Number	Optional	Closest Distance from Margin to Resected Tumor		_undefined_	_undefined_	_undefined_			
+											
+											
+DD	Treatment										
+TD	Radiation Therapy										
+TG	One row per subject per site of radiation therapy										
+VD	AGE_AT_RT_START	Number	Mandatory	Age of subject (in days) at the start of radiation therapy.	ncit:C172695	_undefined_	_undefined_	_undefined_			
+VD	AGE_AT_RT_END	Number	Mandatory	Age of subject (in days) at the end of radiation therapy.	ncit:C172696	_undefined_	_undefined_	_undefined_			
+VD	DISEASE_PHASE	Code	Mandatory	The stage or period of an individual's disease.	ncit:C168878	_undefined_	_undefined_	_undefined_			
+PD						Initial Diagnosis	The first diagnosis of the individual's condition.	ncit:C156813			
+PD						Relapse	The return of a disease after a period of remission.	ncit:C38155			
+PD						Progression	A clinical, pathologic, and/or molecular finding indicating that the course of a disease is worsening in terms of extent or severity.	ncit:C35571			
+PD						Relapse/Progression	Either the return of the disease or the progression of the disease.	ncit:C174991			
+VD	DISEASE_PHASE_NUMBER	Number	Mandatory	The number of the disease phase.	ncit:C173258	_undefined_	_undefined_	_undefined_			
+VD	COURSE	Code	Mandatory	The type of protocol treatment course administered.	ncit:C168807	_undefined_	_undefined_	_undefined_			
+PD						Induction	The first choice of treatment for a particular type of cancer.	ncit:C158876			
+PD						Consolidation	Treatment that is given after initial therapy to kill any remaining cancer cells.	ncit:C15679			
+PD						Maintenance	Continuation of treatment for an extended period of time to prevent relapse.	ncit:C15688			
+VD	COURSE_NUMBER	Number	Mandatory	The number assigned to a course of therapeutic agent administration, indicating where a particular course of treatment falls within a sequence of treatments.	ncit:C166235	_undefined_	_undefined_	_undefined_			
+VD	TUMOR_CLASSIFICATION	Code	Mandatory	The classification of a tumor based primarily on histopathological characteristics.	ncit:C174459	_undefined_	_undefined_	_undefined_			
+PD						Primary	A tumor at the original site of origin.	ncit:C8509			
+PD						Metastatic	A malignant solid neoplasm that has spread from its original site of growth to another anatomic site.	ncit:C127155			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	TUMOR_TISSUE_TYPE	Code	Mandatory	The type of material sample taken from a biological entity for tumor findings assessment testing.	ncit:C119940	_undefined_	_undefined_	_undefined_			
+PD						Bone	Connective tissue that forms the skeletal components of the body.	ncit:C12366			
+PD						Soft Tissue	A general term comprising tissue that is not hardened or calcified; including muscle, fat, blood vessels, nerves, tendons, ligaments and fascia.	ncit:C12471			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	RT_SITE	Code	Mandatory	The anatomic site of the radiation therapy.	ncit:C173281	_undefined_	_undefined_	_undefined_			
+PD						Pelvis	The bony, basin-shaped structure formed by the hipbones and the base of the backbone supporting the lower limbs in humans.	ncit:C12767			
+PD						Abdomen	The portion of the body that lies between the thorax and the pelvis.	ncit:C12664			
+PD						Spine	A series of bones, muscles, tendons, and other tissues reaching from the base of the skull to the tailbone. The vertebral column forms the axis of the skeleton and encloses as well as protects the spinal cord and the fluid surrounding the spinal cord.	ncit:C12998			
+PD						Chest	The anterior side of the thorax from the neck to the abdomen. The shape of the chest is often regarded as potential insight into a disease process, as in the case of barrel chest and respiratory dysfunction.	ncit:C25389			
+PD						Head and Neck	For oncology, an area of the body generally construed to comprise the base of skull and facial bones, sinuses, orbits, salivary glands, oral cavity, oropharynx, larynx, thyroid, facial and neck musculature and lymph nodes draining these areas.	ncit:C12418			
+PD						Upper Extremity	The region of the body that includes the arm, the forearm, and hand.	ncit:C12671			
+PD						Lower Extremity	The limb that is composed of the hip, thigh, leg and foot.	ncit:C12742			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	RT_LATERALITY	Code	Mandatory	The laterality intended for radiation therapy.	ncit:C175523	_undefined_	_undefined_	_undefined_			
+PD						Left	Being or located on or directed toward the side of the body to the west when facing north.	ncit:C25229			
+PD						Right	Being or located on or directed toward the side of the body to the east when facing north.	ncit:C25228			
+PD						Midline	A medial line, especially the medial line or medial plane of the body (or some part of the body).	ncit:C81170			
+PD						Bilateral	Affecting both sides of the body or a matched pair of organs.	ncit:C13332			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	ENERGY_TYPE	Code	Mandatory	Treatment of a disease by means of exposure of the target or the whole body to radiation. Radiation therapy is often used as part of curative therapy and occasionally as a component of palliative treatment for cancer. Other uses include total body irradiation prior to transplantation.	ncit:C15313	_undefined_	_undefined_	_undefined_			
+PD						3D Conformal	A process by which a dose of radiation is automatically shaped to closely conform to the entire volume of the tumor, so that surrounding normal tissue is spared and treatment toxicity is decreased.	ncit:C16035			
+PD						Intensity-Modulated Radiation Therapy	An advanced form of 3-Dimensional Conformal Radiation Therapy (3D CRT) that involves the use of varying intensities of small radiation beams to produce dosage distributions that are more precise than those possible with 3D CRT.	ncit:C16135			
+PD						Proton Stereotactic Body Radiation Therapy	Stereotactic body radiation therapy (SBRT) that utilizes a proton beam.	ncit:C175032			
+PD						Photon Stereotactic Body Radiation Therapy	Stereotactic body radiation therapy (SBRT) that utilizes a photon beam.	ncit:C175033			
+PD						Proton	A type of external beam radiation therapy using a beam of protons. It has the advantage of precisely localizing the radiation dose on the targeted tissue and avoiding damage to the healthy surrounding tissues.	ncit:C66897			
+PD						Other	Different than the one(s) previously specified or mentioned.	ncit:C17649			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	RT_DOSE	Number	Mandatory	The total radiation dose administered.	ncit:C173282	_undefined_	_undefined_	_undefined_			
+VD	RT_UNIT	Code	Optional	A unit of measurement of the dose of radiation received or absorbed.	ncit:C18068	_undefined_	_undefined_	_undefined_			
+PD						Gy	A SI derived unit of absorbed radiation dose. One gray is equal to an absorbed dose of one joule per kilogram of matter, or to 100 rads.	ncit:C18063			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	NUM_FRACTION	Numeric	Optional	The number of divided radiation doses received per day.	ncit:C175034	_undefined_	_undefined_	_undefined_			
+VD	TRANSPOSITION_ORGAN	Code	Optional	A procedure to move organs out of the range of the damaging effects of radiation.	ncit:C175035	_undefined_	_undefined_	_undefined_			
+PD						Ovaries	One of the paired female reproductive glands containing the ova or germ cells; the ovary's stroma is a vascular connective tissue containing numbers of ovarian follicles enclosing the ova.	ncit:C12404			
+PD						Other	Different than the one(s) previously specified or mentioned.	ncit:C17649			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+											
+											
+DD	Treatment										
+TD	Stem Cell Transplant										
+TG	One row per subject per apheresis										
+VD	AGE_AT_SCT	Number	Mandatory	Age of subject (in days) at the time of stem-cell transplantation.	ncit:C168853	_undefined_	_undefined_	_undefined_			
+VD	DISEASE_PHASE	Code	Mandatory	The stage or period of an individual's disease.	ncit:C168878	_undefined_	_undefined_	_undefined_			
+PD						Initial Diagnosis	The first diagnosis of the individual's condition.	ncit:C156813			
+PD						Relapse	The return of a disease after a period of remission.	ncit:C38155			
+PD						Progression	A clinical, pathologic, and/or molecular finding indicating that the course of a disease is worsening in terms of extent or severity.	ncit:C35571			
+PD						Relapse/Progression	Either the return of the disease or the progression of the disease.	ncit:C174991			
+VD	DISEASE_PHASE_NUMBER	Number	Mandatory	The number of the disease phase.	ncit:C173258	_undefined_	_undefined_	_undefined_			
+VD	COURSE	Code	Mandatory	The type of protocol treatment course administered.	ncit:C168807	_undefined_	_undefined_	_undefined_			
+PD						Induction	The first choice of treatment for a particular type of cancer.	ncit:C158876			
+PD						Consolidation	Treatment that is given after initial therapy to kill any remaining cancer cells.	ncit:C15679			
+PD						Maintenance	Continuation of treatment for an extended period of time to prevent relapse.	ncit:C15688			
+VD	COURSE_NUMBER	Number	Mandatory	The number assigned to a course of therapeutic agent administration, indicating where a particular course of treatment falls within a sequence of treatments.	ncit:C166235	_undefined_	_undefined_	_undefined_			
+VD	SCT_TYPE	Code	Optional	Type of stem-cell transplantation the subject received.	ncit:C168864	_undefined_	_undefined_	_undefined_			
+PD						Autologous	Taken from an individual's own tissues, cells, or DNA.	ncit:C28000			
+PD						Allogeneic	Taken from different individuals of the same species.	ncit:C28343			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	SCT_SOURCE	Code	Optional	The source of the stem cells for the stem cell transplant.	ncit:C168870	_undefined_	_undefined_	_undefined_			
+PD						Peripheral Blood	Blood drawn from a limb.	ncit:C173496			
+PD						Bone Marrow	The tissue occupying the spaces of bone. It consists of blood vessel sinuses and a network of hematopoietic cells which give rise to the red cells, white cells, and megakaryocytes.	ncit:C12431			
+PD						Other	Different than the one(s) previously specified or mentioned.	ncit:C17649			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	SCT_CD34_COLL	Number	Optional	The determination of the amount of CD34 expressing stem cells present in a sample.	ncit:C175036	_undefined_	_undefined_	_undefined_			
+VD	SCT_CD34_TRANSPLANT	Number	Optional	The determination of the amount of transplanted CD34 expressing stem cells.	ncit:C175037	_undefined_	_undefined_	_undefined_			
+											
+											
+DD	Treatment										
+TD	Non-Protocol Therapy										
+TG	One record per subject per off-protocol therapy										
+VD	NPT_TIMING	Code	Optional	A description of the timing of when the non-protocol therapy was received.	ncit:C175038	_undefined_	_undefined_	_undefined_			
+PD						Prior to Study	The time period before the study.	ncit:C175039			
+PD						After Study Completion	The time period after the completion of the study.	ncit:C175040			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	DISEASE_PHASE	Code	Mandatory	The stage or period of an individual's disease.	ncit:C168878	_undefined_	_undefined_	_undefined_			
+PD						Initial Diagnosis	The first diagnosis of the individual's condition.	ncit:C156813			
+PD						Relapse	The return of a disease after a period of remission.	ncit:C38155			
+PD						Progression	A clinical, pathologic, and/or molecular finding indicating that the course of a disease is worsening in terms of extent or severity.	ncit:C35571			
+PD						Relapse/Progression	Either the return of the disease or the progression of the disease.	ncit:C174991			
+VD	DISEASE_PHASE_NUMBER	Number	Mandatory	The number of the disease phase.	ncit:C173258	_undefined_	_undefined_	_undefined_			
+VD	COURSE	Code	Mandatory	The type of protocol treatment course administered.	ncit:C168807	_undefined_	_undefined_	_undefined_			
+PD						Induction	The first choice of treatment for a particular type of cancer.	ncit:Cncit:C158876			
+PD						Consolidation	Treatment that is given after initial therapy to kill any remaining cancer cells.	ncit:Cncit:C15679			
+PD						Maintenance	Continuation of treatment for an extended period of time to prevent relapse.	ncit:C15688			
+VD	COURSE_NUMBER	Number	Mandatory	The number assigned to a course of therapeutic agent administration, indicating where a particular course of treatment falls within a sequence of treatments.	ncit:C166235	_undefined_	_undefined_	_undefined_			
+VD	NPT_TYPE	Code	Optional	The type of therapy that the patient received outside of the protocol.	ncit:C175041	_undefined_	_undefined_	_undefined_			
+PD						Chemotherapy	The use of synthetic or naturally-occurring chemicals for the treatment of diseases.	ncit:C15632			
+PD						Radiation Therapy	Treatment of a disease by means of exposure of the target or the whole body to radiation. Radiation therapy is often used as part of curative therapy and occasionally as a component of palliative treatment for cancer. Other uses include total body irradiation prior to transplantation.	ncit:C15313			
+PD						Stem Cell Transplant	A therapeutic procedure that involves the transplantation of hematopoietic stem cells, either with the patient as their own donor or from a donor to a patient. This can be used for treatment of malignant and non-malignant diseases.	ncit:C15431			
+PD						Surgery	A diagnostic or treatment procedure performed by manual and/or instrumental means, often involving an incision and the removal or replacement of a diseased organ or tissue; of or relating to or involving or used in surgery or requiring or amenable to treatment by surgery.	ncit:C15329			
+PD						Other	Different than the one(s) previously specified or mentioned.	ncit:C17649			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+											
+											
+DD	Response										
+TD	Subject Response										
+TG	One row per subject per overall response										
+VD	AGE_AT_RESPONSE	Number	Mandatory	Age of subject (in days) when the response assessment was made.	ncit:C168856	_undefined_	_undefined_	_undefined_			
+VD	DISEASE_PHASE	Code	Mandatory	The stage or period of an individual's disease.	ncit:C168878	_undefined_	_undefined_	_undefined_			
+PD						Initial Diagnosis	The first diagnosis of the individual's condition.	ncit:C156813			
+PD						Relapse	The return of a disease after a period of remission.	ncit:C38155			
+PD						Progression	A clinical, pathologic, and/or molecular finding indicating that the course of a disease is worsening in terms of extent or severity.	ncit:C35571			
+PD						Relapse/Progression	Either the return of the disease or the progression of the disease.	ncit:C174991			
+VD	DISEASE_PHASE_NUMBER	Number	Mandatory	The number of the disease phase.	ncit:C173258	_undefined_	_undefined_	_undefined_			
+VD	COURSE	Code	Mandatory	The type of protocol treatment course administered.	ncit:C168807	_undefined_	_undefined_	_undefined_			
+PD						Induction	The first choice of treatment for a particular type of cancer.	ncit:C158876			
+PD						Consolidation	Treatment that is given after initial therapy to kill any remaining cancer cells.	ncit:C15679			
+PD						Maintenance	Continuation of treatment for an extended period of time to prevent relapse.	ncit:C15688			
+VD	COURSE_NUMBER	Number	Mandatory	The number assigned to a course of therapeutic agent administration, indicating where a particular course of treatment falls within a sequence of treatments.	ncit:C166235	_undefined_	_undefined_	_undefined_			
+VD	RESPONSE	Code	Mandatory	The pathologic and/or clinical changes that result from treatment. The changes may include eradication of detectable disease, stabilization of disease, or disease progression.	ncit:C50995	_undefined_	_undefined_	_undefined_			
+PD						Complete Response	The disappearance of all signs of cancer in response to treatment.	ncit:C4870			
+PD						Partial Response	A finding indicating that there is a decrease in the size and the extent of tissue involvement by a malignant tumor in a patient.	ncit:C18058			
+PD						Progressive Disease	A clinical, pathologic, and/or molecular finding indicating that the course of a disease is worsening in terms of extent or severity.	ncit:C35571			
+PD						Stable Disease	Cancer that is neither decreasing nor increasing in extent or severity.	ncit:C18213			
+PD						Not Evaluable	Unable to be evaluated.	ncit:C62222			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	RESPONSE_SYSTEM	Code	Mandatory	A standard from which a judgment concerning tumor response to therapy can be established.	ncit:C125932	_undefined_	_undefined_	_undefined_			
+PD						RECIST	Standard parameters to be used when documenting response of solid tumors to treatment; a set of published rules that define when cancer patients improve ("respond"), stay the same ("stable"), or worsen ("progression") during treatments. (from www.recist.com)	ncit:C49164			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	RESPONSE_SYSTEM_VERSION	String	Mandatory	The version of the response criteria.	ncit:C175042	_undefined_	_undefined_	_undefined_			
+VD	NECROSIS	Code	Optional	Tumor Necrosis		_undefined_	_undefined_	_undefined_			
+PD						< 90% Necrosis					
+PD						>= 90% Necrosis					
+PD						Unknown					
+PD						Not Reported					
+VD	NECROSIS_PCT	Number	Optional	A quantitative measurement of the percent of cells undergoing necrosis compared to the number of total cells present in a sample.	ncit:C159481	_undefined_	_undefined_	_undefined_			
+											
+											
+DD	Events										
+TD	Adverse Events										
+TG	One row per subject per adverse event										
+VD	AGE_AT_AE	Number	Mandatory	Age of subject (in days) at the onset of the adverse event.	ncit:C172677	_undefined_	_undefined_	_undefined_			
+VD	AGE_AT_AE_RESOLVED	Number	Mandatory	Age of subject (in days) at adverse event resolution.	ncit:C175043	_undefined_	_undefined_	_undefined_			
+VD	DISEASE_PHASE	Code	Mandatory	The stage or period of an individual's disease.	ncit:C168878	_undefined_	_undefined_	_undefined_			
+PD						Initial Diagnosis	The first diagnosis of the individual's condition.	ncit:C156813			
+PD						Relapse	The return of a disease after a period of remission.	ncit:C38155			
+PD						Progression	The worsening of a disease over time.	ncit:C17747			
+PD						Relapse/Progression	Either the return of the disease or the progression of the disease.	ncit:C174991			
+VD	DISEASE_PHASE_NUMBER	Number	Mandatory	The number of the disease phase.	ncit:C173258	_undefined_	_undefined_	_undefined_			
+VD	COURSE	Code	Mandatory	The type of protocol treatment course administered.	ncit:C168807	_undefined_	_undefined_	_undefined_			
+PD						Induction	The first choice of treatment for a particular type of cancer.	ncit:C158876			
+PD						Consolidation	Treatment that is given after initial therapy to kill any remaining cancer cells.	ncit:C15679			
+PD						Maintenance	Continuation of treatment for an extended period of time to prevent relapse.	ncit:C15688			
+VD	COURSE_NUMBER	Number	Mandatory	The number assigned to a course of therapeutic agent administration, indicating where a particular course of treatment falls within a sequence of treatments.	ncit:C166235	_undefined_	_undefined_	_undefined_			
+VD	AE_CODE	String	Optional	The code of the adverse event.	ncit:C173313	_undefined_	_undefined_	_undefined_			
+VD	AE_SYSTEM	Code	Optional	The name of the system used to grade the adverse events.	ncit:C168872	_undefined_	_undefined_	_undefined_			
+PD						CTCAE	A standard terminology developed to report adverse events occurring in cancer clinical trials. Common terminology criteria for adverse events (CTCAE) are used in study adverse event summaries and Investigational New Drug reports to the Food and Drug Administration. The CTCAE contain a grading scale for each adverse event term representing the severity of the event.	ncit:C49704			
+PD						Other	Different than the one(s) previously specified or mentioned.	ncit:C17649			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	AE_SYSTEM_VERSION	String	Optional	The version of the adverse event grading system.	ncit:C173314	_undefined_	_undefined_	_undefined_			
+VD	AE_GRADE	Code	Optional	A numeric value corresponding to the degree of severity of an adverse event.	ncit:C166200	_undefined_	_undefined_	_undefined_			
+PD						Grade 1	An experience that is usually transient, and requires no special treatment or intervention. The event does not generally interfere with usual daily activities. Includes transient laboratory test alterations.	ncit:C41338			
+PD						Grade 2	An experience that is alleviated with simple therapeutic treatments. The event impacts usual daily activities. Includes laboratory test alterations indicating injury, but without long-term risk.	ncit:C41339			
+PD						Grade 3	An adverse event experience that requires intensive therapeutic intervention and interrupts usual daily activities.	ncit:C41340			
+PD						Grade 4	Any adverse event that places the patient, in the view of the initial reporter, at immediate risk of death from the adverse event as it occurred, i.e., it does not include an adverse experience that, had it occurred in a more severe form, might have caused death.	ncit:C41337			
+PD						Grade 5	The termination of life associated with an adverse event.	ncit:C48275			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	AE_ATTRIBUTION	Code	Optional	A specific identifiable level (defined qualitatively or quantitatively) of probability of adverse event being caused or associated with the product or procedure administration to a patient.	ncit:C53255	_undefined_	_undefined_	_undefined_			
+PD						Definite	A characteristic used to qualify the adverse event as certainly related to the medical intervention. According to WHO causality assessment criteria of suspected adverse reactions it is applicable to a clinical event, including laboratory test abnormality, occurring in a plausible time relationship to medical intervention, and which cannot be explained by concurrent disease or other interventions. The response to withdrawal of the medical product (dechallenge) should be clinically plausible. The event must be definitive pharmacologically or phenomenologically, using a satisfactory rechallenge procedure if necessary.	ncit:C53260			
+PD						Probable	Probable adverse event relationship to study product or procedure is defined when there is a clear-cut temporal association between product or procedure administration and adverse event, and a potential alternative etiology of the event is not apparent.	ncit:C41357			
+PD						Possible	A characteristic indicating that an adverse event may be related to the medical intervention. According to WHO causality assessment criteria of suspected adverse reactions it is applicable to a clinical event, including laboratory test abnormality, with a reasonable time sequence to administration of the drug, but which could also be explained by concurrent disease or other drugs or chemicals. Information on drug withdrawal may be lacking or unclear.	ncit:C53258			
+PD						Unlikely	A characteristic used to qualify the adverse event as unlikely related to the medical intervention. According to WHO causality assessment criteria of suspected adverse reactions it is applicable to a clinical event, including laboratory test abnormality, with a temporal relationship to the medical intervention which makes a causal relationship improbable, and in which other interventions or underlying disease provide plausible explanations.	ncit:C53257			
+PD						Unrelated	A characteristic used to qualify the adverse event as clearly not related to the medical intervention.	ncit:C53256			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+											
+											
+DD	Events										
+TD	Secondary Malignant Neoplasm										
+TG	One row per subject per second malignant neoplasm										
+VD	AGE_AT_SMN	Number	Mandatory	Age of subject (in days) at the diagnosis of the secondary malignant neoplasm.	ncit:C168860	_undefined_	_undefined_	_undefined_			
+VD	DISEASE_PHASE	Code	Mandatory	The stage or period of an individual's disease.	ncit:C168878	_undefined_	_undefined_	_undefined_			
+PD						Initial Diagnosis	The first diagnosis of the individual's condition.	ncit:C156813			
+PD						Relapse	The return of a disease after a period of remission.	ncit:C38155			
+PD						Progression	The worsening of a disease over time.	ncit:C17747			
+PD						Relapse/Progression	Either the return of the disease or the progression of the disease.	ncit:C174991			
+VD	DISEASE_PHASE_NUMBER	Number	Mandatory	The number of the disease phase.	ncit:C173258	_undefined_	_undefined_	_undefined_			
+VD	COURSE	Code	Mandatory	The type of protocol treatment course administered.	ncit:C168807	_undefined_	_undefined_	_undefined_			
+PD						Induction	The first choice of treatment for a particular type of cancer.	ncit:C158876			
+PD						Consolidation	Treatment that is given after initial therapy to kill any remaining cancer cells.	ncit:C15679			
+PD						Maintenance	Continuation of treatment for an extended period of time to prevent relapse.	ncit:C15688			
+VD	COURSE_NUMBER	Number	Mandatory	The number assigned to a course of therapeutic agent administration, indicating where a particular course of treatment falls within a sequence of treatments.	ncit:C166235	_undefined_	_undefined_	_undefined_			
+VD	SMN_ICD_O_MORPH	String	Mandatory	ICD-O morphology code of the secondary malignant neoplasm.	ncit:C168862	_undefined_	_undefined_	_undefined_			
+VD	SMN_ICD_O_TOP	String	Mandatory	ICD-O topography code of the secondary malignant neoplasm.	ncit:C168863	_undefined_	_undefined_	_undefined_			
+VD	SMN_FIELD	Code	Mandatory	The location of the second malignant neoplasm related to the prior radiation field.	ncit:C175044	_undefined_	_undefined_	_undefined_			
+PD						In XRT field	Within the confines of the radiation field.	ncit:C175045			
+PD						Out of XRT field	Outside the confines of the radiation field.	ncit:C175046			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
