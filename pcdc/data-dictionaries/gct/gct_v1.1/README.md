@@ -83,7 +83,7 @@ Removed concepts:
 
 
 Modified Concepts:
->[Tumor Assessment].[NODAL_SITE].[Cervix] skos:exactMatch [gct_v1.1].[Tumor Assessment].[TUMOR_SITE].[Cervix Lymph Node]
+>[gct_v1.0].[Tumor Assessment].[NODAL_SITE].[Cervix] skos:exactMatch [gct_v1.1].[Tumor Assessment].[TUMOR_SITE].[Cervix Lymph Node]
 
 >[gct_v1.0].[Tumor Assessment].[NODAL_SITE].[Mediastinum] skos:exactMatch [gct_v1.1].[Tumor Assessment].[TUMOR_SITE].[Mediastinal Lymph Node]
 
