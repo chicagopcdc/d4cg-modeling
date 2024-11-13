@@ -141,7 +141,7 @@
                         "ncit:C168298"
                     ],
                     "implementation_notes": [
-                        "Note:referstoifsubjectwasenrolledinthestudy,orsubjectwasnotenrolledinthestudybutreceivedtreatmentperthestudy'sprotocol."
+                        "Note: refers to if subject was enrolled in the study, or subject was not enrolled in the study but received treatment per the study's protocol."
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -173,7 +173,7 @@
                         "ncit:C168878"
                     ],
                     "implementation_notes": [
-                        "Note:Diseasephasecouldbe\"InitialDiagnosis\"phase,a\"Relapse\"phase,ora\"Progression\"phase."
+                        "Note: Disease phase could be \"Initial Diagnosis\" phase, a \"Relapse\" phase, or a \"Progression\" phase."
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -375,7 +375,7 @@
                         "ncit:C168878"
                     ],
                     "implementation_notes": [
-                        "Note:Diseasephasecouldbe\"InitialDiagnosis\"phase,a\"Relapse\"phase,ora\"Progression\"phase."
+                        "Note: Disease phase could be \"Initial Diagnosis\" phase, a \"Relapse\" phase, or a \"Progression\" phase."
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -553,7 +553,7 @@
                         "ncit:C93611"
                     ],
                     "implementation_notes": [
-                        "Note:Ifmultiplereasonsoff,includeoneobservationperreasonoff."
+                        "Note: If multiple reasons off, include one observation per reason off."
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -1053,7 +1053,7 @@
                         "ncit:C81239"
                     ],
                     "implementation_notes": [
-                        "Note:Ifmultiplecausesofdeath,includeoneobservationpercauseofdeath."
+                        "Note: If multiple causes of death, include one observation per cause of death."
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -1086,7 +1086,7 @@
                             "codes": [],
                             "implementation_notes": [],
                             "mappings": [
-                                "NewPD"
+                                "New PD"
                             ]
                         },
                         "Unknown": {
@@ -1115,7 +1115,7 @@
                         "ncit:C173260"
                     ],
                     "implementation_notes": [
-                        "Note:Ifmultipletreatmenttypes,includeoneobservationpertreatmenttype."
+                        "Note: If multiple treatment types, include one observation per treatment type."
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -1161,7 +1161,7 @@
                         "ncit:C168868"
                     ],
                     "implementation_notes": [
-                        "Note:Ifmultiplecauseofdeathdetails,includeoneobservationpercauseofdeathdetail."
+                        "Note: If multiple cause of death details, include one observation per cause of death detail."
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -1279,7 +1279,7 @@
                         "ncit:C168932"
                     ],
                     "implementation_notes": [
-                        "Note:Contributoryreferstoadditionalcauseofdeath,notnecessarilytheordinalrankingofcausesofdeath.Theremaybemultiplesecondarycausesofdeath."
+                        "Note: Contributory refers to additional cause of death, not necessarily the ordinal ranking of causes of death. There may be multiple secondary causes of death."
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -1419,7 +1419,7 @@
                         "ncit:C173263"
                     ],
                     "implementation_notes": [
-                        "Note:Ifmultiplesitesofdiseaseinvolvement,includeoneobservationpersite."
+                        "Note: If multiple sites of disease involvement, include one observation per site."
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -1897,7 +1897,7 @@
                         "ncit:C168878"
                     ],
                     "implementation_notes": [
-                        "Note:Diseasephasecouldbe\"InitialDiagnosis\"phase,a\"Relapse\"phase,ora\"Progression\"phase."
+                        "Note: Disease phase could be \"Initial Diagnosis\" phase, a \"Relapse\" phase, or a \"Progression\" phase."
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -2507,7 +2507,7 @@
                         "ncit:C168879"
                     ],
                     "implementation_notes": [
-                        "Notes:Traumatictapisdefinedascerebrospinalfluidwithgreaterthan10RBC/mm3."
+                        "Notes: Traumatic tap is defined as cerebrospinal fluid with greater than 10 RBC/mm3."
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -2709,7 +2709,7 @@
                         "ncit:C3910"
                     ],
                     "implementation_notes": [
-                        "Note:Ifmultiplemolecularabnormalities,includeoneobservationpermolecularabnormality."
+                        "Note: If multiple molecular abnormalities, include one observation per molecular abnormality."
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -2945,7 +2945,7 @@
                         "ncit:C173596"
                     ],
                     "implementation_notes": [
-                        "Note:ThisvariableindicatestheresultoftestingforthemolecularabnormalitylistedinMOLECULAR_ABNORMALITY"
+                        "Note: This variable indicates the result of testing for the molecular abnormality listed in MOLECULAR_ABNORMALITY"
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -3487,7 +3487,7 @@
                         "ncit:C175041"
                     ],
                     "implementation_notes": [
-                        "Note:Ifmultiplenon-protocoltherapies,includeoneobservationpertherapy."
+                        "Note: If multiple non-protocol therapies, include one observation per therapy."
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -3671,7 +3671,7 @@
                                 "ncit:C17998"
                             ],
                             "implementation_notes": [
-                                "Note:OnlyfillinthisvariableifanumericresultisprovidedinMRD_RESULT_NUMERIC."
+                                "Note: Only fill in this variable if a numeric result is provided in MRD_RESULT_NUMERIC."
                             ],
                             "mappings": []
                         },
@@ -3978,7 +3978,7 @@
                         "ncit:C178082"
                     ],
                     "implementation_notes": [
-                        "Note:Ifmultiplejointsaffected,includeoneobservationperjoint"
+                        "Note: If multiple joints affected, include one observation per joint"
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -4168,7 +4168,7 @@
                         "ncit:C178085"
                     ],
                     "implementation_notes": [
-                        "Note:Ifmultipleproceduresperformed,includeoneobservationperprocedure"
+                        "Note: If multiple procedures performed, include one observation per procedure"
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -4246,7 +4246,7 @@
                         "ncit:C185665"
                     ],
                     "implementation_notes": [
-                        "Note:Ifmultiplepathogensinvolved,includeoneobservationperpathogen."
+                        "Note: If multiple pathogens involved, include one observation per pathogen."
                     ],
                     "mappings": [],
                     "permissible_values": {
