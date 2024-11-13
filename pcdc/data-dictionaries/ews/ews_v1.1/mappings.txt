@@ -1,0 +1,6 @@
+New VD [ews_v1.1].[Subject Characteristics].[EFS_CENSOR_STATUS]
+New PD [ews_v1.1].[Subject Characteristics].[EFS_CENSOR_STATUS].[Censored]
+New PD [ews_v1.1].[Subject Characteristics].[EFS_CENSOR_STATUS].[Not Censored]
+New PD [ews_v1.1].[Subject Characteristics].[EFS_CENSOR_STATUS].[Unknown]
+New PD [ews_v1.1].[Subject Characteristics].[EFS_CENSOR_STATUS].[Not Reported]
+New VD [ews_v1.1].[Subject Characteristics].[AGE_AT_CENSOR_STATUS]

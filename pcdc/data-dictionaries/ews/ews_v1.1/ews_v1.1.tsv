@@ -1,6 +1,6 @@
 INFO	Title	Ewing Sarcoma (EWS) Data Dictionary									
 INFO	Name	ews_v1.1									
-INFO	Release Notes										
+INFO	Release Notes	https://github.com/chicagopcdc/d4cg-modeling/tree/main/pcdc/data-dictionaries/ews/ews_v1.1									
 INFO	Parent Data Model	pcdc_v1.8									
 INFO	License	Creative Commons Attribution-NonCommercial 4.0 International License (https://creativecommons.org/licenses/by-nc/4.0/)									
 INFO	D4CG Data Modeling Wiki	https://docs.pedscommons.org/									

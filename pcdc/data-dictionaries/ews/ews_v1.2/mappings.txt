@@ -1,0 +1,3 @@
+New PD [ews_v1.2].[Subject Characteristics].[STUDY_ID].[ISG/AIEOP Ew1]
+New PD [ews_v1.2].[Subject Characteristics].[STUDY_ID].[ISG/AIEOP Ew2]
+New PD [ews_v1.2].[Biopsy/Surgical Procedures].[LOCALIZATION_TECHNIQUE].[None]
