@@ -1,0 +1,586 @@
+INFO	Title	Monogenic Diabetes (MD) Data Dictionary									
+INFO	Name	md_v1.0									
+INFO	Release Notes										
+INFO	License	Creative Commons Attribution-NonCommercial 4.0 International License (https://creativecommons.org/licenses/by-nc/4.0/)									
+INFO	Disease Consortium Information										
+INFO	Description	The MD data dictionary is a consensus data schema built by an international group of monogenic diabetes experts and maintained by Data for the Common Good (D4CG) at the University of Chicago in collaboration with the PREDICT Consortium. It is based on the collective requirements of its contributors.									
+INFO	Total Variables										
+											
+RowType	VariableName	DataType	Tier	VariableDescription	VariableCode	PermissibleValue	ValueDescription	ValueCode	ImplementationNotes	Mappings	Modeling notes (Will be ignored in processing)
+											
+DD	Protocol										
+TD	Subject Characteristics										
+VD	HONEST_BROKER_SUBJECT_ID	String	1 - contributors must include, regardless of the resource cost	The identifier assigned to the subject by the honest broker--an individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re-identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker. (Source: NCI Thersaurus)		_undefined_	_undefined_	_undefined_			
+VD	DATA_CONTRIBUTOR_ID	Enum	1 - contributors must include, regardless of the resource cost	An identifier assigned to a data contributor.		_undefined_	_undefined_	_undefined_			
+PD						UChicago Monogenic Diabetes Research Group 					
+PD						Barbara Davis Center / UColorado					
+PD						Baylor					
+PD						Boston Children's					
+PD						Indiana					
+PD						MGH					
+PD						Maryland					
+PD						Michigan					
+PD						Nebraska					
+PD						NorthShore					
+VD	DATA_SOURCE	Enum	1 - contributors must include, regardless of the resource cost	Indicates where the data is originating from 		_undefined_	_undefined_	_undefined_			
+PD						Self-reported					
+PD						EHR					
+VD	LAST_KNOWN_SURVIVAL_STATUS	Enum	2 - contributors should priotritize inclusion if resources are available	The last known survival status of the subject.		_undefined_	_undefined_	_undefined_			
+PD						Alive	Showing characteristics of life; displaying signs of life.				
+PD						Dead	The cessation of life.				
+PD						Unknown	Reported as unknown by the data contributor.				
+PD						Not Reported	Not provided or available.				
+VD	AGE_LAST_CONTACT	Decimal	2 - contributors should priotritize inclusion if resources are available	The age of the subject at last contact.		_undefined_	_undefined_	_undefined_	Only applicable for survey source data 		
+VD	AGE_LAST_CONTACT_UNIT	Enum	2 - contributors should priotritize inclusion if resources are available	The unit used by the numeric AGE_AT_LAST_CONTACT field.		_undefined_	_undefined_	_undefined_			
+PD						Years					
+PD						Months					
+PD						Weeks					
+PD						Days					
+VD	AGE_LAST_CONTACT_PRECISION	Enum	2 - contributors should priotritize inclusion if resources are available	Indicates whether a recorded AGE_AT_LAST_CONTACT is exact or just an approximation.		_undefined_	_undefined_	_undefined_			
+PD						Approximate					
+PD						Exact					
+											
+											
+DD	Protocol										
+TD	Timing										
+VD	HONEST_BROKER_SUBJECT_ID	String	1 - contributors must include, regardless of the resource cost	The identifier assigned to the subject by the honest broker--an individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re-identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker. (Source: NCI Thersaurus)		_undefined_	_undefined_	_undefined_			
+VD	TIMEPOINT	Enum	1 - contributors must include, regardless of the resource cost	Indicates the diabetes diagnosis event of the subject 		_undefined_	_undefined_	_undefined_			
+PD						Prediabetes Diagnosis					
+PD						Diagnosis					
+PD						Relapse					
+PD						Remission					
+VD	AGE_AT	Decimal	1 - contributors must include, regardless of the resource cost	The age of the subject at the diagnois event 		_undefined_	_undefined_	_undefined_	For reporting at the time of birth, report 1 day		
+VD	AGE_UNIT	Enum	1 - contributors must include, regardless of the resource cost	The unit of the age of the subject at the diagnosis event 		_undefined_	_undefined_	_undefined_			
+PD						Years					
+PD						Months					
+PD						Weeks					
+PD						Days					
+VD	AGE_PRECISION	Enum	1 - contributors must include, regardless of the resource cost	The precision of the age of the subject at the diagnosis event 		_undefined_	_undefined_	_undefined_			
+PD						Approximate					
+PD						Exact					
+											
+											
+TD	Family Medical History								Only enter family members who have a history of dysglycemia 		
+VD	HONEST_BROKER_SUBJECT_ID	String	1 - contributors must include, regardless of the resource cost	The identifier assigned to the subject by the honest broker--an individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re-identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker. (Source: NCI Thersaurus)		_undefined_	_undefined_	_undefined_			
+VD	RELATION_HONEST_BROKER_SUBJECT_ID	String	1 - contributors must include, regardless of the resource cost	The honest broker subject ID of this family member (if also a subject in the data commons)		_undefined_	_undefined_	_undefined_			
+VD	RELATION	Enum	1 - contributors must include, regardless of the resource cost	The relation of this family member to the patient.		_undefined_	_undefined_	_undefined_			
+PD						Father					
+PD						Mother					
+PD						Son					
+PD						Daughter					
+PD						Brother					
+PD						Sister					
+PD						Spouse/Partner					
+PD						Grandfather (Paternal)					
+PD						Grandfather (Maternal)					
+PD						Grandmother (paternal)					
+PD						Grandmother (maternal)					
+PD						Uncle (paternal)					
+PD						Uncle (maternal)					
+PD						Aunt (paternal)					
+PD						Aunt (maternal)					
+PD						Niece					
+PD						Nephew					
+PD						First cousin (paternal)					
+PD						First cousin (maternal)					
+PD						First cousin (pat/mat unknown)					
+PD						Great-grandfather (paternal)					
+PD						Great-grandfather (maternal)					
+PD						Great-grandmother (paternal)					
+PD						Great-grandmother (maternal)					
+PD						Great-uncle (paternal)					
+PD						Great-uncle (maternal)					
+PD						Great-aunt (paternal)					
+PD						Great-aunt (maternal)					
+PD						Other					
+VD	CONDITION	Enum	3 - contributors shouldn't prioritize inclusion, but can include if resources are available	The relevant condition from the family member's medical history.		_undefined_	_undefined_	_undefined_			
+PD						Prediabetes					
+PD						Type 1 Diabetes					
+PD						Type 2 Diabetes					
+PD						Monogenic Diabetes					
+PD						Gestational Diabetes					
+PD						Diabetes, NOS					
+VD	SOURCE	Enum	2 - contributors should priotritize inclusion if resources are available	The source used to determine the family member's condition.		_undefined_	_undefined_	_undefined_			
+PD						Confirmed by genetic test					
+PD						Clinical diagnosis only					
+											
+											
+TD	Demographics										
+VD	HONEST_BROKER_SUBJECT_ID	String	1 - contributors must include, regardless of the resource cost	The identifier assigned to the subject by the honest broker--an individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re-identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker. (Source: NCI Thersaurus)		_undefined_	_undefined_	_undefined_			
+VD	SEX	Enum	1 - contributors must include, regardless of the resource cost	The biological sex of the subject assigned at birth. 		_undefined_	_undefined_	_undefined_			
+PD						Male					
+PD						Female					
+PD						Undifferentiated					
+VD	ETHNICITY	Enum	1 - contributors must include, regardless of the resource cost	The ethnicity of the subject.		_undefined_	_undefined_	_undefined_			
+PD						Hispanic or Latino					
+PD						Not Hispanic or Latino					
+PD						Unknown					
+PD						Not Reported					
+VD	RACE	Enum	1 - contributors must include, regardless of the resource cost	The race of the subject.		_undefined_	_undefined_	_undefined_			
+PD						American Indian or Alaska Native	A person having origins in any of the original peoples of North and South America (including Central America), and who maintain tribal affiliation or community attachment				
+PD						Asian	A person having origins in any of the original peoples of the Far East, Southeast Asia, or the Indian subcontinent including, for example, Cambodia, China, India, Japan, Korea, Malaysia, Pakistan, the Philippine Islands, Thailand, and Vietnam				
+PD						Black or African American	A person having origins in any of the black racial groups of Africa				
+PD						Native Hawaiian or other Pacific Islander	A person having origins in any of the original peoples of Hawaii, Guam, Samoa, or other Pacific Islands				
+PD						White	A person having origins in any of the original peoples of Europe, the Middle East, or North Africa				
+PD						Unknown					
+PD						Not Reported					
+											
+											
+TD	Medical History										
+VD	HONEST_BROKER_SUBJECT_ID	String	1 - contributors must include, regardless of the resource cost	The identifier assigned to the subject by the honest broker--an individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re-identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker. (Source: NCI Thersaurus)		_undefined_	_undefined_	_undefined_			
+VD	AGE_AT	Decimal	1 - contributors must include, regardless of the resource cost	The age of the subject at diagnosis for the condition.		_undefined_	_undefined_	_undefined_			
+VD	AGE_UNIT	Enum	1 - contributors must include, regardless of the resource cost	The unit of the age of the subject at diagnosis for the condition.		_undefined_	_undefined_	_undefined_			
+PD						Years					
+PD						Months					
+PD						Weeks					
+PD						Days					
+VD	AGE_PRECISION	Enum	1 - contributors must include, regardless of the resource cost	The precision of the of the age of the subject at diganosis for the condition		_undefined_	_undefined_	_undefined_			
+PD						Approximate					
+PD						Exact					
+VD	CONDITION	Enum	2 - contributors should priotritize inclusion if resources are available	The subject's reported medical/social conditions.		_undefined_	_undefined_	_undefined_			
+PD						Abnormal kidney shape, size, or number					
+PD						Absent or missing pancreas					
+PD						Behavioral Difficulties 					
+PD						Congenital Heart Defect					
+PD						Coronary artery disease 					
+PD						Difficulty with social interactions 					
+PD						Elevated liver enzymes / LFTs					
+PD						Fatty liver 					
+PD						Genitourinary developmental malformation or abnormality 					
+PD						Gestational Diabetes 					
+PD						Hepatomegaly					
+PD						High cholesterol, NOS					
+PD						High frequency hearing loss					
+PD						High LDL 					
+PD						High total cholesterol					
+PD						High triglycerides					
+PD						Hypertension					
+PD						Hypoglycemia in infancy 					
+PD						Intrauterine Growth Restriction					
+PD						Liver Adenoma					
+PD						Low frequency hearing loss					
+PD						Low HDL 					
+PD						Macroglossia					
+PD						Nephropathy					
+PD						Peripheral artery disease					
+PD						Peripheral neuropathy					
+PD						Polycystic kidney disease					
+PD						Proteinuria					
+PD						Renal cyst					
+PD						Retinopathy					
+PD						Small for Gestational Age					
+PD						Small pancreas					
+PD						Stroke					
+PD						Umbilical Hernia					
+PD						Other			Only select "Other" if the condition is not related to the provided list (which are designated as "of interest" by the PREDICT group).		
+VD	CONDITION_OTHER	String	2 - contributors should priotritize inclusion if resources are available	Specify the "Other" CONDITION.		_undefined_	_undefined_	_undefined_			
+VD	CONDITION_CODE	String	3 - contributors shouldn't prioritize inclusion, but can include if resources are available	The code that describes the condition.		_undefined_	_undefined_	_undefined_	If you have a more specific form of a condition listed above, select the condition from the list and use this field to provide the more specific coded value. Do not use the "Other" value.		
+VD	CODE_SYSTEM	Enum	3 - contributors shouldn't prioritize inclusion, but can include if resources are available	The code system used to define the CONDITION_CODE.		_undefined_	_undefined_	_undefined_			
+PD						CTCAE					
+PD						ICD-9					
+PD						ICD-10					
+PD						SNOMED-CT					
+											
+											
+DD	Testing										
+TD	Biometrics										
+VD	HONEST_BROKER_SUBJECT_ID	String	1 - contributors must include, regardless of the resource cost	The identifier assigned to the subject by the honest broker--an individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re-identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker. (Source: NCI Thersaurus)		_undefined_	_undefined_	_undefined_			
+VD	AGE_AT	Decimal	1 - contributors must include, regardless of the resource cost	The age of the subject at the biometric measurement.		_undefined_	_undefined_	_undefined_			
+VD	AGE_UNIT	Enum	1 - contributors must include, regardless of the resource cost	The unit of the age of the subject at the biometric measurement 		_undefined_	_undefined_	_undefined_			
+PD						Years					
+PD						Months					
+PD						Weeks					
+PD						Days					
+VD	AGE_PRECISION	Enum	1 - contributors must include, regardless of the resource cost	The precision of the age of the subject at the biometric measurement		_undefined_	_undefined_	_undefined_			
+PD						Approximate					
+PD						Exact					
+VD	MEASUREMENT_TYPE	Enum	2 - contributors should priotritize inclusion if resources are available	The type of general biometric measurement.		_undefined_	_undefined_	_undefined_			
+PD						Height / Length					
+PD						Weight					
+PD						BMI					
+PD						Raw BMI					
+VD	MEASUREMENT_NUMERIC	Decimal	2 - contributors should priotritize inclusion if resources are available	The numeric value of the general biometric measurement.		_undefined_	_undefined_	_undefined_			
+VD	MEASUREMENT_UNIT	Enum	2 - contributors should priotritize inclusion if resources are available	The units for the numeric VALUE recorded for the subject's general biometric measurement.		_undefined_	_undefined_	_undefined_			
+PD						kg					
+PD						cm					
+PD						percentile			Use percentile as a unit when reporting pediatric BMI		
+VD	Z_SCORE	Decimal	2 - contributors should priotritize inclusion if resources are available	Z-score associated with BMI value as applicable 		_undefined_	_undefined_	_undefined_			
+											
+											
+DD	Testing										
+TD	Biospecimen								Only applicable if subject has a sample in storage at the data contributor site 		
+VD	HONEST_BROKER_SUBJECT_ID	String	1 - contributors must include, regardless of the resource cost	The identifier assigned to the subject by the honest broker--an individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re-identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker. (Source: NCI Thersaurus)		_undefined_	_undefined_	_undefined_			
+VD	SAMPLE_TYPE	Enum	1 - contributors must include, regardless of the resource cost	The type of sample available available for the subject 		_undefined_	_undefined_	_undefined_			
+PD						Saliva					
+PD						Blood					
+PD						DNA					
+PD						Plasma					
+PD						Serum					
+PD						Urine					
+PD						PBMC					
+											
+											
+DD	Testing										
+TD	Genetic Analysis										
+VD	HONEST_BROKER_SUBJECT_ID	String	1 - contributors must include, regardless of the resource cost	The identifier assigned to the subject by the honest broker--an individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re-identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker. (Source: NCI Thersaurus)		_undefined_	_undefined_	_undefined_			
+VD	AGE_AT	Decimal	1 - contributors must include, regardless of the resource cost	The age of the subject when the genetic test was completed 		_undefined_	_undefined_	_undefined_			
+VD	AGE_UNIT	Enum	1 - contributors must include, regardless of the resource cost	The unit of the age of the subject when the genetic test was completed 		_undefined_	_undefined_	_undefined_			
+PD						Years					
+PD						Months					
+PD						Weeks					
+PD						Days					
+VD	AGE_PRECISION	Enum	1 - contributors must include, regardless of the resource cost	The precision of the age of the subject when the genetic test was completed 		_undefined_	_undefined_	_undefined_			
+PD						Approximate					
+PD						Exact					
+VD	CAUSITIVE_ALTERATION	Enum	1 - contributors must include, regardless of the resource cost	Is this genetic alteration a cause for the subject's diabetes?		_undefined_	_undefined_	_undefined_			
+PD						Yes					
+PD						No					
+PD						Unknown					
+PD						Not Reported					
+VD	STATUS	Enum	1 - contributors must include, regardless of the resource cost	Is the genetic alteration present or absent?		_undefined_	_undefined_	_undefined_	Can use this field and select "Absent" to indicate if a subject tested negative for a particular genetic variant 		
+PD						Present					
+PD						Absent					
+PD						Unknown					
+PD						Not Reported					
+VD	SAMPLE_TYPE	Enum	1 - contributors must include, regardless of the resource cost	The type of sample used for this genetic analysis.		_undefined_	_undefined_	_undefined_			
+PD						Saliva					
+PD						Blood					
+PD						Buccal 					
+PD						Urine					
+PD						Unknown					
+PD						Not Reported					
+VD	LABORATORY_NAME	Enum	1 - contributors must include, regardless of the resource cost	The name of the laboratory that processed the specimen.		_undefined_	_undefined_	_undefined_			
+PD						Invitae					
+PD						GeneDx					
+PD						Athena					
+PD						Blueprint					
+PD						UCGSL					
+PD						Research Lab					
+PD						LMG					
+PD						Unknown 					
+PD						Not Reported					
+VD	METHOD	Enum	1 - contributors must include, regardless of the resource cost	The testing method/technique used to generate the observed results.		_undefined_	_undefined_	_undefined_	Note: For cases where confirmatory testing was performed, this field should  be used to indicate the method of the initial test, not the confirmatory testing method.		
+PD						Karyotyping	The assessment of the chromosomal morphology and number in somatic cells of an individual.	ncit:C25215			
+PD						Fluorescence In Situ Hybridization	A physical mapping approach that uses fluorescent tags to detect hybridization of probes within metaphase chromosomes or less condensed somatic interphase chromatin. This technique can be used for identification of chromosomal abnormalities and for gene mapping.	ncit:C17563			
+PD						RT-PCR	A laboratory procedure in which an RNA strand is first transcribed into a DNA complement and then subjected to PCR amplification. Transcribing an RNA strand into a DNA complement is termed reverse transcription and is done by the enzyme reverse transcriptase.	ncit:C18136			
+PD						PCR	A laboratory procedure in which an RNA strand is first transcribed into a DNA complement and then subjected to PCR amplification. Transcribing an RNA strand into a DNA complement is termed reverse transcription and is done by the enzyme reverse transcriptase.	ncit:C18136			
+PD						MLPA	A type of high-throughput, multiplex PCR method used to determine abnormal DNA copy number changes of up to 50 genomic DNA or RNA sequences with a single pair of PCR primers. It is frequently used in the detection of genetic aberrations in tumors, and can distinguish sequences differing in only a single nucleotide.	ncit:C116161			
+PD						Sequencing, Sanger, Capillary Electropheresis					
+PD						Sequencing, Sanger, Gel Electropheresis					
+PD						Sequencing, Sanger, NOS					
+PD						Sequencing, NGS, Whole Genome	A procedure that can determine the DNA sequence for all of the exons in an individual.	ncit:C101295			
+PD						Sequencing, NGS, lcWGS	Low-coverage whole genome sequencing				
+PD						Sequencing, NGS, Whole Exome	A procedure that can determine the DNA sequence for nearly the entire genome of an individual.	ncit:C101294			
+PD						Sequencing, NGS, Multi-Gene Panel					
+PD						Sequencing, NGS, Single Site					
+PD						Sequencing, NGS, Single Gene DNA	A genomic test that sequences all the exons of a particular gene. (Source: PCDC)				
+PD						Sequencing, NGS, Targeted DNA	A DNA sequencing technique in which selected regions of an individual's genome are sequenced. (Source: NCIt)	ncit:C158253			
+PD						Sequencing, NGS, Targeted RNA	A type of whole transcriptome shotgun sequencing technique in which select portions of the transcriptome are selected for sequencing. (Source: NCIt)	ncit:C158252			
+PD						Sequencing, NGS, Total RNA	A procedure that can determine the nucleotide sequence for all of the RNA transcripts in an individual. (Source: NCIt)	ncit:C124261			
+PD						Sequencing, NGS, TDS					
+PD						Sequencing, NGS, NOS	The determination of the sequence of component residues in a macromolecule, e.g. amino acids in a protein or nucleotide bases in DNA/RNA or the computational analysis performed to determine the similarities between nonidentical proteins or molecules of DNA or RNA.	ncit:C101293|ncit:C17565			
+PD						Sequencing, Methylation Array	The use of a high-throughput microarray where all of the known CpG islands either in a single specimen or all of the known promoter sequences of a specimen or a population group are coupled to beads or microwells to determine which are methylated.	ncit:C165222			
+PD						Sequencing, Nanostring	Nanostring is an amplification-free technology that measures nucleic acid content by counting molecules directly. (Source: https://www.genetics.pitt.edu)				
+PD						SNP Array	A genomic microarray-based method able to detect single nucleotide polymorphisms.	ncit:C116151			
+PD						Array CGH	Array Comparative Genomic Hybridization (aCGH) is a microarray-based technique to detect alterations in Genomic DNA sequence. (Source: Oxford Gene Technology)				
+PD						Genotyping, NOS	The determination of the DNA sequence of an individual.	ncit:C45447			
+PD						Cytogenetics, NOS	The branch of biology that studies the cellular aspects of heredity, especially the chromosomes. Includes the study of disease states caused by numerical and structural chromosome abnormalities.	ncit:C16487			
+PD						Other	Different than the one(s) previously specified or mentioned.	ncit:C17649			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	CYTOGENETIC_LOCATION	String	3 - contributors shouldn't prioritize inclusion, but can include if resources are available	The chromosome on which the observed mutation is located.		_undefined_	_undefined_	_undefined_			
+VD	GENE	Enum	3 - contributors shouldn't prioritize inclusion, but can include if resources are available	A gene targeted for mutation analysis, identified in HUGO Gene Nomenclature Committee (HGNC) notation.		_undefined_	_undefined_	_undefined_	Use this field for "mtDNA" alterations		
+PD						6q24-related abnormalities					
+PD						ABCC8					
+PD						CEL					
+PD						CFTR					
+PD						DCAF17					
+PD						EIF2AK3					
+PD						FOXP3					
+PD						GATA4					
+PD						GATA6					
+PD						GCK					
+PD						GLIS3					
+PD						HNF1A					
+PD						HNF1B					
+PD						HNF4A					
+PD						IAPP (Amylin)					
+PD						IER3IP1					
+PD						IGF2/Russell Silver Syndrome					
+PD						IL2RA					
+PD						INS					
+PD						INSR					
+PD						KCNJ11					
+PD						LRBA					
+PD						mtDNA					
+PD						NEUROD1					
+PD						PAX4					
+PD						PCBD1					
+PD						PDX1 (IPF1)					
+PD						PTF1A					
+PD						RFX6					
+PD						STAT3					
+PD						WFS1					
+PD						Unknown					
+PD						Not Reported					
+VD	ALTERATION_TYPE	Enum	1 - contributors must include, regardless of the resource cost	The type of variation detected by this genetic analysis.		_undefined_	_undefined_	_undefined_			
+PD						Chromosome Arm Gain					
+PD						Chromosome Arm Loss					
+PD						Substitution		SO:1000002			
+PD						Deletion		SO:0000159			
+PD						Insertion		SO:0000667			
+PD						Indel					
+PD						Duplication		SO:1000035			
+PD						Unknown					
+PD						Not Reported					
+VD	ALTERATION_EFFECT	Enum	2 - contributors should priotritize inclusion if resources are available	The downstream effects of a genetic alteration.		_undefined_	_undefined_				
+PD						Frameshift					
+PD						Missense					
+PD						Stop Gained (Nonsense)					
+PD						None (inframe)					
+VD	ALTERATION_REGION	Enum	2 - contributors should priotritize inclusion if resources are available	Regions of interest where a genetic alteration may occur.		_undefined_	_undefined_				
+PD						Splice Site					
+PD						5' UTR					
+PD						3' UTR					
+VD	HGVS_ACC	String	3 - contributors shouldn't prioritize inclusion, but can include if resources are available	HGVS Accession number		_undefined_	_undefined_	_undefined_			
+VD	HGVS_CODING	String	3 - contributors shouldn't prioritize inclusion, but can include if resources are available	If this alteration is described at the sequence/chromosome level, this is its representation in HGVS nomenclature (cHGVS).		_undefined_	_undefined_	_undefined_			
+VD	HGVS_PROTEIN	String	3 - contributors shouldn't prioritize inclusion, but can include if resources are available	If this alteration is described at the translational product level, this is its representation in HGVS nomenclature (pHGVS)		_undefined_	_undefined_	_undefined_			
+VD	HGVS_GENOMIC	String	3 - contributors shouldn't prioritize inclusion, but can include if resources are available	If this alteration is described at the genome level, this is its representation in HGVS nomenclature (gHGVS)		_undefined_	_undefined_	_undefined_			
+VD	ISCN	String	3 - contributors shouldn't prioritize inclusion, but can include if resources are available	An international standard for human chromosome nomenclature, which includes band names, symbols and abbreviated terms used in the description of human chromosome and chromosome abnormalities.		_undefined_	_undefined_	_undefined_			
+VD	REPORTED_SIGNIFICANCE	Enum	3 - contributors shouldn't prioritize inclusion, but can include if resources are available	The initial reported ACMG clinical significance of this genetic variation.		_undefined_	_undefined_	_undefined_			
+PD						Pathogenic	A genetic variant that is known to directly contribute to the development of disease.	ncit:C168799			
+PD						Likely pathogenic	A genetic variant that is known to have a high likelihood (greater than 90% certainty) to contribute to the development of a disease.	ncit:C168800			
+PD						Uncertain significance	A variation in a genetic sequence whose association with disease risk is unknown.	ncit:C94187			
+PD						Likely benign	A genetic variant that is not expected to contribute to the development of a disease, but the scientific evidence may be insufficient to prove this conclusively.	ncit:C168801			
+PD						Benign	A genetic variant that is known to not contribute to the development of a disease.	ncit:C168802			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	ALLELIC_STATE	Enum	1 - contributors must include, regardless of the resource cost	The specific combination of alleles (gene variants) that an individual possesses at a particular genetic locus (location on a chromosome). Alleles are different forms of a gene that can code for different traits or characteristics. Each person inherits one allele for a given gene from their biological mother and one allele from their biological father, forming a pair of alleles at that locus.		_undefined_	_undefined_	_undefined_			
+PD						Homozygous					
+PD						Heterozygous					
+PD						Compound Heterozygous					
+PD						Unknown					
+PD						Not Reported					
+VD	MAF_NUMERIC	Decimal	2 - contributors should priotritize inclusion if resources are available	The incidence of this mutation in the sample (%).		_undefined_	_undefined_	_undefined_			
+VD	MOSAICISM	Enum	1 - contributors must include, regardless of the resource cost	Does this subject have two or more genetically different sets of cells in their body?		_undefined_	_undefined_	_undefined_			
+PD						Yes					
+PD						No					
+PD						Unknown					
+PD						Not Reported					
+VD	EXTERNAL_REF_ID	String	3 - contributors shouldn't prioritize inclusion, but can include if resources are available	An ID to an external knowledge base that holds additional information about this genetic variant.		_undefined_	_undefined_	_undefined_			
+VD	EXTERNAL_REF_ID_SYSTEM	Enum	3 - contributors shouldn't prioritize inclusion, but can include if resources are available	The name of the external knowledge base from which the EXTERNAL_REF_ID is drawn.		_undefined_	_undefined_	_undefined_			
+PD						ClinGen					
+PD						ClinVar					
+											
+											
+DD	Testing										
+TD	Testing										
+VD	HONEST_BROKER_SUBJECT_ID	String	1 - contributors must include, regardless of the resource cost	The identifier assigned to the subject by the honest broker--an individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re-identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker. (Source: NCI Thersaurus)		_undefined_	_undefined_	_undefined_			
+VD	AGE_AT	Decimal	1 - contributors must include, regardless of the resource cost	The age of the subject.		_undefined_	_undefined_	_undefined_			
+VD	AGE_UNIT	Enum	1 - contributors must include, regardless of the resource cost	The unit used by the numeric AGE_AT.		_undefined_	_undefined_	_undefined_			
+PD						Years					
+PD						Months					
+PD						Weeks					
+PD						Days					
+VD	AGE_PRECISION	Enum	1 - contributors must include, regardless of the resource cost	Indicates whether a recorded AGE_UNIT is exact or just an approximation.		_undefined_	_undefined_	_undefined_			
+PD						Approximate					
+PD						Exact					
+VD	TEST_TYPE	Enum	2 - contributors should priotritize inclusion if resources are available	The type of test being administered to/by the subject.		_undefined_	_undefined_	_undefined_	Please report relevant labs at time points of dx, highest ever, most recent, and any other time periods you have bandwidth to report. 		
+PD						HbA1c			For example, could report Blood Glucose value at time of dx, highest ever, and most recent. But do not necessarily need to report all values in the EMR		
+PD						C-Peptide					
+PD						Blood Glucose					
+PD						Autoantibodies, GAD65					
+PD						Autoantibodies, ZnT8					
+PD						Autoantibodies, IA-2					
+PD						Autoantibodies, Insulin					
+PD						Autoantibodies, Islet cell 					
+PD						Autoantibodies, NOS					
+PD						Total Cholesterol					
+PD						Triglycerides					
+PD						HDL					
+PD						LDL					
+PD						Serum Magnesium 					
+PD						Serum Potassium 					
+PD						Serum Creatinine					
+PD						Serum BUN					
+PD						GFR					
+PD						Urine Microalbumin					
+PD						Urine Creatinine 					
+PD						Microalbumin/Creatinine Ratio					
+PD						Urine Magnesium 					
+PD						ALT					
+PD						AST					
+VD	METHOD	Enum	3 - contributors shouldn't prioritize inclusion, but can include if resources are available	A systematic course of action that is performed in order to complete a laboratory test.		_undefined_	_undefined_	_undefined_			
+PD						Continuous Glucose Monitoring					
+PD						Laboratory Test					
+PD						Home Glucose Test					
+VD	MEASUREMENT_TYPE	Enum	2 - contributors should priotritize inclusion if resources are available	The type of measurement for the indicated test.		_undefined_	_undefined_	_undefined_			
+PD						Average High					
+PD						14-day Average					
+PD						30-day Average					
+PD						90-day Average					
+PD						Average					
+PD						Average Low					
+PD						Point					
+VD	RESULT_MODIFIER	String	2 - contributors should priotritize inclusion if resources are available	"Greater than", "Less than", ">", "<"		_undefined_	_undefined_	_undefined_			
+VD	RESULT_NUMERIC	String	2 - contributors should priotritize inclusion if resources are available	The numeric result		_undefined_	_undefined_	_undefined_			
+VD	RESULT_UNIT	Enum	2 - contributors should priotritize inclusion if resources are available	The unit used to report the result.		_undefined_	_undefined_	_undefined_			
+PD						%					
+PD						mg/dL					
+PD						U/mL					
+PD						mmol/L					
+PD						ng/mL					
+PD						nmol/L					
+VD	REFERENCE_RANGE	String	2 - contributors should priotritize inclusion if resources are available	The range or specific value that indicates a normal result for this test		_undefined_	_undefined_	_undefined_			
+VD	RESULT_INTERPRETATION	Enum	2 - contributors should priotritize inclusion if resources are available	The categorical result of the test administered to/by the subject.		_undefined_	_undefined_	_undefined_			
+PD						Positive					
+PD						Negative					
+VD	FASTING_STATUS	Enum	2 - contributors should priotritize inclusion if resources are available	What was the fasting status of the subject when the test was performed.		_undefined_	_undefined_	_undefined_			
+PD						Fasting					
+PD						Non-fasting					
+PD						Random					
+VD	POST_GLUCOSE_TIMEPOINT	Decimal	2 - contributors should priotritize inclusion if resources are available	How long between glucose administration and blood glucose measurement?		_undefined_	_undefined_	_undefined_	Note: Only use for glucose tolerance testing		
+VD	POST_GLUCOSE_TIMEPOINT_UNIT	Enum	2 - contributors should priotritize inclusion if resources are available	The unit of time used to measure the time between glucose administration and blood glucose measurement.		_undefined_	_undefined_	_undefined_	Note: Only use for glucose tolerance testing		
+PD						Minutes					
+											
+											
+DD	Disease Attributes										
+TD	Disease Characteristics										
+VD	HONEST_BROKER_SUBJECT_ID	String	1 - contributors must include, regardless of the resource cost	The identifier assigned to the subject by the honest broker--an individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re-identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker. (Source: NCI Thersaurus)		_undefined_	_undefined_	_undefined_			
+VD	AGE_AT	Decimal	1 - contributors must include, regardless of the resource cost	The age of the subject at the indicated reference timepoint.		_undefined_	_undefined_	_undefined_			
+VD	AGE_UNIT	Enum	1 - contributors must include, regardless of the resource cost	The unit used by the numeric AGE_AT.		_undefined_	_undefined_	_undefined_			
+PD						Years					
+PD						Months					
+PD						Weeks					
+PD						Days					
+VD	AGE_PRECISION	Enum	1 - contributors must include, regardless of the resource cost	Indicates whether a recorded AGE_AT is exact or just an approximation.		_undefined_	_undefined_	_undefined_			
+PD						Approximate					
+PD						Exact					
+VD	DIABETES_STATUS	Enum	1 - contributors must include, regardless of the resource cost	Has the subject ever had a diagnosis of gestational diabetes, prediabtes, or diabetes?		_undefined_	_undefined_	_undefined_			
+PD						Yes					
+PD						No					
+VD	HYPOGLYCEMIA_FREQUENCY	Enum	3 - contributors shouldn't prioritize inclusion, but can include if resources are available	How often has the subject had MILD/MODERATE hypoglycemia (low blood sugars around 70 mg/dl and not associated with seizures or loss of consciousness)?		_undefined_	_undefined_	_undefined_			
+PD						Once or twice in past year					
+PD						Every few months					
+PD						Once or twice a month					
+PD						Once or twice a week					
+PD						Daily or every other day					
+PD						Never					
+VD	SEVERE_HYPOGLYCEMIA_FREQUENCY	Enum	3 - contributors shouldn't prioritize inclusion, but can include if resources are available	How often has the subject had SEVERE hypoglycemia (low blood sugar)? For children (under 18 years old), this means they were partially or completely unconscious and/or having seizures. For adults (over 18 years old), this means they were partially or completely unconscious and/or having seizures and/or otherwise not able to help with their own care.		_undefined_	_undefined_	_undefined_			
+PD						Once or twice in past year					
+PD						Every few months					
+PD						Once or twice a month					
+PD						Once or twice a week					
+PD						Daily or every other day					
+PD						Never					
+VD	DKA	Enum	2 - contributors should priotritize inclusion if resources are available	Has the subject had diabetic ketoacidosis (DKA) ?		_undefined_	_undefined_	_undefined_			
+PD						Yes - hyperglycemic DKA 					
+PD						No					
+PD						Yes - Euglycemic DKA					
+VD	TIME_IN_RANGE	Decimal	2 - contributors should priotritize inclusion if resources are available	The percentage of time the subject was within target glucose range on a CGM report		_undefined_					
+VD	CGM_RANGE	Enum	2 - contributors should priotritize inclusion if resources are available	Indicates the glucose range value parameters on a CGM report 		_undefined_					
+PD						Standard					
+PD						Non-standard 					
+VD	DIET	Enum	2 - contributors should priotritize inclusion if resources are available	Since the subject's initial diagnosis of diabetes or high blood sugars, has the subject substantially changed what they eat, how much they eat, or when they eat, to try to reach 'goal' blood sugars? 		_undefined_	_undefined_	_undefined_			
+PD						Yes					
+PD						No					
+VD	EXERCISE	Enum	2 - contributors should priotritize inclusion if resources are available	Since the subject's initial diagnosis of diabetes or high blood sugars, has the subject substantially changed how much movement (exercise) they do, to try to reach 'goal' blood sugars? 		_undefined_	_undefined_	_undefined_			
+PD						Yes					
+PD						No					
+											
+DD	Treatment										
+TD	Treatment										
+VD	HONEST_BROKER_SUBJECT_ID	String	1 - contributors must include, regardless of the resource cost	The identifier assigned to the subject by the honest broker--an individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re-identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker. (Source: NCI Thersaurus)		_undefined_	_undefined_	_undefined_			
+VD	AGE_AT_START	Decimal	2 - contributors should priotritize inclusion if resources are available	The age of the subject when they started the regimen that includes the medication indicated by the MEDICATION field.		_undefined_	_undefined_	_undefined_			
+VD	AGE_AT_STOP	Decimal	2 - contributors should priotritize inclusion if resources are available	The age of the subject when they stopped the regimen that includes the medication indicated by the MEDICATION field.		_undefined_	_undefined_	_undefined_			
+VD	AGE_UNIT	Enum	2 - contributors should priotritize inclusion if resources are available	The unit used by the numeric AGE_AT_START and AGE_AT_STOP fields.		_undefined_	_undefined_	_undefined_			
+PD						Years					
+PD						Months					
+PD						Weeks					
+PD						Days					
+VD	AGE_PRECISION	Enum	1 - contributors must include, regardless of the resource cost	Indicates whether a recorded AGE_AT is exact or just an approximation.		_undefined_	_undefined_	_undefined_			
+PD						Approximate					
+PD						Exact					
+VD	REASON_STOP	Enum	2 - contributors should priotritize inclusion if resources are available	The reason the planned treatment has stopped. 		_undefined_	_undefined_	_undefined_			
+PD						Planned stop					
+PD						No significant effect					
+PD						Side effects					
+PD						Not insured					
+PD						Cost					
+PD						Unknown					
+VD	DM_MEDICATION_CLASS	Enum	1 - contributors must include, regardless of the resource cost	The type of diabetes medication used to treat the subject.		_undefined_	_undefined_	_undefined_			
+PD						Insulin, Rapid-acting					
+PD						Insulin, Long-acting					
+PD						Insulin, Intermediate-acting					
+PD						Insulin, Combination					
+PD						Insulin, NOS					
+PD						Biguanide					
+PD						Sulfonylurea					
+PD						Meglitinide					
+PD						Thiazolidinedione					
+PD						Dipeptidylpeptidase 4 inhibitor					
+PD						Sodium-glucose co-transporter 2 inhibitor					
+PD						GLP-1 receptor agonist					
+PD						Dual GLP-1/GIP receptor agonist					
+PD						Amylin analog					
+PD						Alpha-glucosidase inhibitor					
+PD						Bile acid-binding resin					
+VD	MEDICATION_CLASS_OTHER	Enum	2 - contributors should priotritize inclusion if resources are available	Type of other medicaiton of interest.		_undefined_					
+PD						ACE Inhbitor					
+PD						ACL inhibitor					
+PD						Angiotensin II Receptor Blockers					
+PD						ANGPTL3 inhibitor					
+PD						Antiepileptic					
+PD						Antilipemic siRNA					
+PD						Beta blocker					
+PD						Calcium channel blocker					
+PD						Cholesterol absorption inhibitor					
+PD						Coenzyme Q					
+PD						Diuretic					
+PD						Fibrates					
+PD						Finerenone					
+PD						Glucagon					
+PD						Magnesium					
+PD						Mineralcorticoid receptor					
+PD						Pancreatic enzymes					
+PD						PCSK9 inhibitor					
+PD						Psychoactive					
+PD						Statin					
+VD	MEDICATION_NAME	String	2 - contributors should priotritize inclusion if resources are available	Name of the medication indicated by MEDICATION_CLASS field		_undefined_					
+VD	MEDICATION_CODE	String	2 - contributors should priotritize inclusion if resources are available	The RxNorm code for MEDICATION_NAME.		_undefined_					
+VD	MEDICATION_CONCENTRATION	Enum	2 - contributors should priotritize inclusion if resources are available	The concentration of insulin medication 		_undefined_					
+PD						U100					
+PD						U200					
+PD						U300					
+PD						U500					
+PD						Not applicable					
+VD	MEDICATION_DOSE	Decimal	2 - contributors should priotritize inclusion if resources are available	The dose of the medication indicated by the MEDICATION_NAME field.		_undefined_					
+VD	MEDICATION_UNIT	Enum	2 - contributors should priotritize inclusion if resources are available	Units of the medication indicated by MEDICATION_NAME field		_undefined_					
+PD						Units					
+PD						mg					
+PD						mcg					
+PD						gm					
+PD						ml					
+PD						tbsp					
+PD						tsp					
+PD						IU					
+PD						puffs					
+PD						Packets					
+PD						mg/ml					
+PD						application					
+VD	FREQUENCY	Enum	2 - contributors should priotritize inclusion if resources are available	Frequency the subject administered the medication indicated by the MEDICATION field		_undefined_					
+PD						Once per day					
+PD						Two times a day					
+PD						Three times a day					
+PD						Four times a day					
+PD						As needed					
+PD						Before every meal					
+PD						Before meals and at bedtime					
+PD						Every night at bedtime					
+PD						Every week					
+VD	ROUTE	Enum	2 - contributors should priotritize inclusion if resources are available	The route by which the medication indicated by the MEDICATION field is administered.		_undefined_	_undefined_	_undefined_			
+PD						Oral					
+PD						Nasally					
+PD						Subcutaneous					
+PD						IM					
+PD						IV					

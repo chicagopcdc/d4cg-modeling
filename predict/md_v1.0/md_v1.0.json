@@ -1,0 +1,3702 @@
+{
+    "meta": {
+        "name": "md_v1.0",
+        "timestamp": "20241113",
+        "sheet_id": "15ECEMspvSEbwH875PJF82B9A_vG7qh8j4PlSei0_P-w"
+    },
+    "info": {
+        "title": "Monogenic Diabetes (MD) Data Dictionary",
+        "name": "md_v1.0",
+        "release_notes": "",
+        "license": "Creative Commons Attribution-NonCommercial 4.0 International License (https://creativecommons.org/licenses/by-nc/4.0/)",
+        "wiki": "",
+        "consortium_info": "",
+        "description": "The MD data dictionary is a consensus data schema built by an international group of monogenic diabetes experts and maintained by Data for the Common Good (D4CG) at the University of Chicago in collaboration with the PREDICT Consortium. It is based on the collective requirements of its contributors.",
+        "total": ""
+    },
+    "domains": {
+        "protocol": {
+            "subject_characteristics": {
+                "HONEST_BROKER_SUBJECT_ID": {
+                    "type": "String",
+                    "tier": "1 - contributors must include, regardless of the resource cost",
+                    "description": "The identifier assigned to the subject by the honest broker--an individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a \"re-identification code\"), however the information linking this re-identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker. (Source: NCI Thersaurus)",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "DATA_CONTRIBUTOR_ID": {
+                    "type": "Enum",
+                    "tier": "1 - contributors must include, regardless of the resource cost",
+                    "description": "An identifier assigned to a data contributor.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "UChicago Monogenic Diabetes Research Group ": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Barbara Davis Center / UColorado": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Baylor": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Boston Children's": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Indiana": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "MGH": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Maryland": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Michigan": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Nebraska": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "NorthShore": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "DATA_SOURCE": {
+                    "type": "Enum",
+                    "tier": "1 - contributors must include, regardless of the resource cost",
+                    "description": "Indicates where the data is originating from ",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Self-reported": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "EHR": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "LAST_KNOWN_SURVIVAL_STATUS": {
+                    "type": "Enum",
+                    "tier": "2 - contributors should priotritize inclusion if resources are available",
+                    "description": "The last known survival status of the subject.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Alive": {
+                            "description": "Showing characteristics of life; displaying signs of life.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Dead": {
+                            "description": "The cessation of life.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "Reported as unknown by the data contributor.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Reported": {
+                            "description": "Not provided or available.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "AGE_LAST_CONTACT": {
+                    "type": "Decimal",
+                    "tier": "2 - contributors should priotritize inclusion if resources are available",
+                    "description": "The age of the subject at last contact.",
+                    "codes": [],
+                    "implementation_notes": [
+                        "Only applicable for survey source data"
+                    ],
+                    "mappings": []
+                },
+                "AGE_LAST_CONTACT_UNIT": {
+                    "type": "Enum",
+                    "tier": "2 - contributors should priotritize inclusion if resources are available",
+                    "description": "The unit used by the numeric AGE_AT_LAST_CONTACT field.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Years": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Months": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Weeks": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Days": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "AGE_LAST_CONTACT_PRECISION": {
+                    "type": "Enum",
+                    "tier": "2 - contributors should priotritize inclusion if resources are available",
+                    "description": "Indicates whether a recorded AGE_AT_LAST_CONTACT is exact or just an approximation.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Approximate": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Exact": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                }
+            },
+            "timing": {
+                "HONEST_BROKER_SUBJECT_ID": {
+                    "type": "String",
+                    "tier": "1 - contributors must include, regardless of the resource cost",
+                    "description": "The identifier assigned to the subject by the honest broker--an individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a \"re-identification code\"), however the information linking this re-identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker. (Source: NCI Thersaurus)",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "TIMEPOINT": {
+                    "type": "Enum",
+                    "tier": "1 - contributors must include, regardless of the resource cost",
+                    "description": "Indicates the diabetes diagnosis event of the subject ",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Prediabetes Diagnosis": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Diagnosis": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Relapse": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Remission": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "AGE_AT": {
+                    "type": "Decimal",
+                    "tier": "1 - contributors must include, regardless of the resource cost",
+                    "description": "The age of the subject at the diagnois event ",
+                    "codes": [],
+                    "implementation_notes": [
+                        "For reporting at the time of birth, report 1 day"
+                    ],
+                    "mappings": []
+                },
+                "AGE_UNIT": {
+                    "type": "Enum",
+                    "tier": "1 - contributors must include, regardless of the resource cost",
+                    "description": "The unit of the age of the subject at the diagnosis event ",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Years": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Months": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Weeks": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Days": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "AGE_PRECISION": {
+                    "type": "Enum",
+                    "tier": "1 - contributors must include, regardless of the resource cost",
+                    "description": "The precision of the age of the subject at the diagnosis event ",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Approximate": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Exact": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                }
+            },
+            "family_medical_history": {
+                "HONEST_BROKER_SUBJECT_ID": {
+                    "type": "String",
+                    "tier": "1 - contributors must include, regardless of the resource cost",
+                    "description": "The identifier assigned to the subject by the honest broker--an individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a \"re-identification code\"), however the information linking this re-identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker. (Source: NCI Thersaurus)",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "RELATION_HONEST_BROKER_SUBJECT_ID": {
+                    "type": "String",
+                    "tier": "1 - contributors must include, regardless of the resource cost",
+                    "description": "The honest broker subject ID of this family member (if also a subject in the data commons)",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "RELATION": {
+                    "type": "Enum",
+                    "tier": "1 - contributors must include, regardless of the resource cost",
+                    "description": "The relation of this family member to the patient.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Father": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Mother": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Son": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Daughter": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Brother": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Sister": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Spouse/Partner": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Grandfather (Paternal)": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Grandfather (Maternal)": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Grandmother (paternal)": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Grandmother (maternal)": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Uncle (paternal)": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Uncle (maternal)": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Aunt (paternal)": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Aunt (maternal)": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Niece": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Nephew": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "First cousin (paternal)": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "First cousin (maternal)": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "First cousin (pat/mat unknown)": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Great-grandfather (paternal)": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Great-grandfather (maternal)": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Great-grandmother (paternal)": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Great-grandmother (maternal)": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Great-uncle (paternal)": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Great-uncle (maternal)": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Great-aunt (paternal)": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Great-aunt (maternal)": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Other": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "CONDITION": {
+                    "type": "Enum",
+                    "tier": "3 - contributors shouldn't prioritize inclusion, but can include if resources are available",
+                    "description": "The relevant condition from the family member's medical history.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Prediabetes": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Type 1 Diabetes": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Type 2 Diabetes": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Monogenic Diabetes": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Gestational Diabetes": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Diabetes, NOS": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "SOURCE": {
+                    "type": "Enum",
+                    "tier": "2 - contributors should priotritize inclusion if resources are available",
+                    "description": "The source used to determine the family member's condition.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Confirmed by genetic test": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Clinical diagnosis only": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                }
+            },
+            "demographics": {
+                "HONEST_BROKER_SUBJECT_ID": {
+                    "type": "String",
+                    "tier": "1 - contributors must include, regardless of the resource cost",
+                    "description": "The identifier assigned to the subject by the honest broker--an individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a \"re-identification code\"), however the information linking this re-identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker. (Source: NCI Thersaurus)",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "SEX": {
+                    "type": "Enum",
+                    "tier": "1 - contributors must include, regardless of the resource cost",
+                    "description": "The biological sex of the subject assigned at birth. ",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Male": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Female": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Undifferentiated": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "ETHNICITY": {
+                    "type": "Enum",
+                    "tier": "1 - contributors must include, regardless of the resource cost",
+                    "description": "The ethnicity of the subject.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Hispanic or Latino": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Hispanic or Latino": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Reported": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "RACE": {
+                    "type": "Enum",
+                    "tier": "1 - contributors must include, regardless of the resource cost",
+                    "description": "The race of the subject.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "American Indian or Alaska Native": {
+                            "description": "A person having origins in any of the original peoples of North and South America (including Central America), and who maintain tribal affiliation or community attachment",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Asian": {
+                            "description": "A person having origins in any of the original peoples of the Far East, Southeast Asia, or the Indian subcontinent including, for example, Cambodia, China, India, Japan, Korea, Malaysia, Pakistan, the Philippine Islands, Thailand, and Vietnam",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Black or African American": {
+                            "description": "A person having origins in any of the black racial groups of Africa",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Native Hawaiian or other Pacific Islander": {
+                            "description": "A person having origins in any of the original peoples of Hawaii, Guam, Samoa, or other Pacific Islands",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "White": {
+                            "description": "A person having origins in any of the original peoples of Europe, the Middle East, or North Africa",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Reported": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                }
+            },
+            "medical_history": {
+                "HONEST_BROKER_SUBJECT_ID": {
+                    "type": "String",
+                    "tier": "1 - contributors must include, regardless of the resource cost",
+                    "description": "The identifier assigned to the subject by the honest broker--an individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a \"re-identification code\"), however the information linking this re-identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker. (Source: NCI Thersaurus)",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "AGE_AT": {
+                    "type": "Decimal",
+                    "tier": "1 - contributors must include, regardless of the resource cost",
+                    "description": "The age of the subject at diagnosis for the condition.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "AGE_UNIT": {
+                    "type": "Enum",
+                    "tier": "1 - contributors must include, regardless of the resource cost",
+                    "description": "The unit of the age of the subject at diagnosis for the condition.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Years": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Months": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Weeks": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Days": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "AGE_PRECISION": {
+                    "type": "Enum",
+                    "tier": "1 - contributors must include, regardless of the resource cost",
+                    "description": "The precision of the of the age of the subject at diganosis for the condition",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Approximate": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Exact": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "CONDITION": {
+                    "type": "Enum",
+                    "tier": "2 - contributors should priotritize inclusion if resources are available",
+                    "description": "The subject's reported medical/social conditions.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Abnormal kidney shape, size, or number": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Absent or missing pancreas": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Behavioral Difficulties ": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Congenital Heart Defect": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Coronary artery disease ": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Difficulty with social interactions ": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Elevated liver enzymes / LFTs": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Fatty liver ": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Genitourinary developmental malformation or abnormality ": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Gestational Diabetes ": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Hepatomegaly": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "High cholesterol, NOS": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "High frequency hearing loss": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "High LDL ": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "High total cholesterol": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "High triglycerides": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Hypertension": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Hypoglycemia in infancy ": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Intrauterine Growth Restriction": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Liver Adenoma": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Low frequency hearing loss": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Low HDL ": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Macroglossia": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Nephropathy": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Peripheral artery disease": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Peripheral neuropathy": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Polycystic kidney disease": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Proteinuria": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Renal cyst": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Retinopathy": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Small for Gestational Age": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Small pancreas": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Stroke": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Umbilical Hernia": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Other": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [
+                                "Only select \"Other\" if the condition is not related to the provided list (which are designated as \"of interest\" by the PREDICT group)."
+                            ],
+                            "mappings": []
+                        }
+                    }
+                },
+                "CONDITION_OTHER": {
+                    "type": "String",
+                    "tier": "2 - contributors should priotritize inclusion if resources are available",
+                    "description": "Specify the \"Other\" CONDITION.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "CONDITION_CODE": {
+                    "type": "String",
+                    "tier": "3 - contributors shouldn't prioritize inclusion, but can include if resources are available",
+                    "description": "The code that describes the condition.",
+                    "codes": [],
+                    "implementation_notes": [
+                        "If you have a more specific form of a condition listed above, select the condition from the list and use this field to provide the more specific coded value. Do not use the \"Other\" value."
+                    ],
+                    "mappings": []
+                },
+                "CODE_SYSTEM": {
+                    "type": "Enum",
+                    "tier": "3 - contributors shouldn't prioritize inclusion, but can include if resources are available",
+                    "description": "The code system used to define the CONDITION_CODE.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "CTCAE": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ICD-9": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ICD-10": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "SNOMED-CT": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                }
+            }
+        },
+        "testing": {
+            "biometrics": {
+                "HONEST_BROKER_SUBJECT_ID": {
+                    "type": "String",
+                    "tier": "1 - contributors must include, regardless of the resource cost",
+                    "description": "The identifier assigned to the subject by the honest broker--an individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a \"re-identification code\"), however the information linking this re-identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker. (Source: NCI Thersaurus)",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "AGE_AT": {
+                    "type": "Decimal",
+                    "tier": "1 - contributors must include, regardless of the resource cost",
+                    "description": "The age of the subject at the biometric measurement.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "AGE_UNIT": {
+                    "type": "Enum",
+                    "tier": "1 - contributors must include, regardless of the resource cost",
+                    "description": "The unit of the age of the subject at the biometric measurement ",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Years": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Months": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Weeks": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Days": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "AGE_PRECISION": {
+                    "type": "Enum",
+                    "tier": "1 - contributors must include, regardless of the resource cost",
+                    "description": "The precision of the age of the subject at the biometric measurement",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Approximate": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Exact": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "MEASUREMENT_TYPE": {
+                    "type": "Enum",
+                    "tier": "2 - contributors should priotritize inclusion if resources are available",
+                    "description": "The type of general biometric measurement.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Height / Length": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Weight": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "BMI": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Raw BMI": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "MEASUREMENT_NUMERIC": {
+                    "type": "Decimal",
+                    "tier": "2 - contributors should priotritize inclusion if resources are available",
+                    "description": "The numeric value of the general biometric measurement.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "MEASUREMENT_UNIT": {
+                    "type": "Enum",
+                    "tier": "2 - contributors should priotritize inclusion if resources are available",
+                    "description": "The units for the numeric VALUE recorded for the subject's general biometric measurement.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "kg": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "cm": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "percentile": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [
+                                "Use percentile as a unit when reporting pediatric BMI"
+                            ],
+                            "mappings": []
+                        }
+                    }
+                },
+                "Z_SCORE": {
+                    "type": "Decimal",
+                    "tier": "2 - contributors should priotritize inclusion if resources are available",
+                    "description": "Z-score associated with BMI value as applicable ",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                }
+            },
+            "biospecimen": {
+                "HONEST_BROKER_SUBJECT_ID": {
+                    "type": "String",
+                    "tier": "1 - contributors must include, regardless of the resource cost",
+                    "description": "The identifier assigned to the subject by the honest broker--an individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a \"re-identification code\"), however the information linking this re-identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker. (Source: NCI Thersaurus)",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "SAMPLE_TYPE": {
+                    "type": "Enum",
+                    "tier": "1 - contributors must include, regardless of the resource cost",
+                    "description": "The type of sample available available for the subject ",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Saliva": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Blood": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "DNA": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Plasma": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Serum": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Urine": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "PBMC": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                }
+            },
+            "genetic_analysis": {
+                "HONEST_BROKER_SUBJECT_ID": {
+                    "type": "String",
+                    "tier": "1 - contributors must include, regardless of the resource cost",
+                    "description": "The identifier assigned to the subject by the honest broker--an individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a \"re-identification code\"), however the information linking this re-identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker. (Source: NCI Thersaurus)",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "AGE_AT": {
+                    "type": "Decimal",
+                    "tier": "1 - contributors must include, regardless of the resource cost",
+                    "description": "The age of the subject when the genetic test was completed ",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "AGE_UNIT": {
+                    "type": "Enum",
+                    "tier": "1 - contributors must include, regardless of the resource cost",
+                    "description": "The unit of the age of the subject when the genetic test was completed ",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Years": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Months": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Weeks": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Days": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "AGE_PRECISION": {
+                    "type": "Enum",
+                    "tier": "1 - contributors must include, regardless of the resource cost",
+                    "description": "The precision of the age of the subject when the genetic test was completed ",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Approximate": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Exact": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "CAUSITIVE_ALTERATION": {
+                    "type": "Enum",
+                    "tier": "1 - contributors must include, regardless of the resource cost",
+                    "description": "Is this genetic alteration a cause for the subject's diabetes?",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Yes": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "No": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Reported": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "STATUS": {
+                    "type": "Enum",
+                    "tier": "1 - contributors must include, regardless of the resource cost",
+                    "description": "Is the genetic alteration present or absent?",
+                    "codes": [],
+                    "implementation_notes": [
+                        "Can use this field and select \"Absent\" to indicate if a subject tested negative for a particular genetic variant"
+                    ],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Present": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Absent": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Reported": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "SAMPLE_TYPE": {
+                    "type": "Enum",
+                    "tier": "1 - contributors must include, regardless of the resource cost",
+                    "description": "The type of sample used for this genetic analysis.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Saliva": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Blood": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Buccal ": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Urine": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Reported": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "LABORATORY_NAME": {
+                    "type": "Enum",
+                    "tier": "1 - contributors must include, regardless of the resource cost",
+                    "description": "The name of the laboratory that processed the specimen.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Invitae": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "GeneDx": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Athena": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Blueprint": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "UCGSL": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Research Lab": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "LMG": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown ": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Reported": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "METHOD": {
+                    "type": "Enum",
+                    "tier": "1 - contributors must include, regardless of the resource cost",
+                    "description": "The testing method/technique used to generate the observed results.",
+                    "codes": [],
+                    "implementation_notes": [
+                        "Note: For cases where confirmatory testing was performed, this field should  be used to indicate the method of the initial test, not the confirmatory testing method."
+                    ],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Karyotyping": {
+                            "description": "The assessment of the chromosomal morphology and number in somatic cells of an individual.",
+                            "codes": [
+                                "ncit:C25215"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Fluorescence In Situ Hybridization": {
+                            "description": "A physical mapping approach that uses fluorescent tags to detect hybridization of probes within metaphase chromosomes or less condensed somatic interphase chromatin. This technique can be used for identification of chromosomal abnormalities and for gene mapping.",
+                            "codes": [
+                                "ncit:C17563"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "RT-PCR": {
+                            "description": "A laboratory procedure in which an RNA strand is first transcribed into a DNA complement and then subjected to PCR amplification. Transcribing an RNA strand into a DNA complement is termed reverse transcription and is done by the enzyme reverse transcriptase.",
+                            "codes": [
+                                "ncit:C18136"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "PCR": {
+                            "description": "A laboratory procedure in which an RNA strand is first transcribed into a DNA complement and then subjected to PCR amplification. Transcribing an RNA strand into a DNA complement is termed reverse transcription and is done by the enzyme reverse transcriptase.",
+                            "codes": [
+                                "ncit:C18136"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "MLPA": {
+                            "description": "A type of high-throughput, multiplex PCR method used to determine abnormal DNA copy number changes of up to 50 genomic DNA or RNA sequences with a single pair of PCR primers. It is frequently used in the detection of genetic aberrations in tumors, and can distinguish sequences differing in only a single nucleotide.",
+                            "codes": [
+                                "ncit:C116161"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Sequencing, Sanger, Capillary Electropheresis": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Sequencing, Sanger, Gel Electropheresis": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Sequencing, Sanger, NOS": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Sequencing, NGS, Whole Genome": {
+                            "description": "A procedure that can determine the DNA sequence for all of the exons in an individual.",
+                            "codes": [
+                                "ncit:C101295"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Sequencing, NGS, lcWGS": {
+                            "description": "Low-coverage whole genome sequencing",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Sequencing, NGS, Whole Exome": {
+                            "description": "A procedure that can determine the DNA sequence for nearly the entire genome of an individual.",
+                            "codes": [
+                                "ncit:C101294"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Sequencing, NGS, Multi-Gene Panel": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Sequencing, NGS, Single Site": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Sequencing, NGS, Single Gene DNA": {
+                            "description": "A genomic test that sequences all the exons of a particular gene. (Source: PCDC)",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Sequencing, NGS, Targeted DNA": {
+                            "description": "A DNA sequencing technique in which selected regions of an individual's genome are sequenced. (Source: NCIt)",
+                            "codes": [
+                                "ncit:C158253"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Sequencing, NGS, Targeted RNA": {
+                            "description": "A type of whole transcriptome shotgun sequencing technique in which select portions of the transcriptome are selected for sequencing. (Source: NCIt)",
+                            "codes": [
+                                "ncit:C158252"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Sequencing, NGS, Total RNA": {
+                            "description": "A procedure that can determine the nucleotide sequence for all of the RNA transcripts in an individual. (Source: NCIt)",
+                            "codes": [
+                                "ncit:C124261"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Sequencing, NGS, TDS": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Sequencing, NGS, NOS": {
+                            "description": "The determination of the sequence of component residues in a macromolecule, e.g. amino acids in a protein or nucleotide bases in DNA/RNA or the computational analysis performed to determine the similarities between nonidentical proteins or molecules of DNA or RNA.",
+                            "codes": [
+                                "ncit:C101293",
+                                "ncit:C17565"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Sequencing, Methylation Array": {
+                            "description": "The use of a high-throughput microarray where all of the known CpG islands either in a single specimen or all of the known promoter sequences of a specimen or a population group are coupled to beads or microwells to determine which are methylated.",
+                            "codes": [
+                                "ncit:C165222"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Sequencing, Nanostring": {
+                            "description": "Nanostring is an amplification-free technology that measures nucleic acid content by counting molecules directly. (Source: https://www.genetics.pitt.edu)",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "SNP Array": {
+                            "description": "A genomic microarray-based method able to detect single nucleotide polymorphisms.",
+                            "codes": [
+                                "ncit:C116151"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Array CGH": {
+                            "description": "Array Comparative Genomic Hybridization (aCGH) is a microarray-based technique to detect alterations in Genomic DNA sequence. (Source: Oxford Gene Technology)",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Genotyping, NOS": {
+                            "description": "The determination of the DNA sequence of an individual.",
+                            "codes": [
+                                "ncit:C45447"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Cytogenetics, NOS": {
+                            "description": "The branch of biology that studies the cellular aspects of heredity, especially the chromosomes. Includes the study of disease states caused by numerical and structural chromosome abnormalities.",
+                            "codes": [
+                                "ncit:C16487"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Other": {
+                            "description": "Different than the one(s) previously specified or mentioned.",
+                            "codes": [
+                                "ncit:C17649"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "Reported as unknown by the data contributor.",
+                            "codes": [
+                                "ncit:C17998"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Reported": {
+                            "description": "Not provided or available.",
+                            "codes": [
+                                "ncit:C43234"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "CYTOGENETIC_LOCATION": {
+                    "type": "String",
+                    "tier": "3 - contributors shouldn't prioritize inclusion, but can include if resources are available",
+                    "description": "The chromosome on which the observed mutation is located.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "GENE": {
+                    "type": "Enum",
+                    "tier": "3 - contributors shouldn't prioritize inclusion, but can include if resources are available",
+                    "description": "A gene targeted for mutation analysis, identified in HUGO Gene Nomenclature Committee (HGNC) notation.",
+                    "codes": [],
+                    "implementation_notes": [
+                        "Use this field for \"mtDNA\" alterations"
+                    ],
+                    "mappings": [],
+                    "permissible_values": {
+                        "6q24-related abnormalities": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ABCC8": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "CEL": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "CFTR": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "DCAF17": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "EIF2AK3": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "FOXP3": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "GATA4": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "GATA6": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "GCK": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "GLIS3": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "HNF1A": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "HNF1B": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "HNF4A": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "IAPP (Amylin)": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "IER3IP1": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "IGF2/Russell Silver Syndrome": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "IL2RA": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "INS": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "INSR": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "KCNJ11": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "LRBA": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "mtDNA": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "NEUROD1": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "PAX4": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "PCBD1": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "PDX1 (IPF1)": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "PTF1A": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "RFX6": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "STAT3": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "WFS1": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Reported": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "ALTERATION_TYPE": {
+                    "type": "Enum",
+                    "tier": "1 - contributors must include, regardless of the resource cost",
+                    "description": "The type of variation detected by this genetic analysis.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Chromosome Arm Gain": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Chromosome Arm Loss": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Substitution": {
+                            "description": "",
+                            "codes": [
+                                "SO:1000002"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Deletion": {
+                            "description": "",
+                            "codes": [
+                                "SO:0000159"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Insertion": {
+                            "description": "",
+                            "codes": [
+                                "SO:0000667"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Indel": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Duplication": {
+                            "description": "",
+                            "codes": [
+                                "SO:1000035"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Reported": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "ALTERATION_EFFECT": {
+                    "type": "Enum",
+                    "tier": "2 - contributors should priotritize inclusion if resources are available",
+                    "description": "The downstream effects of a genetic alteration.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Frameshift": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Missense": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Stop Gained (Nonsense)": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "None (inframe)": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "ALTERATION_REGION": {
+                    "type": "Enum",
+                    "tier": "2 - contributors should priotritize inclusion if resources are available",
+                    "description": "Regions of interest where a genetic alteration may occur.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Splice Site": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "5' UTR": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "3' UTR": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "HGVS_ACC": {
+                    "type": "String",
+                    "tier": "3 - contributors shouldn't prioritize inclusion, but can include if resources are available",
+                    "description": "HGVS Accession number",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "HGVS_CODING": {
+                    "type": "String",
+                    "tier": "3 - contributors shouldn't prioritize inclusion, but can include if resources are available",
+                    "description": "If this alteration is described at the sequence/chromosome level, this is its representation in HGVS nomenclature (cHGVS).",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "HGVS_PROTEIN": {
+                    "type": "String",
+                    "tier": "3 - contributors shouldn't prioritize inclusion, but can include if resources are available",
+                    "description": "If this alteration is described at the translational product level, this is its representation in HGVS nomenclature (pHGVS)",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "HGVS_GENOMIC": {
+                    "type": "String",
+                    "tier": "3 - contributors shouldn't prioritize inclusion, but can include if resources are available",
+                    "description": "If this alteration is described at the genome level, this is its representation in HGVS nomenclature (gHGVS)",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "ISCN": {
+                    "type": "String",
+                    "tier": "3 - contributors shouldn't prioritize inclusion, but can include if resources are available",
+                    "description": "An international standard for human chromosome nomenclature, which includes band names, symbols and abbreviated terms used in the description of human chromosome and chromosome abnormalities.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "REPORTED_SIGNIFICANCE": {
+                    "type": "Enum",
+                    "tier": "3 - contributors shouldn't prioritize inclusion, but can include if resources are available",
+                    "description": "The initial reported ACMG clinical significance of this genetic variation.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Pathogenic": {
+                            "description": "A genetic variant that is known to directly contribute to the development of disease.",
+                            "codes": [
+                                "ncit:C168799"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Likely pathogenic": {
+                            "description": "A genetic variant that is known to have a high likelihood (greater than 90% certainty) to contribute to the development of a disease.",
+                            "codes": [
+                                "ncit:C168800"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Uncertain significance": {
+                            "description": "A variation in a genetic sequence whose association with disease risk is unknown.",
+                            "codes": [
+                                "ncit:C94187"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Likely benign": {
+                            "description": "A genetic variant that is not expected to contribute to the development of a disease, but the scientific evidence may be insufficient to prove this conclusively.",
+                            "codes": [
+                                "ncit:C168801"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Benign": {
+                            "description": "A genetic variant that is known to not contribute to the development of a disease.",
+                            "codes": [
+                                "ncit:C168802"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "Reported as unknown by the data contributor.",
+                            "codes": [
+                                "ncit:C17998"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Reported": {
+                            "description": "Not provided or available.",
+                            "codes": [
+                                "ncit:C43234"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "ALLELIC_STATE": {
+                    "type": "Enum",
+                    "tier": "1 - contributors must include, regardless of the resource cost",
+                    "description": "The specific combination of alleles (gene variants) that an individual possesses at a particular genetic locus (location on a chromosome). Alleles are different forms of a gene that can code for different traits or characteristics. Each person inherits one allele for a given gene from their biological mother and one allele from their biological father, forming a pair of alleles at that locus.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Homozygous": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Heterozygous": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Compound Heterozygous": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Reported": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "MAF_NUMERIC": {
+                    "type": "Decimal",
+                    "tier": "2 - contributors should priotritize inclusion if resources are available",
+                    "description": "The incidence of this mutation in the sample (%).",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "MOSAICISM": {
+                    "type": "Enum",
+                    "tier": "1 - contributors must include, regardless of the resource cost",
+                    "description": "Does this subject have two or more genetically different sets of cells in their body?",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Yes": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "No": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Reported": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "EXTERNAL_REF_ID": {
+                    "type": "String",
+                    "tier": "3 - contributors shouldn't prioritize inclusion, but can include if resources are available",
+                    "description": "An ID to an external knowledge base that holds additional information about this genetic variant.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "EXTERNAL_REF_ID_SYSTEM": {
+                    "type": "Enum",
+                    "tier": "3 - contributors shouldn't prioritize inclusion, but can include if resources are available",
+                    "description": "The name of the external knowledge base from which the EXTERNAL_REF_ID is drawn.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "ClinGen": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ClinVar": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                }
+            },
+            "testing": {
+                "HONEST_BROKER_SUBJECT_ID": {
+                    "type": "String",
+                    "tier": "1 - contributors must include, regardless of the resource cost",
+                    "description": "The identifier assigned to the subject by the honest broker--an individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a \"re-identification code\"), however the information linking this re-identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker. (Source: NCI Thersaurus)",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "AGE_AT": {
+                    "type": "Decimal",
+                    "tier": "1 - contributors must include, regardless of the resource cost",
+                    "description": "The age of the subject.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "AGE_UNIT": {
+                    "type": "Enum",
+                    "tier": "1 - contributors must include, regardless of the resource cost",
+                    "description": "The unit used by the numeric AGE_AT.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Years": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Months": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Weeks": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Days": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "AGE_PRECISION": {
+                    "type": "Enum",
+                    "tier": "1 - contributors must include, regardless of the resource cost",
+                    "description": "Indicates whether a recorded AGE_UNIT is exact or just an approximation.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Approximate": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Exact": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "TEST_TYPE": {
+                    "type": "Enum",
+                    "tier": "2 - contributors should priotritize inclusion if resources are available",
+                    "description": "The type of test being administered to/by the subject.",
+                    "codes": [],
+                    "implementation_notes": [
+                        "Please report relevant labs at time points of dx, highest ever, most recent, and any other time periods you have bandwidth to report."
+                    ],
+                    "mappings": [],
+                    "permissible_values": {
+                        "HbA1c": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [
+                                "For example, could report Blood Glucose value at time of dx, highest ever, and most recent. But do not necessarily need to report all values in the EMR"
+                            ],
+                            "mappings": []
+                        },
+                        "C-Peptide": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Blood Glucose": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Autoantibodies, GAD65": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Autoantibodies, ZnT8": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Autoantibodies, IA-2": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Autoantibodies, Insulin": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Autoantibodies, Islet cell ": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Autoantibodies, NOS": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Total Cholesterol": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Triglycerides": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "HDL": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "LDL": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Serum Magnesium ": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Serum Potassium ": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Serum Creatinine": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Serum BUN": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "GFR": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Urine Microalbumin": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Urine Creatinine ": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Microalbumin/Creatinine Ratio": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Urine Magnesium ": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ALT": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "AST": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "METHOD": {
+                    "type": "Enum",
+                    "tier": "3 - contributors shouldn't prioritize inclusion, but can include if resources are available",
+                    "description": "A systematic course of action that is performed in order to complete a laboratory test.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Continuous Glucose Monitoring": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Laboratory Test": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Home Glucose Test": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "MEASUREMENT_TYPE": {
+                    "type": "Enum",
+                    "tier": "2 - contributors should priotritize inclusion if resources are available",
+                    "description": "The type of measurement for the indicated test.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Average High": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "14-day Average": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "30-day Average": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "90-day Average": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Average": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Average Low": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Point": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "RESULT_MODIFIER": {
+                    "type": "String",
+                    "tier": "2 - contributors should priotritize inclusion if resources are available",
+                    "description": "\"Greater than\", \"Less than\", \">\", \"<\"",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "RESULT_NUMERIC": {
+                    "type": "String",
+                    "tier": "2 - contributors should priotritize inclusion if resources are available",
+                    "description": "The numeric result",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "RESULT_UNIT": {
+                    "type": "Enum",
+                    "tier": "2 - contributors should priotritize inclusion if resources are available",
+                    "description": "The unit used to report the result.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "%": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "mg/dL": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "U/mL": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "mmol/L": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ng/mL": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "nmol/L": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "REFERENCE_RANGE": {
+                    "type": "String",
+                    "tier": "2 - contributors should priotritize inclusion if resources are available",
+                    "description": "The range or specific value that indicates a normal result for this test",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "RESULT_INTERPRETATION": {
+                    "type": "Enum",
+                    "tier": "2 - contributors should priotritize inclusion if resources are available",
+                    "description": "The categorical result of the test administered to/by the subject.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Positive": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Negative": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "FASTING_STATUS": {
+                    "type": "Enum",
+                    "tier": "2 - contributors should priotritize inclusion if resources are available",
+                    "description": "What was the fasting status of the subject when the test was performed.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Fasting": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Non-fasting": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Random": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "POST_GLUCOSE_TIMEPOINT": {
+                    "type": "Decimal",
+                    "tier": "2 - contributors should priotritize inclusion if resources are available",
+                    "description": "How long between glucose administration and blood glucose measurement?",
+                    "codes": [],
+                    "implementation_notes": [
+                        "Note: Only use for glucose tolerance testing"
+                    ],
+                    "mappings": []
+                },
+                "POST_GLUCOSE_TIMEPOINT_UNIT": {
+                    "type": "Enum",
+                    "tier": "2 - contributors should priotritize inclusion if resources are available",
+                    "description": "The unit of time used to measure the time between glucose administration and blood glucose measurement.",
+                    "codes": [],
+                    "implementation_notes": [
+                        "Note: Only use for glucose tolerance testing"
+                    ],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Minutes": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                }
+            }
+        },
+        "disease_attributes": {
+            "disease_characteristics": {
+                "HONEST_BROKER_SUBJECT_ID": {
+                    "type": "String",
+                    "tier": "1 - contributors must include, regardless of the resource cost",
+                    "description": "The identifier assigned to the subject by the honest broker--an individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a \"re-identification code\"), however the information linking this re-identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker. (Source: NCI Thersaurus)",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "AGE_AT": {
+                    "type": "Decimal",
+                    "tier": "1 - contributors must include, regardless of the resource cost",
+                    "description": "The age of the subject at the indicated reference timepoint.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "AGE_UNIT": {
+                    "type": "Enum",
+                    "tier": "1 - contributors must include, regardless of the resource cost",
+                    "description": "The unit used by the numeric AGE_AT.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Years": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Months": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Weeks": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Days": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "AGE_PRECISION": {
+                    "type": "Enum",
+                    "tier": "1 - contributors must include, regardless of the resource cost",
+                    "description": "Indicates whether a recorded AGE_AT is exact or just an approximation.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Approximate": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Exact": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "DIABETES_STATUS": {
+                    "type": "Enum",
+                    "tier": "1 - contributors must include, regardless of the resource cost",
+                    "description": "Has the subject ever had a diagnosis of gestational diabetes, prediabtes, or diabetes?",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Yes": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "No": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "HYPOGLYCEMIA_FREQUENCY": {
+                    "type": "Enum",
+                    "tier": "3 - contributors shouldn't prioritize inclusion, but can include if resources are available",
+                    "description": "How often has the subject had MILD/MODERATE hypoglycemia (low blood sugars around 70 mg/dl and not associated with seizures or loss of consciousness)?",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Once or twice in past year": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Every few months": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Once or twice a month": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Once or twice a week": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Daily or every other day": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Never": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "SEVERE_HYPOGLYCEMIA_FREQUENCY": {
+                    "type": "Enum",
+                    "tier": "3 - contributors shouldn't prioritize inclusion, but can include if resources are available",
+                    "description": "How often has the subject had SEVERE hypoglycemia (low blood sugar)? For children (under 18 years old), this means they were partially or completely unconscious and/or having seizures. For adults (over 18 years old), this means they were partially or completely unconscious and/or having seizures and/or otherwise not able to help with their own care.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Once or twice in past year": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Every few months": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Once or twice a month": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Once or twice a week": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Daily or every other day": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Never": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "DKA": {
+                    "type": "Enum",
+                    "tier": "2 - contributors should priotritize inclusion if resources are available",
+                    "description": "Has the subject had diabetic ketoacidosis (DKA) ?",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Yes - hyperglycemic DKA ": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "No": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Yes - Euglycemic DKA": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "TIME_IN_RANGE": {
+                    "type": "Decimal",
+                    "tier": "2 - contributors should priotritize inclusion if resources are available",
+                    "description": "The percentage of time the subject was within target glucose range on a CGM report",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "CGM_RANGE": {
+                    "type": "Enum",
+                    "tier": "2 - contributors should priotritize inclusion if resources are available",
+                    "description": "Indicates the glucose range value parameters on a CGM report ",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Standard": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Non-standard ": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "DIET": {
+                    "type": "Enum",
+                    "tier": "2 - contributors should priotritize inclusion if resources are available",
+                    "description": "Since the subject's initial diagnosis of diabetes or high blood sugars, has the subject substantially changed what they eat, how much they eat, or when they eat, to try to reach 'goal' blood sugars? ",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Yes": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "No": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "EXERCISE": {
+                    "type": "Enum",
+                    "tier": "2 - contributors should priotritize inclusion if resources are available",
+                    "description": "Since the subject's initial diagnosis of diabetes or high blood sugars, has the subject substantially changed how much movement (exercise) they do, to try to reach 'goal' blood sugars? ",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Yes": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "No": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                }
+            }
+        },
+        "treatment": {
+            "treatment": {
+                "HONEST_BROKER_SUBJECT_ID": {
+                    "type": "String",
+                    "tier": "1 - contributors must include, regardless of the resource cost",
+                    "description": "The identifier assigned to the subject by the honest broker--an individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a \"re-identification code\"), however the information linking this re-identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker. (Source: NCI Thersaurus)",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "AGE_AT_START": {
+                    "type": "Decimal",
+                    "tier": "2 - contributors should priotritize inclusion if resources are available",
+                    "description": "The age of the subject when they started the regimen that includes the medication indicated by the MEDICATION field.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "AGE_AT_STOP": {
+                    "type": "Decimal",
+                    "tier": "2 - contributors should priotritize inclusion if resources are available",
+                    "description": "The age of the subject when they stopped the regimen that includes the medication indicated by the MEDICATION field.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "AGE_UNIT": {
+                    "type": "Enum",
+                    "tier": "2 - contributors should priotritize inclusion if resources are available",
+                    "description": "The unit used by the numeric AGE_AT_START and AGE_AT_STOP fields.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Years": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Months": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Weeks": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Days": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "AGE_PRECISION": {
+                    "type": "Enum",
+                    "tier": "1 - contributors must include, regardless of the resource cost",
+                    "description": "Indicates whether a recorded AGE_AT is exact or just an approximation.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Approximate": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Exact": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "REASON_STOP": {
+                    "type": "Enum",
+                    "tier": "2 - contributors should priotritize inclusion if resources are available",
+                    "description": "The reason the planned treatment has stopped. ",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Planned stop": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "No significant effect": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Side effects": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not insured": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Cost": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "DM_MEDICATION_CLASS": {
+                    "type": "Enum",
+                    "tier": "1 - contributors must include, regardless of the resource cost",
+                    "description": "The type of diabetes medication used to treat the subject.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Insulin, Rapid-acting": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Insulin, Long-acting": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Insulin, Intermediate-acting": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Insulin, Combination": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Insulin, NOS": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Biguanide": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Sulfonylurea": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Meglitinide": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Thiazolidinedione": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Dipeptidylpeptidase 4 inhibitor": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Sodium-glucose co-transporter 2 inhibitor": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "GLP-1 receptor agonist": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Dual GLP-1/GIP receptor agonist": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Amylin analog": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Alpha-glucosidase inhibitor": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Bile acid-binding resin": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "MEDICATION_CLASS_OTHER": {
+                    "type": "Enum",
+                    "tier": "2 - contributors should priotritize inclusion if resources are available",
+                    "description": "Type of other medicaiton of interest.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "ACE Inhbitor": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ACL inhibitor": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Angiotensin II Receptor Blockers": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ANGPTL3 inhibitor": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Antiepileptic": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Antilipemic siRNA": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Beta blocker": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Calcium channel blocker": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Cholesterol absorption inhibitor": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Coenzyme Q": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Diuretic": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Fibrates": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Finerenone": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Glucagon": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Magnesium": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Mineralcorticoid receptor": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Pancreatic enzymes": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "PCSK9 inhibitor": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Psychoactive": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Statin": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "MEDICATION_NAME": {
+                    "type": "String",
+                    "tier": "2 - contributors should priotritize inclusion if resources are available",
+                    "description": "Name of the medication indicated by MEDICATION_CLASS field",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "MEDICATION_CODE": {
+                    "type": "String",
+                    "tier": "2 - contributors should priotritize inclusion if resources are available",
+                    "description": "The RxNorm code for MEDICATION_NAME.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "MEDICATION_CONCENTRATION": {
+                    "type": "Enum",
+                    "tier": "2 - contributors should priotritize inclusion if resources are available",
+                    "description": "The concentration of insulin medication ",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "U100": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "U200": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "U300": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "U500": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not applicable": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "MEDICATION_DOSE": {
+                    "type": "Decimal",
+                    "tier": "2 - contributors should priotritize inclusion if resources are available",
+                    "description": "The dose of the medication indicated by the MEDICATION_NAME field.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "MEDICATION_UNIT": {
+                    "type": "Enum",
+                    "tier": "2 - contributors should priotritize inclusion if resources are available",
+                    "description": "Units of the medication indicated by MEDICATION_NAME field",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Units": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "mg": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "mcg": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "gm": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ml": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "tbsp": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "tsp": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "IU": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "puffs": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Packets": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "mg/ml": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "application": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "FREQUENCY": {
+                    "type": "Enum",
+                    "tier": "2 - contributors should priotritize inclusion if resources are available",
+                    "description": "Frequency the subject administered the medication indicated by the MEDICATION field",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Once per day": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Two times a day": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Three times a day": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Four times a day": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "As needed": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Before every meal": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Before meals and at bedtime": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Every night at bedtime": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Every week": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "ROUTE": {
+                    "type": "Enum",
+                    "tier": "2 - contributors should priotritize inclusion if resources are available",
+                    "description": "The route by which the medication indicated by the MEDICATION field is administered.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Oral": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Nasally": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Subcutaneous": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "IM": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "IV": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
