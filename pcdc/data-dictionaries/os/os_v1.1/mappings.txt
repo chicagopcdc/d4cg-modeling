@@ -1,0 +1,6 @@
+New VD [os_v1.1].[Subject Characteristics].[EFS_CENSOR_STATUS]
+New PD [os_v1.1].[Subject Characteristics].[EFS_CENSOR_STATUS].[Censored]
+New PD [os_v1.1].[Subject Characteristics].[EFS_CENSOR_STATUS].[Not Censored]
+New PD [os_v1.1].[Subject Characteristics].[EFS_CENSOR_STATUS].[Unknown]
+New PD [os_v1.1].[Subject Characteristics].[EFS_CENSOR_STATUS].[Not Reported]
+New VD [os_v1.1].[Subject Characteristics].[AGE_AT_CENSOR_STATUS]
