@@ -7,7 +7,7 @@
     "info": {
         "title": "Acute Lymphoblastic Leukemia (ALL) Data Dictionary",
         "name": "all_v1.1",
-        "release_notes": "https://github.com/chicagopcdc/d4cg-modeling/tree/main/pcdc/data-dictionaries/all/all_v1.1",
+        "release_notes": "https://github.com/chicagopcdc/d4cg-modeling/tree/main/pcdc/all/all_v1.1",
         "parent_data_model": "pcdc_v1.8",
         "license": "Creative Commons Attribution-NonCommercial 4.0 International License (https://creativecommons.org/licenses/by-nc/4.0/)",
         "wiki": "https://docs.pedscommons.org/",

@@ -7,7 +7,7 @@
     "info": {
         "title": "Ewing Sarcoma (EWS) Data Dictionary",
         "name": "ews_v1.2",
-        "release_notes": "https://github.com/chicagopcdc/d4cg-modeling/tree/main/pcdc/data-dictionaries/ews/ews_v1.2",
+        "release_notes": "https://github.com/chicagopcdc/d4cg-modeling/tree/main/pcdc/ews/ews_v1.2",
         "parent_data_model": "pcdc_v1.8",
         "license": "Creative Commons Attribution-NonCommercial 4.0 International License (https://creativecommons.org/licenses/by-nc/4.0/)",
         "wiki": "https://docs.pedscommons.org/",

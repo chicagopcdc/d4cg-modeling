@@ -1,19 +1,19 @@
 {
     "meta": {
-        "name": "nrsts_v1.0",
+        "name": "rms_v1.0",
         "timestamp": "20241113",
-        "sheet_id": "1gDTwDYylH0UakFcNoGBp6etUKKkLVCkZGr-P6NoyN5Y"
+        "sheet_id": "1hDLvT3O_VfsMuWNR2sWWlIWTyzY8sopYY4e7z5Z1wmQ"
     },
     "info": {
-        "title": "Non-rhabdomyosarcoma Soft Tissue Sarcomas (NRSTS) Data Dictionary",
-        "name": "nrsts_v1.0",
-        "release_notes": "https://github.com/chicagopcdc/d4cg-modeling/tree/main/pcdc/nrsts/nrsts_v1.0",
+        "title": "Rhabdomyosarcoma (RMS) Data Dictionary",
+        "name": "rms_v1.0",
+        "release_notes": "https://github.com/chicagopcdc/d4cg-modeling/tree/main/pcdc/rms/rms_v1.0",
         "parent_data_model": "pcdc_v1.8",
         "license": "Creative Commons Attribution-NonCommercial 4.0 International License (https://creativecommons.org/licenses/by-nc/4.0/)",
         "wiki": "https://docs.pedscommons.org/",
         "consortium_info": "https://commons.cri.uchicago.edu/pcdc/",
-        "description": "Non-rhabdomyosarcoma Soft Tissue Sarcomas (NRSTS) Data Dictionary",
-        "total": "59"
+        "description": "Rhabdomyosarcoma (RMS) Data Dictionary",
+        "total": "63"
     },
     "domains": {
         "protocol": {
@@ -21,10 +21,8 @@
                 "PCDC_SUBJECT_ID": {
                     "type": "String",
                     "tier": "",
-                    "description": "PCDC Subject Identifier",
-                    "codes": [
-                        "C69256"
-                    ],
+                    "description": "A unique subject id assigned by the PCDC. Any given individual person will have only one PCDC_SUBJECT_ID regardless of the number of studies in which they appear. If an individual person is on studies from more than one contributor, they may have more than one HONEST_BROKER_SUBJECT_IDs assigned to them by the contributors, but will be resulted to a single PCDC_SUBJECT_ID by PCDC staff.",
+                    "codes": [],
                     "implementation_notes": [],
                     "mappings": []
                 }
@@ -33,7 +31,7 @@
                 "HONEST_BROKER_SUBJECT_ID": {
                     "type": "String",
                     "tier": "",
-                    "description": "Honest Broker Subject ID",
+                    "description": "Subject identifier assigned by the honest broker.",
                     "codes": [],
                     "implementation_notes": [],
                     "mappings": []
@@ -41,7 +39,7 @@
                 "DATA_CONTRIBUTOR_ID": {
                     "type": "Code",
                     "tier": "",
-                    "description": "Data Contributor Identifier",
+                    "description": "An identifier assigned to a data contributor.",
                     "codes": [],
                     "implementation_notes": [],
                     "mappings": [],
@@ -50,7 +48,7 @@
                 "STUDY_ID": {
                     "type": "Code",
                     "tier": "",
-                    "description": "Study Identifier",
+                    "description": "A sequence of characters used to identify, name, or characterize the study.",
                     "codes": [],
                     "implementation_notes": [],
                     "mappings": [],
@@ -64,7 +62,7 @@
                     "implementation_notes": [],
                     "mappings": [],
                     "permissible_values": {
-                        "Subject is censored (i.e. has had no events(s))": {
+                        "Subject is censored (i.e. has had no events(s)": {
                             "description": "",
                             "codes": [],
                             "implementation_notes": [],
@@ -87,41 +85,50 @@
                 "TREATMENT_ARM": {
                     "type": "Code",
                     "tier": "",
-                    "description": "Assigned Treatment Arm by Intention-To-Treat",
+                    "description": "A specific treatment plan within a clinical trial that describes the activities a subject will be involved in as he or she progresses through the study.",
                     "codes": [],
                     "implementation_notes": [],
                     "mappings": [],
-                    "permissible_values": {}
+                    "permissible_values": {
+                        "TBD": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
                 }
             },
             "disease_phase_timing": {
                 "DISEASE_PHASE": {
                     "type": "Code",
                     "tier": "",
-                    "description": "Disease Phase",
+                    "description": "The stage or period of an individual's disease.",
                     "codes": [],
                     "implementation_notes": [],
-                    "mappings": [
-                        "skos:exactMatch [nrsts_v1.0].[EVENT_TYPE]"
-                    ],
+                    "mappings": [],
                     "permissible_values": {
                         "Initial Diagnosis": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [
-                                "Note: Disease phase could be \"Initial Diagnosis\" phase, \"Relapse\" phase, etc..."
+                            "description": "The first diagnosis of the individual's condition.",
+                            "codes": [
+                                "C156813"
                             ],
+                            "implementation_notes": [],
                             "mappings": []
                         },
                         "Relapse": {
-                            "description": "",
-                            "codes": [],
+                            "description": "The return of a disease after a period of remission.",
+                            "codes": [
+                                "C38155"
+                            ],
                             "implementation_notes": [],
                             "mappings": []
                         },
                         "Progression": {
-                            "description": "",
-                            "codes": [],
+                            "description": "The worsening of a disease over time.",
+                            "codes": [
+                                "C17747"
+                            ],
                             "implementation_notes": [],
                             "mappings": []
                         }
@@ -130,7 +137,7 @@
                 "DISEASE_PHASE_NUMBER": {
                     "type": "Number",
                     "tier": "",
-                    "description": "Disease Phase Number",
+                    "description": "The number of the disease phase.",
                     "codes": [],
                     "implementation_notes": [],
                     "mappings": []
@@ -138,70 +145,66 @@
                 "AGE_AT_DISEASE_PHASE": {
                     "type": "Number",
                     "tier": "",
-                    "description": "Age in Days at Disease Phase",
+                    "description": "Age in days when the diagnosis was made for the disease phase.",
                     "codes": [],
                     "implementation_notes": [],
-                    "mappings": [
-                        "skos:relatedMatch [nrsts_v1.0].[AGE_AT_DISEASE_PHASE] ",
-                        " skos:relatedMatch [nrsts_v1.0].[AGE_AT_EVENT]"
-                    ]
-                },
-                "AGE_IMPUTED": {
-                    "type": "Code",
-                    "tier": "",
-                    "description": "Year at Disease Phase",
-                    "codes": [],
-                    "implementation_notes": [],
-                    "mappings": [],
-                    "permissible_values": {}
+                    "mappings": []
                 },
                 "YEAR_AT_DISEASE_PHASE": {
                     "type": "Number",
                     "tier": "",
-                    "description": "Year at Disease Phase",
+                    "description": "Year when the diagnosis was made for the disease phase.",
                     "codes": [],
                     "implementation_notes": [],
-                    "mappings": [
-                        "skos:exactMatch [nrsts_v1.0].[YEAR_AT_DISEASE_PHASE]"
-                    ]
+                    "mappings": []
                 }
             },
             "course_timing": {
                 "COURSE": {
                     "type": "Code",
                     "tier": "",
-                    "description": "Protocol Treatment Course",
+                    "description": "The type of protocol treatment course administered.",
                     "codes": [],
                     "implementation_notes": [],
                     "mappings": [],
                     "permissible_values": {
                         "Prephase": {
-                            "description": "",
-                            "codes": [],
+                            "description": "A chemotherapy treatment administered prior to the definitive chemotherapy treatment.",
+                            "codes": [
+                                "C168826"
+                            ],
                             "implementation_notes": [],
                             "mappings": []
                         },
                         "Induction": {
-                            "description": "",
-                            "codes": [],
+                            "description": "The first choice of treatment for a particular type of cancer.",
+                            "codes": [
+                                "C158876"
+                            ],
                             "implementation_notes": [],
                             "mappings": []
                         },
                         "Intensification": {
-                            "description": "",
-                            "codes": [],
+                            "description": "A second round of intense chemotherapy as part of consolidation therapy.",
+                            "codes": [
+                                "C173105"
+                            ],
                             "implementation_notes": [],
                             "mappings": []
                         },
                         "Consolidation": {
-                            "description": "",
-                            "codes": [],
+                            "description": "Treatment that is given after initial therapy to kill any remaining cancer cells.",
+                            "codes": [
+                                "C15679"
+                            ],
                             "implementation_notes": [],
                             "mappings": []
                         },
                         "Maintenance": {
-                            "description": "",
-                            "codes": [],
+                            "description": "Continuation of treatment for an extended period of time to prevent relapse.",
+                            "codes": [
+                                "C15688"
+                            ],
                             "implementation_notes": [],
                             "mappings": []
                         }
@@ -210,7 +213,7 @@
                 "COURSE_NUMBER": {
                     "type": "Number",
                     "tier": "",
-                    "description": "Course Number",
+                    "description": "The number assigned to a course of therapeutic agent administration, indicating where a particular course of treatment falls within a sequence of treatments.",
                     "codes": [],
                     "implementation_notes": [],
                     "mappings": []
@@ -218,7 +221,7 @@
                 "AGE_AT_COURSE_START": {
                     "type": "Number",
                     "tier": "",
-                    "description": "Age in Days at Course Start",
+                    "description": "Age of subject (in days) at the start of the course.",
                     "codes": [],
                     "implementation_notes": [],
                     "mappings": []
@@ -226,7 +229,7 @@
                 "AGE_AT_COURSE_END": {
                     "type": "Number",
                     "tier": "",
-                    "description": "Age in Days at Course End",
+                    "description": "Age of subject (in days) at the end of the course.",
                     "codes": [],
                     "implementation_notes": [],
                     "mappings": []
@@ -238,28 +241,40 @@
                 "SEX": {
                     "type": "Code",
                     "tier": "",
-                    "description": "Sex",
+                    "description": "The assemblage of physical properties or qualities by which male is distinguished from female; the physical difference between male and female; the distinguishing peculiarity of male or female.",
                     "codes": [],
                     "implementation_notes": [],
-                    "mappings": [
-                        "skos:exactMatch [nrsts_v1.0].[SEX]"
-                    ],
+                    "mappings": [],
                     "permissible_values": {
                         "Male": {
-                            "description": "",
-                            "codes": [],
+                            "description": "A person who belongs to the sex that normally produces sperm. The term is used to indicate biological sex distinctions, cultural gender role distinctions, or both.",
+                            "codes": [
+                                "C20197"
+                            ],
                             "implementation_notes": [],
                             "mappings": []
                         },
                         "Female": {
-                            "description": "",
-                            "codes": [],
+                            "description": "A person who belongs to the sex that normally produces ova. The term is used to indicate biological sex distinctions, or cultural gender role distinctions, or both.",
+                            "codes": [
+                                "C16576"
+                            ],
                             "implementation_notes": [],
                             "mappings": []
                         },
                         "Unknown": {
-                            "description": "",
-                            "codes": [],
+                            "description": "Reported as unknown by the data contributor.",
+                            "codes": [
+                                "C17998"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Reported": {
+                            "description": "Not provided or available.",
+                            "codes": [
+                                "C43234"
+                            ],
                             "implementation_notes": [],
                             "mappings": []
                         }
@@ -268,64 +283,80 @@
                 "RACE": {
                     "type": "Code",
                     "tier": "",
-                    "description": "Race",
+                    "description": "An arbitrary classification of a taxonomic group that is a division of a species. It usually arises as a consequence of geographical isolation within a species and is characterized by shared heredity, physical attributes and behavior, and in the case of humans, by common history, nationality, or geographic distribution.",
                     "codes": [],
                     "implementation_notes": [],
-                    "mappings": [
-                        "skos:exactMatch [nrsts_v1.0].[RACE]"
-                    ],
+                    "mappings": [],
                     "permissible_values": {
                         "American Indian or Alaska Native": {
-                            "description": "",
-                            "codes": [],
+                            "description": "A person having origins in any of the original peoples of North and South America (including Central America) and who maintains tribal affiliation or community attachment. (OMB)",
+                            "codes": [
+                                "C41259"
+                            ],
                             "implementation_notes": [],
                             "mappings": []
                         },
                         "Asian": {
-                            "description": "",
-                            "codes": [],
+                            "description": "A person having origins in any of the original peoples of the Far East, Southeast Asia, or the Indian subcontinent, including for example, Cambodia, China, India, Japan, Korea, Malaysia, Pakistan, the Philippine Islands, Thailand, and Vietnam. (OMB)",
+                            "codes": [
+                                "C41260"
+                            ],
                             "implementation_notes": [],
                             "mappings": []
                         },
                         "Black or African American": {
-                            "description": "",
-                            "codes": [],
+                            "description": "A person having origins in any of the Black racial groups of Africa. Terms such as \"Haitian\" or \"Negro\" can be used in addition to \"Black or African American\". (OMB)",
+                            "codes": [
+                                "C16352"
+                            ],
                             "implementation_notes": [],
                             "mappings": []
                         },
                         "Multiracial": {
-                            "description": "",
-                            "codes": [],
+                            "description": "Having ancestors of several or various races.",
+                            "codes": [
+                                "C67109"
+                            ],
                             "implementation_notes": [],
                             "mappings": []
                         },
                         "Native Hawaiian or Other Pacific Islander": {
-                            "description": "",
-                            "codes": [],
+                            "description": "A person having origins in any of the original peoples of Hawaii, Guam, Samoa, or other Pacific Islands. (OMB)",
+                            "codes": [
+                                "C41219"
+                            ],
                             "implementation_notes": [],
                             "mappings": []
                         },
                         "White": {
-                            "description": "",
-                            "codes": [],
+                            "description": "A person having origins in any of the original peoples of Europe, the Middle East, or North Africa. (OMB)",
+                            "codes": [
+                                "C41261"
+                            ],
                             "implementation_notes": [],
                             "mappings": []
                         },
                         "Other": {
-                            "description": "",
-                            "codes": [],
+                            "description": "Different than the one(s) previously specified or mentioned.",
+                            "codes": [
+                                "C17649"
+                            ],
                             "implementation_notes": [],
                             "mappings": []
                         },
                         "Unknown": {
-                            "description": "",
-                            "codes": [],
+                            "description": "Reported as unknown by the data contributor.",
+                            "codes": [
+                                "C17998"
+                            ],
                             "implementation_notes": [],
                             "mappings": []
                         },
                         "Not Reported": {
-                            "description": "",
-                            "codes": [],
+                            "description": "Not provided or available.",
+                            "codes": [
+                                "C43234"
+                            ],
                             "implementation_notes": [],
                             "mappings": []
                         }
@@ -334,96 +365,40 @@
                 "ETHNICITY": {
                     "type": "Code",
                     "tier": "",
-                    "description": "Ethnicity",
+                    "description": "A social group characterized by a distinctive social and cultural tradition that is maintained from generation to generation. Members share a common history and origin and a sense of identification with the group. They have similar and distinctive features in their lifestyle habits and shared experiences. They often have a common genetic heritage which may be reflected in their experience of health and disease.",
                     "codes": [],
                     "implementation_notes": [],
-                    "mappings": [
-                        "skos:exactMatch [nrsts_v1.0].[ETHNICITY]"
-                    ],
+                    "mappings": [],
                     "permissible_values": {
                         "Hispanic or Latino": {
-                            "description": "",
-                            "codes": [],
+                            "description": "A person of Cuban, Mexican, Puerto Rican, South or Central American, or other Spanish culture or origin, regardless of race. The term, \"Spanish origin,\" can be used in addition to \"Hispanic or Latino.\" (OMB)",
+                            "codes": [
+                                "C17459"
+                            ],
                             "implementation_notes": [],
                             "mappings": []
                         },
                         "Not Hispanic or Latino": {
-                            "description": "",
-                            "codes": [],
+                            "description": "A person not of Cuban, Mexican, Puerto Rican, South or Central American, or other Spanish culture or origin, regardless of race.",
+                            "codes": [
+                                "C41222"
+                            ],
                             "implementation_notes": [],
                             "mappings": []
                         },
                         "Unknown": {
-                            "description": "",
-                            "codes": [],
+                            "description": "Reported as unknown by the data contributor.",
+                            "codes": [
+                                "C17998"
+                            ],
                             "implementation_notes": [],
                             "mappings": []
                         },
                         "Not Reported": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        }
-                    }
-                }
-            },
-            "medical_history": {
-                "MEDICAL_HISTORY": {
-                    "type": "Code",
-                    "tier": "",
-                    "description": "Medical History",
-                    "codes": [],
-                    "implementation_notes": [],
-                    "mappings": [
-                        "skos:exactMatch [nrsts_v1.0].[PREDISPOSITION_SITUATIONS]"
-                    ],
-                    "permissible_values": {
-                        "APC": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Costello": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "DICER1": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Li-Fraumeni": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "NF-1": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "RB1": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Secondary Malignancy": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Other": {
-                            "description": "",
-                            "codes": [],
+                            "description": "Not provided or available.",
+                            "codes": [
+                                "C43234"
+                            ],
                             "implementation_notes": [],
                             "mappings": []
                         }
@@ -437,19 +412,15 @@
                     "description": "Age in Days at Last Known Survival",
                     "codes": [],
                     "implementation_notes": [],
-                    "mappings": [
-                        "skos:exactMatch [nrsts_v1.0].[AGE_AT_DEATH]"
-                    ]
+                    "mappings": []
                 },
                 "LKSS": {
                     "type": "Code",
                     "tier": "",
-                    "description": "Last Known Survival Status",
+                    "description": "The individual's last known survival status.",
                     "codes": [],
                     "implementation_notes": [],
-                    "mappings": [
-                        "skos:exactMatch [nrsts_v1.0].[OVERALL_SURVIVAL]"
-                    ],
+                    "mappings": [],
                     "permissible_values": {
                         "Alive": {
                             "description": "",
@@ -474,18 +445,16 @@
                 "CAUSE_OF_DEATH": {
                     "type": "Code",
                     "tier": "",
-                    "description": "Cause of Death",
+                    "description": "The circumstance or condition that results in the death of a living being.",
                     "codes": [],
                     "implementation_notes": [],
-                    "mappings": [
-                        "skos:exactMatch [nrsts_v1.0].[CAUSE_OF_DEATH]"
-                    ],
+                    "mappings": [],
                     "permissible_values": {
                         "Disease Progression": {
                             "description": "",
                             "codes": [],
                             "implementation_notes": [
-                                "Note: If multiple causes of death, include one observation per cause of death. There can only be one record where CAUSE_OF_DEATH_RANKING=Primary."
+                                "Note: If multiple causes of death, include one observation per cause of death.  However, only one cause of death can have the varaiable CAUSE_OF_DEATH_RANKING=Primary."
                             ],
                             "mappings": []
                         },
@@ -506,8 +475,29 @@
                             "codes": [],
                             "implementation_notes": [],
                             "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Reported": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
                         }
                     }
+                },
+                "CAUSE_OF_DEATH_OTHER": {
+                    "type": "Code",
+                    "tier": "",
+                    "description": "Cause of Death Other",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {}
                 }
             }
         },
@@ -516,33 +506,54 @@
                 "AGE_AT_TUMOR_ASSESSMENT": {
                     "type": "Number",
                     "tier": "",
-                    "description": "Age in Days at Tumor Assessment",
+                    "description": "The age of an individual at the time of initial pathologic diagnosis.",
                     "codes": [],
                     "implementation_notes": [],
-                    "mappings": [
-                        "skos:exactMatch [nrsts_v1.0].[AGE_AT_EVENT]"
-                    ]
+                    "mappings": []
                 },
                 "TUMOR_CLASSIFICATION": {
                     "type": "Code",
                     "tier": "",
-                    "description": "Tumor Classification",
+                    "description": "The classification of a tumor based primarily on histopathological characteristics.",
                     "codes": [],
                     "implementation_notes": [],
-                    "mappings": [
-                        "skos:relatedMatch [nrsts_v1.0].[TUMOR_SITE_SPECIFIC] ",
-                        " skos:relatedMatch [nrsts_v1.0].[METASTATIC_SITE]"
-                    ],
+                    "mappings": [],
                     "permissible_values": {
                         "Primary": {
+                            "description": "A tumor at the original site of origin.",
+                            "codes": [
+                                "C8509"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Regional": {
                             "description": "",
                             "codes": [],
                             "implementation_notes": [],
                             "mappings": []
                         },
                         "Metastatic": {
-                            "description": "",
-                            "codes": [],
+                            "description": "A tumor that has spread from its original (primary) site of growth to another site, close to or distant from the primary site. Metastasis is characteristic of advanced malignancies, but in rare instances can be seen in neoplasms lacking malignant morphology.",
+                            "codes": [
+                                "C3261"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "Reported as unknown by the data contributor.",
+                            "codes": [
+                                "C17998"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Reported": {
+                            "description": "Not provided or available.",
+                            "codes": [
+                                "C43234"
+                            ],
                             "implementation_notes": [],
                             "mappings": []
                         }
@@ -551,16 +562,12 @@
                 "TUMOR_SITE": {
                     "type": "Code",
                     "tier": "",
-                    "description": "Tumor Site",
+                    "description": "The anatomic site of the tumor.",
                     "codes": [],
                     "implementation_notes": [],
-                    "mappings": [
-                        "skos:relatedMatch [nrsts_v1.0].[TUMOR_SITE_SPECIFIC] ",
-                        " skos:relatedMatch [nrsts_v1.0].[METASTATIC_SITE] ",
-                        " skos:relatedMatch [nrsts_v1.0].[RELAPSE_METASTATIC_SITE]"
-                    ],
+                    "mappings": [],
                     "permissible_values": {
-                        "Head": {
+                        "Abdomen": {
                             "description": "",
                             "codes": [],
                             "implementation_notes": [
@@ -568,127 +575,19 @@
                             ],
                             "mappings": []
                         },
-                        "Neck": {
+                        "Anal/Perianal": {
                             "description": "",
                             "codes": [],
                             "implementation_notes": [],
                             "mappings": []
                         },
-                        "Chest Wall": {
+                        "Bladder": {
                             "description": "",
                             "codes": [],
                             "implementation_notes": [],
                             "mappings": []
                         },
-                        "Abdominal Wall": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Breast": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Intrathoracic": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Intraperitoneal": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Retroperitoneal": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Paraspinal": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Pelvis": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Urogenital": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Perineum": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Shoulder": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Upper Arm": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Lower Arm": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Hand": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Hip": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Thigh": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Leg": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Foot": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Lung": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Liver": {
+                        "Bladder/Prostate": {
                             "description": "",
                             "codes": [],
                             "implementation_notes": [],
@@ -706,25 +605,283 @@
                             "implementation_notes": [],
                             "mappings": []
                         },
-                        "Distant Nodes": {
+                        "Brain": {
                             "description": "",
                             "codes": [],
                             "implementation_notes": [],
                             "mappings": []
                         },
-                        "Brain/Leptomeninges": {
+                        "Cervix": {
                             "description": "",
                             "codes": [],
                             "implementation_notes": [],
                             "mappings": []
                         },
-                        "Pleura": {
+                        "Cheek": {
                             "description": "",
                             "codes": [],
                             "implementation_notes": [],
                             "mappings": []
                         },
-                        "Peritoneum": {
+                        "Distant Lymph Nodes": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Eyelid": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Foot": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Forearm": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Hand": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Hypopharynx": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Infratemporal Fossa/Pterygopalatine": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Kidney": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Knee": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Larynx": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Leg": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Liver/Biliary Tract": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Lower Leg": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Lung": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Middle Ear": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Nasal Cavity": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Nasopharynx": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Neck": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Oral Cavity": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Orbit": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Oropharynx": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Ovary": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Paranasal Sinuses": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Parapharyngeal Area": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Paraspinal": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Paratesticular": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Parathyroid": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Parotid": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Pelvis": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Perineum": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Pleural Effusion": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Prostate": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Retroperitoneum": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Scalp": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Shoulder": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Soft Tissue": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Thigh": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Thorax": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Thyroid": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Trunk": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Upper Arm": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Uterus": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Vagina": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Vulva": {
                             "description": "",
                             "codes": [],
                             "implementation_notes": [],
@@ -753,7 +910,7 @@
                 "TUMOR_SITE_OTHER": {
                     "type": "String",
                     "tier": "",
-                    "description": "Tumor Site Other",
+                    "description": "Other Tumor Site",
                     "codes": [],
                     "implementation_notes": [],
                     "mappings": []
@@ -761,32 +918,26 @@
                 "LONGEST_DIAM_DIM1": {
                     "type": "Number",
                     "tier": "",
-                    "description": "Longest Diameter of Tumor Dimension 1 (cm)",
+                    "description": "The longest diameter of dimension 1.",
                     "codes": [],
                     "implementation_notes": [],
-                    "mappings": [
-                        "skos:exactMatch [nrsts_v1.0].[TUMOR_SIZE_DIM_1]"
-                    ]
+                    "mappings": []
                 },
                 "LONGEST_DIAM_DIM2": {
                     "type": "Number",
                     "tier": "",
-                    "description": "Longest Diameter of Tumor Dimension 2 (cm)",
+                    "description": "The longest diameter of dimension 2.",
                     "codes": [],
                     "implementation_notes": [],
-                    "mappings": [
-                        "skos:exactMatch [nrsts_v1.0].[TUMOR_SIZE_DIM_2]"
-                    ]
+                    "mappings": []
                 },
                 "LONGEST_DIAM_DIM3": {
                     "type": "Number",
                     "tier": "",
-                    "description": "Longest Diameter of Tumor Dimension 3 (cm)",
+                    "description": "The longest diameter of dimension 3.",
                     "codes": [],
                     "implementation_notes": [],
-                    "mappings": [
-                        "skos:exactMatch [nrsts_v1.0].[TUMOR_SIZE_DIM_3]"
-                    ]
+                    "mappings": []
                 },
                 "TUMOR_SIZE": {
                     "type": "Code",
@@ -794,9 +945,7 @@
                     "description": "Tumor Size",
                     "codes": [],
                     "implementation_notes": [],
-                    "mappings": [
-                        "skos:exactMatch [nrsts_v1.0].[TUMOR_SIZE_CATEGORY]"
-                    ],
+                    "mappings": [],
                     "permissible_values": {
                         "<=5 cm": {
                             "description": "",
@@ -815,6 +964,12 @@
                             "codes": [],
                             "implementation_notes": [],
                             "mappings": []
+                        },
+                        "Not Reported": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
                         }
                     }
                 },
@@ -824,9 +979,127 @@
                     "description": "Tumor Invasiveness",
                     "codes": [],
                     "implementation_notes": [],
-                    "mappings": [
-                        "skos:exactMatch [nrsts_v1.0].[INVASIVENESS]"
-                    ],
+                    "mappings": [],
+                    "permissible_values": {
+                        "T1 Stage Finding": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "T2 Stage Finding": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "TX Stage Finding": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Reported": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "NODAL_PATHOLOGY": {
+                    "type": "Code",
+                    "tier": "",
+                    "description": "Pathological Determination of Regional Lymph Node Involvement",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "N0 Stage Finding": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "N1 Stage FInding": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "NX Stage Finding": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Reported": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "NODAL_CLINICAL": {
+                    "type": "Code",
+                    "tier": "",
+                    "description": "Clinical Determination of Regional Lymph Node Involvemen",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "N0 Stage Finding": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "N1 Stage FInding": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "NX Stage Finding": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Reported": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "PARAMENINGEAL_EXTENSION": {
+                    "type": "Code",
+                    "tier": "",
+                    "description": "Parameningeal Extension",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
                     "permissible_values": {
                         "No": {
                             "description": "",
@@ -845,32 +1118,132 @@
                             "codes": [],
                             "implementation_notes": [],
                             "mappings": []
+                        },
+                        "Not Reported": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
                         }
                     }
-                },
-                "DEPTH": {
-                    "type": "Code",
+                }
+            },
+            "staging": {
+                "AGE_AT_STAGING": {
+                    "type": "Number",
                     "tier": "",
-                    "description": "Tumor Depth",
+                    "description": "Age of subject (in days) at the time of the staging assessment.",
                     "codes": [],
                     "implementation_notes": [],
-                    "mappings": [
-                        "skos:exactMatch [nrsts_v1.0].[DEPTH]"
-                    ],
+                    "mappings": []
+                },
+                "TNM_FINDING": {
+                    "type": "Code",
+                    "tier": "",
+                    "description": "TNM Finding",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
                     "permissible_values": {
-                        "Superficial": {
+                        "Favorable Site, M0": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [
+                                "Note: Tied to AGE_AT_STAGING."
+                            ],
+                            "mappings": []
+                        },
+                        "Other site, any T, a, N0, M0": {
                             "description": "",
                             "codes": [],
                             "implementation_notes": [],
                             "mappings": []
                         },
-                        "Deep": {
+                        "Other site, any T, a, N1, M0, any T, b, N0/N1, M0": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Metastases, ML": {
                             "description": "",
                             "codes": [],
                             "implementation_notes": [],
                             "mappings": []
                         },
                         "Unknown": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Reported": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "IRS_GROUP": {
+                    "type": "Code",
+                    "tier": "",
+                    "description": "IRS Surgical-Pathologic Grouping System",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Group I": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [
+                                "Note: Tied to AGE_AT_STAGING."
+                            ],
+                            "mappings": []
+                        },
+                        "Group IIA": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Group IIB": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Group IIC": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Group II, NOS": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Group III": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Group IV": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Reported": {
                             "description": "",
                             "codes": [],
                             "implementation_notes": [],
@@ -883,7 +1256,7 @@
                 "AGE_AT_HIST_ASSESSMENT": {
                     "type": "Number",
                     "tier": "",
-                    "description": "Age in Days at Histologic Assessment",
+                    "description": "Age of subject (in days) at histology assessment.",
                     "codes": [],
                     "implementation_notes": [],
                     "mappings": []
@@ -891,694 +1264,68 @@
                 "HISTOLOGY": {
                     "type": "Code",
                     "tier": "",
-                    "description": "Histology",
+                    "description": "The study of the structure of the cells and their arrangement to constitute tissues and, finally, the association among these to form organs. In pathology, the microscopic process of identifying normal and abnormal morphologic characteristics in tissues, by employing various cytochemical and immunocytochemical stains.",
                     "codes": [],
                     "implementation_notes": [],
-                    "mappings": [
-                        "skos:exactMatch [nrsts_v1.0].[HISTOLOGY]"
-                    ],
+                    "mappings": [],
                     "permissible_values": {
-                        "Atypical lipomatous tumour": {
+                        "Alveolar rhabdomyosarcoma (ARMS)": {
                             "description": "",
-                            "codes": [
-                                "icdo:8850/1"
-                            ],
+                            "codes": [],
                             "implementation_notes": [
                                 "Note: If multiple histological findings, include one observation per histological finding."
                             ],
                             "mappings": []
                         },
-                        "Well differentiated liposarcoma": {
-                            "description": "",
-                            "codes": [
-                                "icdo:8850/3"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Dedifferentiated liposarcoma": {
-                            "description": "",
-                            "codes": [
-                                "icdo:8858/3"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Myxoid liposarcoma": {
-                            "description": "",
-                            "codes": [
-                                "icdo:8852/3"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Pleomorphic liposarcoma": {
-                            "description": "",
-                            "codes": [
-                                "icdo:8854/3"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Liposarcoma, not otherwise specified": {
-                            "description": "",
-                            "codes": [
-                                "icdo:8850/3"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Palmar/plantar fibromatosis": {
-                            "description": "",
-                            "codes": [
-                                "icdo:8813/1"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Desmoid-type fibromatosis": {
-                            "description": "",
-                            "codes": [
-                                "icdo:8821/1"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Lipofibromatosis": {
-                            "description": "",
-                            "codes": [
-                                "icdo:8851/1"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Giant cell fibroblastoma": {
-                            "description": "",
-                            "codes": [
-                                "icdo:8834/1"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Dermatofibrosarcoma protuberans": {
-                            "description": "",
-                            "codes": [
-                                "icdo:8832/1"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Fibrosarcomatous dermatofibrosarcoma protuberans": {
-                            "description": "",
-                            "codes": [
-                                "icdo:8832/3"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Pigmented dermatofibrosarcoma protuberans": {
-                            "description": "",
-                            "codes": [
-                                "icdo:8833/1"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Solitary fibrous tumour": {
-                            "description": "",
-                            "codes": [
-                                "icdo:8815/1"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Solitary fibrous tumour, malignant": {
-                            "description": "",
-                            "codes": [
-                                "icdo:8815/3"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Inflammatory myofibroblastic tumour": {
-                            "description": "",
-                            "codes": [
-                                "icdo:8825/1"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Low-grade myofibroblastic sarcoma": {
-                            "description": "",
-                            "codes": [
-                                "icdo:8825/3"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Myxoinflammatory fibroblastic sarcoma/Atypical myxoinflammatory fibroblastic tumour": {
-                            "description": "",
-                            "codes": [
-                                "icdo:8811/1"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Infantile fibrosarcoma": {
-                            "description": "",
-                            "codes": [
-                                "icdo:8814/3"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Adult fibrosarcoma": {
-                            "description": "",
-                            "codes": [
-                                "icdo:8810/3"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Myxofibrosarcoma": {
-                            "description": "",
-                            "codes": [
-                                "icdo:8811/3"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Low-grade fibromyxoid sarcoma": {
-                            "description": "",
-                            "codes": [
-                                "icdo:8840/3"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Sclerosing epithelioid fibrosarcoma": {
-                            "description": "",
-                            "codes": [
-                                "icdo:8840/3"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Tenosynovial giant cell tumour localized type": {
-                            "description": "",
-                            "codes": [
-                                "icdo:9252/0"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Tenosynovial giant cell tumour diffuse type": {
-                            "description": "",
-                            "codes": [
-                                "icdo:9252/1"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Tenosynovial giant cell tumour malignant": {
-                            "description": "",
-                            "codes": [
-                                "icdo:9252/3"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Plexiform fibrohistiocytic tumour": {
-                            "description": "",
-                            "codes": [
-                                "icdo:8835/1"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Giant cell tumour of soft tissues": {
-                            "description": "",
-                            "codes": [
-                                "icdo:9251/1"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Leiomyosarcoma (excluding skin)": {
-                            "description": "",
-                            "codes": [
-                                "icdo:8890/3"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Glomus tumour (and variants)": {
-                            "description": "",
-                            "codes": [
-                                "icdo:8711/0"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Glomangiomatosis": {
-                            "description": "",
-                            "codes": [
-                                "icdo:8711/1"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Malignant glomus tumour": {
-                            "description": "",
-                            "codes": [
-                                "icdo:8711/3"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Kaposiform haemangioendothelioma": {
-                            "description": "",
-                            "codes": [
-                                "icdo:9130/1"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Retiform haemangioendothelioma": {
-                            "description": "",
-                            "codes": [
-                                "icdo:9136/1"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Papillary intralymphatic angioendothelioma": {
-                            "description": "",
-                            "codes": [
-                                "icdo:9135/1"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Composite haemangioendothelioma": {
-                            "description": "",
-                            "codes": [
-                                "icdo:9136/1"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Pseudomyogenic (epithelioid sarcoma-like) haemangioendothelioma": {
-                            "description": "",
-                            "codes": [
-                                "icdo:9136/1"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Kaposi sarcoma": {
-                            "description": "",
-                            "codes": [
-                                "icdo:9140/3"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Epithelioid haemangioendothelioma": {
-                            "description": "",
-                            "codes": [
-                                "icdo:9133/3"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Angiosarcoma of soft tissue": {
-                            "description": "",
-                            "codes": [
-                                "icdo:9120/3"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Soft tissue chondroma": {
-                            "description": "",
-                            "codes": [
-                                "icdo:9220/0"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Extraskeletal mesenchymal chondrosarcoma": {
-                            "description": "",
-                            "codes": [
-                                "icdo:9240/3"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Extraskeletal osteosarcoma": {
-                            "description": "",
-                            "codes": [
-                                "icdo:9180/3"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Gastrointestinal stromal tumour, uncertain malignant potential": {
-                            "description": "",
-                            "codes": [
-                                "icdo:8936/1"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Gastrointestinal stromal tumour, malignant": {
-                            "description": "",
-                            "codes": [
-                                "icdo:8936/3"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Malignant peripheral nerve sheath tumor": {
-                            "description": "",
-                            "codes": [
-                                "icdo:9540/3"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Epithelioid malignant peripheral nerve sheath tumor": {
-                            "description": "",
-                            "codes": [
-                                "icdo:9542/3"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Malignant Triton tumour": {
-                            "description": "",
-                            "codes": [
-                                "icdo:9561/3"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Malignant granular cell tumour": {
-                            "description": "",
-                            "codes": [
-                                "icdo:9580/3"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Ectomesenchymoma": {
-                            "description": "",
-                            "codes": [
-                                "icdo:8921/3"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Haemosiderotic fibrolipomatous tumour": {
-                            "description": "",
-                            "codes": [
-                                "icdo:8811/1"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Atypical fibromyxanthoma": {
-                            "description": "",
-                            "codes": [
-                                "icdo:8830/1"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Angiomatoid fibrous histiocytoma": {
-                            "description": "",
-                            "codes": [
-                                "icdo:8836/1"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Ossifying fibromyxoid tumour": {
-                            "description": "",
-                            "codes": [
-                                "icdo:8842/0"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Ossifying fibromyxoid tumour, malignant": {
-                            "description": "",
-                            "codes": [
-                                "icdo:8842/3"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Mixed tumour NOS": {
-                            "description": "",
-                            "codes": [
-                                "icdo:8940/0"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Mixed tumour NOS, malignant": {
-                            "description": "",
-                            "codes": [
-                                "icdo:8940/3"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Myoepithelioma": {
-                            "description": "",
-                            "codes": [
-                                "icdo:8982/0"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Myoepithelioma carcinoma": {
-                            "description": "",
-                            "codes": [
-                                "icdo:8982/3"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Phosphaturic mesenchymal tumour, benign": {
-                            "description": "",
-                            "codes": [
-                                "icdo:8990/0"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Phosphaturic mesenchymal tumour, malignant": {
-                            "description": "",
-                            "codes": [
-                                "icdo:8990/3"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Synovial sarcoma NOS": {
-                            "description": "",
-                            "codes": [
-                                "icdo:9040/3"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Synovial sarcoma, spindle cell": {
-                            "description": "",
-                            "codes": [
-                                "icdo:9041/3"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Synovial sarcoma, biphasic": {
-                            "description": "",
-                            "codes": [
-                                "icdo:9043/3"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Epithelioid sarcoma": {
-                            "description": "",
-                            "codes": [
-                                "icdo:8804/3"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Alveolar soft-part sarcoma": {
-                            "description": "",
-                            "codes": [
-                                "icdo:9581/3"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Clear cell sarcoma of soft tissue": {
-                            "description": "",
-                            "codes": [
-                                "icdo:9044/3"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Extraskeletal myxoid chondrosarcoma": {
-                            "description": "",
-                            "codes": [
-                                "icdo:9231/3"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Desmoplastic small round cell tumour": {
-                            "description": "",
-                            "codes": [
-                                "icdo:8806/3"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Extra-renal rhabdoid tumor": {
-                            "description": "",
-                            "codes": [
-                                "icdo:8963/3"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "PEComa NOS, benign": {
-                            "description": "",
-                            "codes": [
-                                "icdo:8714/0"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "PEComa NOS, malignant": {
-                            "description": "",
-                            "codes": [
-                                "icdo:8714/3"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Intimal sarcoma": {
-                            "description": "",
-                            "codes": [
-                                "icdo:9137/3"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Undifferentiated spindle cell sarcoma": {
-                            "description": "",
-                            "codes": [
-                                "icdo:8801/3"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Undifferentiated pleomorphic sarcoma": {
-                            "description": "",
-                            "codes": [
-                                "icdo:8802/3"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Undifferentiated round cell sarcoma": {
-                            "description": "",
-                            "codes": [
-                                "icdo:8803/3"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Undifferentiated epithelioid sarcoma": {
-                            "description": "",
-                            "codes": [
-                                "icdo:8804/3"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Undifferentiated sarcoma NOS": {
-                            "description": "",
-                            "codes": [
-                                "icdo:8805/3"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Other": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        }
-                    }
-                },
-                "HISTOLOGY_OTHER": {
-                    "type": "String",
-                    "tier": "",
-                    "description": "Histology Other",
-                    "codes": [],
-                    "implementation_notes": [],
-                    "mappings": [
-                        "skos:exactMatch [nrsts_v1.0].[HISTOLOGY_OTHER]"
-                    ]
-                },
-                "HISTOLOGY_GRADE": {
-                    "type": "Code",
-                    "tier": "",
-                    "description": "Histology Grade",
-                    "codes": [],
-                    "implementation_notes": [],
-                    "mappings": [
-                        "skos:exactMatch [nrsts_v1.0].[HISTOLOGY_GRADE]"
-                    ],
-                    "permissible_values": {
-                        "FNCLCC Sarcoma Grade GX": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [
-                                "grade cannot be assessed"
-                            ],
-                            "mappings": []
-                        },
-                        "FNCLCC Sarcoma Grade 1": {
+                        "Botryoid rhabdomyosarcoma (BRMS)": {
                             "description": "",
                             "codes": [],
                             "implementation_notes": [],
                             "mappings": []
                         },
-                        "FNCLCC Sarcoma Grade 2": {
+                        "Embryonal rhabdomyosarcoma (ERMS)": {
                             "description": "",
                             "codes": [],
                             "implementation_notes": [],
                             "mappings": []
                         },
-                        "FNCLCC Sarcoma Grade 3": {
+                        "Pleomorphic rhabdomyosarcoma (PRMS)": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Rhabdomyosarcoma (RMS), not classifiable": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Rhabdomyosarcoma (RMS), inadequate tissue for classification": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Rhabdomyosarcoma (RMS), with Mixed Embryonal and Alveolar Features": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Spindle cell": {
                             "description": "",
                             "codes": [],
                             "implementation_notes": [],
                             "mappings": []
                         },
                         "Unknown": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Reported": {
                             "description": "",
                             "codes": [],
                             "implementation_notes": [],
@@ -1593,34 +1340,226 @@
                 "AGE_AT_MOLECULAR_ANALYSIS": {
                     "type": "Number",
                     "tier": "",
-                    "description": "Age in Days at Molecular Analysis",
+                    "description": "Age of subject (in days) when molecular analysis was performed.",
                     "codes": [],
                     "implementation_notes": [],
                     "mappings": []
                 },
-                "MITOSES": {
+                "MOLECULAR_ABNORMALITY": {
                     "type": "Code",
                     "tier": "",
-                    "description": "Mitotic Count",
+                    "description": "A molecular or cytogenic abnormality which occurs in either human disease states or disease models.",
                     "codes": [],
                     "implementation_notes": [],
-                    "mappings": [
-                        "skos:exactMatch [nrsts_v1.0].[MITOSES]"
-                    ],
+                    "mappings": [],
                     "permissible_values": {
-                        "Score 1: 0-9 Mitoses per 10 HPF": {
+                        "PAX3-FOXO1": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [
+                                "Note: If multiple molecular abnormalities, include one observation per molecular abnormality."
+                            ],
+                            "mappings": []
+                        },
+                        "PAX7-FOXO1": {
                             "description": "",
                             "codes": [],
                             "implementation_notes": [],
                             "mappings": []
                         },
-                        "Score 2: 10-19 Mitoses per 10 HPF": {
+                        "PAX3-Other": {
                             "description": "",
                             "codes": [],
                             "implementation_notes": [],
                             "mappings": []
                         },
-                        "Score 3: > 19 Mitoses per 10 HPF": {
+                        "Other-FOXO1": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "VARIANT_TYPE": {
+                    "type": "Code",
+                    "tier": "",
+                    "description": "A variation in or modification of the molecular sequence of a gene or gene product.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Translocation": {
+                            "description": "Any type of genetic recombination involving exchange of DNA between non-homologous chromosomes, which often occurs as the result of non-homologous end-joining of broken DNA strands. Chromosomal translocation is involved in repairing broken DNA and in maintaining cell viability at the expense of long term genomic stability. This process is is associated with particular types of leukemia, infertility and Down Syndrome.",
+                            "codes": [
+                                "C25756"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Inversion": {
+                            "description": "A structural change in genomic DNA where the 5' to 3' order of a nucleotide sequence is completely reversed to the 3' to 5' order relative to its adjacent sequences. This inversion is termed either pericentric, if it includes the centromere of a chromosome, or pancentric, if it excludes the centromere. An inversion mutation abnormality may be heritable or occur somatically.",
+                            "codes": [
+                                "C45589"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Mutation": {
+                            "description": "Any transmissible change in the genetic material of an organism, which can result from radiation, viral infection, transposition, treatment with mutagenic chemicals and errors during DNA replication or meiosis. The effects of mutation range from single base changes to loss or gain of complete chromosomes. As many of the simpler alterations to DNA may be repaired, such changes are only heritable once the change is fixed in the DNA by the process of replication. Mutations may be associated with genetic diversity or with pathologies including cancer.",
+                            "codes": [
+                                "C45576"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Single Nucleotide Variant": {
+                            "description": "A variation of a single nucleotide at a specific location of the genome due to base substitution, which is found at any frequency in the population.",
+                            "codes": [
+                                "C146674"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Copy Number Alteration": {
+                            "description": "Variation in the number of copies of a particular sequence within the genetic material of an individual. Large-scale copy number polymorphisms are common and widely distributed in the human genome.",
+                            "codes": [
+                                "C40207"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Rearrangement": {
+                            "description": "Any DNA sequence rearrangement that results in the creation of a novel protein-coding capacity. Within certain genes, gene rearrangement is a normal part of development, facilitating the affinity maturation of B and T lymphocytes as well as class switching of immunoglobulins.",
+                            "codes": [
+                                "C16611"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Deletion": {
+                            "description": "Any rearrangement to the genomic content that results in the loss of one or more nucleotides of DNA. Deletions are generally irreversible rearrangements. They may alter the reading frame of a gene, or may result in loss of large chromosomal regions.",
+                            "codes": [
+                                "C19296"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Amplification": {
+                            "description": "Addition of extra material.",
+                            "codes": [
+                                "C25418"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Other": {
+                            "description": "Different than the one(s) previously specified or mentioned.",
+                            "codes": [
+                                "C17649"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "Reported as unknown by the data contributor.",
+                            "codes": [
+                                "C17998"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Reported": {
+                            "description": "Not provided or available.",
+                            "codes": [
+                                "C43234"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "CHROMOSOME": {
+                    "type": "String",
+                    "tier": "",
+                    "description": "One of the bodies in the cell nucleus that is the bearer of genes, has the form of a delicate chromatin filament during interphase, contracts to form a compact cylinder segmented into two arms by the centromere during metaphase and anaphase stages of cell division, and is capable of reproducing its physical and chemical structure through successive cell divisions.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "GENE1": {
+                    "type": "String",
+                    "tier": "",
+                    "description": "The gene symbol that represents either a single gene that has a mutation or the gene that comprises the 5' portion of the coding sequence involved in a fusion gene mutation.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "GENE2": {
+                    "type": "String",
+                    "tier": "",
+                    "description": "The gene symbol that represents the gene that comprises the 3' portion of the coding sequence for a fusion gene.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "MOLECULAR_ABNORMALITY_RESULT": {
+                    "type": "Code",
+                    "tier": "",
+                    "description": "An indicator for whether a molecular analysis procedure was performed and whether the assay detected a molecular abnormality.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Positive": {
+                            "description": "A finding of abnormality following an examination or observation confirming something, such as the presence of a disease, condition, or microorganism.",
+                            "codes": [
+                                "C38758"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Negative": {
+                            "description": "A finding of normality following an examination or investigation looking for the presence of a microorganism, disease, or condition.",
+                            "codes": [
+                                "C38757"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Done": {
+                            "description": "Indicates a task, process or examination that has either not been initiated or not been completed.",
+                            "codes": [
+                                "C49484"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "Reported as unknown by the data contributor.",
+                            "codes": [
+                                "C17998"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "ANAPLASIA": {
+                    "type": "Code",
+                    "tier": "",
+                    "description": "Anaplasia",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Absent": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Present": {
                             "description": "",
                             "codes": [],
                             "implementation_notes": [],
@@ -1634,173 +1573,27 @@
                         }
                     }
                 },
-                "MOLECULAR_ABNORMALITY": {
+                "ANAPLASIA_EXTENT": {
                     "type": "Code",
                     "tier": "",
-                    "description": "Molecular Abnormality",
+                    "description": "Anaplasia Extent",
                     "codes": [],
                     "implementation_notes": [],
-                    "mappings": [
-                        "skos:exactMatch [nrsts_v1.0].[FUSION_STATUS]"
-                    ],
+                    "mappings": [],
                     "permissible_values": {
-                        "FOXO1 Rearranged": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [
-                                "Note: If multiple molecular abnormalities, include one observation per molecular abnormality."
-                            ],
-                            "mappings": []
-                        },
-                        "EWSR1 Rearranged": {
+                        "Diffuse": {
                             "description": "",
                             "codes": [],
                             "implementation_notes": [],
                             "mappings": []
                         },
-                        "SMARCB1 Deleted/Mutated": {
+                        "Focal": {
                             "description": "",
                             "codes": [],
                             "implementation_notes": [],
                             "mappings": []
                         },
-                        "ETV6 Rearranged": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "ALK Rearranged": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "SSX-SS18": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "CIC-DUX4": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "BCOR-CCNB3": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "EWSR1-ETV1/4": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "FUS-CREB3L2": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "EWSR1-ATF1": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "EWSR1-CREB1": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "EWSR1-PBX1/ZNF44/POU5F1": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "TGFBR3-MGEA5": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "NTRK Rearranged": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "ROS1 Rearranged": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "VGLLA2 Rearranged": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "ASPSCR1-TFE3": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "BCOR ITT Rearranged": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Other": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        }
-                    }
-                },
-                "MOLECULAR_ABNORMALITY_OTHER": {
-                    "type": "String",
-                    "tier": "",
-                    "description": "Molecular Abnormality Other",
-                    "codes": [],
-                    "implementation_notes": [],
-                    "mappings": [
-                        "skos:exactMatch [nrsts_v1.0].[FUSION_STATUS_OTHER]"
-                    ]
-                },
-                "CYTODIFFERENTIATION": {
-                    "type": "Code",
-                    "tier": "",
-                    "description": "Cytodifferentiation Score",
-                    "codes": [],
-                    "implementation_notes": [],
-                    "mappings": [
-                        "skos:exactMatch [nrsts_v1.0].[CYTODIFFERENTIATION]"
-                    ],
-                    "permissible_values": {
-                        "1": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "2": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "3": {
+                        "Unknown": {
                             "description": "",
                             "codes": [],
                             "implementation_notes": [],
@@ -1812,10 +1605,62 @@
         },
         "treatment": {
             "biopsy/surgical_procedures": {
-                "AGE_AT_SURGERY": {
+                "AGE_AT_PROCEDURE": {
                     "type": "Number",
                     "tier": "",
-                    "description": "Age in Days of Procedure",
+                    "description": "Age of subject (in days) at procedure.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "DISEASE_PHASE": {
+                    "type": "Code",
+                    "tier": "",
+                    "description": "The stage or period of an individual's disease.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Initial Diagnosis": {
+                            "description": "The first diagnosis of the individual's condition.\r",
+                            "codes": [
+                                "C156813"
+                            ],
+                            "implementation_notes": [
+                                "Note: Only fill in Disease phase, Disease phase number, Course, and Course number if \"AGE_\" not known  Note: Disease phase could be \"Initial Diagnosis\" phase, or a \"Relapse\" phase, etc..."
+                            ],
+                            "mappings": []
+                        },
+                        "Relapse": {
+                            "description": "The return of a disease after a period of remission.\r",
+                            "codes": [
+                                "C38155"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Progression": {
+                            "description": "The worsening of a disease over time.",
+                            "codes": [
+                                "C17747"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Relapse/Progression": {
+                            "description": "Either the return of the disease or the progression of the disease.",
+                            "codes": [
+                                "C174991"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "DISEASE_PHASE_NUMBER": {
+                    "type": "Number",
+                    "tier": "",
+                    "description": "The number of the disease phase.",
                     "codes": [],
                     "implementation_notes": [],
                     "mappings": []
@@ -1823,31 +1668,48 @@
                 "TUMOR_CLASSIFICATION": {
                     "type": "Code",
                     "tier": "",
-                    "description": "Tumor Classification",
+                    "description": "The classification of a tumor based primarily on histopathological characteristics.",
                     "codes": [],
                     "implementation_notes": [],
-                    "mappings": [
-                        "skos:relatedMatch [nrsts_v1.0].[SURGERY_BIOPSY_NODES] ",
-                        " skos:relatedMatch [nrsts_v1.0].[TUMOR_EXTENT]"
-                    ],
+                    "mappings": [],
                     "permissible_values": {
                         "Primary": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [
-                                "distant sites?"
+                            "description": "A tumor at the original site of origin.",
+                            "codes": [
+                                "C8509"
                             ],
-                            "mappings": []
-                        },
-                        "Regional Nodes": {
-                            "description": "",
-                            "codes": [],
                             "implementation_notes": [],
                             "mappings": []
                         },
-                        "Metastatic": {
+                        "Regional": {
                             "description": "",
                             "codes": [],
+                            "implementation_notes": [
+                                "Changed from \"Regional Nodes\" to \"Regional\" BTF 20210801"
+                            ],
+                            "mappings": []
+                        },
+                        "Metastatic": {
+                            "description": "A tumor that has spread from its original (primary) site of growth to another site, close to or distant from the primary site. Metastasis is characteristic of advanced malignancies, but in rare instances can be seen in neoplasms lacking malignant morphology.",
+                            "codes": [
+                                "C3261"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "Reported as unknown by the data contributor.",
+                            "codes": [
+                                "C17998"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Reported": {
+                            "description": "Not provided or available.",
+                            "codes": [
+                                "C43234"
+                            ],
                             "implementation_notes": [],
                             "mappings": []
                         }
@@ -1856,138 +1718,30 @@
                 "PROCEDURE_SITE": {
                     "type": "Code",
                     "tier": "",
-                    "description": "Procedure Site",
+                    "description": "The anatomical site on which surgery was performed.",
                     "codes": [],
                     "implementation_notes": [],
                     "mappings": [],
                     "permissible_values": {
-                        "Head": {
+                        "Abdomen": {
                             "description": "",
                             "codes": [],
                             "implementation_notes": [],
                             "mappings": []
                         },
-                        "Neck": {
+                        "Anal/Perianal": {
                             "description": "",
                             "codes": [],
                             "implementation_notes": [],
                             "mappings": []
                         },
-                        "Chest Wall": {
+                        "Bladder": {
                             "description": "",
                             "codes": [],
                             "implementation_notes": [],
                             "mappings": []
                         },
-                        "Abdominal Wall": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Breast": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Intrathoracic": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Intraperitoneal": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Retroperitoneal": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Paraspinal": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Pelvis": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Urogenital": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Perineum": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Shoulder": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Upper Arm": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Lower Arm": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Hand": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Hip": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Thigh": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Leg": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Foot": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Lung": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Liver": {
+                        "Bladder/Prostate": {
                             "description": "",
                             "codes": [],
                             "implementation_notes": [],
@@ -2005,25 +1759,295 @@
                             "implementation_notes": [],
                             "mappings": []
                         },
-                        "Distant Nodes": {
+                        "Bone or Bone Marrow": {
                             "description": "",
                             "codes": [],
                             "implementation_notes": [],
                             "mappings": []
                         },
-                        "Brain/Leptomeninges": {
+                        "Brain": {
                             "description": "",
                             "codes": [],
                             "implementation_notes": [],
                             "mappings": []
                         },
-                        "Pleura": {
+                        "Cervix": {
                             "description": "",
                             "codes": [],
                             "implementation_notes": [],
                             "mappings": []
                         },
-                        "Peritoneum": {
+                        "Cheek": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Distant Lymph Nodes": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Eyelid": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Foot": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Forearm": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Hand": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Hypopharynx": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Infratemporal Fossa/Pterygopalatine": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Infratemporal Fossa/Pterygopalatine and Parapharyngeal Area": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Kidney": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Knee": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Larynx": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Leg": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Liver/Biliary Tract": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Lower Leg": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Lung": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Middle Ear": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Nasal Cavity": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Nasal Cavity and Paranasal Sinuses": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Nasopharynx": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Neck": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Oral Cavity": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Orbit": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Oropharynx": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Ovary": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Paranasal Sinuses": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Parapharyngeal Area": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Paraspinal": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Paratesticular": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Parotid": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Pelvis": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Perineum": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Pleural Effusion": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Prostate": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Retroperitoneum": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Scalp": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Shoulder": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Soft Tissue": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Thigh": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Thorax": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Thyroid and Parathyroid": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Trunk": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Upper Arm": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Uterus": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Vagina": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Vulva": {
                             "description": "",
                             "codes": [],
                             "implementation_notes": [],
@@ -2052,23 +2076,24 @@
                 "PROCEDURE_TYPE": {
                     "type": "Code",
                     "tier": "",
-                    "description": "Procedure Type",
+                    "description": "A categorization of surgical procedures by type or purpose.",
                     "codes": [],
                     "implementation_notes": [],
-                    "mappings": [
-                        "skos:relatedMatch [nrsts_v1.0].[DELAYED_SURGERY_EXTENT] ",
-                        " skos:relatedMatch [nrsts_v1.0].[INITIAL_SURGERY_EXTENT]"
-                    ],
+                    "mappings": [],
                     "permissible_values": {
-                        "Biopsy": {
-                            "description": "",
-                            "codes": [],
+                        "Surgery": {
+                            "description": "A diagnostic or treatment procedure performed by manual and/or instrumental means, often involving an incision and the removal or replacement of a diseased organ or tissue; of or relating to or involving or used in surgery or requiring or amenable to treatment by surgery.",
+                            "codes": [
+                                "C15329"
+                            ],
                             "implementation_notes": [],
                             "mappings": []
                         },
-                        "Surgery": {
-                            "description": "",
-                            "codes": [],
+                        "Biopsy": {
+                            "description": "The removal of tissue specimens or fluid from the living body for microscopic examination, performed to establish a diagnosis.",
+                            "codes": [
+                                "C15189"
+                            ],
                             "implementation_notes": [],
                             "mappings": []
                         }
@@ -2077,41 +2102,60 @@
                 "MARGINS": {
                     "type": "Code",
                     "tier": "",
-                    "description": "Margins",
+                    "description": "One of the criteria for assessment of the effectiveness of given surgical procedure in achieving the local control of a neoplasm and the adequacy of tumor removal. It is defined by the tissue plane through which the dissection has been done and the actual or potential neoplastic tissue which has been left outside the boundary of a resected specimen within the patient. There are four types of surgical margins: intracapsular or intralesional, marginal, wide, and radical.",
                     "codes": [],
                     "implementation_notes": [],
-                    "mappings": [
-                        "skos:relatedMatch [nrsts_v1.0].[INITIAL_SURGERY_EXTENT] ",
-                        " skos:relatedMatch [nrsts_v1.0].[DELAYED_SURGERY_EXTENT]"
-                    ],
+                    "mappings": [],
                     "permissible_values": {
-                        "R0 - Complete Resection, Negative": {
+                        "Incomplete Resection": {
                             "description": "",
                             "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "R0 - Complete Resection, Negative": {
+                            "description": "No detectable presence of residual tumor after treatment",
+                            "codes": [
+                                "C139578"
+                            ],
                             "implementation_notes": [],
                             "mappings": []
                         },
                         "R1 - Complete Resection, Positive": {
-                            "description": "",
-                            "codes": [],
+                            "description": "Presence of microscopic residual tumor after treatment.",
+                            "codes": [
+                                "C139579"
+                            ],
                             "implementation_notes": [],
                             "mappings": []
                         },
                         "R2 - Gross Residual Disease": {
+                            "description": "Presence of macroscopic residual tumor after treatment.",
+                            "codes": [
+                                "C139580"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Gross Total Resection, Unknown Margins": {
                             "description": "",
                             "codes": [],
                             "implementation_notes": [],
                             "mappings": []
                         },
                         "Unknown": {
-                            "description": "",
-                            "codes": [],
+                            "description": "Reported as unknown by the data contributor.",
+                            "codes": [
+                                "C17998"
+                            ],
                             "implementation_notes": [],
                             "mappings": []
                         },
                         "Not Reported": {
-                            "description": "",
-                            "codes": [],
+                            "description": "Not provided or available.",
+                            "codes": [
+                                "C43234"
+                            ],
                             "implementation_notes": [],
                             "mappings": []
                         }
@@ -2119,33 +2163,28 @@
                 }
             },
             "radiation_therapy": {
-                "AGE_AT_RT": {
+                "AGE_AT_RT_START": {
                     "type": "Number",
                     "tier": "",
-                    "description": "Age in Days at Start of Radiation Therapy",
+                    "description": "Age of subject (in days) at the start of radiation therapy.",
                     "codes": [],
                     "implementation_notes": [],
-                    "mappings": [
-                        "skos:exactMatch [nrsts_v1.0].[RT_TIMING]"
-                    ]
+                    "mappings": []
                 },
                 "TUMOR_CLASSIFICATION": {
                     "type": "Code",
                     "tier": "",
-                    "description": "Tumor Classification",
+                    "description": "The classification of a tumor based primarily on histopathological characteristics.",
                     "codes": [],
                     "implementation_notes": [],
-                    "mappings": [
-                        "skos:relatedMatch [nrsts_v1.0].[RT_PRIMARY] ",
-                        " skos:relatedMatch [nrsts_v1.0].[RT_NODES]"
-                    ],
+                    "mappings": [],
                     "permissible_values": {
                         "Primary": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [
-                                "distant sites?"
+                            "description": "A tumor at the original site of origin.",
+                            "codes": [
+                                "C8509"
                             ],
+                            "implementation_notes": [],
                             "mappings": []
                         },
                         "Regional Nodes": {
@@ -2155,8 +2194,10 @@
                             "mappings": []
                         },
                         "Metastatic": {
-                            "description": "",
-                            "codes": [],
+                            "description": "A tumor that has spread from its original (primary) site of growth to another site, close to or distant from the primary site. Metastasis is characteristic of advanced malignancies, but in rare instances can be seen in neoplasms lacking malignant morphology.",
+                            "codes": [
+                                "C3261"
+                            ],
                             "implementation_notes": [],
                             "mappings": []
                         }
@@ -2170,7 +2211,7 @@
                     "implementation_notes": [],
                     "mappings": [],
                     "permissible_values": {
-                        "Head": {
+                        "Pelvis": {
                             "description": "",
                             "codes": [],
                             "implementation_notes": [],
@@ -2182,55 +2223,7 @@
                             "implementation_notes": [],
                             "mappings": []
                         },
-                        "Chest Wall": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Abdominal Wall": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Breast": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Intrathoracic": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Intraperitoneal": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Retroperitoneal": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Paraspinal": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Pelvis": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Urogenital": {
+                        "Retroperitoneum": {
                             "description": "",
                             "codes": [],
                             "implementation_notes": [],
@@ -2242,7 +2235,37 @@
                             "implementation_notes": [],
                             "mappings": []
                         },
+                        "Ovary": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Paratesticular": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Abdomen": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Kidney": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
                         "Shoulder": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Scalp": {
                             "description": "",
                             "codes": [],
                             "implementation_notes": [],
@@ -2254,7 +2277,7 @@
                             "implementation_notes": [],
                             "mappings": []
                         },
-                        "Lower Arm": {
+                        "Forearm": {
                             "description": "",
                             "codes": [],
                             "implementation_notes": [],
@@ -2266,13 +2289,13 @@
                             "implementation_notes": [],
                             "mappings": []
                         },
-                        "Hip": {
+                        "Thigh": {
                             "description": "",
                             "codes": [],
                             "implementation_notes": [],
                             "mappings": []
                         },
-                        "Thigh": {
+                        "Knee": {
                             "description": "",
                             "codes": [],
                             "implementation_notes": [],
@@ -2284,19 +2307,193 @@
                             "implementation_notes": [],
                             "mappings": []
                         },
+                        "Lower Leg": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
                         "Foot": {
                             "description": "",
                             "codes": [],
                             "implementation_notes": [],
                             "mappings": []
                         },
-                        "Lung": {
+                        "Brain": {
                             "description": "",
                             "codes": [],
                             "implementation_notes": [],
                             "mappings": []
                         },
-                        "Liver": {
+                        "Paraspinal": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Vagina": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Eyelid": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Orbit": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Cheek": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Hypopharynx": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Larynx": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Oral Cavity": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Oropharynx": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Parotid": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Thyroid and Parathyroid": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Middle Ear": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Nasal Cavity and Paranasal Sinuses": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Nasal Cavity": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Paranasal Sinuses": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Nasopharynx": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Infratemporal Fossa/Pterygopalatine and Parapharyngeal Area": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Infratemporal Fossa/Pterygopalatine": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Parapharyngeal Area": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Bladder": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Prostate": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Bladder/Prostate": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Cervix": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Uterus": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Vulva": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Thorax": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Anal/Perianal": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Trunk": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Bone or Bone Marrow": {
                             "description": "",
                             "codes": [],
                             "implementation_notes": [],
@@ -2314,25 +2511,31 @@
                             "implementation_notes": [],
                             "mappings": []
                         },
-                        "Distant Nodes": {
+                        "Distant Lymph Nodes": {
                             "description": "",
                             "codes": [],
                             "implementation_notes": [],
                             "mappings": []
                         },
-                        "Brain/Leptomeninges": {
+                        "Pleural Effusion": {
                             "description": "",
                             "codes": [],
                             "implementation_notes": [],
                             "mappings": []
                         },
-                        "Pleura": {
+                        "Soft Tissue": {
                             "description": "",
                             "codes": [],
                             "implementation_notes": [],
                             "mappings": []
                         },
-                        "Peritoneum": {
+                        "Liver/Biliary Tract": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Lung": {
                             "description": "",
                             "codes": [],
                             "implementation_notes": [],
@@ -2361,40 +2564,46 @@
                 "ENERGY_TYPE": {
                     "type": "Code",
                     "tier": "",
-                    "description": "Particles and Energy Type",
+                    "description": "Treatment of a disease by means of exposure of the target or the whole body to radiation. Radiation therapy is often used as part of curative therapy and occasionally as a component of palliative treatment for cancer. Other uses include total body irradiation prior to transplantation.",
                     "codes": [],
                     "implementation_notes": [],
-                    "mappings": [
-                        "skos:exactMatch [nrsts_v1.0].[RT_TECHNIQUES]"
-                    ],
+                    "mappings": [],
                     "permissible_values": {
                         "Protons": {
-                            "description": "",
-                            "codes": [],
+                            "description": "A type of external beam radiation therapy using a beam of protons. It has the advantage of precisely localizing the radiation dose on the targeted tissue and avoiding damage to the healthy surrounding tissues.",
+                            "codes": [
+                                "C66897"
+                            ],
                             "implementation_notes": [],
                             "mappings": []
                         },
                         "Photon": {
-                            "description": "",
-                            "codes": [],
+                            "description": "A single unit of electromagnetic radiation, generally considered to be a discrete particle having no mass or charge.",
+                            "codes": [
+                                "C88112"
+                            ],
                             "implementation_notes": [],
                             "mappings": []
                         },
                         "Brachytherapy": {
+                            "description": "A type of radiation therapy in which radioactive material is placed inside the body, into a tumor or body cavity.",
+                            "codes": [
+                                "C15195"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Electrons": {
                             "description": "",
                             "codes": [],
                             "implementation_notes": [],
                             "mappings": []
                         },
                         "Unknown": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Other": {
-                            "description": "",
-                            "codes": [],
+                            "description": "Reported as unknown by the data contributor.",
+                            "codes": [
+                                "C17998"
+                            ],
                             "implementation_notes": [],
                             "mappings": []
                         }
@@ -2403,25 +2612,24 @@
                 "RT_DOSE": {
                     "type": "Number",
                     "tier": "",
-                    "description": "Total Radiation Dose",
+                    "description": "The total radiation dose administered.",
                     "codes": [],
                     "implementation_notes": [],
-                    "mappings": [
-                        "skos:relatedMatch [nrsts_v1.0].[RT_PRIMARY_DOSAGE] ",
-                        " skos:relatedMatch [nrsts_v1.0].[RT_NODES_DOSAGE]"
-                    ]
+                    "mappings": []
                 },
                 "RT_UNIT": {
                     "type": "Code",
                     "tier": "",
-                    "description": "Radiation Dose Unit",
+                    "description": "A unit of measurement of the dose of radiation received or absorbed.",
                     "codes": [],
                     "implementation_notes": [],
                     "mappings": [],
                     "permissible_values": {
                         "Gy": {
-                            "description": "",
-                            "codes": [],
+                            "description": "A SI derived unit of absorbed radiation dose. One gray is equal to an absorbed dose of one joule per kilogram of matter, or to 100 rads.",
+                            "codes": [
+                                "C18063"
+                            ],
                             "implementation_notes": [],
                             "mappings": []
                         }
@@ -2434,7 +2642,7 @@
                 "AGE_AT_RESPONSE": {
                     "type": "Number",
                     "tier": "",
-                    "description": "Age in Days at Response Assessment",
+                    "description": "Age of subject (in days) when the response assessment was made.",
                     "codes": [],
                     "implementation_notes": [],
                     "mappings": []
@@ -2445,10 +2653,7 @@
                     "description": "Treatment Type Prior to Response Assessment",
                     "codes": [],
                     "implementation_notes": [],
-                    "mappings": [
-                        "skos:relatedMatch [nrsts_v1.0].[RESPONSE_IMAGING_CHEMO] ",
-                        " skos:relatedMatch [nrsts_v1.0].[RESPONSE_IMAGING_CHEMO_RT]"
-                    ],
+                    "mappings": [],
                     "permissible_values": {
                         "Chemotherapy": {
                             "description": "",
@@ -2467,13 +2672,10 @@
                 "RESPONSE": {
                     "type": "Code",
                     "tier": "",
-                    "description": "Response",
+                    "description": "The pathologic and/or clinical changes that result from treatment. The changes may include eradication of detectable disease, stabilization of disease, or disease progression.",
                     "codes": [],
                     "implementation_notes": [],
-                    "mappings": [
-                        "skos:relatedMatch [nrsts_v1.0].[RESPONSE_IMAGING_CHEMO] ",
-                        " skos:relatedMatch [nrsts_v1.0].[RESPONSE_IMAGING_CHEMO_RT]"
-                    ],
+                    "mappings": [],
                     "permissible_values": {
                         "Partial Response": {
                             "description": "",
@@ -2506,52 +2708,6 @@
                             "mappings": []
                         }
                     }
-                },
-                "NECROSIS": {
-                    "type": "Code",
-                    "tier": "",
-                    "description": "Tumor Necrosis",
-                    "codes": [],
-                    "implementation_notes": [],
-                    "mappings": [
-                        "skos:exactMatch [nrsts_v1.0].[NECROSIS]"
-                    ],
-                    "permissible_values": {
-                        "Score 0: No Necrosis": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "<50% Necrosis": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        ">=50% Necrosis": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Unknown": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        }
-                    }
-                },
-                "NECROSIS_PCT": {
-                    "type": "Number",
-                    "tier": "",
-                    "description": "Tumor Necrosis (%)",
-                    "codes": [],
-                    "implementation_notes": [],
-                    "mappings": [
-                        "skos:exactMatch [nrsts_v1.0].[NECROSIS_PCT]"
-                    ]
                 }
             }
         },
@@ -2561,105 +2717,11 @@
                     "type": "Number",
                     "tier": "",
                     "description": "Age in Days at Secondary Malignant Neoplasm",
-                    "codes": [],
-                    "implementation_notes": [],
-                    "mappings": [
-                        "skos:exactMatch [nrsts_v1.0].[AGE_AT_EVENT]"
-                    ]
-                },
-                "SMN_SITE": {
-                    "type": "Code",
-                    "tier": "",
-                    "description": "SMN Site",
-                    "codes": [],
-                    "implementation_notes": [],
-                    "mappings": [
-                        "skos:exactMatch [nrsts_v1.0].[SECONDARY_MALIGNANCY_SITE]"
+                    "codes": [
+                        "C168860"
                     ],
-                    "permissible_values": {
-                        "Head/Neck": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Thorax": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Limbs": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Abdomen": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Pelvis": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Other": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Not Reported": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        }
-                    }
-                },
-                "SMN_TYPE": {
-                    "type": "Code",
-                    "tier": "",
-                    "description": "SMN Type",
-                    "codes": [],
                     "implementation_notes": [],
-                    "mappings": [],
-                    "permissible_values": {
-                        "Leukemia": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Sarcoma": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Carcinoma": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Other": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Not Reported": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        }
-                    }
+                    "mappings": []
                 }
             }
         }

@@ -7,7 +7,7 @@
     "info": {
         "title": "Germ Cell Tumors (GCT) Data Dictionary",
         "name": "gct_v1.2",
-        "release_notes": "https://github.com/chicagopcdc/d4cg-modeling/tree/main/pcdc/data-dictionaries/gct/gct_v1.2",
+        "release_notes": "https://github.com/chicagopcdc/d4cg-modeling/tree/main/pcdc/gct/gct_v1.2",
         "parent_data_model": "pcdc_v1.8",
         "license": "Creative Commons Attribution-NonCommercial 4.0 International License (https://creativecommons.org/licenses/by-nc/4.0/)",
         "wiki": "https://docs.pedscommons.org/",

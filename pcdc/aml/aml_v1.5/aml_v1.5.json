@@ -7,7 +7,7 @@
     "info": {
         "title": "Acute Myeloid Leukemia (AML) Data Dictionary",
         "name": "aml_v1.5",
-        "release_notes": "https://github.com/chicagopcdc/d4cg-modeling/tree/main/pcdc/data-dictionaries/aml/aml_v1.5",
+        "release_notes": "https://github.com/chicagopcdc/d4cg-modeling/tree/main/pcdc/aml/aml_v1.5",
         "parent_data_model": "pcdc_v1.8",
         "license": "Creative Commons Attribution-NonCommercial 4.0 International License (https://creativecommons.org/licenses/by-nc/4.0/)",
         "wiki": "https://docs.pedscommons.org/",

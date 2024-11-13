@@ -1,6 +1,6 @@
 INFO	Title	Acute Lymphoblastic Leukemia (ALL) Data Dictionary
 INFO	Name	all_v1.0
-INFO	Release Notes	https://github.com/chicagopcdc/d4cg-modeling/tree/main/pcdc/data-dictionaries/all/all_v1.0
+INFO	Release Notes	https://github.com/chicagopcdc/d4cg-modeling/tree/main/pcdc/all/all_v1.0
 INFO	Parent Data Model	pcdc_v1.8
 INFO	License	Creative Commons Attribution-NonCommercial 4.0 International License (https://creativecommons.org/licenses/by-nc/4.0/)
 INFO	D4CG Data Modeling Wiki	https://docs.pedscommons.org/
@@ -10,7 +10,7 @@ INFO	Total Variables	120
 
 RowType	VariableName	DataType	Tier	VariableDescription	VariableCode	PermissibleValue	ValueDescription	ValueCode	ImplementationNotes	Mappings
 
-DD	Protocol									
+DD	Protocol
 TD	Subject Identifier
 TG	Will be included in every table
 VD	PCDC_SUBJECT_ID	String	Mandatory	A unique subject id assigned by the PCDC. Any given individual person will have only one PCDC_SUBJECT_ID regardless of the number of studies in which they appear. If an individual person is on studies from more than one contributor, they may have more than one HONEST_BROKER_SUBJECT_IDs assigned to them by the contributors, but will be resulted to a single PCDC_SUBJECT_ID by PCDC staff.	ncit:C69256	_undefined_	_undefined_	_undefined_
