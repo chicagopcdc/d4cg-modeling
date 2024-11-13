@@ -147,7 +147,7 @@
                             "codes": [],
                             "implementation_notes": [],
                             "mappings": [
-                                "NewPD"
+                                "New PD"
                             ]
                         },
                         "AMLBFM2019": {
@@ -155,7 +155,7 @@
                             "codes": [],
                             "implementation_notes": [],
                             "mappings": [
-                                "NewPD"
+                                "New PD"
                             ]
                         },
                         "AMLBFM2020": {
@@ -163,7 +163,7 @@
                             "codes": [],
                             "implementation_notes": [],
                             "mappings": [
-                                "NewPD"
+                                "New PD"
                             ]
                         },
                         "AMLBFM98 Interim 2003": {
@@ -171,7 +171,7 @@
                             "codes": [],
                             "implementation_notes": [],
                             "mappings": [
-                                "NewPD"
+                                "New PD"
                             ]
                         },
                         "APL": {
@@ -179,7 +179,7 @@
                             "codes": [],
                             "implementation_notes": [],
                             "mappings": [
-                                "NewPD"
+                                "New PD"
                             ]
                         },
                         "NOPHOAML1993": {
@@ -187,7 +187,7 @@
                             "codes": [],
                             "implementation_notes": [],
                             "mappings": [
-                                "NewPD"
+                                "New PD"
                             ]
                         },
                         "AAML03P1": {
@@ -388,7 +388,7 @@
                         "ncit:C168928"
                     ],
                     "implementation_notes": [
-                        "Thisvariableindicatesifthesubjectwasenrolledinthestudy,orifthesubjectwasnotenrolledinthestudybutreceivedtreatmentperthestudy'sprotocol."
+                        "This variable indicates if the subject was enrolled in the study, or if the subject was not enrolled in the study but received treatment per the study's protocol."
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -420,7 +420,7 @@
                         "ncit:C168878"
                     ],
                     "implementation_notes": [
-                        "Diseasephasecouldbe\"InitialDiagnosis\"phase,ora\"Relapse\"phase,etc..."
+                        "Disease phase could be \"Initial Diagnosis\" phase, or a \"Relapse\" phase, etc..."
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -450,7 +450,7 @@
                         "ncit:C173258"
                     ],
                     "implementation_notes": [
-                        "Ordinalnumberofthediseasephase,groupedwithinsubcategory.I.e.numberRelapse1,2,3,4,etc..."
+                        "Ordinal number of the disease phase, grouped within subcategory. I.e. number Relapse 1, 2, 3, 4, etc..."
                     ],
                     "mappings": []
                 },
@@ -462,7 +462,7 @@
                         "ncit:C168972"
                     ],
                     "implementation_notes": [
-                        "Diseasephasecouldbethe\"InitialDiagnosis\"phase,ora\"Relapse\"phase,etc..."
+                        "Disease phase could be the \"Initial Diagnosis\" phase, or a \"Relapse\" phase, etc..."
                     ],
                     "mappings": []
                 },
@@ -474,7 +474,7 @@
                         "ncit:C168823"
                     ],
                     "implementation_notes": [
-                        "Diseasephasecouldbethe\"InitialDiagnosis\"phase,ora\"Relapse\"phase,etc..."
+                        "Disease phase could be the \"Initial Diagnosis\" phase, or a \"Relapse\" phase, etc..."
                     ],
                     "mappings": []
                 }
@@ -564,7 +564,7 @@
                         "ncit:C166235"
                     ],
                     "implementation_notes": [
-                        "Coursenumberisgroupedwithinsubcategory.I.e.numberInduction1,2,3,4,etc...,Prephase1,2,3,4,etc...,Maintenance1,2,3,4,5,6etc..."
+                        "Course number is grouped within subcategory. I.e. number Induction 1, 2, 3, 4, etc..., Prephase 1, 2, 3, 4, etc..., Maintenance 1,2,3,4,5,6 etc..."
                     ],
                     "mappings": []
                 },
@@ -596,7 +596,7 @@
                         "ncit:C168852"
                     ],
                     "implementation_notes": [
-                        "Thisvariableisusedasaproxyfortheageatcourseend,whenappropriate."
+                        "This variable is used as a proxy for the age at course end, when appropriate."
                     ],
                     "mappings": []
                 }
@@ -620,8 +620,8 @@
                         "ncit:C168878"
                     ],
                     "implementation_notes": [
-                        "OnlyfillinDiseasePhase,DiseasePhaseNumber,Course,andCourseNumberif\"AGE_\"notknown",
-                        "DiseasePhasecouldbe\"InitialDiagnosis\"phase,ora\"Relapse\"phase,etc..."
+                        "Only fill in Disease Phase, Disease Phase Number, Course, and Course Number if \"AGE_\" not known ",
+                        " Disease Phase could be \"Initial Diagnosis\" phase, or a \"Relapse\" phase, etc..."
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -651,8 +651,8 @@
                         "ncit:C173258"
                     ],
                     "implementation_notes": [
-                        "OnlyfillinDiseasePhase,DiseasePhaseNumber,Course,andCourseNumberif\"AGE_\"notknown",
-                        "OrdinalnumberoftheDiseasePhase,groupedwithinsubcategory.I.e.numberRelapse1,2,3,4,etc...andProgression1,2,3,4,etc..."
+                        "Only fill in Disease Phase, Disease Phase Number, Course, and Course Number if \"AGE_\" not known ",
+                        " Ordinal number of the Disease Phase, grouped within subcategory. I.e. number Relapse 1, 2, 3, 4, etc... and Progression 1, 2, 3, 4, etc..."
                     ],
                     "mappings": []
                 },
@@ -664,7 +664,7 @@
                         "ncit:C168807"
                     ],
                     "implementation_notes": [
-                        "OnlyfillinDiseasePhase,DiseasePhaseNumber,Course,andCourseNumberif\"AGE_\"notknown"
+                        "Only fill in Disease Phase, Disease Phase Number, Course, and Course Number if \"AGE_\" not known"
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -742,8 +742,8 @@
                         "ncit:C166235"
                     ],
                     "implementation_notes": [
-                        "OnlyfillinDiseasePhase,DiseasePhaseNumber,Course,andCourseNumberif\"AGE_\"notknown",
-                        "CourseNumberisgroupedwithinsubcategory.I.e.numberInduction1,2,3,4,etc...,Prephase1,2,3,4,etc...,Maintenance1,2,3,4,5,6etc..."
+                        "Only fill in Disease Phase, Disease Phase Number, Course, and Course Number if \"AGE_\" not known ",
+                        " Course Number is grouped within subcategory. I.e. number Induction 1, 2, 3, 4, etc..., Prephase 1, 2, 3, 4, etc..., Maintenance 1,2,3,4,5,6 etc..."
                     ],
                     "mappings": []
                 },
@@ -755,7 +755,7 @@
                         "ncit:C173256"
                     ],
                     "implementation_notes": [
-                        "Offprotocoltherapymeanstheyhavestoppedprotocoltreatment,butarestillbeingfollowedinthestudy"
+                        "Off protocol therapy means they have stopped protocol treatment, but are still being followed in the study"
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -785,7 +785,7 @@
                         "ncit:C173519"
                     ],
                     "implementation_notes": [
-                        "Ifmultiplereasons\"offprotocoltherapy\"or\"offstudy\",includeoneobservationperreason."
+                        "If multiple reasons \"off protocol therapy\" or \"off study\", include one observation per reason."
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -1089,7 +1089,7 @@
                         "ncit:C54056"
                     ],
                     "implementation_notes": [
-                        "Ifsubjecthadmultiplepriormedicalconditions,includeoneobservationpercondition."
+                        "If subject had multiple prior medical conditions, include one observation per condition."
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -1155,7 +1155,7 @@
                         "ncit:C168878"
                     ],
                     "implementation_notes": [
-                        "Diseasephasecouldbe\"InitialDiagnosis\"phase,ora\"Relapse\"phase,etc..."
+                        "Disease phase could be \"Initial Diagnosis\" phase, or a \"Relapse\" phase, etc..."
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -1185,7 +1185,7 @@
                         "ncit:C173258"
                     ],
                     "implementation_notes": [
-                        "Ordinalnumberofthediseasephase,groupedwithinsubcategory.I.e.numberRelapse1,2,3,4,etc..."
+                        "Ordinal number of the disease phase, grouped within subcategory. I.e. number Relapse 1, 2, 3, 4, etc..."
                     ],
                     "mappings": []
                 },
@@ -1273,7 +1273,7 @@
                         "ncit:C166235"
                     ],
                     "implementation_notes": [
-                        "Coursenumberisgroupedwithinsubcategory.I.e.numberInduction1,2,3,4,etc...,Prephase1,2,3,4,etc...,Maintenance1,2,3,4,5,6etc..."
+                        "Course number is grouped within subcategory. I.e. number Induction 1, 2, 3, 4, etc..., Prephase 1, 2, 3, 4, etc..., Maintenance 1,2,3,4,5,6 etc..."
                     ],
                     "mappings": []
                 },
@@ -1331,8 +1331,8 @@
                         "ncit:C81239"
                     ],
                     "implementation_notes": [
-                        "Ifmultiplecausesofdeath,includeoneobservationpercauseofdeath.However,onlyonecauseofdeathcanhavethevaraiableCAUSE_OF_DEATH_RANKING=Primary.",
-                        "OnlyfillinthisvariableifLKSSis\"Dead\""
+                        "If multiple causes of death, include one observation per cause of death. However, only one cause of death can have the varaiable CAUSE_OF_DEATH_RANKING=Primary. ",
+                        " Only fill in this variable if LKSS is \"Dead\""
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -1402,8 +1402,8 @@
                         "ncit:C173260"
                     ],
                     "implementation_notes": [
-                        "Ifmultipletreatmenttypes,includeoneobservationpertreatmenttype.",
-                        "OnlyfillinthisvariableifLKSSis\"Dead\"andCAUSE_OF_DEATHis\"Treatment-relatedmortality\""
+                        "If multiple treatment types, include one observation per treatment type. ",
+                        " Only fill in this variable if LKSS is \"Dead\" and CAUSE_OF_DEATH is \"Treatment-related mortality\""
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -1465,8 +1465,8 @@
                         "ncit:C168868"
                     ],
                     "implementation_notes": [
-                        "Ifmultiplecauseofdeathdetails,includeoneobservationpercauseofdeathdetail.",
-                        "OnlyfillinthisvariableifLKSSis\"Dead\""
+                        "If multiple cause of death details, include one observation per cause of death detail. ",
+                        " Only fill in this variable if LKSS is \"Dead\""
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -1568,8 +1568,8 @@
                         "ncit:C168932"
                     ],
                     "implementation_notes": [
-                        "Theremaybemultiplecontributorycausesofdeath,butonlyoneprimarycauseofdeath.",
-                        "OnlyfillinthisvariableifLKSSis\"Dead\""
+                        "There may be multiple contributory causes of death, but only one primary cause of death. ",
+                        " Only fill in this variable if LKSS is \"Dead\""
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -1619,7 +1619,7 @@
                         "ncit:C168878"
                     ],
                     "implementation_notes": [
-                        "Diseasephasecouldbe\"InitialDiagnosis\"phase,ora\"Relapse\"phase,etc..."
+                        "Disease phase could be \"Initial Diagnosis\" phase, or a \"Relapse\" phase, etc..."
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -1649,7 +1649,7 @@
                         "ncit:C173258"
                     ],
                     "implementation_notes": [
-                        "Ordinalnumberofthediseasephase,groupedwithinsubcategory.I.e.numberRelapse1,2,3,4,etc..."
+                        "Ordinal number of the disease phase, grouped within subcategory. I.e. number Relapse 1, 2, 3, 4, etc..."
                     ],
                     "mappings": []
                 },
@@ -1701,7 +1701,7 @@
                                 "ncit:C27757"
                             ],
                             "implementation_notes": [
-                                "ItistheacutepromyelocyticleukemiavariantasdefinedbyBennetetal.(FABclassification),M3isAPL(PML-RARAfusion,orotherRARAfusions)"
+                                "It is the acute promyelocytic leukemia variant as defined by Bennet et al. (FAB classification),  M3 is APL (PML-RARA fusion, or other RARA fusions)"
                             ],
                             "mappings": []
                         },
@@ -1780,7 +1780,7 @@
                             ],
                             "implementation_notes": [],
                             "mappings": [
-                                "[aml_v1.2].[DiseaseCharacteristics].[WHO_AML].[AMLwitht(8;21)(q22;q22.1);RUNX1-RUNX1T1]skos:exactMatch[aml_v1.3].[DiseaseCharacteristics].[WHO_AML].[WHO>>Version4>>AMLwitht(8;21)(q22;q22.1);RUNX1-RUNX1T1]"
+                                "[aml_v1.2].[Disease Characteristics].[WHO_AML].[AML with t(8;21)(q22;q22.1); RUNX1-RUNX1T1]        skos:exactMatch        [aml_v1.3].[Disease Characteristics].[WHO_AML].[WHO >> Version 4 >> AML with t(8;21)(q22;q22.1); RUNX1-RUNX1T1]"
                             ]
                         },
                         "WHO >> Version 4 >> AML with inv(16)(p13.1q22) or t(16;16)(p13.1;q22); CBFB-MYH11": {
@@ -1790,7 +1790,7 @@
                             ],
                             "implementation_notes": [],
                             "mappings": [
-                                "[aml_v1.2].[DiseaseCharacteristics].[WHO_AML].[AMLwithinv(16)(p13.1q22)ort(16;16)(p13.1;q22);CBFB-MYH11]skos:exactMatch[aml_v1.3].[DiseaseCharacteristics].[WHO_AML].[WHO>>Version4>>AMLwithinv(16)(p13.1q22)ort(16;16)(p13.1;q22);CBFB-MYH11]"
+                                "[aml_v1.2].[Disease Characteristics].[WHO_AML].[AML with inv(16)(p13.1q22) or t(16;16)(p13.1;q22); CBFB-MYH11] skos:exactMatch [aml_v1.3].[Disease Characteristics].[WHO_AML].[WHO >> Version 4 >> AML with inv(16)(p13.1q22) or t(16;16)(p13.1;q22); CBFB-MYH11]"
                             ]
                         },
                         "WHO >> Version 4 >> APL with PML-RARA": {
@@ -1800,7 +1800,7 @@
                             ],
                             "implementation_notes": [],
                             "mappings": [
-                                "[aml_v1.2].[DiseaseCharacteristics].[WHO_AML].[APLwithPML-RARA]skos:exactMatch[aml_v1.3].[DiseaseCharacteristics].[WHO_AML].[WHO>>Version4>>APLwithPML-RARA]"
+                                "[aml_v1.2].[Disease Characteristics].[WHO_AML].[APL with PML-RARA] skos:exactMatch [aml_v1.3].[Disease Characteristics].[WHO_AML].[WHO >> Version 4 >> APL with PML-RARA]"
                             ]
                         },
                         "WHO >> Version 4 >> AML with t(9;11)(p21.3;q23.3); KMT2A-MLLT3": {
@@ -1810,7 +1810,7 @@
                             ],
                             "implementation_notes": [],
                             "mappings": [
-                                "[aml_v1.2].[DiseaseCharacteristics].[WHO_AML].[AMLwitht(9;11)(p21.3;q23.3);KMT2A-MLLT3]skos:exactMatch[aml_v1.3].[DiseaseCharacteristics].[WHO_AML].[WHO>>Version4>>AMLwitht(9;11)(p21.3;q23.3);KMT2A-MLLT3]"
+                                "[aml_v1.2].[Disease Characteristics].[WHO_AML].[AML with t(9;11)(p21.3;q23.3); KMT2A-MLLT3] skos:exactMatch [aml_v1.3].[Disease Characteristics].[WHO_AML].[WHO >> Version 4 >> AML with t(9;11)(p21.3;q23.3); KMT2A-MLLT3]"
                             ]
                         },
                         "WHO >> Version 5 >> AML with KMT2A Rearrangement": {
@@ -1818,7 +1818,7 @@
                             "codes": [],
                             "implementation_notes": [],
                             "mappings": [
-                                "NewPD"
+                                "New PD"
                             ]
                         },
                         "WHO >> Version 4 >> AML with t(6;9)(p23;q34.1);DEK-NUP214": {
@@ -1828,7 +1828,7 @@
                             ],
                             "implementation_notes": [],
                             "mappings": [
-                                "[aml_v1.2].[DiseaseCharacteristics].[WHO_AML].[AMLwitht(6;9)(p23;q34.1);DEK-NUP214]skos:exactMatch[aml_v1.3].[DiseaseCharacteristics].[WHO_AML].[WHO>>Version4>>AMLwitht(6;9)(p23;q34.1);DEK-NUP214]"
+                                "[aml_v1.2].[Disease Characteristics].[WHO_AML].[AML with t(6;9)(p23;q34.1);DEK-NUP214] skos:exactMatch [aml_v1.3].[Disease Characteristics].[WHO_AML].[WHO >> Version 4 >> AML with t(6;9)(p23;q34.1);DEK-NUP214]"
                             ]
                         },
                         "WHO >> Version 4 >> AML with inv(3)(q21.3q26.2) or t(3;3)(q21.3;q26.2); GATA2, MECOM": {
@@ -1838,7 +1838,7 @@
                             ],
                             "implementation_notes": [],
                             "mappings": [
-                                "[aml_v1.2].[DiseaseCharacteristics].[WHO_AML].[AMLwithinv(3)(q21.3q26.2)ort(3;3)(q21.3;q26.2);GATA2,MECOM]skos:exactMatch[aml_v1.3].[DiseaseCharacteristics].[WHO_AML].[WHO>>Version4>>AMLwithinv(3)(q21.3q26.2)ort(3;3)(q21.3;q26.2);GATA2,MECOM]"
+                                "[aml_v1.2].[Disease Characteristics].[WHO_AML].[AML with inv(3)(q21.3q26.2) or t(3;3)(q21.3;q26.2); GATA2, MECOM] skos:exactMatch [aml_v1.3].[Disease Characteristics].[WHO_AML].[WHO >> Version 4 >> AML with inv(3)(q21.3q26.2) or t(3;3)(q21.3;q26.2); GATA2, MECOM]"
                             ]
                         },
                         "WHO >> Version 4 >> AML (megakaryoblastic) with t(1;22)(p13.3;q13.3); RBM15-MKL1": {
@@ -1848,7 +1848,7 @@
                             ],
                             "implementation_notes": [],
                             "mappings": [
-                                "[aml_v1.2].[DiseaseCharacteristics].[WHO_AML].[AML(megakaryoblastic)witht(1;22)(p13.3;q13.3);RBM15-MKL1]skos:exactMatch[aml_v1.3].[DiseaseCharacteristics].[WHO_AML].[WHO>>Version4>>AML(megakaryoblastic)witht(1;22)(p13.3;q13.3);RBM15-MKL1]"
+                                "[aml_v1.2].[Disease Characteristics].[WHO_AML].[AML (megakaryoblastic) with t(1;22)(p13.3;q13.3); RBM15-MKL1] skos:exactMatch [aml_v1.3].[Disease Characteristics].[WHO_AML].[WHO >> Version 4 >> AML (megakaryoblastic) with t(1;22)(p13.3;q13.3); RBM15-MKL1]"
                             ]
                         },
                         "WHO >> Version 4 >> Provisional Entity: AML with BCR-ABL1": {
@@ -1858,7 +1858,7 @@
                             ],
                             "implementation_notes": [],
                             "mappings": [
-                                "[aml_v1.2].[DiseaseCharacteristics].[WHO_AML].[ProvisionalEntity:AMLwithBCR-ABL1]skos:exactMatch[aml_v1.3].[DiseaseCharacteristics].[WHO_AML].[WHO>>Version4>>ProvisionalEntity:AMLwithBCR-ABL1]"
+                                "[aml_v1.2].[Disease Characteristics].[WHO_AML].[Provisional Entity: AML with BCR-ABL1] skos:exactMatch [aml_v1.3].[Disease Characteristics].[WHO_AML].[WHO >> Version 4 >> Provisional Entity: AML with BCR-ABL1]"
                             ]
                         },
                         "WHO >> Version 4 >> AML with Mutated NPM1": {
@@ -1868,7 +1868,7 @@
                             ],
                             "implementation_notes": [],
                             "mappings": [
-                                "[aml_v1.2].[DiseaseCharacteristics].[WHO_AML].[AMLwithMutatedNPM1]skos:exactMatch[aml_v1.3].[DiseaseCharacteristics].[WHO_AML].[WHO>>Version4>>AMLwithMutatedNPM1]"
+                                "[aml_v1.2].[Disease Characteristics].[WHO_AML].[AML with Mutated NPM1] skos:exactMatch [aml_v1.3].[Disease Characteristics].[WHO_AML].[WHO >> Version 4 >> AML with Mutated NPM1]"
                             ]
                         },
                         "WHO >> Version 4 >> AML with Biallelic Mutations of CEBPA": {
@@ -1878,7 +1878,7 @@
                             ],
                             "implementation_notes": [],
                             "mappings": [
-                                "[aml_v1.2].[DiseaseCharacteristics].[WHO_AML].[AMLwithBiallelicMutationsofCEBPA]skos:exactMatch[aml_v1.3].[DiseaseCharacteristics].[WHO_AML].[WHO>>Version4>>AMLwithBiallelicMutationsofCEBPA]"
+                                "[aml_v1.2].[Disease Characteristics].[WHO_AML].[AML with Biallelic Mutations of CEBPA] skos:exactMatch [aml_v1.3].[Disease Characteristics].[WHO_AML].[WHO >> Version 4 >> AML with Biallelic Mutations of CEBPA]"
                             ]
                         },
                         "WHO >> Version 4 >> Provisional Entity: AML with Mutated RUNX1": {
@@ -1888,7 +1888,7 @@
                             ],
                             "implementation_notes": [],
                             "mappings": [
-                                "[aml_v1.2].[DiseaseCharacteristics].[WHO_AML].[ProvisionalEntity:AMLwithMutatedRUNX1]skos:exactMatch[aml_v1.3].[DiseaseCharacteristics].[WHO_AML].[WHO>>Version4>>ProvisionalEntity:AMLwithMutatedRUNX1]"
+                                "[aml_v1.2].[Disease Characteristics].[WHO_AML].[Provisional Entity: AML with Mutated RUNX1] skos:exactMatch [aml_v1.3].[Disease Characteristics].[WHO_AML].[WHO >> Version 4 >> Provisional Entity: AML with Mutated RUNX1]"
                             ]
                         },
                         "WHO >> Version 4 >> AML with Myelodysplasia-related Changes": {
@@ -1898,7 +1898,7 @@
                             ],
                             "implementation_notes": [],
                             "mappings": [
-                                "[aml_v1.2].[DiseaseCharacteristics].[WHO_AML].[AMLwithMyelodysplasia-relatedChanges]skos:exactMatch[aml_v1.3].[DiseaseCharacteristics].[WHO_AML].[WHO>>Version4>>AMLwithMyelodysplasia-relatedChanges]"
+                                "[aml_v1.2].[Disease Characteristics].[WHO_AML].[AML with Myelodysplasia-related Changes] skos:exactMatch [aml_v1.3].[Disease Characteristics].[WHO_AML].[WHO >> Version 4 >> AML with Myelodysplasia-related Changes]"
                             ]
                         },
                         "WHO >> Version 4 >> Therapy-Related Myeloid Neoplasms": {
@@ -1908,7 +1908,7 @@
                             ],
                             "implementation_notes": [],
                             "mappings": [
-                                "[aml_v1.2].[DiseaseCharacteristics].[WHO_AML].[Therapy-RelatedMyeloidNeoplasms]skos:exactMatch[aml_v1.3].[DiseaseCharacteristics].[WHO_AML].[WHO>>Version4>>Therapy-RelatedMyeloidNeoplasms]"
+                                "[aml_v1.2].[Disease Characteristics].[WHO_AML].[Therapy-Related Myeloid Neoplasms] skos:exactMatch [aml_v1.3].[Disease Characteristics].[WHO_AML].[WHO >> Version 4 >> Therapy-Related Myeloid Neoplasms]"
                             ]
                         },
                         "WHO >> Version 4 >> AML with Minimal Differentiation": {
@@ -1920,7 +1920,7 @@
                                 "M0"
                             ],
                             "mappings": [
-                                "[aml_v1.2].[DiseaseCharacteristics].[WHO_AML].[AMLwithMinimalDifferentiation]skos:exactMatch[aml_v1.3].[DiseaseCharacteristics].[WHO_AML].[WHO>>Version4>>AMLwithMinimalDifferentiation]"
+                                "[aml_v1.2].[Disease Characteristics].[WHO_AML].[AML with Minimal Differentiation] skos:exactMatch [aml_v1.3].[Disease Characteristics].[WHO_AML].[WHO >> Version 4 >> AML with Minimal Differentiation]"
                             ]
                         },
                         "WHO >> Version 4 >> AML without Maturation": {
@@ -1932,7 +1932,7 @@
                                 "M1"
                             ],
                             "mappings": [
-                                "[aml_v1.2].[DiseaseCharacteristics].[WHO_AML].[AMLwithoutMaturation]skos:exactMatch[aml_v1.3].[DiseaseCharacteristics].[WHO_AML].[WHO>>Version4>>AMLwithoutMaturation]"
+                                "[aml_v1.2].[Disease Characteristics].[WHO_AML].[AML without Maturation] skos:exactMatch [aml_v1.3].[Disease Characteristics].[WHO_AML].[WHO >> Version 4 >> AML without Maturation]"
                             ]
                         },
                         "WHO >> Version 4 >> AML with Maturation": {
@@ -1944,7 +1944,7 @@
                                 "M2"
                             ],
                             "mappings": [
-                                "[aml_v1.2].[DiseaseCharacteristics].[WHO_AML].[AMLwithMaturation]skos:exactMatch[aml_v1.3].[DiseaseCharacteristics].[WHO_AML].[WHO>>Version4>>AMLwithMaturation]"
+                                "[aml_v1.2].[Disease Characteristics].[WHO_AML].[AML with Maturation] skos:exactMatch [aml_v1.3].[Disease Characteristics].[WHO_AML].[WHO >> Version 4 >> AML with Maturation]"
                             ]
                         },
                         "WHO >> Version 4 >> Acute Myelomonocytic Leukemia": {
@@ -1956,7 +1956,7 @@
                                 "M4"
                             ],
                             "mappings": [
-                                "[aml_v1.2].[DiseaseCharacteristics].[WHO_AML].[AcuteMyelomonocyticLeukemia]skos:exactMatch[aml_v1.3].[DiseaseCharacteristics].[WHO_AML].[WHO>>Version4>>AcuteMyelomonocyticLeukemia]"
+                                "[aml_v1.2].[Disease Characteristics].[WHO_AML].[Acute Myelomonocytic Leukemia] skos:exactMatch [aml_v1.3].[Disease Characteristics].[WHO_AML].[WHO >> Version 4 >> Acute Myelomonocytic Leukemia]"
                             ]
                         },
                         "WHO >> Version 4 >> Acute Monoblastic/Monocytic Leukemia": {
@@ -1966,7 +1966,7 @@
                             ],
                             "implementation_notes": [],
                             "mappings": [
-                                "[aml_v1.2].[DiseaseCharacteristics].[WHO_AML].[AcuteMonoblastic/MonocyticLeukemia]skos:exactMatch[aml_v1.3].[DiseaseCharacteristics].[WHO_AML].[WHO>>Version4>>AcuteMonoblastic/MonocyticLeukemia]"
+                                "[aml_v1.2].[Disease Characteristics].[WHO_AML].[Acute Monoblastic/Monocytic Leukemia] skos:exactMatch [aml_v1.3].[Disease Characteristics].[WHO_AML].[WHO >> Version 4 >> Acute Monoblastic/Monocytic Leukemia]"
                             ]
                         },
                         "WHO >> Version 4 >> Pure Erythroid Leukemia": {
@@ -1976,7 +1976,7 @@
                             ],
                             "implementation_notes": [],
                             "mappings": [
-                                "[aml_v1.2].[DiseaseCharacteristics].[WHO_AML].[PureErythroidLeukemia]skos:exactMatch[aml_v1.3].[DiseaseCharacteristics].[WHO_AML].[WHO>>Version4>>PureErythroidLeukemia]"
+                                "[aml_v1.2].[Disease Characteristics].[WHO_AML].[Pure Erythroid Leukemia] skos:exactMatch [aml_v1.3].[Disease Characteristics].[WHO_AML].[WHO >> Version 4 >> Pure Erythroid Leukemia]"
                             ]
                         },
                         "WHO >> Version 4 >> Acute Megakaryoblastic Leukemia": {
@@ -1988,7 +1988,7 @@
                                 "M7"
                             ],
                             "mappings": [
-                                "[aml_v1.2].[DiseaseCharacteristics].[WHO_AML].[AcuteMegakaryoblasticLeukemia]skos:exactMatch[aml_v1.3].[DiseaseCharacteristics].[WHO_AML].[WHO>>Version4>>AcuteMegakaryoblasticLeukemia]"
+                                "[aml_v1.2].[Disease Characteristics].[WHO_AML].[Acute Megakaryoblastic Leukemia] skos:exactMatch [aml_v1.3].[Disease Characteristics].[WHO_AML].[WHO >> Version 4 >> Acute Megakaryoblastic Leukemia]"
                             ]
                         },
                         "WHO >> Version 4 >> Acute Basophilic Leukemia": {
@@ -1998,7 +1998,7 @@
                             ],
                             "implementation_notes": [],
                             "mappings": [
-                                "[aml_v1.2].[DiseaseCharacteristics].[WHO_AML].[AcuteBasophilicLeukemia]skos:exactMatch[aml_v1.3].[DiseaseCharacteristics].[WHO_AML].[WHO>>Version4>>AcuteBasophilicLeukemia]"
+                                "[aml_v1.2].[Disease Characteristics].[WHO_AML].[Acute Basophilic Leukemia] skos:exactMatch [aml_v1.3].[Disease Characteristics].[WHO_AML].[WHO >> Version 4 >> Acute Basophilic Leukemia]"
                             ]
                         },
                         "WHO >> Version 4 >> Acute Panmyelosis with Myelofibrosis": {
@@ -2008,7 +2008,7 @@
                             ],
                             "implementation_notes": [],
                             "mappings": [
-                                "[aml_v1.2].[DiseaseCharacteristics].[WHO_AML].[AcutePanmyelosiswithMyelofibrosis]skos:exactMatch[aml_v1.3].[DiseaseCharacteristics].[WHO_AML].[WHO>>Version4>>AcutePanmyelosiswithMyelofibrosis]"
+                                "[aml_v1.2].[Disease Characteristics].[WHO_AML].[Acute Panmyelosis with Myelofibrosis] skos:exactMatch [aml_v1.3].[Disease Characteristics].[WHO_AML].[WHO >> Version 4 >> Acute Panmyelosis with Myelofibrosis]"
                             ]
                         },
                         "WHO >> Version 4 >> Myeloid Sarcoma": {
@@ -2018,7 +2018,7 @@
                             ],
                             "implementation_notes": [],
                             "mappings": [
-                                "[aml_v1.2].[DiseaseCharacteristics].[WHO_AML].[MyeloidSarcoma]skos:exactMatch[aml_v1.3].[DiseaseCharacteristics].[WHO_AML].[WHO>>Version4>>MyeloidSarcoma]"
+                                "[aml_v1.2].[Disease Characteristics].[WHO_AML].[Myeloid Sarcoma] skos:exactMatch [aml_v1.3].[Disease Characteristics].[WHO_AML].[WHO >> Version 4 >> Myeloid Sarcoma]"
                             ]
                         },
                         "WHO >> Version 4 >> Myeloid Proliferations Related to Down Syndrome": {
@@ -2028,7 +2028,7 @@
                             ],
                             "implementation_notes": [],
                             "mappings": [
-                                "[aml_v1.2].[DiseaseCharacteristics].[WHO_AML].[MyeloidProliferationsRelatedtoDownSyndrome]skos:exactMatch[aml_v1.3].[DiseaseCharacteristics].[WHO_AML].[WHO>>Version4>>MyeloidProliferationsRelatedtoDownSyndrome]"
+                                "[aml_v1.2].[Disease Characteristics].[WHO_AML].[Myeloid Proliferations Related to Down Syndrome] skos:exactMatch [aml_v1.3].[Disease Characteristics].[WHO_AML].[WHO >> Version 4 >> Myeloid Proliferations Related to Down Syndrome]"
                             ]
                         },
                         "WHO >> Version 4 >> Transient Abnormal Myelopoiesis (TAM)": {
@@ -2038,7 +2038,7 @@
                             ],
                             "implementation_notes": [],
                             "mappings": [
-                                "[aml_v1.2].[DiseaseCharacteristics].[WHO_AML].[TransientAbnormalMyelopoiesis(TAM)]skos:exactMatch[aml_v1.3].[DiseaseCharacteristics].[WHO_AML].[WHO>>Version4>>TransientAbnormalMyelopoiesis(TAM)]"
+                                "[aml_v1.2].[Disease Characteristics].[WHO_AML].[Transient Abnormal Myelopoiesis (TAM)] skos:exactMatch [aml_v1.3].[Disease Characteristics].[WHO_AML].[WHO >> Version 4 >> Transient Abnormal Myelopoiesis (TAM)]"
                             ]
                         },
                         "WHO >> Version 4 >> Myeloid Leukemia Associated with Down Syndrome": {
@@ -2048,7 +2048,7 @@
                             ],
                             "implementation_notes": [],
                             "mappings": [
-                                "[aml_v1.2].[DiseaseCharacteristics].[WHO_AML].[MyeloidLeukemiaAssociatedwithDownSyndrome]skos:exactMatch[aml_v1.3].[DiseaseCharacteristics].[WHO_AML].[WHO>>Version4>>MyeloidLeukemiaAssociatedwithDownSyndrome]"
+                                "[aml_v1.2].[Disease Characteristics].[WHO_AML].[Myeloid Leukemia Associated with Down Syndrome] skos:exactMatch [aml_v1.3].[Disease Characteristics].[WHO_AML].[WHO >> Version 4 >> Myeloid Leukemia Associated with Down Syndrome]"
                             ]
                         },
                         "AML, Not Otherwise Specified": {
@@ -2077,8 +2077,8 @@
                         "ncit:C173263"
                     ],
                     "implementation_notes": [
-                        "Ifmultiplesitesofdiseaseinvolvement,includeoneobservationpersite.",
-                        "ForAML,diseasesitesrefertositesofleukemicinvolvementandexcludemyeloidsarcomas,whicharedetailedseparately"
+                        "If multiple sites of disease involvement, include one observation per site. ",
+                        " For AML, disease sites refer to sites of leukemic involvement and exclude myeloid sarcomas, which are detailed separately"
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -2140,7 +2140,7 @@
                         "ncit:C173262"
                     ],
                     "implementation_notes": [
-                        "Ifthereweremultipledetectionmethods,includeoneobservationperdetectionmethod.Ifdiseasesiteprovided,detectionmethodshouldbelinkedtoeachdiseasesite.Ifnodiseasesitesprovided,detectionmethodshouldbelinkedtooveralldisease."
+                        "If there were multiple detection methods, include one observation per detection method. If disease site provided, detection method should be linked to each disease site. If no disease sites provided, detection method should be linked to overall disease."
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -2210,7 +2210,7 @@
                         "ncit:C173264"
                     ],
                     "implementation_notes": [
-                        "OnlyfillinthisvariableifDISEASE_SITEis\"CentralNervousSystem\""
+                        "Only fill in this variable if DISEASE_SITE is \"Central Nervous System\""
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -2452,7 +2452,7 @@
                         "ncit:C168878"
                     ],
                     "implementation_notes": [
-                        "Diseasephasecouldbe\"InitialDiagnosis\"phase,a\"Relapse\"phase,etc..."
+                        "Disease phase could be \"Initial Diagnosis\" phase, a \"Relapse\" phase, etc..."
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -2482,7 +2482,7 @@
                         "ncit:C173258"
                     ],
                     "implementation_notes": [
-                        "Ordinalnumberofthediseasephase,groupedwithinsubcategory.I.e.numberRelapse1,2,3,4,etc..."
+                        "Ordinal number of the disease phase, grouped within subcategory. I.e. number Relapse 1, 2, 3, 4, etc..."
                     ],
                     "mappings": []
                 },
@@ -2570,7 +2570,7 @@
                         "ncit:C166235"
                     ],
                     "implementation_notes": [
-                        "Coursenumberisgroupedwithinsubcategory.I.e.numberInduction1,2,3,4,etc...,Prephase1,2,3,4,etc...,Maintenance1,2,3,4,5,6etc..."
+                        "Course number is grouped within subcategory. I.e. number Induction 1, 2, 3, 4, etc..., Prephase 1, 2, 3, 4, etc..., Maintenance 1,2,3,4,5,6 etc..."
                     ],
                     "mappings": []
                 },
@@ -2626,7 +2626,7 @@
                         "ncit:C168822"
                     ],
                     "implementation_notes": [
-                        "Ifmultiplemyeloidsarcomasites,includeoneobservationpermyeloidsarcomasite."
+                        "If multiple myeloid sarcoma sites, include one observation per myeloid sarcoma site."
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -2718,8 +2718,8 @@
                         "ncit:C168878"
                     ],
                     "implementation_notes": [
-                        "OnlyfillinDiseasePhase,DiseasePhaseNumber,Course,andCourseNumberif\"AGE_\"notknown",
-                        "DiseasePhasecouldbe\"InitialDiagnosis\"phase,ora\"Relapse\"phase,etc..."
+                        "Only fill in Disease Phase, Disease Phase Number, Course, and Course Number if \"AGE_\" not known ",
+                        " Disease Phase could be \"Initial Diagnosis\" phase, or a \"Relapse\" phase, etc..."
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -2749,7 +2749,7 @@
                         "ncit:C173258"
                     ],
                     "implementation_notes": [
-                        "Ordinalnumberofthediseasephase,groupedwithinsubcategory.I.e.numberRelapse1,2,3,4,etc..."
+                        "Ordinal number of the disease phase, grouped within subcategory. I.e. number Relapse 1, 2, 3, 4, etc..."
                     ],
                     "mappings": []
                 },
@@ -2837,7 +2837,7 @@
                         "ncit:C166235"
                     ],
                     "implementation_notes": [
-                        "Coursenumberisgroupedwithinsubcategory.I.e.numberInduction1,2,3,4,etc...,Prephase1,2,3,4,etc...,Maintenance1,2,3,4,5,6etc..."
+                        "Course number is grouped within subcategory. I.e. number Induction 1, 2, 3, 4, etc..., Prephase 1, 2, 3, 4, etc..., Maintenance 1,2,3,4,5,6 etc..."
                     ],
                     "mappings": []
                 },
@@ -2849,7 +2849,7 @@
                         "ncit:C49672"
                     ],
                     "implementation_notes": [
-                        "BMIshouldonlybewhatisreportedonCRF,notcalculatedfromweightandheightwhensubmittingdatatothePCDC"
+                        "BMI should only be what is reported on CRF, not calculated from weight and height when submitting data to the PCDC"
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -2887,8 +2887,8 @@
                         "ncit:C173522"
                     ],
                     "implementation_notes": [
-                        "Stringresultcanincludeanythingthatisnotasinglenumericresult,i.e.\"Positive\",\"Negative\",\"Present\",\"Absent\",\"Yes\",\"No\",\"Elevated,\"\"Depressed\",\"Abovethreshold\",\"Belowthreshold\",ranges,aswellasbucketedcategories,etc...",
-                        "OnlyfillinthisvariablewhentheavailabledataisanythingEXCEPTasinglenumericvalue,andincludetheentireavailabledataasastring,includingunitsifapplicable"
+                        "String result can include anything that is not a single numeric result, i.e. \"Positive\", \"Negative\", \"Present\", \"Absent\", \"Yes\", \"No\", \"Elevated,\" \"Depressed\", \"Above threshold\", \"Below threshold\", ranges, as well as bucketed categories, etc... ",
+                        " Only fill in this variable when the available data is anything EXCEPT a single numeric value, and include the entire available data as a string, including units if applicable"
                     ],
                     "mappings": []
                 },
@@ -2900,7 +2900,7 @@
                         "ncit:C173268"
                     ],
                     "implementation_notes": [
-                        "Onlyfillinthisvariableiftheavailabledataisasinglenumericvalue."
+                        "Only fill in this variable if the available data is a single numeric value."
                     ],
                     "mappings": []
                 },
@@ -2912,7 +2912,7 @@
                         "ncit:C49675"
                     ],
                     "implementation_notes": [
-                        "OnlyfillinthisvariableifanumericresultisprovidedinVITALS_RESULT_NUMERIC."
+                        "Only fill in this variable if a numeric result is provided in VITALS_RESULT_NUMERIC."
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -2978,7 +2978,7 @@
                         "ncit:C168878"
                     ],
                     "implementation_notes": [
-                        "Diseasephasecouldbe\"InitialDiagnosis\"phase,ora\"Relapse\"phase,etc..."
+                        "Disease phase could be \"Initial Diagnosis\" phase, or a \"Relapse\" phase, etc..."
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -3008,7 +3008,7 @@
                         "ncit:C173258"
                     ],
                     "implementation_notes": [
-                        "Ordinalnumberofthediseasephase,groupedwithinsubcategory.I.e.numberRelapse1,2,3,4,etc..."
+                        "Ordinal number of the disease phase, grouped within subcategory. I.e. number Relapse 1, 2, 3, 4, etc..."
                     ],
                     "mappings": []
                 },
@@ -3096,7 +3096,7 @@
                         "ncit:C166235"
                     ],
                     "implementation_notes": [
-                        "Coursenumberisgroupedwithinsubcategory.I.e.numberInduction1,2,3,4,etc...,Prephase1,2,3,4,etc...,Maintenance1,2,3,4,5,6etc..."
+                        "Course number is grouped within subcategory. I.e. number Induction 1, 2, 3, 4, etc..., Prephase 1, 2, 3, 4, etc..., Maintenance 1,2,3,4,5,6 etc..."
                     ],
                     "mappings": []
                 },
@@ -3288,8 +3288,8 @@
                         "ncit:C36292"
                     ],
                     "implementation_notes": [
-                        "Stringresultcanincludeanythingthatisnotasinglenumericresult,i.e.\"Positive\",\"Negative\",\"Present\",\"Absent\",\"Yes\",\"No\",\"Elevated,\"\"Depressed\",\"Abovethreshold\",\"Belowthreshold\",ranges,aswellasbucketedcategories,etc...",
-                        "OnlyfillinthisvariablewhentheavailabledataisanythingEXCEPTasinglenumericvalue,andincludetheentireavailabledataasastring,includingunitsifapplicable"
+                        "String result can include anything that is not a single numeric result, i.e. \"Positive\", \"Negative\", \"Present\", \"Absent\", \"Yes\", \"No\", \"Elevated,\" \"Depressed\", \"Above threshold\", \"Below threshold\", ranges, as well as bucketed categories, etc... ",
+                        " Only fill in this variable when the available data is anything EXCEPT a single numeric value, and include the entire available data as a string, including units if applicable"
                     ],
                     "mappings": []
                 },
@@ -3301,7 +3301,7 @@
                         "ncit:C70952"
                     ],
                     "implementation_notes": [
-                        "Onlyfillinthisvariableiftheavailabledataisasinglenumericvalue."
+                        "Only fill in this variable if the available data is a single numeric value."
                     ],
                     "mappings": []
                 },
@@ -3313,7 +3313,7 @@
                         "ncit:C173274"
                     ],
                     "implementation_notes": [
-                        "OnlyfillinthisvariableifanumericresultisprovidedinLAB_RESULT_NUMERIC."
+                        "Only fill in this variable if a numeric result is provided in LAB_RESULT_NUMERIC."
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -3391,7 +3391,7 @@
                         "ncit:C83312"
                     ],
                     "implementation_notes": [
-                        "Onlyfillinthisvariableonlywhenrelevant,forexampleiftheLAB_TESTis\"Blasts\"andtheLAB_SAMPLE_SOURCEis\"BoneMarrow\"-iebonemarrowblasts"
+                        "Only fill in this variable only when relevant, for example if the LAB_TEST is \"Blasts\" and the LAB_SAMPLE_SOURCE is \"Bone Marrow\" - ie bone marrow blasts"
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -3445,8 +3445,8 @@
                         "ncit:C168879"
                     ],
                     "implementation_notes": [
-                        "Notes:ForAMLTraumatictapisdefinedascerebrospinalfluidwithgreaterthan10RBC/mm3.",
-                        "OnlyfillinthisvariableifLAB_SAMPLE_SOURCEis\"CSF\""
+                        "Notes: For AML Traumatic tap is defined as cerebrospinal fluid with greater than 10 RBC/mm3. ",
+                        " Only fill in this variable if LAB_SAMPLE_SOURCE is \"CSF\""
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -3504,8 +3504,8 @@
                         "ncit:C168878"
                     ],
                     "implementation_notes": [
-                        "OnlyfillinDiseasePhase,DiseasePhaseNumber,Course,andCourseNumberif\"AGE_\"notknown",
-                        "DiseasePhasecouldbe\"InitialDiagnosis\"phase,ora\"Relapse\"phase,etc..."
+                        "Only fill in Disease Phase, Disease Phase Number, Course, and Course Number if \"AGE_\" not known ",
+                        " Disease Phase could be \"Initial Diagnosis\" phase, or a \"Relapse\" phase, etc..."
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -3535,7 +3535,7 @@
                         "ncit:C173258"
                     ],
                     "implementation_notes": [
-                        "Ordinalnumberofthediseasephase,groupedwithinsubcategory.I.e.numberRelapse1,2,3,4,etc..."
+                        "Ordinal number of the disease phase, grouped within subcategory. I.e. number Relapse 1, 2, 3, 4, etc..."
                     ],
                     "mappings": []
                 },
@@ -3623,7 +3623,7 @@
                         "ncit:C166235"
                     ],
                     "implementation_notes": [
-                        "Coursenumberisgroupedwithinsubcategory.I.e.numberInduction1,2,3,4,etc...,Prephase1,2,3,4,etc...,Maintenance1,2,3,4,5,6etc..."
+                        "Course number is grouped within subcategory. I.e. number Induction 1, 2, 3, 4, etc..., Prephase 1, 2, 3, 4, etc..., Maintenance 1,2,3,4,5,6 etc..."
                     ],
                     "mappings": []
                 },
@@ -3719,7 +3719,7 @@
                         "ncit:C173278"
                     ],
                     "implementation_notes": [
-                        "OnlyfillinthisvariableifMOLECULAR_ANALYSIS_METHODis\"Karyotype\""
+                        "Only fill in this variable if MOLECULAR_ANALYSIS_METHOD is \"Karyotype\""
                     ],
                     "mappings": []
                 },
@@ -3731,7 +3731,7 @@
                         "ncit:C173279"
                     ],
                     "implementation_notes": [
-                        "OnlyfillinthisvariableifMOLECULAR_ANALYSIS_METHODis\"Karyotype\""
+                        "Only fill in this variable if MOLECULAR_ANALYSIS_METHOD is \"Karyotype\""
                     ],
                     "mappings": []
                 },
@@ -3743,7 +3743,7 @@
                         "ncit:C168918"
                     ],
                     "implementation_notes": [
-                        "OnlyfillinthisvariableifMOLECULAR_ANALYSIS_METHODis\"Karyotype\""
+                        "Only fill in this variable if MOLECULAR_ANALYSIS_METHOD is \"Karyotype\""
                     ],
                     "mappings": []
                 },
@@ -3755,7 +3755,7 @@
                         "ncit:C3910"
                     ],
                     "implementation_notes": [
-                        "Ifmultiplemolecularabnormalities,includeoneobservationpermolecularabnormality."
+                        "If multiple molecular abnormalities, include one observation per molecular abnormality."
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -3852,7 +3852,7 @@
                             "codes": [],
                             "implementation_notes": [],
                             "mappings": [
-                                "NewPD"
+                                "New PD"
                             ]
                         },
                         "FLT3 D835N Pathogenic Variant": {
@@ -3860,7 +3860,7 @@
                             "codes": [],
                             "implementation_notes": [],
                             "mappings": [
-                                "NewPD"
+                                "New PD"
                             ]
                         },
                         "FLT3 Internal Tandem Duplication": {
@@ -3948,7 +3948,7 @@
                             "codes": [],
                             "implementation_notes": [],
                             "mappings": [
-                                "NewPD"
+                                "New PD"
                             ]
                         },
                         "MLL-MLLT3 Fusion": {
@@ -3956,7 +3956,7 @@
                             "codes": [],
                             "implementation_notes": [],
                             "mappings": [
-                                "NewPD"
+                                "New PD"
                             ]
                         },
                         "Monoallelic CEBPA Gene Mutation": {
@@ -4018,7 +4018,7 @@
                             "codes": [],
                             "implementation_notes": [],
                             "mappings": [
-                                "NewPD"
+                                "New PD"
                             ]
                         },
                         "PTPN11 Mutation": {
@@ -4027,7 +4027,7 @@
                                 "ncit:C82612"
                             ],
                             "implementation_notes": [
-                                "GATA2/MECOMFusionGene"
+                                "GATA2/MECOM Fusion Gene"
                             ],
                             "mappings": []
                         },
@@ -4087,7 +4087,7 @@
                                 "ncit:C168760"
                             ],
                             "implementation_notes": [
-                                "KMT2AGeneRearrangement"
+                                "KMT2A Gene Rearrangement"
                             ],
                             "mappings": []
                         },
@@ -4288,7 +4288,7 @@
                             ],
                             "implementation_notes": [],
                             "mappings": [
-                                "NewPD"
+                                "New PD"
                             ]
                         },
                         "Unknown": {
@@ -4306,7 +4306,7 @@
                             ],
                             "implementation_notes": [],
                             "mappings": [
-                                "NewPD"
+                                "New PD"
                             ]
                         }
                     }
@@ -4477,7 +4477,7 @@
                         "ncit:C173596"
                     ],
                     "implementation_notes": [
-                        "ThisvariableindicatestheresultoftestingforthemolecularabnormalitylistedinMOLECULAR_ABNORMALITY"
+                        "This variable indicates the result of testing for the molecular abnormality listed in MOLECULAR_ABNORMALITY"
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -4531,7 +4531,7 @@
                         "ncit:C173545"
                     ],
                     "implementation_notes": [
-                        "Onlyfillinthisvariableiftheinformationisavailable."
+                        "Only fill in this variable if the information is available."
                     ],
                     "mappings": []
                 }
@@ -4553,8 +4553,8 @@
                         "ncit:C168878"
                     ],
                     "implementation_notes": [
-                        "OnlyfillinDiseasePhase,DiseasePhaseNumber,Course,andCourseNumberif\"AGE_\"notknown",
-                        "DiseasePhasecouldbe\"InitialDiagnosis\"phase,ora\"Relapse\"phase,etc..."
+                        "Only fill in Disease Phase, Disease Phase Number, Course, and Course Number if \"AGE_\" not known ",
+                        " Disease Phase could be \"Initial Diagnosis\" phase, or a \"Relapse\" phase, etc..."
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -4584,7 +4584,7 @@
                         "ncit:C173258"
                     ],
                     "implementation_notes": [
-                        "Ordinalnumberofthediseasephase,groupedwithinsubcategory.I.e.numberRelapse1,2,3,4,etc..."
+                        "Ordinal number of the disease phase, grouped within subcategory. I.e. number Relapse 1, 2, 3, 4, etc..."
                     ],
                     "mappings": []
                 },
@@ -4672,7 +4672,7 @@
                         "ncit:C166235"
                     ],
                     "implementation_notes": [
-                        "Coursenumberisgroupedwithinsubcategory.I.e.numberInduction1,2,3,4,etc...,Prephase1,2,3,4,etc...,Maintenance1,2,3,4,5,6etc..."
+                        "Course number is grouped within subcategory. I.e. number Induction 1, 2, 3, 4, etc..., Prephase 1, 2, 3, 4, etc..., Maintenance 1,2,3,4,5,6 etc..."
                     ],
                     "mappings": []
                 },
@@ -4698,8 +4698,8 @@
                     "description": "Function Test Result",
                     "codes": [],
                     "implementation_notes": [
-                        "Stringresultcanincludeanythingthatisnotasinglenumericresult,i.e.\"Positive\",\"Negative\",\"Present\",\"Absent\",\"Yes\",\"No\",\"Elevated,\"\"Depressed\",\"Abovethreshold\",\"Belowthreshold\",ranges,aswellasbucketedcategories,etc...",
-                        "OnlyfillinthisvariablewhentheavailabledataisanythingEXCEPTasinglenumericvalue,andincludetheentireavailabledataasastring,includingunitsifapplicable"
+                        "String result can include anything that is not a single numeric result, i.e. \"Positive\", \"Negative\", \"Present\", \"Absent\", \"Yes\", \"No\", \"Elevated,\" \"Depressed\", \"Above threshold\", \"Below threshold\", ranges, as well as bucketed categories, etc... ",
+                        " Only fill in this variable when the available data is anything EXCEPT a single numeric value, and include the entire available data as a string, including units if applicable"
                     ],
                     "mappings": []
                 },
@@ -4735,7 +4735,7 @@
                     "description": "Numeric Function Test Result",
                     "codes": [],
                     "implementation_notes": [
-                        "Onlyfillinthisvariableiftheavailabledataisasinglenumericvalue."
+                        "Only fill in this variable if the available data is a single numeric value."
                     ],
                     "mappings": []
                 },
@@ -4745,7 +4745,7 @@
                     "description": "Numeric Function Test Result Unit",
                     "codes": [],
                     "implementation_notes": [
-                        "OnlyfillinthisvariableifanumericresultisprovidedinECHO_RESULT_NUMERIC."
+                        "Only fill in this variable if a numeric result is provided in ECHO_RESULT_NUMERIC."
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -4807,8 +4807,8 @@
                         "ncit:C168878"
                     ],
                     "implementation_notes": [
-                        "OnlyfillinDiseasePhase,DiseasePhaseNumber,Course,andCourseNumberif\"AGE_\"notknown",
-                        "DiseasePhasecouldbe\"InitialDiagnosis\"phase,ora\"Relapse\"phase,etc..."
+                        "Only fill in Disease Phase, Disease Phase Number, Course, and Course Number if \"AGE_\" not known ",
+                        " Disease Phase could be \"Initial Diagnosis\" phase, or a \"Relapse\" phase, etc..."
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -4838,7 +4838,7 @@
                         "ncit:C173258"
                     ],
                     "implementation_notes": [
-                        "Ordinalnumberofthediseasephase,groupedwithinsubcategory.I.e.numberRelapse1,2,3,4,etc..."
+                        "Ordinal number of the disease phase, grouped within subcategory. I.e. number Relapse 1, 2, 3, 4, etc..."
                     ],
                     "mappings": []
                 },
@@ -4926,7 +4926,7 @@
                         "ncit:C166235"
                     ],
                     "implementation_notes": [
-                        "Coursenumberisgroupedwithinsubcategory.I.e.numberInduction1,2,3,4,etc...,Prephase1,2,3,4,etc...,Maintenance1,2,3,4,5,6etc..."
+                        "Course number is grouped within subcategory. I.e. number Induction 1, 2, 3, 4, etc..., Prephase 1, 2, 3, 4, etc..., Maintenance 1,2,3,4,5,6 etc..."
                     ],
                     "mappings": []
                 },
@@ -4982,7 +4982,7 @@
                         "ncit:C173282"
                     ],
                     "implementation_notes": [
-                        "TotaldoseofradiationovertheperiodencompassedbyAGE_AT_RT_STARTto_AGE_AT_RT_END"
+                        "Total dose of radiation over the period encompassed by AGE_AT_RT_START to _AGE_AT_RT_END"
                     ],
                     "mappings": []
                 },
@@ -5042,8 +5042,8 @@
                         "ncit:C168878"
                     ],
                     "implementation_notes": [
-                        "OnlyfillinDiseasePhase,DiseasePhaseNumber,Course,andCourseNumberif\"AGE_\"notknown",
-                        "DiseasePhasecouldbe\"InitialDiagnosis\"phase,ora\"Relapse\"phase,etc..."
+                        "Only fill in Disease Phase, Disease Phase Number, Course, and Course Number if \"AGE_\" not known ",
+                        " Disease Phase could be \"Initial Diagnosis\" phase, or a \"Relapse\" phase, etc..."
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -5073,7 +5073,7 @@
                         "ncit:C173258"
                     ],
                     "implementation_notes": [
-                        "Ordinalnumberofthediseasephase,groupedwithinsubcategory.I.e.numberRelapse1,2,3,4,etc..."
+                        "Ordinal number of the disease phase, grouped within subcategory. I.e. number Relapse 1, 2, 3, 4, etc..."
                     ],
                     "mappings": []
                 },
@@ -5161,7 +5161,7 @@
                         "ncit:C166235"
                     ],
                     "implementation_notes": [
-                        "Coursenumberisgroupedwithinsubcategory.I.e.numberInduction1,2,3,4,etc...,Prephase1,2,3,4,etc...,Maintenance1,2,3,4,5,6etc..."
+                        "Course number is grouped within subcategory. I.e. number Induction 1, 2, 3, 4, etc..., Prephase 1, 2, 3, 4, etc..., Maintenance 1,2,3,4,5,6 etc..."
                     ],
                     "mappings": []
                 },
@@ -5305,8 +5305,8 @@
                         "ncit:C168878"
                     ],
                     "implementation_notes": [
-                        "OnlyfillinDiseasePhase,DiseasePhaseNumber,Course,andCourseNumberif\"AGE_\"notknown",
-                        "DiseasePhasecouldbe\"InitialDiagnosis\"phase,ora\"Relapse\"phase,etc..."
+                        "Only fill in Disease Phase, Disease Phase Number, Course, and Course Number if \"AGE_\" not known ",
+                        " Disease Phase could be \"Initial Diagnosis\" phase, or a \"Relapse\" phase, etc..."
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -5336,7 +5336,7 @@
                         "ncit:C173258"
                     ],
                     "implementation_notes": [
-                        "Ordinalnumberofthediseasephase,groupedwithinsubcategory.I.e.numberRelapse1,2,3,4,etc..."
+                        "Ordinal number of the disease phase, grouped within subcategory. I.e. number Relapse 1, 2, 3, 4, etc..."
                     ],
                     "mappings": []
                 },
@@ -5424,7 +5424,7 @@
                         "ncit:C166235"
                     ],
                     "implementation_notes": [
-                        "Coursenumberisgroupedwithinsubcategory.I.e.numberInduction1,2,3,4,etc...,Prephase1,2,3,4,etc...,Maintenance1,2,3,4,5,6etc..."
+                        "Course number is grouped within subcategory. I.e. number Induction 1, 2, 3, 4, etc..., Prephase 1, 2, 3, 4, etc..., Maintenance 1,2,3,4,5,6 etc..."
                     ],
                     "mappings": []
                 },
@@ -5490,7 +5490,7 @@
                         "ncit:C172698"
                     ],
                     "implementation_notes": [
-                        "ForAML,inthecaseof\"IntrathecalChemotherapy,\"theageatthestartisbasedonintention-to-treat."
+                        "For AML, in the case of \"Intrathecal Chemotherapy,\" the age at the start is based on intention-to-treat."
                     ],
                     "mappings": []
                 },
@@ -5502,7 +5502,7 @@
                         "ncit:C172686"
                     ],
                     "implementation_notes": [
-                        "ForAML,inthecaseof\"IntrathecalChemotherapy,\"theageattheendisbasedonintention-to-treat."
+                        "For AML, in the case of \"Intrathecal Chemotherapy,\" the age at the end is based on intention-to-treat."
                     ],
                     "mappings": []
                 },
@@ -5514,8 +5514,8 @@
                         "ncit:C168878"
                     ],
                     "implementation_notes": [
-                        "OnlyfillinDiseasePhase,DiseasePhaseNumber,Course,andCourseNumberif\"AGE_\"notknown",
-                        "DiseasePhasecouldbe\"InitialDiagnosis\"phase,ora\"Relapse\"phase,etc..."
+                        "Only fill in Disease Phase, Disease Phase Number, Course, and Course Number if \"AGE_\" not known ",
+                        " Disease Phase could be \"Initial Diagnosis\" phase, or a \"Relapse\" phase, etc..."
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -5545,7 +5545,7 @@
                         "ncit:C173258"
                     ],
                     "implementation_notes": [
-                        "Ordinalnumberofthediseasephase,groupedwithinsubcategory.I.e.numberRelapse1,2,3,4,etc..."
+                        "Ordinal number of the disease phase, grouped within subcategory. I.e. number Relapse 1, 2, 3, 4, etc..."
                     ],
                     "mappings": []
                 },
@@ -5633,7 +5633,7 @@
                         "ncit:C166235"
                     ],
                     "implementation_notes": [
-                        "Coursenumberisgroupedwithinsubcategory.I.e.numberInduction1,2,3,4,etc...,Prephase1,2,3,4,etc...,Maintenance1,2,3,4,5,6etc..."
+                        "Course number is grouped within subcategory. I.e. number Induction 1, 2, 3, 4, etc..., Prephase 1, 2, 3, 4, etc..., Maintenance 1,2,3,4,5,6 etc..."
                     ],
                     "mappings": []
                 },
@@ -5909,8 +5909,8 @@
                         "ncit:C173293"
                     ],
                     "implementation_notes": [
-                        "Numberofdosesofchemotherapyagentadministeredovertheindicatedstartandendtimepoints",
-                        "Onlyfillinthisvariableifthisinformationisavailable."
+                        "Number of doses of chemotherapy agent administered over the indicated start and end time points ",
+                        " Only fill in this variable if this information is available."
                     ],
                     "mappings": []
                 },
@@ -5922,8 +5922,8 @@
                         "ncit:C94394"
                     ],
                     "implementation_notes": [
-                        "Totaldoseofthechemotherapyagentadministeredtothesubjectovertheindicatedstartandendtimepoints.",
-                        "Onlyfillinthisvariableifthisinformationisavailable."
+                        "Total dose of the chemotherapy agent administered to the subject over the indicated start and end time points. ",
+                        " Only fill in this variable if this information is available."
                     ],
                     "mappings": []
                 },
@@ -5935,8 +5935,8 @@
                         "ncit:C173294"
                     ],
                     "implementation_notes": [
-                        "Intention-to-treattotaldoseofthechemotherapyagentovertheindicatedstartandendtimepoints.",
-                        "Onlyfillinthisvariableifthisinformationisavailable."
+                        "Intention-to-treat total dose of the chemotherapy agent over the indicated start and end time points. ",
+                        " Only fill in this variable if this information is available."
                     ],
                     "mappings": []
                 },
@@ -5948,7 +5948,7 @@
                         "ncit:C173295"
                     ],
                     "implementation_notes": [
-                        "UnitforTOTAL_DOSE_ADMINISTEREDandTOTAL_DOSE_INTENDEDmustbethesame."
+                        "Unit for TOTAL_DOSE_ADMINISTERED and TOTAL_DOSE_INTENDED must be the same."
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -6008,8 +6008,8 @@
                         "ncit:C168878"
                     ],
                     "implementation_notes": [
-                        "OnlyfillinDiseasePhase,DiseasePhaseNumber,Course,andCourseNumberif\"AGE_\"notknown",
-                        "DiseasePhasecouldbe\"InitialDiagnosis\"phase,ora\"Relapse\"phase,etc..."
+                        "Only fill in Disease Phase, Disease Phase Number, Course, and Course Number if \"AGE_\" not known ",
+                        " Disease Phase could be \"Initial Diagnosis\" phase, or a \"Relapse\" phase, etc..."
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -6039,7 +6039,7 @@
                         "ncit:C173258"
                     ],
                     "implementation_notes": [
-                        "Ordinalnumberofthediseasephase,groupedwithinsubcategory.I.e.numberRelapse1,2,3,4,etc..."
+                        "Ordinal number of the disease phase, grouped within subcategory. I.e. number Relapse 1, 2, 3, 4, etc..."
                     ],
                     "mappings": []
                 },
@@ -6127,7 +6127,7 @@
                         "ncit:C166235"
                     ],
                     "implementation_notes": [
-                        "Coursenumberisgroupedwithinsubcategory.I.e.numberInduction1,2,3,4,etc...,Prephase1,2,3,4,etc...,Maintenance1,2,3,4,5,6etc..."
+                        "Course number is grouped within subcategory. I.e. number Induction 1, 2, 3, 4, etc..., Prephase 1, 2, 3, 4, etc..., Maintenance 1,2,3,4,5,6 etc..."
                     ],
                     "mappings": []
                 },
@@ -6183,7 +6183,7 @@
                         "ncit:C173297"
                     ],
                     "implementation_notes": [
-                        "Ifmedicationwasgiven,thestartandendagescorrespondtothetimeperiodwhenitwasgiven.IfmedicationwasexplicitlyNOTgiven(i.e.onlyiftheexplicitdecisiontonotgivethemedicineisavailableinthedata),leavestartandendagesblank,andonyfillinthediseasephase(andnumber)/course(andnumber)duringwhichtheexplicitdecisiontonotgivethemedicationoccured."
+                        "If medication was given, the start and end ages correspond to the time period when it was given. If medication was explicitly NOT given (i.e. only if the explicit decision to not give the medicine is available in the data), leave start and end ages blank, and ony fill in the disease phase (and number) / course (and number) during which the explicit decision to not give the medication occured."
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -6241,8 +6241,8 @@
                         "ncit:C168878"
                     ],
                     "implementation_notes": [
-                        "OnlyfillinDiseasePhase,DiseasePhaseNumber,Course,andCourseNumberif\"AGE_\"notknown",
-                        "DiseasePhasecouldbe\"InitialDiagnosis\"phase,ora\"Relapse\"phase,etc..."
+                        "Only fill in Disease Phase, Disease Phase Number, Course, and Course Number if \"AGE_\" not known ",
+                        " Disease Phase could be \"Initial Diagnosis\" phase, or a \"Relapse\" phase, etc..."
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -6272,7 +6272,7 @@
                         "ncit:C173258"
                     ],
                     "implementation_notes": [
-                        "Ordinalnumberofthediseasephase,groupedwithinsubcategory.I.e.numberRelapse1,2,3,4,etc..."
+                        "Ordinal number of the disease phase, grouped within subcategory. I.e. number Relapse 1, 2, 3, 4, etc..."
                     ],
                     "mappings": []
                 },
@@ -6360,7 +6360,7 @@
                         "ncit:C166235"
                     ],
                     "implementation_notes": [
-                        "Coursenumberisgroupedwithinsubcategory.I.e.numberInduction1,2,3,4,etc...,Prephase1,2,3,4,etc...,Maintenance1,2,3,4,5,6etc..."
+                        "Course number is grouped within subcategory. I.e. number Induction 1, 2, 3, 4, etc..., Prephase 1, 2, 3, 4, etc..., Maintenance 1,2,3,4,5,6 etc..."
                     ],
                     "mappings": []
                 },
@@ -6544,7 +6544,7 @@
                         "ncit:C169009"
                     ],
                     "implementation_notes": [
-                        "thetermshouldbeabouttheHLAmatchingresult(iematchstatus),nottheprocess-NCIwillmassagethisterm'sdefinition(HLAMatchstatus)"
+                        "the term should be about the HLA matching result (ie match status), not the process - NCI will massage this term's definition (HLA Match status)"
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -6988,8 +6988,8 @@
                         "ncit:C168878"
                     ],
                     "implementation_notes": [
-                        "OnlyfillinDiseasePhase,DiseasePhaseNumber,Course,andCourseNumberif\"AGE_\"notknown",
-                        "DiseasePhasecouldbe\"InitialDiagnosis\"phase,ora\"Relapse\"phase,etc..."
+                        "Only fill in Disease Phase, Disease Phase Number, Course, and Course Number if \"AGE_\" not known ",
+                        " Disease Phase could be \"Initial Diagnosis\" phase, or a \"Relapse\" phase, etc..."
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -7019,7 +7019,7 @@
                         "ncit:C173258"
                     ],
                     "implementation_notes": [
-                        "Ordinalnumberofthediseasephase,groupedwithinsubcategory.I.e.numberRelapse1,2,3,4,etc..."
+                        "Ordinal number of the disease phase, grouped within subcategory. I.e. number Relapse 1, 2, 3, 4, etc..."
                     ],
                     "mappings": []
                 },
@@ -7107,7 +7107,7 @@
                         "ncit:C166235"
                     ],
                     "implementation_notes": [
-                        "Coursenumberisgroupedwithinsubcategory.I.e.numberInduction1,2,3,4,etc...,Prephase1,2,3,4,etc...,Maintenance1,2,3,4,5,6etc..."
+                        "Course number is grouped within subcategory. I.e. number Induction 1, 2, 3, 4, etc..., Prephase 1, 2, 3, 4, etc..., Maintenance 1,2,3,4,5,6 etc..."
                     ],
                     "mappings": []
                 },
@@ -7223,8 +7223,8 @@
                         "ncit:C124433"
                     ],
                     "implementation_notes": [
-                        "Stringresultcanincludeanythingthatisnotasinglenumericresult,i.e.\"Positive\",\"Negative\",\"Present\",\"Absent\",\"Yes\",\"No\",\"Elevated,\"\"Depressed\",\"Abovethreshold\",\"Belowthreshold\",ranges,aswellasbucketedcategories,etc...",
-                        "OnlyfillinthisvariablewhentheavailabledataisanythingEXCEPTasinglenumericvalue,andincludetheentireavailabledataasastring,includingunitsifapplicable"
+                        "String result can include anything that is not a single numeric result, i.e. \"Positive\", \"Negative\", \"Present\", \"Absent\", \"Yes\", \"No\", \"Elevated,\" \"Depressed\", \"Above threshold\", \"Below threshold\", ranges, as well as bucketed categories, etc... ",
+                        " Only fill in this variable when the available data is anything EXCEPT a single numeric value, and include the entire available data as a string, including units if applicable"
                     ],
                     "mappings": []
                 },
@@ -7236,7 +7236,7 @@
                         "ncit:C168951"
                     ],
                     "implementation_notes": [
-                        "Onlyfillinthisvariableiftheavailabledataisasinglenumericvalue."
+                        "Only fill in this variable if the available data is a single numeric value."
                     ],
                     "mappings": []
                 },
@@ -7248,7 +7248,7 @@
                         "ncit:C173304"
                     ],
                     "implementation_notes": [
-                        "OnlyfillinthisvariableifanumericresultisprovidedinMRD_RESULT_NUMERIC."
+                        "Only fill in this variable if a numeric result is provided in MRD_RESULT_NUMERIC."
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -7354,7 +7354,7 @@
                         "ncit:C168895"
                     ],
                     "implementation_notes": [
-                        "IfmultipleMRDmarkers,includeoneobservationpermarker."
+                        "If multiple MRD markers, include one observation per marker."
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -7464,7 +7464,7 @@
                                 "ncit:C167195"
                             ],
                             "implementation_notes": [
-                                "GATA2/MECOMFusionGene"
+                                "GATA2/MECOM Fusion Gene"
                             ],
                             "mappings": []
                         },
@@ -7522,7 +7522,7 @@
                                 "ncit:C36523"
                             ],
                             "implementation_notes": [
-                                "KMT2AGeneRearrangement"
+                                "KMT2A Gene Rearrangement"
                             ],
                             "mappings": []
                         },
@@ -7776,8 +7776,8 @@
                         "ncit:C168878"
                     ],
                     "implementation_notes": [
-                        "OnlyfillinDiseasePhase,DiseasePhaseNumber,Course,andCourseNumberif\"AGE_\"notknown",
-                        "DiseasePhasecouldbe\"InitialDiagnosis\"phase,ora\"Relapse\"phase,etc..."
+                        "Only fill in Disease Phase, Disease Phase Number, Course, and Course Number if \"AGE_\" not known ",
+                        " Disease Phase could be \"Initial Diagnosis\" phase, or a \"Relapse\" phase, etc..."
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -7807,7 +7807,7 @@
                         "ncit:C173258"
                     ],
                     "implementation_notes": [
-                        "Ordinalnumberofthediseasephase,groupedwithinsubcategory.I.e.numberRelapse1,2,3,4,etc..."
+                        "Ordinal number of the disease phase, grouped within subcategory. I.e. number Relapse 1, 2, 3, 4, etc..."
                     ],
                     "mappings": []
                 },
@@ -7895,7 +7895,7 @@
                         "ncit:C166235"
                     ],
                     "implementation_notes": [
-                        "Coursenumberisgroupedwithinsubcategory.I.e.numberInduction1,2,3,4,etc...,Prephase1,2,3,4,etc...,Maintenance1,2,3,4,5,6etc..."
+                        "Course number is grouped within subcategory. I.e. number Induction 1, 2, 3, 4, etc..., Prephase 1, 2, 3, 4, etc..., Maintenance 1,2,3,4,5,6 etc..."
                     ],
                     "mappings": []
                 },
@@ -8029,7 +8029,7 @@
                         "ncit:C168960"
                     ],
                     "implementation_notes": [
-                        "OnlyfillinthevariableifavalueisavailableforBM_PCT_BLASTS_AT_RESPONSE"
+                        "Only fill in the variable if a value is available for BM_PCT_BLASTS_AT_RESPONSE"
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -8205,8 +8205,8 @@
                         "ncit:C168878"
                     ],
                     "implementation_notes": [
-                        "OnlyfillinDiseasePhase,DiseasePhaseNumber,Course,andCourseNumberif\"AGE_\"notknown",
-                        "DiseasePhasecouldbe\"InitialDiagnosis\"phase,ora\"Relapse\"phase,etc..."
+                        "Only fill in Disease Phase, Disease Phase Number, Course, and Course Number if \"AGE_\" not known ",
+                        " Disease Phase could be \"Initial Diagnosis\" phase, or a \"Relapse\" phase, etc..."
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -8236,7 +8236,7 @@
                         "ncit:C173258"
                     ],
                     "implementation_notes": [
-                        "Ordinalnumberofthediseasephase,groupedwithinsubcategory.I.e.numberRelapse1,2,3,4,etc..."
+                        "Ordinal number of the disease phase, grouped within subcategory. I.e. number Relapse 1, 2, 3, 4, etc..."
                     ],
                     "mappings": []
                 },
@@ -8324,7 +8324,7 @@
                         "ncit:C166235"
                     ],
                     "implementation_notes": [
-                        "Coursenumberisgroupedwithinsubcategory.I.e.numberInduction1,2,3,4,etc...,Prephase1,2,3,4,etc...,Maintenance1,2,3,4,5,6etc..."
+                        "Course number is grouped within subcategory. I.e. number Induction 1, 2, 3, 4, etc..., Prephase 1, 2, 3, 4, etc..., Maintenance 1,2,3,4,5,6 etc..."
                     ],
                     "mappings": []
                 },
@@ -8336,7 +8336,7 @@
                         "ncit:C41331"
                     ],
                     "implementation_notes": [
-                        "ForAML,COGwillomitmultiorganfailure,hemorrhage,andneurotoxcity.InfectionforAMLCOGwillbeCRFquestionaboutsterilesite"
+                        "For AML, COG will omit multiorgan failure, hemorrhage, and neurotoxcity. Infection for AML COG will be CRF question about sterile site"
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -8446,7 +8446,7 @@
                         "ncit:C173313"
                     ],
                     "implementation_notes": [
-                        "ForAML,includewhenavailableifa1:1mappingtotheADVERSE_EVENTbucket"
+                        "For AML, include when available if a 1:1 mapping to the ADVERSE_EVENT bucket"
                     ],
                     "mappings": []
                 },
@@ -8812,7 +8812,7 @@
                         "ncit:C173318"
                     ],
                     "implementation_notes": [
-                        "changedtogeneralINTERVENTIONvariable(waspreviouslySOS_INTERVENTION)"
+                        "changed to general INTERVENTION variable (was previously SOS_INTERVENTION)"
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -8858,8 +8858,8 @@
                         "ncit:C173319"
                     ],
                     "implementation_notes": [
-                        "Ifmultiplemedicationsorinterventionsperformed,includeoneobservationpermedicationorintervention",
-                        "OnlyfillinthisvariableifMEDICATIONand/orINTERVENTIONaremarkeras\"Yes\""
+                        "If multiple medications or interventions performed, include one observation per medication or intervention ",
+                        " Only fill in this variable if MEDICATION and/or INTERVENTION are marker as \"Yes\""
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -8921,8 +8921,8 @@
                         "ncit:C185665"
                     ],
                     "implementation_notes": [
-                        "Ifmultiplepathogensinvolved,includeoneobservationperpathogen.",
-                        "OnlyfillinthisvariableifADVERSE_EVENTis\"Infection.\""
+                        "If multiple pathogens involved, include one observation per pathogen. ",
+                        " Only fill in this variable if ADVERSE_EVENT is \"Infection.\""
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -8984,7 +8984,7 @@
                         "ncit:C168955"
                     ],
                     "implementation_notes": [
-                        "OnlyfillinthisvariableifADVERSE_EVENTis\"Infection\"andthereisavaluefilledinforPATHOGEN."
+                        "Only fill in this variable if ADVERSE_EVENT is \"Infection\" and there is a value filled in for PATHOGEN."
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -9030,7 +9030,7 @@
                         "ncit:C168861"
                     ],
                     "implementation_notes": [
-                        "OnlyfillinthisvariableifADVERSE_EVENTis\"GVHD.\""
+                        "Only fill in this variable if ADVERSE_EVENT is \"GVHD.\""
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -9076,8 +9076,8 @@
                         "ncit:C168883"
                     ],
                     "implementation_notes": [
-                        "IfmultipleorgansinvolvedinGVHD,includeoneobservationperorgan.",
-                        "OnlyfillinthisvariableifADVERSE_EVENTis\"GVHD.\""
+                        "If multiple organs involved in GVHD, include one observation per organ. ",
+                        " Only fill in this variable if ADVERSE_EVENT is \"GVHD.\""
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -9159,8 +9159,8 @@
                         "ncit:C168878"
                     ],
                     "implementation_notes": [
-                        "OnlyfillinDiseasePhase,DiseasePhaseNumber,Course,andCourseNumberif\"AGE_\"notknown",
-                        "DiseasePhasecouldbe\"InitialDiagnosis\"phase,ora\"Relapse\"phase,etc..."
+                        "Only fill in Disease Phase, Disease Phase Number, Course, and Course Number if \"AGE_\" not known ",
+                        " Disease Phase could be \"Initial Diagnosis\" phase, or a \"Relapse\" phase, etc..."
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -9190,7 +9190,7 @@
                         "ncit:C173258"
                     ],
                     "implementation_notes": [
-                        "Ordinalnumberofthediseasephase,groupedwithinsubcategory.I.e.numberRelapse1,2,3,4,etc..."
+                        "Ordinal number of the disease phase, grouped within subcategory. I.e. number Relapse 1, 2, 3, 4, etc..."
                     ],
                     "mappings": []
                 },
@@ -9278,7 +9278,7 @@
                         "ncit:C166235"
                     ],
                     "implementation_notes": [
-                        "Coursenumberisgroupedwithinsubcategory.I.e.numberInduction1,2,3,4,etc...,Prephase1,2,3,4,etc...,Maintenance1,2,3,4,5,6etc..."
+                        "Course number is grouped within subcategory. I.e. number Induction 1, 2, 3, 4, etc..., Prephase 1, 2, 3, 4, etc..., Maintenance 1,2,3,4,5,6 etc..."
                     ],
                     "mappings": []
                 },
