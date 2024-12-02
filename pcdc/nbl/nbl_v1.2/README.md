@@ -1,6 +1,6 @@
 # Release notes for nbl_v1.2
 
-This version is a circumscribed view of the NBL model that was made specifically for the inclusion of relapse and response data from the SIOPEN BEACON study.
+This version is a circumscribed view of the NBL dictionary that was made specifically for the inclusion of relapse and response data from the SIOPEN BEACON study.
 
 Collaborators included: Mei Li (D4CG), Michael Watkins (D4CG), Brian Furner (D4CG), Sue Cohn (INRG), Andy Pearson (INRG), Lucas Moreno (INRG), and Wendy London (INRG).
 
