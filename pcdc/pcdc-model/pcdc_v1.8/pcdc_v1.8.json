@@ -7,7 +7,7 @@
     "info": {
         "title": "PCDC Data Model",
         "name": "pcdc_v1.8",
-        "release_notes": "https://github.com/chicagopcdc/d4cg-modeling/tree/main/pcdc/pcdc/pcdc_v1.8",
+        "release_notes": "https://github.com/chicagopcdc/d4cg-modeling/tree/main/pcdc/pcdc-model/pcdc_v1.8",
         "used_by": [
             "all_v1.1",
             "all_v1.0",
