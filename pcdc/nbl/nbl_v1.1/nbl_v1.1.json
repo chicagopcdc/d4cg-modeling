@@ -1,0 +1,3409 @@
+{
+    "meta": {
+        "name": "nbl_v1.1",
+        "timestamp": "20250114",
+        "sheet_id": "1tdXKN6Al4xtEH2eoIdRM6vEMra1A3bdCQHQIv-IZy6k"
+    },
+    "info": {
+        "title": "Neuroblastoma (NBL) Data Dictionary",
+        "name": "nbl_v1.1",
+        "release_notes": "https://github.com/chicagopcdc/d4cg-modeling/tree/main/pcdc/nbl/nbl_v1.1",
+        "parent_data_model": "pcdc_v1.8",
+        "license": "Creative Commons Attribution-NonCommercial 4.0 International License (https://creativecommons.org/licenses/by-nc/4.0/)",
+        "wiki": "https://docs.pedscommons.org/",
+        "consortium_info": "https://commons.cri.uchicago.edu/pcdc/",
+        "description": "The NBL data dictionary is a consensus data schema built by an international group of pediatric neuroblastoma experts and maintained by Data for the Common Good (D4CG) at the University of Chicago in collaboration with the International Neuroblastoma Risk Group (INRG). It is based on the collective requirements of its contributors.",
+        "total": 69
+    },
+    "domains": {
+        "protocol": {
+            "subject_identifier": {
+                "PCDC_SUBJECT_ID": {
+                    "type": "String",
+                    "tier": "n/a",
+                    "description": "PCDC Subject Identifier",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                }
+            },
+            "subject_characteristics": {
+                "HONEST_BROKER_SUBJECT_ID": {
+                    "type": "String",
+                    "tier": "n/a",
+                    "description": "Honest Broker Subject ID",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "DATA_CONTRIBUTOR_ID": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "Data Contributor ID",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "COG": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "GPOH": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "JCCG": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "SIOPEN": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "SJCRH": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "STUDY_ID": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "Study Identifier",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "0892": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "0896": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "0901": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "0902": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "0911": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "0914": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "0924": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "0925": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "0926": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "0927": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "0931": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "0935": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "0936": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "0937": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "0961": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "0962": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "09709": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "099": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "321P1": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "321P2": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "321P3": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "321P4": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "323P": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "3881": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "3891": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "3951": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "461": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "4941": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "4941L": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "7942": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "8105": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "8340": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "8441": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "8605": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "8607": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "8661": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "8671": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "8741": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "8742": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "8743": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "8863": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "8970": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "9000": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "9047": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "9072": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "9075": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "9082": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "9140": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "9243": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "9244": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "9248": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "9262": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "9272": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "9275": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "9280": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "9284": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "9285": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "9340": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "9341": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "9342": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "9343": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "9346": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "9347": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "9360": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "9361": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "9372": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "9375": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "9376": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "9382": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "9464": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "9466": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "9470": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "9571": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "9572": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "9579": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "9581": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "9640": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "9670": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "9675": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "9900": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "9907": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "A0935A": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "A09713": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "A3961": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "A3973": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "AADM01P1": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "AALL0232": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "AALL0331": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "AALL03B1": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "AALL0434": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "AALL08B1": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "AAML00P2": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "AAML03P1": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "AAML0531": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "AAML05P1": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "AAML07P1": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "AAML1031": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "AB9804": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ABTR01B1": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ABTR04B1": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ACCL0331": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ACCL0423": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ACCL0431": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ACCL05C1": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ACCL0934": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ACCL0935": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ACCL1031": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ACCL1032": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ACCL1034": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ACCL15N1CD": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ACCL1633": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ACCL21C2": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ACNS02B3": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ADVL0016": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ADVL0017": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ADVL0018": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ADVL0122": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ADVL0211": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ADVL0212": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ADVL0214": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ADVL0215": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ADVL0314": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ADVL0316": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ADVL0413": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ADVL0414": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ADVL0416": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ADVL0421": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ADVL0516": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ADVL0517": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ADVL0524": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ADVL0525": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ADVL0612": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ADVL06B1": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ADVL0714": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ADVL0812": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ADVL0813": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ADVL0816": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ADVL0821": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ADVL0911": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ADVL0912": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ADVL0916": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ADVL0918": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ADVL0921": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ADVL1011": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ADVL1013": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ADVL1014": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ADVL1111": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ADVL1112": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ADVL1115": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ADVL1211": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ADVL1212": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ADVL1213": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ADVL1312": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ADVL1314": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ADVL1315": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ADVL1411": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ADVL1412": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ADVL1414": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ADVL1416": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ADVL1513": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ADVL1522": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ADVL1615": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ADVL1622": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "AEPI07N1": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "AEWS07B1": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "AGCT1531": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "AHEP1531": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ALTE03N1": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ALTE05N1": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ALTE15N2": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ALTE1621": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ANBL0032": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ANBL00B1": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ANBL00P1": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ANBL00P2": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ANBL00P3": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ANBL02P1": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ANBL0321": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ANBL0322": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ANBL0421": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ANBL0531": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ANBL0532": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ANBL0621": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ANBL0931": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ANBL09P1": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ANBL1021": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ANBL1221": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ANBL1232": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ANBL12P1": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ANBL1531": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ANBL17P1": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ANBL1821": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ANBL19P1": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ANUR0631": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ANUR1131": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "AOST06B1": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "APEC14B1": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "APEC1621E": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "APEC1621F": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "APEC1621H": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "APEC1621I": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "APEC1621SC": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "AREN0321": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "AREN03B2": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "AS942": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "AS972": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "AS9801": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "B003": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "B903": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "B904": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "B925": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "B947": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "B953": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "B954": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "B973": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "D9501": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "D9602": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "E04": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "E15": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "E18": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ENSG5": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "I03": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "LNESG1": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "N891": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "NB2004-HR": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "NB2005": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "NB2008": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "NB2012": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "NB84": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "NB8814": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "NB91": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "NB97": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "P9462": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "P9480": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "P9485": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "P9641": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "P9749": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "P9761": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "P9772": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "P9851": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "P9963": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "P9972": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "PEPN2011": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "PEPN2111": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "POG-8844": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "R9702": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "S31": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "S901": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "S912": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "S921": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "SIOPEN HR-NBL1": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "SIOPEN-EUNB": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "X0942": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "CENSOR_STATUS": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "Censor Status",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Subject is censored (i.e. has had no events(s))": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Subject has had one or more events": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Reported": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "AGE_AT_CENSOR_STATUS": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "The subject's age (in days) at the time of censor status recording.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "TREATMENT_ARM": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "Assigned Treatment Arm by Intention-To-Treat",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Arm A": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Arm B": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Arm C": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Arm D": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Arm E": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Regimen A": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Regimen B": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Assigned to Regimen B": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Randomized to Regimen B": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Baseline Treatment with 2 cycles": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Baseline Treatment with 4 cycles": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Baseline Treatment with 8 cycles": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Randomized conventional chemotherapy": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Non-randomized conventional chemotherapy": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Randomized to Single HSCT": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Non-randomly assigned Single HSCT": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Randomized to Tandem HSCT": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Randomized ablative chemotherapy with BMT": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Randomized": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "R0": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "R1": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "R2": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "R3": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "cisRA": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "No cisRA": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "RA only": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "RA+anti-GD2": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Purged": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unpurged": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                }
+            },
+            "disease_phase_timing": {
+                "DISEASE_PHASE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "Disease Phase",
+                    "codes": [],
+                    "implementation_notes": [
+                        "Disease phase could be \"Initial Diagnosis\" phase, or a \"Relapse\" phase, etc..."
+                    ],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Initial Diagnosis": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Relapse": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Progression": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "DISEASE_PHASE_NUMBER": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "Disease Phase Number",
+                    "codes": [],
+                    "implementation_notes": [
+                        "Ordinal number of the disease phase, grouped within subcategory. I.e. number Relapse 1, 2, 3, 4, etc... and Progression 1, 2, 3, 4, etc..."
+                    ],
+                    "mappings": []
+                },
+                "AGE_AT_DISEASE_PHASE": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "Age in Days at Disease Phase",
+                    "codes": [],
+                    "implementation_notes": [
+                        "Disease phase could be the \"Initial Diagnosis\" phase, or a \"Relapse\" phase, etc..."
+                    ],
+                    "mappings": []
+                },
+                "YEAR_AT_DISEASE_PHASE": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "Year at Disease Phase",
+                    "codes": [],
+                    "implementation_notes": [
+                        "Disease phase could be the \"Initial Diagnosis\" phase, or a \"Relapse\" phase, etc..."
+                    ],
+                    "mappings": []
+                }
+            }
+        },
+        "demographics": {
+            "demographics": {
+                "SEX": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "Biological Sex",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Male": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Female": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Reported": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "RACE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "Race",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "American Indian or Alaska Native": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Asian": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Black or African American": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Multiracial": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Native Hawaiian or Other Pacific Islander": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "White": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Reported": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "ETHNICITY": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "Ethnicity",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Hispanic or Latino": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Hispanic or Latino": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Reported": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                }
+            },
+            "survival_characteristics": {
+                "AGE_AT_LKSS": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "Age in Days at Last Known Survival Status",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "DISEASE_PHASE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "Disease Phase",
+                    "codes": [],
+                    "implementation_notes": [
+                        "Only fill in Disease phase, Disease phase number, Course, and Course number if \"AGE_\" not known ",
+                        " Disease phase could be \"Initial Diagnosis\" phase, or a \"Relapse\" phase, etc..."
+                    ],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Initial Diagnosis": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Relapse": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Progression": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "DISEASE_PHASE_NUMBER": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "Disease Phase Number",
+                    "codes": [],
+                    "implementation_notes": [
+                        "Only fill in Disease phase, Disease phase number, Course, and Course number if \"AGE_\" not known ",
+                        " Ordinal number of the disease phase, grouped within subcategory. I.e. number Relapse 1, 2, 3, 4, etc... and Progression 1, 2, 3, 4, etc..."
+                    ],
+                    "mappings": []
+                },
+                "LKSS": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "Last Known Survival Status",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Alive": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Dead": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "CAUSE_OF_DEATH": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "Cause of Death",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Disease Progression": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Treatment-Related Mortality": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Other": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                }
+            }
+        },
+        "disease_attributes": {
+            "disease_characteristics": {
+                "DISEASE_PHASE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "Disease Phase",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Initial Diagnosis": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Relapse": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Progression": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "DISEASE_PHASE_NUMBER": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "Disease Phase Number",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "INITIAL_TREATMENT_CATEGORY": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The category of initial treatment that the patient receive for their disease.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "None (observation)": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Surgery alone": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Conventional-dose chemotherapy (2-8 cycles) plus surgery": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Intensive multi-modality therapy: specific type unknown": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Intensive multi-modality therapy: no stem cell or bone marrow transplant": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Intensive multi-modality therapy: plus stem cell or bone marrow transplant": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Intensive multi-modality therapy: plus stem cell or bone marrow transplant and anti-GD2 antibody": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "MKI": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "MKI (Revised INPC)",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Low (<2% or <100/5,000 cells)": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Intermediate (2-4% or 100 to <200/5,000 cells)": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "High (>4% or >200/5,000 cells)": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Reported": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                }
+            },
+            "tumor_assessment": {
+                "AGE_AT_TUMOR_ASSESSMENT": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "Age in Days at Tumor Assessment",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "DISEASE_PHASE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "Disease Phase",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Initial Diagnosis": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Relapse": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Progression": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "DISEASE_PHASE_NUMBER": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "Disease Phase Number",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "TUMOR_STATE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "A condition or state of a tumor at a particular time and a particular tumor site.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Present": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Absent": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "TUMOR_CLASSIFICATION": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "Tumor Classification",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Primary": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Metastatic": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Reported": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "TUMOR_SITE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "Tumor Site",
+                    "codes": [],
+                    "implementation_notes": [
+                        "If there were multiple primary sites, include one observation per primary site."
+                    ],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Central Nervous System": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Distant Lymph Nodes": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Liver": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Lung": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Adrenal Gland": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Abdomen": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Neck": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Thorax": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Pelvis": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Bone Marrow": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Bone": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Skin": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "TUMOR_SITE_OTHER": {
+                    "type": "String",
+                    "tier": "n/a",
+                    "description": "Tumor Site Other",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                }
+            },
+            "staging": {
+                "AGE_AT_STAGING": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "Age in Days of Staging Assessment",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "DISEASE_PHASE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "Disease Phase",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Initial Diagnosis": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Relapse": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Progression": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "DISEASE_PHASE_NUMBER": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "Disease Phase Number",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "STAGE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "Stage",
+                    "codes": [],
+                    "implementation_notes": [
+                        "Tied to stage system."
+                    ],
+                    "mappings": [],
+                    "permissible_values": {
+                        "INSS, Stage 1": {
+                            "description": "A relatively early stage of cancer that is usually small and contained within the organ it started in, and hasn't spread to other parts of the body",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "INSS, Stage 2a": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "INSS, Stage 2b": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "INSS, Stage 3": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "INSS, Stage 4": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "INSS, Stage 4s": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "EVANS, Stage I": {
+                            "description": "Invasive cancer confined to the original anatomic site of growth without lymph node involvement.",
+                            "codes": [
+                                "C27966"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "EVANS, Stage II": {
+                            "description": "Invasive cancer more extensive than stage I, usually involving local lymph nodes without spread to distant anatomic sites.",
+                            "codes": [
+                                "C28054"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "EVANS, Stage III": {
+                            "description": "Locally advanced cancer that has spread to nearby organs but not to distant anatomic sites.",
+                            "codes": [
+                                "C27970"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "EVANS, Stage IV": {
+                            "description": "Cancer that has spread to distant anatomic sites beyond its original site of growth.",
+                            "codes": [
+                                "C27971"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "EVANS, Stage IVs": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "INRGSS, Stage L1": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "INRGSS, Stage L2": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "INRGSS, Stage M": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "INRGSS, Stage MS": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Reported": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                }
+            },
+            "histology": {
+                "AGE_AT_HIST_ASSESSMENT": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "Age in Days of Histology Assessment",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "DISEASE_PHASE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "Disease Phase",
+                    "codes": [],
+                    "implementation_notes": [
+                        "Only fill in Disease phase, Disease phase number, Course, and Course number if \"AGE_\" not known ",
+                        " Disease phase could be \"Initial Diagnosis\" phase, or a \"Relapse\" phase, etc..."
+                    ],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Initial Diagnosis": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Relapse": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Progression": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "DISEASE_PHASE_NUMBER": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "Disease Phase Number",
+                    "codes": [],
+                    "implementation_notes": [
+                        "Only fill in Disease phase, Disease phase number, Course, and Course number if \"AGE_\" not known ",
+                        " Ordinal number of the disease phase, grouped within subcategory. I.e. number Relapse 1, 2, 3, 4, etc... and Progression 1, 2, 3, 4, etc..."
+                    ],
+                    "mappings": []
+                },
+                "HISTOLOGY": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "Histology",
+                    "codes": [],
+                    "implementation_notes": [
+                        "If multiple histological findings, include one observation per histological finding."
+                    ],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Neuroblastoma (Schwannian Stroma-Poor)": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Ganglioneuroblastoma, Intermixed (Schwannian Stroma-Rich)": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Ganglioneuroma (Schwannian Stroma-Dominant), Maturing Subtype": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Ganglioneuroblastoma, Nodular (Composite)": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "HISTOLOGY_GRADE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "Histology Grade",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Undifferentiated or Poorly Differentiated": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Differentiating": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Reported": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "HISTOLOGY_INPC": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "Revised INPC Prognostic Group (2003)",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Favorable": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unfavorable": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Reported": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                }
+            }
+        },
+        "testing": {
+            "molecular_analysis": {
+                "AGE_AT_MOLECULAR_ANALYSIS": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "Age in Days at Molecular Analysis",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "DISEASE_PHASE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "Disease Phase",
+                    "codes": [],
+                    "implementation_notes": [
+                        "Only fill in Disease phase, Disease phase number, Course, and Course number if \"AGE_\" not known ",
+                        " Disease phase could be \"Initial Diagnosis\" phase, or a \"Relapse\" phase, etc..."
+                    ],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Initial Diagnosis": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Relapse": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Progression": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "DISEASE_PHASE_NUMBER": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "Disease Phase Number",
+                    "codes": [],
+                    "implementation_notes": [
+                        "Only fill in Disease phase, Disease phase number, Course, and Course number if \"AGE_\" not known ",
+                        " Ordinal number of the disease phase, grouped within subcategory. I.e. number Relapse 1, 2, 3, 4, etc... and Progression 1, 2, 3, 4, etc..."
+                    ],
+                    "mappings": []
+                },
+                "DNA_INDEX": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "DNA Index (categorical)",
+                    "codes": [],
+                    "implementation_notes": [
+                        "If multiple statuses apply, include one observation per status."
+                    ],
+                    "mappings": [],
+                    "permissible_values": {
+                        "DNA Index </= 1 (Hypodiploid, Diploid)": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "DNA Index >1 (Hyperdiploid)": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Reported": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "DNA_INDEX_NUMERIC": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "DNA Index (numeric)",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "MOLECULAR_ABNORMALITY": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "Molecular Abnormality",
+                    "codes": [],
+                    "implementation_notes": [
+                        "If multiple molecular abnormalities, include one observation per molecular abnormality."
+                    ],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Loss of Chromosome 11q (Deletion)": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Loss of Chromosome 1p (Deletion)": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "17q Gain": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ALK Mutation": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ALK Rearrangement": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ALK Copy Number Gain": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "ALK Copy Number Loss": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "ALK Amplification": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "p.F1174L": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "p.R1275L": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "MYCN Amplification": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Other": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Reported": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "MOLECULAR_ABNORMALITY_RESULT": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "Molecular Abnormality Result",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Negative": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Positive": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "CHROMOSOME": {
+                    "type": "String",
+                    "tier": "n/a",
+                    "description": "Chromosome",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "GENE1": {
+                    "type": "String",
+                    "tier": "n/a",
+                    "description": "Gene 1",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "GENE2": {
+                    "type": "String",
+                    "tier": "n/a",
+                    "description": "Gene 2",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "VARIANT_TYPE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "Variant Type",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Translocation": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Inversion": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Mutation": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Single Nucleotide Variant": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Copy Number Alteration": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Rearrangement": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Deletion": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Amplification": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Gain": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Other": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Reported": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "COPY_NUMBER_STATUS": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "Copy Number Status",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ],
+                    "permissible_values": {
+                        "Gain": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "Loss": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "Amplification": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "No gain/loss/amplification": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "Unknown": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        }
+                    }
+                },
+                "AA_MUTATION": {
+                    "type": "String",
+                    "tier": "n/a",
+                    "description": "Amino Acid Mutation (p.F1174L; p.R1275L)",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "ALLELIC_RATIO": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "Allelic Ratio",
+                    "codes": [],
+                    "implementation_notes": [
+                        "Only fill in this variable if the information is available."
+                    ],
+                    "mappings": []
+                }
+            },
+            "labs": {
+                "AGE_AT_LAB": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "Age in Days at Laboratory Test",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "DISEASE_PHASE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "Disease Phase",
+                    "codes": [],
+                    "implementation_notes": [
+                        "Only fill in Disease phase, Disease phase number, Course, and Course number if \"AGE_\" not known ",
+                        " Disease phase could be \"Initial Diagnosis\" phase, or a \"Relapse\" phase, etc..."
+                    ],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Initial Diagnosis": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Relapse": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Progression": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "DISEASE_PHASE_NUMBER": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "Disease Phase Number",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "LAB_TEST": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "Laboratory Test",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "LDH": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Ferritin": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "LAB_RESULT_NUMERIC": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "The numeric result of the lab test.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                }
+            }
+        },
+        "events": {
+            "secondary_malignant_neoplasm": {
+                "AGE_AT_SMN": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "Age in Days at Secondary Malignant Neoplasm",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "DISEASE_PHASE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "Disease Phase",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Initial Diagnosis": {
+                            "description": "The first diagnosis of the individual's condition.",
+                            "codes": [
+                                "C156813"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Relapse": {
+                            "description": "The return of a disease after a period of remission.",
+                            "codes": [
+                                "C38155"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Progression": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "DISEASE_PHASE_NUMBER": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "Disease Phase Number",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "SMN": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "Secondary Malignancy",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "No": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Yes": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Reported": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "SMN_MORPH_SNO": {
+                    "type": "String",
+                    "tier": "n/a",
+                    "description": "SMN Morphology SNOMED Code",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "SMN_MORPH_ICDO": {
+                    "type": "String",
+                    "tier": "n/a",
+                    "description": "SMN Morphology ICD-O Code",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "SNM_MORPH_TXT": {
+                    "type": "String",
+                    "tier": "n/a",
+                    "description": "SMN Morphology Text",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "SMN_TOP_SNO": {
+                    "type": "String",
+                    "tier": "n/a",
+                    "description": "SMN Topography SNOMED Code",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "SMN_TOP_ICDO": {
+                    "type": "String",
+                    "tier": "n/a",
+                    "description": "SMN Topography ICD-O Code",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "SMN_TOP_TXT": {
+                    "type": "String",
+                    "tier": "n/a",
+                    "description": "SMN Topography Text",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                }
+            }
+        }
+    }
+}

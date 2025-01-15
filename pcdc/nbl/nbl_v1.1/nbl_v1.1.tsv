@@ -1,0 +1,583 @@
+INFO	Title	Neuroblastoma (NBL) Data Dictionary								
+INFO	Name	nbl_v1.1								
+INFO	Release Notes	https://github.com/chicagopcdc/d4cg-modeling/tree/main/pcdc/nbl/nbl_v1.1								
+INFO	Parent Data Model	pcdc_v1.8								
+INFO	License	Creative Commons Attribution-NonCommercial 4.0 International License (https://creativecommons.org/licenses/by-nc/4.0/)								
+INFO	D4CG Data Modeling Wiki	https://docs.pedscommons.org/								
+INFO	Disease Consortium Information	https://commons.cri.uchicago.edu/pcdc/								
+INFO	Description	The NBL data dictionary is a consensus data schema built by an international group of pediatric neuroblastoma experts and maintained by Data for the Common Good (D4CG) at the University of Chicago in collaboration with the International Neuroblastoma Risk Group (INRG). It is based on the collective requirements of its contributors.								
+INFO	Total Variables	69								
+										
+RowType	VariableName	DataType	Tier	VariableDescription	VariableCode	PermissibleValue	ValueDescription	ValueCode	Implementation Notes	Mappings
+										
+DD	Protocol									
+TD	Subject Identifier									
+TG	Will be included in every table									
+VD	PCDC_SUBJECT_ID	String	n/a	PCDC Subject Identifier		_undefined_	_undefined_	_undefined_		
+										
+										
+DD	Protocol									
+TD	Subject Characteristics									
+TG	One row per subject per study									
+VD	HONEST_BROKER_SUBJECT_ID	String	n/a	Honest Broker Subject ID		_undefined_	_undefined_	_undefined_		
+VD	DATA_CONTRIBUTOR_ID	Code	n/a	Data Contributor ID		_undefined_	_undefined_	_undefined_		
+PD						COG				
+PD						GPOH				
+PD						JCCG				
+PD						SIOPEN				
+PD						SJCRH				
+VD	STUDY_ID	Code	n/a	Study Identifier		_undefined_	_undefined_	_undefined_		
+PD						0892				
+PD						0896				
+PD						0901				
+PD						0902				
+PD						0911				
+PD						0914				
+PD						0924				
+PD						0925				
+PD						0926				
+PD						0927				
+PD						0931				
+PD						0935				
+PD						0936				
+PD						0937				
+PD						0961				
+PD						0962				
+PD						09709				
+PD						099				
+PD						321P1				
+PD						321P2				
+PD						321P3				
+PD						321P4				
+PD						323P				
+PD						3881				
+PD						3891				
+PD						3951				
+PD						461				
+PD						4941				
+PD						4941L				
+PD						7942				
+PD						8105				
+PD						8340				
+PD						8441				
+PD						8605				
+PD						8607				
+PD						8661				
+PD						8671				
+PD						8741				
+PD						8742				
+PD						8743				
+PD						8863				
+PD						8970				
+PD						9000				
+PD						9047				
+PD						9072				
+PD						9075				
+PD						9082				
+PD						9140				
+PD						9243				
+PD						9244				
+PD						9248				
+PD						9262				
+PD						9272				
+PD						9275				
+PD						9280				
+PD						9284				
+PD						9285				
+PD						9340				
+PD						9341				
+PD						9342				
+PD						9343				
+PD						9346				
+PD						9347				
+PD						9360				
+PD						9361				
+PD						9372				
+PD						9375				
+PD						9376				
+PD						9382				
+PD						9464				
+PD						9466				
+PD						9470				
+PD						9571				
+PD						9572				
+PD						9579				
+PD						9581				
+PD						9640				
+PD						9670				
+PD						9675				
+PD						9900				
+PD						9907				
+PD						A0935A				
+PD						A09713				
+PD						A3961				
+PD						A3973				
+PD						AADM01P1				
+PD						AALL0232				
+PD						AALL0331				
+PD						AALL03B1				
+PD						AALL0434				
+PD						AALL08B1				
+PD						AAML00P2				
+PD						AAML03P1				
+PD						AAML0531				
+PD						AAML05P1				
+PD						AAML07P1				
+PD						AAML1031				
+PD						AB9804				
+PD						ABTR01B1				
+PD						ABTR04B1				
+PD						ACCL0331				
+PD						ACCL0423				
+PD						ACCL0431				
+PD						ACCL05C1				
+PD						ACCL0934				
+PD						ACCL0935				
+PD						ACCL1031				
+PD						ACCL1032				
+PD						ACCL1034				
+PD						ACCL15N1CD				
+PD						ACCL1633				
+PD						ACCL21C2				
+PD						ACNS02B3				
+PD						ADVL0016				
+PD						ADVL0017				
+PD						ADVL0018				
+PD						ADVL0122				
+PD						ADVL0211				
+PD						ADVL0212				
+PD						ADVL0214				
+PD						ADVL0215				
+PD						ADVL0314				
+PD						ADVL0316				
+PD						ADVL0413				
+PD						ADVL0414				
+PD						ADVL0416				
+PD						ADVL0421				
+PD						ADVL0516				
+PD						ADVL0517				
+PD						ADVL0524				
+PD						ADVL0525				
+PD						ADVL0612				
+PD						ADVL06B1				
+PD						ADVL0714				
+PD						ADVL0812				
+PD						ADVL0813				
+PD						ADVL0816				
+PD						ADVL0821				
+PD						ADVL0911				
+PD						ADVL0912				
+PD						ADVL0916				
+PD						ADVL0918				
+PD						ADVL0921				
+PD						ADVL1011				
+PD						ADVL1013				
+PD						ADVL1014				
+PD						ADVL1111				
+PD						ADVL1112				
+PD						ADVL1115				
+PD						ADVL1211				
+PD						ADVL1212				
+PD						ADVL1213				
+PD						ADVL1312				
+PD						ADVL1314				
+PD						ADVL1315				
+PD						ADVL1411				
+PD						ADVL1412				
+PD						ADVL1414				
+PD						ADVL1416				
+PD						ADVL1513				
+PD						ADVL1522				
+PD						ADVL1615				
+PD						ADVL1622				
+PD						AEPI07N1				
+PD						AEWS07B1				
+PD						AGCT1531				
+PD						AHEP1531				
+PD						ALTE03N1				
+PD						ALTE05N1				
+PD						ALTE15N2				
+PD						ALTE1621				
+PD						ANBL0032				
+PD						ANBL00B1				
+PD						ANBL00P1				
+PD						ANBL00P2				
+PD						ANBL00P3				
+PD						ANBL02P1				
+PD						ANBL0321				
+PD						ANBL0322				
+PD						ANBL0421				
+PD						ANBL0531				
+PD						ANBL0532				
+PD						ANBL0621				
+PD						ANBL0931				
+PD						ANBL09P1				
+PD						ANBL1021				
+PD						ANBL1221				
+PD						ANBL1232				
+PD						ANBL12P1				
+PD						ANBL1531				
+PD						ANBL17P1				
+PD						ANBL1821				
+PD						ANBL19P1				
+PD						ANUR0631				
+PD						ANUR1131				
+PD						AOST06B1				
+PD						APEC14B1				
+PD						APEC1621E				
+PD						APEC1621F				
+PD						APEC1621H				
+PD						APEC1621I				
+PD						APEC1621SC				
+PD						AREN0321				
+PD						AREN03B2				
+PD						AS942				
+PD						AS972				
+PD						AS9801				
+PD						B003				
+PD						B903				
+PD						B904				
+PD						B925				
+PD						B947				
+PD						B953				
+PD						B954				
+PD						B973				
+PD						D9501				
+PD						D9602				
+PD						E04				
+PD						E15				
+PD						E18				
+PD						ENSG5				
+PD						I03				
+PD						LNESG1				
+PD						N891				
+PD						NB2004-HR				
+PD						NB2005				
+PD						NB2008				
+PD						NB2012				
+PD						NB84				
+PD						NB8814				
+PD						NB91				
+PD						NB97				
+PD						P9462				
+PD						P9480				
+PD						P9485				
+PD						P9641				
+PD						P9749				
+PD						P9761				
+PD						P9772				
+PD						P9851				
+PD						P9963				
+PD						P9972				
+PD						PEPN2011				
+PD						PEPN2111				
+PD						POG-8844				
+PD						R9702				
+PD						S31				
+PD						S901				
+PD						S912				
+PD						S921				
+PD						SIOPEN HR-NBL1				
+PD						SIOPEN-EUNB				
+PD						X0942				
+VD	CENSOR_STATUS	Code	n/a	Censor Status		_undefined_	_undefined_	_undefined_		
+PD						Subject is censored (i.e. has had no events(s))				
+PD						Subject has had one or more events				
+PD						Unknown				
+PD						Not Reported				
+VD	AGE_AT_CENSOR_STATUS	Number	n/a	The subject's age (in days) at the time of censor status recording.		_undefined_	_undefined_	_undefined_		
+VD	TREATMENT_ARM	Code	n/a	Assigned Treatment Arm by Intention-To-Treat		_undefined_	_undefined_	_undefined_		
+PD						Arm A				
+PD						Arm B				
+PD						Arm C				
+PD						Arm D				
+PD						Arm E				
+PD						Regimen A				
+PD						Regimen B				
+PD						Assigned to Regimen B				
+PD						Randomized to Regimen B				
+PD						Baseline Treatment with 2 cycles				
+PD						Baseline Treatment with 4 cycles				
+PD						Baseline Treatment with 8 cycles				
+PD						Randomized conventional chemotherapy				
+PD						Non-randomized conventional chemotherapy				
+PD						Randomized to Single HSCT				
+PD						Non-randomly assigned Single HSCT				
+PD						Randomized to Tandem HSCT				
+PD						Randomized ablative chemotherapy with BMT				
+PD						Not Randomized				
+PD						R0				
+PD						R1				
+PD						R2				
+PD						R3				
+PD						cisRA				
+PD						No cisRA				
+PD						RA only				
+PD						RA+anti-GD2				
+PD						Purged				
+PD						Unpurged				
+										
+										
+DD	Protocol									
+TD	Disease Phase Timing									
+TG	One row per subject per disease phase									
+VD	DISEASE_PHASE	Code	n/a	Disease Phase		_undefined_	_undefined_	_undefined_	Disease phase could be "Initial Diagnosis" phase, or a "Relapse" phase, etc...	
+PD						Initial Diagnosis				
+PD						Relapse				
+PD						Progression				
+VD	DISEASE_PHASE_NUMBER	Number	n/a	Disease Phase Number		_undefined_	_undefined_	_undefined_	Ordinal number of the disease phase, grouped within subcategory. I.e. number Relapse 1, 2, 3, 4, etc... and Progression 1, 2, 3, 4, etc...	
+VD	AGE_AT_DISEASE_PHASE	Number	n/a	Age in Days at Disease Phase		_undefined_	_undefined_	_undefined_	Disease phase could be the "Initial Diagnosis" phase, or a "Relapse" phase, etc...	
+VD	YEAR_AT_DISEASE_PHASE	Number	n/a	Year at Disease Phase		_undefined_	_undefined_	_undefined_	Disease phase could be the "Initial Diagnosis" phase, or a "Relapse" phase, etc...	
+										
+										
+DD	Demographics									
+TD	Demographics									
+TG	One row per subject									
+VD	SEX	Code	n/a	Biological Sex		_undefined_	_undefined_	_undefined_		
+PD						Male				
+PD						Female				
+PD						Unknown				
+PD						Not Reported				
+VD	RACE	Code	n/a	Race		_undefined_	_undefined_	_undefined_		
+PD						American Indian or Alaska Native				
+PD						Asian				
+PD						Black or African American				
+PD						Multiracial				
+PD						Native Hawaiian or Other Pacific Islander				
+PD						White				
+PD						Unknown				
+PD						Not Reported				
+VD	ETHNICITY	Code	n/a	Ethnicity		_undefined_	_undefined_	_undefined_		
+PD						Hispanic or Latino				
+PD						Not Hispanic or Latino				
+PD						Unknown				
+PD						Not Reported				
+										
+										
+DD	Demographics									
+TD	Survival Characteristics									
+TG	One row per subject per cause of death, per treatment type, per cause of death detail									
+VD	AGE_AT_LKSS	Number	n/a	Age in Days at Last Known Survival Status		_undefined_	_undefined_	_undefined_		
+VD	DISEASE_PHASE	Code	n/a	Disease Phase		_undefined_	_undefined_	_undefined_	Only fill in Disease phase, Disease phase number, Course, and Course number if "AGE_" not known | Disease phase could be "Initial Diagnosis" phase, or a "Relapse" phase, etc...	
+PD						Initial Diagnosis				
+PD						Relapse				
+PD						Progression				
+VD	DISEASE_PHASE_NUMBER	Number	n/a	Disease Phase Number		_undefined_	_undefined_	_undefined_	Only fill in Disease phase, Disease phase number, Course, and Course number if "AGE_" not known | Ordinal number of the disease phase, grouped within subcategory. I.e. number Relapse 1, 2, 3, 4, etc... and Progression 1, 2, 3, 4, etc...	
+VD	LKSS	Code	n/a	Last Known Survival Status		_undefined_	_undefined_	_undefined_		
+PD						Alive				
+PD						Dead				
+VD	CAUSE_OF_DEATH	Code	n/a	Cause of Death		_undefined_	_undefined_	_undefined_		
+PD						Disease Progression				
+PD						Treatment-Related Mortality				
+PD						Other				
+										
+										
+DD	Disease Attributes									
+TD	Disease Characteristics									
+TG	One row per subject per disease characteristic									
+VD	DISEASE_PHASE	Code	n/a	Disease Phase		_undefined_	_undefined_	_undefined_		
+PD						Initial Diagnosis				
+PD						Relapse				
+PD						Progression				
+VD	DISEASE_PHASE_NUMBER	Number	n/a	Disease Phase Number		_undefined_	_undefined_	_undefined_		
+VD	INITIAL_TREATMENT_CATEGORY	Code	n/a	The category of initial treatment that the patient receive for their disease.		_undefined_	_undefined_	_undefined_		
+PD						None (observation)				
+PD						Surgery alone				
+PD						Conventional-dose chemotherapy (2-8 cycles) plus surgery				
+PD						Intensive multi-modality therapy: specific type unknown				
+PD						Intensive multi-modality therapy: no stem cell or bone marrow transplant				
+PD						Intensive multi-modality therapy: plus stem cell or bone marrow transplant				
+PD						Intensive multi-modality therapy: plus stem cell or bone marrow transplant and anti-GD2 antibody				
+PD						Unknown				
+VD	MKI	Code	n/a	MKI (Revised INPC)		_undefined_	_undefined_	_undefined_		
+PD						Low (<2% or <100/5,000 cells)				
+PD						Intermediate (2-4% or 100 to <200/5,000 cells)				
+PD						High (>4% or >200/5,000 cells)				
+PD						Unknown				
+PD						Not Reported				
+										
+										
+DD	Disease Attributes									
+TD	Tumor Assessment									
+TG	One row per subject per tumor assessment per tumor site									
+VD	AGE_AT_TUMOR_ASSESSMENT	Number	n/a	Age in Days at Tumor Assessment		_undefined_	_undefined_	_undefined_		
+VD	DISEASE_PHASE	Code	n/a	Disease Phase		_undefined_	_undefined_	_undefined_		
+PD						Initial Diagnosis				
+PD						Relapse				
+PD						Progression				
+VD	DISEASE_PHASE_NUMBER	Number	n/a	Disease Phase Number		_undefined_	_undefined_	_undefined_		
+VD	TUMOR_STATE	Code	n/a	A condition or state of a tumor at a particular time and a particular tumor site.		_undefined_	_undefined_	_undefined_		
+PD						Present				
+PD						Absent				
+PD						Unknown				
+VD	TUMOR_CLASSIFICATION	Code	n/a	Tumor Classification		_undefined_	_undefined_	_undefined_		
+PD						Primary				
+PD						Metastatic				
+PD						Unknown				
+PD						Not Reported				
+VD	TUMOR_SITE	Code	n/a	Tumor Site		_undefined_	_undefined_	_undefined_	If there were multiple primary sites, include one observation per primary site.	
+PD						Central Nervous System				
+PD						Distant Lymph Nodes				
+PD						Liver				
+PD						Lung				
+PD						Adrenal Gland				
+PD						Abdomen				
+PD						Neck				
+PD						Thorax				
+PD						Pelvis				
+PD						Bone Marrow				
+PD						Bone				
+PD						Skin				
+VD	TUMOR_SITE_OTHER	String	n/a	Tumor Site Other		_undefined_	_undefined_	_undefined_		
+										
+										
+DD	Disease Attributes									
+TD	Staging									
+TG	One row per subject per staging assessment									
+VD	AGE_AT_STAGING	Number	n/a	Age in Days of Staging Assessment		_undefined_	_undefined_	_undefined_		
+VD	DISEASE_PHASE	Code	n/a	Disease Phase		_undefined_	_undefined_	_undefined_		
+PD						Initial Diagnosis				
+PD						Relapse				
+PD						Progression				
+VD	DISEASE_PHASE_NUMBER	Number	n/a	Disease Phase Number		_undefined_	_undefined_	_undefined_		
+VD	STAGE	Code	n/a	Stage		_undefined_	_undefined_	_undefined_	Tied to stage system.	
+PD						INSS, Stage 1	A relatively early stage of cancer that is usually small and contained within the organ it started in, and hasn't spread to other parts of the body			
+PD						INSS, Stage 2a				
+PD						INSS, Stage 2b				
+PD						INSS, Stage 3				
+PD						INSS, Stage 4				
+PD						INSS, Stage 4s				
+PD						EVANS, Stage I	Invasive cancer confined to the original anatomic site of growth without lymph node involvement.	C27966		
+PD						EVANS, Stage II	Invasive cancer more extensive than stage I, usually involving local lymph nodes without spread to distant anatomic sites.	C28054		
+PD						EVANS, Stage III	Locally advanced cancer that has spread to nearby organs but not to distant anatomic sites.	C27970		
+PD						EVANS, Stage IV	Cancer that has spread to distant anatomic sites beyond its original site of growth.	C27971		
+PD						EVANS, Stage IVs				
+PD						INRGSS, Stage L1				
+PD						INRGSS, Stage L2				
+PD						INRGSS, Stage M				
+PD						INRGSS, Stage MS				
+PD						Unknown				
+PD						Not Reported				
+										
+										
+DD	Disease Attributes									
+TD	Histology									
+TG	One row per subject per histologic assessment									
+VD	AGE_AT_HIST_ASSESSMENT	Number	n/a	Age in Days of Histology Assessment		_undefined_	_undefined_	_undefined_		
+VD	DISEASE_PHASE	Code	n/a	Disease Phase		_undefined_	_undefined_	_undefined_	Only fill in Disease phase, Disease phase number, Course, and Course number if "AGE_" not known | Disease phase could be "Initial Diagnosis" phase, or a "Relapse" phase, etc...	
+PD						Initial Diagnosis				
+PD						Relapse				
+PD						Progression				
+VD	DISEASE_PHASE_NUMBER	Number	n/a	Disease Phase Number		_undefined_	_undefined_	_undefined_	Only fill in Disease phase, Disease phase number, Course, and Course number if "AGE_" not known | Ordinal number of the disease phase, grouped within subcategory. I.e. number Relapse 1, 2, 3, 4, etc... and Progression 1, 2, 3, 4, etc...	
+VD	HISTOLOGY	Code	n/a	Histology		_undefined_	_undefined_	_undefined_	If multiple histological findings, include one observation per histological finding.	
+PD						Neuroblastoma (Schwannian Stroma-Poor)				
+PD						Ganglioneuroblastoma, Intermixed (Schwannian Stroma-Rich)				
+PD						Ganglioneuroma (Schwannian Stroma-Dominant), Maturing Subtype				
+PD						Ganglioneuroblastoma, Nodular (Composite)				
+VD	HISTOLOGY_GRADE	Code	n/a	Histology Grade		_undefined_	_undefined_	_undefined_		
+PD						Undifferentiated or Poorly Differentiated				
+PD						Differentiating				
+PD						Unknown				
+PD						Not Reported				
+VD	HISTOLOGY_INPC	Code	n/a	Revised INPC Prognostic Group (2003)		_undefined_	_undefined_	_undefined_		
+PD						Favorable				
+PD						Unfavorable				
+PD						Unknown				
+PD						Not Reported				
+										
+										
+DD	Testing									
+TD	Molecular Analysis									
+TG	One row per subject per molecular analysis method per molecular abnormality									
+VD	AGE_AT_MOLECULAR_ANALYSIS	Number	n/a	Age in Days at Molecular Analysis		_undefined_	_undefined_	_undefined_		
+VD	DISEASE_PHASE	Code	n/a	Disease Phase		_undefined_	_undefined_	_undefined_	Only fill in Disease phase, Disease phase number, Course, and Course number if "AGE_" not known | Disease phase could be "Initial Diagnosis" phase, or a "Relapse" phase, etc...	
+PD						Initial Diagnosis				
+PD						Relapse				
+PD						Progression				
+VD	DISEASE_PHASE_NUMBER	Number	n/a	Disease Phase Number		_undefined_	_undefined_	_undefined_	Only fill in Disease phase, Disease phase number, Course, and Course number if "AGE_" not known | Ordinal number of the disease phase, grouped within subcategory. I.e. number Relapse 1, 2, 3, 4, etc... and Progression 1, 2, 3, 4, etc...	
+VD	DNA_INDEX	Code	n/a	DNA Index (categorical)		_undefined_	_undefined_	_undefined_	If multiple statuses apply, include one observation per status.	
+PD						DNA Index </= 1 (Hypodiploid, Diploid)				
+PD						DNA Index >1 (Hyperdiploid)				
+PD						Unknown				
+PD						Not Reported				
+VD	DNA_INDEX_NUMERIC	Number	n/a	DNA Index (numeric)		_undefined_	_undefined_	_undefined_		
+VD	MOLECULAR_ABNORMALITY	Code	n/a	Molecular Abnormality		_undefined_	_undefined_	_undefined_	If multiple molecular abnormalities, include one observation per molecular abnormality.	
+PD						Loss of Chromosome 11q (Deletion)				
+PD						Loss of Chromosome 1p (Deletion)				
+PD						17q Gain				
+PD						ALK Mutation				
+PD						ALK Rearrangement				
+PD						ALK Copy Number Gain				New PD
+PD						ALK Copy Number Loss				New PD
+PD						ALK Amplification				New PD
+PD						p.F1174L				
+PD						p.R1275L				
+PD						MYCN Amplification				
+PD						Other				
+PD						Unknown				
+PD						Not Reported				
+VD	MOLECULAR_ABNORMALITY_RESULT	Code	n/a	Molecular Abnormality Result		_undefined_	_undefined_	_undefined_		
+PD						Negative				
+PD						Positive				
+PD						Unknown				
+VD	CHROMOSOME	String	n/a	Chromosome		_undefined_	_undefined_	_undefined_		
+VD	GENE1	String	n/a	Gene 1		_undefined_	_undefined_	_undefined_		
+VD	GENE2	String	n/a	Gene 2		_undefined_	_undefined_	_undefined_		
+VD	VARIANT_TYPE	Code	n/a	Variant Type		_undefined_	_undefined_	_undefined_		
+PD						Translocation				
+PD						Inversion				
+PD						Mutation				
+PD						Single Nucleotide Variant				
+PD						Copy Number Alteration				
+PD						Rearrangement				
+PD						Deletion				
+PD						Amplification				
+PD						Gain				
+PD						Other				
+PD						Unknown				
+PD						Not Reported				
+VD	COPY_NUMBER_STATUS	Code	n/a	Copy Number Status		_undefined_	_undefined_	_undefined_		New VD
+PD						Gain				New PD
+PD						Loss				New PD
+PD						Amplification				New PD
+PD						No gain/loss/amplification				New PD
+PD						Unknown				New PD
+VD	AA_MUTATION	String	n/a	Amino Acid Mutation (p.F1174L; p.R1275L)		_undefined_	_undefined_	_undefined_		
+VD	ALLELIC_RATIO	Number	n/a	Allelic Ratio		_undefined_	_undefined_	_undefined_	Only fill in this variable if the information is available.	
+										
+										
+DD	Testing									
+TD	Labs									
+TG	One row per subject per lab test									
+VD	AGE_AT_LAB	Number	n/a	Age in Days at Laboratory Test		_undefined_	_undefined_	_undefined_		
+VD	DISEASE_PHASE	Code	n/a	Disease Phase		_undefined_	_undefined_	_undefined_	Only fill in Disease phase, Disease phase number, Course, and Course number if "AGE_" not known | Disease phase could be "Initial Diagnosis" phase, or a "Relapse" phase, etc...	
+PD						Initial Diagnosis				
+PD						Relapse				
+PD						Progression				
+VD	DISEASE_PHASE_NUMBER	Number	n/a	Disease Phase Number		_undefined_	_undefined_	_undefined_		
+VD	LAB_TEST	Code	n/a	Laboratory Test		_undefined_	_undefined_	_undefined_		
+PD						LDH				
+PD						Ferritin				
+VD	LAB_RESULT_NUMERIC	Number	n/a	The numeric result of the lab test.		_undefined_	_undefined_	_undefined_		
+										
+										
+DD	Events									
+TD	Secondary Malignant Neoplasm									
+TG	One row per subject per secondary malignancy									
+VD	AGE_AT_SMN	Number	n/a	Age in Days at Secondary Malignant Neoplasm		_undefined_	_undefined_	_undefined_		
+VD	DISEASE_PHASE	Code	n/a	Disease Phase		_undefined_	_undefined_	_undefined_		
+PD						Initial Diagnosis	The first diagnosis of the individual's condition.	C156813		
+PD						Relapse	The return of a disease after a period of remission.	C38155		
+PD						Progression				
+VD	DISEASE_PHASE_NUMBER	Number	n/a	Disease Phase Number		_undefined_	_undefined_	_undefined_		
+VD	SMN	Code	n/a	Secondary Malignancy		_undefined_	_undefined_	_undefined_		
+PD						No				
+PD						Yes				
+PD						Unknown				
+PD						Not Reported				
+VD	SMN_MORPH_SNO	String	n/a	SMN Morphology SNOMED Code		_undefined_	_undefined_	_undefined_		
+VD	SMN_MORPH_ICDO	String	n/a	SMN Morphology ICD-O Code		_undefined_	_undefined_	_undefined_		
+VD	SNM_MORPH_TXT	String	n/a	SMN Morphology Text		_undefined_	_undefined_	_undefined_		
+VD	SMN_TOP_SNO	String	n/a	SMN Topography SNOMED Code		_undefined_	_undefined_	_undefined_		
+VD	SMN_TOP_ICDO	String	n/a	SMN Topography ICD-O Code		_undefined_	_undefined_	_undefined_		
+VD	SMN_TOP_TXT	String	n/a	SMN Topography Text		_undefined_	_undefined_	_undefined_		
