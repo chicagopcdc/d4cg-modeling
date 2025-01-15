@@ -1,19 +1,19 @@
 {
     "meta": {
-        "name": "aml_v1.5",
-        "timestamp": "20241113",
+        "name": "aml_v1.7",
+        "timestamp": "20250114",
         "sheet_id": "1_KyfeZNsepIxSU0Nzw5Mi8mk1PiKCWlSBjatw0AECQ0"
     },
     "info": {
         "title": "Acute Myeloid Leukemia (AML) Data Dictionary",
-        "name": "aml_v1.5",
-        "release_notes": "https://github.com/chicagopcdc/d4cg-modeling/tree/main/pcdc/aml/aml_v1.5",
+        "name": "aml_v1.7",
+        "release_notes": "https://github.com/chicagopcdc/d4cg-modeling/tree/main/pcdc/data-dictionaries/aml/aml_v1.7",
         "parent_data_model": "pcdc_v1.8",
         "license": "Creative Commons Attribution-NonCommercial 4.0 International License (https://creativecommons.org/licenses/by-nc/4.0/)",
         "wiki": "https://docs.pedscommons.org/",
         "consortium_info": "https://commons.cri.uchicago.edu/pcdc/",
         "description": "The AML data dictionary is a consensus data schema built by an international group of pediatric acute myeloid leukemia experts and maintained by Data for the Common Good (D4CG) at the University of Chicago in collaboration with the International Acute Myeloid Leukemia Consortium (INTERACT). It is based on the collective requirements of its contributors.",
-        "total": "219"
+        "total": 219
     },
     "domains": {
         "protocol": {
@@ -129,6 +129,14 @@
                             ],
                             "implementation_notes": [],
                             "mappings": []
+                        },
+                        "GPLP": {
+                            "description": "Grupo Portugu\u00eas de Leuc\u00e9mias Pedi\u00e1tricas",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
                         }
                     }
                 },
@@ -146,73 +154,55 @@
                             "description": "",
                             "codes": [],
                             "implementation_notes": [],
-                            "mappings": [
-                                "New PD"
-                            ]
+                            "mappings": []
                         },
                         "AML-BFM87/93": {
                             "description": "",
                             "codes": [],
                             "implementation_notes": [],
-                            "mappings": [
-                                "New PD"
-                            ]
+                            "mappings": []
                         },
                         "AML-BFM93": {
                             "description": "",
                             "codes": [],
                             "implementation_notes": [],
-                            "mappings": [
-                                "New PD"
-                            ]
+                            "mappings": []
                         },
                         "AML-BFM98": {
                             "description": "",
                             "codes": [],
                             "implementation_notes": [],
-                            "mappings": [
-                                "New PD"
-                            ]
+                            "mappings": []
                         },
                         "ML-DS-2006": {
                             "description": "",
                             "codes": [],
                             "implementation_notes": [],
-                            "mappings": [
-                                "New PD"
-                            ]
+                            "mappings": []
                         },
                         "AML-BFM2004 Interim": {
                             "description": "",
                             "codes": [],
                             "implementation_notes": [],
-                            "mappings": [
-                                "[aml_v1.4].[Subject Characteristics].[STUDY_ID].[AMLBFM2004 Interim]  skos:exactMatch [aml_v1.5].[Subject Characteristics].[STUDY_ID].[AML-BFM2004 Interim]"
-                            ]
+                            "mappings": []
                         },
                         "AML-BFM2019": {
                             "description": "",
                             "codes": [],
                             "implementation_notes": [],
-                            "mappings": [
-                                "[aml_v1.4].[Subject Characteristics].[STUDY_ID].[AMLBFM2019]  skos:exactMatch [aml_v1.5].[Subject Characteristics].[STUDY_ID].[AML-BFM2019]"
-                            ]
+                            "mappings": []
                         },
                         "AML-BFM2020": {
                             "description": "",
                             "codes": [],
                             "implementation_notes": [],
-                            "mappings": [
-                                "[aml_v1.4].[Subject Characteristics].[STUDY_ID].[AMLBFM2020]  skos:exactMatch [aml_v1.5].[Subject Characteristics].[STUDY_ID].[AML-BFM2020]"
-                            ]
+                            "mappings": []
                         },
                         "AML-BFM98 Interim 2003": {
                             "description": "",
                             "codes": [],
                             "implementation_notes": [],
-                            "mappings": [
-                                "[aml_v1.4].[Subject Characteristics].[STUDY_ID].[AMLBFM98 Interim 2003]  skos:exactMatch [aml_v1.5].[Subject Characteristics].[STUDY_ID].[AML-BFM98 Interim 2003]"
-                            ]
+                            "mappings": []
                         },
                         "APL": {
                             "description": "",
@@ -256,9 +246,7 @@
                                 "ncit:C168939"
                             ],
                             "implementation_notes": [],
-                            "mappings": [
-                                "[aml_v1.4].[Subject Characteristics].[STUDY_ID].[AMLBFM2004]  skos:exactMatch [aml_v1.5].[Subject Characteristics].[STUDY_ID].[AML-BFM2004]"
-                            ]
+                            "mappings": []
                         },
                         "AML-BFM2012": {
                             "description": "The identifier AMLBFM2012, assigned to a study in an AML clinical trial.",
@@ -266,9 +254,7 @@
                                 "ncit:C173250"
                             ],
                             "implementation_notes": [],
-                            "mappings": [
-                                "[aml_v1.4].[Subject Characteristics].[STUDY_ID].[AMLBFM2012]  skos:exactMatch [aml_v1.5].[Subject Characteristics].[STUDY_ID].[AML-BFM2012]"
-                            ]
+                            "mappings": []
                         },
                         "AML-BFM Registry2012": {
                             "description": "The identifier AMLBFMRegistry2012, assigned to a study in an AML clinical trial.",
@@ -276,9 +262,7 @@
                                 "ncit:C173251"
                             ],
                             "implementation_notes": [],
-                            "mappings": [
-                                "[aml_v1.4].[Subject Characteristics].[STUDY_ID].[AMLBFMRegistry2012]  skos:exactMatch [aml_v1.5].[Subject Characteristics].[STUDY_ID].[AML-BFM Registry2012]"
-                            ]
+                            "mappings": []
                         },
                         "AML-BFM1998": {
                             "description": "The identifier AMLBFM1998, assigned to a study in an AML clinical trial.",
@@ -286,9 +270,7 @@
                                 "ncit:C182032"
                             ],
                             "implementation_notes": [],
-                            "mappings": [
-                                "[aml_v1.4].[Subject Characteristics].[STUDY_ID].[AMLBFM1998]  skos:exactMatch [aml_v1.5].[Subject Characteristics].[STUDY_ID].[AML-BFM1998]"
-                            ]
+                            "mappings": []
                         },
                         "AML-BFM Registry2017": {
                             "description": "The identifier AMLBFMRegistry2017, assigned to a study in an AML clinical trial.",
@@ -296,9 +278,7 @@
                                 "ncit:C182031"
                             ],
                             "implementation_notes": [],
-                            "mappings": [
-                                "[aml_v1.4].[Subject Characteristics].[STUDY_ID].[AMLBFMRegistry2017]  skos:exactMatch [aml_v1.5].[Subject Characteristics].[STUDY_ID].[AML-BFM Registry2017]"
-                            ]
+                            "mappings": []
                         },
                         "SJCRHAML02": {
                             "description": "The identifier SJCRHAML02, assigned to a study in a clinical trial.",
@@ -3751,6 +3731,28 @@
                     ],
                     "mappings": [],
                     "permissible_values": {
+                        "RUNX1-RUNX1T1 Fusion": {
+                            "description": "A fusion gene (~4.3 kb) that results from a chromosomal translocation t(8;21)(q22;q22) which fuses the first 5 exons of the RUNX1 gene to exon 2 of the RUNX1T1 gene. This rearrangement is associated with acute myeloid leukemia.",
+                            "codes": [
+                                "ncit:C99294"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Trisomy 3": {
+                            "description": "A chromosomal abnormality consisting of the presence of a third copy of chromosome 3 in somatic cells.",
+                            "codes": [
+                                "ncit:C36425"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "t(v;q23,3); KMT2A": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
                         "Biallelic CEBPA Gene Mutation": {
                             "description": "The presence of mutations in both alleles of the CEBPA gene.",
                             "codes": [
@@ -3840,8 +3842,10 @@
                             "mappings": []
                         },
                         "ETV6-MN1 Fusion": {
-                            "description": "",
-                            "codes": [],
+                            "description": "A fusion gene that results from a chromosomal translocation t(12;22)(p13;q11-12) that fuses the 5' portion of the ETV6 gene to the 3' portion of the MN1 gene. This rearrangement is associated with both acute myeloid leukemia and refractory anemia with excess blasts.",
+                            "codes": [
+                                "ncit:C99678"
+                            ],
                             "implementation_notes": [],
                             "mappings": []
                         },
@@ -7711,6 +7715,18 @@
                             "codes": [
                                 "ncit:C36415"
                             ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "t(3;5)(q25;q34)NPM1/MLF2": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "t(3;5)(q25;q34)NPM1/MLF3": {
+                            "description": "",
+                            "codes": [],
                             "implementation_notes": [],
                             "mappings": []
                         },
