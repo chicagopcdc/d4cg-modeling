@@ -4,7 +4,7 @@ This version represents the data elements live in the data portal prior to "data
 
 |Consortium|Disease Group|Data Dictionary|
 |---|---|---|
-|ALL Consortium|ALL|all_v1.0, all_v1.1|
+| - |ALL|all_v1.0, all_v1.1|
 |INTERACT|AML|aml_v1.0, aml_v1.1, aml_v1.2, aml_v1.3, aml_v1.4, aml_v1.5, aml_v1.6, aml_v1.7|
 |HIBiSCus|EWS|ews_v1.0, ews_v1.1, ews_v1.2|
 |HIBiSCus|OS|os_v1.0, os_v1.1, os_v1.2|
