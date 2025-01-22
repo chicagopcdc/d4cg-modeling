@@ -1,5 +1,7 @@
 # Release notes for all_v2.0
 
+This version was used for the first round of a large backlog of modeling changes that affected several dictionaries—all tied to pcdc_v2.0.
+
 Added concepts:
 >[Subject Characteristics].[CONSORTIUM]
 
@@ -245,17 +247,3 @@ Modified Concepts:
 >[all_v1.1].[Secondary Malignant Neoplasm].[SMN_ICD_O_MORPH] skos:exactMatch [all_v2.0].[Subsequent Malignant Neoplasm].[MORPH_CODE]
 
 >[all_v1.1].[Secondary Malignant Neoplasm].[SMN_ICD_O_TOP] skos:exactMatch [all_v2.0].[Subsequent Malignant Neoplasm].[TOP_CODE]
-
->[all_v1.1].[] skos:exactMatch [all_v2.0].[]
-
->[all_v1.1].[] skos:exactMatch [all_v2.0].[]
-
->[all_v1.1].[] skos:exactMatch [all_v2.0].[]
-
->[all_v1.1].[] skos:exactMatch [all_v2.0].[]
-
->[all_v1.1].[] skos:exactMatch [all_v2.0].[]
-
->[all_v1.1].[] skos:exactMatch [all_v2.0].[]
-
->[all_v1.1].[] skos:exactMatch [all_v2.0].[]
