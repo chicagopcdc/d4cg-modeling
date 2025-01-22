@@ -1,6 +1,6 @@
 # Release notes for aml_v2.0
 
-This version was used for the first round of a large backlog of modeling changes that affected several dictionaries—aml tied to pcdc_v2.0.
+This version was used for the first round of a large backlog of modeling changes that affected several dictionaries—all tied to pcdc_v2.0.
 
 Added concepts:
 >[Subject Characteristics].[CONSORTIUM]
