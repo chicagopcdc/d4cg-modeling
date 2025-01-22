@@ -1,34 +1,22 @@
 {
     "meta": {
-        "name": "all_v1.1",
-        "timestamp": "20241113",
+        "name": "all_v2.0",
+        "timestamp": "20250122",
         "sheet_id": "1sTygI0GtyaT2C0iZ9YzXTKRnAcELuV2BblaLGPG0EPc"
     },
     "info": {
         "title": "Acute Lymphoblastic Leukemia (ALL) Data Dictionary",
-        "name": "all_v1.1",
-        "release_notes": "https://github.com/chicagopcdc/d4cg-modeling/tree/main/pcdc/all/all_v1.1",
-        "parent_data_model": "pcdc_v1.8",
+        "name": "all_v2.0",
+        "release_notes": "",
+        "parent_data_model": "pcdc_v2.0",
         "license": "Creative Commons Attribution-NonCommercial 4.0 International License (https://creativecommons.org/licenses/by-nc/4.0/)",
         "wiki": "https://docs.pedscommons.org/",
         "consortium_info": "https://commons.cri.uchicago.edu/pcdc/",
         "description": "The ALL data dictionary is a consensus data schema built by an international group of pediatric acute lymphoblastic leukemia experts and maintained by Data for the Common Good (D4CG) at the University of Chicago in collaboration with the Children's Oncology Group (COG). It is based on the collective requirements of its contributors",
-        "total": "120"
+        "total": 134
     },
     "domains": {
         "protocol": {
-            "subject_identifier": {
-                "PCDC_SUBJECT_ID": {
-                    "type": "String",
-                    "tier": "Mandatory",
-                    "description": "A unique subject id assigned by the PCDC. Any given individual person will have only one PCDC_SUBJECT_ID regardless of the number of studies in which they appear. If an individual person is on studies from more than one contributor, they may have more than one HONEST_BROKER_SUBJECT_IDs assigned to them by the contributors, but will be resulted to a single PCDC_SUBJECT_ID by PCDC staff.",
-                    "codes": [
-                        "ncit:C69256"
-                    ],
-                    "implementation_notes": [],
-                    "mappings": []
-                }
-            },
             "subject_characteristics": {
                 "HONEST_BROKER_SUBJECT_ID": {
                     "type": "String",
@@ -40,8 +28,39 @@
                     "implementation_notes": [],
                     "mappings": []
                 },
+                "CONSORTIUM": {
+                    "type": "Enum",
+                    "tier": "",
+                    "description": "The consortium under which this data is being contributed to the Pediatric Cancer Data Commons.",
+                    "codes": [
+                        "ncit:C61538"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ],
+                    "permissible_values": {}
+                },
+                "DISEASE_GROUP": {
+                    "type": "Enum",
+                    "tier": "",
+                    "description": "",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ],
+                    "permissible_values": {
+                        "ALL": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
                 "DATA_CONTRIBUTOR_ID": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "Mandatory",
                     "description": "An identifier assigned to a data contributor.",
                     "codes": [
@@ -61,7 +80,7 @@
                     }
                 },
                 "STUDY_ID": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "Mandatory",
                     "description": "A sequence of characters used to identify, name, or characterize the study.",
                     "codes": [
@@ -113,7 +132,7 @@
                     }
                 },
                 "AGE_AT_ENROLLMENT": {
-                    "type": "Number",
+                    "type": "Integer",
                     "tier": "Mandatory",
                     "description": "The age (in days) when the subject enrolled in the study.",
                     "codes": [
@@ -123,7 +142,7 @@
                     "mappings": []
                 },
                 "TREATMENT_ARM": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "Mandatory",
                     "description": "A specific treatment plan within a clinical trial that describes the activities a subject will be involved in as he or she progresses through the study.",
                     "codes": [
@@ -134,7 +153,7 @@
                     "permissible_values": {}
                 },
                 "ENROLLED_STATUS": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "Optional",
                     "description": "This variable indicates if the subject was enrolled in the study, or if the subject was not enrolled in the study but received treatment per the study's protocol.",
                     "codes": [
@@ -164,18 +183,84 @@
                     }
                 }
             },
-            "disease_phase_timing": {
+            "time_period": {
+                "HONEST_BROKER_SUBJECT_ID": {
+                    "type": "String",
+                    "tier": "",
+                    "description": "The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a \"re-identification code\"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.",
+                    "codes": [
+                        "ncit:C168949"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ]
+                },
+                "SUBMITTER_ID": {
+                    "type": "String",
+                    "tier": "",
+                    "description": "An ID provided by the data contributor that identifies a unique time period and that is referenced throughout subsequent tabels in the TIME_PERIOD_SUBMITTER_ID variables.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ]
+                },
+                "PARENT_SUBMITTER_ID": {
+                    "type": "String",
+                    "tier": "",
+                    "description": "The SUBMITTER_ID of the time period in whose context a subsequent time period takes place. For example, multiple treatment courses occuring the \"Initial Diagnosis\" period would each reference the SUBMITTER_ID of the \"Initial Diagnosis\" period as their PARENT_SUBMITTER_ID.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ]
+                },
+                "TIME_PERIOD_TYPE": {
+                    "type": "Enum",
+                    "tier": "",
+                    "description": "The type of time period being reported.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ],
+                    "permissible_values": {
+                        "Disease Phase": {
+                            "description": "The stage or period of an individual's disease.",
+                            "codes": [
+                                "ncit:C168878"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "Course": {
+                            "description": "The type of protocol treatment course administered with respect to Course Timing.",
+                            "codes": [
+                                "ncit:C187095"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        }
+                    }
+                },
                 "DISEASE_PHASE": {
-                    "type": "Code",
-                    "tier": "Mandatory",
-                    "description": "The stage or period of an individual's disease.",
+                    "type": "Enum",
+                    "tier": "",
+                    "description": "The phase of the cancer treatment process during which relevant observations were recorded. This variable is used across domains to frame the timing of these longitudinal observations and reduce the number of redundant variables needed to report similar concepts (see \"Disease Phase Timing and Course Table\" in the documentation for additional guidance).",
                     "codes": [
                         "ncit:C168878"
                     ],
                     "implementation_notes": [
-                        "Note: Disease phase could be \"Initial Diagnosis\" phase, a \"Relapse\" phase, or a \"Progression\" phase."
+                        "Note: Disease Phase could be \"Initial Diagnosis\" phase, or a \"Relapse\" phase, etc..."
                     ],
-                    "mappings": [],
+                    "mappings": [
+                        "[all_v1.1].[Disease Phase Timing].[DISEASE_PHASE] skos:exactMatch [all_v2.0].[Time Period].[DISEASE_PHASE]"
+                    ],
                     "permissible_values": {
                         "Initial Diagnosis": {
                             "description": "The first diagnosis of the individual's condition.",
@@ -203,72 +288,18 @@
                         }
                     }
                 },
-                "DISEASE_PHASE_NUMBER": {
-                    "type": "Number",
-                    "tier": "Mandatory",
-                    "description": "The number of the disease phase.",
-                    "codes": [
-                        "ncit:C173258"
-                    ],
-                    "implementation_notes": [],
-                    "mappings": []
-                },
-                "AGE_AT_DISEASE_PHASE": {
-                    "type": "Number",
-                    "tier": "Mandatory",
-                    "description": "Age in days when the diagnosis was made for the disease phase.",
-                    "codes": [
-                        "ncit:C168972"
-                    ],
-                    "implementation_notes": [],
-                    "mappings": []
-                },
-                "YEAR_AT_DISEASE_PHASE": {
-                    "type": "Number",
-                    "tier": "Mandatory",
-                    "description": "Year when the diagnosis was made for the disease phase.",
-                    "codes": [
-                        "ncit:C168823"
-                    ],
-                    "implementation_notes": [],
-                    "mappings": []
-                }
-            },
-            "course_timing": {
                 "COURSE": {
-                    "type": "Code",
-                    "tier": "Mandatory",
-                    "description": "The type of protocol treatment course administered.",
+                    "type": "Enum",
+                    "tier": "",
+                    "description": "The protocol treatment \"course\" during which relevant observations were recorded. This variable is used across domains to frame the timing of these longitudinal observations and reduce the number of redundant variables needed to report similar concepts (see \"Disease Phase Timing and Course Table\" in the documentation for additional guidance).",
                     "codes": [
                         "ncit:C168807"
                     ],
                     "implementation_notes": [],
-                    "mappings": [],
+                    "mappings": [
+                        "[all_v1.1].[Course Timing].[COURSE] skos:exactMatch [all_v2.0].[Time Period].[COURSE]"
+                    ],
                     "permissible_values": {
-                        "Prephase": {
-                            "description": "A chemotherapy treatment administered prior to the definitive chemotherapy treatment.",
-                            "codes": [
-                                "ncit:C168826"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Induction": {
-                            "description": "The first choice of treatment for a particular type of cancer.",
-                            "codes": [
-                                "ncit:C158876"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Intensification": {
-                            "description": "A second round of intense chemotherapy as part of consolidation therapy.",
-                            "codes": [
-                                "ncit:C173105"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
                         "Consolidation": {
                             "description": "Treatment that is given after initial therapy to kill any remaining cancer cells.",
                             "codes": [
@@ -277,38 +308,6 @@
                             "implementation_notes": [],
                             "mappings": []
                         },
-                        "Stem Cell Transplant Conditioning": {
-                            "description": "A regimen that can be used as a conditioning regimen for hematopoietic stem cell transplantation (HSCT).",
-                            "codes": [
-                                "ncit:C168794"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Maintenance": {
-                            "description": "Continuation of treatment for an extended period of time to prevent relapse.",
-                            "codes": [
-                                "ncit:C15688"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Interim Maintenance": {
-                            "description": "A less intense phase of chemotherapy in between each course of delayed intensification.",
-                            "codes": [
-                                "ncit:C178069"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Delayed Intensification": {
-                            "description": "A repeat of the first two months of induction and consolidation chemotherapy in high-risk and very-high-risk ALL protocols with the goal of eliminating residual drug-resistant cells",
-                            "codes": [
-                                "ncit:C178270"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
                         "Continuation": {
                             "description": "A period in a clinical study during which subjects receive continuation therapy. This therapy is usually different from the therapy given during the induction phase and administered over a longer period of time.",
                             "codes": [
@@ -317,118 +316,10 @@
                             "implementation_notes": [],
                             "mappings": []
                         },
-                        "Investigational Agent": {
-                            "description": "A new drug or biological drug that is used in a clinical investigation. The term also includes a biological product that is used in vitro for diagnostic purposes.",
+                        "Delayed Intensification": {
+                            "description": "A repeat of the first two months of induction and consolidation chemotherapy in high-risk and very-high-risk ALL protocols with the goal of eliminating residual drug-resistant cells",
                             "codes": [
-                                "ncit:C49135"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        }
-                    }
-                },
-                "COURSE_NUMBER": {
-                    "type": "Number",
-                    "tier": "Mandatory",
-                    "description": "The number assigned to a course of therapeutic agent administration, indicating where a particular course of treatment falls within a sequence of treatments.",
-                    "codes": [
-                        "ncit:C166235"
-                    ],
-                    "implementation_notes": [],
-                    "mappings": []
-                },
-                "AGE_AT_COURSE_START": {
-                    "type": "Number",
-                    "tier": "Mandatory",
-                    "description": "Age of subject (in days) at the start of the course.",
-                    "codes": [
-                        "ncit:C168850"
-                    ],
-                    "implementation_notes": [],
-                    "mappings": []
-                },
-                "AGE_AT_COURSE_END": {
-                    "type": "Number",
-                    "tier": "Mandatory",
-                    "description": "Age of subject (in days) at the end of the course.",
-                    "codes": [
-                        "ncit:C168851"
-                    ],
-                    "implementation_notes": [],
-                    "mappings": []
-                }
-            },
-            "off_protocol_therapy/study": {
-                "AGE_OFF": {
-                    "type": "Number",
-                    "tier": "Mandatory",
-                    "description": "Age in Days When Off Protocol Therapy or Study",
-                    "codes": [],
-                    "implementation_notes": [],
-                    "mappings": []
-                },
-                "DISEASE_PHASE": {
-                    "type": "Code",
-                    "tier": "Mandatory",
-                    "description": "The stage or period of an individual's disease.",
-                    "codes": [
-                        "ncit:C168878"
-                    ],
-                    "implementation_notes": [
-                        "Note: Disease phase could be \"Initial Diagnosis\" phase, a \"Relapse\" phase, or a \"Progression\" phase."
-                    ],
-                    "mappings": [],
-                    "permissible_values": {
-                        "Initial Diagnosis": {
-                            "description": "The first diagnosis of the individual's condition.",
-                            "codes": [
-                                "ncit:C156813"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Relapse": {
-                            "description": "The return of a disease after a period of remission.",
-                            "codes": [
-                                "ncit:C38155"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Refractory": {
-                            "description": "Not responding to treatment.",
-                            "codes": [
-                                "ncit:C38014"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        }
-                    }
-                },
-                "DISEASE_PHASE_NUMBER": {
-                    "type": "Number",
-                    "tier": "Mandatory",
-                    "description": "The number of the disease phase.",
-                    "codes": [
-                        "ncit:C173258"
-                    ],
-                    "implementation_notes": [],
-                    "mappings": []
-                },
-                "COURSE": {
-                    "type": "Code",
-                    "tier": "Mandatory",
-                    "description": "The type of protocol treatment course administered.",
-                    "codes": [
-                        "ncit:C168807"
-                    ],
-                    "implementation_notes": [],
-                    "mappings": [],
-                    "permissible_values": {
-                        "Prephase": {
-                            "description": "A chemotherapy treatment administered prior to the definitive chemotherapy treatment.",
-                            "codes": [
-                                "ncit:C168826"
+                                "ncit:C178270"
                             ],
                             "implementation_notes": [],
                             "mappings": []
@@ -449,18 +340,18 @@
                             "implementation_notes": [],
                             "mappings": []
                         },
-                        "Consolidation": {
-                            "description": "Treatment that is given after initial therapy to kill any remaining cancer cells.",
+                        "Interim Maintenance": {
+                            "description": "A less intense phase of chemotherapy in between each course of delayed intensification.",
                             "codes": [
-                                "ncit:C158876"
+                                "ncit:C178069"
                             ],
                             "implementation_notes": [],
                             "mappings": []
                         },
-                        "Stem Cell Transplant Conditioning": {
-                            "description": "A regimen that can be used as a conditioning regimen for hematopoietic stem cell transplantation (HSCT).",
+                        "Investigational Agent": {
+                            "description": "A new drug or biological drug that is used in a clinical investigation. The term also includes a biological product that is used in vitro for diagnostic purposes.",
                             "codes": [
-                                "ncit:C168794"
+                                "ncit:C49135"
                             ],
                             "implementation_notes": [],
                             "mappings": []
@@ -473,52 +364,100 @@
                             "implementation_notes": [],
                             "mappings": []
                         },
-                        "Interim Maintenance": {
-                            "description": "A less intense phase of chemotherapy in between each course of delayed intensification.",
+                        "Prephase": {
+                            "description": "A chemotherapy treatment administered prior to the definitive chemotherapy treatment.",
                             "codes": [
-                                "ncit:C178069"
+                                "ncit:C168826"
                             ],
                             "implementation_notes": [],
                             "mappings": []
                         },
-                        "Delayed Intensification": {
-                            "description": "A repeat of the first two months of induction and consolidation chemotherapy in high-risk and very-high-risk ALL protocols with the goal of eliminating residual drug-resistant cells",
+                        "Stem Cell Transplant Conditioning": {
+                            "description": "A regimen that can be used as a conditioning regimen for hematopoietic stem cell transplantation (HSCT).",
                             "codes": [
-                                "ncit:C178270"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Continuation": {
-                            "description": "A period in a clinical study during which subjects receive continuation therapy. This therapy is usually different from the therapy given during the induction phase and administered over a longer period of time.",
-                            "codes": [
-                                "ncit:C123452"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Investigational Agent": {
-                            "description": "A new drug or biological drug that is used in a clinical investigation. The term also includes a biological product that is used in vitro for diagnostic purposes.",
-                            "codes": [
-                                "ncit:C49135"
+                                "ncit:C168794"
                             ],
                             "implementation_notes": [],
                             "mappings": []
                         }
                     }
                 },
-                "COURSE_NUMBER": {
-                    "type": "Number",
-                    "tier": "Mandatory",
-                    "description": "The number assigned to a course of therapeutic agent administration, indicating where a particular course of treatment falls within a sequence of treatments.",
+                "TIME_PERIOD_NUMBER": {
+                    "type": "Integer",
+                    "tier": "",
+                    "description": "This variable indicates the ordinal numbering of time periods of the same TIME_PERIOD_TYPE within its various subgroups (e.g., Relapse 1, Relapse 2, Relapse 3, etc.). The observations across domains can therefore be organized longitudinally without the need for specific dates.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "[all_v1.1].[Disease Phase Timing].[DISEASE_PHASE_NUMBER] skos:exactMatch [all_v2.0].[Time Period].[TIME_PERIOD_NUMBER] ",
+                        " [all_v1.1].[Course Timing].[COURSE_NUMBER] skos:exactMatch [all_v2.0].[Time Period].[TIME_PERIOD_NUMBER]"
+                    ]
+                },
+                "YEAR_AT_START": {
+                    "type": "Integer",
+                    "tier": "",
+                    "description": "The year at the start of the indicated time period.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "[all_v1.1].[Disease Phase Timing].[YEAR_AT_DISEASE_PHASE] skos:exactMatch [all_v2.0].[Time Period].[YEAR_AT_START]"
+                    ]
+                },
+                "AGE_AT_START": {
+                    "type": "Integer",
+                    "tier": "",
+                    "description": "The age (in days) of the patient at the start of the reported time period.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "[all_v1.1].[Disease Phase Timing].[AGE_AT_DISEASE_PHASE] skos:exactMatch [all_v2.0].[Time Period].[AGE_AT_START] ",
+                        " [all_v1.1].[Course Timing].[AGE_AT_COURSE_START] skos:exactMatch [all_v2.0].[Time Period].[AGE_AT_START]"
+                    ]
+                },
+                "AGE_AT_END": {
+                    "type": "Integer",
+                    "tier": "",
+                    "description": "The age (in days) of the patient at the end of the reported time period.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "[all_v1.1].[Course Timing].[AGE_AT_COURSE_END] skos:exactMatch [all_v2.0].[Time Period].[AGE_AT_END]"
+                    ]
+                }
+            },
+            "off_protocol_therapy_or_study": {
+                "HONEST_BROKER_SUBJECT_ID": {
+                    "type": "String",
+                    "tier": "",
+                    "description": "The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a \"re-identification code\"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.",
                     "codes": [
-                        "ncit:C166235"
+                        "ncit:C168949"
                     ],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ]
+                },
+                "AGE_OFF": {
+                    "type": "Integer",
+                    "tier": "Mandatory",
+                    "description": "Age in Days When Off Protocol Therapy or Study",
+                    "codes": [],
                     "implementation_notes": [],
                     "mappings": []
                 },
+                "TIME_PERIOD_SUBMITTER_ID": {
+                    "type": "String",
+                    "tier": "2 - contributors should prioritize inclusion if resources are available",
+                    "description": "This is the SUBMITTER_ID of the time period (defined in the \"Time Period\" table) during which this observation takes place.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ]
+                },
                 "OFF_TYPE": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "Mandatory",
                     "description": "The code used to designate that the subject went off therapy or off the study.",
                     "codes": [
@@ -546,7 +485,7 @@
                     }
                 },
                 "REASON_OFF": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "Mandatory",
                     "description": "A coded value specifying why the subject is removed from a study.",
                     "codes": [
@@ -688,7 +627,7 @@
                     }
                 },
                 "ANOTHER_STUDY": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "Mandatory",
                     "description": "The subject was enrolled in another therapeutic study after the off protocol study.",
                     "codes": [
@@ -735,8 +674,20 @@
         },
         "demographics": {
             "demographics": {
+                "HONEST_BROKER_SUBJECT_ID": {
+                    "type": "String",
+                    "tier": "1 - contributors must include, regardless of the resource cost",
+                    "description": "The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a \"re-identification code\"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.",
+                    "codes": [
+                        "ncit:C168949"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ]
+                },
                 "SEX": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "Mandatory",
                     "description": "The assemblage of physical properties or qualities by which male is distinguished from female; the physical difference between male and female; the distinguishing peculiarity of male or female.",
                     "codes": [
@@ -780,7 +731,7 @@
                     }
                 },
                 "RACE": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "Mandatory",
                     "description": "An arbitrary classification of a taxonomic group that is a division of a species. It usually arises as a consequence of geographical isolation within a species and is characterized by shared heredity, physical attributes and behavior, and in the case of humans, by common history, nationality, or geographic distribution.",
                     "codes": [
@@ -864,7 +815,7 @@
                     }
                 },
                 "ETHNICITY": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "Mandatory",
                     "description": "A social group characterized by a distinctive social and cultural tradition that is maintained from generation to generation. Members share a common history and origin and a sense of identification with the group. They have similar and distinctive features in their lifestyle habits and shared experiences. They often have a common genetic heritage which may be reflected in their experience of health and disease.",
                     "codes": [
@@ -909,8 +860,20 @@
                 }
             },
             "medical_history": {
+                "HONEST_BROKER_SUBJECT_ID": {
+                    "type": "String",
+                    "tier": "Mandatory",
+                    "description": "The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a \"re-identification code\"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.",
+                    "codes": [
+                        "ncit:C168949"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ]
+                },
                 "MEDICAL_HISTORY": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "Mandatory",
                     "description": "Medical History",
                     "codes": [],
@@ -945,8 +908,20 @@
                 }
             },
             "survival_characteristics": {
+                "HONEST_BROKER_SUBJECT_ID": {
+                    "type": "String",
+                    "tier": "1 - contributors must include, regardless of the resource cost",
+                    "description": "The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a \"re-identification code\"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.",
+                    "codes": [
+                        "ncit:C168949"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ]
+                },
                 "AGE_AT_LKSS": {
-                    "type": "Number",
+                    "type": "Integer",
                     "tier": "Mandatory",
                     "description": "Age of subject (in days) at the last known survival status.",
                     "codes": [
@@ -956,7 +931,7 @@
                     "mappings": []
                 },
                 "LKSS": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "Mandatory",
                     "description": "The individual's last known survival status.",
                     "codes": [
@@ -992,7 +967,7 @@
                     }
                 },
                 "LKSS_WITH_DISEASE": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "Mandatory",
                     "description": "The last known survival status of the individual with the disease.",
                     "codes": [
@@ -1036,7 +1011,7 @@
                     }
                 },
                 "AGE_LOST_TO_FOLLOW_UP": {
-                    "type": "Number",
+                    "type": "Integer",
                     "tier": "Mandatory",
                     "description": "Age of subject (in days) when the subject was lost to follow-up.",
                     "codes": [
@@ -1046,7 +1021,7 @@
                     "mappings": []
                 },
                 "CAUSE_OF_DEATH": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "Mandatory",
                     "description": "The circumstance or condition that results in the death of a living being.",
                     "codes": [
@@ -1108,7 +1083,7 @@
                     }
                 },
                 "TRM_TYPE": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "Mandatory",
                     "description": "The type of treatment related to the mortality of the subject.",
                     "codes": [
@@ -1154,7 +1129,7 @@
                     }
                 },
                 "CAUSE_OF_DEATH_DETAIL": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "Optional",
                     "description": "Specific details of the cause of death.",
                     "codes": [
@@ -1197,13 +1172,15 @@
                             "implementation_notes": [],
                             "mappings": []
                         },
-                        "Infection": {
+                        "Infection, NOS": {
                             "description": "The invasion of an organism's body tissues by disease-causing agents and their multiplication, as well as the reaction by the host to these organisms and/or toxins that the organisms produce.",
                             "codes": [
                                 "ncit:C128320"
                             ],
                             "implementation_notes": [],
-                            "mappings": []
+                            "mappings": [
+                                "[all_v1.1].[Survival Characteristics].[CAUSE_OF_DEATH_DETAIL].[Infection] skos:exactMatch [all_v2.0].[Survival Characteristics].[CAUSE_OF_DEATH_DETAIL].[Infection, NOS]"
+                            ]
                         },
                         "Immunotherapy-Related": {
                             "description": "An observation that a situation is related to immunotherapy received.",
@@ -1272,7 +1249,7 @@
                     }
                 },
                 "CAUSE_OF_DEATH_RANKING": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "Mandatory",
                     "description": "Assigning a weighted relevance to the cause of death.",
                     "codes": [
@@ -1319,744 +1296,54 @@
                 }
             }
         },
-        "disease_attributes": {
-            "disease_characteristics": {
-                "DISEASE_PHASE": {
-                    "type": "Code",
-                    "tier": "Mandatory",
-                    "description": "The stage or period of an individual's disease.",
-                    "codes": [
-                        "ncit:C168878"
-                    ],
-                    "implementation_notes": [],
-                    "mappings": [],
-                    "permissible_values": {
-                        "Initial Diagnosis": {
-                            "description": "The first diagnosis of the individual's condition.",
-                            "codes": [
-                                "ncit:C156813"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Relapse": {
-                            "description": "The return of a disease after a period of remission.",
-                            "codes": [
-                                "ncit:C38155"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Refractory": {
-                            "description": "Not responding to treatment.",
-                            "codes": [
-                                "ncit:C38014"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        }
-                    }
-                },
-                "DISEASE_PHASE_NUMBER": {
-                    "type": "Number",
-                    "tier": "Mandatory",
-                    "description": "The number of the disease phase.",
-                    "codes": [
-                        "ncit:C173258"
-                    ],
-                    "implementation_notes": [],
-                    "mappings": []
-                },
-                "ALL_TYPE": {
-                    "type": "Code",
-                    "tier": "Mandatory",
-                    "description": "Leukemia with an acute onset, characterized by the presence of lymphoblasts in the bone marrow and the peripheral blood. It includes the acute B lymphoblastic leukemia and acute T lymphoblastic leukemia.",
-                    "codes": [
-                        "ncit:C3167"
-                    ],
-                    "implementation_notes": [],
-                    "mappings": [],
-                    "permissible_values": {
-                        "B-ALL": {
-                            "description": "The most frequent type of acute lymphoblastic leukemia. Approximately 75% of cases occur in children under six years of age. This is a good prognosis leukemia. In the pediatric age group the complete remission rate is approximately 95% and the disease free survival rate is 70%. Approximately 80% of children appear to be cured. In the adult age group the complete remission rate is 60-85%. (WHO, 2001)",
-                            "codes": [
-                                "ncit:C8644"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "T-ALL": {
-                            "description": "Acute lymphoblastic leukemia of T-cell origin. It comprises about 15% of childhood cases and 25% of adult cases. It is more common in males than females. (WHO, 2001)",
-                            "codes": [
-                                "ncit:C3183"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Acute Leukemia, ambiguous lineage (mixed or biphenotypic)": {
-                            "description": "An acute leukemia in which the blasts lack sufficient evidence to classify as myeloid or lymphoid or they have morphologic and/or immunophenotypic characteristics of both myeloid and lymphoid cells. (WHO, 2001)",
-                            "codes": [
-                                "ncit:C7464"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Mixed Phenotype Acute Leukemia": {
-                            "description": "An acute leukemia of ambiguous lineage. It is characterized by the presence of either separate populations of blasts of more than one lineage, or one population of blasts co-expressing markers of more than one lineage.",
-                            "codes": [
-                                "ncit:C82179"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        }
-                    }
-                },
-                "DISEASE_SITE": {
-                    "type": "Code",
-                    "tier": "Mandatory",
-                    "description": "The anatomic site of the disease.",
-                    "codes": [
-                        "ncit:C173263"
-                    ],
-                    "implementation_notes": [
-                        "Note: If multiple sites of disease involvement, include one observation per site."
-                    ],
-                    "mappings": [],
-                    "permissible_values": {
-                        "Bone Marrow": {
-                            "description": "The tissue occupying the spaces of bone. It consists of blood vessel sinuses and a network of hematopoietic cells which give rise to the red cells, white cells, and megakaryocytes.",
-                            "codes": [
-                                "ncit:C12431"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Central Nervous System": {
-                            "description": "The part of the nervous system that consists of the brain, spinal cord, and meninges.",
-                            "codes": [
-                                "ncit:C12438"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Testes": {
-                            "description": "Either of the paired male reproductive glands that produce the male germ cells and the male hormones.",
-                            "codes": [
-                                "ncit:C12412"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Other": {
-                            "description": "Different than the one(s) previously specified or mentioned.",
-                            "codes": [
-                                "ncit:C17649"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Unknown": {
-                            "description": "Reported as unknown by the data contributor.",
-                            "codes": [
-                                "ncit:C17998"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Not Reported": {
-                            "description": "Not provided or available.",
-                            "codes": [
-                                "ncit:C43234"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        }
-                    }
-                },
-                "CNS_DISEASE_STATUS": {
-                    "type": "Code",
-                    "tier": "Mandatory",
-                    "description": "The status of central nervous system leukemia at the time of diagnosis.",
-                    "codes": [
-                        "ncit:C116832"
-                    ],
-                    "implementation_notes": [],
-                    "mappings": [],
-                    "permissible_values": {
-                        "CNS1": {
-                            "description": "The status of central nervous system leukemia at diagnosis, where there is an absence of blasts on a cerebral spinal fluid cytospin preparation, regardless of the number of white blood cells.",
-                            "codes": [
-                                "ncit:C116833"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "CNS2": {
-                            "description": "The status of central nervous system leukemia at diagnosis, where there are less than 5 white blood cells per microliter on a cerebral spinal fluid cytospin preparation that is positive for blasts; or greater than 5 white blood cells per microliter on a cerebral spinal fluid cytospin preparation that is considered negative by Steinherz/Bleyer algorithm.",
-                            "codes": [
-                                "ncit:C116834"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "CNS3": {
-                            "description": "The status of central nervous system leukemia at diagnosis, where there are more than 5 white blood cells per microliter on a cerebral spinal fluid cytospin preparation that is positive for blasts; with or without clinical signs of CNS leukemia.",
-                            "codes": [
-                                "ncit:C116835"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "CNS2a": {
-                            "description": "The status of central nervous system leukemia at diagnosis, where there are less than 10 red blood cells and less than 5 white blood cells per microliter on a cerebral spinal fluid cytospin preparation that is positive for blasts.",
-                            "codes": [
-                                "ncit:C116836"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "CNS2b": {
-                            "description": "The status of central nervous system leukemia at diagnosis, where there are 10 or more red blood cells and less than 5 white blood cells per microliter on a cerebral spinal fluid cytospin preparation that is positive for blasts.",
-                            "codes": [
-                                "ncit:C116837"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "CNS2c": {
-                            "description": "The status of central nervous system leukemia at diagnosis, where there are 10 or more red blood cells and 5 or more white blood cells per microliter on a cerebral spinal fluid cytospin preparation that is positive for blasts and is considered negative by Steinherz/Bleyer algorithm.",
-                            "codes": [
-                                "ncit:C116838"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "CNS3a": {
-                            "description": "The status of central nervous system leukemia at diagnosis, where there are less than 10 red blood cells and 5 or more white blood cells per microliter on a cerebral spinal fluid cytospin preparation that is positive for blasts.",
-                            "codes": [
-                                "ncit:C116840"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "CNS3b": {
-                            "description": "The status of central nervous system leukemia at diagnosis, where there are 10 or more red blood cells and 5 or more white blood cells per microliter on a cerebral spinal fluid cytospin preparation that is considered positive by Steinherz/Bleyer algorithm.",
-                            "codes": [
-                                "ncit:C116841"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "CNS3c": {
-                            "description": "The status of central nervous system leukemia at diagnosis, where there are clinical signs of central system leukemia (such as facial nerve palsy, brain/eye involvement, or hypothalamic syndrome).",
-                            "codes": [
-                                "ncit:C116843"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Unknown": {
-                            "description": "Reported as unknown by the data contributor.",
-                            "codes": [
-                                "ncit:C17998"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Not Reported": {
-                            "description": "Not provided or available.",
-                            "codes": [
-                                "ncit:C43234"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        }
-                    }
-                },
-                "BULK_MED_MASS": {
-                    "type": "Code",
-                    "tier": "Optional",
-                    "description": "When the maximum width of a mass is equal or greater than one-third of the internal transverse diameter of the thorax at the level of T5/6 on a PA CXR. Bulk at an alternate site is defined as any mass measuring 10 cm or more by any imaging study.",
-                    "codes": [
-                        "ncit:C178075"
-                    ],
-                    "implementation_notes": [],
-                    "mappings": [],
-                    "permissible_values": {
-                        "No": {
-                            "description": "The non-affirmative response to a question.",
-                            "codes": [
-                                "ncit:C49487"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Yes": {
-                            "description": "The affirmative response to a question.",
-                            "codes": [
-                                "ncit:C49488"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Unknown": {
-                            "description": "Reported as unknown by the data contributor.",
-                            "codes": [
-                                "ncit:C17998"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Not Reported": {
-                            "description": "Not provided or available.",
-                            "codes": [
-                                "ncit:C43234"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        }
-                    }
-                },
-                "PRIOR_STEROIDS_WEEK": {
-                    "type": "Code",
-                    "tier": "Mandatory",
-                    "description": "The subject received steroids within one week prior to diagnosis of the disease phase.",
-                    "codes": [
-                        "ncit:C178076"
-                    ],
-                    "implementation_notes": [],
-                    "mappings": [],
-                    "permissible_values": {
-                        "No": {
-                            "description": "The non-affirmative response to a question.",
-                            "codes": [
-                                "ncit:C49487"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Yes": {
-                            "description": "The affirmative response to a question.",
-                            "codes": [
-                                "ncit:C49488"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Unknown": {
-                            "description": "Reported as unknown by the data contributor.",
-                            "codes": [
-                                "ncit:C17998"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Not Reported": {
-                            "description": "Not provided or available.",
-                            "codes": [
-                                "ncit:C43234"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        }
-                    }
-                },
-                "PRIOR_STEROIDS_MONTH": {
-                    "type": "Code",
-                    "tier": "Mandatory",
-                    "description": "The subject received steroids within one month prior to diagnosis of the disease phase.",
-                    "codes": [
-                        "ncit:C178077"
-                    ],
-                    "implementation_notes": [],
-                    "mappings": [],
-                    "permissible_values": {
-                        "No": {
-                            "description": "The non-affirmative response to a question.",
-                            "codes": [
-                                "ncit:C49487"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Yes": {
-                            "description": "The affirmative response to a question.",
-                            "codes": [
-                                "ncit:C49488"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Unknown": {
-                            "description": "Reported as unknown by the data contributor.",
-                            "codes": [
-                                "ncit:C17998"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Not Reported": {
-                            "description": "Not provided or available.",
-                            "codes": [
-                                "ncit:C43234"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        }
-                    }
-                }
-            },
-            "histology": {
-                "AGE_AT_HIST_ASSESSMENT": {
-                    "type": "Number",
-                    "tier": "Optional",
-                    "description": "Age of subject (in days) at histology assessment.",
-                    "codes": [
-                        "ncit:C175004"
-                    ],
-                    "implementation_notes": [],
-                    "mappings": []
-                },
-                "DISEASE_PHASE": {
-                    "type": "Code",
-                    "tier": "Optional",
-                    "description": "The stage or period of an individual's disease.",
-                    "codes": [
-                        "ncit:C168878"
-                    ],
-                    "implementation_notes": [],
-                    "mappings": [],
-                    "permissible_values": {
-                        "Initial Diagnosis": {
-                            "description": "The first diagnosis of the individual's condition.",
-                            "codes": [
-                                "ncit:C156813"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Relapse": {
-                            "description": "The return of a disease after a period of remission.",
-                            "codes": [
-                                "ncit:C38155"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Refractory": {
-                            "description": "Not responding to treatment.",
-                            "codes": [
-                                "ncit:C38014"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        }
-                    }
-                },
-                "DISEASE_PHASE_NUMBER": {
-                    "type": "Number",
-                    "tier": "Optional",
-                    "description": "The number of the disease phase.",
-                    "codes": [
-                        "ncit:C173258"
-                    ],
-                    "implementation_notes": [],
-                    "mappings": []
-                },
-                "COURSE": {
-                    "type": "Code",
-                    "tier": "Optional",
-                    "description": "The type of protocol treatment course administered.",
-                    "codes": [
-                        "ncit:C168807"
-                    ],
-                    "implementation_notes": [],
-                    "mappings": [],
-                    "permissible_values": {
-                        "Prephase": {
-                            "description": "A chemotherapy treatment administered prior to the definitive chemotherapy treatment.",
-                            "codes": [
-                                "ncit:C168826"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Induction": {
-                            "description": "The first choice of treatment for a particular type of cancer.",
-                            "codes": [
-                                "ncit:C158876"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Intensification": {
-                            "description": "A second round of intense chemotherapy as part of consolidation therapy.",
-                            "codes": [
-                                "ncit:C173105"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Consolidation": {
-                            "description": "Treatment that is given after initial therapy to kill any remaining cancer cells.",
-                            "codes": [
-                                "ncit:C158876"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Stem Cell Transplant Conditioning": {
-                            "description": "A regimen that can be used as a conditioning regimen for hematopoietic stem cell transplantation (HSCT).",
-                            "codes": [
-                                "ncit:C168794"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Maintenance": {
-                            "description": "Continuation of treatment for an extended period of time to prevent relapse.",
-                            "codes": [
-                                "ncit:C15688"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Interim Maintenance": {
-                            "description": "A less intense phase of chemotherapy in between each course of delayed intensification.",
-                            "codes": [
-                                "ncit:C178069"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Delayed Intensification": {
-                            "description": "A repeat of the first two months of induction and consolidation chemotherapy in high-risk and very-high-risk ALL protocols with the goal of eliminating residual drug-resistant cells",
-                            "codes": [
-                                "ncit:C178270"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Continuation": {
-                            "description": "A period in a clinical study during which subjects receive continuation therapy. This therapy is usually different from the therapy given during the induction phase and administered over a longer period of time.",
-                            "codes": [
-                                "ncit:C123452"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Investigational Agent": {
-                            "description": "A new drug or biological drug that is used in a clinical investigation. The term also includes a biological product that is used in vitro for diagnostic purposes.",
-                            "codes": [
-                                "ncit:C49135"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        }
-                    }
-                },
-                "COURSE_NUMBER": {
-                    "type": "Number",
-                    "tier": "Optional",
-                    "description": "The number assigned to a course of therapeutic agent administration, indicating where a particular course of treatment falls within a sequence of treatments.",
-                    "codes": [
-                        "ncit:C166235"
-                    ],
-                    "implementation_notes": [],
-                    "mappings": []
-                },
-                "HIST_ICD_O_MORPH": {
-                    "type": "String",
-                    "tier": "Optional",
-                    "description": "Codes for the histologic type of the tumor being reported using ICD-O.",
-                    "codes": [
-                        "ncit:C176985"
-                    ],
-                    "implementation_notes": [],
-                    "mappings": []
-                }
-            }
-        },
         "testing": {
-            "vitals": {
-                "AGE_AT_VITALS": {
-                    "type": "Number",
-                    "tier": "Optional",
-                    "description": "Vital signs (such as height, weight, and blood pressure) directly measure an individual's current state of attributes.",
+            "vitals_and_anthropometrics": {
+                "HONEST_BROKER_SUBJECT_ID": {
+                    "type": "String",
+                    "tier": "1 - contributors must include, regardless of the resource cost",
+                    "description": "The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a \"re-identification code\"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.",
+                    "codes": [
+                        "ncit:C168949"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ]
+                },
+                "AGE_AT_MEASUREMENT": {
+                    "type": "Integer",
+                    "tier": "3 - contributors shouldn\u2019t prioritize inclusion, but can include if resources are available",
+                    "description": "The age (in days) of the subject when the vitals measurement was taken.",
                     "codes": [
                         "ncit:C154628"
                     ],
                     "implementation_notes": [],
-                    "mappings": []
+                    "mappings": [
+                        "[all_v1.1].[Vitals].[AGE_AT_VITALS] skos:exactMatch [all_v2.0].[Vitals And Anthropometrics].[AGE_AT_MEASUREMENT]"
+                    ]
                 },
-                "DISEASE_PHASE": {
-                    "type": "Code",
-                    "tier": "Optional",
-                    "description": "The stage or period of an individual's disease.",
-                    "codes": [
-                        "ncit:C168878"
-                    ],
-                    "implementation_notes": [
-                        "Note: Disease phase could be \"Initial Diagnosis\" phase, a \"Relapse\" phase, or a \"Progression\" phase."
-                    ],
-                    "mappings": [],
-                    "permissible_values": {
-                        "Initial Diagnosis": {
-                            "description": "The first diagnosis of the individual's condition.",
-                            "codes": [
-                                "ncit:C156813"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Relapse": {
-                            "description": "The return of a disease after a period of remission.",
-                            "codes": [
-                                "ncit:C38155"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Refractory": {
-                            "description": "Not responding to treatment.",
-                            "codes": [
-                                "ncit:C38014"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        }
-                    }
-                },
-                "DISEASE_PHASE_NUMBER": {
-                    "type": "Number",
-                    "tier": "Optional",
-                    "description": "The number of the disease phase.",
-                    "codes": [
-                        "ncit:C173258"
-                    ],
+                "TIME_PERIOD_SUBMITTER_ID": {
+                    "type": "String",
+                    "tier": "3 - contributors shouldn\u2019t prioritize inclusion, but can include if resources are available",
+                    "description": "This is the SUBMITTER_ID of the time period (defined in the \"Time Period\" table) during which this observation takes place.",
+                    "codes": [],
                     "implementation_notes": [],
-                    "mappings": []
+                    "mappings": [
+                        "New VD"
+                    ]
                 },
-                "COURSE": {
-                    "type": "Code",
-                    "tier": "Optional",
-                    "description": "The type of protocol treatment course administered.",
-                    "codes": [
-                        "ncit:C168807"
-                    ],
-                    "implementation_notes": [],
-                    "mappings": [],
-                    "permissible_values": {
-                        "Prephase": {
-                            "description": "A chemotherapy treatment administered prior to the definitive chemotherapy treatment.",
-                            "codes": [
-                                "ncit:C168826"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Induction": {
-                            "description": "The first choice of treatment for a particular type of cancer.",
-                            "codes": [
-                                "ncit:C158876"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Intensification": {
-                            "description": "A second round of intense chemotherapy as part of consolidation therapy.",
-                            "codes": [
-                                "ncit:C173105"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Consolidation": {
-                            "description": "Treatment that is given after initial therapy to kill any remaining cancer cells.",
-                            "codes": [
-                                "ncit:C158876"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Stem Cell Transplant Conditioning": {
-                            "description": "A regimen that can be used as a conditioning regimen for hematopoietic stem cell transplantation (HSCT).",
-                            "codes": [
-                                "ncit:C168794"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Maintenance": {
-                            "description": "Continuation of treatment for an extended period of time to prevent relapse.",
-                            "codes": [
-                                "ncit:C15688"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Interim Maintenance": {
-                            "description": "A less intense phase of chemotherapy in between each course of delayed intensification.",
-                            "codes": [
-                                "ncit:C178069"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Delayed Intensification": {
-                            "description": "A repeat of the first two months of induction and consolidation chemotherapy in high-risk and very-high-risk ALL protocols with the goal of eliminating residual drug-resistant cells",
-                            "codes": [
-                                "ncit:C178270"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Continuation": {
-                            "description": "A period in a clinical study during which subjects receive continuation therapy. This therapy is usually different from the therapy given during the induction phase and administered over a longer period of time.",
-                            "codes": [
-                                "ncit:C123452"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Investigational Agent": {
-                            "description": "A new drug or biological drug that is used in a clinical investigation. The term also includes a biological product that is used in vitro for diagnostic purposes.",
-                            "codes": [
-                                "ncit:C49135"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        }
-                    }
-                },
-                "COURSE_NUMBER": {
-                    "type": "Number",
-                    "tier": "Optional",
-                    "description": "The number assigned to a course of therapeutic agent administration, indicating where a particular course of treatment falls within a sequence of treatments.",
-                    "codes": [
-                        "ncit:C166235"
-                    ],
-                    "implementation_notes": [],
-                    "mappings": []
-                },
-                "VITALS_TEST": {
-                    "type": "Code",
-                    "tier": "Optional",
-                    "description": "The act of assessing an individual's current temperature, heart rate, respiratory rate, pulse oxygenation, and blood pressure.",
+                "MEASUREMENT_TYPE": {
+                    "type": "Enum",
+                    "tier": "3 - contributors shouldn\u2019t prioritize inclusion, but can include if resources are available",
+                    "description": "The measurement type of the vital sign or anthropomorphic measurement.",
                     "codes": [
                         "ncit:C49672"
                     ],
                     "implementation_notes": [],
-                    "mappings": [],
+                    "mappings": [
+                        "[all_v1.1].[Vitals].[VITALS_TEST] skos:exactMatch [all_v2.0].[Vitals And Anthropometrics].[MEASUREMENT_TYPE]"
+                    ],
                     "permissible_values": {
-                        "Weight": {
-                            "description": "The weight of a subject.",
-                            "codes": [
-                                "ncit:C81328"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
                         "Height": {
                             "description": "The vertical measurement or distance from the base to the top of a subject or participant.",
                             "codes": [
@@ -2064,39 +1351,61 @@
                             ],
                             "implementation_notes": [],
                             "mappings": []
+                        },
+                        "Weight": {
+                            "description": "The weight of a subject.",
+                            "codes": [
+                                "ncit:C81328"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
                         }
                     }
                 },
-                "VITALS_RESULT": {
+                "RESULT_TEXT": {
                     "type": "String",
-                    "tier": "Optional",
-                    "description": "The outcome of the vital signs assessment.",
+                    "tier": "3 - contributors shouldn\u2019t prioritize inclusion, but can include if resources are available",
+                    "description": "The string/text result of the vitals or anthropomorphic measurement.",
                     "codes": [
-                        "ncit:C83108"
+                        "ncit:C173522"
                     ],
                     "implementation_notes": [],
-                    "mappings": []
+                    "mappings": [
+                        "[all_v1.1].[Vitals].[VITALS_RESULT] skos:exactMatch [all_v2.0].[Vitals And Anthropometrics].[RESULT_TEXT]"
+                    ]
                 },
-                "VITALS_RESULT_NUMERIC": {
-                    "type": "Number",
-                    "tier": "Optional",
-                    "description": "The numeric values of the vital signs.",
+                "RESULT_NUMERIC": {
+                    "type": "Decimal",
+                    "tier": "3 - contributors shouldn\u2019t prioritize inclusion, but can include if resources are available",
+                    "description": "The numeric result of the vitals or anthropomorphic measurement.",
                     "codes": [
                         "ncit:C173268"
                     ],
                     "implementation_notes": [],
-                    "mappings": []
+                    "mappings": [
+                        "[all_v1.1].[Vitals].[VITALS_RESULT_NUMERIC] skos:exactMatch [all_v2.0].[Vitals And Anthropometrics].[RESULT_NUMERIC]"
+                    ]
                 },
-                "VITALS_RESULT_UNIT": {
-                    "type": "Code",
-                    "tier": "Optional",
-                    "description": "The unit used to record and describe the result of a test investigating a vital sign.",
+                "RESULT_UNIT": {
+                    "type": "Enum",
+                    "tier": "3 - contributors shouldn\u2019t prioritize inclusion, but can include if resources are available",
+                    "description": "The unit of the numeric vital sign or anthropomorphic measurement.",
                     "codes": [
                         "ncit:C49675"
                     ],
                     "implementation_notes": [],
-                    "mappings": [],
+                    "mappings": [
+                        "[all_v1.1].[Vitals].[VITALS_RESULT_UNIT] skos:exactMatch [all_v2.0].[Vitals And Anthropometrics].[RESULT_UNIT]"
+                    ],
                     "permissible_values": {
+                        "cm": {
+                            "description": "A basic unit of length in the former CGS version of metric system, equal to one hundredth of a meter or approximately 0.393 700 787 inch.",
+                            "codes": [
+                                "ncit:C49668"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
                         "kg": {
                             "description": "A basic SI unit of mass. It is defined as the mass of an international prototype in the form of a platinum-iridium cylinder kept at Sevres in France. A kilogram is equal to 1,000 grams and 2.204 622 6 pounds.",
                             "codes": [
@@ -2105,14 +1414,6 @@
                             "implementation_notes": [],
                             "mappings": []
                         },
-                        "cm": {
-                            "description": "A basic unit of length in the former CGS version of metric system, equal to one hundredth of a meter or approximately 0.393 700 787 inch",
-                            "codes": [
-                                "ncit:C49668"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
                         "Unknown": {
                             "description": "Reported as unknown by the data contributor.",
                             "codes": [
@@ -2132,31 +1433,55 @@
                     }
                 }
             },
-            "labs": {
+            "laboratory_test": {
+                "HONEST_BROKER_SUBJECT_ID": {
+                    "type": "String",
+                    "tier": "1 - contributors must include, regardless of the resource cost",
+                    "description": "The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a \"re-identification code\"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.",
+                    "codes": [
+                        "ncit:C168949"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ]
+                },
                 "AGE_AT_LAB": {
-                    "type": "Number",
-                    "tier": "Mandatory",
-                    "description": "Age of subject (in days) when the laboratory test was performed.",
+                    "type": "Integer",
+                    "tier": "2 - contributors should prioritize inclusion if resources are available",
+                    "description": "The age (in days) of the subject at the time of the laboratory test.",
                     "codes": [
                         "ncit:C172691"
                     ],
                     "implementation_notes": [],
                     "mappings": []
                 },
-                "LAB_CATEGORY": {
-                    "type": "Code",
-                    "tier": "Mandatory",
-                    "description": "A classification of the laboratory test.",
+                "TIME_PERIOD_SUBMITTER_ID": {
+                    "type": "String",
+                    "tier": "2 - contributors should prioritize inclusion if resources are available",
+                    "description": "This is the SUBMITTER_ID of the time period (defined in the \"Time Period\" table) during which this observation takes place.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ]
+                },
+                "CATEGORY": {
+                    "type": "Enum",
+                    "tier": "2 - contributors should prioritize inclusion if resources are available",
+                    "description": "The category of laboratory test performed on the subject.",
                     "codes": [
                         "ncit:C83017"
                     ],
                     "implementation_notes": [],
-                    "mappings": [],
+                    "mappings": [
+                        "[all_v1.1].[Labs].[LAB_CATEGORY] skos:exactMatch [all_v2.0].[Laboratory Test].[CATEGORY]"
+                    ],
                     "permissible_values": {
-                        "Peripheral Blood Analysis": {
-                            "description": "A laboratory analysis of a sample of peripheral blood.",
+                        "Bone Marrow Analysis": {
+                            "description": "A laboratory analysis of a sample of bone marrow.",
                             "codes": [
-                                "ncit:C173271"
+                                "ncit:C173273"
                             ],
                             "implementation_notes": [],
                             "mappings": []
@@ -2169,10 +1494,10 @@
                             "implementation_notes": [],
                             "mappings": []
                         },
-                        "Bone Marrow Analysis": {
-                            "description": "A laboratory analysis of a sample of bone marrow.",
+                        "Peripheral Blood Analysis": {
+                            "description": "A laboratory analysis of a sample of peripheral blood.",
                             "codes": [
-                                "ncit:C173273"
+                                "ncit:C173271"
                             ],
                             "implementation_notes": [],
                             "mappings": []
@@ -2195,16 +1520,42 @@
                         }
                     }
                 },
-                "LAB_TEST": {
-                    "type": "Code",
-                    "tier": "Mandatory",
-                    "description": "A character or string that represents the full name of the laboratory assessment.",
+                "TEST": {
+                    "type": "Enum",
+                    "tier": "2 - contributors should prioritize inclusion if resources are available",
+                    "description": "A medical procedure that involves testing a sample of blood, urine, or other substance from the body. Tests can help determine a diagnosis, plan treatment, check to see if treatment is working, or monitor the disease over time.",
                     "codes": [
                         "ncit:C117142"
                     ],
                     "implementation_notes": [],
-                    "mappings": [],
+                    "mappings": [
+                        "[all_v1.1].[Labs].[LAB_TEST] skos:exactMatch [all_v2.0].[Laboratory Test].[TEST]"
+                    ],
                     "permissible_values": {
+                        "Absolute Neutrophil Count": {
+                            "description": "The real number of white blood cells (WBC) that are neutrophils. It is derived by multiplying the WBC count by the percent of neutrophils in the differential WBC count. The normal range for ANC is 1.5 to 8.0 (1,500 to 8,000/mm3).",
+                            "codes": [
+                                "ncit:C63321"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Blasts": {
+                            "description": "The determination of the number of blast cells present in a blood sample.",
+                            "codes": [
+                                "ncit:C74605"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Hemoglobin": {
+                            "description": "A quantitative measurement of the amount of hemoglobin present in a biospecimen.",
+                            "codes": [
+                                "ncit:C64848"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
                         "Platelets": {
                             "description": "The determination of the number of platelets in a biospecimen.",
                             "codes": [
@@ -2228,42 +1579,20 @@
                             ],
                             "implementation_notes": [],
                             "mappings": []
-                        },
-                        "Absolute Neutrophil Count": {
-                            "description": "The real number of white blood cells (WBC) that are neutrophils. It is derived by multiplying the WBC count by the percent of neutrophils in the differential WBC count. The normal range for ANC is 1.5 to 8.0 (1,500 to 8,000/mm3).",
-                            "codes": [
-                                "ncit:C63321"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Blasts": {
-                            "description": "The determination of the number of blast cells present in a blood sample.",
-                            "codes": [
-                                "ncit:C74605"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Hemoglobin": {
-                            "description": "A quantitative measurement of the amount of hemoglobin present in a sample.",
-                            "codes": [
-                                "ncit:C64848"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
                         }
                     }
                 },
-                "LAB_SPEC_TYPE": {
-                    "type": "Code",
-                    "tier": "Mandatory",
-                    "description": "The type of a material sample taken from a biological entity for laboratory testing.",
+                "SPECIMEN": {
+                    "type": "Enum",
+                    "tier": "2 - contributors should prioritize inclusion if resources are available",
+                    "description": "The type of a material sample taken from a biological entity for testing, diagnostic, propagation, treatment or research purposes. This includes particular types of cellular molecules, cells, tissues, organs, body fluids, embryos, and body excretory substances.",
                     "codes": [
-                        "ncit:C83315"
+                        "ncit:C70713"
                     ],
                     "implementation_notes": [],
-                    "mappings": [],
+                    "mappings": [
+                        "[all_v1.1].[Labs].[LAB_SPEC_TYPE] skos:exactMatch [all_v2.0].[Laboratory Test].[SPECIMEN]"
+                    ],
                     "permissible_values": {
                         "Blood": {
                             "description": "A small volume of blood removed for testing or storage.",
@@ -2273,18 +1602,18 @@
                             "implementation_notes": [],
                             "mappings": []
                         },
-                        "Cerebrospinal Fluid": {
-                            "description": "A specimen of cerebrospinal fluid.",
+                        "Bone Marrow": {
+                            "description": "The tissue occupying the spaces of bone. It consists of blood vessel sinuses and a network of hematopoietic cells which give rise to the red cells, white cells, and megakaryocytes.",
                             "codes": [
-                                "ncit:C185194"
+                                "ncit:C12431"
                             ],
                             "implementation_notes": [],
                             "mappings": []
                         },
-                        "Bone Marrow": {
-                            "description": "A biological sample containing components collected from bone marrow of an experimental subject.",
+                        "Cerebrospinal Fluid": {
+                            "description": "The fluid that is contained within the brain ventricles, the subarachnoid space and the central canal of the spinal cord.",
                             "codes": [
-                                "ncit:C164009"
+                                "ncit:C12692"
                             ],
                             "implementation_notes": [],
                             "mappings": []
@@ -2315,35 +1644,95 @@
                         }
                     }
                 },
-                "LAB_RESULT": {
+                "METHOD": {
+                    "type": "Enum",
+                    "tier": "2 - contributors should prioritize inclusion if resources are available",
+                    "description": "A systematic course of action that is performed in order to complete a laboratory test.",
+                    "codes": [
+                        "ncit:C83312"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "[all_v1.1].[Labs].[LAB_METHOD] skos:exactMatch [all_v2.0].[Laboratory Test].[METHOD]"
+                    ],
+                    "permissible_values": {
+                        "Flow Cytometry": {
+                            "description": "A technique for counting, examining and sorting microscopic particles suspended in a stream of fluid.",
+                            "codes": [
+                                "ncit:C16585"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Morphology Method": {
+                            "description": "The technique used to administer the morphologic assessment.",
+                            "codes": [
+                                "ncit:C117624"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Other": {
+                            "description": "Different than the one(s) previously specified or mentioned.",
+                            "codes": [
+                                "ncit:C17649"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "Reported as unknown by the data contributor.",
+                            "codes": [
+                                "ncit:C17998"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Reported": {
+                            "description": "Not provided or available.",
+                            "codes": [
+                                "ncit:C43234"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "RESULT_TEXT": {
                     "type": "String",
-                    "tier": "Mandatory",
-                    "description": "The outcome of a laboratory test.",
+                    "tier": "2 - contributors should prioritize inclusion if resources are available",
+                    "description": "The string/text result of the laboratory test.",
                     "codes": [
                         "ncit:C36292"
                     ],
                     "implementation_notes": [],
-                    "mappings": []
+                    "mappings": [
+                        "[all_v1.1].[Labs].[LAB_RESULT] skos:exactMatch [all_v2.0].[Laboratory Test].[RESULT_TEXT]"
+                    ]
                 },
-                "LAB_RESULT_NUMERIC": {
-                    "type": "Number",
-                    "tier": "Mandatory",
-                    "description": "A numeric representation of a test result.",
+                "RESULT_NUMERIC": {
+                    "type": "Decimal",
+                    "tier": "2 - contributors should prioritize inclusion if resources are available",
+                    "description": "The numeric result of the laboratory test.",
                     "codes": [
                         "ncit:C70952"
                     ],
                     "implementation_notes": [],
-                    "mappings": []
+                    "mappings": [
+                        "[all_v1.1].[Labs].[LAB_RESULT_NUMERIC] skos:exactMatch [all_v2.0].[Laboratory Test].[RESULT_NUMERIC]"
+                    ]
                 },
-                "LAB_RESULT_UNIT": {
-                    "type": "Code",
-                    "tier": "Mandatory",
-                    "description": "The numeric unit that expresses the lab result.",
+                "RESULT_UNIT": {
+                    "type": "Enum",
+                    "tier": "2 - contributors should prioritize inclusion if resources are available",
+                    "description": "The unit of the numeric result of the laboratory test.",
                     "codes": [
                         "ncit:C173274"
                     ],
                     "implementation_notes": [],
-                    "mappings": [],
+                    "mappings": [
+                        "[all_v1.1].[Labs].[LAB_RESULT_UNIT] skos:exactMatch [all_v2.0].[Laboratory Test].[RESULT_UNIT]"
+                    ],
                     "permissible_values": {
                         "%": {
                             "description": "A unit for expressing a number as a fraction of hundred (on the basis of a rate or proportion per hundred).",
@@ -2369,10 +1758,10 @@
                             "implementation_notes": [],
                             "mappings": []
                         },
-                        "U/L": {
-                            "description": "An arbitrary unit of substance concentration equal to the concentration at which one liter of mixture contains one unit of a substance.",
+                        "mg/L": {
+                            "description": "A metric unit of mass concentration defined as the concentration of one gram of a substance per unit volume of the mixture equal to one cubic meter. The concept also refers to the metric unit of mass density (volumic mass) defined as the density of a substance which mass equal to one gram occupies the volume of one cubic meter.",
                             "codes": [
-                                "ncit:C67456"
+                                "ncit:C64572"
                             ],
                             "implementation_notes": [],
                             "mappings": []
@@ -2385,10 +1774,10 @@
                             "implementation_notes": [],
                             "mappings": []
                         },
-                        "mg/L": {
-                            "description": "A metric unit of mass concentration defined as the concentration of one gram of a substance per unit volume of the mixture equal to one cubic meter. The concept also refers to the metric unit of mass density (volumic mass) defined as the density of a substance which mass equal to one gram occupies the volume of one cubic meter.",
+                        "U/L": {
+                            "description": "An arbitrary unit of substance concentration equal to the concentration at which one liter of mixture contains one unit of a substance.",
                             "codes": [
-                                "ncit:C64572"
+                                "ncit:C67456"
                             ],
                             "implementation_notes": [],
                             "mappings": []
@@ -2411,36 +1800,30 @@
                         }
                     }
                 },
-                "LAB_METHOD": {
-                    "type": "Code",
-                    "tier": "Mandatory",
-                    "description": "A systematic course of action that is performed in order to complete a laboratory test.",
+                "TRAUMATIC_TAP": {
+                    "type": "Enum",
+                    "tier": "2 - contributors should prioritize inclusion if resources are available",
+                    "description": "Did the subject's cerebrospinal fluid (CSF) sample contain more than 10 red blood cells per mm\u00b3 due to contamination?",
                     "codes": [
-                        "ncit:C83312"
+                        "ncit:C168879"
                     ],
-                    "implementation_notes": [],
+                    "implementation_notes": [
+                        "Notes: Traumatic tap is defined as cerebrospinal fluid with greater than 10 RBC/mm3. Note: Only fill in this variable if LAB_SAMPLE_SOURCE is \"CSF\""
+                    ],
                     "mappings": [],
                     "permissible_values": {
-                        "Flow Cytometry": {
-                            "description": "A technique for counting, examining and sorting microscopic particles suspended in a stream of fluid.",
+                        "Yes": {
+                            "description": "The affirmative response to a question.",
                             "codes": [
-                                "ncit:C16585"
+                                "ncit:C49488"
                             ],
                             "implementation_notes": [],
                             "mappings": []
                         },
-                        "Morphology": {
-                            "description": "The science of the form and structure of organisms (plants, animals, and other forms of life), or of their parts, and the study or science of the same. In pathology, the specific appearance of cells and tissues (normal and abnormal) under the light or electron microscope.",
+                        "No": {
+                            "description": "The non-affirmative response to a question.",
                             "codes": [
-                                "ncit:C17943"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Other": {
-                            "description": "Different than the one(s) previously specified or mentioned.",
-                            "codes": [
-                                "ncit:C17649"
+                                "ncit:C49487"
                             ],
                             "implementation_notes": [],
                             "mappings": []
@@ -2464,16 +1847,16 @@
                     }
                 },
                 "BM_MORPHOLOGY": {
-                    "type": "Code",
-                    "tier": "Mandatory",
-                    "description": "The morphology characteristics of the bone marrow blasts.",
+                    "type": "Enum",
+                    "tier": "2 - contributors should prioritize inclusion if resources are available",
+                    "description": "The morphology of bone marrow blasts.",
                     "codes": [
                         "ncit:C178079"
                     ],
                     "implementation_notes": [],
                     "mappings": [],
                     "permissible_values": {
-                        "M1 (less than 5% blasts)": {
+                        "M1 (Less Than 5 % Blasts)": {
                             "description": "A semi-quantitative microscopic finding indicating that 5 percent or less of the nucleated cells in a bone marrow sample are immature mononuclear cells.",
                             "codes": [
                                 "ncit:C137698"
@@ -2481,7 +1864,7 @@
                             "implementation_notes": [],
                             "mappings": []
                         },
-                        "M2 (5-25% blasts)": {
+                        "M2 (5-25 % Blasts)": {
                             "description": "A semi-quantitative microscopic finding indicating that between 5 and 25 percent of the nucleated cells in a bone marrow sample are immature mononuclear cells.",
                             "codes": [
                                 "ncit:C146709"
@@ -2489,56 +1872,10 @@
                             "implementation_notes": [],
                             "mappings": []
                         },
-                        "M3 (greater than 25% blasts)": {
+                        "M3 (Greater Than 25 % Blasts)": {
                             "description": "A semi-quantitative microscopic finding indicating that 25 percent or more of the nucleated cells in a bone marrow sample are immature mononuclear cells.",
                             "codes": [
                                 "ncit:C140330"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        }
-                    }
-                },
-                "TRAUMATIC_TAP": {
-                    "type": "Code",
-                    "tier": "Mandatory",
-                    "description": "Contamination of a cerebrospinal fluid sample by red blood cells greater than 10/mm3.",
-                    "codes": [
-                        "ncit:C168879"
-                    ],
-                    "implementation_notes": [
-                        "Notes: Traumatic tap is defined as cerebrospinal fluid with greater than 10 RBC/mm3."
-                    ],
-                    "mappings": [],
-                    "permissible_values": {
-                        "No": {
-                            "description": "The non-affirmative response to a question.",
-                            "codes": [
-                                "ncit:C49487"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Yes": {
-                            "description": "The affirmative response to a question.",
-                            "codes": [
-                                "ncit:C49488"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Unknown": {
-                            "description": "Reported as unknown by the data contributor.",
-                            "codes": [
-                                "ncit:C17998"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Not Reported": {
-                            "description": "Not provided or available.",
-                            "codes": [
-                                "ncit:C43234"
                             ],
                             "implementation_notes": [],
                             "mappings": []
@@ -2548,7 +1885,7 @@
             },
             "molecular_analysis": {
                 "AGE_AT_MOLECULAR_ANALYSIS": {
-                    "type": "Number",
+                    "type": "Integer",
                     "tier": "Mandatory",
                     "description": "Age of subject (in days) when molecular analysis was performed.",
                     "codes": [
@@ -2558,7 +1895,7 @@
                     "mappings": []
                 },
                 "MOLECULAR_ANALYSIS_METHOD": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "Mandatory",
                     "description": "Molecular Analysis Method",
                     "codes": [
@@ -2626,7 +1963,7 @@
                     }
                 },
                 "MOLECULAR_ANALYSIS_SAMPLE_SOURCE": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "Mandatory",
                     "description": "The anatomic source of the molecular analysis sample.",
                     "codes": [
@@ -2654,7 +1991,7 @@
                     }
                 },
                 "KARYOTYPE_STATUS": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "Mandatory",
                     "description": "The status of the subject's karyotype.",
                     "codes": [
@@ -2692,7 +2029,7 @@
                     "mappings": []
                 },
                 "NUM_CHROMOSOMES": {
-                    "type": "Number",
+                    "type": "Integer",
                     "tier": "Mandatory",
                     "description": "The number of chromosomes upon karyotype analysis.",
                     "codes": [
@@ -2702,7 +2039,7 @@
                     "mappings": []
                 },
                 "MOLECULAR_ABNORMALITY": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "Mandatory",
                     "description": "A molecular or cytogenic abnormality which occurs in either human disease states or disease models.",
                     "codes": [
@@ -2826,7 +2163,7 @@
                     "mappings": []
                 },
                 "VARIANT_TYPE": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "Mandatory",
                     "description": "A variation in or modification of the molecular sequence of a gene or gene product.",
                     "codes": [
@@ -2938,7 +2275,7 @@
                     "mappings": []
                 },
                 "MOLECULAR_ABNORMALITY_RESULT": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "Mandatory",
                     "description": "An indicator for whether a molecular analysis procedure was performed and whether the assay detected a molecular abnormality.",
                     "codes": [
@@ -2992,7 +2329,7 @@
                     }
                 },
                 "DNA_INDEX_NUMERIC": {
-                    "type": "Number",
+                    "type": "Integer",
                     "tier": "Mandatory",
                     "description": "The ratio of the DNA content or chromosome number in a tumor sample compared to that in a normal sample.",
                     "codes": [
@@ -3002,7 +2339,7 @@
                     "mappings": []
                 },
                 "TRANSLOCATION_STATUS": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "Mandatory",
                     "description": "The finding of the chromosomal translocation analysis.",
                     "codes": [
@@ -3047,10 +2384,492 @@
                 }
             }
         },
+        "disease_attributes": {
+            "diagnosis": {
+                "HONEST_BROKER_SUBJECT_ID": {
+                    "type": "String",
+                    "tier": "",
+                    "description": "The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a \"re-identification code\"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.",
+                    "codes": [
+                        "ncit:C168949"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ]
+                },
+                "AGE_AT_ASSESSMENT": {
+                    "type": "Integer",
+                    "tier": "Optional",
+                    "description": "",
+                    "codes": [
+                        "ncit:C175004"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "[all_v1.1].[Histology].[AGE_AT_HIST_ASSESSMENT] skos:exactMatch [all_v2.0].[Diagnosis].[AGE_AT_DIAG_ASSESSMENT]"
+                    ]
+                },
+                "TIME_PERIOD_SUBMITTER_ID": {
+                    "type": "String",
+                    "tier": "",
+                    "description": "This is the SUBMITTER_ID of the time period (defined in the \"Time Period\" table) during which this observation takes place.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ]
+                },
+                "DIAGNOSIS_BASIS": {
+                    "type": "Enum",
+                    "tier": "",
+                    "description": "The type of diagnosis used for determining the medical condition.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ],
+                    "permissible_values": {
+                        "Histological": {
+                            "description": "Pertaining to the combined microscopic physical features of cells and their surrounding extracellular environment in tissues.",
+                            "codes": [
+                                "ncit:C25526"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        }
+                    }
+                },
+                "DIAGNOSIS": {
+                    "type": "Enum",
+                    "tier": "",
+                    "description": "The investigation, analysis and recognition of the presence and nature of disease, condition, or injury from expressed signs and symptoms; also, the scientific determination of any kind; the concise results of such an investigation.",
+                    "codes": [
+                        "ncit:C15220"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "[all_v1.1].[Disease Characteristics].[ALL_TYPE] skos:exactMatch [all_v2.0].[Diagnosis].[DIAGNOSIS]"
+                    ],
+                    "permissible_values": {
+                        "Acute Leukemia, ambiguous lineage (mixed or biphenotypic)": {
+                            "description": "An acute leukemia in which the blasts lack sufficient evidence to classify as myeloid or lymphoid or they have morphologic and/or immunophenotypic characteristics of both myeloid and lymphoid cells. (WHO, 2001)",
+                            "codes": [
+                                "ncit:C7464"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "B-ALL": {
+                            "description": "The most frequent type of acute lymphoblastic leukemia. Approximately 75% of cases occur in children under six years of age. This is a good prognosis leukemia. In the pediatric age group the complete remission rate is approximately 95% and the disease free survival rate is 70%. Approximately 80% of children appear to be cured. In the adult age group the complete remission rate is 60-85%. (WHO, 2001)",
+                            "codes": [
+                                "ncit:C8644"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "MPAL": {
+                            "description": "An acute leukemia of ambiguous lineage. It is characterized by the presence of either separate populations of blasts of more than one lineage, or one population of blasts co-expressing markers of more than one lineage.",
+                            "codes": [
+                                "ncit:C82179"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "T-ALL": {
+                            "description": "Acute lymphoblastic leukemia of T-cell origin. It comprises about 15% of childhood cases and 25% of adult cases. It is more common in males than females. (WHO, 2001)",
+                            "codes": [
+                                "ncit:C3183"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "CNS1": {
+                            "description": "The status of central nervous system leukemia at diagnosis, where there is an absence of blasts on a cerebral spinal fluid cytospin preparation, regardless of the number of white blood cells.",
+                            "codes": [
+                                "ncit:C116833"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "[all_v1.1].[Disease Characteristics].[CNS_DISEASE_STATUS].[CNS1] skos:exactMatch [all_v2.0].[Diagnosis].[DIAGNOSIS].[CNS1]"
+                            ]
+                        },
+                        "CNS2": {
+                            "description": "The status of central nervous system leukemia at diagnosis, where there are less than 5 white blood cells per microliter on a cerebral spinal fluid cytospin preparation that is positive for blasts; or greater than 5 white blood cells per microliter on a cerebral spinal fluid cytospin preparation that is considered negative by Steinherz/Bleyer algorithm.",
+                            "codes": [
+                                "ncit:C116834"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "[all_v1.1].[Disease Characteristics].[CNS_DISEASE_STATUS].[CNS2] skos:exactMatch [all_v2.0].[Diagnosis].[DIAGNOSIS].[CNS2]"
+                            ]
+                        },
+                        "CNS3": {
+                            "description": "The status of central nervous system leukemia at diagnosis, where there are more than 5 white blood cells per microliter on a cerebral spinal fluid cytospin preparation that is positive for blasts; with or without clinical signs of CNS leukemia.",
+                            "codes": [
+                                "ncit:C116835"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "[all_v1.1].[Disease Characteristics].[CNS_DISEASE_STATUS].[CNS3] skos:exactMatch [all_v2.0].[Diagnosis].[DIAGNOSIS].[CNS3]"
+                            ]
+                        },
+                        "CNS2a": {
+                            "description": "The status of central nervous system leukemia at diagnosis, where there are less than 10 red blood cells and less than 5 white blood cells per microliter on a cerebral spinal fluid cytospin preparation that is positive for blasts.",
+                            "codes": [
+                                "ncit:C116836"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "[all_v1.1].[Disease Characteristics].[CNS_DISEASE_STATUS].[CNS2a] skos:exactMatch [all_v2.0].[Diagnosis].[DIAGNOSIS].[CNS2a]"
+                            ]
+                        },
+                        "CNS2b": {
+                            "description": "The status of central nervous system leukemia at diagnosis, where there are 10 or more red blood cells and less than 5 white blood cells per microliter on a cerebral spinal fluid cytospin preparation that is positive for blasts.",
+                            "codes": [
+                                "ncit:C116837"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "[all_v1.1].[Disease Characteristics].[CNS_DISEASE_STATUS].[CNS2b] skos:exactMatch [all_v2.0].[Diagnosis].[DIAGNOSIS].[CNS2b]"
+                            ]
+                        },
+                        "CNS2c": {
+                            "description": "The status of central nervous system leukemia at diagnosis, where there are 10 or more red blood cells and 5 or more white blood cells per microliter on a cerebral spinal fluid cytospin preparation that is positive for blasts and is considered negative by Steinherz/Bleyer algorithm.",
+                            "codes": [
+                                "ncit:C116838"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "[all_v1.1].[Disease Characteristics].[CNS_DISEASE_STATUS].[CNS2c] skos:exactMatch [all_v2.0].[Diagnosis].[DIAGNOSIS].[CNS2c]"
+                            ]
+                        },
+                        "CNS3a": {
+                            "description": "The status of central nervous system leukemia at diagnosis, where there are less than 10 red blood cells and 5 or more white blood cells per microliter on a cerebral spinal fluid cytospin preparation that is positive for blasts.",
+                            "codes": [
+                                "ncit:C116840"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "[all_v1.1].[Disease Characteristics].[CNS_DISEASE_STATUS].[CNS3a] skos:exactMatch [all_v2.0].[Diagnosis].[DIAGNOSIS].[CNS3a]"
+                            ]
+                        },
+                        "CNS3b": {
+                            "description": "The status of central nervous system leukemia at diagnosis, where there are 10 or more red blood cells and 5 or more white blood cells per microliter on a cerebral spinal fluid cytospin preparation that is considered positive by Steinherz/Bleyer algorithm.",
+                            "codes": [
+                                "ncit:C116841"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "[all_v1.1].[Disease Characteristics].[CNS_DISEASE_STATUS].[CNS3b] skos:exactMatch [all_v2.0].[Diagnosis].[DIAGNOSIS].[CNS3b]"
+                            ]
+                        },
+                        "CNS3c": {
+                            "description": "The status of central nervous system leukemia at diagnosis, where there are clinical signs of central system leukemia (such as facial nerve palsy, brain/eye involvement, or hypothalamic syndrome).",
+                            "codes": [
+                                "ncit:C116843"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "[all_v1.1].[Disease Characteristics].[CNS_DISEASE_STATUS].[CNS3c] skos:exactMatch [all_v2.0].[Diagnosis].[DIAGNOSIS].[CNS3c]"
+                            ]
+                        },
+                        "Unknown": {
+                            "description": "Reported as unknown by the data contributor.",
+                            "codes": [
+                                "ncit:C17998"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "[all_v1.1].[Disease Characteristics].[CNS_DISEASE_STATUS].[Unknown] skos:exactMatch [all_v2.0].[Diagnosis].[DIAGNOSIS].[Unknown]"
+                            ]
+                        },
+                        "Not Reported": {
+                            "description": "Not provided or available.",
+                            "codes": [
+                                "ncit:C43234"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "[all_v1.1].[Disease Characteristics].[CNS_DISEASE_STATUS].[Not Reported] skos:exactMatch [all_v2.0].[Diagnosis].[DIAGNOSIS].[Not Reported]"
+                            ]
+                        }
+                    }
+                },
+                "HIST_ICD_O_MORPH": {
+                    "type": "String",
+                    "tier": "Optional",
+                    "description": "Codes for the histologic type of the tumor being reported using ICD-O.",
+                    "codes": [
+                        "ncit:C176985"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": []
+                }
+            },
+            "disease_site_assessment": {
+                "HONEST_BROKER_SUBJECT_ID": {
+                    "type": "String",
+                    "tier": "",
+                    "description": "The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a \"re-identification code\"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.",
+                    "codes": [
+                        "ncit:C168949"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ]
+                },
+                "AGE_AT_SITE_ASSESSMENT": {
+                    "type": "Integer",
+                    "tier": "Optional",
+                    "description": "",
+                    "codes": [
+                        "ncit:C175004"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ]
+                },
+                "TIME_PERIOD_SUBMITTER_ID": {
+                    "type": "String",
+                    "tier": "",
+                    "description": "This is the SUBMITTER_ID of the time period (defined in the \"Time Period\" table) during which this observation takes place.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ]
+                },
+                "SITE": {
+                    "type": "Enum",
+                    "tier": "Mandatory",
+                    "description": "The anatomic site of the disease.",
+                    "codes": [
+                        "ncit:C173263"
+                    ],
+                    "implementation_notes": [
+                        "Note: If multiple sites of disease involvement, include one observation per site."
+                    ],
+                    "mappings": [
+                        "[all_v1.1].[Disease Characteristics].[DISEASE_SITE] skos:exactMatch [all_v2.0].[Disease Site Assessment].[SITE]"
+                    ],
+                    "permissible_values": {
+                        "Bone Marrow": {
+                            "description": "The tissue occupying the spaces of bone. It consists of blood vessel sinuses and a network of hematopoietic cells which give rise to the red cells, white cells, and megakaryocytes.",
+                            "codes": [
+                                "ncit:C12431"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Central Nervous System": {
+                            "description": "The part of the nervous system that consists of the brain, spinal cord, and meninges.",
+                            "codes": [
+                                "ncit:C12438"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Testes": {
+                            "description": "Either of the paired male reproductive glands that produce the male germ cells and the male hormones.",
+                            "codes": [
+                                "ncit:C12412"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Mediastinum": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "Other": {
+                            "description": "Different than the one(s) previously specified or mentioned.",
+                            "codes": [
+                                "ncit:C17649"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "Reported as unknown by the data contributor.",
+                            "codes": [
+                                "ncit:C17998"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Reported": {
+                            "description": "Not provided or available.",
+                            "codes": [
+                                "ncit:C43234"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "BULKY_MASS": {
+                    "type": "Enum",
+                    "tier": "Optional",
+                    "description": "When the maximum width of a mass is equal or greater than one-third of the internal transverse diameter of the thorax at the level of T5/6 on a PA CXR. Bulk at an alternate site is defined as any mass measuring 10 cm or more by any imaging study.",
+                    "codes": [
+                        "ncit:C178075"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "[all_v1.1].[Disease Characteristics].[BULK_MED_MASS] skos:exactMatch [all_v2.0].[Disease Site Assessment].[BULKY_MASS]"
+                    ],
+                    "permissible_values": {
+                        "Yes": {
+                            "description": "The affirmative response to a question.",
+                            "codes": [
+                                "ncit:C49488"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "No": {
+                            "description": "The non-affirmative response to a question.",
+                            "codes": [
+                                "ncit:C49487"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "Reported as unknown by the data contributor.",
+                            "codes": [
+                                "ncit:C17998"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Reported": {
+                            "description": "Not provided or available.",
+                            "codes": [
+                                "ncit:C43234"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                }
+            },
+            "disease_characteristics": {
+                "PRIOR_STEROIDS_WEEK": {
+                    "type": "Enum",
+                    "tier": "Mandatory",
+                    "description": "The subject received steroids within one week prior to diagnosis of the disease phase.",
+                    "codes": [
+                        "ncit:C178076"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "No": {
+                            "description": "The non-affirmative response to a question.",
+                            "codes": [
+                                "ncit:C49487"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Yes": {
+                            "description": "The affirmative response to a question.",
+                            "codes": [
+                                "ncit:C49488"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "Reported as unknown by the data contributor.",
+                            "codes": [
+                                "ncit:C17998"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Reported": {
+                            "description": "Not provided or available.",
+                            "codes": [
+                                "ncit:C43234"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "PRIOR_STEROIDS_MONTH": {
+                    "type": "Enum",
+                    "tier": "Mandatory",
+                    "description": "The subject received steroids within one month prior to diagnosis of the disease phase.",
+                    "codes": [
+                        "ncit:C178077"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "No": {
+                            "description": "The non-affirmative response to a question.",
+                            "codes": [
+                                "ncit:C49487"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Yes": {
+                            "description": "The affirmative response to a question.",
+                            "codes": [
+                                "ncit:C49488"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "Reported as unknown by the data contributor.",
+                            "codes": [
+                                "ncit:C17998"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Reported": {
+                            "description": "Not provided or available.",
+                            "codes": [
+                                "ncit:C43234"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                }
+            }
+        },
         "treatment": {
             "radiation_therapy": {
+                "HONEST_BROKER_SUBJECT_ID": {
+                    "type": "String",
+                    "tier": "1 - contributors must include, regardless of the resource cost",
+                    "description": "The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a \"re-identification code\"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.",
+                    "codes": [
+                        "ncit:C168949"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ]
+                },
                 "AGE_AT_RT_START": {
-                    "type": "Number",
+                    "type": "Integer",
                     "tier": "Mandatory",
                     "description": "Age of subject (in days) at the start of radiation therapy.",
                     "codes": [
@@ -3060,7 +2879,7 @@
                     "mappings": []
                 },
                 "AGE_AT_RT_END": {
-                    "type": "Number",
+                    "type": "Integer",
                     "tier": "Mandatory",
                     "description": "Age of subject (in days) at the end of radiation therapy.",
                     "codes": [
@@ -3069,15 +2888,67 @@
                     "implementation_notes": [],
                     "mappings": []
                 },
-                "RT_SITE": {
-                    "type": "Code",
+                "PROTOCOL_RADIATION_THERAPY": {
+                    "type": "Enum",
+                    "tier": "3 - contributors shouldn\u2019t prioritize inclusion, but can include if resources are available",
+                    "description": "Was this radiation therapy administration part of the treatment protocol?",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "[all_v1.1].[Non-Protocol Therapy].[NPT_TYPE].[Radiation Therapy] skos:closeMatch [all_v2.0].[Radiation Therapy].[PROTOCOL_RADIATION_THERAPY].[No]"
+                    ],
+                    "permissible_values": {
+                        "Yes": {
+                            "description": "The affirmative response to a question.",
+                            "codes": [
+                                "ncit:C49488"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "No": {
+                            "description": "The non-affirmative response to a question.",
+                            "codes": [
+                                "ncit:C49487"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "NON_PROTOCOL_TIMING": {
+                    "type": "Enum",
+                    "tier": "3 - contributors shouldn\u2019t prioritize inclusion, but can include if resources are available",
+                    "description": "A description of the timing of when the non-protocol therapy was received.",
+                    "codes": [
+                        "ncit:C175038"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "[all_v1.1].[Non-Protocol Therapy].[NPT_TIMING] skos:narrowMatch [all_v2.0].[Radiation Therapy].[NON_PROTOCOL_TIMING]"
+                    ],
+                    "permissible_values": {
+                        "After Study Completion": {
+                            "description": "The time period after the completion of the study.",
+                            "codes": [
+                                "ncit:C175040"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "SITE": {
+                    "type": "Enum",
                     "tier": "Mandatory",
                     "description": "The anatomic site of the radiation therapy.",
                     "codes": [
                         "ncit:C173281"
                     ],
                     "implementation_notes": [],
-                    "mappings": [],
+                    "mappings": [
+                        "[all_v1.1].[Radiation Therapy].[RT_SITE] skos:exactMatch [all_v2.0].[Radiation Therapy].[SITE]"
+                    ],
                     "permissible_values": {
                         "Cranium": {
                             "description": "The bones that form the head, made up of the bones of the braincase and face.",
@@ -3115,8 +2986,20 @@
                 }
             },
             "stem_cell_transplant": {
+                "HONEST_BROKER_SUBJECT_ID": {
+                    "type": "String",
+                    "tier": "1 - contributors must include, regardless of the resource cost",
+                    "description": "The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a \"re-identification code\"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.",
+                    "codes": [
+                        "ncit:C168949"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ]
+                },
                 "AGE_AT_SCT": {
-                    "type": "Number",
+                    "type": "Integer",
                     "tier": "Optional",
                     "description": "Age of subject (in days) at the time of stem-cell transplantation.",
                     "codes": [
@@ -3125,8 +3008,76 @@
                     "implementation_notes": [],
                     "mappings": []
                 },
+                "TIME_PERIOD_SUBMITTER_ID": {
+                    "type": "String",
+                    "tier": "3 - contributors shouldn\u2019t prioritize inclusion, but can include if resources are available",
+                    "description": "This is the SUBMITTER_ID of the time period (defined in the \"Time Period\" table) during which this observation takes place.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ]
+                },
+                "PROTOCOL_SCT": {
+                    "type": "Enum",
+                    "tier": "3 - contributors shouldn\u2019t prioritize inclusion, but can include if resources are available",
+                    "description": "Was this stem cell transplant part of the treatment protocol?",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ],
+                    "permissible_values": {
+                        "Yes": {
+                            "description": "The affirmative response to a question.",
+                            "codes": [
+                                "ncit:C49488"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "No": {
+                            "description": "The non-affirmative response to a question.",
+                            "codes": [
+                                "ncit:C49487"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "NON_PROTOCOL_TIMING": {
+                    "type": "Enum",
+                    "tier": "3 - contributors shouldn\u2019t prioritize inclusion, but can include if resources are available",
+                    "description": "A description of the timing of when the non-protocol therapy was received.",
+                    "codes": [
+                        "ncit:C175038"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ],
+                    "permissible_values": {
+                        "After Study Completion": {
+                            "description": "The time period after the completion of the study.",
+                            "codes": [
+                                "ncit:C175040"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Prior to Study": {
+                            "description": "The time period before the study.",
+                            "codes": [
+                                "ncit:C175039"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
                 "SCT_TYPE": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "Optional",
                     "description": "Stem Cell Transplantion Type",
                     "codes": [
@@ -3135,13 +3086,33 @@
                     "implementation_notes": [],
                     "mappings": [],
                     "permissible_values": {
-                        "Autologous": {
-                            "description": "Stem cell transfer or transplantation in which the patient is his own donor.",
+                        "Autologous, Single": {
+                            "description": "An autologous stem cell transplant performed once. In this procedure, a patient's own stem cells are collected, stored, and then reinfused after intensive chemotherapy or radiation therapy. The purpose is to restore the bone marrow and blood cell production that the aggressive treatment has destroyed.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "Autologous, Tandem": {
+                            "description": "Therapy that combines cytoreductive-therapy from high-dose therapy and autologous hematopoietic cell transplantation with adoptive immunotherapy (from autologous hematopoietic cell transplantation) as a treatment strategy for multiple myeloma.",
                             "codes": [
-                                "ncit:C16039"
+                                "ncit:C116466"
                             ],
                             "implementation_notes": [],
-                            "mappings": []
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "Autologous, NOS": {
+                            "description": "Stem cell transfer or transplantation in which the patient is their own donor.",
+                            "codes": [
+                                "ncit:C201465"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "[all_v1.1].[Stem Cell Transplant].[SCT_TYPE].[Autologous] skos:exactMatch [all_v2.0].[Stem Cell Transplant].[SCT_TYPE].[Autologous, NOS]"
+                            ]
                         },
                         "Allogeneic": {
                             "description": "A clinical treatment in which hematopoietic stem cells (HSCs) are transferred from one genetically dissimilar individual to another.",
@@ -3169,15 +3140,17 @@
                         }
                     }
                 },
-                "SCT_SOURCE": {
-                    "type": "Code",
+                "STEM_CELL_SOURCE": {
+                    "type": "Enum",
                     "tier": "Optional",
                     "description": "Stem Cell Transplantion Type",
                     "codes": [
                         "ncit:C168864"
                     ],
                     "implementation_notes": [],
-                    "mappings": [],
+                    "mappings": [
+                        "[all_v1.1].[Stem Cell Transplant].[SCT_SOURCE] skos:exactMatch [all_v2.0].[Stem Cell Transplant].[STEM_CELL_SOURCE]"
+                    ],
                     "permissible_values": {
                         "Bone Marrow": {
                             "description": "The tissue occupying the spaces of bone. It consists of blood vessel sinuses and a network of hematopoietic cells which give rise to the red cells, white cells, and megakaryocytes.",
@@ -3229,15 +3202,17 @@
                         }
                     }
                 },
-                "SCT_DONOR_RELATIONSHIP": {
-                    "type": "Code",
+                "DONOR_RELATIONSHIP": {
+                    "type": "Enum",
                     "tier": "Optional",
                     "description": "Stem Cell Transplant Donor Relationship",
                     "codes": [
                         "ncit:C168870"
                     ],
                     "implementation_notes": [],
-                    "mappings": [],
+                    "mappings": [
+                        "[all_v1.1].[Stem Cell Transplant].[SCT_DONOR_RELATIONSHIP] skos:exactMatch [all_v2.0].[Stem Cell Transplant].[DONOR_RELATIONSHIP]"
+                    ],
                     "permissible_values": {
                         "Biological Sibling": {
                             "description": "A person's brother or sister with whom they share a genetic makeup inherited from one or both of their shared biological parents.",
@@ -3290,7 +3265,7 @@
                     }
                 },
                 "HLA_MATCH": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "Optional",
                     "description": "A process in which blood or tissue samples are analyzed to determine their human leukocyte antigen (HLA) profiles so that transplant materials can be transferred into a patient with the same or similar profile.",
                     "codes": [
@@ -3334,7 +3309,7 @@
                     }
                 },
                 "NUMBER_HLA": {
-                    "type": "Number",
+                    "type": "Integer",
                     "tier": "Optional",
                     "description": "The number of human leukocyte antigens that were evaluated.",
                     "codes": [
@@ -3344,7 +3319,7 @@
                     "mappings": []
                 },
                 "NUMBER_MATCHES": {
-                    "type": "Number",
+                    "type": "Integer",
                     "tier": "Optional",
                     "description": "The number of human leukocyte antigens that matched between the donor and the recipient.",
                     "codes": [
@@ -3353,15 +3328,17 @@
                     "implementation_notes": [],
                     "mappings": []
                 },
-                "SCT_CONDITIONING_TYPE": {
-                    "type": "Code",
+                "CONDITIONING_TYPE": {
+                    "type": "Enum",
                     "tier": "Optional",
                     "description": "Type of conditioning the subject received prior to stem-cell transplantation.",
                     "codes": [
                         "ncit:C169014"
                     ],
                     "implementation_notes": [],
-                    "mappings": [],
+                    "mappings": [
+                        "[all_v1.1].[Stem Cell Transplant].[SCT_CONDITIONING_TYPE] skos:exactMatch [all_v2.0].[Stem Cell Transplant].[CONDITIONING_TYPE]"
+                    ],
                     "permissible_values": {
                         "Myeloablative": {
                             "description": "A conditioning regimen with high doses of chemotherapy or radiation to eliminate host hematopoietic stem cells prior to restitution via transplantation.",
@@ -3413,15 +3390,17 @@
                         }
                     }
                 },
-                "SCT_TBI": {
-                    "type": "Code",
+                "PRIOR_TBI": {
+                    "type": "Enum",
                     "tier": "Mandatory",
                     "description": "A therapeutic procedure that involves the irradiation of the whole body with ionizing or non-ionizing radiation.",
                     "codes": [
                         "ncit:C15350"
                     ],
                     "implementation_notes": [],
-                    "mappings": [],
+                    "mappings": [
+                        "[all_v1.1].[Stem Cell Transplant].[SCT_TBI] skos:exactMatch [all_v2.0].[Stem Cell Transplant].[PRIOR_TBI]"
+                    ],
                     "permissible_values": {
                         "No": {
                             "description": "The non-affirmative response to a question.",
@@ -3457,96 +3436,24 @@
                         }
                     }
                 }
-            },
-            "non-protocol_therapy": {
-                "NPT_TIMING": {
-                    "type": "Code",
-                    "tier": "Optional",
-                    "description": "A description of the timing of when the non-protocol therapy was received.",
-                    "codes": [
-                        "ncit:C175038"
-                    ],
-                    "implementation_notes": [],
-                    "mappings": [],
-                    "permissible_values": {
-                        "After Study Completion": {
-                            "description": "A description of the timing of when the non-protocol therapy was received.",
-                            "codes": [
-                                "ncit:C175040"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        }
-                    }
-                },
-                "NPT_TYPE": {
-                    "type": "Code",
-                    "tier": "Optional",
-                    "description": "The type of therapy that the patient received outside of the protocol.",
-                    "codes": [
-                        "ncit:C175041"
-                    ],
-                    "implementation_notes": [
-                        "Note: If multiple non-protocol therapies, include one observation per therapy."
-                    ],
-                    "mappings": [],
-                    "permissible_values": {
-                        "Chemotherapy": {
-                            "description": "The type of therapy that the patient received outside of the protocol.",
-                            "codes": [
-                                "ncit:C15632"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Radiation Therapy": {
-                            "description": "Treatment of a disease by means of exposure of the target or the whole body to radiation. Radiation therapy is often used as part of curative therapy and occasionally as a component of palliative treatment for cancer. Other uses include total body irradiation prior to transplantation.",
-                            "codes": [
-                                "ncit:C15313"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Stem Cell Transplant": {
-                            "description": "A therapeutic procedure that involves the transplantation of hematopoietic stem cells, either with the patient as their own donor or from a donor to a patient. This can be used for treatment of malignant and non-malignant diseases.",
-                            "codes": [
-                                "ncit:C15431"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Surgery": {
-                            "description": "The branch of medical science that treats disease or injury by operative procedures.",
-                            "codes": [
-                                "ncit:C17173"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Immunotherapy": {
-                            "description": "Therapy designed to induce changes in a patient's immune status in order to treat disease.",
-                            "codes": [
-                                "ncit:C15262"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Other": {
-                            "description": "Different than the one(s) previously specified or mentioned.",
-                            "codes": [
-                                "ncit:C17649"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        }
-                    }
-                }
             }
         },
         "response": {
             "minimal_residual_disease": {
+                "HONEST_BROKER_SUBJECT_ID": {
+                    "type": "String",
+                    "tier": "1 - contributors must include, regardless of the resource cost",
+                    "description": "The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a \"re-identification code\"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.",
+                    "codes": [
+                        "ncit:C168949"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ]
+                },
                 "AGE_AT_MRD_ASSESSMENT": {
-                    "type": "Number",
+                    "type": "Integer",
                     "tier": "Mandatory",
                     "description": "Age of subject (in days) at assessment of minimal residual disease.",
                     "codes": [
@@ -3555,56 +3462,62 @@
                     "implementation_notes": [],
                     "mappings": []
                 },
-                "MRD_METHOD": {
-                    "type": "Code",
-                    "tier": "Mandatory",
+                "METHOD": {
+                    "type": "Enum",
+                    "tier": "2 - contributors should prioritize inclusion if resources are available",
                     "description": "Modality used to determine minimal residual disease.",
                     "codes": [
                         "ncit:C168933"
                     ],
                     "implementation_notes": [],
-                    "mappings": [],
+                    "mappings": [
+                        "[all_v1.1].[Minimal Residual Disease].[MRD_METHOD] skos:exactMatch [all_v2.0].[Minimal Residual Disease].[METHOD]"
+                    ],
                     "permissible_values": {
-                        "Flow Cytometry": {
+                        "Flow Cytometry, Different-From-Normal": {
+                            "description": "The use of flow cytometry to detect whether material or cells in a sample or specimen is sorted differently than a normal control analyte.",
+                            "codes": [
+                                "ncit:C168956"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "Flow Cytometry, Leukemia-Associated Immunophenotypes": {
+                            "description": "A technique with leukemia-associated immunophenotypes for counting, examining or sorting microscopic particles suspended in a stream of fluid based on tagging the population of interest with antibody-based reagents.",
+                            "codes": [
+                                "ncit:C168812"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "[all_v1.1].[Minimal Residual Disease].[FLOW_CYTOMETRY_TYPE].[Leukemia-Associated Immunophenotypes] skos:exactMatch [all_v2.0].[Minimal Residual Disease].[METHOD].[Flow Cytometry, Leukemia-Associated Immunophenotypes]"
+                            ]
+                        },
+                        "Flow Cytometry, NOS": {
                             "description": "A technique for counting, examining and sorting microscopic particles suspended in a stream of fluid.",
                             "codes": [
                                 "ncit:C16585"
                             ],
                             "implementation_notes": [],
-                            "mappings": []
+                            "mappings": [
+                                "[all_v1.1].[Minimal Residual Disease].[MRD_METHOD].[Flow Cytometry] skos:exactMatch [all_v2.0].[Minimal Residual Disease].[METHOD].[Flow Cytometry, NOS]"
+                            ]
                         },
-                        "Molecular Real-Time Quantitative Polymerase Chain Reaction": {
+                        "Molecular Real-time Quantitative PCR": {
                             "description": "An application of PCR that measures the products generated during each cycle of the polymerase chain reaction process in order to determine the starting amount of template in the reaction.",
                             "codes": [
                                 "ncit:C51962"
                             ],
                             "implementation_notes": [],
-                            "mappings": []
+                            "mappings": [
+                                "[all_v1.1].[Minimal Residual Disease].[MRD_METHOD].[Molecular Real-Time Quantitative Polymerase Chain Reaction] skos:exactMatch [all_v2.0].[Minimal Residual Disease].[METHOD].[Molecular Real-time Quantitative PCR]"
+                            ]
                         },
                         "Next Generation Sequencing": {
                             "description": "Technologies that facilitate the rapid determination of the nucleotide sequence of large numbers of strands or segments of DNA or RNA.",
                             "codes": [
                                 "ncit:C101293"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        }
-                    }
-                },
-                "FLOW_CYTOMETRY_TYPE": {
-                    "type": "Code",
-                    "tier": "Mandatory",
-                    "description": "The classification, nature or purpose for a flow cytometry assay.",
-                    "codes": [
-                        "ncit:C173732"
-                    ],
-                    "implementation_notes": [],
-                    "mappings": [],
-                    "permissible_values": {
-                        "Leukemia-Associated Immunophenotypes": {
-                            "description": "A technique with leukemia-associated immunophenotypes for counting, examining or sorting microscopic particles suspended in a stream of fluid based on tagging the population of interest with antibody-based reagents.",
-                            "codes": [
-                                "ncit:C168812"
                             ],
                             "implementation_notes": [],
                             "mappings": []
@@ -3627,35 +3540,47 @@
                         }
                     }
                 },
-                "MRD_RESULT": {
+                "RESULT_TEXT": {
                     "type": "String",
-                    "tier": "Mandatory",
-                    "description": "An assessment of the minimal residual disease response to therapy.",
+                    "tier": "2 - contributors should prioritize inclusion if resources are available",
+                    "description": "The string/text result of the minimal residual disease test.",
                     "codes": [
                         "ncit:C124433"
                     ],
-                    "implementation_notes": [],
-                    "mappings": []
+                    "implementation_notes": [
+                        "Note: String result can include anything that is not a single numeric result, i.e. \"Positive\", \"Negative\", \"Present\", \"Absent\", \"Yes\", \"No\", \"Elevated,\" \"Depressed\", \"Above threshold\", \"Below threshold\", ranges, as well as bucketed categories, etc... Note: Only fill in this variable when the available data is anything EXCEPT a single numeric value, and include the entire available data as a string, including units if applicable"
+                    ],
+                    "mappings": [
+                        "[all_v1.1].[Minimal Residual Disease].[MRD_RESULT] skos:exactMatch [all_v2.0].[Minimal Residual Disease].[RESULT_TEXT]"
+                    ]
                 },
-                "MRD_RESULT_NUMERIC": {
-                    "type": "Number",
-                    "tier": "Mandatory",
-                    "description": "Minimal residual disease value expressed as a percent, fraction or ratio.",
+                "RESULT_NUMERIC": {
+                    "type": "Decimal",
+                    "tier": "2 - contributors should prioritize inclusion if resources are available",
+                    "description": "The numeric result of the minimal residual disease.",
                     "codes": [
                         "ncit:C168951"
                     ],
-                    "implementation_notes": [],
-                    "mappings": []
+                    "implementation_notes": [
+                        "Note: Only fill in this variable if the available data is a single numeric value."
+                    ],
+                    "mappings": [
+                        "[all_v1.1].[Minimal Residual Disease].[MRD_RESULT_NUMERIC] skos:exactMatch [all_v2.0].[Minimal Residual Disease].[RESULT_NUMERIC]"
+                    ]
                 },
-                "MRD_RESULT_UNIT": {
-                    "type": "Code",
-                    "tier": "Mandatory",
-                    "description": "The unit of the minimal residual disease result.",
+                "RESULT_UNIT": {
+                    "type": "Enum",
+                    "tier": "2 - contributors should prioritize inclusion if resources are available",
+                    "description": "The units used for the numeric result of the minimal residual disease test.",
                     "codes": [
                         "ncit:C173304"
                     ],
-                    "implementation_notes": [],
-                    "mappings": [],
+                    "implementation_notes": [
+                        "Note: Only fill in this variable if a numeric result is provided in MRD_RESULT_NUMERIC."
+                    ],
+                    "mappings": [
+                        "[all_v1.1].[Minimal Residual Disease].[MRD_RESULT_UNIT] skos:exactMatch [all_v2.0].[Minimal Residual Disease].[RESULT_UNIT]"
+                    ],
                     "permissible_values": {
                         "%": {
                             "description": "A unit for expressing a number as a fraction of hundred (on the basis of a rate or proportion per hundred).",
@@ -3670,9 +3595,7 @@
                             "codes": [
                                 "ncit:C17998"
                             ],
-                            "implementation_notes": [
-                                "Note: Only fill in this variable if a numeric result is provided in MRD_RESULT_NUMERIC."
-                            ],
+                            "implementation_notes": [],
                             "mappings": []
                         },
                         "Not Reported": {
@@ -3685,46 +3608,42 @@
                         }
                     }
                 },
-                "MRD_SENSITIVTY": {
-                    "type": "Number",
-                    "tier": "Mandatory",
+                "SENSITIVITY": {
+                    "type": "Decimal",
+                    "tier": "2 - contributors should prioritize inclusion if resources are available",
                     "description": "Sensitivity of modality used to determine minimal residual disease.",
                     "codes": [
                         "ncit:C168957"
                     ],
                     "implementation_notes": [],
-                    "mappings": []
+                    "mappings": [
+                        "[all_v1.1].[Minimal Residual Disease].[MRD_SENSITIVTY] skos:exactMatch [all_v2.0].[Minimal Residual Disease].[SENSITIVITY]"
+                    ]
                 },
-                "MRD_SAMPLE_SOURCE": {
-                    "type": "Code",
-                    "tier": "Mandatory",
+                "SPECIMEN": {
+                    "type": "Enum",
+                    "tier": "2 - contributors should prioritize inclusion if resources are available",
                     "description": "Source of sample used for minimal residual disease assessment.",
                     "codes": [
                         "ncit:C168958"
                     ],
                     "implementation_notes": [],
-                    "mappings": [],
+                    "mappings": [
+                        "[all_v1.1].[Minimal Residual Disease].[MRD_SAMPLE_SOURCE] skos:exactMatch [all_v2.0].[Minimal Residual Disease].[SPECIMEN]"
+                    ],
                     "permissible_values": {
-                        "Bone Marrow": {
-                            "description": "A biological sample containing components collected from bone marrow of an experimental subject.",
-                            "codes": [
-                                "ncit:C164009"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
                         "Blood": {
                             "description": "A small volume of blood removed for testing or storage.",
                             "codes": [
-                                "ncit:C41067"
+                                "ncit:C17610"
                             ],
                             "implementation_notes": [],
                             "mappings": []
                         },
-                        "Other": {
-                            "description": "Different than the one(s) previously specified or mentioned.",
+                        "Bone Marrow": {
+                            "description": "The tissue occupying the spaces of bone. It consists of blood vessel sinuses and a network of hematopoietic cells which give rise to the red cells, white cells, and megakaryocytes.",
                             "codes": [
-                                "ncit:C17649"
+                                "ncit:C12431"
                             ],
                             "implementation_notes": [],
                             "mappings": []
@@ -3752,7 +3671,7 @@
         "events": {
             "adverse_events": {
                 "AGE_AT_AE": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "Mandatory",
                     "description": "Age of subject (in days) at the onset of the adverse event.",
                     "codes": [
@@ -3773,7 +3692,7 @@
                     "mappings": []
                 },
                 "AE_SYSTEM": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "Mandatory",
                     "description": "The name of the system used to grade the adverse events.",
                     "codes": [
@@ -3835,7 +3754,7 @@
                     "mappings": []
                 },
                 "AE_GRADE": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "Mandatory",
                     "description": "A numeric value corresponding to the degree of severity of an adverse event.",
                     "codes": [
@@ -3903,7 +3822,7 @@
                     }
                 },
                 "AE_ATTRIBUTION": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "Optional",
                     "description": "A specific identifiable level (defined qualitatively or quantitatively) of probability of adverse event being caused or associated with the product or procedure administration to a patient.",
                     "codes": [
@@ -3971,7 +3890,7 @@
                     }
                 },
                 "AVN_JOINT": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "Optional",
                     "description": "Death of bone tissue in a joint due to temporary or permanent interruption of blood flow.",
                     "codes": [
@@ -4065,7 +3984,7 @@
                     }
                 },
                 "AVN_JOINT_LATERALITY": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "Optional",
                     "description": "A finding descriptive of the laterality of the avascular necrosis in the joints.",
                     "codes": [
@@ -4109,7 +4028,7 @@
                     }
                 },
                 "AVN_METHOD": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "Optional",
                     "description": "The method used to determine the diagnosis of the avascular necrosis.",
                     "codes": [
@@ -4161,7 +4080,7 @@
                     }
                 },
                 "ORTHOPEDIC_PROCEDURE": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "Optional",
                     "description": "Orthopedic procedures to repair avascular necrosis.",
                     "codes": [
@@ -4239,7 +4158,7 @@
                     }
                 },
                 "AE_PATHOGEN": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "Optional",
                     "description": "The pathogen identified as the agent causing the adverse event.",
                     "codes": [
@@ -4301,7 +4220,7 @@
                     }
                 },
                 "INFECTION_CLASSIFICATION": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "Optional",
                     "description": "The type of evidence regarding the infection type.",
                     "codes": [
@@ -4337,36 +4256,108 @@
                     }
                 }
             },
-            "secondary_malignant_neoplasm": {
+            "subsequent_malignant_neoplasm": {
+                "HONEST_BROKER_SUBJECT_ID": {
+                    "type": "String",
+                    "tier": "1 - contributors must include, regardless of the resource cost",
+                    "description": "The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a \"re-identification code\"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.",
+                    "codes": [
+                        "ncit:C168949"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ]
+                },
                 "AGE_AT_SMN": {
-                    "type": "Number",
-                    "tier": "Mandatory",
-                    "description": "Age in Days at Secondary Malignant Neoplasm",
+                    "type": "Integer",
+                    "tier": "2 - contributors should prioritize inclusion if resources are available",
+                    "description": "The age (in days) of subject at the diagnosis of the subsequent malignant neoplasm.",
                     "codes": [
                         "ncit:C168860"
                     ],
                     "implementation_notes": [],
                     "mappings": []
                 },
-                "SMN_ICD_O_MORPH": {
+                "MORPH_CODE": {
                     "type": "String",
-                    "tier": "Mandatory",
-                    "description": "SMN ICD-O Morphology Code",
-                    "codes": [
-                        "ncit:C168862"
-                    ],
+                    "tier": "2 - contributors should prioritize inclusion if resources are available",
+                    "description": "The morphology code describes the cell type of the tumor and its biologic activity.",
+                    "codes": [],
                     "implementation_notes": [],
-                    "mappings": []
+                    "mappings": [
+                        "[all_v1.1].[Secondary Malignant Neoplasm].[SMN_ICD_O_MORPH] skos:exactMatch [all_v2.0].[Subsequent Malignant Neoplasm].[MORPH_CODE]"
+                    ]
                 },
-                "SMN_ICD_O_TOP": {
-                    "type": "String",
-                    "tier": "Mandatory",
-                    "description": "SMN ICD-O Topography Code",
-                    "codes": [
-                        "ncit:C168863"
-                    ],
+                "MORPH_CODE_SYSTEM": {
+                    "type": "Enum",
+                    "tier": "2 - contributors should prioritize inclusion if resources are available",
+                    "description": "The coding system for the code used in MORPH_CODE.",
+                    "codes": [],
                     "implementation_notes": [],
-                    "mappings": []
+                    "mappings": [
+                        "New VD"
+                    ],
+                    "permissible_values": {
+                        "ICD-O": {
+                            "description": "A code for the primary site of a tumor being reported using either ICD-O-2 or ICD-O-3.",
+                            "codes": [
+                                "ncit:C160903"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "MORPH_CODE_SYSTEM_VERSION": {
+                    "type": "String",
+                    "tier": "2 - contributors should prioritize inclusion if resources are available",
+                    "description": "The version of the coding system indicated in MORPH_CODE_SYSTEM.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ]
+                },
+                "TOP_CODE": {
+                    "type": "String",
+                    "tier": "2 - contributors should prioritize inclusion if resources are available",
+                    "description": "The topography code describes the site of origin of the neoplasm.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "[all_v1.1].[Secondary Malignant Neoplasm].[SMN_ICD_O_TOP] skos:exactMatch [all_v2.0].[Subsequent Malignant Neoplasm].[TOP_CODE]"
+                    ]
+                },
+                "TOP_CODE_SYSTEM": {
+                    "type": "Enum",
+                    "tier": "2 - contributors should prioritize inclusion if resources are available",
+                    "description": "The coding system for the code used in TOP_CODE.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ],
+                    "permissible_values": {
+                        "ICD-O": {
+                            "description": "A code for the primary site of a tumor being reported using either ICD-O-2 or ICD-O-3.",
+                            "codes": [
+                                "ncit:C160903"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "TOP_CODE_SYSTEM_VERSION": {
+                    "type": "String",
+                    "tier": "2 - contributors should prioritize inclusion if resources are available",
+                    "description": "The version of the coding system indicated in TOP_CODE_SYSTEM.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ]
                 }
             }
         }
