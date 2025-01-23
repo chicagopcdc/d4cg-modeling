@@ -79,6 +79,24 @@ Added concepts:
 
 >[Minimal Residual Disease].[METHOD].[Flow Cytometry, Different-From-Normal]
 
+>[Adverse Events].[HONEST_BROKER_SUBJECT_ID]
+
+>[Adverse Events].[TIME_PERIOD_SUBMITTER_ID]
+
+>[Adverse Events].[AGE_AT_AE_RESOLVED]
+
+>[Adverse Events].[ADVERSE_EVENT]
+
+>[Adverse Events].[GRADE_SYSTEM]
+
+>[Adverse Events].[GRADE_SYSTEM_VERSION]
+
+>[Adverse Events].[AE_CODE_SYSTEM].[SNOMED]
+
+>[Adverse Events].[AE_CODE_SYSTEM].[ICD]
+
+>[Adverse Events].[INTERVENTION_STATUS]
+
 >[Subsequent Malignant Neoplasm].[HONEST_BROKER_SUBJECT_ID]
 
 >[Subsequent Malignant Neoplasm].[MORPH_CODE_SYSTEM]
@@ -241,6 +259,12 @@ Modified Concepts:
 >[all_v1.1].[Minimal Residual Disease].[MRD_SENSITIVTY] skos:exactMatch [all_v2.0].[Minimal Residual Disease].[SENSITIVITY]
 
 >[all_v1.1].[Minimal Residual Disease].[MRD_SAMPLE_SOURCE] skos:exactMatch [all_v2.0].[Minimal Residual Disease].[SPECIMEN]
+
+>[all_v1.1].[Adverse Events].[AE_ATTRIBUTION] skos:exactMatch [all_v2.0].[Adverse Events].[ATTRIBUTION]
+
+>[all_v1.1].[Adverse Events].[AVN_METHOD] skos:exactMatch [all_v2.0].[Adverse Events].[DETECTION_METHOD]
+
+>[all_v1.1].[Adverse Events].[ORTHOPEDIC_PROCEDURE] skos:exactMatch [all_v2.0].[Adverse Events].[INTERVENTION]
 
 >[all_v1.1].[Secondary Malignant Neoplasm] skos:exactMatch [all_v2.0].[Subsequent Malignant Neoplasm]
 

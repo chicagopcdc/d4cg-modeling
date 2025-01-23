@@ -1,19 +1,19 @@
 {
     "meta": {
         "name": "all_v2.0",
-        "timestamp": "20250122",
+        "timestamp": "20250123",
         "sheet_id": "1sTygI0GtyaT2C0iZ9YzXTKRnAcELuV2BblaLGPG0EPc"
     },
     "info": {
         "title": "Acute Lymphoblastic Leukemia (ALL) Data Dictionary",
         "name": "all_v2.0",
-        "release_notes": "https://github.com/chicagopcdc/d4cg-modeling/tree/main/pcdc/all/all_v2.0",
+        "release_notes": "",
         "parent_data_model": "pcdc_v2.0",
         "license": "Creative Commons Attribution-NonCommercial 4.0 International License (https://creativecommons.org/licenses/by-nc/4.0/)",
         "wiki": "https://docs.pedscommons.org/",
         "consortium_info": "https://commons.cri.uchicago.edu/pcdc/",
         "description": "The ALL data dictionary is a consensus data schema built by an international group of pediatric acute lymphoblastic leukemia experts and maintained by Data for the Common Good (D4CG) at the University of Chicago in collaboration with the Children's Oncology Group (COG). It is based on the collective requirements of its contributors",
-        "total": 134
+        "total": 141
     },
     "domains": {
         "protocol": {
@@ -3670,20 +3670,131 @@
         },
         "events": {
             "adverse_events": {
+                "HONEST_BROKER_SUBJECT_ID": {
+                    "type": "String",
+                    "tier": "To-do",
+                    "description": "The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a \"re-identification code\"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.",
+                    "codes": [
+                        "ncit:C168949"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ]
+                },
                 "AGE_AT_AE": {
-                    "type": "Enum",
-                    "tier": "Mandatory",
+                    "type": "Number",
+                    "tier": "n/a",
                     "description": "Age of subject (in days) at the onset of the adverse event.",
                     "codes": [
                         "ncit:C172677"
                     ],
                     "implementation_notes": [],
+                    "mappings": []
+                },
+                "AGE_AT_AE_RESOLVED": {
+                    "type": "Integer",
+                    "tier": "To-do",
+                    "description": "The age (in days) of the subject when this adverse event was resolved.",
+                    "codes": [
+                        "ncit:C175043"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ]
+                },
+                "TIME_PERIOD_SUBMITTER_ID": {
+                    "type": "String",
+                    "tier": "To-do",
+                    "description": "This is the SUBMITTER_ID of the time period (defined in the \"Time Period\" table) during which this observation takes place.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ]
+                },
+                "DETECTION_METHOD": {
+                    "type": "Enum",
+                    "tier": "To-do",
+                    "description": "The method used to detect the extent of the disease involvement.",
+                    "codes": [
+                        "ncit:C173262"
+                    ],
+                    "implementation_notes": [],
                     "mappings": [],
-                    "permissible_values": {}
+                    "permissible_values": {
+                        "Bone Scan": {
+                            "description": "A nuclear imaging method used to evaluate pathological bone metabolism.",
+                            "codes": [
+                                "ncit:C17646"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "CT": {
+                            "description": "A method of examining structures within the body by scanning them with X rays and using a computer to construct a series of cross-sectional scans along a single axis.",
+                            "codes": [
+                                "ncit:C17204"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "MRI (NMR)": {
+                            "description": "Imaging that uses radiofrequency waves and a strong magnetic field rather than x-rays to provide detailed pictures of internal organs and tissues. The technique is valuable for the diagnosis of many pathologic conditions, including cancer, heart and vascular disease, stroke, and joint and musculoskeletal disorders.",
+                            "codes": [
+                                "ncit:C16809"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "X-ray": {
+                            "description": "A radiographic procedure using the emission of x-rays to form an image of the structure penetrated by the radiation.",
+                            "codes": [
+                                "ncit:C38101"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "ADVERSE_EVENT": {
+                    "type": "Enum",
+                    "tier": "n/a",
+                    "description": "Any unfavorable or unintended disease, sign, or symptom (including an abnormal laboratory finding) that is temporally associated with the use of a medical treatment or procedure, and that may or may not be considered related to the medical treatment or procedure. Such events can be related to the intervention, dose, route of administration, patient, or caused by an interaction with another drug(s) or procedure(s).",
+                    "codes": [
+                        "ncit:C41331"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Avascular necrosis": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "Reported as unknown by the data contributor.",
+                            "codes": [
+                                "ncit:C17998"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Reported": {
+                            "description": "Not provided or available.",
+                            "codes": [
+                                "ncit:C43234"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
                 },
                 "AE_CODE": {
                     "type": "String",
-                    "tier": "Mandatory",
+                    "tier": "n/a",
                     "description": "The code of the adverse event.",
                     "codes": [
                         "ncit:C173313"
@@ -3691,36 +3802,42 @@
                     "implementation_notes": [],
                     "mappings": []
                 },
-                "AE_SYSTEM": {
+                "AE_CODE_SYSTEM": {
                     "type": "Enum",
-                    "tier": "Mandatory",
+                    "tier": "n/a",
                     "description": "The name of the system used to grade the adverse events.",
                     "codes": [
                         "ncit:C168872"
                     ],
                     "implementation_notes": [],
-                    "mappings": [],
+                    "mappings": [
+                        "[aml_v1.7].[Adverse Events].[AE_SYSTEM] skos:exactMatch [aml_v2.0].[Adverse Events].[AE_CODE_SYSTEM]"
+                    ],
                     "permissible_values": {
+                        "SNOMED": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ICD": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "European Society for Blood and Marrow Transplantation (EBMT)": {
+                            "description": "A non-profit organization established in 1974 to allow scientists and physicians involved in clinical bone marrow transplantations to share experiences and develop co-operative studies.",
+                            "codes": [
+                                "ncit:C168842"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
                         "CTCAE": {
                             "description": "A standard terminology developed to report adverse events occurring in cancer clinical trials. Common terminology criteria for adverse events (CTCAE) are used in study adverse event summaries and Investigational New Drug reports to the Food and Drug Administration. The CTCAE contain a grading scale for each adverse event term representing the severity of the event.",
                             "codes": [
                                 "ncit:C49704"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Balis Neuropathy Scale": {
-                            "description": "An instrument used to grade neurotoxicity occurring in children on a 0-4 scale, where the higher number indicates worse neuropathy.",
-                            "codes": [
-                                "ncit:C178081"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Other": {
-                            "description": "Different than the one(s) previously specified or mentioned.",
-                            "codes": [
-                                "ncit:C17649"
                             ],
                             "implementation_notes": [],
                             "mappings": []
@@ -3745,7 +3862,7 @@
                 },
                 "AE_SYSTEM_VERSION": {
                     "type": "String",
-                    "tier": "Mandatory",
+                    "tier": "n/a",
                     "description": "The version of the adverse event grading system.",
                     "codes": [
                         "ncit:C173314"
@@ -3753,15 +3870,19 @@
                     "implementation_notes": [],
                     "mappings": []
                 },
-                "AE_GRADE": {
+                "GRADE": {
                     "type": "Enum",
-                    "tier": "Mandatory",
+                    "tier": "n/a",
                     "description": "A numeric value corresponding to the degree of severity of an adverse event.",
                     "codes": [
                         "ncit:C166200"
                     ],
-                    "implementation_notes": [],
-                    "mappings": [],
+                    "implementation_notes": [
+                        "Only applicable for CTCAE- or EBMT-coded AEs"
+                    ],
+                    "mappings": [
+                        "[aml_v1.7].[Adverse Events].[AE_GRADE] skos:exactMatch [aml_v2.0].[Adverse Events].[GRADE]"
+                    ],
                     "permissible_values": {
                         "Grade 1": {
                             "description": "An experience that is usually transient, and requires no special treatment or intervention. The event does not generally interfere with usual daily activities. Includes transient laboratory test alterations.",
@@ -3788,9 +3909,9 @@
                             "mappings": []
                         },
                         "Grade 4": {
-                            "description": "Any adverse event that places the patient, in the view of the initial reporter, at immediate risk of death from the adverse event as it occurred, i.e., it does not include an adverse experience that, had it occurred in a more severe form, might have caused death.",
+                            "description": "An adverse event that has life-threatening consequences; for which urgent intervention is indicated; that puts the patient at risk of death at the time of the event if immediate intervention is not undertaken.",
                             "codes": [
-                                "ncit:C41337"
+                                "ncit:C84266"
                             ],
                             "implementation_notes": [],
                             "mappings": []
@@ -3821,84 +3942,60 @@
                         }
                     }
                 },
-                "AE_ATTRIBUTION": {
+                "GRADE_SYSTEM": {
                     "type": "Enum",
-                    "tier": "Optional",
-                    "description": "A specific identifiable level (defined qualitatively or quantitatively) of probability of adverse event being caused or associated with the product or procedure administration to a patient.",
+                    "tier": "2 - contributors should prioritize inclusion if resources are available",
+                    "description": "The grading system used to refer to the severity of the adverse event.",
                     "codes": [
-                        "ncit:C41358"
+                        "ncit:C168872"
                     ],
                     "implementation_notes": [],
-                    "mappings": [],
+                    "mappings": [
+                        "skos:exactMatch [AML].[v1.0].[Adverse Events].[AE_SYSTEM]"
+                    ],
                     "permissible_values": {
-                        "Definite": {
-                            "description": "A characteristic used to qualify the adverse event as certainly related to the medical intervention. According to WHO causality assessment criteria of suspected adverse reactions it is applicable to a clinical event, including laboratory test abnormality, occurring in a plausible time relationship to medical intervention, and which cannot be explained by concurrent disease or other interventions. The response to withdrawal of the medical product (dechallenge) should be clinically plausible. The event must be definitive pharmacologically or phenomenologically, using a satisfactory rechallenge procedure if necessary.",
+                        "Balis Neuropathy Scale": {
+                            "description": "An instrument used to grade neurotoxicity occurring in children on a 0-4 scale, where the higher number indicates worse neuropathy.",
                             "codes": [
-                                "ncit:C53260"
+                                "ncit:C178081"
                             ],
                             "implementation_notes": [],
-                            "mappings": []
+                            "mappings": [
+                                "skos:exactMatch [AML].[v1.0].[Adverse Events].[AE_SYSTEM].[Balis Neuropathy Scale]"
+                            ]
                         },
-                        "Probable": {
-                            "description": "Probable adverse event relationship to study product or procedure is defined when there is a clear-cut temporal association between product or procedure administration and adverse event, and a potential alternative etiology of the event is not apparent.",
+                        "CTCAE": {
+                            "description": "A standard terminology developed to report adverse events occurring in cancer clinical trials. Common terminology criteria for adverse events (CTCAE) are used in study adverse event summaries and Investigational New Drug reports to the Food and Drug Administration. The CTCAE contain a grading scale for each adverse event term representing the severity of the event.",
                             "codes": [
-                                "ncit:C41357"
+                                "ncit:C49704"
                             ],
                             "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Possible": {
-                            "description": "A characteristic indicating that an adverse event may be related to the medical intervention. According to WHO causality assessment criteria of suspected adverse reactions it is applicable to a clinical event, including laboratory test abnormality, with a reasonable time sequence to administration of the drug, but which could also be explained by concurrent disease or other drugs or chemicals. Information on drug withdrawal may be lacking or unclear.",
-                            "codes": [
-                                "ncit:C53258"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Unlikely": {
-                            "description": "A characteristic used to qualify the adverse event as unlikely related to the medical intervention. According to WHO causality assessment criteria of suspected adverse reactions it is applicable to a clinical event, including laboratory test abnormality, with a temporal relationship to the medical intervention which makes a causal relationship improbable, and in which other interventions or underlying disease provide plausible explanations.",
-                            "codes": [
-                                "ncit:C53257"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Unrelated": {
-                            "description": "A characteristic used to qualify the adverse event as clearly not related to the medical intervention.",
-                            "codes": [
-                                "ncit:C53256"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Unknown": {
-                            "description": "Reported as unknown by the data contributor.",
-                            "codes": [
-                                "ncit:C17998"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Not Reported": {
-                            "description": "Not provided or available.",
-                            "codes": [
-                                "ncit:C43234"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
+                            "mappings": [
+                                "skos:exactMatch [AML].[v1.0].[Adverse Events].[AE_SYSTEM].[CTCAE]"
+                            ]
                         }
                     }
                 },
+                "GRADE_SYSTEM_VERSION": {
+                    "type": "String",
+                    "tier": "2 - contributors should prioritize inclusion if resources are available",
+                    "description": "The version of the adverse event grading system.",
+                    "codes": [
+                        "ncit:C173314"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "skos:exactMatch [AML].[v1.0].[Adverse Events].[AE_SYSTEM_VERSION]"
+                    ]
+                },
                 "AVN_JOINT": {
                     "type": "Enum",
-                    "tier": "Optional",
+                    "tier": "3 - contributors shouldn\u2019t prioritize inclusion, but can include if resources are available",
                     "description": "Death of bone tissue in a joint due to temporary or permanent interruption of blood flow.",
                     "codes": [
                         "ncit:C178082"
                     ],
-                    "implementation_notes": [
-                        "Note: If multiple joints affected, include one observation per joint"
-                    ],
+                    "implementation_notes": [],
                     "mappings": [],
                     "permissible_values": {
                         "Ankle (distal tibia, intrinsic ankle bones)": {
@@ -3966,7 +4063,7 @@
                             "mappings": []
                         },
                         "Unknown": {
-                            "description": "Not known, observed, recorded; or reported as unknown by the data contributor.",
+                            "description": "Reported as unknown by the data contributor.",
                             "codes": [
                                 "ncit:C17998"
                             ],
@@ -3985,7 +4082,7 @@
                 },
                 "AVN_JOINT_LATERALITY": {
                     "type": "Enum",
-                    "tier": "Optional",
+                    "tier": "3 - contributors shouldn\u2019t prioritize inclusion, but can include if resources are available",
                     "description": "A finding descriptive of the laterality of the avascular necrosis in the joints.",
                     "codes": [
                         "ncit:C178083"
@@ -3994,102 +4091,171 @@
                     "mappings": [],
                     "permissible_values": {
                         "Left": {
-                            "description": "Being or located on or directed toward the side of the body to the west when facing north.",
+                            "description": "A finding indicating the tumor location is on the left side of the specimen.",
                             "codes": [
-                                "ncit:C25229"
+                                "ncit:C160200"
                             ],
                             "implementation_notes": [],
                             "mappings": []
                         },
                         "Right": {
-                            "description": "Being or located on or directed toward the side of the body to the east when facing north.",
+                            "description": "A finding indicating the tumor location is on the right side of the specimen.",
                             "codes": [
-                                "ncit:C25228"
+                                "ncit:C160199"
                             ],
                             "implementation_notes": [],
                             "mappings": []
                         },
                         "Bilateral": {
-                            "description": "Affecting both sides of the body or a matched pair of organs.",
+                            "description": "A finding indicating the tumor location is on the both sides of the specimen.",
                             "codes": [
-                                "ncit:C13332"
+                                "ncit:C160201"
                             ],
                             "implementation_notes": [],
                             "mappings": []
                         },
                         "Midline": {
-                            "description": "A medial line, especially the medial line or medial plane of the body (or some part of the body).",
+                            "description": "A finding indicating the tumor location is on the midline of the specimen.",
                             "codes": [
-                                "ncit:C81170"
+                                "ncit:C162614"
                             ],
                             "implementation_notes": [],
                             "mappings": []
                         }
                     }
                 },
-                "AVN_METHOD": {
+                "ATTRIBUTION": {
                     "type": "Enum",
-                    "tier": "Optional",
-                    "description": "The method used to determine the diagnosis of the avascular necrosis.",
+                    "tier": "n/a",
+                    "description": "A specific identifiable level (defined qualitatively or quantitatively) of probability of adverse event being caused or associated with the product or procedure administration to a patient.",
                     "codes": [
-                        "ncit:C178084"
+                        "ncit:C41358"
                     ],
                     "implementation_notes": [],
-                    "mappings": [],
+                    "mappings": [
+                        "[aml_v1.7].[Adverse Events].[AE_ATTRIBUTION] skos:exactMatch [aml_v2.0].[Adverse Events].[ATTRIBUTION]"
+                    ],
                     "permissible_values": {
-                        "Bone Scan": {
-                            "description": "A nuclear imaging method used to evaluate pathological bone metabolism.",
+                        "Definite": {
+                            "description": "A characteristic used to qualify the adverse event as certainly related to the medical intervention. According to WHO causality assessment criteria of suspected adverse reactions it is applicable to a clinical event, including laboratory test abnormality, occurring in a plausible time relationship to medical intervention, and which cannot be explained by concurrent disease or other interventions. The response to withdrawal of the medical product (dechallenge) should be clinically plausible. The event must be definitive pharmacologically or phenomenologically, using a satisfactory rechallenge procedure if necessary.",
                             "codes": [
-                                "ncit:C17646"
+                                "ncit:C53260"
                             ],
                             "implementation_notes": [],
                             "mappings": []
                         },
-                        "CT": {
-                            "description": "A method of examining structures within the body by scanning them with X rays and using a computer to construct a series of cross-sectional scans along a single axis.",
+                        "Probable": {
+                            "description": "Probable adverse event relationship to study product or procedure is defined when there is a clear-cut temporal association between product or procedure administration and adverse event, and a potential alternative etiology of the event is not apparent.",
                             "codes": [
-                                "ncit:C17204"
+                                "ncit:C41357"
                             ],
                             "implementation_notes": [],
                             "mappings": []
                         },
-                        "MRI (NMR)": {
-                            "description": "Imaging that uses radiofrequency waves and a strong magnetic field rather than x-rays to provide detailed pictures of internal organs and tissues. The technique is valuable for the diagnosis of many pathologic conditions, including cancer, heart and vascular disease, stroke, and joint and musculoskeletal disorders.",
+                        "Possible": {
+                            "description": "A characteristic indicating that an adverse event may be related to the medical intervention. According to WHO causality assessment criteria of suspected adverse reactions it is applicable to a clinical event, including laboratory test abnormality, with a reasonable time sequence to administration of the drug, but which could also be explained by concurrent disease or other drugs or chemicals. Information on drug withdrawal may be lacking or unclear.",
                             "codes": [
-                                "ncit:C16809"
+                                "ncit:C53258"
                             ],
                             "implementation_notes": [],
                             "mappings": []
                         },
-                        "X-Ray": {
-                            "description": "A radiographic procedure using the emission of x-rays to form an image of the structure penetrated by the radiation.",
+                        "Unlikely": {
+                            "description": "A characteristic used to qualify the adverse event as unlikely related to the medical intervention. According to WHO causality assessment criteria of suspected adverse reactions it is applicable to a clinical event, including laboratory test abnormality, with a temporal relationship to the medical intervention which makes a causal relationship improbable, and in which other interventions or underlying disease provide plausible explanations.",
                             "codes": [
-                                "ncit:C38101"
+                                "ncit:C53257"
                             ],
                             "implementation_notes": [],
                             "mappings": []
                         },
-                        "Other": {
-                            "description": "Different than the one(s) previously specified or mentioned.",
+                        "Unrelated": {
+                            "description": "A characteristic used to qualify the adverse event as clearly not related to the medical intervention.",
                             "codes": [
-                                "ncit:C17649"
+                                "ncit:C53256"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "Reported as unknown by the data contributor.",
+                            "codes": [
+                                "ncit:C17998"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Reported": {
+                            "description": "Not provided or available.",
+                            "codes": [
+                                "ncit:C43234"
                             ],
                             "implementation_notes": [],
                             "mappings": []
                         }
                     }
                 },
-                "ORTHOPEDIC_PROCEDURE": {
+                "INTERVENTION_STATUS": {
                     "type": "Enum",
-                    "tier": "Optional",
-                    "description": "Orthopedic procedures to repair avascular necrosis.",
+                    "tier": "n/a",
+                    "description": "The intervention related to the adverse event.",
                     "codes": [
-                        "ncit:C178085"
+                        "ncit:C173318"
                     ],
                     "implementation_notes": [
-                        "Note: If multiple procedures performed, include one observation per procedure"
+                        "changed to general INTERVENTION variable (was previously SOS_INTERVENTION)"
                     ],
-                    "mappings": [],
+                    "mappings": [
+                        "[aml_v1.7].[Adverse Events].[AE_INTERVENTION] skos:exactMatch [aml_v2.0].[Adverse Events].[INTERVENTION_STATUS]"
+                    ],
+                    "permissible_values": {
+                        "No": {
+                            "description": "The non-affirmative response to a question.",
+                            "codes": [
+                                "ncit:C49487"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Yes": {
+                            "description": "The affirmative response to a question.",
+                            "codes": [
+                                "ncit:C49488"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "Reported as unknown by the data contributor.",
+                            "codes": [
+                                "ncit:C17998"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Reported": {
+                            "description": "Not provided or available.",
+                            "codes": [
+                                "ncit:C43234"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "INTERVENTION": {
+                    "type": "Enum",
+                    "tier": "n/a",
+                    "description": "The intervention or medication detail of the adverse event.",
+                    "codes": [
+                        "ncit:C173319"
+                    ],
+                    "implementation_notes": [
+                        "If multiple medications or interventions performed, include one observation per medication or intervention ",
+                        " Only fill in this variable if MEDICATION and/or INTERVENTION are marker as \"Yes\""
+                    ],
+                    "mappings": [
+                        "[aml_v1.7].[Adverse Events].[AE_MED_INTERVENTION_DETAIL] skos:exactMatch [aml_v2.0].[Adverse Events].[INTERVENTION]"
+                    ],
                     "permissible_values": {
                         "Arthroplasty, Hemi/Resurfacing": {
                             "description": "The trimming and capping of the joint head with ceramic, metal or plastic components and the removal of damaged bone and cartilage within the socket and replacement with a metal shell.",
@@ -4147,10 +4313,18 @@
                             "implementation_notes": [],
                             "mappings": []
                         },
-                        "Other": {
-                            "description": "Different than the one(s) previously specified or mentioned.",
+                        "Unknown": {
+                            "description": "Reported as unknown by the data contributor.",
                             "codes": [
-                                "ncit:C17649"
+                                "ncit:C17998"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Reported": {
+                            "description": "Not provided or available.",
+                            "codes": [
+                                "ncit:C43234"
                             ],
                             "implementation_notes": [],
                             "mappings": []
@@ -4159,13 +4333,14 @@
                 },
                 "AE_PATHOGEN": {
                     "type": "Enum",
-                    "tier": "Optional",
+                    "tier": "n/a",
                     "description": "The pathogen identified as the agent causing the adverse event.",
                     "codes": [
                         "ncit:C185665"
                     ],
                     "implementation_notes": [
-                        "Note: If multiple pathogens involved, include one observation per pathogen."
+                        "If multiple pathogens involved, include one observation per pathogen. ",
+                        " Only fill in this variable if ADVERSE_EVENT is \"Infection.\""
                     ],
                     "mappings": [],
                     "permissible_values": {
@@ -4221,7 +4396,7 @@
                 },
                 "INFECTION_CLASSIFICATION": {
                     "type": "Enum",
-                    "tier": "Optional",
+                    "tier": "3 - contributors shouldn\u2019t prioritize inclusion, but can include if resources are available",
                     "description": "The type of evidence regarding the infection type.",
                     "codes": [
                         "ncit:C178091"
