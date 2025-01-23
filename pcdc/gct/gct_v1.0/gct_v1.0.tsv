@@ -1,11 +1,11 @@
 INFO	Title	Germ Cell Tumors (GCT) Data Dictionary
 INFO	Name	gct_v1.0
-INFO	Release Notes	https://github.com/chicagopcdc/d4cg-modeling/tree/main/pcdc/gct/gct_v1.0								
+INFO	Release Notes	https://github.com/chicagopcdc/d4cg-modeling/tree/main/pcdc/gct/gct_v1.0
 INFO	Parent Data Model	pcdc_v1.8
 INFO	License	Creative Commons Attribution-NonCommercial 4.0 International License (https://creativecommons.org/licenses/by-nc/4.0/)
 INFO	D4CG Data Modeling Wiki	https://docs.pedscommons.org/
 INFO	Disease Consortium Information	https://commons.cri.uchicago.edu/pcdc/
-INFO	Description	Germ Cell Tumors (GCT) Data Dictionary
+INFO	Description	The GCT data dictionary is a consensus data schema built by an international group of pediatric germ cell tumor experts and maintained by Data for the Common Good (D4CG) at the University of Chicago in collaboration with the Malignant Germ Cell International Consortium (MaGIC). It is based on the collective requirements of its contributors.
 INFO	Total Variables	157
 
 RowType	VariableName	DataType	Tier	VariableDescription	VariableCode	PermissibleValue	ValueDescription	ValueCode	ImplementationNotes	Mappings
