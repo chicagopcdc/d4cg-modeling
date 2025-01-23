@@ -12,7 +12,7 @@
         "license": "Creative Commons Attribution-NonCommercial 4.0 International License (https://creativecommons.org/licenses/by-nc/4.0/)",
         "wiki": "https://docs.pedscommons.org/",
         "consortium_info": "https://commons.cri.uchicago.edu/pcdc/",
-        "description": "Germ Cell Tumors (GCT) Data Dictionary",
+        "description": "The GCT data dictionary is a consensus data schema built by an international group of pediatric germ cell tumor experts and maintained by Data for the Common Good (D4CG) at the University of Chicago in collaboration with the Malignant Germ Cell International Consortium (MaGIC). It is based on the collective requirements of its contributors.",
         "total": "159"
     },
     "domains": {
