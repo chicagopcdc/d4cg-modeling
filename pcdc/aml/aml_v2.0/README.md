@@ -53,6 +53,10 @@ Added concepts:
 
 >[Laboratory Test].[TIME_PERIOD_SUBMITTER_ID]
 
+>[Molecular Analysis].[HONEST_BROKER_SUBJECT_ID]
+
+>[Molecular Analysis].[TIME_PERIOD_SUBMITTER_ID]
+
 >[Diagnosis]
 
 >[Diagnosis].[HONEST_BROKER_SUBJECT_ID]
@@ -182,6 +186,14 @@ Removed concepts:
 
 >[Labs].[COURSE_NUMBER]
 
+>[Molecular Analysis].[DISEASE_PHASE]
+
+>[Molecular Analysis].[DISEASE_PHASE_NUMBER]
+
+>[Molecular Analysis].[COURSE]
+
+>[Molecular Analysis].[COURSE_NUMBER]
+
 >[Disease Characteristics].[DISEASE_PHASE]
 
 >[Disease Characteristics].[DISEASE_PHASE_NUMBER]
@@ -271,6 +283,8 @@ Modified Concepts:
 >[aml_v1.7].[Course Timing].[AGE_AT_COURSE_ANC_500] skos:exactMatch [aml_v2.0].[Time Period].[AGE_AT_COURSE_ANC_500]
 
 >[aml_v1.7].[Off Protocol Therapy/Study] skos:exactMatch [aml_v2.0].[Off Protocol Therapy Or Study]
+
+>[aml_v1.7].[Medical History].[MEDICAL_HISTORY] skos:exactMatch [aml_v2.0].[Medical History].[CONDITION]
 
 >[aml_v1.7].[Vitals] skos:exactMatch [aml_v2.0].[Vitals And Anthropometrics]
 

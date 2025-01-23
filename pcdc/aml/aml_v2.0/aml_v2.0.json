@@ -13,7 +13,7 @@
         "wiki": "https://docs.pedscommons.org/",
         "consortium_info": "https://commons.cri.uchicago.edu/pcdc/",
         "description": "The AML data dictionary is a consensus data schema built by an international group of pediatric acute myeloid leukemia experts and maintained by Data for the Common Good (D4CG) at the University of Chicago in collaboration with the International Acute Myeloid Leukemia Consortium (INTERACT). It is based on the collective requirements of its contributors.",
-        "total": 188
+        "total": 186
     },
     "domains": {
         "protocol": {
@@ -71,7 +71,7 @@
                     }
                 },
                 "DATA_CONTRIBUTOR_ID": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "n/a",
                     "description": "An identifier assigned to a data contributor.",
                     "codes": [
@@ -163,7 +163,7 @@
                     }
                 },
                 "STUDY_ID": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "n/a",
                     "description": "Study Identifier",
                     "codes": [
@@ -401,7 +401,7 @@
                     }
                 },
                 "AGE_AT_ENROLLMENT": {
-                    "type": "Number",
+                    "type": "Integer",
                     "tier": "n/a",
                     "description": "Age in Days at Enrollment",
                     "codes": [
@@ -411,7 +411,7 @@
                     "mappings": []
                 },
                 "TREATMENT_ARM": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "n/a",
                     "description": "Assigned Treatment Arm by Intention-To-Treat",
                     "codes": [
@@ -422,7 +422,7 @@
                     "permissible_values": {}
                 },
                 "ENROLLED_STATUS": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "n/a",
                     "description": "Enrollment Status",
                     "codes": [
@@ -698,7 +698,7 @@
                     ]
                 },
                 "AGE_OFF": {
-                    "type": "Number",
+                    "type": "Integer",
                     "tier": "n/a",
                     "description": "Age of subject (in days) when subject was off therapy or study.",
                     "codes": [
@@ -718,7 +718,7 @@
                     ]
                 },
                 "OFF_TYPE": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "n/a",
                     "description": "The code used to designate that the subject went off therapy or off the study.",
                     "codes": [
@@ -748,7 +748,7 @@
                     }
                 },
                 "REASON_OFF": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "n/a",
                     "description": "The reason a subject went off the therapy or study.",
                     "codes": [
@@ -882,7 +882,7 @@
                     ]
                 },
                 "SEX": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "n/a",
                     "description": "The assemblage of physical properties or qualities by which male is distinguished from female; the physical difference between male and female; the distinguishing peculiarity of male or female.",
                     "codes": [
@@ -934,7 +934,7 @@
                     }
                 },
                 "RACE": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "n/a",
                     "description": "A geographic ancestral origin category that is assigned to a population group based mainly on physical characteristics that are thought to be distinct and inherent.",
                     "codes": [
@@ -1018,7 +1018,7 @@
                     }
                 },
                 "ETHNICITY": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "n/a",
                     "description": "A social group characterized by a distinctive social and cultural tradition that is maintained from generation to generation. Members share a common history and origin and a sense of identification with the group. They have similar and distinctive features in their lifestyle habits and shared experiences. They often have a common genetic heritage which may be reflected in their experience of health and disease.",
                     "codes": [
@@ -1075,8 +1075,8 @@
                         "New VD"
                     ]
                 },
-                "MEDICAL_HISTORY": {
-                    "type": "Code",
+                "CONDITION": {
+                    "type": "Enum",
                     "tier": "n/a",
                     "description": "A health condition or medical problem that was diagnosed or treated before a specific date.",
                     "codes": [
@@ -1144,7 +1144,7 @@
                     ]
                 },
                 "AGE_AT_LKSS": {
-                    "type": "Number",
+                    "type": "Integer",
                     "tier": "n/a",
                     "description": "Age of subject (in days) at the last known survival status.",
                     "codes": [
@@ -1154,7 +1154,7 @@
                     "mappings": []
                 },
                 "LKSS": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "n/a",
                     "description": "The individual's last known survival status.",
                     "codes": [
@@ -1190,7 +1190,7 @@
                     }
                 },
                 "AGE_LOST_TO_FOLLOW_UP": {
-                    "type": "Number",
+                    "type": "Integer",
                     "tier": "n/a",
                     "description": "Age of subject (in days) when the subject was lost to follow-up.",
                     "codes": [
@@ -1200,7 +1200,7 @@
                     "mappings": []
                 },
                 "CAUSE_OF_DEATH": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "n/a",
                     "description": "The circumstance or condition that results in the death of a living being.",
                     "codes": [
@@ -1271,7 +1271,7 @@
                     }
                 },
                 "TRM_TYPE": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "n/a",
                     "description": "The type of treatment related to the mortality of the subject.",
                     "codes": [
@@ -1334,7 +1334,7 @@
                     }
                 },
                 "CAUSE_OF_DEATH_DETAIL": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "n/a",
                     "description": "Specific details of the cause of death.",
                     "codes": [
@@ -1437,7 +1437,7 @@
                     }
                 },
                 "CAUSE_OF_DEATH_RANKING": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "n/a",
                     "description": "Assigning a weighted relevance to the cause of death.",
                     "codes": [
@@ -2201,8 +2201,20 @@
                 }
             },
             "molecular_analysis": {
+                "HONEST_BROKER_SUBJECT_ID": {
+                    "type": "String",
+                    "tier": "To-do",
+                    "description": "The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a \"re-identification code\"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.",
+                    "codes": [
+                        "ncit:C168949"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ]
+                },
                 "AGE_AT_MOLECULAR_ANALYSIS": {
-                    "type": "Number",
+                    "type": "Integer",
                     "tier": "n/a",
                     "description": "Age of subject (in days) when molecular analysis was performed.",
                     "codes": [
@@ -2211,139 +2223,18 @@
                     "implementation_notes": [],
                     "mappings": []
                 },
-                "DISEASE_PHASE": {
-                    "type": "Code",
-                    "tier": "n/a",
-                    "description": "The stage or period of an individual's disease.",
-                    "codes": [
-                        "ncit:C168878"
-                    ],
-                    "implementation_notes": [
-                        "Only fill in Disease Phase, Disease Phase Number, Course, and Course Number if \"AGE_\" not known ",
-                        " Disease Phase could be \"Initial Diagnosis\" phase, or a \"Relapse\" phase, etc..."
-                    ],
-                    "mappings": [],
-                    "permissible_values": {
-                        "Initial Diagnosis": {
-                            "description": "The first diagnosis of the individual's condition.",
-                            "codes": [
-                                "ncit:C156813"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Relapse": {
-                            "description": "The return of a disease after a period of remission.",
-                            "codes": [
-                                "ncit:C38155"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        }
-                    }
-                },
-                "DISEASE_PHASE_NUMBER": {
-                    "type": "Number",
-                    "tier": "n/a",
-                    "description": "The number of the disease phase.",
-                    "codes": [
-                        "ncit:C173258"
-                    ],
-                    "implementation_notes": [
-                        "Ordinal number of the disease phase, grouped within subcategory. I.e. number Relapse 1, 2, 3, 4, etc..."
-                    ],
-                    "mappings": []
-                },
-                "COURSE": {
-                    "type": "Code",
-                    "tier": "n/a",
-                    "description": "The type of protocol treatment course administered.",
-                    "codes": [
-                        "ncit:C168807"
-                    ],
+                "TIME_PERIOD_SUBMITTER_ID": {
+                    "type": "String",
+                    "tier": "To-do",
+                    "description": "This is the SUBMITTER_ID of the time period (defined in the \"Time Period\" table) during which this observation takes place.",
+                    "codes": [],
                     "implementation_notes": [],
-                    "mappings": [],
-                    "permissible_values": {
-                        "Prephase": {
-                            "description": "A chemotherapy treatment administered prior to the definitive chemotherapy treatment.",
-                            "codes": [
-                                "ncit:C168826"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Induction": {
-                            "description": "The first choice of treatment for a particular type of cancer.",
-                            "codes": [
-                                "ncit:C158876"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Intensification": {
-                            "description": "A second round of intense chemotherapy as part of consolidation therapy.",
-                            "codes": [
-                                "ncit:C173105"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Consolidation": {
-                            "description": "Treatment that is given after initial therapy to kill any remaining cancer cells.",
-                            "codes": [
-                                "ncit:C15679"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Stem Cell Transplant Conditioning": {
-                            "description": "A regimen that can be used as a conditioning regimen for hematopoietic stem cell transplantation (HSCT).",
-                            "codes": [
-                                "ncit:C168794"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Maintenance": {
-                            "description": "Continuation of treatment for an extended period of time to prevent relapse.",
-                            "codes": [
-                                "ncit:C15688"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Palliative Treatment": {
-                            "description": "The patient- and family-centered active holistic care of patients with advanced, progressive disease. Essential components of palliative care are: pain and symptom control, communication regarding treatment and alternatives, prognosis, and available services, rehabilitation services, care that addresses treatment and palliative concerns, intellectual, emotional, social, and spiritual needs, terminal care, support in bereavement. The goal of palliative care is an achievement of the best quality of life for patients and their families.",
-                            "codes": [
-                                "ncit:C15292"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Other": {
-                            "description": "Different than the one(s) previously specified or mentioned.",
-                            "codes": [
-                                "ncit:C17649"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        }
-                    }
-                },
-                "COURSE_NUMBER": {
-                    "type": "Number",
-                    "tier": "n/a",
-                    "description": "The number assigned to a course of therapeutic agent administration, indicating where a particular course of treatment falls within a sequence of treatments.",
-                    "codes": [
-                        "ncit:C166235"
-                    ],
-                    "implementation_notes": [
-                        "Course number is grouped within subcategory. I.e. number Induction 1, 2, 3, 4, etc..., Prephase 1, 2, 3, 4, etc..., Maintenance 1,2,3,4,5,6 etc..."
-                    ],
-                    "mappings": []
+                    "mappings": [
+                        "New VD"
+                    ]
                 },
                 "MOLECULAR_ANALYSIS_METHOD": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "n/a",
                     "description": "A request to enter the specific molecular analysis method used to detect abnormalities in the study.",
                     "codes": [
@@ -2439,7 +2330,7 @@
                     "mappings": []
                 },
                 "INDEPEN_AB": {
-                    "type": "Number",
+                    "type": "Integer",
                     "tier": "n/a",
                     "description": "The number of independent aberrations found in the karyotype during analysis.",
                     "codes": [
@@ -2451,7 +2342,7 @@
                     "mappings": []
                 },
                 "NUM_METAPHASES": {
-                    "type": "Number",
+                    "type": "Integer",
                     "tier": "n/a",
                     "description": "The number of cells in metaphase during karyotype analysis.",
                     "codes": [
@@ -2463,7 +2354,7 @@
                     "mappings": []
                 },
                 "MOLECULAR_ABNORMALITY": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "n/a",
                     "description": "A molecular or cytogenic abnormality which occurs in either human disease states or disease models.",
                     "codes": [
@@ -3075,7 +2966,7 @@
                     "mappings": []
                 },
                 "VARIANT_TYPE": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "n/a",
                     "description": "The category or type of variation or abnormality present in an amino acid or nucleic acid sequence.",
                     "codes": [
@@ -3203,7 +3094,7 @@
                     "mappings": []
                 },
                 "MOLECULAR_ABNORMALITY_RESULT": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "n/a",
                     "description": "An indicator for whether a molecular analysis procedure was performed and whether the assay detected a molecular abnormality.",
                     "codes": [
@@ -3257,7 +3148,7 @@
                     }
                 },
                 "ALLELIC_RATIO": {
-                    "type": "Number",
+                    "type": "Integer",
                     "tier": "n/a",
                     "description": "The determination of the ratio of variant alleles to wild-type alleles present in a sample.",
                     "codes": [
@@ -3986,7 +3877,7 @@
                     ]
                 },
                 "DETECTION_METHOD": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "n/a",
                     "description": "The method used to detect the extent of the disease involvement.",
                     "codes": [
@@ -5043,7 +4934,7 @@
                     ]
                 },
                 "AGE_AT_SCT": {
-                    "type": "Number",
+                    "type": "Integer",
                     "tier": "n/a",
                     "description": "Age of subject (in days) at the time of stem-cell transplantation.",
                     "codes": [
@@ -5061,7 +4952,7 @@
                     "mappings": []
                 },
                 "SCT_TYPE": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "n/a",
                     "description": "Type of stem-cell transplantation the subject received.",
                     "codes": [
@@ -5125,7 +5016,7 @@
                     }
                 },
                 "STEM_CELL_SOURCE": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "n/a",
                     "description": "The source of the stem cells for the stem cell transplant.",
                     "codes": [
@@ -5195,7 +5086,7 @@
                     }
                 },
                 "DONOR_RELATIONSHIP": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "n/a",
                     "description": "The biological relationship between the stem cell donor and the recipients.",
                     "codes": [
@@ -5257,7 +5148,7 @@
                     }
                 },
                 "HLA_MATCH": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "n/a",
                     "description": "A process in which blood or tissue samples are analyzed to determine their human leukocyte antigen (HLA) profiles so that transplant materials can be transferred into a patient with the same or similar profile.",
                     "codes": [
@@ -5303,7 +5194,7 @@
                     }
                 },
                 "NUMBER_HLA": {
-                    "type": "Number",
+                    "type": "Integer",
                     "tier": "n/a",
                     "description": "The number of human leukocyte antigens that were evaluated.",
                     "codes": [
@@ -5313,7 +5204,7 @@
                     "mappings": []
                 },
                 "NUMBER_MATCHES": {
-                    "type": "Number",
+                    "type": "Integer",
                     "tier": "n/a",
                     "description": "The number of human leukocyte antigens that matched between the donor and the recipient.",
                     "codes": [
@@ -5323,7 +5214,7 @@
                     "mappings": []
                 },
                 "HLA_A_RESULT": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "n/a",
                     "description": "The extent of HLA-A matching between the donor and the recipient.",
                     "codes": [
@@ -5375,7 +5266,7 @@
                     }
                 },
                 "HLA_B_RESULT": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "n/a",
                     "description": "The extent of HLA-B matching between the donor and the recipient.",
                     "codes": [
@@ -5427,7 +5318,7 @@
                     }
                 },
                 "HLA_C_RESULT": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "n/a",
                     "description": "The extent of HLA-C matching between the donor and the recipient.",
                     "codes": [
@@ -5479,7 +5370,7 @@
                     }
                 },
                 "HLA_DRB1_RESULT": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "n/a",
                     "description": "The extent of HLA-DRB1 matching between the donor and the recipient.",
                     "codes": [
@@ -5531,7 +5422,7 @@
                     }
                 },
                 "HLA_DQ_RESULT": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "n/a",
                     "description": "The extent of HLA-DQ matching between the donor and the recipient.",
                     "codes": [
@@ -5583,7 +5474,7 @@
                     }
                 },
                 "CONDITIONING_TYPE": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "n/a",
                     "description": "Type of conditioning the subject received prior to stem-cell transplantation.",
                     "codes": [
@@ -5645,7 +5536,7 @@
                     }
                 },
                 "PRIOR_TBI": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "n/a",
                     "description": "A therapeutic procedure that involves the irradiation of the whole body with ionizing or non-ionizing radiation.",
                     "codes": [
@@ -6433,7 +6324,7 @@
                     ]
                 },
                 "AGE_AT_RESPONSE": {
-                    "type": "Number",
+                    "type": "Integer",
                     "tier": "n/a",
                     "description": "Age of subject (in days) when the response assessment was made.",
                     "codes": [
@@ -6453,7 +6344,7 @@
                     ]
                 },
                 "RESPONSE_CATEGORY": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "n/a",
                     "description": "The category used to assess the response to therapy.",
                     "codes": [
@@ -6521,7 +6412,7 @@
                     }
                 },
                 "RESPONSE": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "n/a",
                     "description": "The pathologic and/or clinical changes that result from treatment. The changes may include eradication of detectable disease, stabilization of disease, or disease progression.",
                     "codes": [
@@ -6565,7 +6456,7 @@
                     }
                 },
                 "BM_PCT_BLASTS_AT_RESPONSE": {
-                    "type": "Number",
+                    "type": "Integer",
                     "tier": "n/a",
                     "description": "The percent of cells that were blasts in the subject's bone marrow used to make the response assessment.",
                     "codes": [
@@ -6575,7 +6466,7 @@
                     "mappings": []
                 },
                 "BM_ANALYSIS_METHOD_AT_RESPONSE": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "n/a",
                     "description": "The modality used to determine the bone marrow percent blasts.",
                     "codes": [
@@ -6629,7 +6520,7 @@
                     }
                 },
                 "ANC_AT_RESPONSE": {
-                    "type": "Number",
+                    "type": "Integer",
                     "tier": "n/a",
                     "description": "The absolute neutrophil count used to make the response assessment.",
                     "codes": [
@@ -6639,7 +6530,7 @@
                     "mappings": []
                 },
                 "ANC_THRESHOLD_AT_RESPONSE": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "n/a",
                     "description": "Subject exceeded an absolute neutrophil count threshold of >= 500 (ANC/mm3) at the time of the response assessment.",
                     "codes": [
@@ -6683,7 +6574,7 @@
                     }
                 },
                 "PLATELET_COUNT_AT_RESPONSE": {
-                    "type": "Number",
+                    "type": "Integer",
                     "tier": "n/a",
                     "description": "The platelet count used to make the response assessment.",
                     "codes": [
@@ -6693,7 +6584,7 @@
                     "mappings": []
                 },
                 "PLATELET_THRESHOLD_AT_RESPONSE": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "n/a",
                     "description": "Subject exceeded a platelet count threshold of >=50,000 (platelets/mm3) at the time of the response assessment.",
                     "codes": [
@@ -6753,7 +6644,7 @@
                     ]
                 },
                 "AGE_AT_AE": {
-                    "type": "Number",
+                    "type": "Integer",
                     "tier": "n/a",
                     "description": "Age of subject (in days) at the onset of the adverse event.",
                     "codes": [
@@ -6785,7 +6676,7 @@
                     ]
                 },
                 "ADVERSE_EVENT": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "n/a",
                     "description": "Any unfavorable or unintended disease, sign, or symptom (including an abnormal laboratory finding) that is temporally associated with the use of a medical treatment or procedure, and that may or may not be considered related to the medical treatment or procedure. Such events can be related to the intervention, dose, route of administration, patient, or caused by an interaction with another drug(s) or procedure(s).",
                     "codes": [
@@ -6907,7 +6798,7 @@
                     "mappings": []
                 },
                 "AE_CODE_SYSTEM": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "n/a",
                     "description": "The name of the system used to grade the adverse events.",
                     "codes": [
@@ -6975,7 +6866,7 @@
                     "mappings": []
                 },
                 "GRADE": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "n/a",
                     "description": "A numeric value corresponding to the degree of severity of an adverse event.",
                     "codes": [
@@ -7047,7 +6938,7 @@
                     }
                 },
                 "ATTRIBUTION": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "n/a",
                     "description": "A specific identifiable level (defined qualitatively or quantitatively) of probability of adverse event being caused or associated with the product or procedure administration to a patient.",
                     "codes": [
@@ -7117,7 +7008,7 @@
                     }
                 },
                 "OUTCOME": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "n/a",
                     "description": "A condition or event that is attributed to the adverse event and is the result or conclusion of the adverse event.",
                     "codes": [
@@ -7187,7 +7078,7 @@
                     }
                 },
                 "ICU": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "n/a",
                     "description": "An indication of whether the subject was admitted to the intensive care unit.",
                     "codes": [
@@ -7233,7 +7124,7 @@
                     }
                 },
                 "SUPPORTIVE_MEDICATION": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "n/a",
                     "description": "The medication related to the adverse event.",
                     "codes": [
@@ -7279,7 +7170,7 @@
                     }
                 },
                 "INTERVENTION_STATUS": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "n/a",
                     "description": "The intervention related to the adverse event.",
                     "codes": [
@@ -7327,7 +7218,7 @@
                     }
                 },
                 "INTERVENTION": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "n/a",
                     "description": "The intervention or medication detail of the adverse event.",
                     "codes": [
@@ -7384,7 +7275,7 @@
                     }
                 },
                 "AE_PATHOGEN": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "n/a",
                     "description": "The pathogen identified as the agent causing the adverse event.",
                     "codes": [
@@ -7447,7 +7338,7 @@
                     }
                 },
                 "AE_PATHOGEN_CONFIRMATION": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "n/a",
                     "description": "An indication that the reported pathogen was confirmed or suspected as the cause of an infection.",
                     "codes": [
@@ -7493,7 +7384,7 @@
                     }
                 },
                 "GVHD_ACUITY": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "n/a",
                     "description": "The assessed level of seriousness assigned to the graft vs host disease.",
                     "codes": [
@@ -7539,7 +7430,7 @@
                     }
                 },
                 "GVHD_ORGAN": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "n/a",
                     "description": "The organs involved in the graft vs host disease.",
                     "codes": [
