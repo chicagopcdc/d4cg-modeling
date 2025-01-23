@@ -113,6 +113,16 @@ Added concepts:
 
 >[Subject Response].[TIME_PERIOD_SUBMITTER_ID]
 
+>[Adverse Events].[HONEST_BROKER_SUBJECT_ID]
+
+>[Adverse Events].[TIME_PERIOD_SUBMITTER_ID]
+
+>[Adverse Events].[AGE_AT_AE_RESOLVED]
+
+>[Adverse Events].[AE_CODE_SYSTEM].[SNOMED]
+
+>[Adverse Events].[AE_CODE_SYSTEM].[ICD]
+
 >[Subsequent Malignant Neoplasm].[HONEST_BROKER_SUBJECT_ID]
 
 >[Subsequent Malignant Neoplasm].[MORPH_CODE_SYSTEM]
@@ -227,6 +237,14 @@ Removed concepts:
 >[Minimal Residual Disease].[COURSE]
 
 >[Minimal Residual Disease].[COURSE_NUMBER]
+
+>[Adverse Events].[DISEASE_PHASE]
+
+>[Adverse Events].[DISEASE_PHASE_NUMBER]
+
+>[Adverse Events].[COURSE]
+
+>[Adverse Events].[COURSE_NUMBER]
 
 >[Secondary Malignant Neoplasm].[DISEASE_PHASE]
 
@@ -455,6 +473,22 @@ Modified Concepts:
 >[aml_v1.7].[Minimal Residual Disease].[MRD_SAMPLE_SOURCE] skos:exactMatch [aml_v2.0].[Minimal Residual Disease].[SPECIMEN]
 
 >[aml_v1.7].[Minimal Residual Disease].[MRD_MOLECULAR_MARKERS] skos:exactMatch [aml_v2.0].[Minimal Residual Disease].[MOLECULAR_MARKERS]
+
+>[aml_v1.7].[Adverse Events].[AE_SYSTEM] skos:exactMatch [aml_v2.0].[Adverse Events].[AE_CODE_SYSTEM]
+
+>[aml_v1.7].[Adverse Events].[AE_GRADE] skos:exactMatch [aml_v2.0].[Adverse Events].[GRADE]
+
+>[aml_v1.7].[Adverse Events].[AE_ATTRIBUTION] skos:exactMatch [aml_v2.0].[Adverse Events].[ATTRIBUTION]
+
+>[aml_v1.7].[Adverse Events].[AE_OUTCOME] skos:exactMatch [aml_v2.0].[Adverse Events].[OUTCOME]
+
+>[aml_v1.7].[Adverse Events].[AE_ICU] skos:exactMatch [aml_v2.0].[Adverse Events].[ICU]
+
+>[aml_v1.7].[Adverse Events].[AE_MEDICATION] skos:exactMatch [aml_v2.0].[Adverse Events].[SUPPORTIVE_MEDICATION]
+
+>[aml_v1.7].[Adverse Events].[AE_INTERVENTION] skos:exactMatch [aml_v2.0].[Adverse Events].[INTERVENTION_STATUS]
+
+>[aml_v1.7].[Adverse Events].[AE_MED_INTERVENTION_DETAIL] skos:exactMatch [aml_v2.0].[Adverse Events].[INTERVENTION]
 
 >[aml_v1.7].[Secondary Malignant Neoplasm] skos:exactMatch [aml_v2.0].[Subsequent Malignant Neoplasm]
 

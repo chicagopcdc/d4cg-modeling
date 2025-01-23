@@ -1,19 +1,19 @@
 {
     "meta": {
         "name": "aml_v2.0",
-        "timestamp": "20250122",
+        "timestamp": "20250123",
         "sheet_id": "1_KyfeZNsepIxSU0Nzw5Mi8mk1PiKCWlSBjatw0AECQ0"
     },
     "info": {
         "title": "Acute Myeloid Leukemia (AML) Data Dictionary",
         "name": "aml_v2.0",
-        "release_notes": "https://github.com/chicagopcdc/d4cg-modeling/tree/main/pcdc/aml/aml_v2.0",
+        "release_notes": "https://github.com/chicagopcdc/d4cg-modeling/blob/main/pcdc/aml/aml_v2.0/README.md",
         "parent_data_model": "pcdc_v2.0",
         "license": "Creative Commons Attribution-NonCommercial 4.0 International License (https://creativecommons.org/licenses/by-nc/4.0/)",
         "wiki": "https://docs.pedscommons.org/",
         "consortium_info": "https://commons.cri.uchicago.edu/pcdc/",
         "description": "The AML data dictionary is a consensus data schema built by an international group of pediatric acute myeloid leukemia experts and maintained by Data for the Common Good (D4CG) at the University of Chicago in collaboration with the International Acute Myeloid Leukemia Consortium (INTERACT). It is based on the collective requirements of its contributors.",
-        "total": 189
+        "total": 188
     },
     "domains": {
         "protocol": {
@@ -2480,9 +2480,7 @@
                                 "ncit:C99294"
                             ],
                             "implementation_notes": [],
-                            "mappings": [
-                                "New PD"
-                            ]
+                            "mappings": []
                         },
                         "Trisomy 3": {
                             "description": "A chromosomal abnormality consisting of the presence of a third copy of chromosome 3 in somatic cells.",
@@ -2490,17 +2488,13 @@
                                 "ncit:C36425"
                             ],
                             "implementation_notes": [],
-                            "mappings": [
-                                "New PD"
-                            ]
+                            "mappings": []
                         },
                         "t(v;q23,3); KMT2A": {
                             "description": "",
                             "codes": [],
                             "implementation_notes": [],
-                            "mappings": [
-                                "New PD"
-                            ]
+                            "mappings": []
                         },
                         "Biallelic CEBPA Gene Mutation": {
                             "description": "The presence of mutations in both alleles of the CEBPA gene.",
@@ -6746,6 +6740,18 @@
         },
         "events": {
             "adverse_events": {
+                "HONEST_BROKER_SUBJECT_ID": {
+                    "type": "String",
+                    "tier": "To-do",
+                    "description": "The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a \"re-identification code\"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.",
+                    "codes": [
+                        "ncit:C168949"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ]
+                },
                 "AGE_AT_AE": {
                     "type": "Number",
                     "tier": "n/a",
@@ -6756,136 +6762,27 @@
                     "implementation_notes": [],
                     "mappings": []
                 },
-                "DISEASE_PHASE": {
-                    "type": "Code",
-                    "tier": "n/a",
-                    "description": "The stage or period of an individual's disease.",
+                "AGE_AT_AE_RESOLVED": {
+                    "type": "Integer",
+                    "tier": "To-do",
+                    "description": "The age (in days) of the subject when this adverse event was resolved.",
                     "codes": [
-                        "ncit:C168878"
-                    ],
-                    "implementation_notes": [
-                        "Only fill in Disease Phase, Disease Phase Number, Course, and Course Number if \"AGE_\" not known ",
-                        " Disease Phase could be \"Initial Diagnosis\" phase, or a \"Relapse\" phase, etc..."
-                    ],
-                    "mappings": [],
-                    "permissible_values": {
-                        "Initial Diagnosis": {
-                            "description": "The first diagnosis of the individual's condition.",
-                            "codes": [
-                                "ncit:C156813"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Relapse": {
-                            "description": "The return of a disease after a period of remission.",
-                            "codes": [
-                                "ncit:C38155"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        }
-                    }
-                },
-                "DISEASE_PHASE_NUMBER": {
-                    "type": "Number",
-                    "tier": "n/a",
-                    "description": "The number of the disease phase.",
-                    "codes": [
-                        "ncit:C173258"
-                    ],
-                    "implementation_notes": [
-                        "Ordinal number of the disease phase, grouped within subcategory. I.e. number Relapse 1, 2, 3, 4, etc..."
-                    ],
-                    "mappings": []
-                },
-                "COURSE": {
-                    "type": "Code",
-                    "tier": "n/a",
-                    "description": "The type of protocol treatment course administered.",
-                    "codes": [
-                        "ncit:C168807"
+                        "ncit:C175043"
                     ],
                     "implementation_notes": [],
-                    "mappings": [],
-                    "permissible_values": {
-                        "Prephase": {
-                            "description": "A chemotherapy treatment administered prior to the definitive chemotherapy treatment.",
-                            "codes": [
-                                "ncit:C168826"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Induction": {
-                            "description": "The first choice of treatment for a particular type of cancer.",
-                            "codes": [
-                                "ncit:C158876"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Intensification": {
-                            "description": "A second round of intense chemotherapy as part of consolidation therapy.",
-                            "codes": [
-                                "ncit:C173105"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Consolidation": {
-                            "description": "Treatment that is given after initial therapy to kill any remaining cancer cells.",
-                            "codes": [
-                                "ncit:C15679"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Stem Cell Transplant Conditioning": {
-                            "description": "A regimen that can be used as a conditioning regimen for hematopoietic stem cell transplantation (HSCT).",
-                            "codes": [
-                                "ncit:C168794"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Maintenance": {
-                            "description": "Continuation of treatment for an extended period of time to prevent relapse.",
-                            "codes": [
-                                "ncit:C15688"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Palliative Treatment": {
-                            "description": "The patient- and family-centered active holistic care of patients with advanced, progressive disease. Essential components of palliative care are: pain and symptom control, communication regarding treatment and alternatives, prognosis, and available services, rehabilitation services, care that addresses treatment and palliative concerns, intellectual, emotional, social, and spiritual needs, terminal care, support in bereavement. The goal of palliative care is an achievement of the best quality of life for patients and their families.",
-                            "codes": [
-                                "ncit:C15292"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Other": {
-                            "description": "Different than the one(s) previously specified or mentioned.",
-                            "codes": [
-                                "ncit:C17649"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        }
-                    }
+                    "mappings": [
+                        "New VD"
+                    ]
                 },
-                "COURSE_NUMBER": {
-                    "type": "Number",
-                    "tier": "n/a",
-                    "description": "The number assigned to a course of therapeutic agent administration, indicating where a particular course of treatment falls within a sequence of treatments.",
-                    "codes": [
-                        "ncit:C166235"
-                    ],
-                    "implementation_notes": [
-                        "Course number is grouped within subcategory. I.e. number Induction 1, 2, 3, 4, etc..., Prephase 1, 2, 3, 4, etc..., Maintenance 1,2,3,4,5,6 etc..."
-                    ],
-                    "mappings": []
+                "TIME_PERIOD_SUBMITTER_ID": {
+                    "type": "String",
+                    "tier": "To-do",
+                    "description": "This is the SUBMITTER_ID of the time period (defined in the \"Time Period\" table) during which this observation takes place.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ]
                 },
                 "ADVERSE_EVENT": {
                     "type": "Code",
@@ -7009,7 +6906,7 @@
                     ],
                     "mappings": []
                 },
-                "AE_SYSTEM": {
+                "AE_CODE_SYSTEM": {
                     "type": "Code",
                     "tier": "n/a",
                     "description": "The name of the system used to grade the adverse events.",
@@ -7017,8 +6914,22 @@
                         "ncit:C168872"
                     ],
                     "implementation_notes": [],
-                    "mappings": [],
+                    "mappings": [
+                        "[aml_v1.7].[Adverse Events].[AE_SYSTEM] skos:exactMatch [aml_v2.0].[Adverse Events].[AE_CODE_SYSTEM]"
+                    ],
                     "permissible_values": {
+                        "SNOMED": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ICD": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
                         "European Society for Blood and Marrow Transplantation (EBMT)": {
                             "description": "A non-profit organization established in 1974 to allow scientists and physicians involved in clinical bone marrow transplantations to share experiences and develop co-operative studies.",
                             "codes": [
@@ -7031,14 +6942,6 @@
                             "description": "A standard terminology developed to report adverse events occurring in cancer clinical trials. Common terminology criteria for adverse events (CTCAE) are used in study adverse event summaries and Investigational New Drug reports to the Food and Drug Administration. The CTCAE contain a grading scale for each adverse event term representing the severity of the event.",
                             "codes": [
                                 "ncit:C49704"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Other": {
-                            "description": "Different than the one(s) previously specified or mentioned.",
-                            "codes": [
-                                "ncit:C17649"
                             ],
                             "implementation_notes": [],
                             "mappings": []
@@ -7071,15 +6974,19 @@
                     "implementation_notes": [],
                     "mappings": []
                 },
-                "AE_GRADE": {
+                "GRADE": {
                     "type": "Code",
                     "tier": "n/a",
                     "description": "A numeric value corresponding to the degree of severity of an adverse event.",
                     "codes": [
                         "ncit:C166200"
                     ],
-                    "implementation_notes": [],
-                    "mappings": [],
+                    "implementation_notes": [
+                        "Only applicable for CTCAE- or EBMT-coded AEs"
+                    ],
+                    "mappings": [
+                        "[aml_v1.7].[Adverse Events].[AE_GRADE] skos:exactMatch [aml_v2.0].[Adverse Events].[GRADE]"
+                    ],
                     "permissible_values": {
                         "Grade 1": {
                             "description": "An experience that is usually transient, and requires no special treatment or intervention. The event does not generally interfere with usual daily activities. Includes transient laboratory test alterations.",
@@ -7139,7 +7046,7 @@
                         }
                     }
                 },
-                "AE_ATTRIBUTION": {
+                "ATTRIBUTION": {
                     "type": "Code",
                     "tier": "n/a",
                     "description": "A specific identifiable level (defined qualitatively or quantitatively) of probability of adverse event being caused or associated with the product or procedure administration to a patient.",
@@ -7147,7 +7054,9 @@
                         "ncit:C41358"
                     ],
                     "implementation_notes": [],
-                    "mappings": [],
+                    "mappings": [
+                        "[aml_v1.7].[Adverse Events].[AE_ATTRIBUTION] skos:exactMatch [aml_v2.0].[Adverse Events].[ATTRIBUTION]"
+                    ],
                     "permissible_values": {
                         "Definite": {
                             "description": "A characteristic used to qualify the adverse event as certainly related to the medical intervention. According to WHO causality assessment criteria of suspected adverse reactions it is applicable to a clinical event, including laboratory test abnormality, occurring in a plausible time relationship to medical intervention, and which cannot be explained by concurrent disease or other interventions. The response to withdrawal of the medical product (dechallenge) should be clinically plausible. The event must be definitive pharmacologically or phenomenologically, using a satisfactory rechallenge procedure if necessary.",
@@ -7207,7 +7116,7 @@
                         }
                     }
                 },
-                "AE_OUTCOME": {
+                "OUTCOME": {
                     "type": "Code",
                     "tier": "n/a",
                     "description": "A condition or event that is attributed to the adverse event and is the result or conclusion of the adverse event.",
@@ -7215,7 +7124,9 @@
                         "ncit:C49489"
                     ],
                     "implementation_notes": [],
-                    "mappings": [],
+                    "mappings": [
+                        "[aml_v1.7].[Adverse Events].[AE_OUTCOME] skos:exactMatch [aml_v2.0].[Adverse Events].[OUTCOME]"
+                    ],
                     "permissible_values": {
                         "Death, Contributory": {
                             "description": "Any adverse event contributing to the cause of death.",
@@ -7275,7 +7186,7 @@
                         }
                     }
                 },
-                "AE_ICU": {
+                "ICU": {
                     "type": "Code",
                     "tier": "n/a",
                     "description": "An indication of whether the subject was admitted to the intensive care unit.",
@@ -7283,7 +7194,9 @@
                         "ncit:C173316"
                     ],
                     "implementation_notes": [],
-                    "mappings": [],
+                    "mappings": [
+                        "[aml_v1.7].[Adverse Events].[AE_ICU] skos:exactMatch [aml_v2.0].[Adverse Events].[ICU]"
+                    ],
                     "permissible_values": {
                         "No": {
                             "description": "The non-affirmative response to a question.",
@@ -7319,7 +7232,7 @@
                         }
                     }
                 },
-                "AE_MEDICATION": {
+                "SUPPORTIVE_MEDICATION": {
                     "type": "Code",
                     "tier": "n/a",
                     "description": "The medication related to the adverse event.",
@@ -7327,7 +7240,9 @@
                         "ncit:C173317"
                     ],
                     "implementation_notes": [],
-                    "mappings": [],
+                    "mappings": [
+                        "[aml_v1.7].[Adverse Events].[AE_MEDICATION] skos:exactMatch [aml_v2.0].[Adverse Events].[SUPPORTIVE_MEDICATION]"
+                    ],
                     "permissible_values": {
                         "No": {
                             "description": "The non-affirmative response to a question.",
@@ -7363,7 +7278,7 @@
                         }
                     }
                 },
-                "AE_INTERVENTION": {
+                "INTERVENTION_STATUS": {
                     "type": "Code",
                     "tier": "n/a",
                     "description": "The intervention related to the adverse event.",
@@ -7373,7 +7288,9 @@
                     "implementation_notes": [
                         "changed to general INTERVENTION variable (was previously SOS_INTERVENTION)"
                     ],
-                    "mappings": [],
+                    "mappings": [
+                        "[aml_v1.7].[Adverse Events].[AE_INTERVENTION] skos:exactMatch [aml_v2.0].[Adverse Events].[INTERVENTION_STATUS]"
+                    ],
                     "permissible_values": {
                         "No": {
                             "description": "The non-affirmative response to a question.",
@@ -7409,7 +7326,7 @@
                         }
                     }
                 },
-                "AE_MED_INTERVENTION_DETAIL": {
+                "INTERVENTION": {
                     "type": "Code",
                     "tier": "n/a",
                     "description": "The intervention or medication detail of the adverse event.",
@@ -7420,7 +7337,9 @@
                         "If multiple medications or interventions performed, include one observation per medication or intervention ",
                         " Only fill in this variable if MEDICATION and/or INTERVENTION are marker as \"Yes\""
                     ],
-                    "mappings": [],
+                    "mappings": [
+                        "[aml_v1.7].[Adverse Events].[AE_MED_INTERVENTION_DETAIL] skos:exactMatch [aml_v2.0].[Adverse Events].[INTERVENTION]"
+                    ],
                     "permissible_values": {
                         "ACE-Inhibitor": {
                             "description": "Any substance that inhibits angiotensin-converting enzyme (ACE), an enzyme that catalyzes the conversion of angiotensin I to angiotensin II. Inhibition of ACE results in a reduction in angiotensin II and angiotensin II-induced aldosterone secretion, causing vasodilation and natriuresis.",
@@ -7442,14 +7361,6 @@
                             "description": "A surgical procedure in which a damaged heart is removed and replaced by another heart from a suitable donor.",
                             "codes": [
                                 "ncit:C15246"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Other": {
-                            "description": "Different than the one(s) previously specified or mentioned.",
-                            "codes": [
-                                "ncit:C17649"
                             ],
                             "implementation_notes": [],
                             "mappings": []
