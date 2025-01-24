@@ -1,0 +1,724 @@
+INFO	Title	Germ Cell Tumors (GCT) Data Dictionary									
+INFO	Name	gct_v2.0									
+INFO	Release Notes										
+INFO	Parent Data Model	pcdc_v2.0									
+INFO	License	Creative Commons Attribution-NonCommercial 4.0 International License (https://creativecommons.org/licenses/by-nc/4.0/)									
+INFO	D4CG Data Modeling Wiki	https://docs.pedscommons.org/									
+INFO	Disease Consortium Information	https://commons.cri.uchicago.edu/pcdc/									
+INFO	Description	The GCT data dictionary is a consensus data schema built by an international group of pediatric germ cell tumor experts and maintained by Data for the Common Good (D4CG) at the University of Chicago in collaboration with the Malignant Germ Cell International Consortium (MaGIC). It is based on the collective requirements of its contributors.									
+INFO	Total Variables										
+											
+RowType	VariableName	DataType	Tier	VariableDescription	VariableCode	PermissibleValue	ValueDescription	ValueCode	ImplementationNotes	Mappings	Modeling Notes (ignored in processing)
+											
+DD	Protocol										
+TD	Subject Characteristics										
+TG	One row per subject per study										
+VD	HONEST_BROKER_SUBJECT_ID	String		Subject identifier assigned by the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_			
+VD	CONSORTIUM	Enum	1 - contributors must include, regardless of the resource cost	The consortium under which this data is being contributed to the Pediatric Cancer Data Commons.	ncit:C61538	_undefined_	_undefined_	_undefined_		New VD	
+PD						MaGIC	Malignant Germ Cell International Consortium (MaGIC)	ncit:C192759		New PD	
+VD	DISEASE_GROUP	Enum				_undefined_	_undefined_	_undefined_		New VD	
+PD						GCT				New PD	
+VD	DATA_CONTRIBUTOR_ID	Enum		An identifier assigned to a data contributor.	ncit:C168950	_undefined_	_undefined_	_undefined_			
+PD						AIEOP	Italian Association of Pediatric Hematology and Oncology	ncit:C168887			
+PD						COG	An NCI-supported clinical cooperative group formed by the merger of the four national pediatric cancer research organizations: the Children's Cancer Group, the Intergroup Rhabdomyosarcoma Study Group, the National Wilms Tumor Study Group, and the Pediatric Oncology Group. The primary objective of the organization is to conduct clinical trials of new therapies for childhood and adolescent cancer. COG develops and coordinates clinical trials conducted at the 238 member institutions that include cancer centers of all major universities and teaching hospitals throughout the U.S. and Canada, as well as sites in Europe and Australia. COG members include over 5000 cancer researchers.	ncit:C39353			
+PD						MRC	A publicly funded organization that is part of United Kingdom Research and Innovation, and is dedicated to improving human health through world-class medical research.	ncit:C168892			
+PD						CCLG	A children's cancer charity and United Kingdom and Ireland's professional association for those involved in the treatment and care of children with cancer.	ncit:C177327	Children’s Cancer and Leukaemia Group		
+PD						SFCE	An association founded in France in 2003 which promotes the organization of care and scientific research in the field of childhood and adolescent cancer.	ncit:C177328	Société Française de Lutte contre les Cancers et Leucémies de l'Enfant et de l'Adolescent		
+PD						SOPOBE	A society founded in 1981 committed to improve the prognosis of children and adolescents with cancer.	ncit:C177329	Brazilian Society of Pediatric Oncology		
+PD						DFCI	An institute founded in 1947 in Boston, Massachusetts, committed to providing treatment for adults and children with cancer, and developing cures with cutting-edge research.	ncit:C177330			
+PD						NRG-Oncology	A leading protocol organization within the National Clinical Trials Network that seeks to improve the lives of cancer patients by conducting practice-changing, multi-institutional clinical and translational research.	ncit:C177331			
+VD	AGE_AT_ENROLLMENT	Integer		Age of subject (in days) when the subject enrolled in the study.	ncit:C168843	_undefined_	_undefined_	_undefined_			
+VD	YEAR_AT_ENROLLMENT	Integer		The year at which a subject enrolled in a study.	ncit:C177353	_undefined_	_undefined_	_undefined_			
+VD	STUDY_ID	Enum		A sequence of characters used to identify, name, or characterize the study.	ncit:C83082	_undefined_	_undefined_	_undefined_			
+PD						TCGM2004					
+PD						TGM85	The identifier TGM85, assigned to a study in an GCT clinical trial.	ncit:C177332			
+PD						TGM90	The identifier TGM90, assigned to a study in an GCT clinical trial.	ncit:C177333			
+PD						TGM95	The identifier TGM95, assigned to a study in an GCT clinical trial.	ncit:C177334			
+PD						GC1	The identifier GC1, assigned to a study in an GCT clinical trial.	ncit:C177335			
+PD						GC2	The identifier GC2, assigned to a study in an GCT clinical trial.	ncit:C177336			
+PD						GOG0078					
+PD						GOG0090					
+PD						GOG0116	The identifier GOG116, assigned to a study in an GCT clinical trial.	ncit:C177339			
+PD						P9749	The identifier P9749, assigned to a study in an GCT clinical trial.	ncit:C177340			
+PD						POG9049	The identifier POG9049, assigned to a study in an GCT clinical trial.	ncit:C177341			
+PD						AGCT01P1	The identifier AGCT01P1, assigned to a study in an GCT clinical trial.	ncit:C177342			
+PD						AGCT0132	The identifier AGCT0132, assigned to a study in an GCT clinical trial.	ncit:C177343			
+PD						AGCT0521	The identifier AGCT0521, assigned to a study in an GCT clinical trial.	ncit:C177344			
+PD						TE04	The identifier TE04, assigned to a study in an GCT clinical trial.	ncit:C177345			
+PD						TE05	The identifier TE05, assigned to a study in an GCT clinical trial.	ncit:C177346			
+PD						TE08	The identifier TE08, assigned to a study in an GCT clinical trial.	ncit:C177347			
+PD						TE22	The identifier TE22, assigned to a study in an GCT clinical trial.	ncit:C177348			
+PD						TE09	The identifier TE09, assigned to a study in an GCT clinical trial.	ncit:C177349			
+PD						TE13	The identifier TE13, assigned to a study in an GCT clinical trial.	ncit:C177350			
+PD						TE20	The identifier TE20, assigned to a study in an GCT clinical trial.	ncit:C177351			
+PD						TIP	The identifier TIP, assigned to a study in an GCT clinical trial.	ncit:C177352			
+VD	TREATMENT_ARM	Enum		A specific treatment plan within a clinical trial that describes the activities a subject will be involved in as he or she progresses through the study.	ncit:C15538	_undefined_	_undefined_	_undefined_			
+PD						TE09:BEP (Cisplatin)	Patients randomized with the following course sequence: 1) Bleomycin, etoposide and cisplatin (BEP)			New PD	
+PD						TE09:CEP (Carboplatin)	Patients randomized with the following course sequence: 1): Carboplatin and etoposide (Carboplatin is only used if patients cannot tolerate cisplatin)			New PD	
+PD						TE13:BEP	Patients randomized with the following course sequence: 1) Bleomycin, etoposide and cisplatin (BEP)			New PD	
+PD						TE13:BEP + GCSF	Patients randomized with the following course sequence: 1) Bleomycin, etoposide and cisplatin (BEP), 2) Filograstim (GCSF)			New PD	
+PD						TE13:BOP/VIP	Patients randomized with the following course sequence: 1) Bleomycin, vincristine, cisplatin (BOP), 2) Etoposide, ifosfamide, cisplatin and bleomycin (VIP-B)			New PD	
+PD						TE13:BOP/VIP + GCSF	Patients randomized with the following course sequence: 1) Bleomycin, vincristine, cisplatin (BOP), 2) Etoposide, ifosfamide, cisplatin and bleomycin (VIP-B), 3) Filograstim (GCSF)			New PD	
+PD						TE20:BEP 3 Cycle/3 Day	Patients randomized with the following course sequence: 1) Bleomycin, etoposide and cisplatin (BEP) given 3 cycles over 3 days			New PD	
+PD						TE20:BEP 3 Cycle/5 Day	Patients randomized with the following course sequence: 1) Bleomycin, etoposide and cisplatin (BEP) given 3 cycles over 5 days			New PD	
+PD						TE20:BEP 3 Cycle/Selected 3 Day	Patients randomized with the following course sequence: 1) Bleomycin, etoposide and cisplatin (BEP) given 3 cycles over 3 selected days			New PD	
+PD						TE20:BEP 4 Cycle/3 Day	Patients randomized with the following course sequence: 1) Bleomycin, etoposide and cisplatin (BEP) given 4 cycles over 3 days			New PD	
+PD						TE20:BEP 4 Cycle/5 Day	Patients randomized with the following course sequence: 1) Bleomycin, etoposide and cisplatin (BEP) given 4 cycles over 5 days			New PD	
+PD						TE20:BEP 4 Cycle/Selected 3 Day	Patients randomized with the following course sequence: 1) Bleomycin, etoposide and cisplatin (BEP) given 4 cycles over 3 selected days			New PD	
+VD	AGE_AT_CENSOR_STATUS	Integer		The age (in days) of the subject at the time of the event censor status.		_undefined_	_undefined_	_undefined_			
+VD	EFS_CENSOR_STATUS	Enum		The status of individuals in a study when their outcome (event occurrence or time to event) is censored or not censored at the time of analysis or data collection. Censoring occurs when an individual has not experienced the event of interest by the end of the study period or at the time of data analysis, often because they were lost to follow-up, withdrew from the study, or the study ended before the event could occur. In event-free survival analysis, these censored individuals are included in the analysis up to the point of censoring and are essential for estimating survival probabilities and analyzing the time to events.		_undefined_	_undefined_	_undefined_			
+PD						Censored	The status of a participant or subject in a study whose event or outcome of interest has not yet occurred or has not been observed within the study's follow-up period. Censoring occurs when the event of interest has not happened to a participant by the end of the study or when they are lost to follow-up before the event occurs.	ncit:C118962			
+PD						Not Censored	The patient has experienced the event of interest within the study period and has reached the endpoint being evaluated, such as disease progression, relapse, recurrence, or death, and their time to event can be accurately recorded and analyzed.				
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+											
+											
+DD	Protocol										
+TD	Time Period									New TD	
+TG	One row per subject per time period type										
+VD	HONEST_BROKER_SUBJECT_ID	String	1 - contributors must include, regardless of the resource cost	The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_		New VD	
+VD	SUBMITTER_ID	String	2 - contributors should prioritize inclusion if resources are available	An ID provided by the data contributor that identifies a unique time period and that is referenced throughout subsequent tabels in the TIME_PERIOD_SUBMITTER_ID variables.		_undefined_	_undefined_	_undefined_		New VD	
+VD	PARENT_SUBMITTER_ID	String	2 - contributors should prioritize inclusion if resources are available	The SUBMITTER_ID of the time period in whose context a subsequent time period takes place. For example, multiple treatment courses occuring the "Initial Diagnosis" period would each reference the SUBMITTER_ID of the "Initial Diagnosis" period as their PARENT_SUBMITTER_ID.		_undefined_	_undefined_	_undefined_		New VD	
+VD	TIME_PERIOD_TYPE	Enum	2 - contributors should prioritize inclusion if resources are available	The type of time period being reported.		_undefined_	_undefined_	_undefined_		New VD	
+PD						Disease Phase	The stage or period of an individual's disease.	ncit:C168878			
+VD	DISEASE_PHASE	Enum	2 - contributors should prioritize inclusion if resources are available	The phase of the cancer treatment process during which relevant observations were recorded. This variable is used across domains to frame the timing of these longitudinal observations and reduce the number of redundant variables needed to report similar concepts (see "Disease Phase Timing and Course Table" in the documentation for additional guidance).	ncit:C168878	_undefined_	_undefined_	_undefined_		[gct_v1.2].[Disease Phase Timing].[DISEASE_PHASE] skos:exactMatch [gct_v2.0].[Time Period].[DISEASE_PHASE]	
+PD						Initial Diagnosis	The first diagnosis of the individual's condition.	ncit:C156813			
+PD						Relapse	The return of a disease after a period of remission.	ncit:C38155			
+VD	TIME_PERIOD_NUMBER	Integer	2 - contributors should prioritize inclusion if resources are available	This variable indicates the ordinal numbering of time periods of the same TIME_PERIOD_TYPE within its various subgroups (e.g., Relapse 1, Relapse 2, Relapse 3, etc.). The observations across domains can therefore be organized longitudinally without the need for specific dates.		_undefined_	_undefined_	_undefined_		[gct_v1.2].[Disease Phase Timing].[DISEASE_PHASE_NUMBER] skos:exactMatch [gct_v2.0].[Time Period].[TIME_PERIOD_NUMBER]	
+VD	YEAR_AT_START	Integer	2 - contributors should prioritize inclusion if resources are available	The year at the start of the indicated time period.		_undefined_	_undefined_	_undefined_		[gct_v1.2].[Disease Phase Timing].[YEAR_AT_DISEASE_PHASE] skos:exactMatch [gct_v2.0].[Time Period].[YEAR_AT_START]	
+VD	AGE_AT_START	Integer	2 - contributors should prioritize inclusion if resources are available	The age (in days) of the patient at the start of the reported time period.		_undefined_	_undefined_	_undefined_		[gct_v1.2].[Disease Phase Timing].[AGE_AT_DISEASE_PHASE] skos:exactMatch [gct_v2.0].[Time Period].[AGE_AT_START]	
+											
+											
+DD	Demographics										
+TD	Demographics										
+TG	One row per subject										
+VD	HONEST_BROKER_SUBJECT_ID	String	1 - contributors must include, regardless of the resource cost	The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_		New VD	
+VD	SEX	Enum		The assemblage of physical properties or qualities by which male is distinguished from female; the physical difference between male and female; the distinguishing peculiarity of male or female.	ncit:C28421	_undefined_	_undefined_	_undefined_			
+PD						Male	A person who belongs to the sex that normally produces sperm. The term is used to indicate biological sex distinctions, cultural gender role distinctions, or both.	ncit:C20197			
+PD						Female	A person who belongs to the sex that normally produces ova. The term is used to indicate biological sex distinctions, or cultural gender role distinctions, or both.	ncit:C16576			
+PD						Undifferentiated	Sex could not be determined; not uniquely defined; undifferentiated.	ncit:C41438			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	RACE	Enum		An arbitrary classification of a taxonomic group that is a division of a species. It usually arises as a consequence of geographical isolation within a species and is characterized by shared heredity, physical attributes and behavior, and in the case of humans, by common history, nationality, or geographic distribution.	ncit:C17049	_undefined_	_undefined_	_undefined_			
+PD						American Indian or Alaska Native	A person having origins in any of the original peoples of North and South America (including Central America) and who maintains tribal affiliation or community attachment. (OMB)	ncit:C41259			
+PD						Asian	A person having origins in any of the original peoples of the Far East, Southeast Asia, or the Indian subcontinent, including for example, Cambodia, China, India, Japan, Korea, Malaysia, Pakistan, the Philippine Islands, Thailand, and Vietnam. (OMB)	ncit:C41260			
+PD						Black or African American	A person having origins in any of the Black racial groups of Africa. Terms such as "Haitian" or "Negro" can be used in addition to "Black or African American". (OMB)	ncit:C16352			
+PD						Multiracial	Having ancestors of several or various races.	ncit:C67109			
+PD						Native Hawaiian or Other Pacific Islander	A person having origins in any of the original peoples of Hawaii, Guam, Samoa, or other Pacific Islands. (OMB)	ncit:C41219			
+PD						White	A person having origins in any of the original peoples of Europe, the Middle East, or North Africa. (OMB)	ncit:C41261			
+PD						Other	Different than the one(s) previously specified or mentioned.	ncit:C17649			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	ETHNICITY	Enum		A social group characterized by a distinctive social and cultural tradition that is maintained from generation to generation. Members share a common history and origin and a sense of identification with the group. They have similar and distinctive features in their lifestyle habits and shared experiences. They often have a common genetic heritage which may be reflected in their experience of health and disease.	ncit:C16564	_undefined_	_undefined_	_undefined_			
+PD						Hispanic or Latino	A person of Cuban, Mexican, Puerto Rican, South or Central American, or other Spanish culture or origin, regardless of race. The term, "Spanish origin," can be used in addition to "Hispanic or Latino." (OMB)	ncit:C17459			
+PD						Not Hispanic or Latino	A person not of Cuban, Mexican, Puerto Rican, South or Central American, or other Spanish culture or origin, regardless of race.	ncit:C41222			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+											
+											
+DD	Demographics										
+TD	Medical History										
+TG	One row per subject per prior medical history										
+VD	HONEST_BROKER_SUBJECT_ID	String		The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_		New VD	
+VD	CONDITION	Enum		The verbatim description of the medical history being reported.	ncit:C83118	_undefined_	_undefined_	_undefined_		[gct_v1.2].[Medical History].[MEDICAL_HISTORY] skos:exactMatch [gct_v2.0].[Medical History].[CONDITION]	
+PD						Turner Syndrome	A gonadal dysgenesis syndrome occurring in phenotypic females, characterized by the absence of a part or all of one of the sex chromosomes. Signs and symptoms include short stature, webbing of neck, low-set ears, hypogonadism, and sterility.	ncit:C26900			
+PD						Klinefelter Syndrome	A sex chromosome disorder caused by the presence of an extra X chromosome in the male karyotype. Affected individuals are infertile and have a small penis and testes. They tend to have tall stature and long legs and may have difficulties with speech and language development. Gynecomastia may be present.	ncit:C34752			
+PD						Swyer Syndrome	A rare syndrome characterized by the presence of a small lung as a result of unilateral post-infectious bronchiolitis obliterans.	ncit:C85178			
+PD						Frasier Syndrome	A condition, which typically presents during adolescence, that is caused by WT-1 mutation, and is characterized by a developmental sex disorder, FSGS, and may be associated with gonadoblastoma.	ncit:C122805			
+PD						Gonadal Dysgenesis	A congenital disorder characterized by the presence of extremely hypoplastic gonads preventing the development of secondary sex characteristics	ncit:C61420			
+PD						Other	Different than the one(s) previously specified or mentioned.	ncit:C17649			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+VD	CONDITION_STATUS	Enum				_undefined_	_undefined_	_undefined_		[gct_v1.2].[Medical History].[MEDICAL_HISTORY_STATUS] skos:exactMatch [gct_v2.0].[Medical History].[CONDITION_STATUS]	
+PD						Present	Being or existing in a specified place or at the specified time.	ncit:C25626			
+PD						Absent	Not existing in a specified place at a specified time.	ncit:C48190			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+											
+											
+DD	Demographics										
+TD	Survival Characteristics										
+TG	One row per subject per cause of death										
+VD	HONEST_BROKER_SUBJECT_ID	String		The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_		New VD	
+VD	AGE_AT_LKSS	Integer		Age of subject (in days) at the last known survival status.	ncit:C168844	_undefined_	_undefined_	_undefined_			
+VD	TIME_PERIOD_SUBMITTER_ID	String		This is the SUBMITTER_ID of the time period (defined in the "Time Period" table) during which this observation takes place.		_undefined_	_undefined_	_undefined_		New VD	
+VD	LKSS	Enum		The individual's last known survival status.	ncit:C168931	_undefined_	_undefined_	_undefined_			
+PD						Alive	Showing characteristics of life; displaying signs of life.	ncit:C37987			
+PD						Dead	The cessation of life.	ncit:C28554			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+VD	CAUSE_OF_DEATH	Enum		The circumstance or condition that results in the death of a living being.	ncit:C81239	_undefined_	_undefined_	_undefined_			
+PD						Disease Progression	An indication that the subject has died due to the progression of their disease.	ncit:C168970	Note: If multiple causes of death, include one observation per cause of death.		
+PD						Treatment-Related Mortality	A death that is considered to be causally linked to a treatment.	ncit:C166165			
+PD						Secondary Malignancy	A malignant neoplasm that arises from a pre-existing lower grade lesion, or as a result of a primary lesion that has spread to secondary sites, or due to a complication of a cancer treatment.	ncit:C4968			
+PD						Other	Different than the one(s) previously specified or mentioned.	ncit:C17649			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+											
+											
+DD	Testing										
+TD	Vitals And Anthropometrics									[gct_v1.2].[Vitals] skos:exactMatch [gct_v2.0].[Vitals And Anthropometrics]	
+TG	One row per subject per vital or anthropometric measurement										
+VD	HONEST_BROKER_SUBJECT_ID	String		The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_		New VD	
+VD	AGE_AT_MEASUREMENT	Integer		The age (in days) of the subject when the vitals measurement was taken.	ncit:C154628	_undefined_	_undefined_	_undefined_		[gct_v1.2].[Vitals].[AGE_AT_VITALS] skos:exactMatch [gct_v2.0].[Vitals And Anthropometrics].[AGE_AT_MEASUREMENT]	
+VD	TIME_PERIOD_SUBMITTER_ID	String		This is the SUBMITTER_ID of the time period (defined in the "Time Period" table) during which this observation takes place.		_undefined_	_undefined_	_undefined_		New VD	
+VD	MEASUREMENT_TYPE	Enum		The measurement type of the vital sign or anthropomorphic measurement.	ncit:C49672	_undefined_	_undefined_	_undefined_		[gct_v1.2].[Vitals].[VITALS_TEST] skos:exactMatch [gct_v2.0].[Vitals And Anthropometrics].[MEASUREMENT_TYPE]	
+PD						Weight	The weight of a subject.	ncit:C81328			
+PD						Height	The vertical measurement or distance from the base to the top of a subject or participant.	ncit:C164634			
+VD	RESULT_TEXT	String		The string/text result of the vitals or anthropomorphic measurement.	ncit:C173522	_undefined_	_undefined_	_undefined_		[gct_v1.2].[Vitals].[VITALS_RESULT] skos:exactMatch [gct_v2.0].[Vitals And Anthropometrics].[RESULT_TEXT]	
+VD	RESULT_NUMERIC	Decimal		The numeric result of the vitals or anthropomorphic measurement.	ncit:C173268	_undefined_	_undefined_	_undefined_		[gct_v1.2].[Vitals].[VITALS_RESULT_NUMERIC] skos:exactMatch [gct_v2.0].[Vitals And Anthropometrics].[RESULT_NUMERIC]	
+VD	RESULT_UNIT	Enum		The unit of the numeric vital sign or anthropomorphic measurement.	ncit:C49675	_undefined_	_undefined_	_undefined_		[gct_v1.2].[Vitals].[VITALS_RESULT_UNIT] skos:exactMatch [gct_v2.0].[Vitals And Anthropometrics].[RESULT_UNIT]	
+PD						kg	A basic SI unit of mass. It is defined as the mass of an international prototype in the form of a platinum-iridium cylinder kept at Sevres in France. A kilogram is equal to 1,000 grams and 2.204 622 6 pounds.	ncit:C28252			
+PD						cm	A basic unit of length in the former CGS version of metric system, equal to one hundredth of a meter or approximately 0.393 700 787 inch.	ncit:C49668			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+											
+											
+DD	Testing										
+TD	Laboratory Test									[gct_v1.2].[Labs] skos:exactMatch [gct_v2.0].[Laboratory Test]	
+TG	One row per subject per lab test result										
+VD	HONEST_BROKER_SUBJECT_ID	String		The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_		New VD	
+VD	AGE_AT_LAB	Integer		The age (in days) of the subject at the time of the laboratory test.	ncit:C172691	_undefined_	_undefined_	_undefined_			
+VD	TIME_PERIOD_SUBMITTER_ID	String		This is the SUBMITTER_ID of the time period (defined in the "Time Period" table) during which this observation takes place.		_undefined_	_undefined_	_undefined_		New VD	
+VD	CATEGORY	Enum		The category of laboratory test performed on the subject.	ncit:C83017	_undefined_	_undefined_	_undefined_		[gct_v1.2].[Labs].[LAB_CATEGORY] skos:exactMatch [gct_v2.0].[Laboratory Test].[CATEGORY]	
+PD						Cerebrospinal Fluid Analysis	A laboratory analysis of a sample of cerebrospinal fluid.	ncit:C173272			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	TEST	Enum		A medical procedure that involves testing a sample of blood, urine, or other substance from the body. Tests can help determine a diagnosis, plan treatment, check to see if treatment is working, or monitor the disease over time.	ncit:C117142	_undefined_	_undefined_	_undefined_		[gct_v1.2].[Labs].[LAB_TEST] skos:exactMatch [gct_v2.0].[Laboratory Test].[TEST]	
+PD						LDH	A quantitative measurement of the amount of lactate dehydrogenase present in a sample.	ncit:C64855			
+PD						AFP	This gene plays a role in fetal progression.	ncit:C21577			
+PD						β-hCG	A determination of the presence of Choriogonadotropin Beta protein.	ncit:C64851			
+PD						miR-371a-3p	The human MIR371A wild-type allele is located in the vicinity of 19q13.42 and is approximately 67 bases in length. This allele, which encodes MIR371A pre-miRNA, may be involved in the regulation of target gene expression. Alteration in the expression of this gene is associated with malignant germ cell tumors.	ncit:C158711			
+PD						miR-372-3p	The human MIR372 wild-type allele is located in the vicinity of 19q13.41 and is approximately 66 bases in length. This allele, which encodes MIR372 pre-miRNA, plays a role in the regulation of gene expression. Alteration in the expression of this gene is associated with development of testicular germ cell tumor and non-small cell lung cancer.	ncit:C82190			
+PD						miR-373-3p	The human MIR373 wild-type allele is located in the vicinity of 19q13.41 and is approximately 68 bases in length. This allele, which encodes MIR373 pre-miRNA, plays a role in the regulation of gene expression. Alteration in the expression of this gene is associated with development of testicular germ cell tumor and breast cancer.	ncit:C82191			
+PD						miR-367-3p	The determination of the amount of human microRNA 367-3p present in a sample.	ncit:C177302			
+PD						miR-375-3p	Human MIR375 wild-type allele is located in the vicinity of 2q35 and is approximately 70 bases in length. This allele, which encodes MIR375 pre-miRNA, is involved in the modulation of gene expression.	ncit:C101665			
+PD						cfDNA	DNA that is found in blood plasma and is not associated with cells in the circulation.	ncit:C128274			
+PD						Cytology Malignant Cells	The determination of the number of malignant cells present in a sample.	ncit:C74660		New PD	
+VD	SPECIMEN	Enum		The type of a material sample taken from a biological entity for testing, diagnostic, propagation, treatment or research purposes. This includes particular types of cellular molecules, cells, tissues, organs, body fluids, embryos, and body excretory substances.	ncit:C70713	_undefined_	_undefined_	_undefined_		[gct_v1.2].[Labs].[LAB_SPEC_TYPE] skos:exactMatch [gct_v2.0].[Laboratory Test].[SPECIMEN]	
+PD						Blood	A small volume of blood removed for testing or storage.	ncit:C17610			
+PD						Cerebrospinal Fluid	The fluid that is contained within the brain ventricles, the subarachnoid space and the central canal of the spinal cord.	ncit:C12692			
+PD						Peritoneal Fluid	A specimen of fluid from the peritoneum.	ncit:C185197			
+PD						Pleural Fluid	The fluid that is ordinarily present in the pleural space. It allows for normal movement of the lungs during respiration.	ncit:C77613		New PD	
+PD						Serum	A sample of serum collected for analysis.	ncit:C178987			
+PD						Plasma	A specimen of plasma.	ncit:C185204			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	METHOD	Enum		A systematic course of action that is performed in order to complete a laboratory test.	ncit:C83312	_undefined_	_undefined_	_undefined_		[gct_v1.2].[Labs].[LAB_METHOD] skos:exactMatch [gct_v2.0].[Laboratory Test].[METHOD]	
+PD						MicroRNA Sequencing	A next-generation or massively parallel high-throughput DNA sequencing-based procedure that can identify and quantify the microRNA sequences present in a biological sample.	ncit:C156057			
+PD						qPCR	An application of PCR that measures the products generated during each cycle of the polymerase chain reaction process in order to determine the starting amount of template in the reaction.	ncit:C51962			
+PD						ddPCR	A type of digital polymerase chain reaction technique in which the sample is fractionated into thousands of tiny droplets using a water-oil emulsion droplet technology, within which individual PCR reactions occur in each droplet	ncit:C166064			
+PD						Cytology	The light microscopic study of normal and abnormal cells in fine needle aspirates (FNAs), body cavity fluids, and smears.	ncit:C16491			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	RESULT	Enum		The categorical result of the laboratory test.	ncit:C36292	_undefined_	_undefined_	_undefined_		New VD	
+PD						Present	A finding of abnormality following an examination or observation confirming something, such as the presence of a disease, condition, or microorganism.	ncit:C25626			
+PD						Absent	Not existing in a specified place at a specified time.	ncit:C48190			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	RESULT_TEXT	String		The string/text result of the laboratory test.	ncit:C36292	_undefined_	_undefined_	_undefined_		[gct_v1.2].[Labs].[LAB_RESULT] skos:exactMatch [gct_v2.0].[Laboratory Test].[RESULT_TEXT]	
+VD	RESULT_NUMERIC	Decimal		The numeric result of the laboratory test.	ncit:C70952	_undefined_	_undefined_	_undefined_		[gct_v1.2].[Labs].[LAB_RESULT_NUMERIC] skos:exactMatch [gct_v2.0].[Laboratory Test].[RESULT_NUMERIC]	
+VD	RESULT_UNIT	Enum		The unit of the numeric result of the laboratory test.	ncit:C173274	_undefined_	_undefined_	_undefined_		[gct_v1.2].[Labs].[LAB_RESULT_UNIT] skos:exactMatch [gct_v2.0].[Laboratory Test].[RESULT_UNIT]	
+PD						U/L	An arbitrary unit of substance concentration equal to the concentration at which one liter of mixture contains one unit of a substance.	ncit:C67456			
+PD						ng/mL	A unit of mass concentration defined as the concentration of one microgram of a substance per unit volume of the mixture equal to one liter. The concept also refers to the unit of mass density (volumetric mass) defined as the density of a substance which mass equal to one microgram occupies the volume of one liter.	ncit:C67306			
+PD						IU/L	Unit of arbitrary substance concentration (biologic activity concentration) defined as the concentration of one international unit per one liter of the system volume.	ncit:C67376			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	SEQ_METHOD	Enum		The number of molecules of a particular type on or in a cell or part of a cell. Usually applied to specific genes or to plasmids within a bacterium.	ncit:C49142	_undefined_	_undefined_	_undefined_		[gct_v1.2].[Labs].[LAB_SEQ_METHOD] skos:exactMatch [gct_v2.0].[Laboratory Test].[SEQ_METHOD]	
+PD						Relative	Considered in comparison with something else; dependent on or interconnected with something else; not absolute.	ncit:C45830			
+PD						Absolute	Complete and without restriction or qualification; something that does not depend on anything else; not relative.	ncit:C45829			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	THRESHOLD_HIGH	Decimal		The maximum level that must be exceeded for a certain reaction to occur or be manifested.	ncit:C177365	_undefined_	_undefined_	_undefined_			
+VD	THRESHOLD_LOW	Decimal		The minimum level that must be attained for a certain reaction to occur or be manifested.	ncit:C177366	_undefined_	_undefined_	_undefined_			
+VD	PMID_REF	Decimal		A globally unique identifier for a biomedical article, as assigned by PubMed.	ncit:C127797	_undefined_	_undefined_	_undefined_			
+											
+											
+DD	Testing										
+TD	Molecular Analysis										
+TG	One row per subject per molecular abnormality										
+VD	HONEST_BROKER_SUBJECT_ID	String		The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_		New VD	
+VD	AGE_AT_MOLECULAR_ANALYSIS	Integer		Age of subject (in days) when molecular analysis was performed.	ncit:168848	_undefined_	_undefined_	_undefined_			
+VD	TIME_PERIOD_SUBMITTER_ID	String		This is the SUBMITTER_ID of the time period (defined in the "Time Period" table) during which this observation takes place.		_undefined_	_undefined_	_undefined_		New VD	
+VD	MOLECULAR_ANALYSIS_METHOD	Enum		A request to enter the specific molecular analysis method used to detect abnormalities in the study.	ncit:C158954	_undefined_	_undefined_	_undefined_			
+PD						Karyotyping	The preparation, analysis, and interpretation of a karyotype, the representation of the chromosome set of a cell.	ncit:C16768			
+PD						Cytogenetics	The branch of biology that studies the cellular aspects of heredity, especially the chromosomes. Includes the study of disease states caused by numerical and structural chromosome abnormalities.	ncit:C16487			
+PD						Unknown	Not known, not observed, not recorded, or refused.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	KARYOTYPE_STATUS	Enum		The status of the subject's karyotype.	ncit:C168871	_undefined_	_undefined_	_undefined_			
+PD						Normal Karyotype	The assessment of the karyotype is that it is normal.	ncit:C173277			
+PD						Abnormal Karyotype	Any abnormality in the number, length, centromere position, banding pattern or differences between the sex chromosomes that is not representative of a normal set of chromosomes.	ncit:C168875			
+PD						Unknown	Not known, not observed, not recorded, or refused.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	ISCN	String		A karyotype finding as classified by the International System for Human Cytogenetic Nomenclature.	ncit:C173278	_undefined_	_undefined_	_undefined_			
+VD	NUM_CHROMOSOMES	Integer		The number of chromosomes upon karyotype analysis.	ncit:C177370	_undefined_	_undefined_	_undefined_			
+VD	INDEPEN_AB	Integer		The number of independent aberrations found in the karyotype during analysis.	ncit:C173279	_undefined_	_undefined_	_undefined_			
+VD	MOLECULAR_ABNORMALITY	Enum		A molecular or cytogenic abnormality which occurs in either human disease states or disease models.	ncit:C3910	_undefined_	_undefined_	_undefined_			
+PD						45XO	Gonadal dysgenesis in an individual with 46,XX karyotype and female phenotype.	ncit:C26900	Note: If multiple molecular abnormalities, include one observation per molecular abnormality.		
+PD						45XO w/ Y Chromosomal Material	An abnormal sex chromosome karyotype where the individual is missing a second X chromosome and has some chromosomal material from the Y chromosome. The normal autosomal karyotype is present.	ncit:C176781			
+PD						46XX	Gonadal dysgenesis in an individual with 46,XX karyotype and female phenotype.	ncit:C120197			
+PD						46XY	Gonadal dysgenesis in an individual with 46.XY karyotype.	ncit:C120198			
+PD						47XYY	A condition caused by the presence of an extra Y chromosome resulting in 47,XYY karyotype in an individual with male phenotype. The condition is characterized by tall stature, increased risk of learning disabilities, and delayed development of speech and language. Testicular function and size are normal.	ncit:C85237			
+PD						47XXY	A sex chromosome disorder caused by the presence of an extra X chromosome in the male karyotype. Affected individuals are infertile and have a small penis and testes. They tend to have tall stature and long legs and may have difficulties with speech and language development. Gynecomastia may be present.	ncit:C34752			
+PD						47XXX	A condition caused by the presence of an extra X chromosome resulting in 47,XXX karyotype in an individual with female phenotype. The condition is characterized by tall stature, increased risk of learning disabilities, and delayed development of speech and language.	ncit:C129718			
+PD						48XXXY	A rare sex chromosome abnormality in which a male child has 2 extra X chromosomes.	ncit:C89799			
+PD						48XXXX	An abnormal sex chromosome karyotype where the individual has four copies of the X chromosome. The normal autosomal karyotype is present.	ncit:C176787			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:17998			
+PD						Not Reported	Not provided or available.	ncit:43234			
+VD	CHROMOSOME	String		One of the bodies in the cell nucleus that is the bearer of genes, has the form of a delicate chromatin filament during interphase, contracts to form a compact cylinder segmented into two arms by the centromere during metaphase and anaphase stages of cell division, and is capable of reproducing its physical and chemical structure through successive cell divisions.	ncit:13202	_undefined_	_undefined_	_undefined_			
+VD	GENE1	String		The gene symbol that represents either a single gene that has a mutation or the gene that comprises the 5' portion of the coding sequence involved in a fusion gene mutation.	ncit:C17595	_undefined_	_undefined_	_undefined_			
+VD	GENE2	String		The gene symbol that represents the gene that comprises the 3' portion of the coding sequence for a fusion gene.	ncit:C171253	_undefined_	_undefined_	_undefined_			
+VD	VARIANT_TYPE	Enum		A variation in or modification of the molecular sequence of a gene or gene product.	ncit:97926	_undefined_	_undefined_	_undefined_			
+PD						Translocation	A genetic exchange where a piece of one chromosome is transfered to another chromosome.	ncit:3420	Derived by PCDC		
+PD						Inversion	A structural change in genomic DNA where the 5' to 3' order of a nucleotide sequence is completely reversed to the 3' to 5' order relative to its adjacent sequences. This inversion is termed either pericentric, if it includes the centromere of a chromosome, or pancentric, if it excludes the centromere. An inversion mutation abnormality may be heritable or occur somatically.	ncit:45589			
+PD						Mutation	Any transmissible change in the genetic material of an organism, which can result from radiation, viral infection, transposition, treatment with mutagenic chemicals and errors during DNA replication or meiosis. The effects of mutation range from single base changes to loss or gain of complete chromosomes. As many of the simpler alterations to DNA may be repaired, such changes are only heritable once the change is fixed in the DNA by the process of replication. Mutations may be associated with genetic diversity or with pathologies including cancer.	ncit:45576			
+PD						Single Nucleotide Variant	A variation of a single nucleotide at a specific location of the genome due to base substitution, which is found at any frequency in the population.	ncit:164674			
+PD						Copy Number Alteration	Variation in the number of copies of a particular sequence within the genetic material of an individual. Large-scale copy number polymorphisms are common and widely distributed in the human genome.	ncit:40207			
+PD						Rearrangement	Any process affecting a DNA sequence that results in the gain, loss or exchange of DNA between chromosomes and/or autonomous replicons.	ncit:21069			
+PD						Deletion	Any rearrangement to the genomic content that results in the loss of one or more nucleotides of DNA. Deletions are generally irreversible rearrangements. They may alter the reading frame of a gene, or may result in loss of large chromosomal regions.	ncit:19296			
+PD						Other	Different than the one(s) previously specified or mentioned.	ncit:17649			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:17998			
+PD						Not Reported	Not provided or available.	ncit:43234			
+											
+											
+DD	Testing										
+TD	Immunohistochemistry										
+TG	One row per subject per immunohistochemistry test										
+VD	HONEST_BROKER_SUBJECT_ID	String		The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_		New VD	
+VD	AGE_AT_IHC	Integer		The age (in days) of the subject at the immunohistochemical test.	ncit:C175006	_undefined_	_undefined_	_undefined_			
+VD	TIME_PERIOD_SUBMITTER_ID	String		This is the SUBMITTER_ID of the time period (defined in the "Time Period" table) during which this observation takes place.		_undefined_	_undefined_	_undefined_		New VD	
+VD	MARKERS	Enum		A laboratory method that uses antibodies to check for certain antigens (markers) in a sample of tissue. The antibodies are usually linked to an enzyme or a fluorescent dye. After the antibodies bind to the antigen in the tissue sample, the enzyme or dye is activated, and the antigen can then be seen under a microscope. Immunohistochemistry is used to help diagnose diseases, such as cancer. It may also be used to help tell the difference between different types of cancer (Source: NCI Dictionary of Cancer Terms)	ncit:C51944	_undefined_	_undefined_	_undefined_		[gct_v1.2].[Immunohistochemistry].[IHC_TEST] skos:exactMatch [gct_v2.0].[Immunohistochemistry].[MARKERS]	
+PD						CD30	Tumor necrosis factor receptor superfamily member 8 (595 aa, ~ 64 kDa) is encoded by the human TNFRSF8 gene. This protein is involved in ligand-mediated signal transduction, the positive regulation of apoptosis and the inhibition of cell proliferation.	ncit:C38906			
+PD						beta-catenin	Catenin beta-1 (781 aa, ~85 kDa) is encoded by the human CTNNB1 gene. This protein is involved in Wnt signaling, adherens junction structure, and the regulation of cell growth.	ncit:C17478			
+PD						GPC3	Glypican-3 (580 aa, ~66 kDa) is encoded by the human GPC3 gene. This protein is involved in the mediation of proteoglycan binding to the cell surface.	ncit:C88175			
+VD	RESULT_TEXT	String		The string/text result of the immunohistochemistry test.	ncit:C175007	_undefined_	_undefined_	_undefined_		[gct_v1.2].[Immunohistochemistry].[IHC_RESULT] skos:exactMatch [gct_v2.0].[Immunohistochemistry].[RESULT_TEXT]	
+VD	RESULT_NUMERIC	Decimal		The numerical result of the immunohistochemistry test.	ncit:C177368	_undefined_	_undefined_	_undefined_		[gct_v1.2].[Immunohistochemistry].[IHC_RESULT_NUMERIC] skos:exactMatch [gct_v2.0].[Immunohistochemistry].[RESULT_NUMERIC]	
+											
+											
+DD	Disease Attributes										
+TD	Diagnosis									[gct_v1.2].[Histology] skos:exactMatch [gct_v2.0].[Diagnosis]	
+TG	One row per subject per diagnosis										
+VD	HONEST_BROKER_SUBJECT_ID	String		The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_		New VD	
+VD	AGE_AT_DIAG_ASSESSMENT	Integer		The age (in days) of the subject at the time of this diagnostic assessment.	ncit:C175004	_undefined_	_undefined_	_undefined_		[gct_v1.2].[Histology].[AGE_AT_HIST_ASSESSMENT] skos:exactMatch [gct_v2.0].[Diagnosis].[AGE_AT_DIAG_ASSESSMENT]	
+VD	TIME_PERIOD_SUBMITTER_ID	String		This is the SUBMITTER_ID of the time period (defined in the "Time Period" table) during which this observation takes place.		_undefined_	_undefined_	_undefined_		New VD	
+VD	REVIEW_SOURCE	Enum		The type of assessment that was used to review.	ncit:C185324	_undefined_	_undefined_	_undefined_		[gct_v1.2].[Histology].[HIST_ASSESSMENT_REVIEW] skos:exactMatch [gct_v2.0].[Diagnosis].[REVIEW_SOURCE]	
+PD						Institutional	Local institutional review process at treating institution.	ncit:C185325			
+PD						Central Review	Review by a single person or group of laboratory test results, protocols, or other data generated from multiple locations.	ncit:C191951			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	DIAGNOSIS_BASIS	Enum		The type of diagnosis used for determining the medical condition.		_undefined_	_undefined_	_undefined_		New VD	
+PD						Histological	Pertaining to the combined microscopic physical features of cells and their surrounding extracellular environment in tissues.	ncit:C25526			
+PD						Integrated	Combining things, people, or ideas of different types in one effective unit, group, or system.	ncit:C165682			
+VD	DIAGNOSIS	Enum		The investigation, analysis and recognition of the presence and nature of disease, condition, or injury from expressed signs and symptoms; also, the scientific determination of any kind; the concise results of such an investigation.	ncit:C15220	_undefined_	_undefined_	_undefined_		[gct_v1.2].[Histology].[HISTOLOGY] skos:exactMatch [gct_v2.0].[Diagnosis].[DIAGNOSIS]	
+PD						Seminoma/Dysgerminoma/Germinoma	A term that refers to germinoma, seminoma, or dysgerminoma.	ncit:C121618			
+PD						Embryonal Carcinoma	A non-seminomatous malignant germ cell tumor characterized by the presence of large germ cells with abundant cytoplasm resembling epithelial cells, geographic necrosis, high mitotic activity, and pseudoglandular and pseudopapillary structures formation. It can arise from the testis, ovary, and extragonadal sites (central nervous system and mediastinum).	ncit:C3752			
+PD						Yolk Sac Tumor	A non-seminomatous malignant germ cell tumor composed of primitive germ cells. It is the most common malignant germ cell tumor in the pediatric population. It occurs in the infant testis, ovary, sacrococcygeal region, vagina, uterus, prostate, abdomen, liver, retroperitoneum, thorax, and pineal/third ventricle. The tumor mimics the yolk sac of the embryo and produces alpha-fetoprotein (AFP). Treatment includes: surgical resection, radiation, and chemotherapy. This tumor is very responsive to chemotherapy regimens that include cisplatinum.	ncit:C3011			
+PD						Choriocarcinoma	An aggressive malignant tumor arising from trophoblastic cells. The vast majority of cases arise in the uterus and represent gestational choriocarcinomas that derive from placental trophoblastic cells. Approximately half of the cases develop from a complete hydatidiform mole. A minority of cases arise in the testis or the ovaries. There is often marked elevation of human chorionic gonadotropin (hCG) in the blood. Choriocarcinomas disseminate rapidly through the hematogenous route; the lungs are most frequently affected.	ncit:C2948			
+PD						Mature Teratoma	A teratoma which may be cystic; it is composed entirely of well differentiated, adult-type mature tissues, without evidence of fetal-type immature tissues (grade 0 teratoma).	ncit:C9015			
+PD						Immature Teratoma	A teratoma characterized by the presence of an extensive component of immature, fetal-type tissues.	ncit:C4286			
+PD						Gonadoblastoma	A mixed germ cell/sex cord-stromal tumor characterized by the presence of large germ cells which resemble seminoma cells and small cells which resemble Sertoli or granulosa cells. It occurs in the testis and the ovary and is identified in children and adults. It is often associated with gonadal dysgenesis and abnormal karyotype.	ncit:C3754			
+PD						Somatic Malignancy	Any mutation with an origin in cells that are not destined to become gametes. As a consequence, such mutations are not transmitted to progeny, though they will be transmitted during any mitosis within the individual. Somatic mutations may contribute to a broad variety of pathologies including cancer. 	ncit:C18060			
+PD						Necrotic Tumor	A neoplasm characterized by focal or diffuse tumor cell necrosis.	ncit:C36029			
+PD						Teratoma, NOS	A non-seminomatous germ cell tumor characterized by the presence of various tissues which correspond to the different germinal layers (endoderm, mesoderm, and ectoderm). It occurs in the testis, ovary, and extragonadal sites including central nervous system, mediastinum, lung, and stomach. According to the level of differentiation of the tissues which comprise the tumor, teratomas are classified as benign (grade 0 or 1), immature (grade 2), and malignant (grade 3). Grade 0 teratomas contain only mature elements; grade 1 teratomas have a limited degree of immaturity; grade 2 teratomas have a more extensive degree of immaturity; grade 3 teratomas are composed exclusively of immature tissues. The prognosis depends on patient age, tumor size and grade, and stage.	ncit:C3403			
+PD						Mixed Germ Cell Tumor	A malignant germ cell tumor characterized by the presence of at least two different germ cell tumor components. The different germ cell tumor components include choriocarcinoma, embryonal carcinoma, yolk sac tumor, teratoma, and seminoma. It occurs in the ovary, testis, and extragonadal sites including central nervous system and mediastinum.	ncit:C4290			
+PD						Malignant Teratoma	A teratoma composed exclusively of immature tissues.	ncit:C4287			
+PD						Seminoma	A radiosensitive malignant germ cell tumor found in the testis (especially undescended), and extragonadal sites (anterior mediastinum and pineal gland). It is characterized by the presence of uniform cells with clear or dense cytoplasm which contains glycogen, and by a large nucleus which contains one or more nucleoli. The neoplastic germ cells form aggregates separated by fibrous septa. The fibrous septa contain chronic inflammatory cells, mainly lymphocytes.	ncit:C9309			
+PD						Dysgerminoma	A malignant germ cell tumor characterized by the presence of a monotonous primitive germ cell population. The neoplastic cells form aggregates and have an abundant pale cytoplasm and uniform nuclei. The aggregates of the germ cells are separated by fibrous septa which contain inflammatory cells, mostly T-lymphocytes. It arises primarily in the ovaries, but can occur both primarily and secondarily at other sites, particularly the central nervous system. It responds to chemotherapy and radiotherapy. Its prognosis is related to the tumor stage.	ncit:C2996			
+PD						Germinoma	A malignant germ cell tumor arising in the central nervous system. It is characterized by the presence of primitive, large malignant germ cells and lymphocytes.	ncit:C3753			
+PD						Other	Different than the one(s) previously specified or mentioned.	ncit:C17649			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	RESULT_TEXT	String		The string/text result of the histologic test.		_undefined_	_undefined_	_undefined_	Note: String result can include anything that is not a single numeric result, i.e. "Positive", "Negative", "Present", "Absent", "Yes", "No", "Elevated," "Depressed", "Above threshold", "Below threshold", ranges, as well as bucketed categories, etc.	[gct_v1.2].[Histology].[HISTOLOGY_RESULT] skos:exactMatch [gct_v2.0].[Diagnosis].[RESULT_TEXT]	Change to MIXED_HISTOLOGY ? Or something better
+VD	RESULT_NUMERIC	Decimal		The numeric result for the histology result.	ncit:C177361	_undefined_	_undefined_	_undefined_		[gct_v1.2].[Histology].[HISTOLOGY_RESULT_NUMERIC] skos:exactMatch [gct_v2.0].[Diagnosis].[RESULT_NUMERIC]	
+VD	RESULT_UNIT	Enum		The unit of the numeric measurement of the diagnosis.	ncit:C177362	_undefined_	_undefined_	_undefined_		[gct_v1.2].[Histology].[HISTOLOGY_RESULT_UNIT] skos:exactMatch [gct_v2.0].[Diagnosis].[RESULT_UNIT]	
+PD						%	A unit for expressing a number as a fraction of hundred (on the basis of a rate or proportion per hundred).	ncit:C48570			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	MORPH_CODE	String		The morphology code describes the cell type of the tumor and its biologic activity.		_undefined_	_undefined_	_undefined_		[gct_v1.2].[Histology].[HIST_ICD_O_MORPH] skos:exactMatch [gct_v2.0].[Diagnosis].[MORPH_CODE]	
+VD	MORPH_CODE_SYSTEM	Enum		The coding system for the code used in MORPH_CODE.		_undefined_	_undefined_	_undefined_		New VD	
+PD						ICD-O	A code for the primary site of a tumor being reported using either ICD-O-2 or ICD-O-3.	ncit:C160903			
+VD	GRADE	Enum		The degree of abnormality of cancer cells, a measure of differentiation, the extent to which cancer cells are similar in appearance and function to healthy cells of the same tissue type. The degree of differentiation often relates to the clinical behavior of the particular tumor. Based on the microscopic findings, tumor grade is commonly described by one of four degrees of severity. Histopathologic grade of a tumor may be used to plan treatment and estimate the future course, outcome, and overall prognosis of disease. Certain types of cancers, such as soft tissue sarcoma, primary brain tumors, lymphomas, and breast have special grading systems.	ncit:C18000	_undefined_	_undefined_	_undefined_		[gct_v1.2].[Histology].[HISTOLOGY_GRADE] skos:exactMatch [gct_v2.0].[Diagnosis].[GRADE]	
+PD						Norris Immature Teratoma Grading System, Grade 1	Tumor is well differentiated (low grade), system not specified	ncit:C28077	Note: Only associated with Immature Teratoma.		
+PD						Norris Immature Teratoma Grading System, Grade 2	Tumor is moderately differentiated (intermediate grade), system not specified	ncit:C28078			
+PD						Norris Immature Teratoma Grading System, Grade 3	Tumor is poorly differentiated (high grade) , system not specified	ncit:C28079			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	MATURE_GLIAL_IMPLANTS	Enum		Was there nodules of mature glial tissue that developed in the peritoneum? It is usually accompanied by mature or immature ovarian teratoma.	ncit:C177363	_undefined_	_undefined_	_undefined_	Note: Only associated with Mature and Immature Teratoma		
+PD						Yes	The affirmative response to a question.	ncit:C49488			
+PD						No	The non-affirmative response to a question.	ncit:C49487			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	SOMATIC_MALIGNANCY_TYPE	Enum		A malignant non-germ cell component that typically develops secondarily within a germ cell tumor. The malignant cellular component is usually sarcomatous or carcinomatous.	ncit:C177364	_undefined_	_undefined_	_undefined_	Note: Only associated with Somatic Malignancy 		
+PD						Rhabdomyosarcoma	A rare aggressive malignant mesenchymal neoplasm arising from skeletal muscle. It usually occurs in children and young adults. Only a small percentage of tumors arise in the skeletal muscle of the extremities. The majority arise in other anatomic sites.	ncit:C3359			
+PD						Sarcoma, NOS	A usually aggressive malignant neoplasm of the soft tissue or bone. It arises from muscle, fat, fibrous tissue, bone, cartilage, and blood vessels. Sarcomas occur in both children and adults. The prognosis depends largely on the degree of differentiation (grade) of the neoplasm. Representative subtypes are liposarcoma, leiomyosarcoma, osteosarcoma, and chondrosarcoma.	ncit:C9118			
+PD						Adenocarcinoma	A common cancer characterized by the presence of malignant glandular cells. Morphologically, adenocarcinomas are classified according to the growth pattern (e.g., papillary, alveolar) or according to the secreting product (e.g., mucinous, serous). Representative examples of adenocarcinoma are ductal and lobular breast carcinoma, lung adenocarcinoma, renal cell carcinoma, hepatocellular carcinoma (hepatoma), colon adenocarcinoma, and prostate adenocarcinoma.	ncit:C2852			
+PD						Primitive Neuroectodermal Tumor	A malignant neoplasm that originates in the neuroectoderm. The neuroectoderm constitutes the portion of the ectoderm of the early embryo that gives rise to the central and peripheral nervous systems and includes some glial cell precursors.	ncit:C3716			
+PD						Squamous Cell Carcinoma	A carcinoma arising from squamous epithelial cells. Morphologically, it is characterized by the proliferation of atypical, often pleomorphic squamous cells. Squamous cell carcinomas are graded by the degree of cellular differentiation as well, moderately, or poorly differentiated. Well differentiated carcinomas are usually associated with keratin production and the presence of intercellular bridges between adjacent cells. Representative examples are lung squamous cell carcinoma, skin squamous cell carcinoma, and cervical squamous cell carcinoma.	ncit:C2929			
+PD						Malignant Histiocytosis	An antiquated term referring to cases of systemic non-Hodgkin lymphomas which are composed of large, atypical neoplastic lymphoid cells and cases of hemophagocytic syndromes. In the past, cases of anaplastic large cells lymphoma were called malignant histiocytosis.	ncit:C7202			
+PD						Other	Different than the one(s) previously specified or mentioned.	ncit:C17649			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+											
+											
+DD	Disease Attributes										
+TD	Staging										
+TG	One row per subject per staging assessment										
+VD	HONEST_BROKER_SUBJECT_ID	String		The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_		New VD	
+VD	AGE_AT_STAGING	Integer		Age of subject (in days) at the time of the staging assessment.	ncit:C177359	_undefined_	_undefined_	_undefined_			
+VD	TIME_PERIOD_SUBMITTER_ID	String		This is the SUBMITTER_ID of the time period (defined in the "Time Period" table) during which this observation takes place.		_undefined_	_undefined_	_undefined_		New VD	
+VD	STAGE	Enum		The extent of a cancer in the body. Staging is usually based on the size of the tumor, whether lymph nodes contain cancer, and whether the cancer has spread from the original site to other parts of the body.	ncit:C16899	_undefined_	_undefined_	_undefined_			
+PD						FIGO, Stage I	A FIGO stage term that applies to gynecologic cancers. For cervical cancer, it refers to invasive cancer that is confined to the cervix; for endometrial cancer, it refers to cancer confined to the corpus uteri with no or less than one-half myometrial invasion (IA) or invasion of one-half or more of the myometrium (IB).	ncit:C96244		[gct_v1.2].[Staging].[STAGE].[Stage I] skos:exactMatch [gct_v2.0].Staging].[STAGE].[FIGO, Stage I]	
+PD						FIGO, Stage II	A FIGO stage term that applies to gynecologic cancers. For cervical cancer, it refers to cancer that invades beyond the cervix, but not to the pelvic wall or lower third of the vagina; for endometrial cancer, it refers to cancer that invades the stromal connective tissue of the cervix, but it does not extend beyond the uterus.	ncit:C96252		[gct_v1.2].[Staging].[STAGE].[Stage II] skos:exactMatch [gct_v2.0].Staging].[STAGE].[FIGO, Stage II]	
+PD						FIGO, Stage III	A FIGO stage term that applies to gynecologic cancers. For cervical cancer, it refers to cancer that extends to the pelvic wall, and/or involves the lower third of vagina, and/or causes hydronephrosis or non-functioning kidney; for endometrial cancer, FIGO stage III is subdivided into stages IIIA and IIIB; in FIGO stage IIIA, there is involvement of the serosa and/or the adnexa; for FIGO stage IIIB, there is vaginal or parametrial involvement.	ncit:C96255		[gct_v1.2].[Staging].[STAGE].[Stage III] skos:exactMatch [gct_v2.0].Staging].[STAGE].[FIGO, Stage III]	
+PD						FIGO, Stage IV	A FIGO stage term that applies to gynecologic cancers. For cervical cancer, it refers to cancer that invades the mucosa of bladder or rectum, and/or extends beyond the true pelvis (FIGO stage IVA), or to cancer with distant metastases (FIGO stage IVB); for endometrial cancer, it refers to cancer that invades the bladder mucosa and/or the bowel mucosa (FIGO stage IVA), or to cancer with distant metastases (FIGO stage IVB).	ncit:C96261		[gct_v1.2].[Staging].[STAGE].[Stage IV] skos:exactMatch [gct_v2.0].Staging].[STAGE].[FIGO, Stage IV]	
+PD						COG, Stage I	Invasive cancer confined to the original anatomic site of growth without lymph node involvement.	ncit:C27966		[gct_v1.2].[Staging].[STAGE].[Stage I] skos:exactMatch [gct_v2.0].Staging].[STAGE].[COG, Stage I]	
+PD						COG, Stage II	Invasive cancer more extensive than stage I, usually involving local lymph nodes without spread to distant anatomic sites.	ncit:C28054		[gct_v1.2].[Staging].[STAGE].[Stage II] skos:exactMatch [gct_v2.0].Staging].[STAGE].[COG, Stage II]	
+PD						COG, Stage III	Locally advanced cancer that has spread to nearby organs but not to distant anatomic sites.	ncit:C27970		[gct_v1.2].[Staging].[STAGE].[Stage III] skos:exactMatch [gct_v2.0].Staging].[STAGE].[COG, Stage III]	
+PD						COG, Stage IV	Cancer that has spread to distant anatomic sites beyond its original site of growth.	ncit:C27971		[gct_v1.2].[Staging].[STAGE].[Stage IV] skos:exactMatch [gct_v2.0].Staging].[STAGE].[COG, Stage IV]	
+PD						AJCC, Stage 0	Stage 0 includes: pTis, N0, M0, S0. pTis: Intratubular germ cell neoplasia (carcinoma in situ). N0: regional lymph node metastasis. M0: No distant metastasis. S0: Marker study levels within normal limits. (AJCC 6th and 7th eds.)	ncit:C4523		[gct_v1.2].[Staging].[STAGE].[Stage 0] skos:exactMatch [gct_v2.0].Staging].[STAGE].[AJCC, Stage 0]	
+PD						AJCC, Stage I	Stage I includes: pT1-4, N0, M0, SX. pT1: Tumor limited to the testis and epididymis without vascular/lymphatic invasion; tumor may invade into the tunica albuginea but not the tunica vaginalis. pT2: Tumor limited to the testis and epididymis with vascular/lymphatic invasion, or tumor extending through the tunica albuginea with involvement of the tunica vaginalis. pT3: Tumor invades the spermatic cord with or without vascular/lymphatic invasion. pT4: Tumor invades the scrotum with or without vascular/lymphatic invasion. N0: No regional lymph node metastasis. M0: No distant metastasis. SX: Marker studies not available or not performed. (AJCC 6th and 7th eds.)	ncit:C7901		[gct_v1.2].[Staging].[STAGE].[Stage I] skos:exactMatch [gct_v2.0].Staging].[STAGE].[AJCC, Stage I]	
+PD						AJCC, Stage IA	Stage IA includes: pT1, N0, M0, S0. pT1: Tumor limited to the testis and epididymis without vascular/lymphatic invasion; tumor may invade into the tunica albuginea but not the tunica vaginalis. N0: No regional lymph node metastasis. M0: No distant metastasis. S0: Marker study levels within normal limits. (AJCC 6th and 7th eds.)	ncit:C6361		[gct_v1.2].[Staging].[STAGE].[Stage IA] skos:exactMatch [gct_v2.0].Staging].[STAGE].[AJCC, Stage IA]	
+PD						AJCC, Stage IB	Stage IB includes: (pT2, N0, M0, S0); (pT3, N0, M0, S0); (pT4, N0, M0, S0). pT2: Tumor limited to the testis and epididymis with vascular/lymphatic invasion, or tumor extending through the tunica albuginea with involvement of the tunica vaginalis. pT3: Tumor invades the spermatic cord with or without vascular/lymphatic invasion. pT4: Tumor invades the scrotum with or without vascular/lymphatic invasion. N0: No regional lymph node metastasis. M0: No distant metastasis. S0: Marker study levels within normal limits. (AJCC 6th and 7th eds.)	ncit:C6362		[gct_v1.2].[Staging].[STAGE].[Stage IB] skos:exactMatch [gct_v2.0].Staging].[STAGE].[AJCC, Stage IB]	
+PD						AJCC, Stage IS	Stage IS includes: Any pT/TX, N0, M0, S1-3. pTX: Primary tumor cannot be assessed. N0: No regional lymph node metastasis. M0: No distant metastasis. S1: LDH less than 1.5 x N (N indicates the upper limit of normal for the LDH assay) and hCG less than 5,000 and AFP less than 1,000. S2: LDH 1.5-10 x N or hCG 5,000-50,000 or AFP 1,000-10,000. S3: LDH more than 10 x N or hCG more than 50,000 or AFP more than 10,000. (AJCC 6th and 7th eds.)	ncit:C6363		[gct_v1.2].[Staging].[STAGE].[Stage IS] skos:exactMatch [gct_v2.0].Staging].[STAGE].[AJCC, Stage IS]	
+PD						AJCC, Stage II	Stage II includes: Any pT/TX, N1-3, M0, SX. pTX: Primary tumor cannot be assessed. N1: Metastasis with a lymph node mass 2 cm or less in greatest dimension; or multiple lymph nodes, none more than 2cm in greatest dimension. N2: Metastasis with a lymph node mass more than 2 cm but not more than 5 cm in greatest dimension; or multiple lymph nodes, any one mass greater than 2 cm but not more than 5 cm in greatest dimension. N3: Metastasis with a lymph node mass more than 5 cm in greatest dimension. M0: No distant metastasis. SX: Marker studies not available or not performed. (AJCC 6th and 7th eds.)	ncit:C9073		[gct_v1.2].[Staging].[STAGE].[Stage II] skos:exactMatch [gct_v2.0].Staging].[STAGE].[AJCC, Stage II]	
+PD						AJCC, Stage IIA	Stage IIA includes: (Any pT/TX, N1, M0, S0); (Any pT/TX, N1, M0, S1). TX: Testicular cancer in which the primary tumor cannot be assessed. N1: Testicular cancer with metastasis with a lymph node mass 2 cm or smaller in greatest dimension and less than or equal to five nodes positive, none larger than 2 cm in greatest dimension. M0: Testicular cancer without evidence of distant metastasis. S0: Marker study levels within normal limits. S1: LDH less than 1.5 x N and hCG (mlU/mL) less than 5,000 and AFP (ng/mL) less than 1,000. N indicates the upper limit of normal for the LDH assay. (AJCC 8th ed.)	ncit:C6364		[gct_v1.2].[Staging].[STAGE].[Stage IIA] skos:exactMatch [gct_v2.0].Staging].[STAGE].[AJCC, Stage IIA]	
+PD						AJCC, Stage IIB	Stage IIB includes: (Any pT/TX, N2, M0, S0); (Any pT/TX, N2, M0, S1). pTX: Primary tumor cannot be assessed. N2: Metastasis with a lymph node mass more than 2 cm but not more than 5 cm in greatest dimension; or multiple lymph nodes, any one mass greater than 2 cm but not more than 5 cm in greatest dimension. M0: No distant metastasis. S0: Marker study levels within normal limits. S1: LDH less than 1.5 x N (N indicates the upper limit of normal for the LDH assay) and hCG less than 5,000 and AFP less than 1,000. (AJCC 6th and 7th eds.)	ncit:C6365		[gct_v1.2].[Staging].[STAGE].[Stage IIB] skos:exactMatch [gct_v2.0].Staging].[STAGE].[AJCC, Stage IIB]	
+PD						AJCC, Stage IIC	Stage IIC includes: (Any pT/TX, N3, M0, S0); (Any pT/TX, N3, M0, S1). pTX: Primary tumor cannot be assessed. N3: Metastasis with a lymph node mass more than 5 cm in greatest dimension. M0: No distant metastasis. S0: Marker study levels within normal limits. S1: LDH less than 1.5 x N (N indicates the upper limit of normal for the LDH assay) and hCG less than 5,000 and AFP less than 1,000. (AJCC 6th and 7th eds.)	ncit:C6366		[gct_v1.2].[Staging].[STAGE].[Stage IIC] skos:exactMatch [gct_v2.0].Staging].[STAGE].[AJCC, Stage IIC]	
+PD						AJCC, Stage III	Stage III includes: Any pT/TX, Any N, M1, SX. M1: Distant metastasis. SX: Marker studies not available or not performed. (AJCC 6th and 7th eds.)	ncit:C9074		[gct_v1.2].[Staging].[STAGE].[Stage III] skos:exactMatch [gct_v2.0].Staging].[STAGE].[AJCC, Stage III]	
+PD						AJCC, Stage IIIA	Stage IIIA includes: (Any pT/TX, Any N, M1a, S0); (Any pT/TX, Any N, M1a, S1). M1a: Non-regional nodal or pulmonary metastasis. S0: Marker study levels within normal limits. S1: LDH less than 1.5 x N (N indicates the upper limit of normal for the LDH assay) and hCG less than 5,000 and AFP less than 1,000. (AJCC 6th and 7th eds.)	ncit:C6369		[gct_v1.2].[Staging].[STAGE].[Stage IIIA] skos:exactMatch [gct_v2.0].Staging].[STAGE].[AJCC, Stage IIIA]	
+PD						AJCC, Stage IIIB	Stage IIIB includes: (Any pT/TX, N1-3, M0, S2); (Any pT/TX, Any N, M1a, S2). N1: Metastasis with a lymph node mass 2 cm or less in greatest dimension; or multiple lymph nodes, none more than 2cm in greatest dimension. N2: Metastasis with a lymph node mass more than 2 cm but not more than 5 cm in greatest dimension; or multiple lymph nodes, any one mass greater than 2 cm but not more than 5 cm in greatest dimension. N3: Metastasis with a lymph node mass more than 5 cm in greatest dimension. M0: No distant metastasis. M1a: Non-regional nodal or pulmonary metastasis. S2: LDH 1.5-10 x N (N indicates the upper limit of normal for the LDH assay) or hCG 5,000-50,000 or AFP 1,000-10,000. (AJCC 6th and 7th eds.)	ncit:C6368		[gct_v1.2].[Staging].[STAGE].[Stage IIIB] skos:exactMatch [gct_v2.0].Staging].[STAGE].[AJCC, Stage IIIB]	
+PD						AJCC, Stage IIIC	Stage IIIC includes: (Any pT/TX, N1-3, M0, S3); (Any pT/TX, Any N, M1a, S3); (Any pT/TX, Any N, M1b, Any S). N1: Metastasis with a lymph node mass 2 cm or less in greatest dimension; or multiple lymph nodes, none more than 2cm in greatest dimension. N2: Metastasis with a lymph node mass more than 2 cm but not more than 5 cm in greatest dimension; or multiple lymph nodes, any one mass greater than 2 cm but not more than 5 cm in greatest dimension. N3: Metastasis with a lymph node mass more than 5 cm in greatest dimension. M0: No distant metastasis. M1a: Non-regional nodal or pulmonary metastasis. M1b: Distant metastasis other than to non-regional lymph nodes and lung. S3: LDH more than 10 x N (N indicates the upper limit of normal for the LDH assay) or hCG more than 50,000 or AFP more than 10,000. (AJCC 6th and 7th eds.)	ncit:C6367		[gct_v1.2].[Staging].[STAGE].[Stage IIIC] skos:exactMatch [gct_v2.0].Staging].[STAGE].[AJCC, Stage IIIC]	
+PD						Unknown	Reported as unknown by the data contributor.	ncit:17998			
+PD						Not Reported	Not provided or available.	ncit:43234			
+											
+											
+DD	Disease Attributes										
+TD	Disease Site Assessment									[gct_v1.2].[Tumor Assessment] skos:exactMatch [gct_v2.0].[Disease Site Assessment]	
+TG	One row per subject per evaluation and per lesion (local, regional or metastatic)										
+VD	HONEST_BROKER_SUBJECT_ID	String		The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_		New VD	
+VD	AGE_AT_DISEASE_SITE_ASSESSMENT	Integer		The age (in days) of the subject at the time of this disease site assessment.	ncit:C174997	_undefined_	_undefined_	_undefined_		[gct_v1.2].[Tumor Assessment].[AGE_AT_TUMOR_ASSESSMENT] skos:exactMatch [gct_v2.0].[Disease Site Assessment].[AGE_AT_DISEASE_SITE_ASSESSMENT]	
+VD	TIME_PERIOD_SUBMITTER_ID	String		This is the SUBMITTER_ID of the time period (defined in the "Time Period" table) during which this observation takes place.		_undefined_	_undefined_	_undefined_		New VD	
+VD	TUMOR_SUBMITTER_ID	String		The anatomic site of the tumor.		_undefined_	_undefined_	_undefined_			
+VD	PRIMARY_TUMOR_SUBMITTER_ID	String		The reference ID of the primary tumor - this ties non-primary tumors back to their appropriate primary tumor.		_undefined_	_undefined_	_undefined_			
+VD	DETECTION_METHOD	Enum		The method used to detect the extent of the disease involvement.	ncit:C173262	_undefined_	_undefined_	_undefined_		[gct_v1.2].[Tumor Assessment].[TUMOR_DETECTION_METHOD] skos:exactMatch [gct_v2.0].[Disease Site Assessment].[DETECTION_METHOD]	
+PD						Imaging, NOS	Any technology or method that aids in the visualization of any biological process, cell, tissue or organ for use in screening, diagnosis, surgical procedures or therapy.	ncit:C17369			
+PD						PET Scan	A technique for measuring the gamma radiation produced by collisions of electrons and positrons (anti-electrons) within living tissue. In positron emission tomography (PET), a subject is given a dose of a positron-emitting radionuclide attached to a metabolically active substance (for example, 2-fluoro-2-deoxy-D-glucose (FDG), which is similar to a naturally occurring sugar, glucose, with the addition of a radioactive fluorine atom). When living tissue containing the positron emitter is bombarded by electrons, gamma radiation produced by collisions of electrons and positrons is detected by a scanner, revealing in fine detail the tissue location of the metabolically-active substance administered.	ncit:C17007			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	CLASSIFICATION	Enum		The classification of a tumor based primarily on histopathological characteristics.	ncit:C174459	_undefined_	_undefined_	_undefined_		[gct_v1.2].[Tumor Assessment].[TUMOR_CLASSIFICATION] skos:exactMatch [gct_v2.0].[Disease Site Assessment].[CLASSIFICATION]	
+PD						Primary	A tumor at the original site of origin.	ncit:C8509			
+PD						Metastatic	A term referring to the clinical or pathologic observation of a tumor extension from its original site of growth to another anatomic site.	ncit:C14174			
+PD						Regional					
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	STATE	Enum		The status of the tumor classification whether it was completed or not.		_undefined_	_undefined_	_undefined_		[gct_v1.2].[Tumor Assessment].[TUMOR_STATE] skos:exactMatch [gct_v2.0].[Disease Site Assessment].[STATE]	
+PD						Present	Being or existing in a specified place or at the specified time.	ncit:C25626			
+PD						Absent	Not existing in a specified place at a specified time.	ncit:C48190			
+PD						Not Evaluated	Not all target lesions were assessed. Or not all non-target lesions were assessed.	ncit:C103424			
+VD	SITE	Enum		The anatomical site on which the disease is assessed.	ncit:C166232	_undefined_	_undefined_	_undefined_		[gct_v1.2].[Tumor Assessment].[TUMOR_SITE] skos:exactMatch [gct_v2.0].[Disease Site Assessment].[SITE]	
+PD						Ascitic Fluid	The tissues that surround the organs that are present within the abdominal cavity. The abdominal wall tissue is composed of layers of fat, parietal peritoneum, fascia, and muscles.	ncit:C77608			
+PD						Bone	Two cup shaped areas, one each on the lateral side of the lower pelvis that house the head of the femur to form the ball and socket joint of the hip.	ncit:C32042			
+PD						Brain	An organ that is next to an organ of interest.	ncit:C180347			
+PD						Cerebrospinal Fluid	A gliding joint between the distal ends of the tibia and fibula and the proximal end of the talus.	ncit:C32078			
+PD						Frontal Cortex	A biospecimen of ascitic fluid.	ncit:C159203			
+PD						Head and Neck	The underside concavity where the arm and the shoulder are joined.	ncit:C12674			
+PD						Liver	The structural organ comprised of specialized connective tissue that forms the skeletal components of the body.	ncit:C12366			
+PD						Lung	An organ composed of grey and white matter containing billions of neurons that is the center for intelligence and reasoning. It is protected by the bony cranium.	ncit:C12439			
+PD						Mediastinum	Either of the fleshy mounds in the rear pelvic area of the human body formed by the gluteal muscles.	ncit:C89806			
+PD						Occipital Cortex	The irregular and largest tarsal bone that forms the heel.	ncit:C32250			
+PD						Peritoneum	Any of the small bones of the wrist joint, located between the radius and the ulna and the metacarpus.	ncit:C12688			
+PD						Omentum	The fluid that is contained within the brain ventricles, the subarachnoid space and the central canal of the spinal cord.	ncit:C12692			
+PD						Ovary	Any one of the seven vertebrae that are caudal to the skull, denoted as C1, C2, C3, C4, C5, C6 or C7.	ncit:C12693			
+PD						Parietal Cortex	The lower part of the uterus occupying the region between the isthmus of the uterus and the vagina. It is divided into supravaginal and vaginal portions.	ncit:C12311			
+PD						Pineal	The total system of structures outside the lungs that move as a part of breathing; it includes all structures from the skin to the parietal pleura.	ncit:C62484			
+PD						Retroperitoneum					
+PD						Sacrococcygeal	One of a pair of bones linking the scapula and the sternum. The clavicle is part of the pectoral girdle.	ncit:C12695			
+PD						Spinal Cord	The bones that form the head, made up of the bones of the braincase and face.	ncit:C12789			
+PD						Spine	The inner layer of the two main layers of the skin. The dermis has connective tissue, blood vessels, oil and sweat glands, nerves, hair follicles, and other structures. It is made up of a thin upper layer called the papillary dermis, and a thick lower layer called the reticular dermis.	ncit:C12701			
+PD						Suprasellar/Neurohypophyseal	A type of hinge joint located between the forearm and upper arm.	ncit:C32497			
+PD						Temporal Cortex	The anterior portion of the head extending from the forehead to the chin and ear to ear. The facial structures contain the eyes, nose and mouth, cheeks and jaws.	ncit:C13071			
+PD						Testis	The upper leg bone positioned between the pelvis and the knee.	ncit:C12717			
+PD						Thalamus	The small, lateral calf bone extending from the knee to the ankle.	ncit:C12718			
+PD						Vagina	Any of the digits of the hand.	ncit:C32608			
+PD						Cervix Lymph Node	The structure found below the ankle joint required for locomotion.	ncit:C32622			
+PD						Mediastinal Lymph Node	The structure on the upper limb, between the elbow and the wrist.	ncit:C32628			
+PD						Omentum Lymph Node	The grey matter, or outermost layer of the frontal lobe.	ncit:C177766			
+PD						Pelvic Lymph Node	The distal portion of the upper extremity. It consists of the carpus, metacarpus, and digits.	ncit:C32712			
+PD						Retroperitoneum Lymph Node	For oncology, an area of the body generally construed to comprise the base of skull and facial bones, sinuses, orbits, salivary glands, oral cavity, oropharynx, larynx, thyroid, facial and neck musculature and lymph nodes draining these areas.	ncit:C12418			
+PD						Lymph Node	The lateral prominence of the pelvis from the waist to the thigh.	ncit:C64193			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	LATERALITY	Enum		A qualifier for the side of the body the tumor findings assessment is performed.	ncit:C119931	_undefined_	_undefined_	_undefined_		[gct_v1.2].[Tumor Assessment].[TUMOR_LATERALITY] skos:exactMatch [gct_v2.0].[Disease Site Assessment].[LATERALITY]	
+PD						Left	A finding indicating the tumor location is on the left side of the specimen.	ncit:C160200			
+PD						Right	A finding indicating the tumor location is on the right side of the specimen.	ncit:C160199			
+PD						Bilateral	A finding indicating the tumor location is on the both sides of the specimen.	ncit:C160201			
+PD						Midline	A finding indicating the tumor location is on the midline of the specimen.	ncit:C162614			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+											
+											
+DD	Disease Attributes										
+TD	Disease Characteristics										
+TG	One row per subject per observation										
+VD	HONEST_BROKER_SUBJECT_ID	String		The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_		New VD	
+VD	TIME_PERIOD_SUBMITTER_ID	String		This is the SUBMITTER_ID of the time period (defined in the "Time Period" table) during which this observation takes place.		_undefined_	_undefined_	_undefined_		New VD	
+VD	DETECTION_METHOD	Enum		The method used to detect the extent of the disease involvement.	ncit:C173262	_undefined_	_undefined_	_undefined_			
+PD						Imaging	Any technology or method that aids in the visualization of any biological process, cell, tissue or organ for use in screening, diagnosis, surgical procedures or therapy.	ncit:C17369			
+PD						Tumor marker	A substance present in or produced by a tumor or by the host, that can be used for differentiating neoplastic from normal tissue based on measurements in body fluids, secretions, cells, and/or tissues. Markers are used in diagnosis, staging and prognosis of cancer, provide an estimation of tumor burden, and serve for monitoring effects of therapy, detecting recurrence, localization of tumors, and screening in general populations.	ncit:C17220			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	RISK_GROUP	Enum		A risk classification system for malignant germ cell tumors.		_undefined_	_undefined_	_undefined_		[gct_v1.2].[Disease Characteristics].[IGCCC_RISK_GROUP] skos:narrowMatch [gct_v2.0].[Disease Characteristics].[RISK_GROUP] | [gct_v1.2].[Disease Characteristics].[MAGIC_RISK_GROUP] skos:narrowMatch [gct_v2.0].[Disease Characteristics].[RISK_GROUP]	
+PD						IGCCC, Good	The good prognosis category refers to testes/retroperitoneal primary and no nonpulmonary visceral metastases and the following markers: AFP less than 1,000 ng/mL, hCG less than 5,000 IU/L and LDH less than 1.5 × ULN.				
+PD						IGCCC, Intermediate	The intermediate risk group refers to testes/retroperitoneal primary and no nonpulmonary visceral metastases and the following markers: AFP greater than or equal to 1,000 ng/mL and less than or equal to 10,000 ng/mL, or hCG greater than or equal to 5,000 IU/L and less than or equal to 50,000 ng/mL or LDH greater than or equal to 1.5 × ULN and less than or equal to 10 × ULN.				
+PD						IGCCC, Poor	The poor prognosis category refers to mediastinal primary or nonpulmonary visceral metastases or markers with the following: AFP greater than 10,000 ng/mL or hCG greater than 50,000 IU/L or LDH greater than 10 × ULN.				
+PD						MaGIC, Low	The low risk classification refers to age younger than 11 years and extragonadal stage III-IV disease.				
+PD						MaGIC, Standard	The standard risk classification refers to four-years-event-free survival of more than 80%.				
+PD						MaGIC, Poor	The poor risk classification refers to age equal or older than 11 years, ovarian stage IV disease, and extragonadal stage III-IV disease.				
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	GTS_TREATMENT	Enum		Growing Teratoma Syndrome treatment type	ncit:C177376	_undefined_	_undefined_	_undefined_		[gct_v1.2].[Growing Teratoma Syndrome].[GTS_TREATMENT] skos:exactMatch [gct_v2.0].[Disease Characteristics].[GTS_TREATMENT]	
+PD						Surgery	A diagnostic or treatment procedure performed by manual and/or instrumental means, often involving an incision and the removal or replacement of a diseased organ or tissue; of or relating to or involving or used in surgery or requiring or amenable to treatment by surgery.	ncit:C15329			
+PD						Chemotherapy	The use of synthetic or naturally-occurring chemicals for the treatment of diseases.	ncit:C15632			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+											
+											
+DD	Treatment										
+TD	Medication									[gct_v1.2].[Total Dose] skos:broadMatch [gct_v2.0].[Medication] | [gct_v1.2].[Concomitant Medications] skos:broadMatch [gct_v2.0].[Medication]	
+TG	One row per subject per medication administered										
+VD	HONEST_BROKER_SUBJECT_ID	String		The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_		New VD	
+VD	AGE_AT_MEDICATION_START	Integer		The age (in days) of the subject at the start of this medication treatment.	ncit:C172698	_undefined_	_undefined_	_undefined_		[gct_v1.2].[Total Dose].[AGE_AT_TOTAL_DOSE_START] skos:broadMatch [gct_v2.0].[Medication].[AGE_AT_MEDICATION_START] | [gct_v1.2].[Concomitant Medications].[AGE_AT_MEDICATION_START] skos:broadMatch [gct_v2.0].[Medication].[AGE_AT_MEDICATION_START]	
+VD	AGE_AT_MEDICATION_END	Integer		The age (in days) of the subject at the end of this medication treatment.	ncit:C172686	_undefined_	_undefined_	_undefined_		[gct_v1.2].[Total Dose].[AGE_AT_TOTAL_DOSE_END] skos:broadMatch [gct_v2.0].[Medication].[AGE_AT_MEDICATION_END] | [gct_v1.2].[Concomitant Medications].[AGE_AT_MEDICATION_END] skos:broadMatch [gct_v2.0].[Medication].[AGE_AT_MEDICATION_END]	
+VD	TIME_PERIOD_SUBMITTER_ID	String		This is the SUBMITTER_ID of the time period (defined in the "Time Period" table) during which this observation takes place.		_undefined_	_undefined_	_undefined_		New VD	
+VD	CATEGORY	Enum		A classification of medication agents.		_undefined_	_undefined_	_undefined_		New VD	
+PD						Antineoplastic Agent					
+PD						Supportive Care Agent					
+VD	MEDICATION	Enum		A dosage form that contains one or more active and/or inactive ingredients. Medications come in many dosage forms, including tablets, capsules, liquids, creams, and patches. They can also be given in different ways, such as by mouth, by infusion into a vein, or by drops that are put into the ear or eye. The form with the active ingredient is used to prevent, diagnose, treat, or relieve symptoms of a disease or abnormal condition. A medication that does not contain an active ingredient and is used in research studies is called a placebo. Also called drug product.	ncit:C459	_undefined_	_undefined_	_undefined_		New VD	
+PD						Amifostine	The trihydrate form of a phosphorylated aminosulfhydryl compound. After dephosphorylation of amifostine by alkaline phosphatase to an active free sulfhydryl (thiol) metabolite, the thiol metabolite binds to and detoxifies cytotoxic platinum-containing metabolites of cisplatin and scavenges free radicals induced by cisplatin and ionizing radiation. The elevated activity of this agent in normal tissues results from both the relative abundance of alkaline phosphatase in normal tissues and the greater vascularity of normal tissues compared to tumor tissues.	ncit:C488		[gct_v1.2].[Total Dose].[ANTINEOPLASTIC_AGENT].[Amifostine] skos:exactMatch [gct_v2.0].[Medication].[MEDICATION].[Amifostine]	
+PD						Bleomycin	A mixture of glycopeptide antineoplastic antibiotics isolated from the bacterium Streptomyces verticillus. Bleomycin forms complexes with iron that reduce molecular oxygen to superoxide and hydroxyl radicals which cause single- and double-stranded breaks in DNA; these reactive oxygen species also induce lipid peroxidation, carbohydrate oxidation, and alterations in prostaglandin synthesis and degradation.	ncit:C313		[gct_v1.2].[Total Dose].[ANTINEOPLASTIC_AGENT].[Bleomycin] skos:exactMatch [gct_v2.0].[Medication].[MEDICATION].[Bleomycin]	
+PD						Carboplatin	A second-generation platinum compound with a broad spectrum of antineoplastic properties. Carboplatin contains a platinum atom complexed with two ammonia groups and a cyclobutane-dicarboxyl residue. This agent is activated intracellularly to form reactive platinum complexes that bind to nucleophilic groups such as GC-rich sites in DNA, thereby inducing intrastrand and interstrand DNA cross-links, as well as DNA-protein cross-links. These carboplatin-induced DNA and protein effects result in apoptosis and cell growth inhibition. This agent possesses tumoricidal activity similar to that of its parent compound, cisplatin, but is more stable and less toxic. (NCI04)	ncit:C1282|rxcui:40048		[gct_v1.2].[Total Dose].[ANTINEOPLASTIC_AGENT].[Carboplatin] skos:exactMatch [gct_v2.0].[Medication].[MEDICATION].[Carboplatin]	
+PD						Cisplatin	An alkylating-like inorganic platinum agent (cis-diamminedichloroplatinum) with antineoplastic activity. Cisplatin forms highly reactive, charged, platinum complexes which bind to nucleophilic groups such as GC-rich sites in DNA inducing intrastrand and interstrand DNA cross-links, as well as DNA-protein cross-links. These cross-links result in apoptosis and cell growth inhibition.	ncit:C376		[gct_v1.2].[Total Dose].[ANTINEOPLASTIC_AGENT].[Cisplatin] skos:exactMatch [gct_v2.0].[Medication].[MEDICATION].[Cisplatin]	
+PD						Cyclophosphamide	A synthetic alkylating agent chemically related to the nitrogen mustards with antineoplastic and immunosuppressive activities. In the liver, cyclophosphamide is converted to the active metabolites aldophosphamide and phosphoramide mustard, which bind to DNA, thereby inhibiting DNA replication and initiating cell death.	ncit:C405|rxcui:3002		[gct_v1.2].[Total Dose].[ANTINEOPLASTIC_AGENT].[Cyclophosphamide] skos:exactMatch [gct_v2.0].[Medication].[MEDICATION].[Cyclophosphamide]	
+PD						Dactinomycin	A chromopeptide antineoplastic antibiotic isolated from the bacterium Streptomyces parvulus. Dactinomycin intercalates between adjacent guanine-cytosine base pairs, blocking the transcription of DNA by RNA polymerase; it also causes single-strand DNA breaks, possibly via a free-radical intermediate or an interaction with topoisomerase II. (NCI04)	ncit:C412|rxcui:3100		[gct_v1.2].[Total Dose].[ANTINEOPLASTIC_AGENT].[Dactinomycin] skos:exactMatch [gct_v2.0].[Medication].[MEDICATION].[Dactinomycin]	
+PD						Etoposide	A semisynthetic derivative of podophyllotoxin, a substance extracted from the mandrake root Podophyllum peltatum. Possessing potent antineoplastic properties, etoposide binds to and inhibits topoisomerase II and its function in ligating cleaved DNA molecules, resulting in the accumulation of single- or double-strand DNA breaks, the inhibition of DNA replication and transcription, and apoptotic cell death. Etoposide acts primarily in the G2 and S phases of the cell cycle. (NCI04)	ncit:C491|rxcui:4179		[gct_v1.2].[Total Dose].[ANTINEOPLASTIC_AGENT].[Etoposide] skos:exactMatch [gct_v2.0].[Medication].[MEDICATION].[Etoposide]	
+PD						Etoposide Phosphate	A phosphate salt of a semisynthetic derivative of podophyllotoxin. Etoposide binds to the enzyme topoisomerase II, inducing double-strand DNA breaks, inhibiting DNA repair, and resulting in decreased DNA synthesis and tumor cell proliferation. Cells in the S and G2 phases of the cell cycle are most sensitive to this agent. (NCI04)	ncit:C1093		[gct_v1.2].[Total Dose].[ANTINEOPLASTIC_AGENT].[Etoposide Phosphate] skos:exactMatch [gct_v2.0].[Medication].[MEDICATION].[Etoposide Phosphate]	
+PD						Gemcitabine	A broad-spectrum antimetabolite and deoxycytidine analogue with antineoplastic activity. Upon administration, gemcitabine is converted into the active metabolites difluorodeoxycytidine diphosphate (dFdCDP) and difluorodeoxycytidine triphosphate (dFdCTP) by deoxycytidine kinase. dFdCTP competes with deoxycytidine triphosphate (dCTP) and is incorporated into DNA. This locks DNA polymerase thereby resulting in "masked termination" during DNA replication. On the other hand, dFdCDP inhibits ribonucleotide reductase, thereby decreasing the deoxynucleotide pool available for DNA synthesis. The reduction in the intracellular concentration of dCTP potentiates the incorporation of dFdCTP into DNA.	ncit:C66876|rxcui:12574		[gct_v1.2].[Total Dose].[ANTINEOPLASTIC_AGENT].[Gemcitabine] skos:exactMatch [gct_v2.0].[Medication].[MEDICATION].[Gemcitabine]	
+PD						Ifosfamide	A synthetic analogue of the nitrogen mustard cyclophosphamide with antineoplastic activity. Ifosfamide alkylates and forms DNA crosslinks, thereby preventing DNA strand separation and DNA replication. This agent is a prodrug that must be activated through hydroxylation by hepatic microsomal enzymes. (NCI04)	ncit:C564|rxcui:5657		[gct_v1.2].[Total Dose].[ANTINEOPLASTIC_AGENT].[Ifosfamide] skos:exactMatch [gct_v2.0].[Medication].[MEDICATION].[Ifosfamide]	
+PD						Melphalan	A phenylalanine derivative of nitrogen mustard with antineoplastic activity. Melphalan alkylates DNA at the N7 position of guanine and induces DNA inter-strand cross-linkages, resulting in the inhibition of DNA and RNA synthesis and cytotoxicity against both dividing and non-dividing tumor cells.	ncit:C633|rxcui:6718		[gct_v1.2].[Total Dose].[ANTINEOPLASTIC_AGENT].[Melphalan] skos:exactMatch [gct_v2.0].[Medication].[MEDICATION].[Melphalan]	
+PD						Paclitaxel	A compound extracted from the Pacific yew tree Taxus brevifolia with antineoplastic activity. Paclitaxel binds to tubulin and inhibits the disassembly of microtubules, thereby resulting in the inhibition of cell division. This agent also induces apoptosis by binding to and blocking the function of the apoptosis inhibitor protein Bcl-2 (B-cell Leukemia 2). (NCI04)	ncit:C1411		[gct_v1.2].[Total Dose].[ANTINEOPLASTIC_AGENT].[Paclitaxel] skos:exactMatch [gct_v2.0].[Medication].[MEDICATION].[Paclitaxel]	
+PD						Sodium Thiosulfate	A water soluble salt and reducing agent that reacts with oxidizing agents.  Although its exact mechanism of action is unknown, thiosulfate likely provides an exogenous source of sulfur, thereby hastening the detoxification of cyanide through the enzyme rhodanese (thiosulfate cyanide sulfurtransferase) which converts cyanide to the relatively nontoxic, excretable thiocyanate ion. In addition, this agent neutralizes the reactive alkylating species of nitrogen mustard, thereby decreasing skin toxicity related to nitrogen mustard extravasation. (NCI04)	ncit:C1230	CATEGORY == "Supportive Care Agent"	[gct_v1.2].[Concomitant Medications].[MEDICATION].[Sodium Thiosulfate] skos:exactMatch [gct_v2.0].[Medication].[MEDICATION].[Sodium Thiosulfate]	
+PD						Vinblastine	A natural alkaloid isolated from the plant Vinca rosea Linn. Vinblastine binds to tubulin and inhibits microtubule formation, resulting in disruption of mitotic spindle assembly and arrest of tumor cells in the M phase of the cell cycle. This agent may also interfere with amino acid, cyclic AMP, and glutathione metabolism; calmodulin-dependent Ca++ -transport ATPase activity; cellular respiration; and nucleic acid and lipid biosynthesis. (NCI04)	ncit:C930		[gct_v1.2].[Total Dose].[ANTINEOPLASTIC_AGENT].[Vinblastine] skos:exactMatch [gct_v2.0].[Medication].[MEDICATION].[Vinblastine]	
+PD						Vincristine	A natural alkaloid isolated from the plant Vinca rosea Linn. Vincristine binds irreversibly to microtubules and spindle proteins in S phase of the cell cycle and interferes with the formation of the mitotic spindle, thereby arresting tumor cells in metaphase. This agent also depolymerizes microtubules and may also interfere with amino acid, cyclic AMP, and glutathione metabolism; calmodulin-dependent Ca++ -transport ATPase activity; cellular respiration; and nucleic acid and lipid biosynthesis. (NCI04)	ncit:C933|rxcui:11202		[gct_v1.2].[Total Dose].[ANTINEOPLASTIC_AGENT].[Vincristine] skos:exactMatch [gct_v2.0].[Medication].[MEDICATION].[Vincristine]	
+VD	TOTAL_DOSE_ADMINISTERED	Decimal		Total amount of medication administered between the AGE_AT_MEDICATION_START and AGE_AT_MEDICATION values. Assuming all doses administered are the same amount of medication, this value should be equal to the amount of medication given at each dose multiplied by the number of doses.	ncit:C94394	_undefined_	_undefined_	_undefined_	Note: Total dose of the chemotherapy agent administered to the subject over the indicated start and end time points.		
+VD	TOTAL_DOSE_UNIT	Enum		The units of the total dose administered to the subject.	ncit:C17395	_undefined_	_undefined_	_undefined_			
+PD						mg/m2	A metric unit of areal density equal to approximately 2.94935E-5 ounce per square yard. Also used as a dose calculation unit.	ncit:C67402			
+PD						mg/kilo	A unit of a mass fraction expressed as a number of milligrams of substance per kilogram of mixture. The unit is also used as a dose calculation unit.	ncit:C67401			
+PD						mg	A metric unit of mass equal to one thousandth of a gram or 1000 micrograms. One milligram equals approximately 0.015 432 grain or 35.274 x 10E-6 ounce.	ncit:C28253			
+PD						IU	The unitage assigned by the WHO to International Biological Standards - substances, classed as biological according to the criteria provided by WHO Expert Committee on Biological Standardization (e.g. hormones, enzymes, and vaccines), to enable the results of biological and immunological assay procedures to be expressed in the same way throughout the world. The definition of an international unit is generally arbitrary and technical, and has to be officially approved by the International Conference for Unification of Formulae.	ncit:C48579			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+											
+											
+DD	Treatment										
+TD	Radiation Therapy										
+TG	One row per subject per radiation therapy administration										
+VD	HONEST_BROKER_SUBJECT_ID	String		The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_		New VD	
+VD	AGE_AT_RT_START	Integer		Age of subject (in days) at the start of radiation therapy.	ncit:172695	_undefined_	_undefined_	_undefined_			
+VD	AGE_AT_RT_END	Integer		Age of subject (in days) at the end of radiation therapy.	ncit:172696	_undefined_	_undefined_	_undefined_			
+VD	TIME_PERIOD_SUBMITTER_ID	String		This is the SUBMITTER_ID of the time period (defined in the "Time Period" table) during which this observation takes place.		_undefined_	_undefined_	_undefined_		New VD	
+VD	SITE	Enum		The anatomic site of the radiation therapy.	ncit:173281	_undefined_	_undefined_	_undefined_		[gct_v1.2].[Radiation Therapy].[RT_SITE] skos:exactMatch [gct_v2.0].[Radiation Therapy].[SITE]	
+PD						Frontal Cortex	The part of the brain located anterior to the parietal lobes at the front of each cerebral hemisphere.	ncit:C32635	Frontal Lobe		
+PD						Head and Neck	For oncology, an area of the body generally construed to comprise the base of skull and facial bones, sinuses, orbits, salivary glands, oral cavity, oropharynx, larynx, thyroid, facial and neck musculature and lymph nodes draining these areas.	ncit:C12418			
+PD						Liver	A triangular-shaped organ located under the diaphragm in the right hypochondrium. It is the largest internal organ of the body, weighting up to 2 kg. Metabolism and bile secretion are its main functions. It is composed of cells which have the ability to regenerate.	ncit:C12392			
+PD						Mediastinum	A group of organs surrounded by loose connective tissue, separating the two pleural sacs, between the sternum anteriorly and the vertebral column posteriorly as well as from the thoracic inlet superiorly to the diaphragm inferiorly. The mediastinum contains the heart and pericardium, the bases of the great vessels, the trachea and bronchi, esophagus, thymus, lymph nodes, thoracic duct, phrenic and vagus nerves, and other structures and tissues.	ncit:12748			
+PD						Occipital Cortex	One of the four regions of cortex in each cerebral hemisphere. It is located posterior to the temporal lobe and inferior to the parietal lobe.	ncit:12757	Occipital Lobe		
+PD						Ovary	One of the paired female reproductive glands containing the ova or germ cells; the ovary's stroma is a vascular connective tissue containing numbers of ovarian follicles enclosing the ova.	ncit:C12404			
+PD						Parietal Cortex	One of the lobes of the cerebral hemisphere located superiorly to the occipital lobe and posteriorly to the frontal lobe. Cognition and visuospatial processing are its main functions.	ncit:C12766	Parietal Lobe		
+PD						Pineal	A small endocrine gland in the brain, situated beneath the back part of the corpus callosum, that secretes melatonin.	ncit:C12398			
+PD						Retroperitoneum	The back of the abdomen where the kidneys lie and the great blood vessels run.	ncit:28256			
+PD						Sacrococcygeal	The triangular bone, made up of 5 fused bones of the spine, located in the lower area of the spine between the fifth lumbar vertebra and the coccyx.	ncit:C33506			
+PD						Spinal Cord	The elongated, approximately cylindrical part of the central nervous system of vertebrates that lies in the vertebral canal and from which the spinal nerves emerge.	ncit:12464			
+PD						Suprasellar/Neurohypophyseal	The anatomical region which includes the sella turcica, pituitary gland, ventral adenohypophysis and dorsal neurohypophysis.	ncit:C177357			
+PD						Temporal Cortex	One of the cerebral lobes. It is located inferior to the frontal and parietal lobes and anterior to the occipital lobe.	ncit:C12797	Temporal Lobe		
+PD						Testes	Either of the paired male reproductive glands that produce the male germ cells and the male hormones.	ncit:C12412			
+PD						Thalamus	An ovoid mass composed predominantly of gray substance and associated laminae of white substance. The thalamus is divided into anterior, medial, and lateral parts. The function of the thalamus is to relay sensory impulses and cerebellar and basal ganglia projections to the cerebral cortex. The thalamus is positioned within the posterior part of the diencephalon forming most of each lateral wall of the third ventricle.	ncit:C12459			
+PD						Vagina	The female genital canal, extending from the uterus to the vulva.	ncit:C12407			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:17998			
+PD						Not Reported	Not provided or available.	ncit:43234			
+VD	ENERGY_TYPE	Enum		Treatment of a disease by means of exposure of the target or the whole body to radiation. Radiation therapy is often used as part of curative therapy and occasionally as a component of palliative treatment for cancer. Other uses include total body irradiation prior to transplantation.	ncit:C15213	_undefined_	_undefined_	_undefined_			
+PD						Proton	A type of external beam radiation therapy using a beam of protons. It has the advantage of precisely localizing the radiation dose on the targeted tissue and avoiding damage to the healthy surrounding tissues.	ncit:66897			
+PD						Photon	A single unit of electromagnetic radiation, generally considered to be a discrete particle having no mass or charge.	ncit:C88112			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:17998			
+PD						Not Reported	Not provided or available.	ncit:43234			
+VD	DOSE	Integer		The total radiation dose administered.	ncit:173282	_undefined_	_undefined_	_undefined_		[gct_v1.2].[Radiation Therapy].[RT_DOSE] skos:exactMatch [gct_v2.0].[Radiation Therapy].[DOSE]	
+VD	DOSE_UNIT	Enum		A unit of measurement of the dose of radiation received or absorbed.	ncit:18068	_undefined_	_undefined_	_undefined_		[gct_v1.2].[Radiation Therapy].[RT_UNIT] skos:exactMatch [gct_v2.0].[Radiation Therapy].[DOSE_UNIT]	
+PD						Gy	A SI derived unit of absorbed radiation dose. One gray is equal to an absorbed dose of one joule per kilogram of matter, or to 100 rads.	ncit:18063			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:17998			
+PD						Not Reported	Not provided or available.	ncit:43234			
+VD	BOOST	Enum		One or more extra radiation treatments targeted at the tumor bed, given after the regular sessions of radiation are complete.	ncit:C137812	_undefined_	_undefined_	_undefined_			
+PD						No	The non-affirmative response to a question.	ncit:C49487			
+PD						Yes	The affirmative response to a question.	ncit:C49488			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:17998			
+PD						Not Reported	Not provided or available.	ncit:43234			
+VD	NUM_FRACTION	Numeric		The number of divided radiation doses received per day.	ncit:C175034	_undefined_	_undefined_	_undefined_			
+											
+											
+DD	Treatment										
+TD	Biopsy And Surgical Procedures									[gct_v1.2].[Biopsy/Surgical Procedures] skos:exactMatch [gct_v2.0].[Biopsy And Surgical Procedures]	
+TG	One record per subject per surgical procedure										
+VD	HONEST_BROKER_SUBJECT_ID	String		The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_		New VD	
+VD	AGE_AT_PROCEDURE	Integer		Age of subject (in days) at procedure.	ncit:C175008	_undefined_	_undefined_	_undefined_			
+VD	TIME_PERIOD_SUBMITTER_ID	String		This is the SUBMITTER_ID of the time period (defined in the "Time Period" table) during which this observation takes place.		_undefined_	_undefined_	_undefined_		New VD	
+VD	SITE	Enum		The anatomical site on which surgery was performed.	ncit:C164323	_undefined_	_undefined_	_undefined_		[gct_v1.2].[Biopsy/Surgical Procedures].[PROCEDURE_SITE] skos:exactMatch [gct_v2.0].[Biopsy And Surgical Procedures].[SITE]	
+PD						Frontal Cortex	The part of the brain located anterior to the parietal lobes at the front of each cerebral hemisphere.	ncit:C32635	Frontal Lobe		
+PD						Head and Neck	For oncology, an area of the body generally construed to comprise the base of skull and facial bones, sinuses, orbits, salivary glands, oral cavity, oropharynx, larynx, thyroid, facial and neck musculature and lymph nodes draining these areas.	ncit:C12418			
+PD						Liver	A triangular-shaped organ located under the diaphragm in the right hypochondrium. It is the largest internal organ of the body, weighting up to 2 kg. Metabolism and bile secretion are its main functions. It is composed of cells which have the ability to regenerate.	ncit:C12392			
+PD						Mediastinum	A group of organs surrounded by loose connective tissue, separating the two pleural sacs, between the sternum anteriorly and the vertebral column posteriorly as well as from the thoracic inlet superiorly to the diaphragm inferiorly. The mediastinum contains the heart and pericardium, the bases of the great vessels, the trachea and bronchi, esophagus, thymus, lymph nodes, thoracic duct, phrenic and vagus nerves, and other structures and tissues.	ncit:12748			
+PD						Occipital Cortex	One of the four regions of cortex in each cerebral hemisphere. It is located posterior to the temporal lobe and inferior to the parietal lobe.	ncit:12757	Occipital Lobe		
+PD						Ovary	One of the paired female reproductive glands containing the ova or germ cells; the ovary's stroma is a vascular connective tissue containing numbers of ovarian follicles enclosing the ova.	ncit:C12404			
+PD						Parietal Cortex	One of the lobes of the cerebral hemisphere located superiorly to the occipital lobe and posteriorly to the frontal lobe. Cognition and visuospatial processing are its main functions.	ncit:C12766	Parietal Lobe		
+PD						Pineal	A small endocrine gland in the brain, situated beneath the back part of the corpus callosum, that secretes melatonin.	ncit:C12398			
+PD						Retroperitoneum	The back of the abdomen where the kidneys lie and the great blood vessels run.	ncit:28256			
+PD						Sacrococcygeal	The triangular bone, made up of 5 fused bones of the spine, located in the lower area of the spine between the fifth lumbar vertebra and the coccyx.	ncit:C33506			
+PD						Spinal Cord	The elongated, approximately cylindrical part of the central nervous system of vertebrates that lies in the vertebral canal and from which the spinal nerves emerge.	ncit:12464			
+PD						Suprasellar/Neurohypophyseal	The anatomical region which includes the sella turcica, pituitary gland, ventral adenohypophysis and dorsal neurohypophysis.	ncit:C177357			
+PD						Temporal Cortex	One of the cerebral lobes. It is located inferior to the frontal and parietal lobes and anterior to the occipital lobe.	ncit:C12797	Temporal Lobe		
+PD						Testis	Either of the paired male reproductive glands that produce the male germ cells and the male hormones.	ncit:C12412			
+PD						Thalamus	An ovoid mass composed predominantly of gray substance and associated laminae of white substance. The thalamus is divided into anterior, medial, and lateral parts. The function of the thalamus is to relay sensory impulses and cerebellar and basal ganglia projections to the cerebral cortex. The thalamus is positioned within the posterior part of the diencephalon forming most of each lateral wall of the third ventricle.	ncit:C12459			
+PD						Vagina	The female genital canal, extending from the uterus to the vulva.	ncit:C12407			
+PD						Other	Different than the one(s) previously specified or mentioned.	ncit:17649			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:17998			
+PD						Not Reported	Not provided or available.	ncit:43234			
+VD	LATERALITY	Enum				_undefined_	_undefined_	_undefined_		[gct_v1.2].[Biopsy/Surgical Procedures].[PROCEDURE_LATERALITY] skos:exactMatch [gct_v2.0].[Biopsy And Surgical Procedures].[LATERALITY]	
+PD						Left	Being or located on or directed toward the side of the body to the west when facing north.	ncit:C25229			
+PD						Right	Being or located on or directed toward the side of the body to the east when facing north.	ncit:C25228			
+PD						Midline	Affecting both sides of the body or a matched pair of organs.	ncit:C13332			
+PD						Bilateral	A medial line, especially the medial line or medial plane of the body (or some part of the body).	ncit:CC81170			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	PROCEDURE_TYPE	Enum		A categorization of surgical procedures by type or purpose.	ncit:C161601	_undefined_	_undefined_	_undefined_			
+PD						Surgery	The branch of medical science that treats disease or injury by operative procedures.	ncit:C17173			
+PD						Biopsy	The removal of tissue specimens or fluid from the living body for microscopic examination, performed to establish a diagnosis.	ncit:C15189			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:17998			
+PD						Not reported	Not provided or available.	ncit:43234			
+VD	EXTENT	Enum		The degree to which the lesion has been cut out, or resected.	ncit:C157443	_undefined_	_undefined_	_undefined_		[gct_v1.2].[Biopsy/Surgical Procedures].[PROCEDURE_EXTENT] skos:exactMatch [gct_v2.0].[Biopsy And Surgical Procedures].[EXTENT]	
+PD						Gross Total	Surgical removal of an entire visible lesion, with no obvious lesion detected on post-operative evaluation; microscopic residual disease may be present.	ncit:C131672			
+PD						Complete Resection	Complete clearance of the tumor with histologically proved negative margins.	ncit:C175027			
+PD						Partial Resection	Surgical removal of a part of a lesion; some portion of the lesion is detectable on post-operative evaluation.	ncit:C131680			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	MARGINS	Enum		The determination of the presence of actual or potential neoplastic tissue which has been left outside the boundary of a resected specimen within the patient.	ncit:123560	_undefined_	_undefined_	_undefined_			
+PD						R0 - Complete Resection, Negative Margins	No detectable presence of residual tumor after treatment	ncit:C139578			
+PD						R1 - Complete Resection, Positive Margins	Presence of microscopic residual tumor after treatment.	ncit:C139579			
+PD						R2 - Gross Residual Disease	Presence of macroscopic residual tumor after treatment.	ncit:C139580			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:43234			
+											
+											
+DD	Treatment										
+TD	Stem Cell Transplant										
+TG	One row per subject per stem-cell transplant										
+VD	HONEST_BROKER_SUBJECT_ID	String		The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_		New VD	
+VD	AGE_AT_SCT	Integer		Age of subject (in days) at the time of stem-cell transplantation.	ncit:168853	_undefined_	_undefined_	_undefined_			
+VD	TIME_PERIOD_SUBMITTER_ID	String		This is the SUBMITTER_ID of the time period (defined in the "Time Period" table) during which this observation takes place.		_undefined_	_undefined_	_undefined_		New VD	
+VD	TOTAL_CYCLES	Integer		The total number of stem cell transplant cycles.	ncit:C177373	_undefined_	_undefined_	_undefined_		[gct_v1.2].[Stem Cell Transplant].[SCT_CYCLES] skos:exactMatch [gct_v2.0].[Stem Cell Transplant].[TOTAL_CYCLES]	
+											
+											
+											
+											
+DD	Response										
+TD	Subject Response										
+TG	One row per subject per response, per response category										
+VD	HONEST_BROKER_SUBJECT_ID	String		The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_		New VD	
+VD	AGE_AT_RESPONSE	Integer		Age of subject (in days) when the response assessment was made.	ncit:168856	_undefined_	_undefined_	_undefined_			
+VD	TIME_PERIOD_SUBMITTER_ID	String		This is the SUBMITTER_ID of the time period (defined in the "Time Period" table) during which this observation takes place.		_undefined_	_undefined_	_undefined_		New VD	
+VD	RESPONSE_CATEGORY	Enum		The category used to assess the response to therapy.	ncit:173306	_undefined_	_undefined_	_undefined_			
+PD						Overall Response	An assessment of the overall response of the disease to the therapy.	ncit:C96613			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	RESPONSE	Enum		The pathologic and/or clinical changes that result from treatment. The changes may include eradication of detectable disease, stabilization of disease, or disease progression.	ncit:50995	_undefined_	_undefined_	_undefined_			
+PD						Partial Response	A finding indicating that there is a decrease in the size and the extent of tissue involvement by a malignant tumor in a patient.	ncit:C18212			
+PD						Stable Disease	Cancer that is neither decreasing nor increasing in extent or severity.	ncit:C18213			
+PD						Progressive Disease	A disease process that is increasing in scope or severity.	ncit:C35571			
+PD						Complete Response	The disappearance of all signs of cancer in response to treatment.	ncit:C4870			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:17998			
+PD						Not Reported	Not provided or available.	ncit:43234			
+VD	RESPONSE_METHOD	Enum				_undefined_	_undefined_	_undefined_			
+PD						Imaging	A substance present in or produced by a tumor or by the host, that can be used for differentiating neoplastic from normal tissue based on measurements in body fluids, secretions, cells, and/or tissues. Markers are used in diagnosis, staging and prognosis of cancer, provide an estimation of tumor burden, and serve for monitoring effects of therapy, detecting recurrence, localization of tumors, and screening in general populations.	ncit:C17220			
+PD						Tumor Marker	Any technology or method that aids in the visualization of any biological process, cell, tissue or organ for use in screening, diagnosis, surgical procedures or therapy.	ncit:C17369			
+PD						Pathology	The medical science, and specialty practice, concerned with all aspects of disease, but with special reference to the essential nature, causes, and development of abnormal conditions, as well as the structural and functional changes that result from the disease processes. Informally used to mean the result of such an examination.	ncit:C18189			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	RESPONSE_SYSTEM	Enum		A standard from which a judgment concerning tumor response to therapy can be established.	ncit:C125932	_undefined_	_undefined_	_undefined_			
+PD						RECIST	Standard parameters to be used when documenting response of solid tumors to treatment; a set of published rules that define when cancer patients improve ("respond"), stay the same ("stable"), or worsen ("progression") during treatments. (from www.recist.com)	ncit:C49164			
+PD						WHO	A United Nations agency established to coordinate international health activities and to help governments improve health services.	ncit:C75419			
+PD						Choi	A composite set of criteria developed by Choi et al. using imaging techniques in the evaluation of gastrointestinal stromal tumors response to imatinib mesylate treatment. These criteria integrate changes in tumor size and tumor density.	ncit:C122394			
+PD						mRECIST	Modified RECIST criteria for assessment of response in malignant pleural mesothelioma. (Byrne MJ, Nowak AK. Modified RECIST criteria for assessment of response in malignant pleural mesothelioma. Ann Oncol. 2004 Feb;15(2):257-60.)	ncit:C126031			
+PD						PERCIST	From RECIST to PERCIST: Evolving considerations for PET response criteria in solid tumors. (Wahl RL, Jacene H, Kasamon Y, Lodge MA. From RECIST to PERCIST: Evolving considerations for PET response criteria in solid tumors. J Nucl Med. 2009 May;50 Suppl 1:122S-50S.)	ncit:C126039			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:17998			
+PD						Not Reported	Not provided or available.	ncit:43234			
+VD	RESPONSE_SYSTEM_VERSION	String		The version of the response criteria.	ncit:C175042	_undefined_	_undefined_	_undefined_			
+											
+											
+DD	Events										
+TD	Adverse Events										
+TG	One row per subject per adverse event										
+VD	HONEST_BROKER_SUBJECT_ID	String		The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_		New VD	
+VD	AGE_AT_AE	Integer		Age of subject (in days) at the onset of the adverse event.	ncit:C172677	_undefined_	_undefined_	_undefined_			
+VD	TIME_PERIOD_SUBMITTER_ID	String		This is the SUBMITTER_ID of the time period (defined in the "Time Period" table) during which this observation takes place.		_undefined_	_undefined_	_undefined_		New VD	
+VD	ADVERSE_EVENT	Enum		Any unfavorable or unintended disease, sign, or symptom (including an abnormal laboratory finding) that is temporally associated with the use of a medical treatment or procedure, and that may or may not be considered related to the medical treatment or procedure. Such events can be related to the intervention, dose, route of administration, patient, or caused by an interaction with another drug(s) or procedure(s).	ncit:C41331	_undefined_	_undefined_	_undefined_			
+PD						Renal Toxicity	Toxicity that impairs or damages the kidney. This condition is often caused by the administration of a pharmaceutical agent that causes damage to the kidney.	ncit:C115459			
+PD						Neuropathy	A disorder affecting the cranial nerves or the peripheral nervous system. It manifests with pain, tingling, numbness, and muscle weakness. It may be the result of physical injury, toxic substances, viral diseases, diabetes, renal failure, cancer, and drugs.	ncit:C4731			
+PD						Pulmonary Toxicity	Toxicity that impairs or damages the lung(s). This condition is often caused by the administration of a pharmaceutical agent that causes damage to the lungs.	ncit:C177374			
+PD						Ototoxicity	Damage to the inner ear as a result of exposure to drugs or chemicals.	ncit:C66929			
+PD						Other	Different than the one(s) previously specified or mentioned.	ncit:C17649			
+PD						Unknown	Not known, not observed, not recorded, or refused.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	GRADE	Enum		A numeric value corresponding to the degree of severity of an adverse event.	ncit:C166200	_undefined_	_undefined_	_undefined_		[gct_v1.2].[Adverse Events].[AE_GRADE] skos:exactMatch [gct_v2.0].[Adverse Events].[GRADE]	
+PD						Grade 1	An experience that is usually transient, and requires no special treatment or intervention. The event does not generally interfere with usual daily activities. Includes transient laboratory test alterations.	ncit:C41338			
+PD						Grade 2	An experience that is alleviated with simple therapeutic treatments. The event impacts usual daily activities. Includes laboratory test alterations indicating injury, but without long-term risk.	ncit:C41339			
+PD						Grade 3	An adverse event experience that requires intensive therapeutic intervention and interrupts usual daily activities.	ncit:C41340			
+PD						Grade 4	An adverse event that has life-threatening consequences; for which urgent intervention is indicated; that puts the patient at risk of death at the time of the event if immediate intervention is not undertaken.	ncit:C84266			
+PD						Grade 5	The termination of life associated with an adverse event.	ncit:C48275			
+PD						Unknown	Not known, not observed, not recorded, or refused.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	ATTRIBUTION	Enum		A specific identifiable level (defined qualitatively or quantitatively) of probability of adverse event being caused or associated with the product or procedure administration to a patient.	ncit:C41358	_undefined_	_undefined_	_undefined_		[gct_v1.2].[Adverse Events].[AE_ATTRIBUTION] skos:exactMatch [gct_v2.0].[Adverse Events].[ATTRIBUTION]	
+PD						Definite	A characteristic used to qualify the adverse event as certainly related to the medical intervention. According to WHO causality assessment criteria of suspected adverse reactions it is applicable to a clinical event, including laboratory test abnormality, occurring in a plausible time relationship to medical intervention, and which cannot be explained by concurrent disease or other interventions. The response to withdrawal of the medical product (dechallenge) should be clinically plausible. The event must be definitive pharmacologically or phenomenologically, using a satisfactory rechallenge procedure if necessary.	ncit:C53260			
+PD						Probable	Probable adverse event relationship to study product or procedure is defined when there is a clear-cut temporal association between product or procedure administration and adverse event, and a potential alternative etiology of the event is not apparent.	ncit:C41357			
+PD						Possible	A characteristic indicating that an adverse event may be related to the medical intervention. According to WHO causality assessment criteria of suspected adverse reactions it is applicable to a clinical event, including laboratory test abnormality, with a reasonable time sequence to administration of the drug, but which could also be explained by concurrent disease or other drugs or chemicals. Information on drug withdrawal may be lacking or unclear.	ncit:C53258			
+PD						Unlikely	A characteristic used to qualify the adverse event as unlikely related to the medical intervention. According to WHO causality assessment criteria of suspected adverse reactions it is applicable to a clinical event, including laboratory test abnormality, with a temporal relationship to the medical intervention which makes a causal relationship improbable, and in which other interventions or underlying disease provide plausible explanations.	ncit:C53257			
+PD						Unrelated	A characteristic used to qualify the adverse event as clearly not related to the medical intervention.	ncit:C53256			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	OUTCOME	Enum		A condition or event that is attributed to the adverse event and is the result or conclusion of the adverse event.	ncit:C49489	_undefined_	_undefined_	_undefined_		[gct_v1.2].[Adverse Events].[AE_OUTCOME] skos:exactMatch [gct_v2.0].[Adverse Events].[OUTCOME]	
+PD						Death, Contributory	Any adverse event contributing to the cause of death.	ncit:C168948			
+PD						Death, Noncontributory	The adverse event did not directly contribute to the death of the subject.	ncit:C173315			
+PD						Not Yet Recovered	One of the possible results of an adverse event outcome that indicates that the event has not improved or recuperated.	ncit:C49494			
+PD						Recovered with Sequelae	One of the possible results of an adverse event outcome where the subject recuperated but retained pathological conditions resulting from the prior disease or injury.	ncit:C49495			
+PD						Recovered	One of the possible results of an adverse event outcome that indicates that the event has improved or recuperated.	ncit:C49498			
+PD						Unknown	Not known, not observed, not recorded, or refused.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+											
+											
+DD	Events										
+TD	Secondary Malignant Neoplasm										
+TG	One row per subject per secondary malignancy										
+VD	AGE_AT_SMN	Integer		Age of subject (in days) at the diagnosis of the secondary malignant neoplasm.	ncit:168860	_undefined_	_undefined_	_undefined_			
+VD	DISEASE_PHASE	Enum		The stage or period of an individual's disease.	ncit:168878	_undefined_	_undefined_	_undefined_			
+PD						Initial Diagnosis	The first diagnosis of the individual's condition.	ncit:156813	Note: Disease phase could be "Initial Diagnosis" phase, "Relapse" phase, etc...		
+PD						Relapse	The return of a disease after a period of remission.	ncit:38155			
+VD	DISEASE_PHASE_NUMBER	Integer		The number of the disease phase.	ncit:173258	_undefined_	_undefined_	_undefined_			
+VD	SMN_MORPH_ICDO	String		ICD-O morphology code of the secondary malignant neoplasm.	ncit:168862	_undefined_	_undefined_	_undefined_			
+VD	SMN_TOP_ICDO	String		ICD-O topography code of the secondary malignant neoplasm.	ncit:168863	_undefined_	_undefined_	_undefined_			
+											
+											
+DD	Events										
+TD	Patient Reported Outcomes Metadata										
+TG	One observation per trial										
+VD	STUDY_ID	Enum				_undefined_	_undefined_	_undefined_			
+PD						TBD					
+VD	PRO_MEASURES	Enum		Survey measures that are completed by the patient which help assess patient status with regards to pain, mobility, quality of life, ability to perform daily tasks or notable events in a clinical study.	ncit:C177377	_undefined_	_undefined_	_undefined_			
+PD						Fact Ntx	A questionnaire tool to assess the neurotoxic effects of cancer therapy.	ncit:C177378			
+PD						PedsQL Multi-Dimensional Fatigue Scale	An 18 item component of the Pediatric Quality of Life Inventory is a generic symptom-specific instrument to measure fatigue in pediatric patients ages 2-18 comprised of General Fatigue, Sleep/Rest Fatigue, and Cognitive Fatigue domains.	ncit:C131369			
+PD						PedsQL 4.0 Generic Core Scale	Child self-report and parent proxy report scales developed to measure health-related quality of life issues in children and adolescents aged 2-18.	ncit:C177379			
+PD						AYA-HEARS	A questionnaire designed to measure hearing loss or problems experienced by patients who have received treatment for cancer.	ncit:C131878			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
