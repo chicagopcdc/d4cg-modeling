@@ -5856,7 +5856,7 @@
                 }
             },
             "MITOSES": {
-                "type": "Code",
+                "type": "Enum",
                 "source": "nrsts_v2.0",
                 "description": "Mitotic Count",
                 "codes": "",
@@ -5890,7 +5890,7 @@
                 "codes": ""
             },
             "CYTODIFFERENTIATION": {
-                "type": "Code",
+                "type": "Enum",
                 "source": "nrsts_v2.0",
                 "description": "Cytodifferentiation Score",
                 "codes": "",
@@ -9794,7 +9794,7 @@
                 "codes": ""
             },
             "CLASSIFICATION": {
-                "type": "Code",
+                "type": "Enum",
                 "source": "nrsts_v2.0 | rms_v2.0",
                 "description": "Tumor Classification",
                 "codes": "",
@@ -9817,7 +9817,7 @@
                 }
             },
             "UNIT": {
-                "type": "Code",
+                "type": "Enum",
                 "source": "nrsts_v2.0",
                 "description": "Radiation Dose Unit",
                 "codes": "",
@@ -11340,7 +11340,7 @@
                 }
             },
             "TX_PRIOR_RESPONSE": {
-                "type": "Code",
+                "type": "Enum",
                 "source": "nrsts_v2.0 | rms_v2.0",
                 "description": "Treatment Type Prior to Response Assessment",
                 "codes": "",
@@ -11358,7 +11358,7 @@
                 }
             },
             "NECROSIS": {
-                "type": "Code",
+                "type": "Enum",
                 "source": "nrsts_v2.0",
                 "description": "Tumor Necrosis",
                 "codes": "",
@@ -12423,7 +12423,7 @@
                 "codes": ""
             },
             "SITE": {
-                "type": "Code",
+                "type": "Enum",
                 "source": "nrsts_v2.0",
                 "description": "SMN Site",
                 "codes": "",
@@ -12466,7 +12466,7 @@
                 }
             },
             "SMN_TYPE": {
-                "type": "Code",
+                "type": "Enum",
                 "source": "nrsts_v2.0",
                 "description": "SMN Type",
                 "codes": "",
@@ -14262,7 +14262,7 @@
                 }
             },
             "TUMOR_CLASSIFICATION": {
-                "type": "Code",
+                "type": "Enum",
                 "source": "nrsts_v2.0",
                 "description": "Tumor Classification",
                 "codes": "",
@@ -14285,7 +14285,7 @@
                 }
             },
             "PROCEDURE_SITE": {
-                "type": "Code",
+                "type": "Enum",
                 "source": "nrsts_v2.0",
                 "description": "Procedure Site",
                 "codes": "",

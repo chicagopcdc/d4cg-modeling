@@ -555,10 +555,8 @@
                 "gct_v2.0",
                 "hl_v2.0",
                 "nbl_v2.0",
+                "nrsts_v2.0",
                 "rms_v2.0"
-            ],
-            "Code": [
-                "nrsts_v2.0"
             ]
         },
         "codes": {
@@ -1314,10 +1312,8 @@
                 "gct_v2.0",
                 "hl_v2.0",
                 "nbl_v2.0",
+                "nrsts_v2.0",
                 "rms_v2.0"
-            ],
-            "Code": [
-                "nrsts_v2.0"
             ]
         },
         "codes": {
@@ -7201,10 +7197,8 @@
                 "gct_v2.0",
                 "hl_v2.0",
                 "nbl_v2.0",
+                "nrsts_v2.0",
                 "rms_v2.0"
-            ],
-            "Code": [
-                "nrsts_v2.0"
             ]
         },
         "codes": {
@@ -12979,10 +12973,8 @@
                 "gct_v2.0",
                 "hl_v2.0",
                 "nbl_v2.0",
+                "nrsts_v2.0",
                 "rms_v2.0"
-            ],
-            "Code": [
-                "nrsts_v2.0"
             ]
         },
         "codes": {
@@ -13265,10 +13257,8 @@
                 "gct_v2.0",
                 "hl_v2.0",
                 "nbl_v2.0",
+                "nrsts_v2.0",
                 "rms_v2.0"
-            ],
-            "Code": [
-                "nrsts_v2.0"
             ]
         },
         "codes": {
@@ -13749,10 +13739,8 @@
                 "gct_v2.0",
                 "hl_v2.0",
                 "nbl_v2.0",
+                "nrsts_v2.0",
                 "rms_v2.0"
-            ],
-            "Code": [
-                "nrsts_v2.0"
             ]
         },
         "codes": {
@@ -14045,9 +14033,7 @@
             "Enum": [
                 "aml_v2.0",
                 "gct_v2.0",
-                "hl_v2.0"
-            ],
-            "Code": [
+                "hl_v2.0",
                 "nrsts_v2.0"
             ]
         },
@@ -15363,10 +15349,8 @@
                 "gct_v2.0",
                 "hl_v2.0",
                 "nbl_v2.0",
+                "nrsts_v2.0",
                 "rms_v2.0"
-            ],
-            "Code": [
-                "nrsts_v2.0"
             ]
         },
         "codes": {
@@ -15585,10 +15569,8 @@
                 "gct_v2.0",
                 "hl_v2.0",
                 "nbl_v2.0",
+                "nrsts_v2.0",
                 "rms_v2.0"
-            ],
-            "Code": [
-                "nrsts_v2.0"
             ]
         },
         "codes": {
@@ -20710,10 +20692,8 @@
                 "aml_v2.0",
                 "gct_v2.0",
                 "nbl_v2.0",
+                "nrsts_v2.0",
                 "rms_v2.0"
-            ],
-            "Code": [
-                "nrsts_v2.0"
             ]
         },
         "codes": {
@@ -34389,10 +34369,8 @@
                 "aml_v2.0",
                 "gct_v2.0",
                 "hl_v2.0",
+                "nrsts_v2.0",
                 "rms_v2.0"
-            ],
-            "Code": [
-                "nrsts_v2.0"
             ]
         },
         "codes": {
@@ -41248,10 +41226,8 @@
                 "aml_v2.0",
                 "gct_v2.0",
                 "hl_v2.0",
+                "nrsts_v2.0",
                 "rms_v2.0"
-            ],
-            "Code": [
-                "nrsts_v2.0"
             ]
         },
         "codes": {
@@ -49519,10 +49495,8 @@
             "Enum": [
                 "gct_v2.0",
                 "hl_v2.0",
+                "nrsts_v2.0",
                 "rms_v2.0"
-            ],
-            "Code": [
-                "nrsts_v2.0"
             ]
         },
         "codes": {
@@ -52047,10 +52021,8 @@
             "Enum": [
                 "gct_v2.0",
                 "hl_v2.0",
+                "nrsts_v2.0",
                 "rms_v2.0"
-            ],
-            "Code": [
-                "nrsts_v2.0"
             ]
         },
         "codes": {
@@ -52447,10 +52419,8 @@
         "types": {
             "Enum": [
                 "gct_v2.0",
+                "nrsts_v2.0",
                 "rms_v2.0"
-            ],
-            "Code": [
-                "nrsts_v2.0"
             ]
         },
         "codes": {
@@ -66405,10 +66375,8 @@
         "types": {
             "Enum": [
                 "nbl_v2.0",
+                "nrsts_v2.0",
                 "rms_v2.0"
-            ],
-            "Code": [
-                "nrsts_v2.0"
             ]
         },
         "codes": {},
@@ -68143,7 +68111,7 @@
             "nrsts_v2.0"
         ],
         "types": {
-            "Code": [
+            "Enum": [
                 "nrsts_v2.0"
             ]
         },
@@ -68257,7 +68225,7 @@
             "nrsts_v2.0"
         ],
         "types": {
-            "Code": [
+            "Enum": [
                 "nrsts_v2.0"
             ]
         },
@@ -68778,10 +68746,8 @@
             "rms_v2.0"
         ],
         "types": {
-            "Code": [
-                "nrsts_v2.0"
-            ],
             "Enum": [
+                "nrsts_v2.0",
                 "rms_v2.0"
             ]
         },
@@ -68889,7 +68855,7 @@
             "nrsts_v2.0"
         ],
         "types": {
-            "Code": [
+            "Enum": [
                 "nrsts_v2.0"
             ]
         },
@@ -68932,7 +68898,7 @@
             "nrsts_v2.0"
         ],
         "types": {
-            "Code": [
+            "Enum": [
                 "nrsts_v2.0"
             ]
         },
@@ -69011,7 +68977,7 @@
             "nrsts_v2.0"
         ],
         "types": {
-            "Code": [
+            "Enum": [
                 "nrsts_v2.0"
             ]
         },
@@ -69565,10 +69531,8 @@
             "rms_v2.0"
         ],
         "types": {
-            "Code": [
-                "nrsts_v2.0"
-            ],
             "Enum": [
+                "nrsts_v2.0",
                 "rms_v2.0"
             ]
         },
@@ -69637,7 +69601,7 @@
             "nrsts_v2.0"
         ],
         "types": {
-            "Code": [
+            "Enum": [
                 "nrsts_v2.0"
             ]
         },
@@ -69751,7 +69715,7 @@
             "nrsts_v2.0"
         ],
         "types": {
-            "Code": [
+            "Enum": [
                 "nrsts_v2.0"
             ]
         },
@@ -69896,7 +69860,7 @@
             "nrsts_v2.0"
         ],
         "types": {
-            "Code": [
+            "Enum": [
                 "nrsts_v2.0"
             ]
         },
