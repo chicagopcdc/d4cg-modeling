@@ -18,16 +18,16 @@ VD	CONSORTIUM	Enum	To-do	The consortium under which this data is being contribut
 PD						INSTRuCT	International Pediatric Acute Myeloid Leukemia Consortium (INTERACT). A consortium launched in 2021 as a collaboration between acute myeloid leukemia researchers from Children's Oncology Group, European Pediatric Acute Leukemia, Japan Children's Cancer Group, and St. Jude Children's Research Hospital. To date, INTERACT has identified 18 studies from 10 clinical trials research groups that can be contributed to the data commons, and its statisticians are actively working to harmonize clinical data from more than 6,000 individuals who have had pediatric cancer.	ncit:C192762		New PD
 VD	DISEASE_GROUP	Enum				_undefined_	_undefined_	_undefined_		New VD
 PD						NRSTS				New PD
-VD	DATA_CONTRIBUTOR_ID	Code		Data Contributor Identifier		_undefined_	_undefined_	_undefined_		
+VD	DATA_CONTRIBUTOR_ID	Enum		Data Contributor Identifier		_undefined_	_undefined_	_undefined_		
 PD						AIEOP	Italian Association of Pediatric Hematology and Oncology. A group from Bologna, Italy, comprised mainly of pediatricians, hematologists, oncologists, surgeons, biologists, nurses and psychologists who are devoted to addressing the problems of hematology, oncology and immunology in the child and adolescent.	ncit:C168887		New PD
 PD						COG	Children's Oncology Group. An NCI-supported clinical cooperative group formed by the merger of the four national pediatric cancer research organizations: the Children's Cancer Group, the Intergroup Rhabdomyosarcoma Study Group, the National Wilms Tumor Study Group, and the Pediatric Oncology Group. The primary objective of the organization is to conduct clinical trials of new therapies for childhood and adolescent cancer. COG develops and coordinates clinical trials conducted at the 238 member institutions that include cancer centers of all major universities and teaching hospitals throughout the U.S. and Canada, as well as sites in Europe and Australia. COG members include over 5000 cancer researchers.	ncit:C39353		New PD
 PD						EpSSG	European Paediatric Soft Tissue Sarcoma Study Group. An international organization of healthcare professionals devoted to the care and treatment of children and young people with soft tissue sarcoma.	ncit:C192774		New PD
 PD						SIOP MMT	International Society of Paediatric Oncology Malignant Mesenchymal Tumour Committee. An international pediatric oncology committee that specializes in the research of malignant mesenchymal tumors. Along with the Associazione Italiana Ematologia Oncologia Pediatrica-Soft Tissue Sarcoma Committee (AIEOP-STSC), which was formerly known as the Italian Cooperative Group (ICG), SIOP-MMT founded the European pediatric Soft tissue sarcoma Study Group (EpSSG) and the Non-rhabdomyosarcoma Soft Tissue Sarcoma (NRSTS) study in 2005 with the goal of making pediatric non-rhabdomyosarcoma soft tissue sarcoma treatment uniform across Europe.	ncit:C192775		New PD
 PD						CWS	Cooperative Weichteilsarkom Studiengruppe. An international pediatric soft tissue sarcoma study group, also known as the Cooperative Soft Tissue Sarcoma Group, that creates guidance for risk-adapted treatment of soft tissue sarcoma and soft tissue tumors in children, adolescents, and young adults in Europe.	ncit:C192777		New PD
 PD						STSC	AIEOP Soft Tissue Sarcoma Committee			New PD
-VD	STUDY_ID	Code		Study Identifier		_undefined_	_undefined_	_undefined_		
-VD	TREATMENT_ARM	Code		Assigned Treatment Arm by Intention-To-Treat		_undefined_	_undefined_	_undefined_		
-VD	CENSOR_STATUS	Code		Censor Status		_undefined_	_undefined_	_undefined_		
+VD	STUDY_ID	Enum		Study Identifier		_undefined_	_undefined_	_undefined_		
+VD	TREATMENT_ARM	Enum		Assigned Treatment Arm by Intention-To-Treat		_undefined_	_undefined_	_undefined_		
+VD	CENSOR_STATUS	Enum		Censor Status		_undefined_	_undefined_	_undefined_		
 PD						Subject is censored (i.e. has had no events(s))				
 PD						Subject has had one or more events				
 PD						Unknown				
@@ -62,11 +62,11 @@ DD	Demographics
 TD	Demographics									
 TG	One row per subject									
 VD	HONEST_BROKER_SUBJECT_ID	String		The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_		New VD
-VD	SEX	Code		Sex		_undefined_	_undefined_	_undefined_		
+VD	SEX	Enum		Sex		_undefined_	_undefined_	_undefined_		
 PD						Male				
 PD						Female				
 PD						Unknown				
-VD	RACE	Code		Race		_undefined_	_undefined_	_undefined_		
+VD	RACE	Enum		Race		_undefined_	_undefined_	_undefined_		
 PD						American Indian or Alaska Native				
 PD						Asian				
 PD						Black or African American				
@@ -76,7 +76,7 @@ PD						White
 PD						Other				
 PD						Unknown				
 PD						Not Reported				
-VD	ETHNICITY	Code		Ethnicity		_undefined_	_undefined_	_undefined_		
+VD	ETHNICITY	Enum		Ethnicity		_undefined_	_undefined_	_undefined_		
 PD						Hispanic or Latino				
 PD						Not Hispanic or Latino				
 PD						Unknown				
@@ -87,7 +87,7 @@ DD	Demographics
 TD	Medical History									
 TG	One row per subject per pre-existing conditions									
 VD	HONEST_BROKER_SUBJECT_ID	String		The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_		New VD
-VD	CONDITION	Code		Medical History		_undefined_	_undefined_	_undefined_		[nrsts_v1.0].[Medical History].[MEDICAL_HISTORY] skos:exactMatch [nrsts_v2.0].[Medical History].[CONDITION]
+VD	CONDITION	Enum		Medical History		_undefined_	_undefined_	_undefined_		[nrsts_v1.0].[Medical History].[MEDICAL_HISTORY] skos:exactMatch [nrsts_v2.0].[Medical History].[CONDITION]
 PD						APC				
 PD						Costello				
 PD						DICER1				
@@ -103,11 +103,11 @@ TD	Survival Characteristics
 TG	One row per subject per cause of death, per treatment type, per cause of death detail									
 VD	HONEST_BROKER_SUBJECT_ID	String		The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_		New VD
 VD	AGE_AT_LKSS	Number		Age in Days at Last Known Survival		_undefined_	_undefined_	_undefined_		
-VD	LKSS	Code		Last Known Survival Status		_undefined_	_undefined_	_undefined_		
+VD	LKSS	Enum		Last Known Survival Status		_undefined_	_undefined_	_undefined_		
 PD						Alive				
 PD						Dead				
 PD						Unknown				
-VD	CAUSE_OF_DEATH	Code		Cause of Death		_undefined_	_undefined_	_undefined_		
+VD	CAUSE_OF_DEATH	Enum		Cause of Death		_undefined_	_undefined_	_undefined_		
 PD						Disease Progression			Note: If multiple causes of death, include one observation per cause of death. There can only be one record where CAUSE_OF_DEATH_RANKING=Primary.	
 PD						Treatment-Related Mortality				
 PD						Secondary Malignancy				
@@ -119,12 +119,12 @@ TD	Molecular Analysis
 TG	One row per subject per molecular analysis method per molecular abnormality									
 VD	HONEST_BROKER_SUBJECT_ID	String		The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_		New VD
 VD	AGE_AT_MOLECULAR_ANALYSIS	Number		Age in Days at Molecular Analysis		_undefined_	_undefined_	_undefined_		
-VD	MITOSES	Code		Mitotic Count		_undefined_	_undefined_	_undefined_		
+VD	MITOSES	Enum		Mitotic Count		_undefined_	_undefined_	_undefined_		
 PD						Score 1: 0-9 Mitoses per 10 HPF				
 PD						Score 2: 10-19 Mitoses per 10 HPF				
 PD						Score 3: > 19 Mitoses per 10 HPF				
 PD						Unknown				
-VD	MOLECULAR_ABNORMALITY	Code		Molecular Abnormality		_undefined_	_undefined_	_undefined_		
+VD	MOLECULAR_ABNORMALITY	Enum		Molecular Abnormality		_undefined_	_undefined_	_undefined_		
 PD						FOXO1 Rearranged			Note: If multiple molecular abnormalities, include one observation per molecular abnormality.	
 PD						EWSR1 Rearranged				
 PD						SMARCB1 Deleted/Mutated				
@@ -146,7 +146,7 @@ PD						ASPSCR1-TFE3
 PD						BCOR ITT Rearranged				
 PD						Other				
 VD	MOLECULAR_ABNORMALITY_OTHER	String		Molecular Abnormality Other		_undefined_	_undefined_	_undefined_		
-VD	CYTODIFFERENTIATION	Code		Cytodifferentiation Score		_undefined_	_undefined_	_undefined_		
+VD	CYTODIFFERENTIATION	Enum		Cytodifferentiation Score		_undefined_	_undefined_	_undefined_		
 PD						1				
 PD						2				
 PD						3				
@@ -315,11 +315,11 @@ TD	Radiation Therapy
 TG	One row per subject per radiation therapy administration									
 VD	HONEST_BROKER_SUBJECT_ID	String	3 - contributors shouldn’t prioritize inclusion, but can include if resources are available	The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_		New VD
 VD	AGE_AT_RT	Number		Age in Days at Start of Radiation Therapy		_undefined_	_undefined_	_undefined_		
-VD	CLASSIFICATION	Code		Tumor Classification		_undefined_	_undefined_	_undefined_		[nrsts_v1.0].[Radiation Therapy].[TUMOR_CLASSIFICATION] skos:exactMatch [nrsts_v2.0].[Radiation Therapy].[CLASSIFICATION]
+VD	CLASSIFICATION	Enum		Tumor Classification		_undefined_	_undefined_	_undefined_		[nrsts_v1.0].[Radiation Therapy].[TUMOR_CLASSIFICATION] skos:exactMatch [nrsts_v2.0].[Radiation Therapy].[CLASSIFICATION]
 PD						Primary				
 PD						Regional Nodes				
 PD						Metastatic				
-VD	SITE	Code		Radiation Therapy Site		_undefined_	_undefined_	_undefined_		[nrsts_v1.0].[Radiation Therapy].[RT_SITE] skos:exactMatch [nrsts_v2.0].[Radiation Therapy].[SITE]
+VD	SITE	Enum		Radiation Therapy Site		_undefined_	_undefined_	_undefined_		[nrsts_v1.0].[Radiation Therapy].[RT_SITE] skos:exactMatch [nrsts_v2.0].[Radiation Therapy].[SITE]
 PD						Head				
 PD						Neck				
 PD						Chest Wall				
@@ -351,14 +351,14 @@ PD						Peritoneum
 PD						Other				
 PD						Unknown				
 PD						Not Reported				
-VD	ENERGY_TYPE	Code		Particles and Energy Type		_undefined_	_undefined_	_undefined_		
+VD	ENERGY_TYPE	Enum		Particles and Energy Type		_undefined_	_undefined_	_undefined_		
 PD						Protons				
 PD						Photon				
 PD						Brachytherapy				
 PD						Unknown				
 PD						Other				
 VD	DOSE	Number		Total Radiation Dose		_undefined_	_undefined_	_undefined_		[nrsts_v1.0].[Radiation Therapy].[RT_DOSE] skos:exactMatch [nrsts_v2.0].[Radiation Therapy].[DOSE]
-VD	UNIT	Code		Radiation Dose Unit		_undefined_	_undefined_	_undefined_		[nrsts_v1.0].[Radiation Therapy].[RT_UNIT] skos:exactMatch [nrsts_v2.0].[Radiation Therapy].[DOSE_UNIT]
+VD	UNIT	Enum		Radiation Dose Unit		_undefined_	_undefined_	_undefined_		[nrsts_v1.0].[Radiation Therapy].[RT_UNIT] skos:exactMatch [nrsts_v2.0].[Radiation Therapy].[DOSE_UNIT]
 PD						Gy				
 										
 										
@@ -368,11 +368,11 @@ TD	Biopsy And Surgical Procedures									[nrsts_v1.0].[Biopsy/Surgical Procedur
 TG	One record per subject per biopsy/surgical procedure									
 VD	HONEST_BROKER_SUBJECT_ID	String	3 - contributors shouldn’t prioritize inclusion, but can include if resources are available	The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_		New VD
 VD	AGE_AT_PROCEDURE	Number		Age in Days of Procedure		_undefined_	_undefined_	_undefined_		
-VD	TUMOR_CLASSIFICATION	Code		Tumor Classification		_undefined_	_undefined_	_undefined_		[nrsts_v1.0].[Biopsy/Surgical Procedures].[TUMOR_CLASSIFICATION] skos:exactMatch [nrsts_v2.0].[Biopsy And Surgical Procedures].[CLASSIFICATION]
+VD	TUMOR_CLASSIFICATION	Enum		Tumor Classification		_undefined_	_undefined_	_undefined_		[nrsts_v1.0].[Biopsy/Surgical Procedures].[TUMOR_CLASSIFICATION] skos:exactMatch [nrsts_v2.0].[Biopsy And Surgical Procedures].[CLASSIFICATION]
 PD						Primary			distant sites?	
 PD						Regional Nodes				
 PD						Metastatic				
-VD	PROCEDURE_SITE	Code		Procedure Site		_undefined_	_undefined_	_undefined_		[nrsts_v1.0].[Biopsy/Surgical Procedures].[PROCEDURE_SITE] skos:exactMatch [nrsts_v2.0].[Biopsy And Surgical Procedures].[SITE]
+VD	PROCEDURE_SITE	Enum		Procedure Site		_undefined_	_undefined_	_undefined_		[nrsts_v1.0].[Biopsy/Surgical Procedures].[PROCEDURE_SITE] skos:exactMatch [nrsts_v2.0].[Biopsy And Surgical Procedures].[SITE]
 PD						Head				
 PD						Neck				
 PD						Chest Wall				
@@ -404,10 +404,10 @@ PD						Peritoneum
 PD						Other				
 PD						Unknown				
 PD						Not Reported				
-VD	PROCEDURE_TYPE	Code		Procedure Type		_undefined_	_undefined_	_undefined_		
+VD	PROCEDURE_TYPE	Enum		Procedure Type		_undefined_	_undefined_	_undefined_		
 PD						Biopsy				
 PD						Surgery				
-VD	MARGINS	Code		Margins		_undefined_	_undefined_	_undefined_		
+VD	MARGINS	Enum		Margins		_undefined_	_undefined_	_undefined_		
 PD						R0 - Complete Resection, Negative				
 PD						R1 - Complete Resection, Positive				
 PD						R2 - Gross Residual Disease				
@@ -420,16 +420,16 @@ TD	Subject Response
 TG	One row per subject per response assessment per response method									
 VD	HONEST_BROKER_SUBJECT_ID	String		The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_		New VD
 VD	AGE_AT_RESPONSE	Number		Age in Days at Response Assessment		_undefined_	_undefined_	_undefined_		
-VD	TX_PRIOR_RESPONSE	Code		Treatment Type Prior to Response Assessment		_undefined_	_undefined_	_undefined_		
+VD	TX_PRIOR_RESPONSE	Enum		Treatment Type Prior to Response Assessment		_undefined_	_undefined_	_undefined_		
 PD						Chemotherapy				
 PD						Chemoradiotherapy				
-VD	RESPONSE	Code		Response		_undefined_	_undefined_	_undefined_		
+VD	RESPONSE	Enum		Response		_undefined_	_undefined_	_undefined_		
 PD						Partial Response				
 PD						Stable Disease				
 PD						Progressive Disease				
 PD						Complete Response				
 PD						Not Evaluable				
-VD	NECROSIS	Code		Tumor Necrosis		_undefined_	_undefined_	_undefined_		
+VD	NECROSIS	Enum		Tumor Necrosis		_undefined_	_undefined_	_undefined_		
 PD						Score 0: No Necrosis				
 PD						<50% Necrosis				
 PD						>=50% Necrosis				
@@ -442,7 +442,7 @@ TD	Subsequent Malignant Neoplasm
 TG	One row per subject per subsequent malignancy									
 VD	HONEST_BROKER_SUBJECT_ID	String		The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_		New VD
 VD	AGE_AT_SMN	Number		Age in Days at Secondary Malignant Neoplasm		_undefined_	_undefined_	_undefined_		
-VD	SITE	Code		SMN Site		_undefined_	_undefined_	_undefined_		[nrsts_v1.0].[Secondary Malignant Neoplasm].[SMN_SITE] skos:exactMatch [nrsts_v2.0].[Subsequent Malignant Neoplasm].[SITE]
+VD	SITE	Enum		SMN Site		_undefined_	_undefined_	_undefined_		[nrsts_v1.0].[Secondary Malignant Neoplasm].[SMN_SITE] skos:exactMatch [nrsts_v2.0].[Subsequent Malignant Neoplasm].[SITE]
 PD						Head/Neck				
 PD						Thorax				
 PD						Limbs				
@@ -450,7 +450,7 @@ PD						Abdomen
 PD						Pelvis				
 PD						Other				
 PD						Not Reported				
-VD	SMN_TYPE	Code		SMN Type		_undefined_	_undefined_	_undefined_		
+VD	SMN_TYPE	Enum		SMN Type		_undefined_	_undefined_	_undefined_		
 PD						Leukemia				
 PD						Sarcoma				
 PD						Carcinoma				

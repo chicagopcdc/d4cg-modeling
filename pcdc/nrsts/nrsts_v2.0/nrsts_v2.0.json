@@ -71,7 +71,7 @@
                     }
                 },
                 "DATA_CONTRIBUTOR_ID": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "",
                     "description": "Data Contributor Identifier",
                     "codes": [],
@@ -139,7 +139,7 @@
                     }
                 },
                 "STUDY_ID": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "",
                     "description": "Study Identifier",
                     "codes": [],
@@ -148,7 +148,7 @@
                     "permissible_values": {}
                 },
                 "TREATMENT_ARM": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "",
                     "description": "Assigned Treatment Arm by Intention-To-Treat",
                     "codes": [],
@@ -157,7 +157,7 @@
                     "permissible_values": {}
                 },
                 "CENSOR_STATUS": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "",
                     "description": "Censor Status",
                     "codes": [],
@@ -397,7 +397,7 @@
                     ]
                 },
                 "SEX": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "",
                     "description": "Sex",
                     "codes": [],
@@ -425,7 +425,7 @@
                     }
                 },
                 "RACE": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "",
                     "description": "Race",
                     "codes": [],
@@ -489,7 +489,7 @@
                     }
                 },
                 "ETHNICITY": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "",
                     "description": "Ethnicity",
                     "codes": [],
@@ -537,7 +537,7 @@
                     ]
                 },
                 "CONDITION": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "",
                     "description": "Medical History",
                     "codes": [],
@@ -619,7 +619,7 @@
                     "mappings": []
                 },
                 "LKSS": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "",
                     "description": "Last Known Survival Status",
                     "codes": [],
@@ -647,7 +647,7 @@
                     }
                 },
                 "CAUSE_OF_DEATH": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "",
                     "description": "Cause of Death",
                     "codes": [],
@@ -707,7 +707,7 @@
                     "mappings": []
                 },
                 "MITOSES": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "",
                     "description": "Mitotic Count",
                     "codes": [],
@@ -741,7 +741,7 @@
                     }
                 },
                 "MOLECULAR_ABNORMALITY": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "",
                     "description": "Molecular Abnormality",
                     "codes": [],
@@ -881,7 +881,7 @@
                     "mappings": []
                 },
                 "CYTODIFFERENTIATION": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "",
                     "description": "Cytodifferentiation Score",
                     "codes": [],
@@ -2186,7 +2186,7 @@
                     "mappings": []
                 },
                 "CLASSIFICATION": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "",
                     "description": "Tumor Classification",
                     "codes": [],
@@ -2216,7 +2216,7 @@
                     }
                 },
                 "SITE": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "",
                     "description": "Radiation Therapy Site",
                     "codes": [],
@@ -2414,7 +2414,7 @@
                     }
                 },
                 "ENERGY_TYPE": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "",
                     "description": "Particles and Energy Type",
                     "codes": [],
@@ -2464,7 +2464,7 @@
                     ]
                 },
                 "UNIT": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "",
                     "description": "Radiation Dose Unit",
                     "codes": [],
@@ -2504,7 +2504,7 @@
                     "mappings": []
                 },
                 "TUMOR_CLASSIFICATION": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "",
                     "description": "Tumor Classification",
                     "codes": [],
@@ -2536,7 +2536,7 @@
                     }
                 },
                 "PROCEDURE_SITE": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "",
                     "description": "Procedure Site",
                     "codes": [],
@@ -2734,7 +2734,7 @@
                     }
                 },
                 "PROCEDURE_TYPE": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "",
                     "description": "Procedure Type",
                     "codes": [],
@@ -2756,7 +2756,7 @@
                     }
                 },
                 "MARGINS": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "",
                     "description": "Margins",
                     "codes": [],
@@ -2820,7 +2820,7 @@
                     "mappings": []
                 },
                 "TX_PRIOR_RESPONSE": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "",
                     "description": "Treatment Type Prior to Response Assessment",
                     "codes": [],
@@ -2842,7 +2842,7 @@
                     }
                 },
                 "RESPONSE": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "",
                     "description": "Response",
                     "codes": [],
@@ -2882,7 +2882,7 @@
                     }
                 },
                 "NECROSIS": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "",
                     "description": "Tumor Necrosis",
                     "codes": [],
@@ -2948,7 +2948,7 @@
                     "mappings": []
                 },
                 "SITE": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "",
                     "description": "SMN Site",
                     "codes": [],
@@ -3002,7 +3002,7 @@
                     }
                 },
                 "SMN_TYPE": {
-                    "type": "Code",
+                    "type": "Enum",
                     "tier": "",
                     "description": "SMN Type",
                     "codes": [],
