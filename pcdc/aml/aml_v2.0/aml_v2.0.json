@@ -1,7 +1,7 @@
 {
     "meta": {
         "name": "aml_v2.0",
-        "timestamp": "20250123",
+        "timestamp": "20250124",
         "sheet_id": "1_KyfeZNsepIxSU0Nzw5Mi8mk1PiKCWlSBjatw0AECQ0"
     },
     "info": {
@@ -13,14 +13,14 @@
         "wiki": "https://docs.pedscommons.org/",
         "consortium_info": "https://commons.cri.uchicago.edu/pcdc/",
         "description": "The AML data dictionary is a consensus data schema built by an international group of pediatric acute myeloid leukemia experts and maintained by Data for the Common Good (D4CG) at the University of Chicago in collaboration with the International Acute Myeloid Leukemia Consortium (INTERACT). It is based on the collective requirements of its contributors.",
-        "total": 186
+        "total": 187
     },
     "domains": {
         "protocol": {
             "subject_characteristics": {
                 "HONEST_BROKER_SUBJECT_ID": {
                     "type": "String",
-                    "tier": "n/a",
+                    "tier": "",
                     "description": "Subject identifier assigned by the honest broker.",
                     "codes": [
                         "ncit:C168949"
@@ -30,7 +30,7 @@
                 },
                 "CONSORTIUM": {
                     "type": "Enum",
-                    "tier": "To-do",
+                    "tier": "",
                     "description": "The consortium under which this data is being contributed to the Pediatric Cancer Data Commons.",
                     "codes": [
                         "ncit:C61538"
@@ -66,13 +66,15 @@
                             "description": "",
                             "codes": [],
                             "implementation_notes": [],
-                            "mappings": []
+                            "mappings": [
+                                "New PD"
+                            ]
                         }
                     }
                 },
                 "DATA_CONTRIBUTOR_ID": {
                     "type": "Enum",
-                    "tier": "n/a",
+                    "tier": "",
                     "description": "An identifier assigned to a data contributor.",
                     "codes": [
                         "ncit:C168950"
@@ -162,9 +164,49 @@
                         }
                     }
                 },
+                "AGE_AT_ENROLLMENT": {
+                    "type": "Integer",
+                    "tier": "",
+                    "description": "Age in Days at Enrollment",
+                    "codes": [
+                        "ncit:C168843"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "ENROLLED_STATUS": {
+                    "type": "Enum",
+                    "tier": "",
+                    "description": "Enrollment Status",
+                    "codes": [
+                        "ncit:C168928"
+                    ],
+                    "implementation_notes": [
+                        "This variable indicates if the subject was enrolled in the study, or if the subject was not enrolled in the study but received treatment per the study's protocol."
+                    ],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Enrolled": {
+                            "description": "The study subject is enrolled.",
+                            "codes": [
+                                "ncit:C142715"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Enrolled": {
+                            "description": "The study subject is not enrolled.",
+                            "codes": [
+                                "ncit:C168929"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
                 "STUDY_ID": {
                     "type": "Enum",
-                    "tier": "n/a",
+                    "tier": "",
                     "description": "Study Identifier",
                     "codes": [
                         "ncit:C83082"
@@ -400,54 +442,1207 @@
                         }
                     }
                 },
-                "AGE_AT_ENROLLMENT": {
-                    "type": "Integer",
-                    "tier": "n/a",
-                    "description": "Age in Days at Enrollment",
-                    "codes": [
-                        "ncit:C168843"
-                    ],
-                    "implementation_notes": [],
-                    "mappings": []
-                },
                 "TREATMENT_ARM": {
                     "type": "Enum",
-                    "tier": "n/a",
+                    "tier": "",
                     "description": "Assigned Treatment Arm by Intention-To-Treat",
                     "codes": [
                         "ncit:C15538"
                     ],
                     "implementation_notes": [],
                     "mappings": [],
-                    "permissible_values": {}
-                },
-                "ENROLLED_STATUS": {
-                    "type": "Enum",
-                    "tier": "n/a",
-                    "description": "Enrollment Status",
-                    "codes": [
-                        "ncit:C168928"
-                    ],
-                    "implementation_notes": [
-                        "This variable indicates if the subject was enrolled in the study, or if the subject was not enrolled in the study but received treatment per the study's protocol."
-                    ],
-                    "mappings": [],
                     "permissible_values": {
-                        "Enrolled": {
-                            "description": "The study subject is enrolled.",
-                            "codes": [
-                                "ncit:C142715"
-                            ],
+                        "AAML1031:Arm A HR": {
+                            "description": "Patients randomized with the following course sequence for high risk (HR) group: 1) Induction I: Patients receive cytarabine intrathecally (IT) on day 1 and ADE chemotherapy comprising cytarabine intravenously (IV) over 1-30 minutes on days 1-10; daunorubicin hydrochloride IV over 1-15 minutes on days 1, 3, and 5; and etoposide IV over 1-2 hours on days 1-5, 2) Induction II: Patients with low risk (LR) receive cytarabine IT and ADE chemotherapy as in Induction I. Patients with high risk (HR) receive cytarabine IT on day 1 and MA chemotherapy comprising high-dose cytarabine IV over 1-3 hours on days 1-4, and mitoxantrone IV over 15-30 minutes on days 3-6. Patients who achieve complete remission (CR) proceed to Intensification I (beginning on day 37). Patients with refractory disease are off protocol therapy, 3) Intensification I: Patients receive cytarabine IT on day 1 and AE chemotherapy comprising high-dose cytarabine IV over 1-3 hours, and etoposide IV over 1-2 hours on days 1-5. Patients who achieve CR proceed to Intensification II or stem cell transplantation (SCT) beginning on day 34. Patients with refractory disease are off protocol therapy, 4) Intensification II: Patients with LR receive cytarabine IT on day 1 and MA chemotherapy as in Induction II. Patients with HR and no donor for SCT receive high-dose cytarabine IV over 3 hours on days 1, 2, 8, and 9 and asparaginase intramuscularly (IM) on days 2 and 9, 5) Stem Cell Transplantation (SCT): high risk patients with matched family [MFD] or unrelated donor; Conditioning Regimen: Patients receive fludarabine phosphate IV over 30 minutes once daily on days -5 to -2 and busulfan IV over 2 hours 4 times daily on days -5 to -2; Transplantation: Patients undergo allogeneic SCT within 36 to 48 hours after the last dose of busulfan; GVHD Prophylaxis: Patients receive tacrolimus IV continuously or PO beginning on day -2 and continuing until day 98 (matched sibling donor) or day 180 (with taper) (other related/unrelated donors or cord blood) and methotrexate IV on days 1, 3, and 6 (matched sibling/cord blood donors) or days 1, 3, 6, and 11 (other related/unrelated donors). Patients with unrelated donors also receive antithymocyte globulin IV over 6-8 hours on days -3 to -1.",
+                            "codes": [],
                             "implementation_notes": [],
-                            "mappings": []
+                            "mappings": [
+                                "New PD"
+                            ]
                         },
-                        "Not Enrolled": {
-                            "description": "The study subject is not enrolled.",
-                            "codes": [
-                                "ncit:C168929"
-                            ],
+                        "AAML1031:Arm A LR": {
+                            "description": "Patients randomized with the following course sequence for low risk (LR) group: 1) Induction I: Patients receive cytarabine intrathecally (IT) on day 1 and ADE chemotherapy comprising cytarabine intravenously (IV) over 1-30 minutes on days 1-10; daunorubicin hydrochloride IV over 1-15 minutes on days 1, 3, and 5; and etoposide IV over 1-2 hours on days 1-5, 2) Induction II: Patients with low risk (LR) receive cytarabine IT and ADE chemotherapy as in Induction I. Patients with high risk (HR) receive cytarabine IT on day 1 and MA chemotherapy comprising high-dose cytarabine IV over 1-3 hours on days 1-4, and mitoxantrone IV over 15-30 minutes on days 3-6. Patients who achieve complete remission (CR) proceed to Intensification I (beginning on day 37). Patients with refractory disease are off protocol therapy, 3) Intensification I: Patients receive cytarabine IT on day 1 and AE chemotherapy comprising high-dose cytarabine IV over 1-3 hours, and etoposide IV over 1-2 hours on days 1-5. Patients who achieve CR proceed to Intensification II or stem cell transplantation (SCT) beginning on day 34. Patients with refractory disease are off protocol therapy, 4) Intensification II: Patients with LR receive cytarabine IT on day 1 and MA chemotherapy as in Induction II. Patients with HR and no donor for SCT receive high-dose cytarabine IV over 3 hours on days 1, 2, 8, and 9 and asparaginase intramuscularly (IM) on days 2 and 9.",
+                            "codes": [],
                             "implementation_notes": [],
-                            "mappings": []
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "AAML1031:Arm B HR": {
+                            "description": "Patients randomized with the following course sequence gor high risk (HR) group: 1) Induction I: Patients receive cytarabine IT and ADE chemotherapy as in Induction I, Arm A. Patients also receive bortezomib IV over 3-5 seconds on days 1, 4, and 8, 2) Induction II: Patients with LR receive cytarabine IT, ADE chemotherapy, and bortezomib as in Induction I. Patients with HR receive cytarabine IT and MA chemotherapy as in Induction II, Arm A (HR patients) and bortezomib IV on days 1, 4, and 8, 3) Intensification I: Patients receive cytarabine IT and AE chemotherapy in Arm A, Intensification II, and bortezomib IV on days 1, 4, and 8. Patients who achieve CR proceed to Intensification II or stem cell transplantation (SCT) beginning on day 34. Patients with refractory disease are off protocol therapy, 4) Intensification II: Patients with LR receive cytarabine IT on day 1, MA chemotherapy as in Arm A, Induction II (HR patients), and bortezomib IV on days 1, 4, and 8. Patients with HR and no donor for SCT receive high-dose cytarabine IV over 3 hours on days 1, 2, 8, and 9 and asparaginase intramuscularly (IM) on days 2 and 9, 5) Stem Cell Transplantation (SCT): high risk (HR) patients with matched family [MFD] or unrelated donor); Conditioning Regimen: Patients receive fludarabine phosphate IV over 30 minutes once daily on days -5 to -2 and busulfan IV over 2 hours 4 times daily on days -5 to -2; Transplatation: Patients undergo allogeneic SCT within 36 to 48 hours after the last dose of busulfan; GVHD Prophylaxis: Patients receive tacrolimus IV continuously or PO beginning on day -2 and continuing until day 98 (matched sibling donor) or day 180 (with taper) (other related/unrelated donors or cord blood) and methotrexate IV on days 1, 3, and 6 (matched sibling/cord blood donors) or days 1, 3, 6, and 11 (other related/unrelated donors). Patients with unrelated donors also receive antithymocyte globulin IV over 6-8 hours on days -3 to -1.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "AAML1031:Arm B LR": {
+                            "description": "Patients randomized with the following course sequence for low risk (LR) group: 1) Induction I: Patients receive cytarabine IT and ADE chemotherapy as in Induction I, Arm A. Patients also receive bortezomib IV over 3-5 seconds on days 1, 4, and 8, 2) Induction II: Patients with LR receive cytarabine IT, ADE chemotherapy, and bortezomib as in Induction I. Patients with HR receive cytarabine IT and MA chemotherapy as in Induction II, Arm A (HR patients) and bortezomib IV on days 1, 4, and 8, 3) Intensification I: Patients receive cytarabine IT and AE chemotherapy in Arm A, Intensification II, and bortezomib IV on days 1, 4, and 8. Patients who achieve CR proceed to Intensification II or stem cell transplantation (SCT) beginning on day 34. Patients with refractory disease are off protocol therapy, 4) Intensification II: Patients with LR receive cytarabine IT on day 1, MA chemotherapy as in Arm A, Induction II (HR patients), and bortezomib IV on days 1, 4, and 8. Patients with HR and no donor for SCT receive high-dose cytarabine IV over 3 hours on days 1, 2, 8, and 9 and asparaginase intramuscularly (IM) on days 2 and 9.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "AAML1031:Arm C": {
+                            "description": "Patients randomized with the following course sequence: 1) In Cohort 1 HR: Induction I: Patients receive cytarabine IT on day 1, cytarabine IV over 1-30 minutes on days 1-8, daunorubicin hydrochloride IV over 1-15 minutes on days 1, 3, and 5, etoposide IV over 1-2 hours on days 1-5, and sorafenib tosylate PO on days 9-36; In Cohort 2 HR: Induction I: Patients receive cytarabine IT and ADE chemotherapy as in Arm A, Induction I and sorafenib tosylate PO at the time of known HR FLT3/ITD+ (including in Induction I and concurrently with chemotherapy); In Cohort 3 HR: Induction I: Patients receive cytarabine IT and ADE chemotherapy as in Arm A, Induction I and sorafenib tosylate PO on days 11-28, 2) Intensification I: Patients receive cytarabine IT and AE chemotherapy in Arm A, Intensification II, and sorafenib tosylate PO on daily on days 6-28, 3) Intensification II: Patients receive cytarabine IT on day 1, MA chemotherapy as in Arm A, Induction II (high risk patients), and sorafenib tosylate PO on days 7-34, 4) Stem Cell Transplantation (SCT): high risk (HR) patients with matched family [MFD] or unrelated donor); Conditioning Regimen: Patients receive fludarabine phosphate IV over 30 minutes once daily on days -5 to -2 and busulfan IV over 2 hours 4 times daily on days -5 to -2; Transplantation: Patients undergo allogeneic SCT within 36 to 48 hours after the last dose of busulfan; GVHD Prophylaxis: Patients receive tacrolimus IV continuously or PO beginning on day -2 and continuing until day 98 (matched sibling donor) or day 180 (with taper) (other related/unrelated donors or cord blood) and methotrexate IV on days 1, 3, and 6 (matched sibling/cord blood donors) or days 1, 3, 6, and 11 (other related/unrelated donors). Patients with unrelated donors also receive antithymocyte globulin IV over 6-8 hours on days -3 to -1; Maintenance: Patients receive sorafenib tosylate PO starting on day 40-100 after completion of intensification II or SCT for one year.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "AEIOP LAM 2002:ICE-ICE-AVE-HAM- HD-AraC/SR": {
+                            "description": "Patients received treatment in the following course sequence for standard risk (SR) group: 1) Remission Induction: Idarubicin given with etoposide and cytarabine (ICE), 2) Remission Induction: Idarubicin given with etoposide and cytarabine (ICE), 3) Etoposide given with cytarabine (AVE), 4) Consolidation 2: Cytarabine given with mitoxantrone (HAM), 5) Cytarabine (HD Ara-C, for standard risk patients only) .",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "AEIOP LAM 2002:ICE-ICE-AVE-HAM-SCT/HR": {
+                            "description": "Patients received treatment in the following course sequence for high risk (HR) group: 1) Remission Induction: Idarubicin given with etoposide and cytarabine (ICE), 2) Remission Induction: Idarubicin given with etoposide and cytarabine (ICE), 3) Etoposide given with cytarabine (AVE), 4) Consolidation 2: Cytarabine given with mitoxantrone (HAM), 5) Auto/Allo SCT (for high risk patients only).",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "AAML0531:HR": {
+                            "description": "Patients are stratified according to relapse risk (high vs low). Patients are randomized to one of two treatment arms.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "AAML0531:LR": {
+                            "description": "Patients are stratified according to relapse risk (high vs low). Patients are randomized to one of two treatment arms.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "AAML0531:Arm A HR": {
+                            "description": "Patients randomized with the following course sequence for high risk (HR) group: 1) Induction 1: Patients receive cytarabine IT at the time of diagnosis or on day 1. Patients also receive cytarabine IV on days 1-10, daunorubicin hydrochloride IV over 6 hours on days 1, 3, and 5, and etoposide IV over 4 hours on days 1-5. After 3 weeks of rest, all patients (regardless of remission status) proceed to induction 2, 2) Induction 2: Patients receive cytarabine IT on day 1, cytarabine IV on days 1-8, daunorubicin hydrochloride IV over 6 hours on days 1, 3, and 5, and etoposide IV over 4 hours on days 1-5. After 3 weeks of rest, patients in complete remission (CR) proceed to intensification 1. Patients with refractory disease are removed from protocol therapy, 3) Intensification 1: Patients receive cytarabine IT on day 1, high-dose cytarabine IV over 1 hour on days 1-5, and etoposide IV over 1 hour on days 1-5. After 3 weeks of rest, patients in remission proceed to intensification 2, followed by intensification 3. Patients in remission proceed to allogeneic SCT 2-8 weeks after blood counts recover. Patients with high-risk disease with an alternative donor proceed to intensification 2 and 3, followed by allogeneic SCT. Patients not in remission are removed from protocol therapy, 4) Intensification 2: Patients receive cytarabine IT on day 1, high-dose cytarabine IV over 2 hours on days 1-4, and mitoxantrone hydrochloride IV over 1 hour on days 3-6. After 3 weeks of rest, patients proceed to intensification 3, 5) Intensification 3: Patients receive high-dose cytarabine IV over 3 hours on days 1, 2, 8, and 9 and asparaginase intramuscularly on days 2 and 9.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "AAML0531:Arm A LR": {
+                            "description": "Patients randomized with the following course sequence for low risk (LR) group: 1) Induction 1: Patients receive cytarabine IT at the time of diagnosis or on day 1. Patients also receive cytarabine IV on days 1-10, daunorubicin hydrochloride IV over 6 hours on days 1, 3, and 5, and etoposide IV over 4 hours on days 1-5. After 3 weeks of rest, all patients (regardless of remission status) proceed to induction 2, 2) Induction 2: Patients receive cytarabine IT on day 1, cytarabine IV on days 1-8, daunorubicin hydrochloride IV over 6 hours on days 1, 3, and 5, and etoposide IV over 4 hours on days 1-5. After 3 weeks of rest, patients in complete remission (CR) proceed to intensification 1. Patients with refractory disease are removed from protocol therapy, 3) Intensification 1: Patients receive cytarabine IT on day 1, high-dose cytarabine IV over 1 hour on days 1-5, and etoposide IV over 1 hour on days 1-5. After 3 weeks of rest, patients in remission proceed to intensification 2, followed by intensification 3. Patients in remission proceed to allogeneic SCT 2-8 weeks after blood counts recover. Patients with high-risk disease with an alternative donor proceed to intensification 2 and 3, followed by allogeneic SCT. Patients not in remission are removed from protocol therapy.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "AAML0531:Arm B HR": {
+                            "description": "Patients randomized with the following course sequence for high risk (HR) group: 1) Induction 1: Patients receive treatment as in induction 1 of arm I. Patients also receive gemtuzumab ozogamicin (GMTZ) IV over 2 hours on day 6, 2) Induction 2: Patients receive treatment as in induction 2 of arm I, 3) Intensification 1: Patients receive treatment as in intensification 1 of arm I, 4) Intensification 2: Patients receive treatment as in intensification 2 of arm I. Patients also receive GMTZ IV over 2 hours on day 7, 5) Intensification 3: Patients receive treatment as in intensification 3 of arm I, 6) Allogeneic SCT (for patients with intermediate- or high-risk disease); MFD: Patients receive a conditioning regimen comprising busulfan IV over 2 hours every 6 hours on days -9 to -6 and cyclophosphamide IV over 1 hour on days -5 to -2. Patients undergo allogeneic SCT on day 0. Patients receive cyclosporine IV or orally twice daily on days -1 to 180 and methotrexate IV on days 1, 3, 6, and 11. Patients receive graft-vs-host disease (GVHD) prophylaxis comprising cyclosporine IV over 1-4 hours or orally twice daily on days -1 to 180 and methotrexate IV on days 1, 3, 6, and 11; Matched alternative donor: Patients receive a conditioning regimen comprising busulfan and cyclophosphamide as above. Patients also receive antithymocyte globulin IV over 6-8 hours on days -3 to -1. Patients then undergo allogeneic SCT and receive GVHD prophylaxis as above.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "AAML0531:Arm B LR": {
+                            "description": "Patients randomized with the following course sequence for low risk (LR) group: 1) Induction 1: Patients receive treatment as in induction 1 of arm I. Patients also receive gemtuzumab ozogamicin (GMTZ) IV over 2 hours on day 6, 2) Induction 2: Patients receive treatment as in induction 2 of arm I, 3) Intensification 1: Patients receive treatment as in intensification 1 of arm I, 4) Intensification 2: Patients receive treatment as in intensification 2 of arm I. Patients also receive GMTZ IV over 2 hours on day 7, 5) Intensification 3: Patients receive treatment as in intensification 3 of arm I.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "MRC AML12:ADE-ADE-MACE-CLASP-MidAC": {
+                            "description": "Patients randomized with the following course sequence: 1) Daunorubicin given in combination with cytarabine and etoposide (ADE), 2) Daunorubicin given in combination with cytarabine and etoposide (ADE), 3) Amsacrine given in combination with cytarabine and etoposide (MACE), 4) High dose (HD) cytosine with asparaginase (CLASP), 5) Mitoxantrone given in combination with cytarabine (MidAC).",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "MRC AML12:ADE-ADE-MACE-CLASP-SCT": {
+                            "description": "Patients randomized with the following course sequence: 1) Daunorubicin given in combination with cytosine and etoposide (ADE), 2) Daunorubicin given in combination with cytosine and etoposide (ADE), 3) Amsacrine given in combination with cytarabine and etoposide (MACE), 4) High dose (HD) cytosine with asparaginase (CLASP), 5) Allogeneic Stem Cell Transplantation (Allo-SCT).",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "MRC AML12:ADE-ADE-MACE-MidAC": {
+                            "description": "Patients randomized with the following course sequence: 1) Daunorubicin given in combination with cytosine and etoposide (ADE), 2) Daunorubicin given in combination with cytosine and etoposide (ADE), 3) Amsacrine given in combination with cytarabine and etoposide (MACE), 4) Mitoxantrone given in combination with cytarabine (MidAC).",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "MRC AML12:ADE-ADE-MACE-SCT": {
+                            "description": "Patients randomized with the following course sequence: 1) Daunorubicin given in combination with cytosine and etoposide (ADE), 2) Daunorubicin given in combination with cytosine and etoposide (ADE), 3) Amsacrine given in combination with cytarabine and etoposide (MACE), 4) Allogeneic Stem Cell Transplantation (SCT).",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "MRC AML12:ADE-ADE-off trial": {
+                            "description": "Patients randomized with the following course sequence: 1) Daunorubicin given in combination with cytosine and etoposide (ADE), 2) Daunorubicin given in combination with cytosine and etoposide (ADE), 3) Off trial if patient is not complete remission.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "MRC AML12:MAE-MAE-MACE-CLASP-MidAC": {
+                            "description": "Patients randomized with the following course sequence: 1) Mitoxantrone given in combination with cytosine and etoposide (MAE), 2) Mitoxantrone given in combination with cytosine and etoposide (MAE), 3) Amsacrine given in combination with cytarabine and etoposide (MACE), 4) High dose (HD) cytosine with asparaginase (CLASP), 5) Mitoxantrone given in combination with cytarabine (MidAC).",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "MRC AML12:MAE-MAE-MACE-CLASP-SCT": {
+                            "description": "Patients randomized with the following course sequence: 1) Mitoxantrone given in combination with cytosine and etoposide (MAE), 2) Mitoxantrone given in combination with cytosine and etoposide (MAE), 3) Amsacrine given in combination with cytarabine and etoposide (MACE), 4) High dose (HD) cytosine with asparaginase (CLASP), 5) Allogeneic Stem Cell Transplantation (SCT).",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "MRC AML12:MAE-MAE-MACE-MidAC": {
+                            "description": "Patients randomized with the following course sequence: 1) Mitoxantrone given in combination with cytosine and etoposide (MAE), 2) Mitoxantrone given in combination with cytosine and etoposide (MAE), 3) Amsacrine given in combination with cytarabine and etoposide (MACE), 4) Mitoxantrone given in combination with cytarabine (MidAC).",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "MRC AML12:MAE-MAE-MACE-SCT": {
+                            "description": "Patients randomized with the following course sequence: 1) Mitoxantrone given in combination with cytosine and etoposide (MAE), 2) Mitoxantrone given in combination with cytosine and etoposide (MAE), 3) Amsacrine given in combination with cytarabine and etoposide (MACE), 4) Allogeneic Stem Cell Transplantation (SCT).",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "MRC AML12:MAE-MAE-Off Trial": {
+                            "description": "Patients randomized with the following course sequence: 1) Mitoxantrone, cytosine, etoposide (MAE), 2) Mitoxantrone, cytosine, etoposide (MAE), 3) Amsacrine, cytarabine and etoposide (MACE), 4) Off trial if patient is not complete remission.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "MRC AML15:ADE-ADE-MACE-MidAC-AraC": {
+                            "description": "Patients randomized with the following course sequence: 1) Daunorubicin, cytarabine, etoposide (ADE), 2) Daunorubicin, cytarabine, etoposide (ADE), 3) Amsacrine, cytarabine, etoposide (MACE), 4) Mitozantrone, cytosine arabinoside (MidAC), 5) Ara-C ",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "MRC AML15:ADE-ADE-MACE-MidAC-No Further Therapy": {
+                            "description": "Patients randomized with the following course sequence: 1) Daunorubicin 50 mg/m2 d1,3,5; cytarabine 100 mg/m2 d1-10 every 12h; etoposide 100 mg/m2 d1-5 (ADE), 2) Daunorubicin 50 mg/m2 d1,3,5; cytarabine 100 mg/m2 d1-8 every 12h; etoposide 100 mg/m2 d1-5 (ADE), 3) Amsacrine 100 mg/m2 d1-5; cytarabine 200 mg/m2 continuous d1-5; etoposide 100 mg/m2 d1-5 (MACE), 4) Mitozantrone 10 mg/m2 daily by slow IV push on d1-5 inclusive (5 doses), cytosine arabinoside 1.0 mg/m2 12-hourly by 2h IV infusion on d1-3 inclusive (6 doses) (MidAC), 5) No further treatment afterwards.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "MRC AML15:ADE-ADE-MACE/Mytolarg-MidAC-AraC": {
+                            "description": "Patients randomized with the following course sequence: 1) Daunorubicin, cytarabine, etoposide (ADE), 2) Daunorubicin, cytarabine, etoposide (ADE), 3) Amsacrine, cytarabine, etoposide (MACE)/Gemtuzumab Ozogamicin, 4) Mitozantrone, cytosine arabinoside (MidAC), 5) Ara-C ",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "MRC AML15:ADE-ADE-MACE/Mytolarg-MidAC-No Further Therapy": {
+                            "description": "Patients randomized with the following course sequence: 1) Daunorubicin, cytarabine, etoposide (ADE), 2) Daunorubicin, cytarabine, etoposide (ADE), 3) Amsacrine, cytarabine, etoposide (MACE)/Gemtuzumab Ozogamicin, 4) Mitozantrone, cytosine arabinoside (MidAC), 5) No further treatment afterwards.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "MRC AML15:ADE/Mytolarg-ADE-MACE-MidAC-AraC": {
+                            "description": "Patients randomized with the following course sequence: 1) Daunorubicin, cytarabine, etoposide (ADE)/Gemtuzumab Ozogamicin, 2) Daunorubicin, cytarabine, etoposide (ADE), 3) Amsacrine, cytarabine, etoposide (MACE), 4) Mitozantrone, cytosine arabinoside (MidAC), 5) Ara-C ",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "MRC AML15:ADE/Mytolarg-ADE-MACE-MidAC-No Further Therapy": {
+                            "description": "Patients randomized with the following course sequence: 1) Daunorubicin, cytarabine, etoposide (ADE)/Gemtuzumab Ozogamicin, 2) Daunorubicin, cytarabine, etoposide (ADE), 3) Amsacrine, cytarabine, etoposide (MACE), 4) Mitozantrone, cytosine arabinoside (MidAC), 5) No further treatment afterwards.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "MRC AML15:ADE/Mytolarg-ADE-MACE/Mytolarg-MidAC-AraC": {
+                            "description": "Patients randomized with the following course sequence: 1) Daunorubicin, cytarabine, etoposide (ADE)/Gemtuzumab Ozogamicin, 2) Daunorubicin, cytarabine, etoposide (ADE), 3) Amsacrine, cytarabine, etoposide (MACE)/Gemtuzumab Ozogamicin, 4) Mitozantrone, cytosine arabinoside (MidAC), 5) Ara-C ",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "MRC AML15:ADE/Mytolarg-ADE-MACE/Mytolarg-MidAC-No Further Therapy": {
+                            "description": "Patients randomized with the following course sequence: 1) Daunorubicin, cytarabine, etoposide (ADE)/Gemtuzumab Ozogamicin, 2) Daunorubicin, cytarabine, etoposide (ADE), 3) Amsacrine, cytarabine, etoposide (MACE)/Gemtuzumab Ozogamicin, 4) Mitozantrone, cytosine arabinoside (MidAC), 5) No further treatment afterwards.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "MRC AML15:ADE-ADE-AraC3g-AraC3g-AraC": {
+                            "description": "Patients randomized with the following course sequence: 1) Daunorubicin, cytarabine, etoposide (ADE), 2) Daunorubicin, cytarabine, etoposide (ADE), 3) Ara-C 3.0 g/m2, 4) Ara-C , 5) Ara-C 1.5 g/m2.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "MRC AML15:ADE-ADE-AraC3g-AraC3g-No Further Therapy": {
+                            "description": "Patients randomized with the following course sequence: 1) Daunorubicin, cytarabine, etoposide (ADE), 2) Daunorubicin, cytarabine, etoposide (ADE), 3) Ara-C 3.0 g/m2, 4) Ara-C 3.0 g/m2, 5) No further treatment afterwards.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "MRC AML15:ADE-ADE-AraC3g/Mytolarg-AraC3g-AraC": {
+                            "description": "Patients randomized with the following course sequence: 1) Daunorubicin, cytarabine, etoposide (ADE), 2) Daunorubicin, cytarabine, etoposide (ADE), 3) Ara-C 3.0 g/m2 (AraC3g)/Gemtuzumab Ozogamicin, 4) Ara-C 3.0 g/m2, 5) Ara-C 1.5 g/m2 ",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "MRC AML15:ADE-ADE-AraC3g/Mytolarg-AraC3g-No Further Therapy": {
+                            "description": "Patients randomized with the following course sequence: 1) Daunorubicin, cytarabine, etoposide (ADE), 2) Daunorubicin, cytarabine, etoposide (ADE), 3) Ara-C 3.0 g/m2/Gemtuzumab Ozogamicin, 4) Ara-C 3.0 g/m2, 5) No futher treatment afterwards.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "MRC AML15:ADE/Mytolarg-ADE-AraC3g-AraC3g-AraC": {
+                            "description": "Patients randomized with the following course sequence: 1) Daunorubicin, cytarabine, etoposide (ADE)/Gemtuzumab Ozogamicin, 2) Daunorubicin, cytarabine, etoposide (ADE), 3) Ara-C 3.0 g/m2, 4) Ara-C 3.0 g/m2, 5) Ara-C 1.5 g/m2 ",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "MRC AML15:ADE/Mytolarg-ADE-AraC3g-AraC3g-No Further Therapy": {
+                            "description": "Patients randomized with the following course sequence: 1) Daunorubicin, cytarabine, etoposide (ADE)/Gemtuzumab Ozogamicin, 2) Daunorubicin, cytarabine, etoposide (ADE), 3) Ara-C 3.0 g/m2, 4) Ara-C 3.0 g/m2, 5) No further treatment afterwards.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "MRC AML15:ADE/Mytolarg-ADE-AraC3g/Mytolarg-AraC3g-AraC": {
+                            "description": "Patients randomized with the following course sequence: 1) Daunorubicin, cytarabine, etoposide (ADE)/Gemtuzumab Ozogamicin, 2) Daunorubicin, cytarabine, etoposide (ADE), 3) Ara-C 3.0 g/m2 /Gemtuzumab Ozogamicin, 4) Ara-C 3.0 g/m2, 5) Ara-C 1.5 g/m2 ",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "MRC AML15:ADE/Mytolarg-ADE-AraC3g/Mytolarg-AraC3g-No Further Therapy": {
+                            "description": "Patients randomized with the following course sequence: 1) Daunorubicin, cytarabine, etoposide (ADE)/Gemtuzumab Ozogamicin, 2) Daunorubicin, cytarabine, etoposide (ADE), 3) Ara-C 3.0 g/m2 /Gemtuzumab Ozogamicin, 4) Ara-C 3.0 g/m2, 5) No further treatement afterwards.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "MRC AML15:FLAGIda-FLAGIda-MACE-MidAC-AraC": {
+                            "description": "Patients randomized with the following course sequence: 1) Fluduarabine, cytosine arabinoside, G-CSF (FLAG-Ida), 2) Fluduarabine, cytosine arabinoside, G-CSF (FLAG-Ida), 3) Amsacrine, cytarabine, etoposide (MACE), 4) Mitozantrone, cytosine arabinoside (MidAC), 5) Ara-C 1.5 g/m2",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "MRC AML15:FLAGIda-FLAGIda-MACE-MidAC-No Further Therapy": {
+                            "description": "Patients randomized with the following course sequence: 1) Fluduarabine, cytosine arabinoside, G-CSF (FLAG-Ida), 2) Fluduarabine, cytosine arabinoside, G-CSF (FLAG-Ida), 3) Amsacrine, cytarabine, etoposide (MACE), 4) Mitozantrone, cytosine arabinoside (MidAC), 5) No further treatment afterwards.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "MRC AML15:FLAGIda-FLAGIda-MACE/Mytolarg-MidAC-AraC": {
+                            "description": "Patients randomized with the following course sequence: 1) Fluduarabine, cytosine arabinoside, G-CSF (FLAG-Ida), 2) Fluduarabine, cytosine arabinoside, G-CSF (FLAG-Ida), 3) Amsacrine, cytarabine, etoposide (MACE)/Gemtuzumab Ozogamicin, 4) Mitozantrone, cytosine arabinoside (MidAC), 5) Ara-C 1.5 g/m2 ",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "MRC AML15:FLAGIda-FLAGIda-MACE/Mytolarg-MidAC-No Further Therapy": {
+                            "description": "Patients randomized with the following course sequence: 1) Fluduarabine, cytosine arabinoside, G-CSF (FLAG-Ida), 2) Fluduarabine, cytosine arabinoside, G-CSF (FLAG-Ida), 3) Amsacrine, cytarabine, etoposide (MACE)/Gemtuzumab Ozogamicin, 4) Mitozantrone, cytosine arabinoside (MidAC), 5) No further treatment afterwards.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "MRC AML15:FLAGIda/Mytolarg-FLAGIda-MACE-MidAC-AraC": {
+                            "description": "Patients randomized with the following course sequence: 1) Fluduarabine, cytosine arabinoside, G-CSF  (FLAG-Ida)/Gemtuzumab Ozogamicin, 2) Fluduarabine, cytosine arabinoside, G-CSF (FLAG-Ida)/Gemtuzumab Ozogamicin, 3) Amsacrine, cytarabine, etoposide (MACE), 4) Mitozantrone, cytosine arabinoside (MidAC), 5) Ara-C 1.5 g/m2",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "MRC AML15:FLAGIda/Mytolarg-FLAGIda-MACE-MidAC-No Further Therapy": {
+                            "description": "Patients randomized with the following course sequence: 1) Fluduarabine 30 mg/m2 IV d2-6 inclusive, cytosine arabinoside 2 g/m2 over 4h starting after fluduarabine on d2-6, G-CSF (lenograstin 263 \u03bcg (1 vial) SC daily d1-7 (FLAG-Ida)/gemtuzumab ozogamicin 3 mg/m2 d1 (Gemtuzumab ozogamicin), 2) Fluduarabine 30 mg/m2 IV d2-6 inclusive, cytosine arabinoside 2 g/m2 over 4h starting after fluduarabine on d2-6, G-CSF (lenograstin 263 \u03bcg (1 vial) SC daily d1-7 (FLAG-Ida)/gemtuzumab ozogamicin 3 mg/m2 d1 (Gemtuzumab ozogamicin), 3) Amsacrine 100 mg/m2 d1-5; cytarabine 200 mg/m2 continuous d1-5; etoposide 100 mg/m2 d1-5 (MACE), 4) Mitozantrone 10 mg/m2 daily by slow IV push on d1-5 inclusive (5 doses), cytosine arabinoside 1.0 mg/m2 12-hourly by 2h IV infusion on d1-3 inclusive (6 doses) (MidAC), 5) No further treatment afterwards.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "MRC AML15:FLAGIda/Mytolarg-FLAGIda-MACE/Mytolarg-MidAC-AraC": {
+                            "description": "Patients randomized with the following course sequence: 1) Fluduarabine 30 mg/m2 IV d2-6 inclusive, cytosine arabinoside 2 g/m2 over 4h starting after fluduarabine on d2-6, G-CSF (lenograstin 263 \u03bcg (1 vial) SC daily d1-7 (FLAG-Ida)/gemtuzumab ozogamicin 3 mg/m2 d1 (Gemtuzumab ozogamicin), 2) Fluduarabine 30 mg/m2 IV d2-6 inclusive, cytosine arabinoside 2 g/m2 over 4h starting after fluduarabine on d2-6, G-CSF (lenograstin 263 \u03bcg (1 vial) SC daily d1-7 (FLAG-Ida), 3) Amsacrine 100 mg/m2 d1-5; cytarabine 200 mg/m2 continuous d1-5; etoposide 100 mg/m2 d1-5 (MACE)/gemtuzumab ozogamicin 3 mg/m2 d1 (Gemtuzumab ozogamicin), 4) Mitozantrone 10 mg/m2 daily by slow IV push on d1-5 inclusive (5 doses), cytosine arabinoside 1.0 mg/m2 12-hourly by 2h IV infusion on d1-3 inclusive (6 doses) (MidAC), 5) Ara-C 1.5 g/m2 d1 given IV over 4h 12 hourly on d1,3,5 (6 doses) (AraC).",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "MRC AML15:FLAGIda/Mytolarg-FLAGIda-MACE/Mytolarg-MidAC-No Further Therapy": {
+                            "description": "Patients randomized with the following course sequence: 1) Fluduarabine 30 mg/m2 IV d2-6 inclusive, cytosine arabinoside 2 g/m2 over 4h starting after fluduarabine on d2-6, G-CSF (lenograstin 263 \u03bcg (1 vial) SC daily d1-7 (FLAG-Ida)/gemtuzumab ozogamicin 3 mg/m2 d1 (Gemtuzumab ozogamicin), 2) Fluduarabine 30 mg/m2 IV d2-6 inclusive, cytosine arabinoside 2 g/m2 over 4h starting after fluduarabine on d2-6, G-CSF (lenograstin 263 \u03bcg (1 vial) SC daily d1-7 (FLAG-Ida), 3) Amsacrine 100 mg/m2 d1-5; cytarabine 200 mg/m2 continuous d1-5; etoposide 100 mg/m2 d1-5 (MACE)/gemtuzumab ozogamicin 3 mg/m2 d1 (Gemtuzumab ozogamicin), 4) Mitozantrone 10 mg/m2 daily by slow IV push on d1-5 inclusive (5 doses), cytosine arabinoside 1.0 mg/m2 12-hourly by 2h IV infusion on d1-3 inclusive (6 doses) (MidAC), 5) No further treatment afterwards.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "MRC AML15:FLAGIda-FLAGIda-AraC3g-AraC3g-AraC": {
+                            "description": "Patients randomized with the following course sequence: 1) Fluduarabine 30 mg/m2 IV d2-6 inclusive, cytosine arabinoside 2 g/m2 over 4h starting after fluduarabine on d2-6, G-CSF (lenograstin 263 \u03bcg (1 vial) SC daily d1-7 (FLAG-Ida), 2) Fluduarabine 30 mg/m2 IV d2-6 inclusive, cytosine arabinoside 2 g/m2 over 4h starting after fluduarabine on d2-6, G-CSF (lenograstin 263 \u03bcg (1 vial) SC daily d1-7 (FLAG-Ida), 3) Ara-C 3.0 g/m2 d1 given IV over 4h 12 hourly on d1,3,5 (6 doses) (Ara-C3g), 4) Ara-C 3.0 g/m2 d1 given IV over 4h 12 hourly on d1,3,5 (6 doses) (Ara-C3g), 5) Ara-C 1.5 g/m2 d1 given IV over 4h 12 hourly on d1,3,5 (6 doses) (AraC).",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "MRC AML15:FLAGIda-FLAGIda-AraC3g-AraC3g-No Further Therapy": {
+                            "description": "Patients randomized with the following course sequence: 1) Fluduarabine 30 mg/m2 IV d2-6 inclusive, cytosine arabinoside 2 g/m2 over 4h starting after fluduarabine on d2-6, G-CSF (lenograstin 263 \u03bcg (1 vial) SC daily d1-7 (FLAG-Ida), 2) Fluduarabine 30 mg/m2 IV d2-6 inclusive, cytosine arabinoside 2 g/m2 over 4h starting after fluduarabine on d2-6, G-CSF (lenograstin 263 \u03bcg (1 vial) SC daily d1-7 (FLAG-Ida), 3) Ara-C 3.0 g/m2 d1 given IV over 4h 12 hourly on d1,3,5 (6 doses) (Ara-C3g), 4) Ara-C 3.0 g/m2 d1 given IV over 4h 12 hourly on d1,3,5 (6 doses) (Ara-C3g), 5) No further treatment afterwards.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "MRC AML15:FLAGIda-FLAGIda-AraC3g/Mytolarg-AraC3g-AraC": {
+                            "description": "Patients randomized with the following course sequence: 1) Fluduarabine 30 mg/m2 IV d2-6 inclusive, cytosine arabinoside 2 g/m2 over 4h starting after fluduarabine on d2-6, G-CSF (lenograstin 263 \u03bcg (1 vial) SC daily d1-7 (FLAG-Ida), 2) Fluduarabine 30 mg/m2 IV d2-6 inclusive, cytosine arabinoside 2 g/m2 over 4h starting after fluduarabine on d2-6, G-CSF (lenograstin 263 \u03bcg (1 vial) SC daily d1-7 (FLAG-Ida), 3) Ara-C 3.0 g/m2 d1 given IV over 4h 12 hourly on d1,3,5 (6 doses) (Ara-C3g)/gemtuzumab ozogamicin 3 mg/m2 d1 (Gemtuzumab ozogamicin), 4) Ara-C 3.0 g/m2 d1 given IV over 4h 12 hourly on d1,3,5 (6 doses) (Ara-C3g), 5) Ara-C 1.5 g/m2 d1 given IV over 4h 12 hourly on d1,3,5 (6 doses) (AraC).",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "MRC AML15:FLAGIda-FLAGIda-AraC3g/Mytolarg-AraC3g-No Further Therapy": {
+                            "description": "Patients randomized with the following course sequence: 1) Fluduarabine 30 mg/m2 IV d2-6 inclusive, cytosine arabinoside 2 g/m2 over 4h starting after fluduarabine on d2-6, G-CSF (lenograstin 263 \u03bcg (1 vial) SC daily d1-7 (FLAG-Ida), 2) Fluduarabine 30 mg/m2 IV d2-6 inclusive, cytosine arabinoside 2 g/m2 over 4h starting after fluduarabine on d2-6, G-CSF (lenograstin 263 \u03bcg (1 vial) SC daily d1-7 (FLAG-Ida), 3) Ara-C 3.0 g/m2 d1 given IV over 4h 12 hourly on d1,3,5 (6 doses) (Ara-C3g)/gemtuzumab ozogamicin 3 mg/m2 d1 (Gemtuzumab ozogamicin), 4) Ara-C 3.0 g/m2 d1 given IV over 4h 12 hourly on d1,3,5 (6 doses) (Ara-C3g), 5) No further treatment afterwards.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "MRC AML15:FLAGIda/Mytolarg-FLAGIda-AraC3g-AraC3g-AraC": {
+                            "description": "Patients randomized with the following course sequence: 1) Fluduarabine 30 mg/m2 IV d2-6 inclusive, cytosine arabinoside 2 g/m2 over 4h starting after fluduarabine on d2-6, G-CSF (lenograstin 263 \u03bcg (1 vial) SC daily d1-7 (FLAG-Ida)/gemtuzumab ozogamicin 3 mg/m2 d1 (Gemtuzumab ozogamicin), 2) Fluduarabine 30 mg/m2 IV d2-6 inclusive, cytosine arabinoside 2 g/m2 over 4h starting after fluduarabine on d2-6, G-CSF (lenograstin 263 \u03bcg (1 vial) SC daily d1-7 (FLAG-Ida), 3) Ara-C 3.0 g/m2 d1 given IV over 4h 12 hourly on d1,3,5 (6 doses) (Ara-C3g), 4) Ara-C 3.0 g/m2 d1 given IV over 4h 12 hourly on d1,3,5 (6 doses) (Ara-C3g), 5) Ara-C 1.5 g/m2 d1 given IV over 4h 12 hourly on d1,3,5 (6 doses) (AraC).",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "MRC AML15:FLAGIda/Mytolarg-FLAGIda-AraC3g-AraC3g-No Further Therapy": {
+                            "description": "Patients randomized with the following course sequence: 1) Fluduarabine 30 mg/m2 IV d2-6 inclusive, cytosine arabinoside 2 g/m2 over 4h starting after fluduarabine on d2-6, G-CSF (lenograstin 263 \u03bcg (1 vial) SC daily d1-7 (FLAG-Ida)/gemtuzumab ozogamicin 3 mg/m2 d1 (Gemtuzumab ozogamicin), 2) Fluduarabine 30 mg/m2 IV d2-6 inclusive, cytosine arabinoside 2 g/m2 over 4h starting after fluduarabine on d2-6, G-CSF (lenograstin 263 \u03bcg (1 vial) SC daily d1-7 (FLAG-Ida), 3) Ara-C 3.0 g/m2 d1 given IV over 4h 12 hourly on d1,3,5 (6 doses) (Ara-C3g), 4) Ara-C 3.0 g/m2 d1 given IV over 4h 12 hourly on d1,3,5 (6 doses) (Ara-C3g), 5) No further treatment afterwards.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "MRC AML15:FLAGIda/Mytolarg-FLAGIda-AraC3g/Mytolarg-AraC3g-AraC": {
+                            "description": "Patients randomized with the following course sequence: 1) Fluduarabine 30 mg/m2 IV d2-6 inclusive, cytosine arabinoside 2 g/m2 over 4h starting after fluduarabine on d2-6, G-CSF (lenograstin 263 \u03bcg (1 vial) SC daily d1-7 (FLAG-Ida)/gemtuzumab ozogamicin 3 mg/m2 d1 (Gemtuzumab ozogamicin), 2) Fuduarabine 30 mg/m2 IV d2-6 inclusive, cytosine arabinoside 2 g/m2 over 4h starting after fluduarabine on d2-6, G-CSF (lenograstin 263 \u03bcg (1 vial) SC daily d1-7 (FLAG-Ida), 3) Ara-C 3.0 g/m2 d1 given IV over 4h 12 hourly on d1,3,5 (6 doses) (Ara-C3g)/ gemtuzumab ozogamicin 3 mg/m2 d1 (Gemtuzumab ozogamicin), 4) Ara-C 3.0 g/m2 d1 given IV over 4h 12 hourly on d1,3,5 (6 doses) (Ara-C3g), 5) Ara-C 1.5 g/m2 d1 given IV over 4h 12 hourly on d1,3,5 (6 doses) (AraC).",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "MRC AML15:FLAGIda/Mytolarg-FLAGIda-AraC3g/Mytolarg-AraC3g-No Further Therapy": {
+                            "description": "Patients randomized with the following course sequence: 1) Fluduarabine 30 mg/m2 IV d2-6 inclusive, cytosine arabinoside 2 g/m2 over 4h starting after fluduarabine on d2-6, G-CSF (lenograstin 263 \u03bcg (1 vial) SC daily d1-7 (FLAG-Ida)/gemtuzumab ozogamicin 3 mg/m2 d1 (Gemtuzumab ozogamicin), 2) Fluduarabine 30 mg/m2 IV d2-6 inclusive, cytosine arabinoside 2 g/m2 over 4h starting after fluduarabine on d2-6, G-CSF (lenograstin 263 \u03bcg (1 vial) SC daily d1-7 (FLAG-Ida), 3) Ara-C 3.0 g/m2 d1 given IV over 4h 12 hourly on d1,3,5 (6 doses) (Ara-C3g)/ gemtuzumab ozogamicin 3 mg/m2 d1 (Gemtuzumab ozogamicin), 4) Ara-C 3.0 g/m2 d1 given IV over 4h 12 hourly on d1,3,5 (6 doses) (Ara-C3g), 5) No further treatment afterwards.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "NOPHO AML 2004:AIET-AM-HA1M-HA2E-HA3-HA2E + Gemtuzumab Ozagamicin": {
+                            "description": "Patients randomized with the following course sequence: 1) AIET: cytarabine, 6-thioguanine, etoposide, idarubicin 2) AM: cytarabine, mitoxantrone, 3) HA1M: cytarabine, mitoxantrone, 4) HA2E: cytarabine, etoposide 5) HA3: cytarabine (3g/m2), 6) HA2E: cytarabine (2g/m2), etoposide, 7) Gemtuzumab ozogamicin",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "NOPHO AML 2004:AIET-AM-HA1M-HA2E-HA3-HA2E + No Further Therapy": {
+                            "description": "Patients randomized with the following course sequence: 1) AIET: cytarabine, 6-thioguanine, etoposide, idarubicin 2) AM: cytarabine, mitoxantrone, 3) HA1M: cytarabine, mitoxantrone, 4) HA2E: cytarabine, etoposide 5) HA3: cytarabine (3g/m2), 6) HA2E: cytarabine (2g/m2), etoposide, 7) No further treatment",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "NOPHO AML 2012:MEC-ADE-HAM-HA3E-FLA": {
+                            "description": "Patients randomized with the following course sequence: 1) Mitoxantrone, etoposide, cytarabine (MEC), 2) Cytarabine, daunorubicin, etoposide (ADE), 3) Cytarabine, mitoxantrone (HAM), 4) Cytarabine (3000 mg/m2), etoposide (HA3E), 5) Fludarabine, cytarabine (FLA).",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "NOPHO AML 2012:DEC-ADE-HAM-HA3E-FLA": {
+                            "description": "Patients randomized with the following course sequence: 1) Daunoxome, cytarabine, etoposide (DEC), 2) Cytarabine, daunorubicin, etoposide (ADE), 3) Cytarabine, mitoxantrone (HAM), 4) Cytarabine (3000 mg/m2), etoposide (HA3E), 5) Fludarabine, cytarabine (FLA).",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "NOPHO AML 2012:MEC-FLAD-HAM-HA3E-FLA": {
+                            "description": "Patients randomized with the following course sequence: 1) Mitoxantrone, etoposide, cytarabine (MEC), 2) Fludarabine, high-dose cytarabine and Daunoxome (FLAD), 3) Cytarabine, mitoxantrone (HAM), 4) Cytarabine (3000 mg/m2), etoposide (HA3E), 5) Fludarabine, cytarabine (FLA).",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "NOPHO AML 2012:DEC -FLAD-HAM-HA3E-FLA": {
+                            "description": "Patients randomized with the following course sequence: 1) Daunoxome, cytarabine, etoposide (DEC), 2) Fludarabine, high-dose cytarabine and Daunoxome (FLAD),, 3) Cytarabine, mitoxantrone (HAM), 4) Cytarabine (3000 mg/m2), etoposide (HA3E), 5) Fludarabine, cytarabine (FLA).",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "NOPHO AML 2012:MEC-ADE-HA3E-FLA (Low Risk)": {
+                            "description": "Patients randomized with the following course sequence: 1) Mitoxantrone, etoposide, cytarabine (MEC), 2) Cytarabine, daunorubicin, etoposide (ADE), 3) Cytarabine (3000 mg/m2), etoposide (HA3E), 4) Fludarabine, cytarabine (FLA).",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "NOPHO AML 2012:DEC -ADE-HA3E-FLA (Low Risk)": {
+                            "description": "Patients randomized with the following course sequence: 1) Daunoxome, cytarabine, etoposide (DEC), 2) Cytarabine, daunorubicin, etoposide (ADE), 3) Cytarabine (3000 mg/m2), etoposide (HA3E), 4) Fludarabine, cytarabine (FLA).",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "NOPHO AML 2012:MEC-FLAD-HA3E-FLA (Low Risk)": {
+                            "description": "Patients randomized with the following course sequence: 1) Mitoxantrone, etoposide, cytarabine (MEC), 2) Fludarabine, high-dose cytarabine, daunoXome (FLAD), 3) Cytarabine (3000 mg/m2), etoposide (HA3E), 4) Fludarabine, cytarabine (FLA).",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "NOPHO AML 2012:DEC -FLAD-HA3E-FLA (Low Risk)": {
+                            "description": "Patients randomized with the following course sequence: 1) Daunoxome, cytarabine, etoposide (DEC), 2) Fludarabine, high-dose cytarabine, daunoXome (FLAD), 3) Cytarabine (3000 mg/m2), etoposide (HA3E), 4) Fludarabine, cytarabine (FLA).",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "NOPHO AML 2012:MEC-ADE-HAM + SCT (High Risk 1)": {
+                            "description": "Patients randomized with the following course sequence for high risk (HR) 1 group: 1) Mitoxantrone, cytarabine (MEC), 2) Low-dose cytarabine, daunorubicin, etoposide (ADE), 3) High-dose cytarabine, mitoxantrone (HAM), 4) Patients in the high-risk group should, whenever possible, receive an allogeneic SCT with an HLA matched related or unrelated donor. For high-risk patients the SCT should be done as soon as possible after course 3, but may be given after the fourth or fifth course if the donor is not available until then. The source of stem cells may be bone marrow, peripheral blood or cord blood. The recommended conditioning regimen is busulfan/cyclophosphamide/melphalan in patients who tolerate full conditioning. Autologous transplants should not be performed (SCT high risk 1).",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "NOPHO AML 2012:DEC -ADE-HAM + SCT (High Risk 1)": {
+                            "description": "Patients randomized with the following course sequence for high risk (HR) 1 group: 1) Daunoxome, cytarabine (DEC), 2) 2) Low-dose cytarabine, daunorubicin, etoposide (ADE), 3) High-dose cytarabine, mitoxantrone (HAM), 4) Patients in the high-risk group should, whenever possible, receive an allogeneic SCT with an HLA matched related or unrelated donor. For high-risk patients the SCT should be done as soon as possible after course 3, but may be given after the fourth or fifth course if the donor is not available until then. The source of stem cells may be bone marrow, peripheral blood or cord blood. The recommended conditioning regimen is busulfan/cyclophosphamide/melphalan in patients who tolerate full conditioning. Autologous transplants should not be performed (SCT high risk 1).",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "NOPHO AML 2012:MEC-FLAD-HAM + SCT (High Risk 1)": {
+                            "description": "Patients randomized with the following course sequence for high risk (HR) 1 group: 1) Mitoxantrone, etoposide, cytarabine (MEC), 2) Fludarabine, high-dose cytarabine daunoxome (FLAD), 3) High-dose cytarabine, mitoxantrone (HAM), 4) Patients in the high-risk group should, whenever possible, receive an allogeneic SCT with an HLA matched related or unrelated donor. For high-risk patients the SCT should be done as soon as possible after course 3, but may be given after the fourth or fifth course if the donor is not available until then. The source of stem cells may be bone marrow, peripheral blood or cord blood. The recommended conditioning regimen is busulfan/cyclophosphamide/melphalan in patients who tolerate full conditioning. Autologous transplants should not be performed (SCT high risk 1).",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "NOPHO AML 2012:DEC -FLAD-HAM + SCT (High Risk 1)": {
+                            "description": "Patients randomized with the following course sequence for high risk (HR) 1 group: 1) Daunoxome, cytarabine (DEC), 2) Fludarabine, high-dose cytarabine daunoxome (FLAD), 3) High-dose cytarabine, mitoxantrone (HAM), 4) Patients in the high-risk group should, whenever possible, receive an allogeneic SCT with an HLA matched related or unrelated donor. For high-risk patients the SCT should be done as soon as possible after course 3, but may be given after the fourth or fifth course if the donor is not available until then. The source of stem cells may be bone marrow, peripheral blood or cord blood. The recommended conditioning regimen is busulfan/cyclophosphamide/melphalan in patients who tolerate full conditioning. Autologous transplants should not be performed (SCT high risk 1).",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "NOPHO AML 2012:MEC-ADE-HAM-HA3E + SCT (High Risk 2)": {
+                            "description": "Patients randomized with the following course sequence for high risk (HR) 2 group: 1) Mitoxantrone, etoposide, cytarabine (MEC), 2) Low-dose cytarabine, daunorubicin, etoposide (ADE), 3) High-dose cytarabine, mitoxantrone (HAM), 4) Cytarabine (3000 mg/m2), etoposide (HA3E), 5) Patients in the high-risk group should, whenever possible, receive an allogeneic SCT with an HLA matched related or unrelated donor. For high-risk patients the SCT should be done as soon as possible after course 3, but may be given after the fourth or fifth course if the donor is not available until then. The source of stem cells may be bone marrow, peripheral blood or cord blood. The recommended conditioning regimen is busulfan/cyclophosphamide/melphalan in patients who tolerate full conditioning. Autologous transplants should not be performed (SCT high risk 2).",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "NOPHO AML 2012:DEC -ADE-HAM-HA3E+ SCT (High Risk 2)": {
+                            "description": "Patients randomized with the following course sequence for high risk (HR) 2 group: 1) Daunoxome, cytarabine (DEC), 2) Low-dose cytarabine, daunorubicin, etoposide (ADE), 3) High-dose cytarabine, mitoxantrone (HAM), 4) Cytarabine (3000 mg/m2), etoposide (HA3E), 5) Patients in the high-risk group should, whenever possible, receive an allogeneic SCT with an HLA matched related or unrelated donor. For high-risk patients the SCT should be done as soon as possible after course 3, but may be given after the fourth or fifth course if the donor is not available until then. The source of stem cells may be bone marrow, peripheral blood or cord blood. The recommended conditioning regimen is busulfan/cyclophosphamide/melphalan in patients who tolerate full conditioning. Autologous transplants should not be performed (SCT high risk 2).",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "NOPHO AML 2012:MEC-FLAD-HAM-HA3E+ SCT (High Risk 2)": {
+                            "description": "Patients randomized with the following course sequence for high risk (HR) 2 group: 1) Mitoxantrone, etoposide, cytarabine (MEC), 2) Fludarabine, high-dose cytarabine, daunoxome (FLAD), 3) High-dose cytarabine, mitoxantrone (HAM), 4) Cytarabine (3000 mg/m2), etoposide (HA3E), 5) Patients in the high-risk group should, whenever possible, receive an allogeneic SCT with an HLA matched related or unrelated donor) For high-risk patients the SCT should be done as soon as possible after course 3, but may be given after the fourth or fifth course if the donor is not available until then. The source of stem cells may be bone marrow, peripheral blood or cord blood. The recommended conditioning regimen is busulfan/cyclophosphamide/melphalan in patients who tolerate full conditioning. Autologous transplants should not be performed (SCT high risk 2).",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "NOPHO AML 2012:DEC -FLAD-HAM-HA3E+ SCT (High Risk 2)": {
+                            "description": "Patients randomized with the following course sequence for high risk (HR) 2 group: 1) Daunoxome, cytarabine (DEC), 2) Fludarabine, high-dose cytarabine, daunoxome (FLAD), 3) High-dose cytarabine, mitoxantrone (HAM), 4) Cytarabine (3000 mg/m2), etoposide (HA3E), 5) Patients in the high-risk group should, whenever possible, receive an allogeneic SCT with an HLA matched related or unrelated donor) For high-risk patients the SCT should be done as soon as possible after course 3, but may be given after the fourth or fifth course if the donor is not available until then. The source of stem cells may be bone marrow, peripheral blood or cord blood. The recommended conditioning regimen is busulfan/cyclophosphamide/melphalan in patients who tolerate full conditioning. Autologous transplants should not be performed (SCT high risk 2).",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "NOPHO AML 2012:MEC-ADE-HAM-HA3E-FLA + SCT (High Risk 3)": {
+                            "description": "Patients randomized with the following course sequence for high risk (HR) 2 group: 1) Mitoxantrone, etoposide, cytarabine (MEC), 2) Low-dose cytarabine, daunorubicin, etoposide (ADE), 3) High-dose cytarabine, mitoxantrone (HAM), 4) Cytarabine (3000 mg/m2), etoposide (HA3E), 5) Fludarabine, cytarabine (FLA), 6) Patients in the high-risk group should, whenever possible, receive an allogeneic SCT with an HLA matched related or unrelated donor. For high-risk patients the SCT should be done as soon as possible after course 3, but may be given after the fourth or fifth course if the donor is not available until then. The source of stem cells may be bone marrow, peripheral blood or cord blood. The recommended conditioning regimen is busulfan/cyclophosphamide/melphalan in patients who tolerate full conditioning. Autologous transplants should not be performed (SCT high risk 23.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "NOPHO AML 2012:DEC -ADE-HAM-HA3E-FLA + SCT (High Risk 3)": {
+                            "description": "Patients randomized with the following course sequence for high risk (HR) 2 group: 1) Daunoxome, cytarabine (DEC), 2) Low-dose cytarabine, daunorubicin, etoposide (ADE), 3) High-dose cytarabine, mitoxantrone (HAM), 4) Cytarabine (3000 mg/m2), etoposide (HA3E), 5) Fludarabine, cytarabine (FLA), 6) Patients in the high-risk group should, whenever possible, receive an allogeneic SCT with an HLA matched related or unrelated donor. For high-risk patients the SCT should be done as soon as possible after course 3, but may be given after the fourth or fifth course if the donor is not available until then. The source of stem cells may be bone marrow, peripheral blood or cord blood. The recommended conditioning regimen is busulfan/cyclophosphamide/melphalan in patients who tolerate full conditioning. Autologous transplants should not be performed (SCT high risk 3).",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "NOPHO AML 2012:MEC-FLAD-HAM-HA3E-FLA + SCT (High Risk 3)": {
+                            "description": "Patients randomized with the following course sequence for high risk (HR) 2 group: 1) Mitoxantrone, etoposide, cytarabine (MEC), 2) Fludarabine, high-dose cytarabine daunoxome (FLAD), 3) High-dose cytarabine, mitoxantrone (HAM), 4) Cytarabine (3000 mg/m2), etoposide (HA3E), 5) Fludarabine, cytarabine (FLA), 6) Patients in the high-risk group should, whenever possible, receive an allogeneic SCT with an HLA matched related or unrelated donor. For high-risk patients the SCT should be done as soon as possible after course 3, but may be given after the fourth or fifth course if the donor is not available until then. The source of stem cells may be bone marrow, peripheral blood or cord blood. The recommended conditioning regimen is busulfan/cyclophosphamide/melphalan in patients who tolerate full conditioning. Autologous transplants should not be performed (SCT high risk 3).",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "NOPHO AML 2012:DEC -FLAD-HAM-HA3E-FLA + SCT (High Risk 3)": {
+                            "description": "Patients randomized with the following course sequence for high risk (HR) 2 group: 1) Daunoxome, cytarabine (DEC), 2) Fludarabine, high-dose cytarabine daunoxome (FLAD), 3) High-dose cytarabine, mitoxantrone (HAM), 4) Cytarabine (3000 mg/m2), etoposide (HA3E), 5) Fludarabine, cytarabine (FLA), 6) Patients in the high-risk group should, whenever possible, receive an allogeneic SCT with an HLA matched related or unrelated donor. For high-risk patients the SCT should be done as soon as possible after course 3, but may be given after the fourth or fifth course if the donor is not available until then. The source of stem cells may be bone marrow, peripheral blood or cord blood. The recommended conditioning regimen is busulfan/cyclophosphamide/melphalan in patients who tolerate full conditioning. Autologous transplants should not be performed (SCT high risk 3).",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "NOPHO AML 2012:MEC-ADE-Off Protocol": {
+                            "description": "Patients randomized with the following course sequence: 1) Mitoxantrone 5 mg/m2 as a 1 hour IV infusion day 6-10, Etoposide 150 mg/m2 as a 2 hour IV infusion day 1-5, Cytarabine 200 mg/m2 as a 12 hour IV infusion day 6-12 (MEC), 2) Low-dose cytarabine, daunorubicin and etoposide (ADE), 3) Although induction therapy in AML 2012 is intensified some patients will have resistant disease and the number is expected to be around 5%. These patients will be off protocol.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "NOPHO AML 2012:DEC -ADE-Off Protocol": {
+                            "description": "Patients randomized with the following course sequence: 1) DaunoXome 60 mg/m2 as a 1 hour IV infusion day 6,8 and 10, Etoposide 150 mg/m2 as a 2 hour IV infusion day 1-5, Cytarabine 200 mg/m2 as a 12 hour IV infusion day 6-12 (DEC), 2) Low-dose cytarabine, daunorubicin and etoposide (ADE), 3) Although induction therapy in AML 2012 is intensified some patients will have resistant disease and the number is expected to be around 5%. These patients will be off protocol.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "NOPHO AML 2012:MEC-FLAD- Off Protocol": {
+                            "description": "Patients randomized with the following course sequence: 1) Mitoxantrone, etoposide, cytarabine (MEC), 2) Fludarabine, high-dose cytarabine and Daunoxome (FLAD), 3) Although induction therapy in AML 2012 is intensified some patients will have resistant disease and the number is expected to be around 5%. These patients will be off protocol.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "NOPHO AML 2012:DEC -FLAD-Off Protocol": {
+                            "description": "Patients randomized with the following course sequence: 1) Daunoxome, cytarabine, etoposide (DEC), 2) Fludarabine, high-dose cytarabine and Daunoxome (FLAD), 3) Although induction therapy in AML 2012 is intensified some patients will have resistant disease and the number is expected to be around 5%. These patients will be off protocol.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "DB - AML01:AIET-Post Recovery AM-HA2E+HA3+HA2E": {
+                            "description": "Patients received treatment in the following course sequence: 1) Ara-C, idarubicin, etoposide, 6-thioguanin (AIET), 2) Post recovery Ara-C, mitoxantrone (AM), 3) High dose Ara-C 12 g/m2, etoposide 100 mg/m2 (HA2E), 4) High dose Ara-C 18 g/m2 (HA3), 5) High dose Ara-C 12 g/m2, etoposide 100 mg/m2 (HA2E).",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "DB - AML01:AIET-Post Recovery FLA/Dnx-HA2E+HA3+HA2E": {
+                            "description": "Patients received treatment in the following course sequence: 1) Ara-C, idarubicin, etoposide, 6-thioguanin (AIET), 2) Post recovery fludarabine, cytarabine/daunorubicin (FLA/Dnx), 3) High dose Ara-C 12 g/m2, etoposide 100 mg/m2 (HA2E), 4) High dose Ara-C 18 g/m2 (HA3), 5) High dose Ara-C 12 g/m2, etoposide 100 mg/m2 (HA2E).",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "DB - AML01:AIET-Post Recovery AM-Off Protocol": {
+                            "description": "Patients received treatment in the following course sequence: 1) Ara-C, idarubicin, etoposide, 6-thioguanin (AIET), 2) Post recovery Ara-C, mitoxantrone (AM), 3) Off protocol.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "DB - AML01:AIET-Post Recovery FLA/Dnx-Off Protocol": {
+                            "description": "Patients received treatment in the following course sequence: 1) Ara-C, idarubicin, etoposide, 6-thioguanin (AIET), 2) Post recovery fludarabine, cytarabine/daunorubicin (FLA/Dnx), 3) Off protocol.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "DB - AML01:AIET-Immediate AM-HA2E+HA3+HA2E": {
+                            "description": "Patients received treatment in the following course sequence: 1) Ara-C, idarubicin, etoposide, 6-thioguanin (AIET), 2) Immediate Ara-C, mitoxantrone (AM), 3) High dose Ara-C 12 g/m2, etoposide 100 mg/m2 (HA2E), 4) High dose Ara-C 18 g/m2 (HA3), 5) High dose Ara-C 12 g/m2, etoposide 100 mg/m2 (HA2E).",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "DB - AML01:AIET-Immediate  FLA/Dnx-HA2E+HA3+HA2E": {
+                            "description": "Patients received treatment in the following course sequence: 1) Ara-C, idarubicin, etoposide, 6-thioguanin (AIET), 2) Immediate fludarabine, cytarabine/daunorubicin (FLA/Dnx), 3) High dose Ara-C 12 g/m2, etoposide 100 mg/m2 (HA2E), 4) High dose Ara-C 18 g/m2 (HA3), 5) High dose Ara-C 12 g/m2, etoposide 100 mg/m2 (HA2E).",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "DB - AML01:AIET-Immediate  AM-Off Protocol": {
+                            "description": "Patients received treatment in the following course sequence: 1) Ara-C, idarubicin, etoposide, 6-thioguanin (AIET), 2) Immediate Ara-C, mitoxantrone (AM), 3) Off protocol.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "DB - AML01:AIET-Immediate  FLA/Dnx-Off Protocol": {
+                            "description": "Patients received treatment in the following course sequence: 1) Ara-C, idarubicin, etoposide, 6-thioguanin (AIET), 2) Immediate fludarabine, cytarabine/daunorubicin (FLA/Dnx), 3) Off protocol.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "AIEOP LAM 92:ICE(3+5+10) + ICE(3+5+10) + Consolidation": {
+                            "description": "Patients received treatment in the following course sequence: 1) Idarubicin 12 mg/m2/day 1 h infusion on days 1, 3, 5; Etoposide 100 mg/m2/day 1 h i.v. infusion on days 1\u20135; Cytarabine 25 mg/m2/day i.v. push on day 1 followed by 100 mg/m2/day continuous i.v. infusion on days 1\u201310 (ICE (3+5+10)), 2) Idarubicin 12 mg/m2/day 1 h infusion on days 1, 3, 5; Etoposide 100 mg/m2/day 1 h i.v. infusion on days 1\u20135; Cytarabine 25 mg/m2/day i.v. push on day 1 followed by 100 mg/m2/day continuous i.v. infusion on days 1\u201310 (ICE (3+5+10)), 3) Consolidation: Various schemas mostly including highdose cytarabine.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "AIEOP LAM 92:ICE(3+5+10) + ICE(2+3+7) + Consolidation": {
+                            "description": "Patients received treatment in the following course sequence: 1) Idarubicin 12 mg/m2/day 1 h infusion on days 1, 3, 5; Etoposide 100 mg/m2/day 1 h i.v. infusion on days 1\u20135; Cytarabine 25 mg/m2/day i.v. push on day 1 followed by 100 mg/m2/day continuous i.v. infusion on days 1\u201310 (ICE (3+5+10)), 2) Iidarubicin 12 mg/m2/day 1 h infusion on days 1 and 3; Etoposide 100 mg/m2/day 1 h i.v. infusion on days 1\u20133; Cytarabine 25 mg/m2 i.v. push on day 1 followed by 100 mg/m2/day continuous i.v. infusion on days 1\u20137 (ICE 2+3+7)), 3) Consolidation: Various schemas mostly including highdose cytarabine.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "AIEOP LAM 92:ICE(3+5+10) + ICE(3+5+10) + Consolidation + AUTO/ALLO SCT": {
+                            "description": "Patients received treatment in the following course sequence: 1) Idarubicin 12 mg/m2/day 1 h infusion on days 1, 3, 5; Etoposide 100 mg/m2/day 1 h i.v. infusion on days 1\u20135; Cytarabine 25 mg/m2/day i.v. push on day 1 followed by 100 mg/m2/day continuous i.v. infusion on days 1\u201310 (ICE (3+5+10)), 2) Idarubicin 12 mg/m2/day 1 h infusion on days 1, 3, 5; Etoposide 100 mg/m2/day 1 h i.v. infusion on days 1\u20135; Cytarabine 25 mg/m2/day i.v. push on day 1 followed by 100 mg/m2/day continuous i.v. infusion on days 1\u201310 (ICE (3+5+10)), 3) Consolidation: Various schemas mostly including highdose cytarabine, 4) Allogeneic bone marrow transplantation if a sibling donor was available; autologous bone marrow transplant.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "AIEOP LAM 92:ICE(3+5+10) + ICE(2+3+7) + Consolidation + AUTO/ALLO SCT": {
+                            "description": "Patients received treatment in the following course sequence: 1) Idarubicin 12 mg/m2/day 1 h infusion on days 1, 3, 5; Etoposide 100 mg/m2/day 1 h i.v. infusion on days 1\u20135; Cytarabine 25 mg/m2/day i.v. push on day 1 followed by 100 mg/m2/day continuous i.v. infusion on days 1\u201310 (ICE (3+5+10)), 2) Iidarubicin 12 mg/m2/day 1 h infusion on days 1 and 3; Etoposide 100 mg/m2/day 1 h i.v. infusion on days 1\u20133; Cytarabine 25 mg/m2 i.v. push on day 1 followed by 100 mg/m2/day continuous i.v. infusion on days 1\u20137 (ICE 2+3+7)), 3) Consolidation: Various schemas mostly including highdose cytarabine, 4) Allogeneic bone marrow transplantation if a sibling donor was available; autologous bone marrow transplant.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "AIEOP LAM 92:ICE(3+5+10) + ICE(3+5+10) + AUTO/ALLO SCT": {
+                            "description": "Patients received treatment in the following course sequence: 1) Idarubicin 12 mg/m2/day 1 h infusion on days 1, 3, 5; Etoposide 100 mg/m2/day 1 h i.v. infusion on days 1\u20135; Cytarabine 25 mg/m2/day i.v. push on day 1 followed by 100 mg/m2/day continuous i.v. infusion on days 1\u201310 (ICE (3+5+10)), 2) Idarubicin 12 mg/m2/day 1 h infusion on days 1, 3, 5; Etoposide 100 mg/m2/day 1 h i.v. infusion on days 1\u20135; Cytarabine 25 mg/m2/day i.v. push on day 1 followed by 100 mg/m2/day continuous i.v. infusion on days 1\u201310 (ICE (3+5+10)), 3) Allogeneic bone marrow transplantation if a sibling donor was available; autologous bone marrow transplant.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "AIEOP LAM 92:ICE(3+5+10) + ICE(2+3+7) + AUTO/ALLO SCT": {
+                            "description": "Patients received treatment in the following course sequence: 1) Idarubicin 12 mg/m2/day 1 h infusion on days 1, 3, 5; Etoposide 100 mg/m2/day 1 h i.v. infusion on days 1\u20135; Cytarabine 25 mg/m2/day i.v. push on day 1 followed by 100 mg/m2/day continuous i.v. infusion on days 1\u201310 (ICE (3+5+10)), 2) Iidarubicin 12 mg/m2/day 1 h infusion on days 1 and 3; Etoposide 100 mg/m2/day 1 h i.v. infusion on days 1\u20133; Cytarabine 25 mg/m2 i.v. push on day 1 followed by 100 mg/m2/day continuous i.v. infusion on days 1\u20137 (ICE 2+3+7)), 3) Allogeneic bone marrow transplantation if a sibling donor was available; autologous bone marrow transplant.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "SCFE ELAM02:Induction + Consolidation 1 + Consolidation 2 + Consolidation 3": {
+                            "description": "Patients randomized with the following course sequence: 1) Induction: 1 course of induction treatment (cytarabine and mitoxantrone), 2) Consolidation 1: Treatment (high-dose cytarabine), 3) Consolidation 2: Treatment (high-dose cytarabine), 4) Consolidation 3: Treatment (high-dose cytarabine).",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "SCFE ELAM02:Induction + Consolidation 1 + Consolidation 2 + Consolidation 3 + IL2 Maintenance": {
+                            "description": "Patients randomized with the following course sequence: 1) Induction: 1 course of induction treatment (cytarabine and mitoxantrone), 2) Consolidation 1: Treatment (high-dose cytarabine), 3) Consolidation 2: Treatment (high-dose cytarabine), 4) Consolidation 3: Treatment (high-dose cytarabine), 5) Patients not undergoing hematopoietic stem cell transplantation, still in complete remission (CR) after the third course of consolidation treatment, were eligible for randomization to 1 year of maintenance therapy with monthly courses of IL2 or no maintenance treatment.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "SCFE ELAM02:Induction + Consolidation 1 + Allo HSCT": {
+                            "description": "Patients randomized with the following course sequence: 1) Induction: 1 course of induction treatment (cytarabine and mitoxantrone), 2) Consolidation 1: Treatment (high-dose cytarabine), 3) Allogeneic hematopoietic stem cell transplantation) HSCT was recommended for all patients in CR after course 2, except those with AML with t(8;21)(q22;q22), provided that an HLA-identical sibling donor was available and there was no active severe infection or organ failure) HSCT with a matched unrelated donor or unrelated cord blood was recommended for patients at high risk according to one of the following criteria: monosomy 7, 5q deletion, t(9;22)(q34;q11) or t(6;9)(p23;q34) and refractory disease after course 2.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "AML-BFM 2004:ADxE- AI-haM-HAE- Standard maintenance, 12 Gy (Standard Risk arm)": {
+                            "description": "Patients randomized with the following course sequence for standard risk (SR) arm group: 1) Induction I: Cytarabine, L-CNR, etoposide (ADxE), 2) Induction II: Cytarabine [0.5g/m2], idarubicin (AI), 3) Consolidation: high-dose cytarabine [3g/m2], mitoxantrone (haM), 4) Intensification: high-dose cytarabine [3g/m2], etoposide (HAE), 5) Standard maintenance, 6) CNS-RT (central nerous system [cranial] irradiation) randomized to 12 Gy.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "AML-BFM 2004:ADxE- AI-haM-HAE- Standard maintenance, 18 Gy (Standard Risk arm)": {
+                            "description": "Patients randomized with the following course sequence for standard risk (SR) arm group: 1) Induction I: Cytarabine, L-CNR, etoposide (ADxE), 2) Induction II: Cytarabine [0.5g/m2], idarubicin (AI), 3) Consolidation: high-dose cytarabine [3g/m2], mitoxantrone (haM), 4) Intensification: high-dose cytarabine [3g/m2], etoposide (HAE), 5) Standard maintenance, 6) CNS-RT (central nervous system [cranial] irradiation) randomized to 18 Gy.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "AML-BFM 2004:ADxE-HAM- AI/2CDA-haM, HAE- Standard maintenance, 12 Gy (High Risk arm)": {
+                            "description": "Patients randomized with the following course sequence for high risk (HR) arm group: 1) Induction I: Cytarabine, L-CNR, etoposide (ADxE), 2) Induction II: High-dose cytarabine [3g/m2], mitoxantrone (HAM), 3) Consolidation: Cytarabine [0.5 g/m2], idarubicin, 2-chloro-2 deoxyadenosine (AI/2-CDA), 4) Intensification: High-dose cytarabine [3 g/m2], etoposide (haM, HAE), 5) Standard maintenance, 6) CNS-RT (central nervous system [cranial] irradiation) randomized to 12 Gy.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "AML-BFM 2004:ADxE-HAM- AI/2CDA-haM, HAE- Standard maintenance, 18 Gy (High Risk arm)": {
+                            "description": "Patients randomized with the following course sequence for high risk (HR) arm group: 1) Induction I: Cytarabine, L-CNR, etoposide (ADxE), 2) Induction II: High-dose cytarabine [3g/m2], mitoxantrone (HAM), 3) Consolidation: Cytarabine [0.5 g/m2], idarubicin, 2-chloro-2 deoxyadenosine (AI/2-CDA), 4) Intensification: High-dose cytarabine [3 g/m2], etoposide (haM, HAE), 5) Standard maintenance, 6) CNS-RT (central nervous system [cranial] irradiation) randomized to 18 Gy.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "AML-BFM 2004:ADxE-HAM- AI-haM, HAE- Standard maintenance, 12 Gy (High Risk arm)": {
+                            "description": "Patients randomized with the following course sequence for high risk (HR) arm group: 1) Induction I: Cytarabine, L-CNR, etoposide (ADxE), 2) Induction II: High-dose cytarabine [3g/m2], mitoxantrone (HAM), 3) Consolidation: Cytarabine [0.5 g/m2], idarubicin (AI), 4) Intensification: High-dose cytarabine [3 g/m2], etoposide (HAE), 5) Standard maintenance, 6) CNS-RT (central nervous system [cranial] irradiation) randomized to 12 Gy",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "AML-BFM 2004:ADxE-HAM- AI-haM, HAE- Standard maintenance, 18 Gy (High Risk arm)": {
+                            "description": "Patients randomized with the following course sequence for high risk (HR) arm group: 1) Induction I: Cytarabine, L-CNR, etoposide (ADxE), 2) Induction II: High-dose cytarabine [3g/m2], mitoxantrone (HAM), 3) Consolidation: Cytarabine [0.5 g/m2], idarubicin (AI), 4) Intensification: High-dose cytarabine [3 g/m2], etoposide (HAE), 5) Standard maintenance, 6) CNS-RT (central nervous system [cranial] irradiation) randomized to 18 Gy.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "AML-BFM 2004:AIE- AI-haM-HAE- Standard maintenance, 12 Gy (Standard Risk arm)": {
+                            "description": "Patients randomized with the following course sequence for standard risk (SR) arm group: 1) Induction I: Cytarabine, idarubicin, etoposide (AIE), 2) Induction II: Cytarabine [0.5g/m2], idarubicin (AI), 3) Consolidation: high-dose cytarabine [3g/m2], mitoxantrone (haM), 4) Intensification: high-dose cytarabine [3g/m2], etoposide (HAE), 5) Standard maintenance, 6) CNS-RT (central nerous system [cranial] irradiation) randomized to 12 Gy.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "AML-BFM 2004:AIE- AI-haM-HAE- Standard maintenance, 18 Gy(Standard Risk arm)": {
+                            "description": "Patients randomized with the following course sequence for standard risk (SR) arm group: 1) Induction I: Cytarabine, idarubicin, etoposide (AIE), 2) Induction II: Cytarabine [0.5g/m2], idarubicin (AI), 3) Consolidation: high-dose cytarabine [3g/m2], mitoxantrone (haM), 4) Intensification: high-dose cytarabine [3g/m2], etoposide (HAE), 5) Standard maintenance, 6) CNS-RT (central nerous system [cranial] irradiation) randomized to 18 Gy.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "AML-BFM 2004:AIE-HAM- AI/2CDA-haM, HAE- Standard maintenance, 12 Gy (High Risk arm)": {
+                            "description": "Patients randomized with the following course sequence for high risk (HR) arm group: 1) Induction I: Cytarabine, idarubicin, etoposide (AIE), 2) Induction II: High-dose cytarabine [3g/m2], mitoxantrone (HAM), 3) Consolidation: Cytarabine [0.5 g/m2], idarubicin, 2-chloro-2 deoxyadenosine (AI/2-CDA), 4) Intensification: High-dose cytarabine [3 g/m2], etoposide (haM, HAE), 5) Standard maintenance, 6) CNS-RT (central nervous system [cranial] irradiation) randomized to 12 Gy.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "AML-BFM 2004:AIE-HAM- AI/2CDA-haM, HAE- Standard maintenance, 18 Gy (High Risk arm)": {
+                            "description": "Patients randomized with the following course sequence for high risk (HR) arm group: 1) Induction I: Cytarabine, idarubicin, etoposide (AIE), 2) Induction II: High-dose cytarabine [3g/m2], mitoxantrone (HAM), 3) Consolidation: Cytarabine [0.5 g/m2], idarubicin, 2-chloro-2 deoxyadenosine (AI/2-CDA), 4) Intensification: High-dose cytarabine [3 g/m2], etoposide (haM, HAE), 5) Standard maintenance, 6) CNS-RT (central nervous system [cranial] irradiation) randomized to 18 Gy.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "AML-BFM 2004:AIE-HAM- AI-haM, HAE- Standard maintenance, 12 Gy (High Risk arm)": {
+                            "description": "Patients randomized with the following course sequence for high risk (HR) arm group: 1) Induction I: Cytarabine, idarubicin, etoposide (AIE), 2) Induction II: High-dose cytarabine [3g/m2], mitoxantrone (HAM), 3) Consolidation: Cytarabine [0.5 g/m2], idarubicin (AI), 4) Intensification: High-dose cytarabine [3 g/m2], etoposide (haM, HAE), 5) Standard maintenance, 6) CNS-RT (central nervous system [cranial] irradiation) randomized to 12 Gy.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "AML-BFM 2004:AIE-HAM- AI-haM, HAE- Standard maintenance, 18 Gy (High Risk arm)": {
+                            "description": "Patients randomized with the following course sequence for high risk (HR) arm group: 1) Induction I: Cytarabine, idarubicin, etoposide (AIE), 2) Induction II: High-dose cytarabine [3g/m2], mitoxantrone (HAM), 3) Consolidation: Cytarabine [0.5 g/m2], idarubicin (AI), 4) Intensification: High-dose cytarabine [3 g/m2], etoposide (haM, HAE), 5) Standard maintenance, 6) CNS-RT (central nervous system [cranial] irradiation) randomized to 18 Gy.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "AML-BFM 2004:AIE-HAM- AI-haM, SCT": {
+                            "description": "Patients randomized with the following course sequence: 1) Induction I: Cytarabine, idarubicin, etoposide (AIE), 2) Induction II: High-dose cytarabine [3g/m2], mitoxantrone (HAM), 3) Consolidation: Cytarabine [0.5 g/m2], idarubicin (AI), 4) Intensification: High-dose cytarabine [3 g/m2], etoposide (haM), 5) Allogeneic Stem Cell Transplantation (HR patients only).",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "AML-BFM 2004:AIE-HAM- AI/2CDA-haM, SCT": {
+                            "description": "Patients randomized with the following course sequence: 1) Induction I: Cytarabine, idarubicin, etoposide (AIE), 2) Induction II: High-dose cytarabine [3g/m2], mitoxantrone (HAM), 3) Consolidation: Cytarabine [0.5 g/m2], idarubicin, 2-chloro-2 deoxyadenosine (AI/2-CDA), 4) Intensification: High-dose cytarabine [3 g/m2], etoposide (haM), 5) Allogeneic Stem Cell Transplantation (HR patients only).",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "AML-BFM 2004:ADxE-HAM- AI-haM, SCT": {
+                            "description": "Patients randomized with the following course sequence: 1) Induction I: Cytarabine, L-CNR, etoposide (ADxE), 2) Induction II: High-dose cytarabine [3g/m2], mitoxantrone (HAM), 3) Consolidation: Cytarabine [0.5 g/m2], idarubicin (AI), 4) Intensification: High-dose cytarabine [3 g/m2], etoposide (haM), 5) Allogeneic Stem Cell Transplantation (HR patients only).",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "AML-BFM 2004:ADxE-HAM- AI/2CDA-haM, SCT": {
+                            "description": "Patients randomized with the following course sequence: 1) Induction I: Cytarabine, L-CNR, etoposide (ADxE), 2) Induction II: High-dose cytarabine [3g/m2], mitoxantrone (HAM), 3) Consolidation: Cytarabine [0.5 g/m2], idarubicin, 2-chloro-2 deoxyadenosine (AI/2-CDA), 4) Intensification: High-dose cytarabine [3 g/m2], etoposide (haM), 5) Allogeneic Stem Cell Transplantation (HR patients only).",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "AML BFM Registry 2012:ADxE- AI-haM-HAE- Standard Maintenance (Standard Risk Arm)": {
+                            "description": "Patients received treatment in the following course sequence for standard risk (SR) arm group: 1) Cytarabine, daunorubicin, etoposide (ADxE), 2) Cytarabine, idarubicin (AI), 3) Cytarabine, mitoxantrone (haM), 4) Cytarabine, etoposide (HAE), 5) Standard Maintenance.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "AML BFM Registry 2012:ADxE-HAM- AI-haM, HAE- Standard Maintenance (Intermediate Risk Arm)": {
+                            "description": "Patients received treatment in the following course sequence for intermediate risk (IR) arm group: 1) Cytarabine, daunorubicin, etoposide (ADxE), 2) Cytarabine, mitoxantrone (HAM), 3) Cytarabine, idarubicin (AI), 4) Cytarabine, mitoxantrone (haM), 5) Cytarabine, etoposide (HAE), 6) Standard Maintenance.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "AML BFM Registry 2012:ADxE-HAM- AI-haM, SCT (High Risk Arm)": {
+                            "description": "Patients received treatment in the following course sequence for high risk (HR) arm group: 1) Cytarabine, daunorubicin, etoposide (ADxE), 2) Cytarabine, mitoxantrone (HAM), 3) Cytarabine, idarubicin (AI), 4) Cytarabine, mitoxantrone (haM), 5) Stem Cell Transplantation.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "AML BFM 2012:CDxA- AI-haM, AI- HAE -Short Maintenance (Standard Risk Arm)": {
+                            "description": "Patients received treatment in the following course sequence for standard risk (SR) arm group: 1) 2-chloro-2-deoxyadenosine (CDxA), 2) Cytarabine and idarubicin (AI), 3) High-dose cytarabine (1\u2009g/m2) and mitoxantrone (haM), 4) Cytarabine and idarubicine (AI), 5) High-dose cytarabine (3\u2009g/m2) and etoposide (HAE), 6) Short maintenance.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "AML BFM 2012:CDxA- AI-haM, AI- HAE - Standard Maintenance (Standard Risk Arm)": {
+                            "description": "Patients received treatment in the following course sequence for standard risk (SR) arm group: 1) 2-chloro-2-deoxyadenosine (CDxA), 2) Cytarabine and idarubicin (AI), 3) High-dose cytarabine (1\u2009g/m2) and mitoxantrone (haM), 4) Cytarabine and idarubicine (AI), 5) High-dose cytarabine (3\u2009g/m2) and etoposide (HAE), 6) Standard maintenance.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "AML BFM 2012:CDxA- HAM- AI- haM-HAE -Short Maintenance (Standard Risk Arm)": {
+                            "description": "Patients received treatment in the following course sequence for standard risk (SR) arm group: 1) 2-chloro-2-deoxyadenosine (CDxA), 2) High-dose cytarabine (3\u2009\u2009g/m2), mitoxantrone (10\u2009\u2009mg/m2), AI cytarabine (500\u2009\u2009mg/m2), idarubicin (7\u2009\u2009mg/m2)(HAM), 3) Cytarabine and idarubicine (AI), 4) Intermediate-dose cytarabine (1\u2009\u2009g/m2), mitoxantrone (10\u2009\u2009mg/m2) (haM), 5) High-dose cytarabine (3\u2009g/m2) and etoposide (HAE), 6) Short maintenance.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "AML BFM 2012:CDxA- HAM- AI- haM-HAE -Standard Maintenance (Standard Risk Arm)": {
+                            "description": "Patients received treatment in the following course sequence for standard risk (SR) arm group: 1)  2-chloro-2-deoxyadenosine (CDxA), 2) High-dose cytarabine (3\u2009\u2009g/m2), mitoxantrone (10\u2009\u2009mg/m2), AI cytarabine (500\u2009\u2009mg/m2), idarubicin (7\u2009\u2009mg/m2)(HAM), 3) Cytarabine and idarubicine (AI), 4) Intermediate-dose cytarabine (1\u2009\u2009g/m2), mitoxantrone (10\u2009\u2009mg/m2) (haM), 5) High-dose cytarabine (3\u2009g/m2) and etoposide (HAE), 5) Standard maintenance.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "AML BFM 2012:ADxE - AI-haM, AI- HAE -Short Maintenance (Standard Risk Arm)": {
+                            "description": "Patients received treatment in the following course sequence for standard risk (SR) arm group: 1) Cytarabine (100\u2009\u2009mg/m2), liposomal daunorubicin (80\u2009mg/m2), etoposide (150\u2009\u2009mg/m2) (ADxE), 2) Cytarabine and idarubicin (AI), 3) High-dose cytarabine (1\u2009g/m2) and mitoxantrone (haM), 4) Cytarabine and idarubicine (AI), 5) High-dose cytarabine (3\u2009g/m2) and etoposide (HAE), 6) Short maintenance.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "AML BFM 2012:ADxE - AI-haM, AI- HAE - Standard Maintenance (Standard Risk Arm)": {
+                            "description": "Patients received treatment in the following course sequence for standard risk (SR) arm group: 1) ytarabine (100\u2009\u2009mg/m2), liposomal daunorubicin (80\u2009mg/m2), etoposide (150\u2009\u2009mg/m2) (ADxE), 2) Cytarabine and idarubicin (AI), 3) High-dose cytarabine (1\u2009g/m2) and mitoxantrone (haM), 4) Cytarabine and idarubicine (AI), 5) High-dose cytarabine (3\u2009g/m2) and etoposide (HAE), 6) Standard maintenance.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "AML BFM 2012:ADxE - HAM- AI- haM-HAE -Short Maintenance (Standard Risk Arm)": {
+                            "description": "Patients received treatment in the following course sequence for standard risk (SR) arm group: 1) Cytarabine (100\u2009\u2009mg/m2), liposomal daunorubicin (80\u2009mg/m2), etoposide (150\u2009\u2009mg/m2) (ADxE), 2) High-dose cytarabine (3\u2009\u2009g/m2), mitoxantrone (10\u2009\u2009mg/m2) (HAM), 3) Cytarabine and idarubicine (AI), 4) Intermediate-dose cytarabine (1\u2009\u2009g/m2), mitoxantrone (10\u2009\u2009mg/m2) (haM), 5) High-dose cytarabine (3\u2009g/m2) and etoposide (HAE), 6) Short maintenance.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "AML BFM 2012:ADxE - HAM- AI- haM-HAE -Standard Maintenance (Standard Risk Arm)": {
+                            "description": "Patients received treatment in the following course sequence for standard risk (SR) arm group: 1) Cytarabine (100\u2009\u2009mg/m2), liposomal daunorubicin (80\u2009mg/m2), etoposide (150\u2009\u2009mg/m2) (ADxE), 2) High-dose cytarabine (3\u2009\u2009g/m2), mitoxantrone (10\u2009\u2009mg/m2) (HAM), 3) Cytarabine and idarubicine (AI), 4) Intermediate-dose cytarabine (1\u2009\u2009g/m2), mitoxantrone (10\u2009\u2009mg/m2) (haM), 5) High-dose cytarabine (3\u2009g/m2) and etoposide (HAE), 6) Standard maintenance.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "AML BFM 2012:CDxA-HAM- AI-haM- HAE-Short Maintenance (Intermediate Risk Arm)": {
+                            "description": "Patients received treatment in the following course sequence for intermediate risk (IR) arm group: 1) 2-chloro-2-deoxyadenosine (CDxA), 2) High-dose cytarabine (3\u2009\u2009g/m2), mitoxantrone (10\u2009\u2009mg/m2) (HAM), 3) Cytarabine and idarubicine (AI), 4) Intermediate-dose cytarabine (1\u2009\u2009g/m2), mitoxantrone (10\u2009\u2009mg/m2) (haM), 5) High-dose cytarabine (3\u2009g/m2) and etoposide (HAE), 6) Short maintenance.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "AML BFM 2012:CDxA-HAM- AI-haM- HAE -Standard Maintenance (Intermediate Risk Arm)": {
+                            "description": "Patients received treatment in the following course sequence for intermediate risk (IR) arm group: 1) 2-chloro-2-deoxyadenosine (CDxA), 2) High-dose cytarabine (3\u2009\u2009g/m2), mitoxantrone (10\u2009\u2009mg/m2) (HAM), 3) Cytarabine and idarubicine (AI), 4) Intermediate-dose cytarabine (1\u2009\u2009g/m2), mitoxantrone (10\u2009\u2009mg/m2) (haM), 5) High-dose cytarabine (3\u2009g/m2) and etoposide (HAE), 6) Standard maintenance.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "AML BFM 2012:ADxE- HAM- AI-haM- HAE-Short Maintenance (Intermediate Risk Arm)": {
+                            "description": "Patients received treatment in the following course sequence for intermediate risk (IR) arm group: 1) Cytarabine (100\u2009\u2009mg/m2), daunorubicin (60\u2009\u2009mg/m2), etoposide (150\u2009\u2009mg/m2) (ADxE), 2) High-dose cytarabine (3\u2009\u2009g/m2), mitoxantrone (10\u2009\u2009mg/m2) (HAM), 3) Cytarabine and idarubicine (AI), 4) Intermediate-dose cytarabine (1\u2009\u2009g/m2), mitoxantrone (10\u2009\u2009mg/m2) (haM), 5) High-dose cytarabine (3\u2009g/m2) and etoposide (HAE), 6) Short maintenance.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "AML BFM 2012:ADxE- HAM- AI-haM- HAE-Standard Maintenance (Intermediate Risk Arm)": {
+                            "description": "Patients received treatment in the following course sequence for intermediate risk (IR) arm group: 1) Cytarabine (100\u2009\u2009mg/m2), daunorubicin (60\u2009\u2009mg/m2), etoposide (150\u2009\u2009mg/m2) (ADxE), 2) High-dose cytarabine (3\u2009\u2009g/m2), mitoxantrone (10\u2009\u2009mg/m2) (HAM), 3) Cytarabine and idarubicine (AI), 4) Intermediate-dose cytarabine (1\u2009\u2009g/m2), mitoxantrone (10\u2009\u2009mg/m2) (haM), 5) High-dose cytarabine (3\u2009g/m2) and etoposide (HAE), 6) Standard maintenance.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "AML BFM 2012:CDxA- HAM Sorafenib, AI Sorafenib, haM Sorafenib, Short Maintenance (Intermediate Risk Arm)": {
+                            "description": "Patients received treatment in the following course sequence for intermediate risk (IR) arm group: 1) 2-chloro-2-deoxyadenosine (CDxA), 2) High-dose cytarabine (1\u2009g/m2) and mitoxantrone (HAM Sorafenib), 3) Cytarabine and idarubicine (AI Sorafenib), 4) Intermediate-dose cytarabine (1\u2009\u2009g/m2), mitoxantrone (10\u2009\u2009mg/m2) (haM Sorafenib), 5) Short maintenance.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "AML BFM 2012:CDxA- HAM Sorafenib, AI Sorafenib, haM Sorafenib, Standard Maintenance (Intermediate Risk Arm)": {
+                            "description": "Patients received treatment in the following course sequence for intermediate risk (IR) arm group: 1) 2-chloro-2-deoxyadenosine (CDxA), 2) High-dose cytarabine (1\u2009g/m2) and mitoxantrone (HAM Sorafenib), 3) Cytarabine and idarubicine (AI Sorafenib), 4) Intermediate-dose cytarabine (1\u2009\u2009g/m2), mitoxantrone (10\u2009\u2009mg/m2) (haM Sorafenib), 5) Standard maintenance.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "AML BFM 2012:CDxA- HAM Sorafenib, AI Sorafenib, haM Sorafenib, Stem Cell Transplantation (High Risk Arm)": {
+                            "description": "Patients received treatment in the following course sequence for high risk (HR) arm group: 1) 2-chloro-2-deoxyadenosine (CDxA), 2) High-dose cytarabine (1\u2009g/m2) and mitoxantrone (HAM Sorafenib), 3) Cytarabine and idarubicine (AI Sorafenib), 4) Intermediate-dose cytarabine (1\u2009\u2009g/m2), mitoxantrone (10\u2009\u2009mg/m2) (haM Sorafenib), 5) Stem Cell Transplantation.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "AML BFM 2012:CDxA-HAM, AI, haM, Stem Cell Transplantation(High Risk Arm)": {
+                            "description": "Patients received treatment in the following course sequence for high risk (HR) arm group: 1) 2-chloro-2-deoxyadenosine (CDxA), 2) High-dose cytarabine (1\u2009g/m2) and mitoxantrone (HAM), 3) Cytarabine and idarubicine (AI), 4) Intermediate-dose cytarabine (1\u2009\u2009g/m2), mitoxantrone (10\u2009\u2009mg/m2) (haM), 5) Stem cell Transplantation.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "AML BFM 2012:ADxE- HAM Sorafenib, AI Sorafenib, haM Sorafenib, Stem Cell Transplantation (High Risk Arm)": {
+                            "description": "Patients received treatment in the following course sequence for high risk (HR) arm group: 1) Cytarabine (100\u2009\u2009mg/m2), liposomal daunorubicin (80\u2009mg/m2), etoposide (150\u2009\u2009mg/m2) (ADxE), 2) High-dose cytarabine (3\u2009\u2009g/m2), mitoxantrone (10\u2009\u2009mg/m2) (HAM Sorafenib), 3) Cytarabine and idarubicine (AI Sorafenib), 4) Intermediate-dose cytarabine (1\u2009\u2009g/m2), mitoxantrone (10\u2009\u2009mg/m2) (haM Sorafenib), 5) Stem Cell Transplantation.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "AML BFM 2012:ADxE- HAM, AI, haM, Stem Cell Transplantation (High Risk Arm)": {
+                            "description": "Patients received treatment in the following course sequence for high risk (HR) arm group: 1) Cytarabine (100\u2009\u2009mg/m2), liposomal daunorubicin (80\u2009mg/m2), etoposide (150\u2009\u2009mg/m2) (ADxE), 2) High-dose cytarabine (3\u2009\u2009g/m2), mitoxantrone (10\u2009\u2009mg/m2) (HAM), 3) Cytarabine and idarubicine (AI), 4) Intermediate-dose cytarabine (1\u2009\u2009g/m2), mitoxantrone (10\u2009\u2009mg/m2) (haM), 5) Stem Cell Transplantation.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "SJCRH AML02:HDAC-ADE+GO-C1-C2-C3": {
+                            "description": "Patients randomized with the following course sequence: 1) High-dose cytarabine (HDAC), 2) Daunomycin, cytarabine and etoposide (ADE), 3) Gemtuzumab ozogamicin (GO), 4) Consolidation I, 5) Consolidation II, 6) Consolidation III",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "SJCRH AML02:HDAC-ADE-C1-C2-C3": {
+                            "description": "Patients randomized with the following course sequence: 1) High-dose cytarabine (HDAC), 2) Daunomycin, cytarabine and etoposide (ADE), 3) Consolidation I, 4) Consolidation II, 5) Consolidation III",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "SJCRH AML02:HDAC-ADE+GO-SCT": {
+                            "description": "Patients randomized with the following course sequence: 1) High-dose cytarabine (HDAC), 2) Daunomycin, cytarabine and etoposide (ADE), 3) Gemtuzumab ozogamicin (GO), 4) Stem Cell Transplant (SCT)",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "SJCRH AML02:HDAC-ADE-SCT": {
+                            "description": "Patients randomized with the following course sequence: 1) High-dose cytarabine (HDAC), 2) Daunomycin, cytarabine and etoposide (ADE), 3) Stem Cell Transplant (SCT)",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "SJCRH AML02:LDAC-ADE+GO-C1-C2-C3": {
+                            "description": "Patients randomized with the following course sequence: 1) Low-dose cytarabine (LDAC), 2) Daunomycin, cytarabine and etoposide (ADE), 3) Gemtuzumab ozogamicin (GO), 4) Consolidation I, 5) Consolidation II, 6) Consolidation III",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "SJCRH AML02:LDAC-ADE-C1-C2-C3": {
+                            "description": "Patients randomized with the following course sequence: 1) Low-dose cytarabine (LDAC), 2) Daunomycin, cytarabine and etoposide (ADE), 3) Consolidation I, 4) Consolidation II, 5) Consolidation III",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "SJCRH AML02:LDAC-ADE+GO-SCT": {
+                            "description": "Patients randomized with the following course sequence: 1) Low-dose cytarabine (LDAC), 2) Daunomycin, cytarabine and etoposide (ADE), 3) Gemtuzumab ozogamicin (GO), 4) Stem Cell Transplant (SCT)",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "SJCRH AML02:LDAC-ADE-SCT": {
+                            "description": "Patients randomized with the following course sequence: 1) Low-dose cytarabine (LDAC), 2) Daunomycin, cytarabine and etoposide (ADE), 3) Stem Cell Transplant (SCT)",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "PPLLSG AML-98:SR": {
+                            "description": "Patients received treatment in the following course sequence for standard risk (SR) group: 1) AIE: cytarabine, idarubicin, etoposide, 2) Consolidation phase 1: 6-thioguanine, prednisone, cytarabine, vincristine, idarubicin, 3) Consolidation phase 2: 6-thioguanine, cytarabine, cyclophosphamide, CNS irradiation, 4) Maintenance: thioguanine, cytarabine, doxorubicin, 5)Thioguanine, cytarabine ",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "PPLLSG AML-98:HR": {
+                            "description": "Patients received treatment in the following course sequence for high risk (HR) group: 1) AIE: cytarabine, idarubicin, etoposide, 2) AI: cytarabine, idarubicin, 3) AE: cytarabine, etoposide, 4) Consolidation phase 1: 6-thioguanine, prednisone, cytarabine, vincristine, idarubicin, 5) Short post-remission block: 6-thioguanine, cytarabine, cyclophosphamide, AIE: cytarabine, idarubicin, etoposide, 6) Maintenance: thioguanine, cytarabine, doxorubicin, 7) Received therapy for 1 year (about 18 months of therapy together with intensive courses).",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "JACLS AML99:LR": {
+                            "description": "Patients received treatment in the following course sequence for low risk (LR) group: 1) Low-risk children were defined as those with t(8;21) and a WBC lower than 50,000/\u03bcL, inv(16), or an age younger than 2 years without high-risk factors) Consolidation therapy consisted of five courses and triple intrathecal therapy was given as a part of each course) Low-risk children were treated only with chemotherapy, regardless the availability of a suitable HSCT donor.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "JACLS AML99:IR": {
+                            "description": "Patients received treatment in the following course sequence for intermediate risk (IR) group: 1) Intermediate-risk children were those who were not in either a low-risk or high-risk group) Consolidation therapy consisted of five courses and triple intrathecal therapy was given as a part of each course) Matched related BMT was recommended for intermediate-risk children with a HLA-matched-related donor (MRD).",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "JACLS AML99:HR": {
+                            "description": "Patients received treatment in the following course sequence for high risk (HR) group: 1) High-risk children were those with CR after consolidation course 1 or induction C or with abnormalities of monosomy 7,7 5q-7, t(16;21),8 t(9;22) (Philadelphia chromosome [Ph1])) Consolidation therapy consisted of six courses and triple intrathecal therapy was given as a part of each course) All high-risk children were allocated to Allo-HSCT in the first remission, including unrelated bone marrow transplantation (BMT).",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "JPLSG AML05:JACLS": {
+                            "description": "Patients received treatment in the following courses sequence: 1) For Low Risk group (LR), 3 courses of intensification multi-agent combination chemotherapy, 2) For Intermediate Risk group (IR), 3 courses of intensification multi-agent combination chemotherapy, 3) For High Risk group (HR), 1 to 3 courses of intensification multi-agent combination chemotherapy followed by allogeneic hematopoietic stem cell transplantation.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
                         }
                     }
                 }
@@ -455,7 +1650,7 @@
             "time_period": {
                 "HONEST_BROKER_SUBJECT_ID": {
                     "type": "String",
-                    "tier": "To-do",
+                    "tier": "",
                     "description": "The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a \"re-identification code\"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.",
                     "codes": [
                         "ncit:C168949"
@@ -467,7 +1662,7 @@
                 },
                 "SUBMITTER_ID": {
                     "type": "String",
-                    "tier": "To-do",
+                    "tier": "",
                     "description": "An ID provided by the data contributor that identifies a unique time period and that is referenced throughout subsequent tabels in the TIME_PERIOD_SUBMITTER_ID variables.",
                     "codes": [],
                     "implementation_notes": [],
@@ -477,7 +1672,7 @@
                 },
                 "PARENT_SUBMITTER_ID": {
                     "type": "String",
-                    "tier": "To-do",
+                    "tier": "",
                     "description": "The SUBMITTER_ID of the time period in whose context a subsequent time period takes place. For example, multiple treatment courses occuring the \"Initial Diagnosis\" period would each reference the SUBMITTER_ID of the \"Initial Diagnosis\" period as their PARENT_SUBMITTER_ID.",
                     "codes": [],
                     "implementation_notes": [],
@@ -487,7 +1682,7 @@
                 },
                 "TIME_PERIOD_TYPE": {
                     "type": "Enum",
-                    "tier": "To-do",
+                    "tier": "",
                     "description": "The type of time period being reported.",
                     "codes": [],
                     "implementation_notes": [],
@@ -519,7 +1714,7 @@
                 },
                 "DISEASE_PHASE": {
                     "type": "Enum",
-                    "tier": "To-do",
+                    "tier": "",
                     "description": "The phase of the cancer treatment process during which relevant observations were recorded. This variable is used across domains to frame the timing of these longitudinal observations and reduce the number of redundant variables needed to report similar concepts (see \"Disease Phase Timing and Course Table\" in the documentation for additional guidance).",
                     "codes": [
                         "ncit:C168878"
@@ -551,7 +1746,7 @@
                 },
                 "COURSE": {
                     "type": "Enum",
-                    "tier": "To-do",
+                    "tier": "",
                     "description": "The protocol treatment \"course\" during which relevant observations were recorded. This variable is used across domains to frame the timing of these longitudinal observations and reduce the number of redundant variables needed to report similar concepts (see \"Disease Phase Timing and Course Table\" in the documentation for additional guidance).",
                     "codes": [
                         "ncit:C168807"
@@ -629,39 +1824,39 @@
                 },
                 "TIME_PERIOD_NUMBER": {
                     "type": "Integer",
-                    "tier": "To-do",
+                    "tier": "",
                     "description": "This variable indicates the ordinal numbering of time periods of the same TIME_PERIOD_TYPE within its various subgroups (e.g., Relapse 1, Relapse 2, Relapse 3, etc.). The observations across domains can therefore be organized longitudinally without the need for specific dates.",
                     "codes": [],
                     "implementation_notes": [],
                     "mappings": [
-                        "[aml_v1.7].[Disease Phase Timing].[DISEASE_PHASE_NUMBER] skos:exactMatch [aml_v2.0].[Time Period].[TIME_PERIOD_NUMBER] ",
-                        " [aml_v1.7].[Course Timing].[COURSE_NUMBER] skos:exactMatch [aml_v2.0].[Time Period].[TIME_PERIOD_NUMBER]"
+                        "[aml_v1.7].[Disease Phase Timing].[DISEASE_PHASE_NUMBER] skos:broadMatch [aml_v2.0].[Time Period].[TIME_PERIOD_NUMBER] ",
+                        " [aml_v1.7].[Course Timing].[COURSE_NUMBER] skos:broadMatch [aml_v2.0].[Time Period].[TIME_PERIOD_NUMBER]"
                     ]
                 },
                 "YEAR_AT_START": {
                     "type": "Integer",
-                    "tier": "To-do",
+                    "tier": "",
                     "description": "The year at the start of the indicated time period.",
                     "codes": [],
                     "implementation_notes": [],
                     "mappings": [
-                        "[aml_v1.7].[Disease Phase Timing].[YEAR_AT_DISEASE_PHASE] skos:exactMatch [aml_v2.0].[Time Period].[YEAR_AT_START]"
+                        "[aml_v1.7].[Disease Phase Timing].[YEAR_AT_DISEASE_PHASE] skos:broadMatch [aml_v2.0].[Time Period].[YEAR_AT_START]"
                     ]
                 },
                 "AGE_AT_START": {
                     "type": "Integer",
-                    "tier": "To-do",
+                    "tier": "",
                     "description": "The age (in days) of the patient at the start of the reported time period.",
                     "codes": [],
                     "implementation_notes": [],
                     "mappings": [
-                        "[aml_v1.7].[Disease Phase Timing].[AGE_AT_DISEASE_PHASE] skos:exactMatch [aml_v2.0].[Time Period].[AGE_AT_START] ",
-                        " [aml_v1.7].[Course Timing].[AGE_AT_COURSE_START] skos:exactMatch [aml_v2.0].[Time Period].[AGE_AT_START]"
+                        "[aml_v1.7].[Disease Phase Timing].[AGE_AT_DISEASE_PHASE] skos:broadMatch [aml_v2.0].[Time Period].[AGE_AT_START] ",
+                        " [aml_v1.7].[Course Timing].[AGE_AT_COURSE_START] skos:broadMatch [aml_v2.0].[Time Period].[AGE_AT_START]"
                     ]
                 },
                 "AGE_AT_END": {
                     "type": "Integer",
-                    "tier": "To-do",
+                    "tier": "",
                     "description": "The age (in days) of the patient at the end of the reported time period.",
                     "codes": [],
                     "implementation_notes": [],
@@ -671,7 +1866,7 @@
                 },
                 "AGE_AT_COURSE_ANC_500": {
                     "type": "Integer",
-                    "tier": "To-do",
+                    "tier": "",
                     "description": "The age (in days) of the subject when the subject's neutrophil count exceeded 500 (ANC/mm3)",
                     "codes": [
                         "ncit:C168852"
@@ -687,7 +1882,7 @@
             "off_protocol_therapy/study": {
                 "HONEST_BROKER_SUBJECT_ID": {
                     "type": "String",
-                    "tier": "To-do",
+                    "tier": "",
                     "description": "The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a \"re-identification code\"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.",
                     "codes": [
                         "ncit:C168949"
@@ -699,7 +1894,7 @@
                 },
                 "AGE_OFF": {
                     "type": "Integer",
-                    "tier": "n/a",
+                    "tier": "",
                     "description": "Age of subject (in days) when subject was off therapy or study.",
                     "codes": [
                         "ncit:C172678"
@@ -709,7 +1904,7 @@
                 },
                 "TIME_PERIOD_SUBMITTER_ID": {
                     "type": "String",
-                    "tier": "To-do",
+                    "tier": "",
                     "description": "This is the SUBMITTER_ID of the time period (defined in the \"Time Period\" table) during which this observation takes place.",
                     "codes": [],
                     "implementation_notes": [],
@@ -719,7 +1914,7 @@
                 },
                 "OFF_TYPE": {
                     "type": "Enum",
-                    "tier": "n/a",
+                    "tier": "",
                     "description": "The code used to designate that the subject went off therapy or off the study.",
                     "codes": [
                         "ncit:C173256"
@@ -749,7 +1944,7 @@
                 },
                 "REASON_OFF": {
                     "type": "Enum",
-                    "tier": "n/a",
+                    "tier": "",
                     "description": "The reason a subject went off the therapy or study.",
                     "codes": [
                         "ncit:C173519"
@@ -871,7 +2066,7 @@
             "demographics": {
                 "HONEST_BROKER_SUBJECT_ID": {
                     "type": "String",
-                    "tier": "1 - contributors must include, regardless of the resource cost",
+                    "tier": "",
                     "description": "The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a \"re-identification code\"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.",
                     "codes": [
                         "ncit:C168949"
@@ -883,7 +2078,7 @@
                 },
                 "SEX": {
                     "type": "Enum",
-                    "tier": "n/a",
+                    "tier": "",
                     "description": "The assemblage of physical properties or qualities by which male is distinguished from female; the physical difference between male and female; the distinguishing peculiarity of male or female.",
                     "codes": [
                         "ncit:C28421"
@@ -935,7 +2130,7 @@
                 },
                 "RACE": {
                     "type": "Enum",
-                    "tier": "n/a",
+                    "tier": "",
                     "description": "A geographic ancestral origin category that is assigned to a population group based mainly on physical characteristics that are thought to be distinct and inherent.",
                     "codes": [
                         "ncit:C17049"
@@ -1019,7 +2214,7 @@
                 },
                 "ETHNICITY": {
                     "type": "Enum",
-                    "tier": "n/a",
+                    "tier": "",
                     "description": "A social group characterized by a distinctive social and cultural tradition that is maintained from generation to generation. Members share a common history and origin and a sense of identification with the group. They have similar and distinctive features in their lifestyle habits and shared experiences. They often have a common genetic heritage which may be reflected in their experience of health and disease.",
                     "codes": [
                         "ncit:C16564"
@@ -1065,7 +2260,7 @@
             "medical_history": {
                 "HONEST_BROKER_SUBJECT_ID": {
                     "type": "String",
-                    "tier": "Mandatory",
+                    "tier": "",
                     "description": "The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a \"re-identification code\"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.",
                     "codes": [
                         "ncit:C168949"
@@ -1077,7 +2272,7 @@
                 },
                 "CONDITION": {
                     "type": "Enum",
-                    "tier": "n/a",
+                    "tier": "",
                     "description": "A health condition or medical problem that was diagnosed or treated before a specific date.",
                     "codes": [
                         "ncit:C54056"
@@ -1085,7 +2280,9 @@
                     "implementation_notes": [
                         "If subject had multiple prior medical conditions, include one observation per condition."
                     ],
-                    "mappings": [],
+                    "mappings": [
+                        "[aml_v1.7].[Medical History].[MEDICAL_HISTORY] skos:exactMatch [aml_v2.0].[Medical History].[CONDITION]"
+                    ],
                     "permissible_values": {
                         "Trisomy 21": {
                             "description": "A chromosomal abnormality consisting of the presence of a third copy of chromosome 21 in somatic cells.",
@@ -1133,7 +2330,7 @@
             "survival_characteristics": {
                 "HONEST_BROKER_SUBJECT_ID": {
                     "type": "String",
-                    "tier": "1 - contributors must include, regardless of the resource cost",
+                    "tier": "",
                     "description": "The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a \"re-identification code\"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.",
                     "codes": [
                         "ncit:C168949"
@@ -1145,7 +2342,7 @@
                 },
                 "AGE_AT_LKSS": {
                     "type": "Integer",
-                    "tier": "n/a",
+                    "tier": "",
                     "description": "Age of subject (in days) at the last known survival status.",
                     "codes": [
                         "ncit:C168844"
@@ -1153,9 +2350,19 @@
                     "implementation_notes": [],
                     "mappings": []
                 },
+                "TIME_PERIOD_SUBMITTER_ID": {
+                    "type": "String",
+                    "tier": "",
+                    "description": "This is the SUBMITTER_ID of the time period (defined in the \"Time Period\" table) during which this observation takes place.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ]
+                },
                 "LKSS": {
                     "type": "Enum",
-                    "tier": "n/a",
+                    "tier": "",
                     "description": "The individual's last known survival status.",
                     "codes": [
                         "ncit:C168931"
@@ -1191,7 +2398,7 @@
                 },
                 "AGE_LOST_TO_FOLLOW_UP": {
                     "type": "Integer",
-                    "tier": "n/a",
+                    "tier": "",
                     "description": "Age of subject (in days) when the subject was lost to follow-up.",
                     "codes": [
                         "ncit:C172679"
@@ -1201,7 +2408,7 @@
                 },
                 "CAUSE_OF_DEATH": {
                     "type": "Enum",
-                    "tier": "n/a",
+                    "tier": "",
                     "description": "The circumstance or condition that results in the death of a living being.",
                     "codes": [
                         "ncit:C81239"
@@ -1272,7 +2479,7 @@
                 },
                 "TRM_TYPE": {
                     "type": "Enum",
-                    "tier": "n/a",
+                    "tier": "",
                     "description": "The type of treatment related to the mortality of the subject.",
                     "codes": [
                         "ncit:C173260"
@@ -1335,7 +2542,7 @@
                 },
                 "CAUSE_OF_DEATH_DETAIL": {
                     "type": "Enum",
-                    "tier": "n/a",
+                    "tier": "",
                     "description": "Specific details of the cause of death.",
                     "codes": [
                         "ncit:C168868"
@@ -1438,7 +2645,7 @@
                 },
                 "CAUSE_OF_DEATH_RANKING": {
                     "type": "Enum",
-                    "tier": "n/a",
+                    "tier": "",
                     "description": "Assigning a weighted relevance to the cause of death.",
                     "codes": [
                         "ncit:C168932"
@@ -4690,236 +5897,6 @@
                     }
                 }
             },
-            "transfusion_medicine_procedures": {
-                "HONEST_BROKER_SUBJECT_ID": {
-                    "type": "String",
-                    "tier": "To-do",
-                    "description": "The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a \"re-identification code\"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.",
-                    "codes": [
-                        "ncit:C168949"
-                    ],
-                    "implementation_notes": [],
-                    "mappings": [
-                        "New VD"
-                    ]
-                },
-                "AGE_AT_TMP_START": {
-                    "type": "Integer",
-                    "tier": "To-do",
-                    "description": "The age (in days) of the subject at the start of the transfusion medicine procedure.",
-                    "codes": [
-                        "ncit:C172697"
-                    ],
-                    "implementation_notes": [],
-                    "mappings": []
-                },
-                "TIME_PERIOD_SUBMITTER_ID": {
-                    "type": "String",
-                    "tier": "To-do",
-                    "description": "This is the SUBMITTER_ID of the time period (defined in the \"Time Period\" table) during which this observation takes place.",
-                    "codes": [],
-                    "implementation_notes": [],
-                    "mappings": [
-                        "New VD"
-                    ]
-                },
-                "TYPE": {
-                    "type": "Enum",
-                    "tier": "To-do",
-                    "description": "An infusion or replacement of blood components.",
-                    "codes": [
-                        "ncit:C173057"
-                    ],
-                    "implementation_notes": [],
-                    "mappings": [
-                        "[aml_v1.7].[Transfusion Medicine Procedure].[TMP_TYPE] skos:exactMatch [aml_v2.0].[Transfusion Medicine Procedure].[TYPE]"
-                    ],
-                    "permissible_values": {
-                        "Exchange Transfusion": {
-                            "description": "Withdrawn blood is exchanged for other blood or blood components and returned to the subject.",
-                            "codes": [
-                                "ncit:C173284"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Therapeutic Apheresis": {
-                            "description": "Withdrawal of blood from a subject and removal of any pathogenic components before returning the remainder to the subject.",
-                            "codes": [
-                                "ncit:C173286"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Simple Transfusion": {
-                            "description": "Transfusion of blood into the body without removing any of the patient's blood volume.",
-                            "codes": [
-                                "ncit:C173285"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Other": {
-                            "description": "Different than the one(s) previously specified or mentioned.",
-                            "codes": [
-                                "ncit:C17649"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Not Reported": {
-                            "description": "Not provided or available.",
-                            "codes": [
-                                "ncit:C43234"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        }
-                    }
-                },
-                "PRODUCT": {
-                    "type": "Enum",
-                    "tier": "To-do",
-                    "description": "The type of product intended for transfusion.",
-                    "codes": [
-                        "ncit:C173287"
-                    ],
-                    "implementation_notes": [],
-                    "mappings": [
-                        "[aml_v1.7].[Transfusion Medicine Procedure].[TMP_PRODUCT] skos:exactMatch [aml_v2.0].[Transfusion Medicine Procedure].[PRODUCT]"
-                    ],
-                    "permissible_values": {
-                        "RBC": {
-                            "description": "Red blood cells remaining after separating plasma from human blood, or collected by apheresis.",
-                            "codes": [
-                                "ncit:C133280"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Platelets": {
-                            "description": "Platelets collected from a single donor and suspended in a specified volume of original plasma.",
-                            "codes": [
-                                "ncit:C133278"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "WBC": {
-                            "description": "White blood cells intended as source material for further manufacturing use.",
-                            "codes": [
-                                "ncit:C133281"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Unknown": {
-                            "description": "Reported as unknown by the data contributor.",
-                            "codes": [
-                                "ncit:C17998"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Not Reported": {
-                            "description": "Not provided or available.",
-                            "codes": [
-                                "ncit:C43234"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        }
-                    }
-                }
-            },
-            "cellular_immunotherapy": {
-                "HONEST_BROKER_SUBJECT_ID": {
-                    "type": "String",
-                    "tier": "To-do",
-                    "description": "The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a \"re-identification code\"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.",
-                    "codes": [
-                        "ncit:C168949"
-                    ],
-                    "implementation_notes": [],
-                    "mappings": [
-                        "New VD"
-                    ]
-                },
-                "AGE_AT_CIMT_START": {
-                    "type": "Integer",
-                    "tier": "To-do",
-                    "description": "The age (in days) of the subject at the time of cellular immunotherapy.",
-                    "codes": [
-                        "ncit:C173195"
-                    ],
-                    "implementation_notes": [],
-                    "mappings": []
-                },
-                "TIME_PERIOD_SUBMITTER_ID": {
-                    "type": "String",
-                    "tier": "To-do",
-                    "description": "This is the SUBMITTER_ID of the time period (defined in the \"Time Period\" table) during which this observation takes place.",
-                    "codes": [],
-                    "implementation_notes": [],
-                    "mappings": [
-                        "New VD"
-                    ]
-                },
-                "TYPE": {
-                    "type": "Enum",
-                    "tier": "To-do",
-                    "description": "The type of cellular immunotherapy.",
-                    "codes": [
-                        "ncit:C173289"
-                    ],
-                    "implementation_notes": [],
-                    "mappings": [
-                        "[aml_v1.7].[Cellular Immunotherapy].[CIMT_TYPE] skos:exactMatch [aml_v2.0].[Cellular Immunotherapy].[TYPE]"
-                    ],
-                    "permissible_values": {
-                        "Donor Lymphocyte Infusion": {
-                            "description": "The infusion of donor lymphocytes following hematopoietic stem cell transplantation for the purpose of augmenting the host immune response or preventing the rejection of the graft.",
-                            "codes": [
-                                "ncit:C16145"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Chimeric Antigen Receptor T-cell Therapy": {
-                            "description": "Treatment that uses T-cells that have been engineered to contain a chimeric antigen receptor (CAR) that specifically targets a particular antigen.",
-                            "codes": [
-                                "ncit:C126102"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Other": {
-                            "description": "Different than the one(s) previously specified or mentioned.",
-                            "codes": [
-                                "ncit:C17649"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Unknown": {
-                            "description": "Reported as unknown by the data contributor.",
-                            "codes": [
-                                "ncit:C17998"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Not Reported": {
-                            "description": "Not provided or available.",
-                            "codes": [
-                                "ncit:C43234"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        }
-                    }
-                }
-            },
             "stem_cell_transplant": {
                 "HONEST_BROKER_SUBJECT_ID": {
                     "type": "String",
@@ -5559,6 +6536,236 @@
                             "description": "The affirmative response to a question.",
                             "codes": [
                                 "ncit:C49488"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "Reported as unknown by the data contributor.",
+                            "codes": [
+                                "ncit:C17998"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Reported": {
+                            "description": "Not provided or available.",
+                            "codes": [
+                                "ncit:C43234"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                }
+            },
+            "transfusion_medicine_procedures": {
+                "HONEST_BROKER_SUBJECT_ID": {
+                    "type": "String",
+                    "tier": "To-do",
+                    "description": "The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a \"re-identification code\"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.",
+                    "codes": [
+                        "ncit:C168949"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ]
+                },
+                "AGE_AT_TMP_START": {
+                    "type": "Integer",
+                    "tier": "To-do",
+                    "description": "The age (in days) of the subject at the start of the transfusion medicine procedure.",
+                    "codes": [
+                        "ncit:C172697"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "TIME_PERIOD_SUBMITTER_ID": {
+                    "type": "String",
+                    "tier": "To-do",
+                    "description": "This is the SUBMITTER_ID of the time period (defined in the \"Time Period\" table) during which this observation takes place.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ]
+                },
+                "TYPE": {
+                    "type": "Enum",
+                    "tier": "To-do",
+                    "description": "An infusion or replacement of blood components.",
+                    "codes": [
+                        "ncit:C173057"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "[aml_v1.7].[Transfusion Medicine Procedure].[TMP_TYPE] skos:exactMatch [aml_v2.0].[Transfusion Medicine Procedure].[TYPE]"
+                    ],
+                    "permissible_values": {
+                        "Exchange Transfusion": {
+                            "description": "Withdrawn blood is exchanged for other blood or blood components and returned to the subject.",
+                            "codes": [
+                                "ncit:C173284"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Therapeutic Apheresis": {
+                            "description": "Withdrawal of blood from a subject and removal of any pathogenic components before returning the remainder to the subject.",
+                            "codes": [
+                                "ncit:C173286"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Simple Transfusion": {
+                            "description": "Transfusion of blood into the body without removing any of the patient's blood volume.",
+                            "codes": [
+                                "ncit:C173285"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Other": {
+                            "description": "Different than the one(s) previously specified or mentioned.",
+                            "codes": [
+                                "ncit:C17649"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Reported": {
+                            "description": "Not provided or available.",
+                            "codes": [
+                                "ncit:C43234"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "PRODUCT": {
+                    "type": "Enum",
+                    "tier": "To-do",
+                    "description": "The type of product intended for transfusion.",
+                    "codes": [
+                        "ncit:C173287"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "[aml_v1.7].[Transfusion Medicine Procedure].[TMP_PRODUCT] skos:exactMatch [aml_v2.0].[Transfusion Medicine Procedure].[PRODUCT]"
+                    ],
+                    "permissible_values": {
+                        "RBC": {
+                            "description": "Red blood cells remaining after separating plasma from human blood, or collected by apheresis.",
+                            "codes": [
+                                "ncit:C133280"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Platelets": {
+                            "description": "Platelets collected from a single donor and suspended in a specified volume of original plasma.",
+                            "codes": [
+                                "ncit:C133278"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "WBC": {
+                            "description": "White blood cells intended as source material for further manufacturing use.",
+                            "codes": [
+                                "ncit:C133281"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "Reported as unknown by the data contributor.",
+                            "codes": [
+                                "ncit:C17998"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Reported": {
+                            "description": "Not provided or available.",
+                            "codes": [
+                                "ncit:C43234"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                }
+            },
+            "cellular_immunotherapy": {
+                "HONEST_BROKER_SUBJECT_ID": {
+                    "type": "String",
+                    "tier": "To-do",
+                    "description": "The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a \"re-identification code\"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.",
+                    "codes": [
+                        "ncit:C168949"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ]
+                },
+                "AGE_AT_CIMT_START": {
+                    "type": "Integer",
+                    "tier": "To-do",
+                    "description": "The age (in days) of the subject at the time of cellular immunotherapy.",
+                    "codes": [
+                        "ncit:C173195"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "TIME_PERIOD_SUBMITTER_ID": {
+                    "type": "String",
+                    "tier": "To-do",
+                    "description": "This is the SUBMITTER_ID of the time period (defined in the \"Time Period\" table) during which this observation takes place.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ]
+                },
+                "TYPE": {
+                    "type": "Enum",
+                    "tier": "To-do",
+                    "description": "The type of cellular immunotherapy.",
+                    "codes": [
+                        "ncit:C173289"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "[aml_v1.7].[Cellular Immunotherapy].[CIMT_TYPE] skos:exactMatch [aml_v2.0].[Cellular Immunotherapy].[TYPE]"
+                    ],
+                    "permissible_values": {
+                        "Donor Lymphocyte Infusion": {
+                            "description": "The infusion of donor lymphocytes following hematopoietic stem cell transplantation for the purpose of augmenting the host immune response or preventing the rejection of the graft.",
+                            "codes": [
+                                "ncit:C16145"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Chimeric Antigen Receptor T-cell Therapy": {
+                            "description": "Treatment that uses T-cells that have been engineered to contain a chimeric antigen receptor (CAR) that specifically targets a particular antigen.",
+                            "codes": [
+                                "ncit:C126102"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Other": {
+                            "description": "Different than the one(s) previously specified or mentioned.",
+                            "codes": [
+                                "ncit:C17649"
                             ],
                             "implementation_notes": [],
                             "mappings": []
@@ -6813,13 +8020,17 @@
                             "description": "",
                             "codes": [],
                             "implementation_notes": [],
-                            "mappings": []
+                            "mappings": [
+                                "New PD"
+                            ]
                         },
                         "ICD": {
                             "description": "",
                             "codes": [],
                             "implementation_notes": [],
-                            "mappings": []
+                            "mappings": [
+                                "New PD"
+                            ]
                         },
                         "European Society for Blood and Marrow Transplantation (EBMT)": {
                             "description": "A non-profit organization established in 1974 to allow scientists and physicians involved in clinical bone marrow transplantations to share experiences and develop co-operative studies.",

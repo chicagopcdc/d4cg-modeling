@@ -7,6 +7,304 @@ Added concepts:
 
 >[Subject Characteristics].[DISEASE_GROUP]
 
+>[Subject Characteristics].[TREATMENT_ARM].[AAML1031:Arm A HR]
+
+>[Subject Characteristics].[TREATMENT_ARM].[AAML1031:Arm A LR]
+
+>[Subject Characteristics].[TREATMENT_ARM].[AAML1031:Arm B HR]
+
+>[Subject Characteristics].[TREATMENT_ARM].[AAML1031:Arm B LR]
+
+>[Subject Characteristics].[TREATMENT_ARM].[AAML1031:Arm C]
+
+>[Subject Characteristics].[TREATMENT_ARM].[AEIOP LAM 2002:ICE-ICE-AVE-HAM- HD-AraC/SR]
+
+>[Subject Characteristics].[TREATMENT_ARM].[AEIOP LAM 2002:ICE-ICE-AVE-HAM-SCT/HR]
+
+>[Subject Characteristics].[TREATMENT_ARM].[AAML0531:HR]
+
+>[Subject Characteristics].[TREATMENT_ARM].[AAML0531:LR]
+
+>[Subject Characteristics].[TREATMENT_ARM].[AAML0531:Arm A HR]
+
+>[Subject Characteristics].[TREATMENT_ARM].[AAML0531:Arm A LR]
+
+>[Subject Characteristics].[TREATMENT_ARM].[AAML0531:Arm B HR]
+
+>[Subject Characteristics].[TREATMENT_ARM].[AAML0531:Arm B LR]
+
+>[Subject Characteristics].[TREATMENT_ARM].[MRC AML12:ADE-ADE-MACE-CLASP-MidAC]
+
+>[Subject Characteristics].[TREATMENT_ARM].[MRC AML12:ADE-ADE-MACE-CLASP-SCT]
+
+>[Subject Characteristics].[TREATMENT_ARM].[MRC AML12:ADE-ADE-MACE-MidAC]
+
+>[Subject Characteristics].[TREATMENT_ARM].[MRC AML12:ADE-ADE-MACE-SCT]
+
+>[Subject Characteristics].[TREATMENT_ARM].[MRC AML12:ADE-ADE-off trial]
+
+>[Subject Characteristics].[TREATMENT_ARM].[MRC AML12:MAE-MAE-MACE-CLASP-MidAC]
+
+>[Subject Characteristics].[TREATMENT_ARM].[MRC AML12:MAE-MAE-MACE-CLASP-SCT]
+
+>[Subject Characteristics].[TREATMENT_ARM].[MRC AML12:MAE-MAE-MACE-MidAC]
+
+>[Subject Characteristics].[TREATMENT_ARM].[MRC AML12:MAE-MAE-MACE-SCT]
+
+>[Subject Characteristics].[TREATMENT_ARM].[MRC AML12:MAE-MAE-Off Trial]
+
+>[Subject Characteristics].[TREATMENT_ARM].[MRC AML15:ADE-ADE-MACE-MidAC-AraC]
+
+>[Subject Characteristics].[TREATMENT_ARM].[MRC AML15:ADE-ADE-MACE-MidAC-No Further Therapy]
+
+>[Subject Characteristics].[TREATMENT_ARM].[MRC AML15:ADE-ADE-MACE/Mytolarg-MidAC-AraC]
+
+>[Subject Characteristics].[TREATMENT_ARM].[MRC AML15:ADE-ADE-MACE/Mytolarg-MidAC-No Further Therapy]
+
+>[Subject Characteristics].[TREATMENT_ARM].[MRC AML15:ADE/Mytolarg-ADE-MACE-MidAC-AraC]
+
+>[Subject Characteristics].[TREATMENT_ARM].[MRC AML15:ADE/Mytolarg-ADE-MACE-MidAC-No Further Therapy]
+
+>[Subject Characteristics].[TREATMENT_ARM].[MRC AML15:ADE/Mytolarg-ADE-MACE/Mytolarg-MidAC-AraC]
+
+>[Subject Characteristics].[TREATMENT_ARM].[MRC AML15:ADE/Mytolarg-ADE-MACE/Mytolarg-MidAC-No Further Therapy]
+
+>[Subject Characteristics].[TREATMENT_ARM].[MRC AML15:ADE-ADE-AraC3g-AraC3g-AraC]
+
+>[Subject Characteristics].[TREATMENT_ARM].[MRC AML15:ADE-ADE-AraC3g-AraC3g-No Further Therapy]
+
+>[Subject Characteristics].[TREATMENT_ARM].[MRC AML15:ADE-ADE-AraC3g/Mytolarg-AraC3g-AraC]
+
+>[Subject Characteristics].[TREATMENT_ARM].[MRC AML15:ADE-ADE-AraC3g/Mytolarg-AraC3g-No Further Therapy]
+
+>[Subject Characteristics].[TREATMENT_ARM].[MRC AML15:ADE/Mytolarg-ADE-AraC3g-AraC3g-AraC]
+
+>[Subject Characteristics].[TREATMENT_ARM].[MRC AML15:ADE/Mytolarg-ADE-AraC3g-AraC3g-No Further Therapy]
+
+>[Subject Characteristics].[TREATMENT_ARM].[MRC AML15:ADE/Mytolarg-ADE-AraC3g/Mytolarg-AraC3g-AraC]
+
+>[Subject Characteristics].[TREATMENT_ARM].[MRC AML15:ADE/Mytolarg-ADE-AraC3g/Mytolarg-AraC3g-No Further Therapy]
+
+>[Subject Characteristics].[TREATMENT_ARM].[MRC AML15:FLAGIda-FLAGIda-MACE-MidAC-AraC]
+
+>[Subject Characteristics].[TREATMENT_ARM].[MRC AML15:FLAGIda-FLAGIda-MACE-MidAC-No Further Therapy]
+
+>[Subject Characteristics].[TREATMENT_ARM].[MRC AML15:FLAGIda-FLAGIda-MACE/Mytolarg-MidAC-AraC]
+
+>[Subject Characteristics].[TREATMENT_ARM].[MRC AML15:FLAGIda-FLAGIda-MACE/Mytolarg-MidAC-No Further Therapy]
+
+>[Subject Characteristics].[TREATMENT_ARM].[MRC AML15:FLAGIda/Mytolarg-FLAGIda-MACE-MidAC-AraC]
+
+>[Subject Characteristics].[TREATMENT_ARM].[MRC AML15:FLAGIda/Mytolarg-FLAGIda-MACE-MidAC-No Further Therapy]
+
+>[Subject Characteristics].[TREATMENT_ARM].[MRC AML15:FLAGIda/Mytolarg-FLAGIda-MACE/Mytolarg-MidAC-AraC]
+
+>[Subject Characteristics].[TREATMENT_ARM].[MRC AML15:FLAGIda/Mytolarg-FLAGIda-MACE/Mytolarg-MidAC-No Further Therapy]
+
+>[Subject Characteristics].[TREATMENT_ARM].[MRC AML15:FLAGIda-FLAGIda-AraC3g-AraC3g-AraC]
+
+>[Subject Characteristics].[TREATMENT_ARM].[MRC AML15:FLAGIda-FLAGIda-AraC3g-AraC3g-No Further Therapy]
+
+>[Subject Characteristics].[TREATMENT_ARM].[MRC AML15:FLAGIda-FLAGIda-AraC3g/Mytolarg-AraC3g-AraC]
+
+>[Subject Characteristics].[TREATMENT_ARM].[MRC AML15:FLAGIda-FLAGIda-AraC3g/Mytolarg-AraC3g-No Further Therapy]
+
+>[Subject Characteristics].[TREATMENT_ARM].[MRC AML15:FLAGIda/Mytolarg-FLAGIda-AraC3g-AraC3g-AraC]
+
+>[Subject Characteristics].[TREATMENT_ARM].[MRC AML15:FLAGIda/Mytolarg-FLAGIda-AraC3g-AraC3g-No Further Therapy]
+
+>[Subject Characteristics].[TREATMENT_ARM].[MRC AML15:FLAGIda/Mytolarg-FLAGIda-AraC3g/Mytolarg-AraC3g-AraC]
+
+>[Subject Characteristics].[TREATMENT_ARM].[MRC AML15:FLAGIda/Mytolarg-FLAGIda-AraC3g/Mytolarg-AraC3g-No Further Therapy]
+
+>[Subject Characteristics].[TREATMENT_ARM].[NOPHO AML 2004:AIET-AM-HA1M-HA2E-HA3-HA2E + Gemtuzumab Ozagamicin]
+
+>[Subject Characteristics].[TREATMENT_ARM].[NOPHO AML 2004:AIET-AM-HA1M-HA2E-HA3-HA2E + No Further Therapy]
+
+>[Subject Characteristics].[TREATMENT_ARM].[NOPHO AML 2012:MEC-ADE-HAM-HA3E-FLA]
+
+>[Subject Characteristics].[TREATMENT_ARM].[NOPHO AML 2012:DEC-ADE-HAM-HA3E-FLA]
+
+>[Subject Characteristics].[TREATMENT_ARM].[NOPHO AML 2012:MEC-FLAD-HAM-HA3E-FLA]
+
+>[Subject Characteristics].[TREATMENT_ARM].[NOPHO AML 2012:DEC -FLAD-HAM-HA3E-FLA]
+
+>[Subject Characteristics].[TREATMENT_ARM].[NOPHO AML 2012:MEC-ADE-HA3E-FLA (Low Risk)]
+
+>[Subject Characteristics].[TREATMENT_ARM].[NOPHO AML 2012:DEC -ADE-HA3E-FLA (Low Risk)]
+
+>[Subject Characteristics].[TREATMENT_ARM].[NOPHO AML 2012:MEC-FLAD-HA3E-FLA (Low Risk)]
+
+>[Subject Characteristics].[TREATMENT_ARM].[NOPHO AML 2012:DEC -FLAD-HA3E-FLA (Low Risk)]
+
+>[Subject Characteristics].[TREATMENT_ARM].[NOPHO AML 2012:MEC-ADE-HAM + SCT (High Risk 1)]
+
+>[Subject Characteristics].[TREATMENT_ARM].[NOPHO AML 2012:DEC -ADE-HAM + SCT (High Risk 1)]
+
+>[Subject Characteristics].[TREATMENT_ARM].[NOPHO AML 2012:MEC-FLAD-HAM + SCT (High Risk 1)]
+
+>[Subject Characteristics].[TREATMENT_ARM].[NOPHO AML 2012:DEC -FLAD-HAM + SCT (High Risk 1)]
+
+>[Subject Characteristics].[TREATMENT_ARM].[NOPHO AML 2012:MEC-ADE-HAM-HA3E + SCT (High Risk 2)]
+
+>[Subject Characteristics].[TREATMENT_ARM].[NOPHO AML 2012:DEC -ADE-HAM-HA3E+ SCT (High Risk 2)]
+
+>[Subject Characteristics].[TREATMENT_ARM].[NOPHO AML 2012:MEC-FLAD-HAM-HA3E+ SCT (High Risk 2)]
+
+>[Subject Characteristics].[TREATMENT_ARM].[NOPHO AML 2012:DEC -FLAD-HAM-HA3E+ SCT (High Risk 2)]
+
+>[Subject Characteristics].[TREATMENT_ARM].[NOPHO AML 2012:MEC-ADE-HAM-HA3E-FLA + SCT (High Risk 3)]
+
+>[Subject Characteristics].[TREATMENT_ARM].[NOPHO AML 2012:DEC -ADE-HAM-HA3E-FLA + SCT (High Risk 3)]
+
+>[Subject Characteristics].[TREATMENT_ARM].[NOPHO AML 2012:MEC-FLAD-HAM-HA3E-FLA + SCT (High Risk 3)]
+
+>[Subject Characteristics].[TREATMENT_ARM].[NOPHO AML 2012:DEC -FLAD-HAM-HA3E-FLA + SCT (High Risk 3)]
+
+>[Subject Characteristics].[TREATMENT_ARM].[NOPHO AML 2012:MEC-ADE-Off Protocol]
+
+>[Subject Characteristics].[TREATMENT_ARM].[NOPHO AML 2012:DEC -ADE-Off Protocol]
+
+>[Subject Characteristics].[TREATMENT_ARM].[NOPHO AML 2012:MEC-FLAD- Off Protocol]
+
+>[Subject Characteristics].[TREATMENT_ARM].[NOPHO AML 2012:DEC -FLAD-Off Protocol]
+
+>[Subject Characteristics].[TREATMENT_ARM].[DB - AML01:AIET-Post Recovery AM-HA2E+HA3+HA2E]
+
+>[Subject Characteristics].[TREATMENT_ARM].[DB - AML01:AIET-Post Recovery FLA/Dnx-HA2E+HA3+HA2E]
+
+>[Subject Characteristics].[TREATMENT_ARM].[DB - AML01:AIET-Post Recovery AM-Off Protocol]
+
+>[Subject Characteristics].[TREATMENT_ARM].[DB - AML01:AIET-Post Recovery FLA/Dnx-Off Protocol]
+
+>[Subject Characteristics].[TREATMENT_ARM].[DB - AML01:AIET-Immediate AM-HA2E+HA3+HA2E]
+
+>[Subject Characteristics].[TREATMENT_ARM].[DB - AML01:AIET-Immediate  FLA/Dnx-HA2E+HA3+HA2E]
+
+>[Subject Characteristics].[TREATMENT_ARM].[DB - AML01:AIET-Immediate  AM-Off Protocol]
+
+>[Subject Characteristics].[TREATMENT_ARM].[DB - AML01:AIET-Immediate  FLA/Dnx-Off Protocol]
+
+>[Subject Characteristics].[TREATMENT_ARM].[AIEOP LAM 92:ICE(3+5+10) + ICE(3+5+10) + Consolidation]
+
+>[Subject Characteristics].[TREATMENT_ARM].[AIEOP LAM 92:ICE(3+5+10) + ICE(2+3+7) + Consolidation]
+
+>[Subject Characteristics].[TREATMENT_ARM].[AIEOP LAM 92:ICE(3+5+10) + ICE(3+5+10) + Consolidation + AUTO/ALLO SCT]
+
+>[Subject Characteristics].[TREATMENT_ARM].[AIEOP LAM 92:ICE(3+5+10) + ICE(2+3+7) + Consolidation + AUTO/ALLO SCT]
+
+>[Subject Characteristics].[TREATMENT_ARM].[AIEOP LAM 92:ICE(3+5+10) + ICE(3+5+10) + AUTO/ALLO SCT]
+
+>[Subject Characteristics].[TREATMENT_ARM].[AIEOP LAM 92:ICE(3+5+10) + ICE(2+3+7) + AUTO/ALLO SCT]
+
+>[Subject Characteristics].[TREATMENT_ARM].[SCFE ELAM02:Induction + Consolidation 1 + Consolidation 2 + Consolidation 3]
+
+>[Subject Characteristics].[TREATMENT_ARM].[SCFE ELAM02:Induction + Consolidation 1 + Consolidation 2 + Consolidation 3 + IL2 Maintenance]
+
+>[Subject Characteristics].[TREATMENT_ARM].[SCFE ELAM02:Induction + Consolidation 1 + Allo HSCT]
+
+>[Subject Characteristics].[TREATMENT_ARM].[AML-BFM 2004:ADxE- AI-haM-HAE- Standard maintenance, 12 Gy (Standard Risk arm)]
+
+>[Subject Characteristics].[TREATMENT_ARM].[AML-BFM 2004:ADxE- AI-haM-HAE- Standard maintenance, 18 Gy (Standard Risk arm)]
+
+>[Subject Characteristics].[TREATMENT_ARM].[AML-BFM 2004:ADxE-HAM- AI/2CDA-haM, HAE- Standard maintenance, 12 Gy (High Risk arm)]
+
+>[Subject Characteristics].[TREATMENT_ARM].[AML-BFM 2004:ADxE-HAM- AI/2CDA-haM, HAE- Standard maintenance, 18 Gy (High Risk arm)]
+
+>[Subject Characteristics].[TREATMENT_ARM].[AML-BFM 2004:ADxE-HAM- AI-haM, HAE- Standard maintenance, 12 Gy (High Risk arm)]
+
+>[Subject Characteristics].[TREATMENT_ARM].[AML-BFM 2004:ADxE-HAM- AI-haM, HAE- Standard maintenance, 18 Gy (High Risk arm)]
+
+>[Subject Characteristics].[TREATMENT_ARM].[AML-BFM 2004:AIE- AI-haM-HAE- Standard maintenance, 12 Gy (Standard Risk arm)]
+
+>[Subject Characteristics].[TREATMENT_ARM].[AML-BFM 2004:AIE- AI-haM-HAE- Standard maintenance, 18 Gy(Standard Risk arm)]
+
+>[Subject Characteristics].[TREATMENT_ARM].[AML-BFM 2004:AIE-HAM- AI/2CDA-haM, HAE- Standard maintenance, 12 Gy (High Risk arm)]
+
+>[Subject Characteristics].[TREATMENT_ARM].[AML-BFM 2004:AIE-HAM- AI/2CDA-haM, HAE- Standard maintenance, 18 Gy (High Risk arm)]
+
+>[Subject Characteristics].[TREATMENT_ARM].[AML-BFM 2004:AIE-HAM- AI-haM, HAE- Standard maintenance, 12 Gy (High Risk arm)]
+
+>[Subject Characteristics].[TREATMENT_ARM].[AML-BFM 2004:AIE-HAM- AI-haM, HAE- Standard maintenance, 18 Gy (High Risk arm)]
+
+>[Subject Characteristics].[TREATMENT_ARM].[AML-BFM 2004:AIE-HAM- AI-haM, SCT]
+
+>[Subject Characteristics].[TREATMENT_ARM].[AML-BFM 2004:AIE-HAM- AI/2CDA-haM, SCT]
+
+>[Subject Characteristics].[TREATMENT_ARM].[AML-BFM 2004:ADxE-HAM- AI-haM, SCT]
+
+>[Subject Characteristics].[TREATMENT_ARM].[AML-BFM 2004:ADxE-HAM- AI/2CDA-haM, SCT]
+
+>[Subject Characteristics].[TREATMENT_ARM].[AML BFM Registry 2012:ADxE- AI-haM-HAE- Standard Maintenance (Standard Risk Arm)]
+
+>[Subject Characteristics].[TREATMENT_ARM].[AML BFM Registry 2012:ADxE-HAM- AI-haM, HAE- Standard Maintenance (Intermediate Risk Arm)]
+
+>[Subject Characteristics].[TREATMENT_ARM].[AML BFM Registry 2012:ADxE-HAM- AI-haM, SCT (High Risk Arm)]
+
+>[Subject Characteristics].[TREATMENT_ARM].[AML BFM 2012:CDxA- AI-haM, AI- HAE -Short Maintenance (Standard Risk Arm)]
+
+>[Subject Characteristics].[TREATMENT_ARM].[AML BFM 2012:CDxA- AI-haM, AI- HAE - Standard Maintenance (Standard Risk Arm)]
+
+>[Subject Characteristics].[TREATMENT_ARM].[AML BFM 2012:CDxA- HAM- AI- haM-HAE -Short Maintenance (Standard Risk Arm)]
+
+>[Subject Characteristics].[TREATMENT_ARM].[AML BFM 2012:CDxA- HAM- AI- haM-HAE -Standard Maintenance (Standard Risk Arm)]
+
+>[Subject Characteristics].[TREATMENT_ARM].[AML BFM 2012:ADxE - AI-haM, AI- HAE -Short Maintenance (Standard Risk Arm)]
+
+>[Subject Characteristics].[TREATMENT_ARM].[AML BFM 2012:ADxE - AI-haM, AI- HAE - Standard Maintenance (Standard Risk Arm)]
+
+>[Subject Characteristics].[TREATMENT_ARM].[AML BFM 2012:ADxE - HAM- AI- haM-HAE -Short Maintenance (Standard Risk Arm)]
+
+>[Subject Characteristics].[TREATMENT_ARM].[AML BFM 2012:ADxE - HAM- AI- haM-HAE -Standard Maintenance (Standard Risk Arm)]
+
+>[Subject Characteristics].[TREATMENT_ARM].[AML BFM 2012:CDxA-HAM- AI-haM- HAE-Short Maintenance (Intermediate Risk Arm)]
+
+>[Subject Characteristics].[TREATMENT_ARM].[AML BFM 2012:CDxA-HAM- AI-haM- HAE -Standard Maintenance (Intermediate Risk Arm)]
+
+>[Subject Characteristics].[TREATMENT_ARM].[AML BFM 2012:ADxE- HAM- AI-haM- HAE-Short Maintenance (Intermediate Risk Arm)]
+
+>[Subject Characteristics].[TREATMENT_ARM].[AML BFM 2012:ADxE- HAM- AI-haM- HAE-Standard Maintenance (Intermediate Risk Arm)]
+
+>[Subject Characteristics].[TREATMENT_ARM].[AML BFM 2012:CDxA- HAM Sorafenib, AI Sorafenib, haM Sorafenib, Short Maintenance (Intermediate Risk Arm)]
+
+>[Subject Characteristics].[TREATMENT_ARM].[AML BFM 2012:CDxA- HAM Sorafenib, AI Sorafenib, haM Sorafenib, Standard Maintenance (Intermediate Risk Arm)]
+
+>[Subject Characteristics].[TREATMENT_ARM].[AML BFM 2012:CDxA- HAM Sorafenib, AI Sorafenib, haM Sorafenib, Stem Cell Transplantation (High Risk Arm)]
+
+>[Subject Characteristics].[TREATMENT_ARM].[AML BFM 2012:CDxA-HAM, AI, haM, Stem Cell Transplantation(High Risk Arm)]
+
+>[Subject Characteristics].[TREATMENT_ARM].[AML BFM 2012:ADxE- HAM Sorafenib, AI Sorafenib, haM Sorafenib, Stem Cell Transplantation (High Risk Arm)]
+
+>[Subject Characteristics].[TREATMENT_ARM].[AML BFM 2012:ADxE- HAM, AI, haM, Stem Cell Transplantation (High Risk Arm)]
+
+>[Subject Characteristics].[TREATMENT_ARM].[SJCRH AML02:HDAC-ADE+GO-C1-C2-C3]
+
+>[Subject Characteristics].[TREATMENT_ARM].[SJCRH AML02:HDAC-ADE-C1-C2-C3]
+
+>[Subject Characteristics].[TREATMENT_ARM].[SJCRH AML02:HDAC-ADE+GO-SCT]
+
+>[Subject Characteristics].[TREATMENT_ARM].[SJCRH AML02:HDAC-ADE-SCT]
+
+>[Subject Characteristics].[TREATMENT_ARM].[SJCRH AML02:LDAC-ADE+GO-C1-C2-C3]
+
+>[Subject Characteristics].[TREATMENT_ARM].[SJCRH AML02:LDAC-ADE-C1-C2-C3]
+
+>[Subject Characteristics].[TREATMENT_ARM].[SJCRH AML02:LDAC-ADE+GO-SCT]
+
+>[Subject Characteristics].[TREATMENT_ARM].[SJCRH AML02:LDAC-ADE-SCT]
+
+>[Subject Characteristics].[TREATMENT_ARM].[PPLLSG AML-98:SR]
+
+>[Subject Characteristics].[TREATMENT_ARM].[PPLLSG AML-98:HR]
+
+>[Subject Characteristics].[TREATMENT_ARM].[JACLS AML99:LR]
+
+>[Subject Characteristics].[TREATMENT_ARM].[JACLS AML99:IR]
+
+>[Subject Characteristics].[TREATMENT_ARM].[JACLS AML99:HR]
+
+>[Subject Characteristics].[TREATMENT_ARM].[JPLSG AML05:JACLS]
+
 >[Time Period]
 
 >[Time Period].[HONEST_BROKER_SUBJECT_ID]
@@ -43,7 +341,11 @@ Added concepts:
 
 >[Survival Characteristics].[HONEST_BROKER_SUBJECT_ID]
 
+>[Survival Characteristics].[TIME_PERIOD_SUBMITTER_ID]
+
 >[Vitals And Anthropometrics].[HONEST_BROKER_SUBJECT_ID]
+
+>[Vitals And Anthropometrics].[TIME_PERIOD_SUBMITTER_ID]
 
 >[Function Test].[HONEST_BROKER_SUBJECT_ID]
 
@@ -69,8 +371,6 @@ Added concepts:
 
 >[Diagnosis].[DIAGNOSIS]
 
->[Diagnosis].[DIAGNOSIS].[Myeloid Sarcoma]
-
 >[Disease Site Assessment]
 
 >[Disease Site Assessment].[HONEST_BROKER_SUBJECT_ID]
@@ -86,6 +386,10 @@ Added concepts:
 >[Medication].[CATEGORY]
 
 >[Medication].[ADMINISTRATION_STATUS]
+
+
+
+
 
 >[Radiation Therapy].[HONEST_BROKER_SUBJECT_ID]
 
@@ -194,6 +498,12 @@ Removed concepts:
 
 >[Molecular Analysis].[COURSE_NUMBER]
 
+
+
+
+
+
+
 >[Disease Characteristics].[DISEASE_PHASE]
 
 >[Disease Characteristics].[DISEASE_PHASE_NUMBER]
@@ -268,15 +578,19 @@ Removed concepts:
 
 
 Modified Concepts:
->[aml_v1.7].[Disease Phase Timing].[DISEASE_PHASE_NUMBER] skos:exactMatch [aml_v2.0].[Time Period].[TIME_PERIOD_NUMBER]
+>[aml_v1.7].[Disease Phase Timing].[DISEASE_PHASE] skos:exactMatch [aml_v2.0].[Time Period].[DISEASE_PHASE]
 
->[aml_v1.7].[Disease Phase Timing].[AGE_AT_DISEASE_PHASE] skos:exactMatch [aml_v2.0].[Time Period].[AGE_AT_START]
+>[aml_v1.7].[Course Timing].[COURSE] skos:exactMatch [aml_v2.0].[Time Period].[COURSE]
 
->[aml_v1.7].[Disease Phase Timing].[YEAR_AT_DISEASE_PHASE] skos:exactMatch [aml_v2.0].[Time Period].[YEAR_AT_START]
+>[aml_v1.7].[Disease Phase Timing].[DISEASE_PHASE_NUMBER] skos:broadMatch [aml_v2.0].[Time Period].[TIME_PERIOD_NUMBER]
 
->[aml_v1.7].[Course Timing].[COURSE_NUMBER] skos:exactMatch [aml_v2.0].[Time Period].[TIME_PERIOD_NUMBER]
+>[aml_v1.7].[Disease Phase Timing].[AGE_AT_DISEASE_PHASE] skos:broadMatch [aml_v2.0].[Time Period].[AGE_AT_START]
 
->[aml_v1.7].[Course Timing].[AGE_AT_COURSE_START] skos:exactMatch [aml_v2.0].[Time Period].[AGE_AT_START]
+>[aml_v1.7].[Disease Phase Timing].[YEAR_AT_DISEASE_PHASE] skos:broadMatch [aml_v2.0].[Time Period].[YEAR_AT_START]
+
+>[aml_v1.7].[Course Timing].[COURSE_NUMBER] skos:broadMatch [aml_v2.0].[Time Period].[TIME_PERIOD_NUMBER]
+
+>[aml_v1.7].[Course Timing].[AGE_AT_COURSE_START] skos:broadMatch [aml_v2.0].[Time Period].[AGE_AT_START]
 
 >[aml_v1.7].[Course Timing].[AGE_AT_COURSE_END] skos:exactMatch [aml_v2.0].[Time Period].[AGE_AT_END]
 
@@ -396,6 +710,8 @@ Modified Concepts:
 
 >[aml_v1.7].[Disease Characteristics].[WHO_AML].[WHO >> Version 4 >> Myeloid Sarcoma] skos:exactMatch [aml_v2.0].[Diagnosis].[DIAGNOSIS].[WHO >> Version 4 >> Myeloid Sarcoma]
 
+>[aml_v1.7].[Myeloid Sarcoma Involvement].[MYELOID_SARCOMA].[Yes] skos:exactMatch [aml_v2.0].[Diagnosis].[WHO >> Version 4 >> Myeloid Sarcoma]
+
 >[aml_v1.7].[Disease Characteristics].[WHO_AML].[WHO >> Version 4 >> Myeloid Proliferations Related to Down Syndrome] skos:exactMatch [aml_v2.0].[Diagnosis].[DIAGNOSIS].[WHO >> Version 4 >> Myeloid Proliferations Related to Down Syndrome]
 
 >[aml_v1.7].[Disease Characteristics].[WHO_AML].[WHO >> Version 4 >> Transient Abnormal Myelopoiesis (TAM)] skos:exactMatch [aml_v2.0].[Diagnosis].[DIAGNOSIS].[WHO >> Version 4 >> Transient Abnormal Myelopoiesis (TAM)]
@@ -410,6 +726,14 @@ Modified Concepts:
 
 >[aml_v1.7].[Disease Characteristics].[CNS_DISEASE_STATUS].[CNS3] skos:exactMatch [aml_v2.0].[Diagnosis].[DIAGNOSIS].[CNS3]
 
+>[aml_v1.7].[Disease Characteristics].[MPAL] skos:exactMatch [aml_v2.0].[Diagnosis].[MPAL]
+
+>[aml_v1.7].[Disease Characteristics].[MLDS] skos:exactMatch [aml_v2.0].[Diagnosis].[MLDS]
+
+>[aml_v1.7].[Disease Characteristics].[TAM] skos:exactMatch [aml_v2.0].[Diagnosis].[TAM]
+
+>[aml_v1.7].[Disease Characteristics].[SECONDARY_AML] skos:exactMatch [aml_v2.0].[Diagnosis].[SECONDARY_AML]
+
 >[aml_v1.7].[Disease Characteristics].[DETECTION_METHOD] skos:exactMatch [aml_v2.0].[Disease Site Assessment].[DETECTION_METHOD]
 
 >[aml_v1.7].[Disease Characteristics].[DISEASE_SITE] skos:exactMatch [aml_v2.0].[Disease Site Assessment].[SITE]
@@ -420,14 +744,6 @@ Modified Concepts:
 
 >[aml_v1.7].[Myeloid Sarcoma Involvement].[MYELOID_SARCOMA_SITE].[Skin] skos:exactMatch [aml_v2.0].[Disease Site Assessment].[SITE].[Skin]
 
->[aml_v1.7].[Myeloid Sarcoma Involvement].[MYELOID_SARCOMA].[Yes] skos:exactMatch [aml_v2.0].[Diagnosis].[WHO >> Version 4 >> Myeloid Sarcoma]
-
->[aml_v1.7].[Disease Characteristics].[MPAL] skos:exactMatch [aml_v2.0].[Diagnosis].[MPAL]
-
->[aml_v1.7].[Disease Characteristics].[MLDS] skos:exactMatch [aml_v2.0].[Diagnosis].[MLDS]
-
->[aml_v1.7].[Disease Characteristics].[TAM] skos:exactMatch [aml_v2.0].[Diagnosis].[TAM]
-
 >[aml_v1.7].[Disease Characteristics].[DISEASE_SITE].[Bone Marrow] skos:exactMatch [aml_v2.0].[Disease Site Assessment].[SITE].[Bone Marrow]
 
 >[aml_v1.7].[Disease Characteristics].[DISEASE_SITE].[Central Nervous System] skos:exactMatch [aml_v2.0].[Disease Site Assessment].[SITE].[Central Nervous System]
@@ -435,6 +751,14 @@ Modified Concepts:
 >[aml_v1.7].[Disease Characteristics].[DISEASE_SITE].[Testes] skos:exactMatch [aml_v2.0].[Disease Site Assessment].[SITE].[Testes]
 
 >[aml_v1.7].[Disease Characteristics].[SITE] skos:exactMatch [aml_v2.0].[Disease Site Assessment].[SITE]
+
+
+
+
+
+
+
+
 
 >[aml_v1.7].[Total Dose] skos:exactMatch [aml_v2.0].[Medication]
 
