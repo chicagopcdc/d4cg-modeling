@@ -1,11 +1,11 @@
 INFO	Title	Hodgkin Lymphoma (HL) Data Dictionary
 INFO	Name	hl_v1.0
-INFO	Release Notes	https://github.com/chicagopcdc/d4cg-modeling/tree/main/pcdc/hl/hl_v1.0								
+INFO	Release Notes	https://github.com/chicagopcdc/d4cg-modeling/tree/main/pcdc/hl/hl_v1.0
 INFO	Parent Data Model	pcdc_v1.8
 INFO	License	Creative Commons Attribution-NonCommercial 4.0 International License (https://creativecommons.org/licenses/by-nc/4.0/)
 INFO	D4CG Data Modeling Wiki	https://docs.pedscommons.org/
 INFO	Disease Consortium Information	https://commons.cri.uchicago.edu/pcdc/
-INFO	Description	Hodgkin Lymphoma (HL) Data Dictionary
+INFO	Description	The HL data dictionary is a consensus data schema built by an international group of pediatric Hodgkin lymphoma experts and maintained by Data for the Common Good (D4CG) at the University of Chicago in collaboration with the Hodgkin Lymphoma Data Collaboration (NODAL). It is based on the collective requirements of its contributors.
 INFO	Total Variables	287
 
 RowType	VariableName	DataType	Tier	VariableDescription	VariableCode	PermissibleValue	ValueDescription	ValueCode	ImplementationNotes	Mappings
