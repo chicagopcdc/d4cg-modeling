@@ -1,0 +1,604 @@
+INFO	Title	Neuroblastoma (NBL) Data Dictionary								
+INFO	Name	nbl_v2.0								
+INFO	Release Notes									
+INFO	Parent Data Model	pcdc_v2.0								
+INFO	License	Creative Commons Attribution-NonCommercial 4.0 International License (https://creativecommons.org/licenses/by-nc/4.0/)								
+INFO	D4CG Data Modeling Wiki	https://docs.pedscommons.org/								
+INFO	Disease Consortium Information	https://commons.cri.uchicago.edu/pcdc/								
+INFO	Description	The NBL data dictionary is a consensus data schema built by an international group of pediatric neuroblastoma experts and maintained by Data for the Common Good (D4CG) at the University of Chicago in collaboration with the International Neuroblastoma Risk Group (INRG). It is based on the collective requirements of its contributors.								
+INFO	Total Variables									
+										
+RowType	VariableName	DataType	Tier	VariableDescription	VariableCode	PermissibleValue	ValueDescription	ValueCode	Implementation Notes	Mappings
+										
+DD	Protocol									
+TD	Subject Characteristics									
+TG	One row per subject per study									
+VD	HONEST_BROKER_SUBJECT_ID	String		Honest Broker Subject ID		_undefined_	_undefined_	_undefined_		
+VD	CONSORTIUM	Enum		The consortium under which this data is being contributed to the Pediatric Cancer Data Commons.	ncit:C61538	_undefined_	_undefined_	_undefined_		New VD
+PD						INRG	International Pediatric Acute Myeloid Leukemia Consortium (INTERACT). A consortium launched in 2021 as a collaboration between acute myeloid leukemia researchers from Children's Oncology Group, European Pediatric Acute Leukemia, Japan Children's Cancer Group, and St. Jude Children's Research Hospital. To date, INTERACT has identified 18 studies from 10 clinical trials research groups that can be contributed to the data commons, and its statisticians are actively working to harmonize clinical data from more than 6,000 individuals who have had pediatric cancer.	ncit:C192762		New PD
+VD	DISEASE_GROUP	Enum				_undefined_	_undefined_	_undefined_		New VD
+PD						NBL				New PD
+VD	DATA_CONTRIBUTOR_ID	Enum		Data Contributor ID		_undefined_	_undefined_	_undefined_		
+PD						COG				
+PD						GPOH				
+PD						JCCG				
+PD						SIOPEN				
+PD						SJCRH				
+VD	STUDY_ID	Enum		Study Identifier		_undefined_	_undefined_	_undefined_		
+PD						0892				
+PD						0896				
+PD						0901				
+PD						0902				
+PD						0911				
+PD						0914				
+PD						0924				
+PD						0925				
+PD						0926				
+PD						0927				
+PD						0931				
+PD						0935				
+PD						0936				
+PD						0937				
+PD						0961				
+PD						0962				
+PD						09709				
+PD						099				
+PD						321P1				
+PD						321P2				
+PD						321P3				
+PD						321P4				
+PD						323P				
+PD						3881				
+PD						3891				
+PD						3951				
+PD						461				
+PD						4941				
+PD						4941L				
+PD						7942				
+PD						8105				
+PD						8340				
+PD						8441				
+PD						8605				
+PD						8607				
+PD						8661				
+PD						8671				
+PD						8741				
+PD						8742				
+PD						8743				
+PD						8863				
+PD						8970				
+PD						9000				
+PD						9047				
+PD						9072				
+PD						9075				
+PD						9082				
+PD						9140				
+PD						9243				
+PD						9244				
+PD						9248				
+PD						9262				
+PD						9272				
+PD						9275				
+PD						9280				
+PD						9284				
+PD						9285				
+PD						9340				
+PD						9341				
+PD						9342				
+PD						9343				
+PD						9346				
+PD						9347				
+PD						9360				
+PD						9361				
+PD						9372				
+PD						9375				
+PD						9376				
+PD						9382				
+PD						9464				
+PD						9466				
+PD						9470				
+PD						9571				
+PD						9572				
+PD						9579				
+PD						9581				
+PD						9640				
+PD						9670				
+PD						9675				
+PD						9900				
+PD						9907				
+PD						A0935A				
+PD						A09713				
+PD						A3961				
+PD						A3973				
+PD						AADM01P1				
+PD						AALL0232				
+PD						AALL0331				
+PD						AALL03B1				
+PD						AALL0434				
+PD						AALL08B1				
+PD						AAML00P2				
+PD						AAML03P1				
+PD						AAML0531				
+PD						AAML05P1				
+PD						AAML07P1				
+PD						AAML1031				
+PD						AB9804				
+PD						ABTR01B1				
+PD						ABTR04B1				
+PD						ACCL0331				
+PD						ACCL0423				
+PD						ACCL0431				
+PD						ACCL05C1				
+PD						ACCL0934				
+PD						ACCL0935				
+PD						ACCL1031				
+PD						ACCL1032				
+PD						ACCL1034				
+PD						ACCL15N1CD				
+PD						ACCL1633				
+PD						ACCL21C2				
+PD						ACNS02B3				
+PD						ADVL0016				
+PD						ADVL0017				
+PD						ADVL0018				
+PD						ADVL0122				
+PD						ADVL0211				
+PD						ADVL0212				
+PD						ADVL0214				
+PD						ADVL0215				
+PD						ADVL0314				
+PD						ADVL0316				
+PD						ADVL0413				
+PD						ADVL0414				
+PD						ADVL0416				
+PD						ADVL0421				
+PD						ADVL0516				
+PD						ADVL0517				
+PD						ADVL0524				
+PD						ADVL0525				
+PD						ADVL0612				
+PD						ADVL06B1				
+PD						ADVL0714				
+PD						ADVL0812				
+PD						ADVL0813				
+PD						ADVL0816				
+PD						ADVL0821				
+PD						ADVL0911				
+PD						ADVL0912				
+PD						ADVL0916				
+PD						ADVL0918				
+PD						ADVL0921				
+PD						ADVL1011				
+PD						ADVL1013				
+PD						ADVL1014				
+PD						ADVL1111				
+PD						ADVL1112				
+PD						ADVL1115				
+PD						ADVL1211				
+PD						ADVL1212				
+PD						ADVL1213				
+PD						ADVL1312				
+PD						ADVL1314				
+PD						ADVL1315				
+PD						ADVL1411				
+PD						ADVL1412				
+PD						ADVL1414				
+PD						ADVL1416				
+PD						ADVL1513				
+PD						ADVL1522				
+PD						ADVL1615				
+PD						ADVL1622				
+PD						AEPI07N1				
+PD						AEWS07B1				
+PD						AGCT1531				
+PD						AHEP1531				
+PD						ALTE03N1				
+PD						ALTE05N1				
+PD						ALTE15N2				
+PD						ALTE1621				
+PD						ANBL0032				
+PD						ANBL00B1				
+PD						ANBL00P1				
+PD						ANBL00P2				
+PD						ANBL00P3				
+PD						ANBL02P1				
+PD						ANBL0321				
+PD						ANBL0322				
+PD						ANBL0421				
+PD						ANBL0531				
+PD						ANBL0532				
+PD						ANBL0621				
+PD						ANBL0931				
+PD						ANBL09P1				
+PD						ANBL1021				
+PD						ANBL1221				
+PD						ANBL1232				
+PD						ANBL12P1				
+PD						ANBL1531				
+PD						ANBL17P1				
+PD						ANBL1821				
+PD						ANBL19P1				
+PD						ANUR0631				
+PD						ANUR1131				
+PD						AOST06B1				
+PD						APEC14B1				
+PD						APEC1621E				
+PD						APEC1621F				
+PD						APEC1621H				
+PD						APEC1621I				
+PD						APEC1621SC				
+PD						AREN0321				
+PD						AREN03B2				
+PD						AS942				
+PD						AS972				
+PD						AS9801				
+PD						B003				
+PD						B903				
+PD						B904				
+PD						B925				
+PD						B947				
+PD						B953				
+PD						B954				
+PD						B973				
+PD						D9501				
+PD						D9602				
+PD						E04				
+PD						E15				
+PD						E18				
+PD						ENSG5				
+PD						I03				
+PD						LNESG1				
+PD						N891				
+PD						NB2004-HR				
+PD						NB2005				
+PD						NB2008				
+PD						NB2012				
+PD						NB84				
+PD						NB8814				
+PD						NB91				
+PD						NB97				
+PD						P9462				
+PD						P9480				
+PD						P9485				
+PD						P9641				
+PD						P9749				
+PD						P9761				
+PD						P9772				
+PD						P9851				
+PD						P9963				
+PD						P9972				
+PD						PEPN2011				
+PD						PEPN2111				
+PD						POG-8844				
+PD						R9702				
+PD						S31				
+PD						S901				
+PD						S912				
+PD						S921				
+PD						SIOPEN HR-NBL1				
+PD						SIOPEN-EUNB				
+PD						X0942				
+VD	TREATMENT_ARM	Enum		Assigned Treatment Arm by Intention-To-Treat		_undefined_	_undefined_	_undefined_		
+PD						Arm A				
+PD						Arm B				
+PD						Arm C				
+PD						Arm D				
+PD						Arm E				
+PD						Regimen A				
+PD						Regimen B				
+PD						Assigned to Regimen B				
+PD						Randomized to Regimen B				
+PD						Baseline Treatment with 2 cycles				
+PD						Baseline Treatment with 4 cycles				
+PD						Baseline Treatment with 8 cycles				
+PD						Randomized conventional chemotherapy				
+PD						Non-randomized conventional chemotherapy				
+PD						Randomized to Single HSCT				
+PD						Non-randomly assigned Single HSCT				
+PD						Randomized to Tandem HSCT				
+PD						Randomized ablative chemotherapy with BMT				
+PD						Not Randomized				
+PD						R0				
+PD						R1				
+PD						R2				
+PD						R3				
+PD						cisRA				
+PD						No cisRA				
+PD						RA only				
+PD						RA+anti-GD2				
+PD						Purged				
+PD						Unpurged				
+VD	AGE_AT_CENSOR_STATUS	Integer		The subject's age (in days) at the time of censor status recording.		_undefined_	_undefined_	_undefined_		
+VD	CENSOR_STATUS	Enum		Censor Status		_undefined_	_undefined_	_undefined_		
+PD						Subject is censored (i.e. has had no events(s))				
+PD						Subject has had one or more events				
+PD						Unknown				
+PD						Not Reported				
+										
+										
+DD	Protocol									
+TD	Time Period									New TD
+TG	One row per subject per time period type									
+VD	HONEST_BROKER_SUBJECT_ID	String		The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_		New VD
+VD	SUBMITTER_ID	String		An ID provided by the data contributor that identifies a unique time period and that is referenced throughout subsequent tabels in the TIME_PERIOD_SUBMITTER_ID variables.		_undefined_	_undefined_	_undefined_		New VD
+VD	PARENT_SUBMITTER_ID	String		The SUBMITTER_ID of the time period in whose context a subsequent time period takes place. For example, multiple treatment courses occuring the "Initial Diagnosis" period would each reference the SUBMITTER_ID of the "Initial Diagnosis" period as their PARENT_SUBMITTER_ID.		_undefined_	_undefined_	_undefined_		New VD
+VD	TIME_PERIOD_TYPE	Enum		The type of time period being reported.		_undefined_	_undefined_	_undefined_		New VD
+PD						Disease Phase	The stage or period of an individual's disease.	ncit:C168878		New PD
+VD	DISEASE_PHASE	Enum		The phase of the cancer treatment process during which relevant observations were recorded. This variable is used across domains to frame the timing of these longitudinal observations and reduce the number of redundant variables needed to report similar concepts (see "Disease Phase Timing and Course Table" in the documentation for additional guidance).	ncit:C168878	_undefined_	_undefined_	_undefined_		[nbl_v1.1].[Disease Phase Timing].[DISEASE_PHASE] skos:exactMatch [nbl_v2.0].[Time Period].[DISEASE_PHASE]
+PD						Initial Diagnosis	The first diagnosis of the individual's condition.	ncit:C156813		
+PD						Refractory	Not responding to treatment.	ncit:C38014		
+PD						Relapse	The return of a disease after a period of remission.	ncit:C38155		
+VD	TIME_PERIOD_NUMBER	Integer		This variable indicates the ordinal numbering of time periods of the same TIME_PERIOD_TYPE within its various subgroups (e.g., Relapse 1, Relapse 2, Relapse 3, etc.). The observations across domains can therefore be organized longitudinally without the need for specific dates.		_undefined_	_undefined_	_undefined_		[nbl_v1.1].[Disease Phase Timing].[DISEASE_PHASE_NUMBER] skos:exactMatch [nbl_v2.0].[Time Period].[TIME_PERIOD_NUMBER]
+VD	YEAR_AT_START	Integer		The year at the start of the indicated time period.		_undefined_	_undefined_	_undefined_		[nbl_v1.1].[Disease Phase Timing].[AGE_AT_DISEASE_PHASE] skos:exactMatch [nbl_v2.0].[Time Period].[AGE_AT_START]
+VD	AGE_AT_START	Integer		The age (in days) of the patient at the start of the reported time period.		_undefined_	_undefined_	_undefined_		[nbl_v1.1].[Disease Phase Timing].[YEAR_AT_DISEASE_PHASE] skos:exactMatch [nbl_v2.0].[Time Period].[YEAR_AT_START]
+										
+										
+DD	Demographics									
+TD	Demographics									
+TG	One row per subject									
+VD	HONEST_BROKER_SUBJECT_ID	String		The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_		New VD
+VD	SEX	Enum		Biological Sex		_undefined_	_undefined_	_undefined_		
+PD						Male				
+PD						Female				
+PD						Unknown				
+PD						Not Reported				
+VD	RACE	Enum		Race		_undefined_	_undefined_	_undefined_		
+PD						American Indian or Alaska Native				
+PD						Asian				
+PD						Black or African American				
+PD						Multiracial				
+PD						Native Hawaiian or Other Pacific Islander				
+PD						White				
+PD						Unknown				
+PD						Not Reported				
+VD	ETHNICITY	Enum		Ethnicity		_undefined_	_undefined_	_undefined_		
+PD						Hispanic or Latino				
+PD						Not Hispanic or Latino				
+PD						Unknown				
+PD						Not Reported				
+										
+										
+DD	Demographics									
+TD	Survival Characteristics									
+TG	One row per subject per cause of death, per treatment type, per cause of death detail									
+VD	HONEST_BROKER_SUBJECT_ID	String		The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_		New VD
+VD	AGE_AT_LKSS	Integer		Age in Days at Last Known Survival Status		_undefined_	_undefined_	_undefined_		
+VD	TIME_PERIOD_SUBMITTER_ID	String		This is the SUBMITTER_ID of the time period (defined in the "Time Period" table) during which this observation takes place.		_undefined_	_undefined_	_undefined_		New VD
+VD	LKSS	Enum		Last Known Survival Status		_undefined_	_undefined_	_undefined_		
+PD						Alive				
+PD						Dead				
+VD	CAUSE_OF_DEATH	Enum		Cause of Death		_undefined_	_undefined_	_undefined_		
+PD						Disease Progression				
+PD						Treatment-Related Mortality				
+PD						Other				
+										
+										
+DD	Testing									
+TD	Laboratory Test									[nbl_v1.1].[Labs] skos:exactMatch [nbl_v2.0].[Laboratory Test]
+TG	One row per subject per test per result									
+VD	HONEST_BROKER_SUBJECT_ID	String		The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_		New VD
+VD	AGE_AT_LAB	Integer		Age in Days at Laboratory Test		_undefined_	_undefined_	_undefined_		
+VD	TIME_PERIOD_SUBMITTER_ID	String		This is the SUBMITTER_ID of the time period (defined in the "Time Period" table) during which this observation takes place.		_undefined_	_undefined_	_undefined_		New VD
+VD	TEST	Enum		Laboratory Test		_undefined_	_undefined_	_undefined_		[nbl_v1.1].[Labs].[LAB_TEST] skos:exactMatch [nbl_v2.0].[Laboratory Test].[TEST]
+PD						LDH				
+PD						Ferritin				
+VD	RESULT_NUMERIC	Integer		The numeric result of the lab test.		_undefined_	_undefined_	_undefined_		[nbl_v1.1].[Labs].[LAB_RESULT_NUMERIC] skos:exactMatch [nbl_v2.0].[Laboratory Test].[RESULT_NUMERIC]
+										
+										
+DD	Testing									
+TD	Molecular Analysis									
+TG	One row per subject per molecular analysis method per molecular abnormality									
+VD	HONEST_BROKER_SUBJECT_ID	String		The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_		New VD
+VD	AGE_AT_MOLECULAR_ANALYSIS	Integer		Age in Days at Molecular Analysis		_undefined_	_undefined_	_undefined_		
+VD	TIME_PERIOD_SUBMITTER_ID	String		This is the SUBMITTER_ID of the time period (defined in the "Time Period" table) during which this observation takes place.		_undefined_	_undefined_	_undefined_		New VD
+VD	DNA_INDEX	Enum		DNA Index (categorical)		_undefined_	_undefined_	_undefined_	If multiple statuses apply, include one observation per status.	
+PD						DNA Index </= 1 (Hypodiploid, Diploid)				
+PD						DNA Index >1 (Hyperdiploid)				
+PD						Unknown				
+PD						Not Reported				
+VD	DNA_INDEX_NUMERIC	Integer		DNA Index (numeric)		_undefined_	_undefined_	_undefined_		
+VD	MOLECULAR_ABNORMALITY	Enum		Molecular Abnormality		_undefined_	_undefined_	_undefined_	If multiple molecular abnormalities, include one observation per molecular abnormality.	
+PD						Loss of Chromosome 11q (Deletion)				
+PD						Loss of Chromosome 1p (Deletion)				
+PD						17q Gain				
+PD						ALK Mutation				
+PD						ALK Rearrangement				
+PD						ALK Copy Number Gain				
+PD						ALK Copy Number Loss				
+PD						ALK Amplification				
+PD						p.F1174L				
+PD						p.R1275L				
+PD						MYCN Amplification				
+PD						Other				
+PD						Unknown				
+PD						Not Reported				
+VD	MOLECULAR_ABNORMALITY_RESULT	Enum		Molecular Abnormality Result		_undefined_	_undefined_	_undefined_		
+PD						Negative				
+PD						Positive				
+PD						Unknown				
+VD	CHROMOSOME	String		Chromosome		_undefined_	_undefined_	_undefined_		
+VD	GENE1	String		Gene 1		_undefined_	_undefined_	_undefined_		
+VD	GENE2	String		Gene 2		_undefined_	_undefined_	_undefined_		
+VD	VARIANT_TYPE	Enum		Variant Type		_undefined_	_undefined_	_undefined_		
+PD						Translocation				
+PD						Inversion				
+PD						Mutation				
+PD						Single Nucleotide Variant				
+PD						Copy Number Alteration				
+PD						Rearrangement				
+PD						Deletion				
+PD						Amplification				
+PD						Gain				
+PD						Other				
+PD						Unknown				
+PD						Not Reported				
+VD	COPY_NUMBER_STATUS	Enum		Copy Number Status		_undefined_	_undefined_	_undefined_		
+PD						Gain				
+PD						Loss				
+PD						Amplification				
+PD						No gain/loss/amplification				
+PD						Unknown				
+VD	AA_MUTATION	String		Amino Acid Mutation (p.F1174L; p.R1275L)		_undefined_	_undefined_	_undefined_		
+VD	ALLELIC_RATIO	Integer		Allelic Ratio		_undefined_	_undefined_	_undefined_	Only fill in this variable if the information is available.	
+										
+										
+DD	Disease Attributes									
+TD	Diagnosis									
+TG	One row per subject per diagnosis									
+VD	HONEST_BROKER_SUBJECT_ID	String	1 - contributors must include, regardless of the resource cost	The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_		
+VD	AGE_AT_DIAG_ASSESSMENT	Integer	2 - contributors should prioritize inclusion if resources are available	The age (in days) of the subject at the time of this diagnostic assessment.	ncit:C175004	_undefined_	_undefined_	_undefined_		
+VD	TIME_PERIOD_SUBMITTER_ID	String	2 - contributors should prioritize inclusion if resources are available	This is the SUBMITTER_ID of the time period (defined in the "Time Period" table) during which this observation takes place.		_undefined_	_undefined_	_undefined_		
+VD	DIAGNOSIS_BASIS	Enum	2 - contributors should prioritize inclusion if resources are available	The type of diagnosis used for determining the medical condition.		_undefined_	_undefined_	_undefined_		
+PD						Histological	Pertaining to the combined microscopic physical features of cells and their surrounding extracellular environment in tissues.	ncit:C25526		
+VD	DIAGNOSIS	Enum	2 - contributors should prioritize inclusion if resources are available	The investigation, analysis and recognition of the presence and nature of disease, condition, or injury from expressed signs and symptoms; also, the scientific determination of any kind; the concise results of such an investigation.	ncit:C15220	_undefined_	_undefined_	_undefined_		
+PD						Neuroblastoma (Schwannian Stroma Poor)				
+PD						Ganglioneuroblastoma, Intermixed (Schwannian Stroma-Rich)	A ganglioneuroblastoma characterized by the presence of neuroblastic cells in a Schwannian stroma, without the presence of hemorrhagic neuroblastic nodules.	ncit:C42057		
+PD						Ganglioneuroma (Schwannian Stroma-Dominant), Maturing Subtype	A ganglioneuroma characterized by the presence of differentiating neuroblasts, maturing and mature ganglion cells.	ncit:C42064		
+PD						Ganglioneuroblastoma, Nodular (Composite)	A ganglioneuroblastoma characterized by the presence of neuroblastic cells in a Schwannian stroma, and the formation of hemorrhagic neuroblastic nodules.	ncit:C42058		
+VD	HISTOLOGY_GRADE	Enum	2 - contributors should prioritize inclusion if resources are available	The degree of abnormality of cancer cells, a measure of differentiation, the extent to which cancer cells are similar in appearance and function to healthy cells of the same tissue type. The degree of differentiation often relates to the clinical behavior of the particular tumor. Based on the microscopic findings, tumor grade is commonly described by one of four degrees of severity. Histopathologic grade of a tumor may be used to plan treatment and estimate the future course, outcome, and overall prognosis of disease. Certain types of cancers, such as soft tissue sarcoma, primary brain tumors, lymphomas, and breast have special grading systems.	ncit:C18000	_undefined_	_undefined_	_undefined_		
+PD						Undifferentiated or Poorly Differentiated				
+PD						Differentiating				
+PD						Unknown				
+PD						Not Reported	Reported as unknown by the data contributor.	ncit:C17998	Use for "Cannot be determined"	
+VD	REVISED_INPC	Enum	2 - contributors should prioritize inclusion if resources are available	A revised 2021 COG neuroblastoma risk classifier (version 2) that uses the INRGSS and incorporates SCAs has been adopted to prospectively define COG clinical trial eligibility and treatment assignment.		_undefined_	_undefined_	_undefined_		
+PD						Favorable	Expressing something as positive, advantageous or desired.	ncit:C102560		
+PD						Unfavorable	Expressing something as negative, undesired or adverse.	ncit:C102561		
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998		
+PD						Not Reported	Not provided or available.	ncit:C43234		
+										
+										
+DD	Disease Attributes									
+TD	Staging									
+TG	One row per subject per staging assessment									
+VD	HONEST_BROKER_SUBJECT_ID	String	1 - contributors must include, regardless of the resource cost	The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_		New VD
+VD	AGE_AT_STAGING	Integer	n/a	Age in Days of Staging Assessment		_undefined_	_undefined_	_undefined_		
+VD	TIME_PERIOD_SUBMITTER_ID	String	2 - contributors should prioritize inclusion if resources are available	This is the SUBMITTER_ID of the time period (defined in the "Time Period" table) during which this observation takes place.		_undefined_	_undefined_	_undefined_		New VD
+VD	STAGE	Enum	n/a	Stage		_undefined_	_undefined_	_undefined_	Tied to stage system.	
+PD						INSS, Stage 1	A relatively early stage of cancer that is usually small and contained within the organ it started in, and hasn't spread to other parts of the body			
+PD						INSS, Stage 2a				
+PD						INSS, Stage 2b				
+PD						INSS, Stage 3				
+PD						INSS, Stage 4				
+PD						INSS, Stage 4s				
+PD						EVANS, Stage I	Invasive cancer confined to the original anatomic site of growth without lymph node involvement.	C27966		
+PD						EVANS, Stage II	Invasive cancer more extensive than stage I, usually involving local lymph nodes without spread to distant anatomic sites.	C28054		
+PD						EVANS, Stage III	Locally advanced cancer that has spread to nearby organs but not to distant anatomic sites.	C27970		
+PD						EVANS, Stage IV	Cancer that has spread to distant anatomic sites beyond its original site of growth.	C27971		
+PD						EVANS, Stage IVs				
+PD						INRGSS, Stage L1				
+PD						INRGSS, Stage L2				
+PD						INRGSS, Stage M				
+PD						INRGSS, Stage MS				
+PD						Unknown				
+PD						Not Reported				
+										
+										
+DD	Disease Attributes									
+TD	Tumor Assessment									
+TG	One row per subject per tumor assessment per tumor site									
+VD	AGE_AT_TUMOR_ASSESSMENT	Integer	n/a	Age in Days at Tumor Assessment		_undefined_	_undefined_	_undefined_		
+VD	DISEASE_PHASE	Enum	n/a	Disease Phase		_undefined_	_undefined_	_undefined_		
+PD						Initial Diagnosis				
+PD						Relapse				
+PD						Progression				
+VD	DISEASE_PHASE_NUMBER	Integer	n/a	Disease Phase Number		_undefined_	_undefined_	_undefined_		
+VD	TUMOR_STATE	Enum	n/a	A condition or state of a tumor at a particular time and a particular tumor site.		_undefined_	_undefined_	_undefined_		
+PD						Present				
+PD						Absent				
+PD						Unknown				
+VD	TUMOR_CLASSIFICATION	Enum	n/a	Tumor Classification		_undefined_	_undefined_	_undefined_		
+PD						Primary				
+PD						Metastatic				
+PD						Unknown				
+PD						Not Reported				
+VD	TUMOR_SITE	Enum	n/a	Tumor Site		_undefined_	_undefined_	_undefined_	If there were multiple primary sites, include one observation per primary site.	
+PD						Central Nervous System				
+PD						Distant Lymph Nodes				
+PD						Liver				
+PD						Lung				
+PD						Adrenal Gland				
+PD						Abdomen				
+PD						Neck				
+PD						Thorax				
+PD						Pelvis				
+PD						Bone Marrow				
+PD						Bone				
+PD						Skin				
+VD	TUMOR_SITE_OTHER	String	n/a	Tumor Site Other		_undefined_	_undefined_	_undefined_		
+										
+										
+DD	Disease Attributes									
+TD	Disease Site Assessment									[nbl_v1.1].[Tumor Assessment] skos:exactMatch [nbl_v2.0].[Disease Site Assessment]
+TG	One row per subject per evaluation and per lesion (local, regional or metastatic)									
+VD	HONEST_BROKER_SUBJECT_ID	String	1 - contributors must include, regardless of the resource cost	The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_		New VD
+VD	AGE_AT_DISEASE_SITE_ASSESSMENT	Integer	2 - contributors should prioritize inclusion if resources are available	The age (in days) of the subject at the time of this disease site assessment.	ncit:C174997	_undefined_	_undefined_	_undefined_		[nbl_v1.1].[Tumor Assessment].[AGE_AT_TUMOR_ASSESSMENT] skos:exactMatch [nbl_v2.0].[Disease Site Assessment].[AGE_AT_DISEASE_SITE_ASSESSMENT]
+VD	TIME_PERIOD_SUBMITTER_ID	String	2 - contributors should prioritize inclusion if resources are available	This is the SUBMITTER_ID of the time period (defined in the "Time Period" table) during which this observation takes place.		_undefined_	_undefined_	_undefined_		New VD
+VD	STATUS	Enum	2 - contributors should prioritize inclusion if resources are available	A condition or state of a tumor at a particular time and a particular tumor site.	ncit:C96643	_undefined_	_undefined_	_undefined_		[nbl_v1.1].[Tumor Assessment].[TUMOR_STATE] skos:exactMatch [nbl_v2.0].[Disease Site Assessment].[STATUS]
+PD						Present	A finding of abnormality following an examination or observation confirming something, such as the presence of a disease, condition, or microorganism.	ncit:C25626		
+PD						Absent	Not existing in a specified place at a specified time.	ncit:C48190		
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998		
+VD	CLASSIFICATION	Enum	2 - contributors should prioritize inclusion if resources are available	The classification of a tumor based primarily on histopathological characteristics.	ncit:C174459	_undefined_	_undefined_	_undefined_		[nbl_v1.1].[Tumor Assessment].[TUMOR_CLASSIFICATION] skos:exactMatch [nbl_v2.0].[Disease Site Assessment].[CLASSIFICATION]
+PD						Primary	A tumor at the original site of origin.	ncit:C8509		
+PD						Metastatic	A term referring to the clinical or pathologic observation of a tumor extension from its original site of growth to another anatomic site.	ncit:C14174		
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998		
+PD						Not Reported	Not provided or available.	ncit:C43234		
+VD	SITE	Enum	2 - contributors should prioritize inclusion if resources are available	The anatomical site on which the disease is assessed.	ncit:C166232	_undefined_	_undefined_	_undefined_		[nbl_v1.1].[Tumor Assessment].[TUMOR_SITE] skos:exactMatch [nbl_v2.0].[Disease Site Assessment].[SITE]
+PD						Central Nervous System	The part of the nervous system that consists of the brain, spinal cord, and meninges.	ncit:C12438		
+PD						Distant Lymph Nodes	A bean-shaped organ surrounded by a connective tissue capsule. It is part of the lymphatic system and is found throughout the body. It is composed predominantly of lymphocytes and its main function is immune protection.	ncit:C12745		
+PD						Liver	A triangular-shaped organ located under the diaphragm in the right hypochondrium. It is the largest internal organ of the body, weighting up to 2 kg. Metabolism and bile secretion are its main functions. It is composed of cells which have the ability to regenerate.	ncit:C12392		
+PD						Lung	One of a pair of viscera occupying the pulmonary cavities of the thorax, the organs of respiration in which aeration of the blood takes place. As a rule, the right lung is slightly larger than the left and is divided into three lobes (an upper, a middle, and a lower or basal), while the left has two lobes (an upper and a lower or basal). Each lung is irregularly conical in shape, presenting a blunt upper extremity (the apex), a concave base following the curve of the diaphragm, an outer convex surface (costal surface), an inner or mediastinal surface (mediastinal surface), a thin and sharp anterior border, and a thick and rounded posterior border.	ncit:C12468		
+PD						Adrenal Gland	A flattened, roughly triangular body resting upon the upper end of each kidney; it is one of the ductless glands furnishing internal secretions (epinephrine and norepinephrine from the medulla and steroid hormones from the cortex).	ncit:C12666		
+PD						Abdomen	The cavity located between the lungs and pelvis. It contains the lower esophagus, stomach, pancreas, intestines, liver, gallbladder and spleen.	ncit:C12664		
+PD						Neck	The region that connects the head to the rest of the body.	ncit:C13063		
+PD						Thorax	The division of the body lying between the neck and the abdomen.	ncit:C12799	Only to be used for "Primary" tumors	
+PD						Pelvis	The bony, basin-shaped structure formed by the hipbones and the base of the backbone supporting the lower limbs in humans.	ncit:C12767		
+PD						Bone Marrow	The tissue occupying the spaces of bone. It consists of blood vessel sinuses and a network of hematopoietic cells which give rise to the red cells, white cells, and megakaryocytes.	ncit:C12431		
+PD						Bone	The structural organ comprised of specialized connective tissue that forms the skeletal components of the body.	ncit:C12366		
+PD						Skin	An organ that constitutes the external surface of the body. It consists of the epidermis, dermis, and skin appendages.	ncit:C12470		
+										
+										
+DD	Disease Attributes									
+TD	Disease Characteristics									
+TG	One row per subject per disease characteristic									
+VD	HONEST_BROKER_SUBJECT_ID	String	1 - contributors must include, regardless of the resource cost	The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_		New VD
+VD	TIME_PERIOD_SUBMITTER_ID	String	2 - contributors should prioritize inclusion if resources are available	This is the SUBMITTER_ID of the time period (defined in the "Time Period" table) during which this observation takes place.		_undefined_	_undefined_	_undefined_		New VD
+VD	INITIAL_TREATMENT_CATEGORY	Enum	n/a	The category of initial treatment that the patient receive for their disease.		_undefined_	_undefined_	_undefined_		
+PD						None (observation)				
+PD						Surgery alone				
+PD						Conventional-dose chemotherapy (2-8 cycles) plus surgery				
+PD						Intensive multi-modality therapy: specific type unknown				
+PD						Intensive multi-modality therapy: no stem cell or bone marrow transplant				
+PD						Intensive multi-modality therapy: plus stem cell or bone marrow transplant				
+PD						Intensive multi-modality therapy: plus stem cell or bone marrow transplant and anti-GD2 antibody				
+PD						Unknown				
+VD	MKI	Enum	n/a	MKI (Revised INPC)		_undefined_	_undefined_	_undefined_		
+PD						Low (<2% or <100/5,000 cells)				
+PD						Intermediate (2-4% or 100 to <200/5,000 cells)				
+PD						High (>4% or >200/5,000 cells)				
+PD						Unknown				
+PD						Not Reported				
+										
+										
+DD	Events									
+TD	Subsequent Malignant Neoplasm									
+TG	One row per subject per secondary malignancy									
+VD	HONEST_BROKER_SUBJECT_ID	String	1 - contributors must include, regardless of the resource cost	The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_		New VD
+VD	AGE_AT_SMN	Integer	n/a	Age in Days at Secondary Malignant Neoplasm		_undefined_	_undefined_	_undefined_		
+VD	TIME_PERIOD_SUBMITTER_ID	String	2 - contributors should prioritize inclusion if resources are available	This is the SUBMITTER_ID of the time period (defined in the "Time Period" table) during which this observation takes place.		_undefined_	_undefined_	_undefined_		New VD
+VD	SMN_STATUS	Enum	3 - contributors shouldn’t prioritize inclusion, but can include if resources are available	Was the indicated subsequent malignant neoplasm found in the patient?		_undefined_	_undefined_	_undefined_		[nbl_v1.1].[Secondary Malignant Neoplasm].[SMN] skos:exactMatch [nbl_v2.0].[Subsequent Malignant Neoplasm].[SMN_STATUS]
+PD						Present	A finding of abnormality following an examination or observation confirming something, such as the presence of a disease, condition, or microorganism.	ncit:C25626		
+PD						Absent	Not existing in a specified place at a specified time.	ncit:C48190		
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998		
+PD						Not Reported	Not provided or available.	ncit:C43234		
+VD	MORPH_CODE	String	3 - contributors shouldn’t prioritize inclusion, but can include if resources are available	The morphology code describes the cell type of the tumor and its biologic activity.		_undefined_	_undefined_	_undefined_		[nbl_v1.1].[Secondary Malignant Neoplasm].[SMN_MORPH_SNO] skos:broadMatch [nbl_v2.0].[Subsequent Malignant Neoplasm].[MORPH_CODE] |  [nbl_v1.1].[Secondary Malignant Neoplasm].[SMN_MORPH_ICDO] skos:broadMatch [nbl_v2.0].[Subsequent Malignant Neoplasm].[MORPH_CODE]
+VD	MORPH_CODE_DISPLAY	String	3 - contributors shouldn’t prioritize inclusion, but can include if resources are available	The display text for MORPH_CODE.		_undefined_	_undefined_	_undefined_		[nbl_v1.1].[Secondary Malignant Neoplasm].[SMN_MORPH_TXT] skos:exactMatch [nbl_v2.0].[Subsequent Malignant Neoplasm].[MORPH_CODE_DISPLAY] 
+VD	MORPH_CODE_SYSTEM	Enum	3 - contributors shouldn’t prioritize inclusion, but can include if resources are available	The coding system for the code used in MORPH_CODE.		_undefined_	_undefined_	_undefined_		New VD
+PD						ICD-O	A code for the primary site of a tumor being reported using either ICD-O-2 or ICD-O-3.	ncit:C160903		New PD
+PD						SNOMED	A multiaxial, hierarchical classification system for diseases in man developed by the College of American Pathologists.	ncit:C53489		New PD
+VD	MORPH_CODE_SYSTEM_VERSION	String	3 - contributors shouldn’t prioritize inclusion, but can include if resources are available	The version of the coding system indicated in MORPH_CODE_SYSTEM.		_undefined_	_undefined_	_undefined_		New VD
+VD	TOP_CODE	String	3 - contributors shouldn’t prioritize inclusion, but can include if resources are available	The topography code describes the site of origin of the neoplasm.		_undefined_	_undefined_	_undefined_		[nbl_v1.1].[Secondary Malignant Neoplasm].[SMN_TOP_SNO] skos:broadMatch [nbl_v2.0].[Subsequent Malignant Neoplasm].[TOP_CODE] |  [nbl_v1.1].[Secondary Malignant Neoplasm].[SMN_TOP_ICDO] skos:broadMatch [nbl_v2.0].[Subsequent Malignant Neoplasm].[TOP_CODE]
+VD	TOP_CODE_DISPLAY	String	3 - contributors shouldn’t prioritize inclusion, but can include if resources are available	The display text for TOP_CODE.		_undefined_	_undefined_	_undefined_		[nbl_v1.1].[Secondary Malignant Neoplasm].[SMN_TOP_TXT] skos:exactMatch [nbl_v2.0].[Subsequent Malignant Neoplasm].[TOP_CODE_DISPLAY] 
+VD	TOP_CODE_SYSTEM	Enum	3 - contributors shouldn’t prioritize inclusion, but can include if resources are available	The coding system for the code used in TOP_CODE.		_undefined_	_undefined_	_undefined_		New VD
+PD						ICD-O	A code for the primary site of a tumor being reported using either ICD-O-2 or ICD-O-3.	ncit:C160903		New PD
+PD						SNOMED	A multiaxial, hierarchical classification system for diseases in man developed by the College of American Pathologists.	ncit:C53489		New PD
+VD	TOP_CODE_SYSTEM_VERSION	String	3 - contributors shouldn’t prioritize inclusion, but can include if resources are available	The version of the coding system indicated in TOP_CODE_SYSTEM.		_undefined_	_undefined_	_undefined_		New VD
