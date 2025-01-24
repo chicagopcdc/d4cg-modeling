@@ -1,466 +1,466 @@
-INFO	Title	Rhabdomyosarcoma (RMS) Data Dictionary									
-INFO	Name	rms_v1.0									
-INFO	Release Notes	https://github.com/chicagopcdc/d4cg-modeling/tree/main/pcdc/rms/rms_v1.0									
-INFO	Parent Data Model	pcdc_v1.8									
-INFO	License	Creative Commons Attribution-NonCommercial 4.0 International License (https://creativecommons.org/licenses/by-nc/4.0/)									
-INFO	D4CG Data Modeling Wiki	https://docs.pedscommons.org/									
-INFO	Disease Consortium Information	https://commons.cri.uchicago.edu/pcdc/									
-INFO	Description	Rhabdomyosarcoma (RMS) Data Dictionary									
-INFO	Total Variables	63									
-											
+INFO	Title	Rhabdomyosarcoma (RMS) Data Dictionary
+INFO	Name	rms_v1.0
+INFO	Release Notes	https://github.com/chicagopcdc/d4cg-modeling/tree/main/pcdc/rms/rms_v1.0
+INFO	Parent Data Model	pcdc_v1.8
+INFO	License	Creative Commons Attribution-NonCommercial 4.0 International License (https://creativecommons.org/licenses/by-nc/4.0/)
+INFO	D4CG Data Modeling Wiki	https://docs.pedscommons.org/
+INFO	Disease Consortium Information	https://commons.cri.uchicago.edu/pcdc/
+INFO	Description	The RMS data dictionary is a consensus data schema built by an international group of pediatric rhabdomyosarcoma experts and maintained by Data for the Common Good (D4CG) at the University of Chicago in collaboration with the International Soft Tissue Sarcoma Consortium (INSTRuCT). It is based on the collective requirements of its contributors.									
+INFO	Total Variables	63
+
 RowType	VariableName	DataType	Tier	VariableDescription	VariableCode	PermissibleValue	ValueDescription	ValueCode	ImplementationNotes	Mappings	Modeling Notes (ignored in processing)
-											
-DD	Protocol										
-TD	Subject Identifier										
-TG	Will be included in every table										
-VD	PCDC_SUBJECT_ID	String		A unique subject id assigned by the PCDC. Any given individual person will have only one PCDC_SUBJECT_ID regardless of the number of studies in which they appear. If an individual person is on studies from more than one contributor, they may have more than one HONEST_BROKER_SUBJECT_IDs assigned to them by the contributors, but will be resulted to a single PCDC_SUBJECT_ID by PCDC staff.		_undefined_	_undefined_	_undefined_			
-											
-											
-DD	Protocol										
-TD	Subject Characteristics										
-TG	One row per subject per study										
-VD	HONEST_BROKER_SUBJECT_ID	String		Subject identifier assigned by the honest broker.		_undefined_	_undefined_	_undefined_			
-VD	DATA_CONTRIBUTOR_ID	Code		An identifier assigned to a data contributor.		_undefined_	_undefined_	_undefined_			
-VD	STUDY_ID	Code		A sequence of characters used to identify, name, or characterize the study.		_undefined_	_undefined_	_undefined_			
-VD	CENSOR_STATUS	Code		Censor Status		_undefined_	_undefined_	_undefined_			
-PD						Subject is censored (i.e. has had no events(s)					
-PD						Subject has had one or more events					
-PD						Unknown					
-VD	TREATMENT_ARM	Code		A specific treatment plan within a clinical trial that describes the activities a subject will be involved in as he or she progresses through the study.		_undefined_	_undefined_	_undefined_			
-PD						TBD					
-											
-											
-DD	Protocol										
-TD	Disease Phase Timing										
-TG	One row per subject per disease phase										
-VD	DISEASE_PHASE	Code		The stage or period of an individual's disease.		_undefined_	_undefined_	_undefined_			
-PD						Initial Diagnosis	The first diagnosis of the individual's condition.	C156813			
-PD						Relapse	The return of a disease after a period of remission.	C38155			
-PD						Progression	The worsening of a disease over time.	C17747			
-VD	DISEASE_PHASE_NUMBER	Number		The number of the disease phase.		_undefined_	_undefined_	_undefined_			
-VD	AGE_AT_DISEASE_PHASE	Number		Age in days when the diagnosis was made for the disease phase.		_undefined_	_undefined_	_undefined_			
-VD	YEAR_AT_DISEASE_PHASE	Number		Year when the diagnosis was made for the disease phase.		_undefined_	_undefined_	_undefined_			
-											
-											
-DD	Protocol										
-TD	Course Timing										
-TG	One row per subject per course										
-VD	COURSE	Code		The type of protocol treatment course administered.		_undefined_	_undefined_	_undefined_			
-PD						Prephase	A chemotherapy treatment administered prior to the definitive chemotherapy treatment.	C168826			
-PD						Induction	The first choice of treatment for a particular type of cancer.	C158876			
-PD						Intensification	A second round of intense chemotherapy as part of consolidation therapy.	C173105			
-PD						Consolidation	Treatment that is given after initial therapy to kill any remaining cancer cells.	C15679			
-PD						Maintenance	Continuation of treatment for an extended period of time to prevent relapse.	C15688			
-VD	COURSE_NUMBER	Number		The number assigned to a course of therapeutic agent administration, indicating where a particular course of treatment falls within a sequence of treatments.		_undefined_	_undefined_	_undefined_			
-VD	AGE_AT_COURSE_START	Number		Age of subject (in days) at the start of the course.		_undefined_	_undefined_	_undefined_			
-VD	AGE_AT_COURSE_END	Number		Age of subject (in days) at the end of the course.		_undefined_	_undefined_	_undefined_			
-											
-											
-DD	Demographics										
-TD	Demographics										
-TG	One row per subject										
-VD	SEX	Code		The assemblage of physical properties or qualities by which male is distinguished from female; the physical difference between male and female; the distinguishing peculiarity of male or female.		_undefined_	_undefined_	_undefined_			
-PD						Male	A person who belongs to the sex that normally produces sperm. The term is used to indicate biological sex distinctions, cultural gender role distinctions, or both.	C20197			
-PD						Female	A person who belongs to the sex that normally produces ova. The term is used to indicate biological sex distinctions, or cultural gender role distinctions, or both.	C16576			
-PD						Unknown	Reported as unknown by the data contributor.	C17998			
-PD						Not Reported	Not provided or available.	C43234			
-VD	RACE	Code		An arbitrary classification of a taxonomic group that is a division of a species. It usually arises as a consequence of geographical isolation within a species and is characterized by shared heredity, physical attributes and behavior, and in the case of humans, by common history, nationality, or geographic distribution.		_undefined_	_undefined_	_undefined_			
-PD						American Indian or Alaska Native	A person having origins in any of the original peoples of North and South America (including Central America) and who maintains tribal affiliation or community attachment. (OMB)	C41259			
-PD						Asian	A person having origins in any of the original peoples of the Far East, Southeast Asia, or the Indian subcontinent, including for example, Cambodia, China, India, Japan, Korea, Malaysia, Pakistan, the Philippine Islands, Thailand, and Vietnam. (OMB)	C41260			
-PD						Black or African American	A person having origins in any of the Black racial groups of Africa. Terms such as "Haitian" or "Negro" can be used in addition to "Black or African American". (OMB)	C16352			
-PD						Multiracial	Having ancestors of several or various races.	C67109			
-PD						Native Hawaiian or Other Pacific Islander	A person having origins in any of the original peoples of Hawaii, Guam, Samoa, or other Pacific Islands. (OMB)	C41219			
-PD						White	A person having origins in any of the original peoples of Europe, the Middle East, or North Africa. (OMB)	C41261			
-PD						Other	Different than the one(s) previously specified or mentioned.	C17649			
-PD						Unknown	Reported as unknown by the data contributor.	C17998			
-PD						Not Reported	Not provided or available.	C43234			
-VD	ETHNICITY	Code		A social group characterized by a distinctive social and cultural tradition that is maintained from generation to generation. Members share a common history and origin and a sense of identification with the group. They have similar and distinctive features in their lifestyle habits and shared experiences. They often have a common genetic heritage which may be reflected in their experience of health and disease.		_undefined_	_undefined_	_undefined_			
-PD						Hispanic or Latino	A person of Cuban, Mexican, Puerto Rican, South or Central American, or other Spanish culture or origin, regardless of race. The term, "Spanish origin," can be used in addition to "Hispanic or Latino." (OMB)	C17459			
-PD						Not Hispanic or Latino	A person not of Cuban, Mexican, Puerto Rican, South or Central American, or other Spanish culture or origin, regardless of race.	C41222			
-PD						Unknown	Reported as unknown by the data contributor.	C17998			
-PD						Not Reported	Not provided or available.	C43234			
-											
-											
-DD	Demographics										
-TD	Survival Characteristics										
-TG	One row per subject per cause of death, per treatment type, per cause of death detail										
-VD	AGE_AT_LKSS	Number		Age in Days at Last Known Survival		_undefined_	_undefined_	_undefined_			
-VD	LKSS	Code		The individual's last known survival status.		_undefined_	_undefined_	_undefined_			
-PD						Alive					
-PD						Dead					
-PD						Unknown					
-VD	CAUSE_OF_DEATH	Code		The circumstance or condition that results in the death of a living being.		_undefined_	_undefined_	_undefined_			
-PD						Disease Progression			Note: If multiple causes of death, include one observation per cause of death.  However, only one cause of death can have the varaiable CAUSE_OF_DEATH_RANKING=Primary.		
-PD						Treatment-Related Mortality					
-PD						Secondary Malignancy					
-PD						Other					
-PD						Unknown					
-PD						Not Reported					
-VD	CAUSE_OF_DEATH_OTHER	Code		Cause of Death Other		_undefined_	_undefined_	_undefined_			
-											
-											
-DD	Disease Attributes										
-TD	Tumor Assessment										
-TG	One row per subject per tumor assessment per tumor site										
-VD	AGE_AT_TUMOR_ASSESSMENT	Number		The age of an individual at the time of initial pathologic diagnosis.		_undefined_	_undefined_	_undefined_			
-VD	TUMOR_CLASSIFICATION	Code		The classification of a tumor based primarily on histopathological characteristics.		_undefined_	_undefined_	_undefined_			
-PD						Primary	A tumor at the original site of origin.	C8509			
-PD						Regional					
-PD						Metastatic	A tumor that has spread from its original (primary) site of growth to another site, close to or distant from the primary site. Metastasis is characteristic of advanced malignancies, but in rare instances can be seen in neoplasms lacking malignant morphology.	C3261			
-PD						Unknown	Reported as unknown by the data contributor.	C17998			
-PD						Not Reported	Not provided or available.	C43234			
-VD	TUMOR_SITE	Code		The anatomic site of the tumor.		_undefined_	_undefined_	_undefined_			
-PD						Abdomen			Note: If there were multiple primary sites, include one observation per primary site.		
-PD						Anal/Perianal					
-PD						Bladder					
-PD						Bladder/Prostate					
-PD						Bone					
-PD						Bone Marrow					
-PD						Brain					
-PD						Cervix					
-PD						Cheek					
-PD						Distant Lymph Nodes					
-PD						Eyelid					
-PD						Foot					
-PD						Forearm					
-PD						Hand					
-PD						Hypopharynx					
-PD						Infratemporal Fossa/Pterygopalatine					
-PD						Kidney					
-PD						Knee					
-PD						Larynx					
-PD						Leg					
-PD						Liver/Biliary Tract					
-PD						Lower Leg					
-PD						Lung					
-PD						Middle Ear					
-PD						Nasal Cavity					
-PD						Nasopharynx					
-PD						Neck					
-PD						Oral Cavity					
-PD						Orbit					
-PD						Oropharynx					
-PD						Ovary					
-PD						Paranasal Sinuses					
-PD						Parapharyngeal Area					
-PD						Paraspinal					
-PD						Paratesticular					
-PD						Parathyroid					
-PD						Parotid					
-PD						Pelvis					
-PD						Perineum					
-PD						Pleural Effusion					
-PD						Prostate					
-PD						Retroperitoneum					
-PD						Scalp					
-PD						Shoulder					
-PD						Soft Tissue					
-PD						Thigh					
-PD						Thorax					
-PD						Thyroid					
-PD						Trunk					
-PD						Upper Arm					
-PD						Uterus					
-PD						Vagina					
-PD						Vulva					
-PD						Other					
-PD						Unknown					
-PD						Not Reported					
-VD	TUMOR_SITE_OTHER	String		Other Tumor Site		_undefined_	_undefined_	_undefined_			
-VD	LONGEST_DIAM_DIM1	Number		The longest diameter of dimension 1.		_undefined_	_undefined_	_undefined_			
-VD	LONGEST_DIAM_DIM2	Number		The longest diameter of dimension 2.		_undefined_	_undefined_	_undefined_			
-VD	LONGEST_DIAM_DIM3	Number		The longest diameter of dimension 3.		_undefined_	_undefined_	_undefined_			
-VD	TUMOR_SIZE	Code		Tumor Size		_undefined_	_undefined_	_undefined_			
-PD						<=5 cm					
-PD						>5 cm					
-PD						Unknown					
-PD						Not Reported					
-VD	INVASIVENESS	Code		Tumor Invasiveness		_undefined_	_undefined_	_undefined_			
-PD						T1 Stage Finding					
-PD						T2 Stage Finding					
-PD						TX Stage Finding					
-PD						Unknown					
-PD						Not Reported					
-VD	NODAL_PATHOLOGY	Code		Pathological Determination of Regional Lymph Node Involvement		_undefined_	_undefined_	_undefined_			
-PD						N0 Stage Finding					
-PD						N1 Stage FInding					
-PD						NX Stage Finding					
-PD						Unknown					
-PD						Not Reported					
-VD	NODAL_CLINICAL	Code		Clinical Determination of Regional Lymph Node Involvemen		_undefined_	_undefined_	_undefined_			
-PD						N0 Stage Finding					
-PD						N1 Stage FInding					
-PD						NX Stage Finding					
-PD						Unknown					
-PD						Not Reported					
-VD	PARAMENINGEAL_EXTENSION	Code		Parameningeal Extension		_undefined_	_undefined_	_undefined_			
-PD						No					
-PD						Yes					
-PD						Unknown					
-PD						Not Reported					
-											
-											
-DD	Disease Attributes										
-TD	Staging										
-TG	One row per subject per staging assessment										
-VD	AGE_AT_STAGING	Number		Age of subject (in days) at the time of the staging assessment.		_undefined_	_undefined_	_undefined_			
-VD	TNM_FINDING	Code		TNM Finding		_undefined_	_undefined_	_undefined_			
-PD						Favorable Site, M0			Note: Tied to AGE_AT_STAGING.		
-PD						Other site, any T, a, N0, M0					
-PD						Other site, any T, a, N1, M0, any T, b, N0/N1, M0					
-PD						Metastases, ML					
-PD						Unknown					
-PD						Not Reported					
-VD	IRS_GROUP	Code		IRS Surgical-Pathologic Grouping System		_undefined_	_undefined_	_undefined_			
-PD						Group I			Note: Tied to AGE_AT_STAGING.		
-PD						Group IIA					
-PD						Group IIB					
-PD						Group IIC					
-PD						Group II, NOS					
-PD						Group III					
-PD						Group IV					
-PD						Unknown					
-PD						Not Reported					
-											
-											
-DD	Disease Attributes										
-TD	Histology										
-TG	One row per subject per histologic assessment										
-VD	AGE_AT_HIST_ASSESSMENT	Number		Age of subject (in days) at histology assessment.		_undefined_	_undefined_	_undefined_			
-VD	HISTOLOGY	Code		The study of the structure of the cells and their arrangement to constitute tissues and, finally, the association among these to form organs. In pathology, the microscopic process of identifying normal and abnormal morphologic characteristics in tissues, by employing various cytochemical and immunocytochemical stains.		_undefined_	_undefined_	_undefined_			
-PD						Alveolar rhabdomyosarcoma (ARMS)			Note: If multiple histological findings, include one observation per histological finding.		
-PD						Botryoid rhabdomyosarcoma (BRMS)					
-PD						Embryonal rhabdomyosarcoma (ERMS)					
-PD						Pleomorphic rhabdomyosarcoma (PRMS)					
-PD						Rhabdomyosarcoma (RMS), not classifiable					
-PD						Rhabdomyosarcoma (RMS), inadequate tissue for classification					
-PD						Rhabdomyosarcoma (RMS), with Mixed Embryonal and Alveolar Features					
-PD						Spindle cell					
-PD						Unknown					
-PD						Not Reported					
-											
-											
-DD	Testing										
-TD	Molecular Analysis										
-TG	One row per subject per molecular analysis method per molecular abnormality										
-VD	AGE_AT_MOLECULAR_ANALYSIS	Number		Age of subject (in days) when molecular analysis was performed.		_undefined_	_undefined_	_undefined_			
-VD	MOLECULAR_ABNORMALITY	Code		A molecular or cytogenic abnormality which occurs in either human disease states or disease models.		_undefined_	_undefined_	_undefined_			
-PD						PAX3-FOXO1			Note: If multiple molecular abnormalities, include one observation per molecular abnormality.		
-PD						PAX7-FOXO1					
-PD						PAX3-Other					
-PD						Other-FOXO1					
-VD	VARIANT_TYPE	Code		A variation in or modification of the molecular sequence of a gene or gene product.		_undefined_	_undefined_	_undefined_			
-PD						Translocation	Any type of genetic recombination involving exchange of DNA between non-homologous chromosomes, which often occurs as the result of non-homologous end-joining of broken DNA strands. Chromosomal translocation is involved in repairing broken DNA and in maintaining cell viability at the expense of long term genomic stability. This process is is associated with particular types of leukemia, infertility and Down Syndrome.	C25756			
-PD						Inversion	A structural change in genomic DNA where the 5' to 3' order of a nucleotide sequence is completely reversed to the 3' to 5' order relative to its adjacent sequences. This inversion is termed either pericentric, if it includes the centromere of a chromosome, or pancentric, if it excludes the centromere. An inversion mutation abnormality may be heritable or occur somatically.	C45589			
-PD						Mutation	Any transmissible change in the genetic material of an organism, which can result from radiation, viral infection, transposition, treatment with mutagenic chemicals and errors during DNA replication or meiosis. The effects of mutation range from single base changes to loss or gain of complete chromosomes. As many of the simpler alterations to DNA may be repaired, such changes are only heritable once the change is fixed in the DNA by the process of replication. Mutations may be associated with genetic diversity or with pathologies including cancer.	C45576			
-PD						Single Nucleotide Variant	A variation of a single nucleotide at a specific location of the genome due to base substitution, which is found at any frequency in the population.	C146674			
-PD						Copy Number Alteration	Variation in the number of copies of a particular sequence within the genetic material of an individual. Large-scale copy number polymorphisms are common and widely distributed in the human genome.	C40207			
-PD						Rearrangement	Any DNA sequence rearrangement that results in the creation of a novel protein-coding capacity. Within certain genes, gene rearrangement is a normal part of development, facilitating the affinity maturation of B and T lymphocytes as well as class switching of immunoglobulins.	C16611			
-PD						Deletion	Any rearrangement to the genomic content that results in the loss of one or more nucleotides of DNA. Deletions are generally irreversible rearrangements. They may alter the reading frame of a gene, or may result in loss of large chromosomal regions.	C19296			
-PD						Amplification	Addition of extra material.	C25418			
-PD						Other	Different than the one(s) previously specified or mentioned.	C17649			
-PD						Unknown	Reported as unknown by the data contributor.	C17998			
-PD						Not Reported	Not provided or available.	C43234			
-VD	CHROMOSOME	String		One of the bodies in the cell nucleus that is the bearer of genes, has the form of a delicate chromatin filament during interphase, contracts to form a compact cylinder segmented into two arms by the centromere during metaphase and anaphase stages of cell division, and is capable of reproducing its physical and chemical structure through successive cell divisions.		_undefined_	_undefined_	_undefined_			
-VD	GENE1	String		The gene symbol that represents either a single gene that has a mutation or the gene that comprises the 5' portion of the coding sequence involved in a fusion gene mutation.		_undefined_	_undefined_	_undefined_			
-VD	GENE2	String		The gene symbol that represents the gene that comprises the 3' portion of the coding sequence for a fusion gene.		_undefined_	_undefined_	_undefined_			
-VD	MOLECULAR_ABNORMALITY_RESULT	Code		An indicator for whether a molecular analysis procedure was performed and whether the assay detected a molecular abnormality.		_undefined_	_undefined_	_undefined_			
-PD						Positive	A finding of abnormality following an examination or observation confirming something, such as the presence of a disease, condition, or microorganism.	C38758			
-PD						Negative	A finding of normality following an examination or investigation looking for the presence of a microorganism, disease, or condition.	C38757			
-PD						Not Done	Indicates a task, process or examination that has either not been initiated or not been completed.	C49484			
-PD						Unknown	Reported as unknown by the data contributor.	C17998			
-VD	ANAPLASIA	Code		Anaplasia		_undefined_	_undefined_	_undefined_			
-PD						Absent					
-PD						Present					
-PD						Unknown					
-VD	ANAPLASIA_EXTENT	Code		Anaplasia Extent		_undefined_	_undefined_	_undefined_			
-PD						Diffuse					
-PD						Focal					
-PD						Unknown					
-											
-											
-DD	Treatment										
-TD	Biopsy/Surgical Procedures										
-TG	One record per subject per surgical procedure										
-VD	AGE_AT_PROCEDURE	Number		Age of subject (in days) at procedure.		_undefined_	_undefined_	_undefined_			
-VD	DISEASE_PHASE	Code		The stage or period of an individual's disease.		_undefined_	_undefined_	_undefined_			
-PD						Initial Diagnosis	The first diagnosis of the individual's condition.	C156813	Note: Only fill in Disease phase, Disease phase number, Course, and Course number if "AGE_" not known  Note: Disease phase could be "Initial Diagnosis" phase, or a "Relapse" phase, etc...		
-PD						Relapse	The return of a disease after a period of remission.	C38155			
-PD						Progression	The worsening of a disease over time.	C17747			
-PD						Relapse/Progression	Either the return of the disease or the progression of the disease.	C174991			
-VD	DISEASE_PHASE_NUMBER	Number		The number of the disease phase.		_undefined_	_undefined_	_undefined_			
-VD	TUMOR_CLASSIFICATION	Code		The classification of a tumor based primarily on histopathological characteristics.		_undefined_	_undefined_	_undefined_			
-PD						Primary	A tumor at the original site of origin.	C8509			
-PD						Regional			Changed from "Regional Nodes" to "Regional" BTF 20210801		
-PD						Metastatic	A tumor that has spread from its original (primary) site of growth to another site, close to or distant from the primary site. Metastasis is characteristic of advanced malignancies, but in rare instances can be seen in neoplasms lacking malignant morphology.	C3261			
-PD						Unknown	Reported as unknown by the data contributor.	C17998			
-PD						Not Reported	Not provided or available.	C43234			
-VD	PROCEDURE_SITE	Code		The anatomical site on which surgery was performed.		_undefined_	_undefined_	_undefined_			
-PD						Abdomen					
-PD						Anal/Perianal					
-PD						Bladder					
-PD						Bladder/Prostate					
-PD						Bone					
-PD						Bone Marrow					
-PD						Bone or Bone Marrow					
-PD						Brain					
-PD						Cervix					
-PD						Cheek					
-PD						Distant Lymph Nodes					
-PD						Eyelid					
-PD						Foot					
-PD						Forearm					
-PD						Hand					
-PD						Hypopharynx					
-PD						Infratemporal Fossa/Pterygopalatine					
-PD						Infratemporal Fossa/Pterygopalatine and Parapharyngeal Area					
-PD						Kidney					
-PD						Knee					
-PD						Larynx					
-PD						Leg					
-PD						Liver/Biliary Tract					
-PD						Lower Leg					
-PD						Lung					
-PD						Middle Ear					
-PD						Nasal Cavity					
-PD						Nasal Cavity and Paranasal Sinuses					
-PD						Nasopharynx					
-PD						Neck					
-PD						Oral Cavity					
-PD						Orbit					
-PD						Oropharynx					
-PD						Ovary					
-PD						Paranasal Sinuses					
-PD						Parapharyngeal Area					
-PD						Paraspinal					
-PD						Paratesticular					
-PD						Parotid					
-PD						Pelvis					
-PD						Perineum					
-PD						Pleural Effusion					
-PD						Prostate					
-PD						Retroperitoneum					
-PD						Scalp					
-PD						Shoulder					
-PD						Soft Tissue					
-PD						Thigh					
-PD						Thorax					
-PD						Thyroid and Parathyroid					
-PD						Trunk					
-PD						Upper Arm					
-PD						Uterus					
-PD						Vagina					
-PD						Vulva					
-PD						Other					
-PD						Unknown					
-PD						Not Reported					
-VD	PROCEDURE_TYPE	Code		A categorization of surgical procedures by type or purpose.		_undefined_	_undefined_	_undefined_			
-PD						Surgery	A diagnostic or treatment procedure performed by manual and/or instrumental means, often involving an incision and the removal or replacement of a diseased organ or tissue; of or relating to or involving or used in surgery or requiring or amenable to treatment by surgery.	C15329			
-PD						Biopsy	The removal of tissue specimens or fluid from the living body for microscopic examination, performed to establish a diagnosis.	C15189			
-VD	MARGINS	Code		One of the criteria for assessment of the effectiveness of given surgical procedure in achieving the local control of a neoplasm and the adequacy of tumor removal. It is defined by the tissue plane through which the dissection has been done and the actual or potential neoplastic tissue which has been left outside the boundary of a resected specimen within the patient. There are four types of surgical margins: intracapsular or intralesional, marginal, wide, and radical.		_undefined_	_undefined_	_undefined_			
-PD						Incomplete Resection					
-PD						R0 - Complete Resection, Negative	No detectable presence of residual tumor after treatment	C139578			
-PD						R1 - Complete Resection, Positive	Presence of microscopic residual tumor after treatment.	C139579			
-PD						R2 - Gross Residual Disease	Presence of macroscopic residual tumor after treatment.	C139580			
-PD						Gross Total Resection, Unknown Margins					
-PD						Unknown	Reported as unknown by the data contributor.	C17998			
-PD						Not Reported	Not provided or available.	C43234			
-											
-											
-DD	Treatment										
-TD	Radiation Therapy										
-TG	One row per subject per radiation therapy administration										
-VD	AGE_AT_RT_START	Number		Age of subject (in days) at the start of radiation therapy.		_undefined_	_undefined_	_undefined_			
-VD	TUMOR_CLASSIFICATION	Code		The classification of a tumor based primarily on histopathological characteristics.		_undefined_	_undefined_	_undefined_			
-PD						Primary	A tumor at the original site of origin.	C8509			
-PD						Regional Nodes					
-PD						Metastatic	A tumor that has spread from its original (primary) site of growth to another site, close to or distant from the primary site. Metastasis is characteristic of advanced malignancies, but in rare instances can be seen in neoplasms lacking malignant morphology.	C3261			
-VD	RT_SITE	Code		Radiation Therapy Site		_undefined_	_undefined_	_undefined_			
-PD						Pelvis					
-PD						Neck					
-PD						Retroperitoneum					
-PD						Perineum					
-PD						Ovary					
-PD						Paratesticular					
-PD						Abdomen					
-PD						Kidney					
-PD						Shoulder					
-PD						Scalp					
-PD						Upper Arm					
-PD						Forearm					
-PD						Hand					
-PD						Thigh					
-PD						Knee					
-PD						Leg					
-PD						Lower Leg					
-PD						Foot					
-PD						Brain					
-PD						Paraspinal					
-PD						Vagina					
-PD						Eyelid					
-PD						Orbit					
-PD						Cheek					
-PD						Hypopharynx					
-PD						Larynx					
-PD						Oral Cavity					
-PD						Oropharynx					
-PD						Parotid					
-PD						Thyroid and Parathyroid					
-PD						Middle Ear					
-PD						Nasal Cavity and Paranasal Sinuses					
-PD						Nasal Cavity					
-PD						Paranasal Sinuses					
-PD						Nasopharynx					
-PD						Infratemporal Fossa/Pterygopalatine and Parapharyngeal Area					
-PD						Infratemporal Fossa/Pterygopalatine					
-PD						Parapharyngeal Area					
-PD						Bladder					
-PD						Prostate					
-PD						Bladder/Prostate					
-PD						Cervix					
-PD						Uterus					
-PD						Vulva					
-PD						Thorax					
-PD						Anal/Perianal					
-PD						Trunk					
-PD						Bone or Bone Marrow					
-PD						Bone					
-PD						Bone Marrow					
-PD						Distant Lymph Nodes					
-PD						Pleural Effusion					
-PD						Soft Tissue					
-PD						Liver/Biliary Tract					
-PD						Lung					
-PD						Other					
-PD						Unknown					
-PD						Not Reported					
-VD	ENERGY_TYPE	Code		Treatment of a disease by means of exposure of the target or the whole body to radiation. Radiation therapy is often used as part of curative therapy and occasionally as a component of palliative treatment for cancer. Other uses include total body irradiation prior to transplantation.		_undefined_	_undefined_	_undefined_			
-PD						Protons	A type of external beam radiation therapy using a beam of protons. It has the advantage of precisely localizing the radiation dose on the targeted tissue and avoiding damage to the healthy surrounding tissues.	C66897			
-PD						Photon	A single unit of electromagnetic radiation, generally considered to be a discrete particle having no mass or charge.	C88112			
-PD						Brachytherapy	A type of radiation therapy in which radioactive material is placed inside the body, into a tumor or body cavity.	C15195			
-PD						Electrons					
-PD						Unknown	Reported as unknown by the data contributor.	C17998			
-VD	RT_DOSE	Number		The total radiation dose administered.		_undefined_	_undefined_	_undefined_			
-VD	RT_UNIT	Code		A unit of measurement of the dose of radiation received or absorbed.		_undefined_	_undefined_	_undefined_			
-PD						Gy	A SI derived unit of absorbed radiation dose. One gray is equal to an absorbed dose of one joule per kilogram of matter, or to 100 rads.	C18063			
-											
-											
-DD	Response										
-TD	Subject Response										
-TG	One row per subject per response assessment per response method										
-VD	AGE_AT_RESPONSE	Number		Age of subject (in days) when the response assessment was made.		_undefined_	_undefined_	_undefined_			
-VD	TX_PRIOR_RESPONSE	Code		Treatment Type Prior to Response Assessment		_undefined_	_undefined_	_undefined_			
-PD						Chemotherapy					
-PD						Chemoradiotherapy					
-VD	RESPONSE	Code		The pathologic and/or clinical changes that result from treatment. The changes may include eradication of detectable disease, stabilization of disease, or disease progression.		_undefined_	_undefined_	_undefined_			
-PD						Partial Response					
-PD						Stable Disease					
-PD						Progressive Disease					
-PD						Complete Response					
-PD						Not Evaluable					
-											
-											
-DD	Events										
-TD	Secondary Malignant Neoplasm										
-TG	One row per subject per secondary malignancy										
-VD	AGE_AT_SMN	Number		Age in Days at Secondary Malignant Neoplasm	C168860	_undefined_	_undefined_	_undefined_			
+
+DD	Protocol
+TD	Subject Identifier
+TG	Will be included in every table
+VD	PCDC_SUBJECT_ID	String		A unique subject id assigned by the PCDC. Any given individual person will have only one PCDC_SUBJECT_ID regardless of the number of studies in which they appear. If an individual person is on studies from more than one contributor, they may have more than one HONEST_BROKER_SUBJECT_IDs assigned to them by the contributors, but will be resulted to a single PCDC_SUBJECT_ID by PCDC staff.		_undefined_	_undefined_	_undefined_
+
+
+DD	Protocol
+TD	Subject Characteristics
+TG	One row per subject per study
+VD	HONEST_BROKER_SUBJECT_ID	String		Subject identifier assigned by the honest broker.		_undefined_	_undefined_	_undefined_
+VD	DATA_CONTRIBUTOR_ID	Code		An identifier assigned to a data contributor.		_undefined_	_undefined_	_undefined_
+VD	STUDY_ID	Code		A sequence of characters used to identify, name, or characterize the study.		_undefined_	_undefined_	_undefined_
+VD	CENSOR_STATUS	Code		Censor Status		_undefined_	_undefined_	_undefined_
+PD						Subject is censored (i.e. has had no events(s)
+PD						Subject has had one or more events
+PD						Unknown
+VD	TREATMENT_ARM	Code		A specific treatment plan within a clinical trial that describes the activities a subject will be involved in as he or she progresses through the study.		_undefined_	_undefined_	_undefined_
+PD						TBD
+
+
+DD	Protocol
+TD	Disease Phase Timing
+TG	One row per subject per disease phase
+VD	DISEASE_PHASE	Code		The stage or period of an individual's disease.		_undefined_	_undefined_	_undefined_
+PD						Initial Diagnosis	The first diagnosis of the individual's condition.	C156813
+PD						Relapse	The return of a disease after a period of remission.	C38155
+PD						Progression	The worsening of a disease over time.	C17747
+VD	DISEASE_PHASE_NUMBER	Number		The number of the disease phase.		_undefined_	_undefined_	_undefined_
+VD	AGE_AT_DISEASE_PHASE	Number		Age in days when the diagnosis was made for the disease phase.		_undefined_	_undefined_	_undefined_
+VD	YEAR_AT_DISEASE_PHASE	Number		Year when the diagnosis was made for the disease phase.		_undefined_	_undefined_	_undefined_
+
+
+DD	Protocol
+TD	Course Timing
+TG	One row per subject per course
+VD	COURSE	Code		The type of protocol treatment course administered.		_undefined_	_undefined_	_undefined_
+PD						Prephase	A chemotherapy treatment administered prior to the definitive chemotherapy treatment.	C168826
+PD						Induction	The first choice of treatment for a particular type of cancer.	C158876
+PD						Intensification	A second round of intense chemotherapy as part of consolidation therapy.	C173105
+PD						Consolidation	Treatment that is given after initial therapy to kill any remaining cancer cells.	C15679
+PD						Maintenance	Continuation of treatment for an extended period of time to prevent relapse.	C15688
+VD	COURSE_NUMBER	Number		The number assigned to a course of therapeutic agent administration, indicating where a particular course of treatment falls within a sequence of treatments.		_undefined_	_undefined_	_undefined_
+VD	AGE_AT_COURSE_START	Number		Age of subject (in days) at the start of the course.		_undefined_	_undefined_	_undefined_
+VD	AGE_AT_COURSE_END	Number		Age of subject (in days) at the end of the course.		_undefined_	_undefined_	_undefined_
+
+
+DD	Demographics
+TD	Demographics
+TG	One row per subject
+VD	SEX	Code		The assemblage of physical properties or qualities by which male is distinguished from female; the physical difference between male and female; the distinguishing peculiarity of male or female.		_undefined_	_undefined_	_undefined_
+PD						Male	A person who belongs to the sex that normally produces sperm. The term is used to indicate biological sex distinctions, cultural gender role distinctions, or both.	C20197
+PD						Female	A person who belongs to the sex that normally produces ova. The term is used to indicate biological sex distinctions, or cultural gender role distinctions, or both.	C16576
+PD						Unknown	Reported as unknown by the data contributor.	C17998
+PD						Not Reported	Not provided or available.	C43234
+VD	RACE	Code		An arbitrary classification of a taxonomic group that is a division of a species. It usually arises as a consequence of geographical isolation within a species and is characterized by shared heredity, physical attributes and behavior, and in the case of humans, by common history, nationality, or geographic distribution.		_undefined_	_undefined_	_undefined_
+PD						American Indian or Alaska Native	A person having origins in any of the original peoples of North and South America (including Central America) and who maintains tribal affiliation or community attachment. (OMB)	C41259
+PD						Asian	A person having origins in any of the original peoples of the Far East, Southeast Asia, or the Indian subcontinent, including for example, Cambodia, China, India, Japan, Korea, Malaysia, Pakistan, the Philippine Islands, Thailand, and Vietnam. (OMB)	C41260
+PD						Black or African American	A person having origins in any of the Black racial groups of Africa. Terms such as "Haitian" or "Negro" can be used in addition to "Black or African American". (OMB)	C16352
+PD						Multiracial	Having ancestors of several or various races.	C67109
+PD						Native Hawaiian or Other Pacific Islander	A person having origins in any of the original peoples of Hawaii, Guam, Samoa, or other Pacific Islands. (OMB)	C41219
+PD						White	A person having origins in any of the original peoples of Europe, the Middle East, or North Africa. (OMB)	C41261
+PD						Other	Different than the one(s) previously specified or mentioned.	C17649
+PD						Unknown	Reported as unknown by the data contributor.	C17998
+PD						Not Reported	Not provided or available.	C43234
+VD	ETHNICITY	Code		A social group characterized by a distinctive social and cultural tradition that is maintained from generation to generation. Members share a common history and origin and a sense of identification with the group. They have similar and distinctive features in their lifestyle habits and shared experiences. They often have a common genetic heritage which may be reflected in their experience of health and disease.		_undefined_	_undefined_	_undefined_
+PD						Hispanic or Latino	A person of Cuban, Mexican, Puerto Rican, South or Central American, or other Spanish culture or origin, regardless of race. The term, "Spanish origin," can be used in addition to "Hispanic or Latino." (OMB)	C17459
+PD						Not Hispanic or Latino	A person not of Cuban, Mexican, Puerto Rican, South or Central American, or other Spanish culture or origin, regardless of race.	C41222
+PD						Unknown	Reported as unknown by the data contributor.	C17998
+PD						Not Reported	Not provided or available.	C43234
+
+
+DD	Demographics
+TD	Survival Characteristics
+TG	One row per subject per cause of death, per treatment type, per cause of death detail
+VD	AGE_AT_LKSS	Number		Age in Days at Last Known Survival		_undefined_	_undefined_	_undefined_
+VD	LKSS	Code		The individual's last known survival status.		_undefined_	_undefined_	_undefined_
+PD						Alive
+PD						Dead
+PD						Unknown
+VD	CAUSE_OF_DEATH	Code		The circumstance or condition that results in the death of a living being.		_undefined_	_undefined_	_undefined_
+PD						Disease Progression			Note: If multiple causes of death, include one observation per cause of death.  However, only one cause of death can have the varaiable CAUSE_OF_DEATH_RANKING=Primary.
+PD						Treatment-Related Mortality
+PD						Secondary Malignancy
+PD						Other
+PD						Unknown
+PD						Not Reported
+VD	CAUSE_OF_DEATH_OTHER	Code		Cause of Death Other		_undefined_	_undefined_	_undefined_
+
+
+DD	Disease Attributes
+TD	Tumor Assessment
+TG	One row per subject per tumor assessment per tumor site
+VD	AGE_AT_TUMOR_ASSESSMENT	Number		The age of an individual at the time of initial pathologic diagnosis.		_undefined_	_undefined_	_undefined_
+VD	TUMOR_CLASSIFICATION	Code		The classification of a tumor based primarily on histopathological characteristics.		_undefined_	_undefined_	_undefined_
+PD						Primary	A tumor at the original site of origin.	C8509
+PD						Regional
+PD						Metastatic	A tumor that has spread from its original (primary) site of growth to another site, close to or distant from the primary site. Metastasis is characteristic of advanced malignancies, but in rare instances can be seen in neoplasms lacking malignant morphology.	C3261
+PD						Unknown	Reported as unknown by the data contributor.	C17998
+PD						Not Reported	Not provided or available.	C43234
+VD	TUMOR_SITE	Code		The anatomic site of the tumor.		_undefined_	_undefined_	_undefined_
+PD						Abdomen			Note: If there were multiple primary sites, include one observation per primary site.
+PD						Anal/Perianal
+PD						Bladder
+PD						Bladder/Prostate
+PD						Bone
+PD						Bone Marrow
+PD						Brain
+PD						Cervix
+PD						Cheek
+PD						Distant Lymph Nodes
+PD						Eyelid
+PD						Foot
+PD						Forearm
+PD						Hand
+PD						Hypopharynx
+PD						Infratemporal Fossa/Pterygopalatine
+PD						Kidney
+PD						Knee
+PD						Larynx
+PD						Leg
+PD						Liver/Biliary Tract
+PD						Lower Leg
+PD						Lung
+PD						Middle Ear
+PD						Nasal Cavity
+PD						Nasopharynx
+PD						Neck
+PD						Oral Cavity
+PD						Orbit
+PD						Oropharynx
+PD						Ovary
+PD						Paranasal Sinuses
+PD						Parapharyngeal Area
+PD						Paraspinal
+PD						Paratesticular
+PD						Parathyroid
+PD						Parotid
+PD						Pelvis
+PD						Perineum
+PD						Pleural Effusion
+PD						Prostate
+PD						Retroperitoneum
+PD						Scalp
+PD						Shoulder
+PD						Soft Tissue
+PD						Thigh
+PD						Thorax
+PD						Thyroid
+PD						Trunk
+PD						Upper Arm
+PD						Uterus
+PD						Vagina
+PD						Vulva
+PD						Other
+PD						Unknown
+PD						Not Reported
+VD	TUMOR_SITE_OTHER	String		Other Tumor Site		_undefined_	_undefined_	_undefined_
+VD	LONGEST_DIAM_DIM1	Number		The longest diameter of dimension 1.		_undefined_	_undefined_	_undefined_
+VD	LONGEST_DIAM_DIM2	Number		The longest diameter of dimension 2.		_undefined_	_undefined_	_undefined_
+VD	LONGEST_DIAM_DIM3	Number		The longest diameter of dimension 3.		_undefined_	_undefined_	_undefined_
+VD	TUMOR_SIZE	Code		Tumor Size		_undefined_	_undefined_	_undefined_
+PD						<=5 cm
+PD						>5 cm
+PD						Unknown
+PD						Not Reported
+VD	INVASIVENESS	Code		Tumor Invasiveness		_undefined_	_undefined_	_undefined_
+PD						T1 Stage Finding
+PD						T2 Stage Finding
+PD						TX Stage Finding
+PD						Unknown
+PD						Not Reported
+VD	NODAL_PATHOLOGY	Code		Pathological Determination of Regional Lymph Node Involvement		_undefined_	_undefined_	_undefined_
+PD						N0 Stage Finding
+PD						N1 Stage FInding
+PD						NX Stage Finding
+PD						Unknown
+PD						Not Reported
+VD	NODAL_CLINICAL	Code		Clinical Determination of Regional Lymph Node Involvemen		_undefined_	_undefined_	_undefined_
+PD						N0 Stage Finding
+PD						N1 Stage FInding
+PD						NX Stage Finding
+PD						Unknown
+PD						Not Reported
+VD	PARAMENINGEAL_EXTENSION	Code		Parameningeal Extension		_undefined_	_undefined_	_undefined_
+PD						No
+PD						Yes
+PD						Unknown
+PD						Not Reported
+
+
+DD	Disease Attributes
+TD	Staging
+TG	One row per subject per staging assessment
+VD	AGE_AT_STAGING	Number		Age of subject (in days) at the time of the staging assessment.		_undefined_	_undefined_	_undefined_
+VD	TNM_FINDING	Code		TNM Finding		_undefined_	_undefined_	_undefined_
+PD						Favorable Site, M0			Note: Tied to AGE_AT_STAGING.
+PD						Other site, any T, a, N0, M0
+PD						Other site, any T, a, N1, M0, any T, b, N0/N1, M0
+PD						Metastases, ML
+PD						Unknown
+PD						Not Reported
+VD	IRS_GROUP	Code		IRS Surgical-Pathologic Grouping System		_undefined_	_undefined_	_undefined_
+PD						Group I			Note: Tied to AGE_AT_STAGING.
+PD						Group IIA
+PD						Group IIB
+PD						Group IIC
+PD						Group II, NOS
+PD						Group III
+PD						Group IV
+PD						Unknown
+PD						Not Reported
+
+
+DD	Disease Attributes
+TD	Histology
+TG	One row per subject per histologic assessment
+VD	AGE_AT_HIST_ASSESSMENT	Number		Age of subject (in days) at histology assessment.		_undefined_	_undefined_	_undefined_
+VD	HISTOLOGY	Code		The study of the structure of the cells and their arrangement to constitute tissues and, finally, the association among these to form organs. In pathology, the microscopic process of identifying normal and abnormal morphologic characteristics in tissues, by employing various cytochemical and immunocytochemical stains.		_undefined_	_undefined_	_undefined_
+PD						Alveolar rhabdomyosarcoma (ARMS)			Note: If multiple histological findings, include one observation per histological finding.
+PD						Botryoid rhabdomyosarcoma (BRMS)
+PD						Embryonal rhabdomyosarcoma (ERMS)
+PD						Pleomorphic rhabdomyosarcoma (PRMS)
+PD						Rhabdomyosarcoma (RMS), not classifiable
+PD						Rhabdomyosarcoma (RMS), inadequate tissue for classification
+PD						Rhabdomyosarcoma (RMS), with Mixed Embryonal and Alveolar Features
+PD						Spindle cell
+PD						Unknown
+PD						Not Reported
+
+
+DD	Testing
+TD	Molecular Analysis
+TG	One row per subject per molecular analysis method per molecular abnormality
+VD	AGE_AT_MOLECULAR_ANALYSIS	Number		Age of subject (in days) when molecular analysis was performed.		_undefined_	_undefined_	_undefined_
+VD	MOLECULAR_ABNORMALITY	Code		A molecular or cytogenic abnormality which occurs in either human disease states or disease models.		_undefined_	_undefined_	_undefined_
+PD						PAX3-FOXO1			Note: If multiple molecular abnormalities, include one observation per molecular abnormality.
+PD						PAX7-FOXO1
+PD						PAX3-Other
+PD						Other-FOXO1
+VD	VARIANT_TYPE	Code		A variation in or modification of the molecular sequence of a gene or gene product.		_undefined_	_undefined_	_undefined_
+PD						Translocation	Any type of genetic recombination involving exchange of DNA between non-homologous chromosomes, which often occurs as the result of non-homologous end-joining of broken DNA strands. Chromosomal translocation is involved in repairing broken DNA and in maintaining cell viability at the expense of long term genomic stability. This process is is associated with particular types of leukemia, infertility and Down Syndrome.	C25756
+PD						Inversion	A structural change in genomic DNA where the 5' to 3' order of a nucleotide sequence is completely reversed to the 3' to 5' order relative to its adjacent sequences. This inversion is termed either pericentric, if it includes the centromere of a chromosome, or pancentric, if it excludes the centromere. An inversion mutation abnormality may be heritable or occur somatically.	C45589
+PD						Mutation	Any transmissible change in the genetic material of an organism, which can result from radiation, viral infection, transposition, treatment with mutagenic chemicals and errors during DNA replication or meiosis. The effects of mutation range from single base changes to loss or gain of complete chromosomes. As many of the simpler alterations to DNA may be repaired, such changes are only heritable once the change is fixed in the DNA by the process of replication. Mutations may be associated with genetic diversity or with pathologies including cancer.	C45576
+PD						Single Nucleotide Variant	A variation of a single nucleotide at a specific location of the genome due to base substitution, which is found at any frequency in the population.	C146674
+PD						Copy Number Alteration	Variation in the number of copies of a particular sequence within the genetic material of an individual. Large-scale copy number polymorphisms are common and widely distributed in the human genome.	C40207
+PD						Rearrangement	Any DNA sequence rearrangement that results in the creation of a novel protein-coding capacity. Within certain genes, gene rearrangement is a normal part of development, facilitating the affinity maturation of B and T lymphocytes as well as class switching of immunoglobulins.	C16611
+PD						Deletion	Any rearrangement to the genomic content that results in the loss of one or more nucleotides of DNA. Deletions are generally irreversible rearrangements. They may alter the reading frame of a gene, or may result in loss of large chromosomal regions.	C19296
+PD						Amplification	Addition of extra material.	C25418
+PD						Other	Different than the one(s) previously specified or mentioned.	C17649
+PD						Unknown	Reported as unknown by the data contributor.	C17998
+PD						Not Reported	Not provided or available.	C43234
+VD	CHROMOSOME	String		One of the bodies in the cell nucleus that is the bearer of genes, has the form of a delicate chromatin filament during interphase, contracts to form a compact cylinder segmented into two arms by the centromere during metaphase and anaphase stages of cell division, and is capable of reproducing its physical and chemical structure through successive cell divisions.		_undefined_	_undefined_	_undefined_
+VD	GENE1	String		The gene symbol that represents either a single gene that has a mutation or the gene that comprises the 5' portion of the coding sequence involved in a fusion gene mutation.		_undefined_	_undefined_	_undefined_
+VD	GENE2	String		The gene symbol that represents the gene that comprises the 3' portion of the coding sequence for a fusion gene.		_undefined_	_undefined_	_undefined_
+VD	MOLECULAR_ABNORMALITY_RESULT	Code		An indicator for whether a molecular analysis procedure was performed and whether the assay detected a molecular abnormality.		_undefined_	_undefined_	_undefined_
+PD						Positive	A finding of abnormality following an examination or observation confirming something, such as the presence of a disease, condition, or microorganism.	C38758
+PD						Negative	A finding of normality following an examination or investigation looking for the presence of a microorganism, disease, or condition.	C38757
+PD						Not Done	Indicates a task, process or examination that has either not been initiated or not been completed.	C49484
+PD						Unknown	Reported as unknown by the data contributor.	C17998
+VD	ANAPLASIA	Code		Anaplasia		_undefined_	_undefined_	_undefined_
+PD						Absent
+PD						Present
+PD						Unknown
+VD	ANAPLASIA_EXTENT	Code		Anaplasia Extent		_undefined_	_undefined_	_undefined_
+PD						Diffuse
+PD						Focal
+PD						Unknown
+
+
+DD	Treatment
+TD	Biopsy/Surgical Procedures
+TG	One record per subject per surgical procedure
+VD	AGE_AT_PROCEDURE	Number		Age of subject (in days) at procedure.		_undefined_	_undefined_	_undefined_
+VD	DISEASE_PHASE	Code		The stage or period of an individual's disease.		_undefined_	_undefined_	_undefined_
+PD						Initial Diagnosis	The first diagnosis of the individual's condition.	C156813	Note: Only fill in Disease phase, Disease phase number, Course, and Course number if "AGE_" not known  Note: Disease phase could be "Initial Diagnosis" phase, or a "Relapse" phase, etc...
+PD						Relapse	The return of a disease after a period of remission.	C38155
+PD						Progression	The worsening of a disease over time.	C17747
+PD						Relapse/Progression	Either the return of the disease or the progression of the disease.	C174991
+VD	DISEASE_PHASE_NUMBER	Number		The number of the disease phase.		_undefined_	_undefined_	_undefined_
+VD	TUMOR_CLASSIFICATION	Code		The classification of a tumor based primarily on histopathological characteristics.		_undefined_	_undefined_	_undefined_
+PD						Primary	A tumor at the original site of origin.	C8509
+PD						Regional			Changed from "Regional Nodes" to "Regional" BTF 20210801
+PD						Metastatic	A tumor that has spread from its original (primary) site of growth to another site, close to or distant from the primary site. Metastasis is characteristic of advanced malignancies, but in rare instances can be seen in neoplasms lacking malignant morphology.	C3261
+PD						Unknown	Reported as unknown by the data contributor.	C17998
+PD						Not Reported	Not provided or available.	C43234
+VD	PROCEDURE_SITE	Code		The anatomical site on which surgery was performed.		_undefined_	_undefined_	_undefined_
+PD						Abdomen
+PD						Anal/Perianal
+PD						Bladder
+PD						Bladder/Prostate
+PD						Bone
+PD						Bone Marrow
+PD						Bone or Bone Marrow
+PD						Brain
+PD						Cervix
+PD						Cheek
+PD						Distant Lymph Nodes
+PD						Eyelid
+PD						Foot
+PD						Forearm
+PD						Hand
+PD						Hypopharynx
+PD						Infratemporal Fossa/Pterygopalatine
+PD						Infratemporal Fossa/Pterygopalatine and Parapharyngeal Area
+PD						Kidney
+PD						Knee
+PD						Larynx
+PD						Leg
+PD						Liver/Biliary Tract
+PD						Lower Leg
+PD						Lung
+PD						Middle Ear
+PD						Nasal Cavity
+PD						Nasal Cavity and Paranasal Sinuses
+PD						Nasopharynx
+PD						Neck
+PD						Oral Cavity
+PD						Orbit
+PD						Oropharynx
+PD						Ovary
+PD						Paranasal Sinuses
+PD						Parapharyngeal Area
+PD						Paraspinal
+PD						Paratesticular
+PD						Parotid
+PD						Pelvis
+PD						Perineum
+PD						Pleural Effusion
+PD						Prostate
+PD						Retroperitoneum
+PD						Scalp
+PD						Shoulder
+PD						Soft Tissue
+PD						Thigh
+PD						Thorax
+PD						Thyroid and Parathyroid
+PD						Trunk
+PD						Upper Arm
+PD						Uterus
+PD						Vagina
+PD						Vulva
+PD						Other
+PD						Unknown
+PD						Not Reported
+VD	PROCEDURE_TYPE	Code		A categorization of surgical procedures by type or purpose.		_undefined_	_undefined_	_undefined_
+PD						Surgery	A diagnostic or treatment procedure performed by manual and/or instrumental means, often involving an incision and the removal or replacement of a diseased organ or tissue; of or relating to or involving or used in surgery or requiring or amenable to treatment by surgery.	C15329
+PD						Biopsy	The removal of tissue specimens or fluid from the living body for microscopic examination, performed to establish a diagnosis.	C15189
+VD	MARGINS	Code		One of the criteria for assessment of the effectiveness of given surgical procedure in achieving the local control of a neoplasm and the adequacy of tumor removal. It is defined by the tissue plane through which the dissection has been done and the actual or potential neoplastic tissue which has been left outside the boundary of a resected specimen within the patient. There are four types of surgical margins: intracapsular or intralesional, marginal, wide, and radical.		_undefined_	_undefined_	_undefined_
+PD						Incomplete Resection
+PD						R0 - Complete Resection, Negative	No detectable presence of residual tumor after treatment	C139578
+PD						R1 - Complete Resection, Positive	Presence of microscopic residual tumor after treatment.	C139579
+PD						R2 - Gross Residual Disease	Presence of macroscopic residual tumor after treatment.	C139580
+PD						Gross Total Resection, Unknown Margins
+PD						Unknown	Reported as unknown by the data contributor.	C17998
+PD						Not Reported	Not provided or available.	C43234
+
+
+DD	Treatment
+TD	Radiation Therapy
+TG	One row per subject per radiation therapy administration
+VD	AGE_AT_RT_START	Number		Age of subject (in days) at the start of radiation therapy.		_undefined_	_undefined_	_undefined_
+VD	TUMOR_CLASSIFICATION	Code		The classification of a tumor based primarily on histopathological characteristics.		_undefined_	_undefined_	_undefined_
+PD						Primary	A tumor at the original site of origin.	C8509
+PD						Regional Nodes
+PD						Metastatic	A tumor that has spread from its original (primary) site of growth to another site, close to or distant from the primary site. Metastasis is characteristic of advanced malignancies, but in rare instances can be seen in neoplasms lacking malignant morphology.	C3261
+VD	RT_SITE	Code		Radiation Therapy Site		_undefined_	_undefined_	_undefined_
+PD						Pelvis
+PD						Neck
+PD						Retroperitoneum
+PD						Perineum
+PD						Ovary
+PD						Paratesticular
+PD						Abdomen
+PD						Kidney
+PD						Shoulder
+PD						Scalp
+PD						Upper Arm
+PD						Forearm
+PD						Hand
+PD						Thigh
+PD						Knee
+PD						Leg
+PD						Lower Leg
+PD						Foot
+PD						Brain
+PD						Paraspinal
+PD						Vagina
+PD						Eyelid
+PD						Orbit
+PD						Cheek
+PD						Hypopharynx
+PD						Larynx
+PD						Oral Cavity
+PD						Oropharynx
+PD						Parotid
+PD						Thyroid and Parathyroid
+PD						Middle Ear
+PD						Nasal Cavity and Paranasal Sinuses
+PD						Nasal Cavity
+PD						Paranasal Sinuses
+PD						Nasopharynx
+PD						Infratemporal Fossa/Pterygopalatine and Parapharyngeal Area
+PD						Infratemporal Fossa/Pterygopalatine
+PD						Parapharyngeal Area
+PD						Bladder
+PD						Prostate
+PD						Bladder/Prostate
+PD						Cervix
+PD						Uterus
+PD						Vulva
+PD						Thorax
+PD						Anal/Perianal
+PD						Trunk
+PD						Bone or Bone Marrow
+PD						Bone
+PD						Bone Marrow
+PD						Distant Lymph Nodes
+PD						Pleural Effusion
+PD						Soft Tissue
+PD						Liver/Biliary Tract
+PD						Lung
+PD						Other
+PD						Unknown
+PD						Not Reported
+VD	ENERGY_TYPE	Code		Treatment of a disease by means of exposure of the target or the whole body to radiation. Radiation therapy is often used as part of curative therapy and occasionally as a component of palliative treatment for cancer. Other uses include total body irradiation prior to transplantation.		_undefined_	_undefined_	_undefined_
+PD						Protons	A type of external beam radiation therapy using a beam of protons. It has the advantage of precisely localizing the radiation dose on the targeted tissue and avoiding damage to the healthy surrounding tissues.	C66897
+PD						Photon	A single unit of electromagnetic radiation, generally considered to be a discrete particle having no mass or charge.	C88112
+PD						Brachytherapy	A type of radiation therapy in which radioactive material is placed inside the body, into a tumor or body cavity.	C15195
+PD						Electrons
+PD						Unknown	Reported as unknown by the data contributor.	C17998
+VD	RT_DOSE	Number		The total radiation dose administered.		_undefined_	_undefined_	_undefined_
+VD	RT_UNIT	Code		A unit of measurement of the dose of radiation received or absorbed.		_undefined_	_undefined_	_undefined_
+PD						Gy	A SI derived unit of absorbed radiation dose. One gray is equal to an absorbed dose of one joule per kilogram of matter, or to 100 rads.	C18063
+
+
+DD	Response
+TD	Subject Response
+TG	One row per subject per response assessment per response method
+VD	AGE_AT_RESPONSE	Number		Age of subject (in days) when the response assessment was made.		_undefined_	_undefined_	_undefined_
+VD	TX_PRIOR_RESPONSE	Code		Treatment Type Prior to Response Assessment		_undefined_	_undefined_	_undefined_
+PD						Chemotherapy
+PD						Chemoradiotherapy
+VD	RESPONSE	Code		The pathologic and/or clinical changes that result from treatment. The changes may include eradication of detectable disease, stabilization of disease, or disease progression.		_undefined_	_undefined_	_undefined_
+PD						Partial Response
+PD						Stable Disease
+PD						Progressive Disease
+PD						Complete Response
+PD						Not Evaluable
+
+
+DD	Events
+TD	Secondary Malignant Neoplasm
+TG	One row per subject per secondary malignancy
+VD	AGE_AT_SMN	Number		Age in Days at Secondary Malignant Neoplasm	C168860	_undefined_	_undefined_	_undefined_
