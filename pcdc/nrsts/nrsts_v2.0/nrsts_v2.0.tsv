@@ -1,0 +1,458 @@
+INFO	Title	Non-rhabdomyosarcoma Soft Tissue Sarcomas (NRSTS) Data Dictionary								
+INFO	Name	nrsts_v2.0								
+INFO	Release Notes									
+INFO	Parent Data Model	pcdc_v2.0								
+INFO	License	Creative Commons Attribution-NonCommercial 4.0 International License (https://creativecommons.org/licenses/by-nc/4.0/)								
+INFO	D4CG Data Modeling Wiki	https://docs.pedscommons.org/								
+INFO	Disease Consortium Information	https://commons.cri.uchicago.edu/pcdc/								
+INFO	Description	The NRSTS data dictionary is a consensus data schema built by an international group of pediatric non-rhabdomyosarcoma soft tissue sarcoma experts and maintained by Data for the Common Good (D4CG) at the University of Chicago in collaboration with the International Soft Tissue Sarcoma Consortium (INSTRuCT). It is based on the collective requirements of its contributors.								
+INFO	Total Variables									
+										
+RowType	VariableName	DataType	Tier	VariableDescription	VariableCode	PermissibleValue	ValueDescription	ValueCode	ImplementationNotes	Mappings
+										
+DD	Protocol									
+TD	Subject Characteristics									
+TG	One row per subject per study									
+VD	HONEST_BROKER_SUBJECT_ID	String		Honest Broker Subject ID		_undefined_	_undefined_	_undefined_		
+VD	CONSORTIUM	Enum	To-do	The consortium under which this data is being contributed to the Pediatric Cancer Data Commons.	ncit:C61538	_undefined_	_undefined_	_undefined_		New VD
+PD						INSTRuCT	International Pediatric Acute Myeloid Leukemia Consortium (INTERACT). A consortium launched in 2021 as a collaboration between acute myeloid leukemia researchers from Children's Oncology Group, European Pediatric Acute Leukemia, Japan Children's Cancer Group, and St. Jude Children's Research Hospital. To date, INTERACT has identified 18 studies from 10 clinical trials research groups that can be contributed to the data commons, and its statisticians are actively working to harmonize clinical data from more than 6,000 individuals who have had pediatric cancer.	ncit:C192762		New PD
+VD	DISEASE_GROUP	Enum				_undefined_	_undefined_	_undefined_		New VD
+PD						NRSTS				New PD
+VD	DATA_CONTRIBUTOR_ID	Code		Data Contributor Identifier		_undefined_	_undefined_	_undefined_		
+PD						AIEOP	Italian Association of Pediatric Hematology and Oncology. A group from Bologna, Italy, comprised mainly of pediatricians, hematologists, oncologists, surgeons, biologists, nurses and psychologists who are devoted to addressing the problems of hematology, oncology and immunology in the child and adolescent.	ncit:C168887		New PD
+PD						COG	Children's Oncology Group. An NCI-supported clinical cooperative group formed by the merger of the four national pediatric cancer research organizations: the Children's Cancer Group, the Intergroup Rhabdomyosarcoma Study Group, the National Wilms Tumor Study Group, and the Pediatric Oncology Group. The primary objective of the organization is to conduct clinical trials of new therapies for childhood and adolescent cancer. COG develops and coordinates clinical trials conducted at the 238 member institutions that include cancer centers of all major universities and teaching hospitals throughout the U.S. and Canada, as well as sites in Europe and Australia. COG members include over 5000 cancer researchers.	ncit:C39353		New PD
+PD						EpSSG	European Paediatric Soft Tissue Sarcoma Study Group. An international organization of healthcare professionals devoted to the care and treatment of children and young people with soft tissue sarcoma.	ncit:C192774		New PD
+PD						SIOP MMT	International Society of Paediatric Oncology Malignant Mesenchymal Tumour Committee. An international pediatric oncology committee that specializes in the research of malignant mesenchymal tumors. Along with the Associazione Italiana Ematologia Oncologia Pediatrica-Soft Tissue Sarcoma Committee (AIEOP-STSC), which was formerly known as the Italian Cooperative Group (ICG), SIOP-MMT founded the European pediatric Soft tissue sarcoma Study Group (EpSSG) and the Non-rhabdomyosarcoma Soft Tissue Sarcoma (NRSTS) study in 2005 with the goal of making pediatric non-rhabdomyosarcoma soft tissue sarcoma treatment uniform across Europe.	ncit:C192775		New PD
+PD						CWS	Cooperative Weichteilsarkom Studiengruppe. An international pediatric soft tissue sarcoma study group, also known as the Cooperative Soft Tissue Sarcoma Group, that creates guidance for risk-adapted treatment of soft tissue sarcoma and soft tissue tumors in children, adolescents, and young adults in Europe.	ncit:C192777		New PD
+PD						STSC	AIEOP Soft Tissue Sarcoma Committee			New PD
+VD	STUDY_ID	Code		Study Identifier		_undefined_	_undefined_	_undefined_		
+VD	TREATMENT_ARM	Code		Assigned Treatment Arm by Intention-To-Treat		_undefined_	_undefined_	_undefined_		
+VD	CENSOR_STATUS	Code		Censor Status		_undefined_	_undefined_	_undefined_		
+PD						Subject is censored (i.e. has had no events(s))				
+PD						Subject has had one or more events				
+PD						Unknown				
+										
+										
+DD	Protocol									
+TD	Time Period									New TD
+TG	One row per subject per time period type									
+VD	HONEST_BROKER_SUBJECT_ID	String	2 - contributors should prioritize inclusion if resources are available	The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_		New VD
+VD	SUBMITTER_ID	String	2 - contributors should prioritize inclusion if resources are available	An ID provided by the data contributor that identifies a unique time period and that is referenced throughout subsequent tabels in the TIME_PERIOD_SUBMITTER_ID variables.		_undefined_	_undefined_	_undefined_		New VD
+VD	PARENT_SUBMITTER_ID	String	2 - contributors should prioritize inclusion if resources are available	The SUBMITTER_ID of the time period in whose context a subsequent time period takes place. For example, multiple treatment courses occuring the "Initial Diagnosis" period would each reference the SUBMITTER_ID of the "Initial Diagnosis" period as their PARENT_SUBMITTER_ID.		_undefined_	_undefined_	_undefined_		New VD
+VD	TIME_PERIOD_TYPE	Enum	2 - contributors should prioritize inclusion if resources are available	The type of time period being reported.		_undefined_	_undefined_	_undefined_		New VD
+PD						Disease Phase	The stage or period of an individual's disease.	ncit:C168878		
+PD						Course	The type of protocol treatment course administered with respect to Course Timing.	ncit:C187095		
+VD	DISEASE_PHASE	Enum	2 - contributors should prioritize inclusion if resources are available	The phase of the cancer treatment process during which relevant observations were recorded. This variable is used across domains to frame the timing of these longitudinal observations and reduce the number of redundant variables needed to report similar concepts (see "Disease Phase Timing and Course Table" in the documentation for additional guidance).	ncit:C168878	_undefined_	_undefined_	_undefined_		[nrsts_v1.0].[Disease Phase Timing].[DISEASE_PHASE] skos:exactMatch [nrsts_v2.0].[Time Period].[DISEASE_PHASE]
+PD						Initial Diagnosis	The first diagnosis of the individual's condition.	ncit:C156813		
+PD						Relapse	The return of a disease after a period of remission.	ncit:C38155		
+PD						Progression	A process that manifests as the worsening of a disease over time.	ncit:C17747		
+VD	COURSE	Enum	2 - contributors should prioritize inclusion if resources are available	The protocol treatment "course" during which relevant observations were recorded. This variable is used across domains to frame the timing of these longitudinal observations and reduce the number of redundant variables needed to report similar concepts (see "Disease Phase Timing and Course Table" in the documentation for additional guidance).	ncit:C168807	_undefined_	_undefined_	_undefined_		[nrsts_v1.0].[Course Timing].[COURSE] skos:exactMatch [nrsts_v2.0].[Time Period].[COURSE]
+PD						Prephase	A chemotherapy treatment administered prior to the definitive chemotherapy treatment.	ncit:C168826		
+PD						Induction	The first choice of treatment for a particular type of cancer.	ncit:C158876		
+PD						Intensification	A second round of intense chemotherapy as part of consolidation therapy.	ncit:C173105		
+PD						Consolidation	Treatment that is given after initial therapy to kill any remaining cancer cells.	ncit:C15679		
+PD						Maintenance	Continuation of treatment for an extended period of time to prevent relapse.	ncit:C15688		
+VD	TIME_PERIOD_NUMBER	Integer	2 - contributors should prioritize inclusion if resources are available	This variable indicates the ordinal numbering of time periods of the same TIME_PERIOD_TYPE within its various subgroups (e.g., Relapse 1, Relapse 2, Relapse 3, etc.). The observations across domains can therefore be organized longitudinally without the need for specific dates.		_undefined_	_undefined_	_undefined_		[nrsts_v1.0].[Disease Phase Timing].[DISEASE_PHASE_NUMBER] skos:broadMatch [nrsts_v2.0].[Time Period].[TIME_PERIOD_NUMBER] | [nrsts_v1.0].[Course Timing].[COURSE_NUMBER] skos:broadMatch [nrsts_v2.0].[Time Period].[TIME_PERIOD_NUMBER]
+VD	YEAR_AT_START	Integer	2 - contributors should prioritize inclusion if resources are available	The year at the start of the indicated time period.		_undefined_	_undefined_	_undefined_		[nrsts_v1.0].[Disease Phase Timing].[YEAR_AT_DISEASE_PHASE] skos:exactMatch [nrsts_v2.0].[Time Period].[YEAR_AT_START]
+VD	AGE_AT_START	Integer	2 - contributors should prioritize inclusion if resources are available	The age (in days) of the patient at the start of the reported time period.		_undefined_	_undefined_	_undefined_		[nrsts_v1.0].[Disease Phase Timing].[AGE_AT_DISEASE_PHASE] skos:broadMatch [nrsts_v2.0].[Time Period].[AGE_AT_START] | [nrsts_v1.0].[Course Timing].[AGE_AT_COURSE_START] skos:broadMatch [nrsts_v2.0].[Time Period].[AGE_AT_START]
+VD	AGE_AT_END	Integer	2 - contributors should prioritize inclusion if resources are available	The age (in days) of the patient at the end of the reported time period.		_undefined_	_undefined_	_undefined_		[nrsts_v1.0].[Course Timing].[AGE_AT_COURSE_END] skos:exactMatch [nrsts_v2.0].[Time Period].[AGE_AT_END]
+										
+										
+DD	Demographics									
+TD	Demographics									
+TG	One row per subject									
+VD	HONEST_BROKER_SUBJECT_ID	String		The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_		New VD
+VD	SEX	Code		Sex		_undefined_	_undefined_	_undefined_		
+PD						Male				
+PD						Female				
+PD						Unknown				
+VD	RACE	Code		Race		_undefined_	_undefined_	_undefined_		
+PD						American Indian or Alaska Native				
+PD						Asian				
+PD						Black or African American				
+PD						Multiracial				
+PD						Native Hawaiian or Other Pacific Islander				
+PD						White				
+PD						Other				
+PD						Unknown				
+PD						Not Reported				
+VD	ETHNICITY	Code		Ethnicity		_undefined_	_undefined_	_undefined_		
+PD						Hispanic or Latino				
+PD						Not Hispanic or Latino				
+PD						Unknown				
+PD						Not Reported				
+										
+										
+DD	Demographics									
+TD	Medical History									
+TG	One row per subject per pre-existing conditions									
+VD	HONEST_BROKER_SUBJECT_ID	String		The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_		New VD
+VD	CONDITION	Code		Medical History		_undefined_	_undefined_	_undefined_		[nrsts_v1.0].[Medical History].[MEDICAL_HISTORY] skos:exactMatch [nrsts_v2.0].[Medical History].[CONDITION]
+PD						APC				
+PD						Costello				
+PD						DICER1				
+PD						Li-Fraumeni				
+PD						NF-1				
+PD						RB1				
+PD						Secondary Malignancy				
+PD						Other				
+										
+										
+DD	Demographics									
+TD	Survival Characteristics									
+TG	One row per subject per cause of death, per treatment type, per cause of death detail									
+VD	HONEST_BROKER_SUBJECT_ID	String		The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_		New VD
+VD	AGE_AT_LKSS	Number		Age in Days at Last Known Survival		_undefined_	_undefined_	_undefined_		
+VD	LKSS	Code		Last Known Survival Status		_undefined_	_undefined_	_undefined_		
+PD						Alive				
+PD						Dead				
+PD						Unknown				
+VD	CAUSE_OF_DEATH	Code		Cause of Death		_undefined_	_undefined_	_undefined_		
+PD						Disease Progression			Note: If multiple causes of death, include one observation per cause of death. There can only be one record where CAUSE_OF_DEATH_RANKING=Primary.	
+PD						Treatment-Related Mortality				
+PD						Secondary Malignancy				
+PD						Other				
+										
+										
+DD	Testing									
+TD	Molecular Analysis									
+TG	One row per subject per molecular analysis method per molecular abnormality									
+VD	HONEST_BROKER_SUBJECT_ID	String		The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_		New VD
+VD	AGE_AT_MOLECULAR_ANALYSIS	Number		Age in Days at Molecular Analysis		_undefined_	_undefined_	_undefined_		
+VD	MITOSES	Code		Mitotic Count		_undefined_	_undefined_	_undefined_		
+PD						Score 1: 0-9 Mitoses per 10 HPF				
+PD						Score 2: 10-19 Mitoses per 10 HPF				
+PD						Score 3: > 19 Mitoses per 10 HPF				
+PD						Unknown				
+VD	MOLECULAR_ABNORMALITY	Code		Molecular Abnormality		_undefined_	_undefined_	_undefined_		
+PD						FOXO1 Rearranged			Note: If multiple molecular abnormalities, include one observation per molecular abnormality.	
+PD						EWSR1 Rearranged				
+PD						SMARCB1 Deleted/Mutated				
+PD						ETV6 Rearranged				
+PD						ALK Rearranged				
+PD						SSX-SS18				
+PD						CIC-DUX4				
+PD						BCOR-CCNB3				
+PD						EWSR1-ETV1/4				
+PD						FUS-CREB3L2				
+PD						EWSR1-ATF1				
+PD						EWSR1-CREB1				
+PD						EWSR1-PBX1/ZNF44/POU5F1				
+PD						TGFBR3-MGEA5				
+PD						NTRK Rearranged				
+PD						ROS1 Rearranged				
+PD						VGLLA2 Rearranged				
+PD						ASPSCR1-TFE3				
+PD						BCOR ITT Rearranged				
+PD						Other				
+VD	MOLECULAR_ABNORMALITY_OTHER	String		Molecular Abnormality Other		_undefined_	_undefined_	_undefined_		
+VD	CYTODIFFERENTIATION	Code		Cytodifferentiation Score		_undefined_	_undefined_	_undefined_		
+PD						1				
+PD						2				
+PD						3				
+										
+										
+DD	Disease Attributes									
+TD	Diagnosis									[nrsts_v1.0].[Histology] skos:exactMatch [nrsts_v2.0].[Diagnosis]
+TG	One row per subject per diagnosis									
+VD	HONEST_BROKER_SUBJECT_ID	String		The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_		New VD
+VD	AGE_AT_DIAG_ASSESSMENT	Integer		The age (in days) of the subject at the time of this diagnostic assessment.	ncit:C175004	_undefined_	_undefined_	_undefined_		[nrsts_v1.0].[Histology].[AGE_AT_HIST_ASSESSMENT] skos:exactMatch [nrsts_v2.0].[Diagnosis].[AGE_AT_DIAG_ASSESSMENT]
+VD	DIAGNOSIS_BASIS	Enum		The type of diagnosis used for determining the medical condition.		_undefined_	_undefined_	_undefined_		New VD
+PD						Histological	Pertaining to the combined microscopic physical features of cells and their surrounding extracellular environment in tissues.	ncit:C25526		
+VD	DIAGNOSIS	Enum		The investigation, analysis and recognition of the presence and nature of disease, condition, or injury from expressed signs and symptoms; also, the scientific determination of any kind; the concise results of such an investigation.	ncit:C15220	_undefined_	_undefined_	_undefined_		[nrsts_v1.0].[Histology].[HISTOLOGY] skos:exactMatch [nrsts_v2.0].[Diagnosis].[DIAGNOSIS]
+PD						Atypical Lipomatous Tumor	A locally aggressive mesenchymal neoplasm composed either entirely or partly of an adipocytic proliferation showing at least focal nuclear atypia in both adipocytes and stromal cells. "Atypical lipomatous tumor" and "well-differentiated liposarcoma" are synonyms describing lesions that are morphologically and genetically identical. Amplification of MDM2 and/or CDK4 is almost always present.	ncit:C6505		
+PD						Well Differentiated Liposarcoma	A locally aggressive mesenchymal neoplasm composed either entirely or partly of an adipocytic proliferation showing at least focal nuclear atypia in both adipocytes and stromal cells. "Atypical lipomatous tumor" and "well-differentiated liposarcoma" are synonyms describing lesions that are morphologically and genetically identical. Amplification of MDM2 and/or CDK4 is almost always present.	ncit:C6505		
+PD						Dedifferentiated Liposarcoma	An atypical lipomatous tumor/well differentiated liposarcoma that shows progression to a usually non-lipomatous, high grade sarcoma. The non-lipomatous sarcoma component may be present in the primary lesion or at the site of recurrence.	ncit:C3704		
+PD						Myxoid Liposarcoma	A liposarcoma characterized by the presence of round non-lipogenic primitive mesenchymal cells and small signet ring lipoblasts within a myxoid stoma with a branching vascular pattern. This category includes hypercellular lesions with round cell morphology, formerly known as round cell liposarcoma.	ncit:C27781		
+PD						Pleomorphic Liposarcoma	A rare, aggressive liposarcoma characterized by the presence of varying proportions of pleomorphic lipoblasts in a background that resembles undifferentiated pleomorphic sarcoma.	ncit:C3705		
+PD						Liposarcoma, NOS	A usually painless malignant tumor that arises from adipose tissue. Microscopically, it may contain a spectrum of neoplastic adipocytes ranging from lipoblasts to pleomorphic malignant adipocytes. Morphologic variants include: well differentiated, dedifferentiated, pleomorphic, and myxoid liposarcoma. The metastatic potential is higher in less differentiated tumors.	ncit:C3194		
+PD						Palmar/Plantar Fibromatosis	A superficial fibromatosis arising from soft tissue of the plantar regions. It is characterized by the presence of spindle-shaped fibroblasts, hypercellularity, and an infiltrative growth pattern.	ncit:C4680		
+PD						Desmoid-Type Fibromatosis	An insidious, locally aggressive, poorly circumscribed neoplasm arising from the deep soft tissues. It is characterized by the presence of elongated spindle-shaped fibroblasts, collagenous stroma formation, and an infiltrative growth pattern. It lacks metastatic potential.	ncit:C9182		
+PD						Lipofibromatosis	A rare, slow-growing, painless tumor of infancy and early childhood that usually affects the distal extremities. It is characterized by the presence of alternating bands of mature adipose tissue and spindle-cell fibrous tissue, without destruction of the adipose tissue architecture. It does not metastasize, however the rate of local recurrences is high.	ncit:C99180		
+PD						Giant Cell Fibroblastoma	A morphologic variant of dermatofibrosarcoma protuberans that is most often seen in childhood and is characterized by the presence of spindle-shaped fibroblastic cells, a storiform growth pattern, numerous multinucleated giant cells, wide vessel-like spaces, and extensive myxoid change.	ncit:C4700		
+PD						Dermatofibrosarcoma Protuberans	A low grade fibroblastic neoplasm presenting as a nodular cutaneous mass, most often on the trunk and the proximal extremities. The tumor diffusely infiltrates the dermis and the subcutaneous tissues. It is considered a locally aggressive neoplasm, which often recurs but rarely metastasizes.	ncit:C4683		
+PD						Fibrosarcomatous Dermatofibrosarcoma Protuberans	A morphologic variant of dermatofibrosarcoma protuberans characterized by the presence of a fibrosarcomatous component.	ncit:C27547		
+PD						Pigmented Dermatofibrosarcoma Protuberans	A morphologic variant of dermatofibrosarcoma protuberans characterized by the presence of melanin-pigmented dendritic cells.	ncit:C9430		
+PD						Solitary Fibrous Tumor	A localized neoplasm of probable fibroblastic derivation. It is characterized by the presence of round to spindle-shaped cells, hylanized stroma formation, thin-walled branching blood vessels, and thin bands of collagen.	ncit:C7634		
+PD						Solitary Fibrous Tumor, Malignant	A malignant neoplasm of probable fibroblastic derivation. It is characterized by the presence of atypical round to spindle-shaped cells, increased cellularity, necrotic change and high mitotic activity.	ncit:C6894		
+PD						Inflammatory Myofibroblastic Tumor	A multinodular intermediate fibroblastic neoplasm that arises from soft tissue or viscera, in children and young adults. It is characterized by the presence of spindle-shaped fibroblasts and myofibroblasts, and a chronic inflammatory infiltrate composed of eosinophils, lymphocytes, and plasma cells.	ncit:C6481		
+PD						Low-Grade Myofibroblastic Sarcoma	A low-grade malignant neoplasm arising from the soft tissue and rarely bone. It is characterized by the presence of spindle-shaped myofibroblasts and collagenous stroma formation in a storiform growth pattern. Metastasis is very rare.	ncit:C49024		
+PD						Myxoinflammatory Fibroblastic Sarcoma/Atypical Myxoinflammatory Fibroblastic Tumor	A low grade, locally aggressive, fibroblastic neoplasm that occurs primarily in the distal extremities. It is characterized by the presence of spindle-shaped fibroblasts, multivacuolated lipoblast-like cells, bizarre ganglion-like cells with inclusion-like nuclei, myxoid stroma formation, and a mixture of acute and chronic inflammatory cells. Distant metastases are very rare.	ncit:C49025		
+PD						Infantile Fibrosarcoma	A fibrosarcoma that occurs in infants. It shares identical morphologic features with adult fibrosarcoma but carries the t(12;15)(p13;q25) translocation that results in ETV6-NTRK3 gene fusion. It usually affects the superficial and deep soft tissues of the extremities. The prognosis is generally much more favorable than for adult fibrosarcoma, and it rarely metastasizes.	ncit:C4244		
+PD						Adult Fibrosarcoma	A malignant mesenchymal neoplasm composed of fibroblasts. It is characterized by collagen production and a herringbone architectural pattern. It is more commonly seen in middle-aged and older adults. It usually affects the deep soft tissues of extremities, trunk, head and neck. Adult fibrosarcomas may recur and metastasize to the lungs and bones.	ncit:C7809		
+PD						Myxofibrosarcoma	A malignant fibroblastic neoplasm arising from the soft tissue. It is characterized by the presence of spindle-shaped cells, cellular pleomorphism, thin-walled blood vessels, fibrous septa, and myxoid stroma.	ncit:C6496		
+PD						Low-Grade Fibromyxoid Sarcoma	A low-grade, late-metastasizing variant of fibrosarcoma characterized by alternating fibrous and myxoid areas and a whorling growth pattern. The neoplastic cells have a spindle morphology, and lack hyperchromasia or significant nuclear atypia. Approximately 40% of cases show the focal presence of collagen rosettes. A t(7;16)(q33;p11) translocation has been identified in the majority of cases, associated with the presence of FUS-CREB3L2 fusion protein. Rare cases carry the t(11;16)(p11;p11) translocation which is associated with the presence of the FUS-CREB3L1 fusion protein.	ncit:C45202		
+PD						Sclerosing Epithelioid Fibrosarcoma	A well-circumscribed malignant fibroblastic neoplasm that usually arises from the soft tissue. It is characterized by the presence of nests of malignant epithelioid fibroblasts and sclerotic collagen stroma formation.	ncit:C49027		
+PD						Tenosynovial Giant Cell Tumor Localized Type	A well-circumscribed, lobulated tumor, completely or partially covered by a fibrous capsule. It usually arises in the fingers. It is characterized by the presence of mononuclear cells, multinucleated osteoclast-like giant cells, hemosiderin-laden macrophages, foam cells, and an inflammatory infiltrate. The tumor is slow-growing, usually developing over several years. Clinical presentation includes painless edema of the affected site.	ncit:C6532		
+PD						Tenosynovial Giant Cell Tumor Diffuse Type	A locally aggressive, diffusely infiltrating tumor, arising in the tendon sheath. It is composed of synovial-like mononuclear cells, hemosiderin-laden macrophages, foam cells, and inflammatory cells. Multinucleated osteoclast-like giant cells are usually present, although in a minority of cases they may be absent or rare. It predominantly affects young adults. Symptoms include joint swelling, pain, and joint effusion.	ncit:C3401		
+PD						Tenosynovial Giant Cell Tumor Malignant	An uncommon malignant tumor arising from the tendon sheath. Morphologically, it is characterized by the presence of a cellular infiltrate reminiscent of a giant cell tumor with prominent malignant characteristics. Recurrent giant cell tumors with a sarcomatous dedifferentiation are included in this category as well.	ncit:C6535		
+PD						Plexiform Fibrohistiocytic Tumor	An intermediate fibrohistiocytic neoplasm of the skin that usually affects children and young adults. It is a multinodular, poorly circumscribed tumor characterized by the presence of multinucleated giant cells, mononuclear histiocyte-like cells, and spindle fibroblast-like cells arranged in a plexiform pattern.	ncit:C6493		
+PD						Giant Cell Tumor of Soft Tissue	A painless, well circumscribed tumor arising in soft tissue, usually of the upper and lower extremities. Morphologically, it is characterized by a multinodular growth pattern. The cellular infiltrate is composed of mononuclear round or oval cells and multinucleated osteoclast-like giant cells, in a rich vascular stroma. It rarely metastasizes.	ncit:C49107		
+PD						Leiomyosarcoma	An uncommon, aggressive malignant smooth muscle neoplasm, usually occurring in post-menopausal women. It is characterized by a proliferation of neoplastic spindle cells. Morphologic variants include epithelioid, granular cell, inflammatory and myxoid leimyosarcomas.	ncit:C3158		
+PD						Glomus Tumor	A benign multifocal proliferation of glomus cells forming clusters around dilated vascular spaces.	ncit:C27496		
+PD						Glomangiomatosis	A benign multifocal proliferation of glomus cells forming clusters around dilated vascular spaces.	ncit:C27496		
+PD						Malignant Glomus Tumor	A very rare morphologic variant of glomus tumor with a size greater than 2 cm. The tumor arises in subfascial or visceral tissues. It is characterized by the presence of atypical mitotic figures, or marked nuclear atypia, or the combination of both. It has an aggressive clinical course.	ncit:C4221		
+PD						Kaposiform Hemangioendothelioma	An intermediate, locally aggressive blood vessel neoplasm characterized by the presence of spindle endothelial cells, and formation of capillary-sized and slit-like vascular channels. It is often associated with hemorrhage and hemosiderin deposition.	ncit:C27510		
+PD						Retiform Hemangioendothelioma	A rare, intermediate, locally aggressive and rarely metastasizing blood vessel neoplasm of the skin and subcutaneous tissue that usually affects the distal extremities, most often the leg. It manifests as a slow-growing red/bluish nodule or plaque and is characterized by the presence of hobnail endothelial cells and formation of arborizing vascular channels.	ncit:C27511		
+PD						Papillary Intralymphatic Angioendothelioma	A rare, intermediate and rarely metastasizing blood vessel neoplasm that most often affects the skin and soft tissue of the extremities and manifests as a slow-growing induration, nodule, or plaque. Rare cases have been described in the spleen, tongue, and testis as well. It is characterized by the presence of lymphatic-like vascular channels and papillary endothelial proliferation.	ncit:C7526		
+PD						Composite Hemangioendothelioma	An intermediate, locally aggressive and rarely metastasizing blood vessel neoplasm that predominantly involves the skin and superficial soft tissues, with rare cases reported in the kidney, lymph nodes, and spleen. It is characterized by the presence of spindle, plump, and epithelioid endothelial cells and cellular atypia.	ncit:C45475		
+PD						Pseudomyogenic Hemangioendothelioma	An intermediate, rarely metastasizing blood vessel neoplasm that more frequently affects young adult males and usually arises in the lower limbs. In approximately half of the affected patients the tumor is painful and in two-thirds of the patients the tumor is multifocal. Morphologically it is characterized by the presence of sheets and fascicles of spindle cells with abundant eosinophilic cytoplasm and vesicular nuclei. Cytologic atypia is usually mild. Approximately 60% of the patients develop local recurrences or additional tumors in the same anatomic region.	ncit:C121668		
+PD						Kaposi Sarcoma	A malignant neoplasm characterized by a vascular proliferation which usually contains blunt endothelial cells. Erythrocyte extravasation and hemosiderin deposition are frequently present. The most frequent site of involvement is the skin; however it may also occur internally. It generally develops in people with compromised immune systems including those with acquired immune deficiency syndrome (AIDS).	ncit:C9087		
+PD						Epithelioid Haemangioendothelioma	A low-grade malignant blood vessel neoplasm. It is characterized by the presence of epithelioid endothelial cells. The neoplastic cells are arranged in cords and nests, which are embedded in a myxoid to hyalinized stroma.	ncit:C3800		
+PD						Angiosarcoma Of Soft Tissue	An angiosarcoma that arises from the soft tissues, usually in the deep muscles of the lower extremities, retroperitoneum, mediastinum, and mesentery.	ncit:C121671		
+PD						Soft Tissue Chondroma	A benign neoplasm arising from the extraskeletal soft tissues near tendons and joints. It is a well circumscribed tumor characterized by the presence of chondrocytes, a lobulated hyaline cartilage growth pattern, and in some cases calcification.	ncit:C9482		
+PD						Extraskeletal Mesenchymal Chondrosarcoma	A rare malignant tumor of soft tissue characterized by a bimorphic pattern composed of undifferentiated small round cells and islands of well differentiated hyaline cartilage.	ncit:C27481		
+PD						Extraskeletal Osteosarcoma	An osteosarcoma arising from the soft tissue.	ncit:C8810		
+PD						Gastrointestinal Stromal Tumor, Uncertain Malignant Potential	A gastrointestinal stromal tumor that is characterized by a maximum diameter greater than 5 cm and equal or less than 10 cm (gastric localization), or greater than 2 cm and equal or less than 5 cm (intestinal localization) and no more than 5 mitotic figures per 50 high power fields.	ncit:C54000		
+PD						Gastrointestinal Stromal Tumor, Malignant	A gastrointestinal stromal tumor that is characterized by large size (diameter greater than 10 cm for gastric localization and greater than 5 cm for intestinal localization) or more than 5 mitotic figures per 50 high power fields.	ncit:C53999		
+PD						Malignant Peripheral Nerve Sheath Tumor	An uncommon, highly aggressive malignant tumor, arising from the peripheral nerves and affecting mostly adults in their third to sixth decades of life.  It usually occurs in medium-sized and large nerves of the buttock, thigh, upper arm, or the paraspinal region. It may be associated with neurofibromatosis 1 (NF1).	ncit:C3798		
+PD						Epithelioid Malignant Peripheral Nerve Sheath Tumor	A rare variant of malignant peripheral nerve sheath tumor composed predominantly or exclusively of epithelioid cells.	ncit:C6561		
+PD						Malignant Triton Tumor	A malignant peripheral nerve sheath tumor which shows rhabdomyosarcomatous differentiation. More than half of the patients have neurofibromatosis type 1. The prognosis is usually poor.	ncit:C4335		
+PD						Malignant Granular Cell Tumor	An uncommon granular cell tumor which may metastasize to other anatomic sites. Morphologic characteristics include the presence of spindling neoplastic cells, necrosis, extensive pleomorphism, prominent nucleoli, and increased mitiotic activity.	ncit:C4336		
+PD						Ectomesenchymoma	An exceedingly rare, aggressive malignant mesenchymal neoplasm characterized by the presence of a sarcomatous component and a ganglionic or a neuroectodermal component.	ncit:C4716		
+PD						Hemosiderotic Fibrolipomatous Tumor	A non-encapsulated, slow-growing, locally aggressive subcutaneous tumor characterized by the presence of adipocytes, hemosiderin-laden spindle cells, hemosiderin-laden macrophages, osteoclast-like giant cells, and scattered chronic inflammatory cells. It usually arises from the dorsum of the foot, ankle, dorsum of the hand, thigh, calf, or cheek. It may recur if it is not completely excised but does not metastasize.	ncit:C121752		
+PD						Atypical Fibroxanthoma	An intermediate cutaneous mesenchymal neoplasm of uncertain differentiation, usually affecting the actinic-damaged skin of the elderly. The tumor presents as a single cutaneous nodule which is often ulcerated. Microscopically, it is characterized by the presence of highly atypical cytologic features, pleomorphism and abundant mitotic figures. The vast majority of patients have an excellent prognosis following conservative therapy. Recurrences are infrequent, and metastasis is rare.	ncit:C4246		
+PD						Angiomatoid Fibrous Histiocytoma	A low malignant potential soft tissue neoplasm of uncertain differentiation. It typically affects young patients, presenting as a slowly growing nodular or cystic tumor mass, most often in the subcutaneous tissues of the extremities. Occasionally, patients have systemic symptoms (anemia, fever, and weight loss). This tumor has a relatively good prognosis. A minority of patients develop local recurrences. Metastases are rare.	ncit:C6494		
+PD						Ossifying Fibromyxoid Tumor	A rare soft tissue tumor of uncertain lineage characterized by the presence of neoplastic spindle to round cells forming cords in a fibromyxoid stroma. The lesions are associated with the formation of metaplastic bone. Most patients present with painless subcutaneous masses. Recurrences have been reported in a minority of patients.	ncit:C6582		
+PD						Ossifying Fibromyxoid Tumor, Malignant	An ossifying fibromyxoid tumor characterized by the presence of high grade nuclear features or increased cellularity and more than two mitotic figures per 50 HPFs.	ncit:C121774		
+PD						Mixed Tumour NOS	A benign myoepithelioma characterized by the presence of a minor ductal component.	ncit:C121786		
+PD						Mixed Tumor NOS, Malignant	A malignant neoplasm composed of a carcinomatous epithelial component and a sarcomatous mesenchymal component. Representative examples include malignant mixed mesodermal (Mullerian) tumor of the female reproductive system and carcinosarcoma of the salivary gland and the lung.	ncit:C3729		
+PD						Myoepithelioma	A benign or malignant tumor characterized by the presence of cells that show myoepithelial differentiation. Based on its morphologic features, it is classified as benign or malignant. A representative example of benign myoepithelioma is benign salivary gland myoepithelioma. Representative examples of malignant myoepithelioma or myoepithelial carcinoma are malignant breast myoepithelioma and salivary gland myoepithelial carcinoma.	ncit:C40392		
+PD						Myoepithelioma Carcinoma	An infiltrating malignant tumor characterized by the presence of atypical cells with myoepithelial differentiation. Representative examples include malignant breast myoepithelioma and salivary gland myoepithelial carcinoma.	ncit:C7596		
+PD						Phosphaturic Mesenchymal Tumor, Benign	A phosphaturic mesenchymal tumor with benign histologic features. It may recur locally but does not metastasize. Complete excision is curative.	ncit:C121788		
+PD						Phosphaturic Mesenchymal Tumor, Malignant	A phosphaturic mesenchymal tumor characterized by the presence of nuclear atypia, high mitotic activity, increased cellularity, marked pleomorphism, and necrosis. It usually develops in lesions that have recurred locally and metastasizes to other sites.	ncit:C121789		
+PD						Synovial Sarcoma, NOS	A malignant neoplasm characterized by the chromosomal translocation t(X;18)(p11;q11). It can occur at any age, but mainly affects young adults, more commonly males. Although any site can be affected, the vast majority of the cases arise in the deep soft tissues of extremities, especially around the knee. Microscopically, synovial sarcoma is classified as monophasic (with a spindle or epithelial cell component) or biphasic (with both spindle and epithelial cell components). Synovial sarcomas can recur or metastasize to the lungs, bones, and lymph nodes.	ncit:C3400		
+PD						Synovial Sarcoma, Spindle Cell	A synovial sarcoma characterized by the presence of a spindle cell component only.	ncit:C4277		
+PD						Synovial Sarcoma, Biphasic	A synovial sarcoma characterized by the presence of both an epithelial and a spindle cell component.	ncit:C4279		
+PD						Epithelioid Sarcoma	An aggressive malignant neoplasm of uncertain differentiation, characterized by the presence of epithelioid cells forming nodular patterns. The nodules often undergo central necrosis, resulting in a pseudogranulomatous growth pattern. It usually occurs in young adults. The most common sites of involvement are the extremities (distal-type epithelioid sarcoma), and less frequently the pelvis, perineum, and genital organs (proximal-type epithelioid sarcoma).	ncit:C3714		
+PD						Alveolar Soft-Part Sarcoma	A rare malignant neoplasm characterized by the presence of large epithelioid cells with abundant cytoplasm forming nests and pseudoalveolar structures. The groups of the epithelioid cells are separated by thin-walled sinusoidal spaces. It occurs most often in adolescents and young adults. In adults the most common sites of involvement are the extremities, and in infants and children, the head and neck. It usually presents as a slowly growing mass and it frequently metastasizes to other anatomic sites. The most common sites of metastasis are the lungs, bone, and brain.	ncit:C3750		
+PD						Clear Cell Sarcoma Of Soft Tissue	A rare malignant neoplasm with melanocytic differentiation characterized by the presence of polygonal or spindle shaped clear cells. This sarcoma usually affects the tendons and aponeuroses and is associated with a poor prognosis due to recurrences and metastases.	ncit:C3745		
+PD						Extraskeletal Myxoid Chondrosarcoma	A rare malignant soft tissue neoplasm of uncertain differentiation, characterized by the presence of chondroblast-like cells in a myxoid stroma and a multinodular growth pattern. The most common sites of involvement are the deep soft tissues of the extremities, particularly the thigh. It usually presents as an enlarging soft tissue mass. Patients may have long survivals, but local recurrences and metastases occur in approximately half of the cases. The most common site of metastasis is the lungs.	ncit:C27502		
+PD						Desmoplastic Small Round Cell Tumor	An aggressive malignant soft tissue neoplasm of uncertain differentiation. It is characterized by a recurrent chromosomal translocation t(11;22)(p13;q12) and the presence of small round cells in a desmoplastic stroma. It usually affects children and young adults. The most common site of involvement is the abdomen. Patients usually present with abdominal distention, pain, ascites, and a palpable abdominal mass. The prognosis is usually poor.	ncit:C8300		
+PD						Extra-Renal Rhabdoid Tumor	A rhabdoid tumor which arises in the soft tissues. It occurs in infants and children and may be associated with loss of chromosome 22. It is characterized by the presence of cells with a large eccentric nucleus, prominent nucleolus, and abundant cytoplasm.	ncit:C6586		
+PD						Pecoma NOS, Benign	A tumor with perivascular epithelioid cell differentiation characterized by the absence of pleomorphism and scarcity or absence of mitotic figures.	ncit:C121791		
+PD						Pecoma NOS, Malignant	A usually large and aggressive tumor with perivascular epithelioid cell differentiation characterized by the presence of marked nuclear atypia, pleomorphism, increased mitotic activity, necrosis, and infiltrative margins. The most common metastatic sites are liver, lungs, lymph nodes, and bone.	ncit:C121792		
+PD						Intimal Sarcoma	A malignant neoplasm arising from the large blood vessels. It is characterized by the presence of tumor cells that grow within the lumen of the blood vessels. The intraluminal tumor growth may result in vascular obstruction and spread of tumor emboli to peripheral organs. The prognosis is usually poor.	ncit:C53677		
+PD						Undifferentiated Spindle Cell Sarcoma	An undifferentiated soft tissue sarcoma characterized by the presence of a malignant spindle cell infiltrate with amphophilic or palely eosinophilic cytoplasm.	ncit:C121797		
+PD						Undifferentiated Pleomorphic Sarcoma	An undifferentiated soft tissue sarcoma characterized by the presence of a pleomorphic malignant cellular infiltrate. It is also known as malignant fibrous histiocytoma.	ncit:C4247		
+PD						Undifferentiated Round Cell Sarcoma	An undifferentiated soft tissue sarcoma characterized by the presence of uniform round or ovoid malignant cells with a high nuclear to cytoplasmic ratio.	ncit:C121799		
+PD						Undifferentiated Epithelioid Sarcoma	An undifferentiated soft tissue sarcoma characterized by the presence of a malignant cellular infiltrate with epithelioid morphology.	ncit:C121802		
+PD						Undifferentiated Sarcoma, NOS	An undifferentiated soft tissue sarcoma which cannot be further characterized.	ncit:C121804		
+VD	HISTOLOGY_GRADE	Enum		The degree of abnormality of cancer cells, a measure of differentiation, the extent to which cancer cells are similar in appearance and function to healthy cells of the same tissue type. The degree of differentiation often relates to the clinical behavior of the particular tumor. Based on the microscopic findings, tumor grade is commonly described by one of four degrees of severity. Histopathologic grade of a tumor may be used to plan treatment and estimate the future course, outcome, and overall prognosis of disease. Certain types of cancers, such as soft tissue sarcoma, primary brain tumors, lymphomas, and breast have special grading systems.	ncit:C18000	_undefined_	_undefined_	_undefined_		
+PD						FNCLCC, Grade GX	Grade cannot be assessed.			
+PD						FNCLCC, Grade 1	Total tumor differentiation, mitotic count, and necrosis score of 2 or 3.			
+PD						FNCLCC, Grade 2	Total tumor differentiation, mitotic count, and necrosis score of 4 or 5.			
+PD						FNCLCC, Grade 3	Total tumor differentiation, mitotic count, and necrosis score of 6, 7, or 8.			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998		
+										
+										
+DD	Disease Attributes									
+TD	Disease Site Assessment									[nrsts_v1.0].[Tumor Assessment] skos:exactMatch [nrsts_v2.0].[Disease Site Assessment]
+TG	One row per subject per evaluation and per lesion (local, regional or metastatic)									
+VD	HONEST_BROKER_SUBJECT_ID	String	3 - contributors shouldn’t prioritize inclusion, but can include if resources are available	The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_		New VD
+VD	AGE_AT_DISEASE_SITE_ASSESSMENT	Integer	3 - contributors shouldn’t prioritize inclusion, but can include if resources are available	The age (in days) of the subject at the time of this disease site assessment.	ncit:C174997	_undefined_	_undefined_	_undefined_		[nrsts_v1.0].[Tumor Assessment].[AGE_AT_TUMOR_ASSESSMENT] skos:exactMatch [nrsts_v2.0].[Disease Site Assessment].[AGE_AT_DISEASE_SITE_ASSESSMENT]
+VD	CLASSIFICATION	Enum	3 - contributors shouldn’t prioritize inclusion, but can include if resources are available	The classification of a tumor based primarily on histopathological characteristics.	ncit:C174459	_undefined_	_undefined_	_undefined_		[nrsts_v1.0].[Tumor Assessment].[TUMOR_CLASSIFICATION] skos:exactMatch [nrsts_v2.0].[Disease Site Assessment].[CLASSIFICATION]
+PD						Primary	A tumor at the original site of origin.	ncit:C8509		
+PD						Metastatic	A term referring to the clinical or pathologic observation of a tumor extension from its original site of growth to another anatomic site.	ncit:C14174		
+VD	SITE	Enum	3 - contributors shouldn’t prioritize inclusion, but can include if resources are available	The anatomical site on which the disease is assessed.	ncit:C166232	_undefined_	_undefined_	_undefined_		[nrsts_v1.0].[Tumor Assessment].[TUMOR_SITE] skos:exactMatch [nrsts_v2.0].[Disease Site Assessment].[SITE]
+PD						Abdominal Wall	The tissues that surround the organs that are present within the abdominal cavity. The abdominal wall tissue is composed of layers of fat, parietal peritoneum, fascia, and muscles.	ncit:C77608		
+PD						Bone	The structural organ comprised of specialized connective tissue that forms the skeletal components of the body.	ncit:C12366		
+PD						Bone Marrow	The tissue occupying the spaces of bone. It consists of blood vessel sinuses and a network of hematopoietic cells which give rise to the red cells, white cells, and megakaryocytes.	ncit:C12431		
+PD						Brain/Leptomeninges	An organ composed of grey and white matter containing billions of neurons that is the center for intelligence and reasoning. It is protected by the bony cranium. | The two innermost layers of tissue that cover the brain and spinal cord, the arachnoid mater and the pia mater.	ncit:C12439|ncit:C32979		
+PD						Breast	One of two hemispheric projections of variable size situated in the subcutaneous layer over the pectoralis major muscle on either side of the chest.	ncit:C12971		
+PD						Chest Wall	The total system of structures outside the lungs that move as a part of breathing; it includes all structures from the skin to the parietal pleura.	ncit:C62484		
+PD						Distant Lymph Nodes	A bean-shaped organ surrounded by a connective tissue capsule. It is part of the lymphatic system and is found throughout the body. It is composed predominantly of lymphocytes and its main function is immune protection.	ncit:C12745		
+PD						Foot	The structure found below the ankle joint required for locomotion.	ncit:C32622		
+PD						Hand	The distal portion of the upper extremity. It consists of the carpus, metacarpus, and digits.	ncit:C32712		
+PD						Head	The anterior and superior part of a human bearing the mouth, the brain and sensory organs.	ncit:C12419		
+PD						Hip	The lateral prominence of the pelvis from the waist to the thigh.	ncit:C64193		
+PD						Intraperitoneal	Relating to the peritoneal cavity as the intended site of administration.	ncit:C13352		
+PD						Intrathoracic	Within the thoracic cavity.	ncit:C105579		
+PD						Leg	The portion of the lower extremity between the knee and the ankle. For clinical purposes this term is also used to refer to the whole inferior limb.	ncit:C32974		
+PD						Liver	A triangular-shaped organ located under the diaphragm in the right hypochondrium. It is the largest internal organ of the body, weighting up to 2 kg. Metabolism and bile secretion are its main functions. It is composed of cells which have the ability to regenerate.	ncit:C12392		
+PD						Lower Arm	The lower arm, also known as the forearm, is the region of the upper limb (arm) that extends from the elbow joint to the wrist joint. It is positioned between the upper arm (which includes the upper arm bone, or humerus) and the hand. The lower arm is an essential part of the human upper extremity and plays a significant role in various daily activities, including lifting, gripping, and manipulating objects.			
+PD						Lung	One of a pair of viscera occupying the pulmonary cavities of the thorax, the organs of respiration in which aeration of the blood takes place. As a rule, the right lung is slightly larger than the left and is divided into three lobes (an upper, a middle, and a lower or basal), while the left has two lobes (an upper and a lower or basal). Each lung is irregularly conical in shape, presenting a blunt upper extremity (the apex), a concave base following the curve of the diaphragm, an outer convex surface (costal surface), an inner or mediastinal surface (mediastinal surface), a thin and sharp anterior border, and a thick and rounded posterior border.	ncit:C12468		
+PD						Neck	The region that connects the head to the rest of the body.	ncit:C13063		
+PD						Paraspinal	Pertaining to muscles and/or tissue adjacent to the spinal column.	ncit:C129461		
+PD						Pelvis	The bony, basin-shaped structure formed by the hipbones and the base of the backbone supporting the lower limbs in humans.	ncit:C12767		
+PD						Perineum	The area located between the anus and vulva in females, and anus and scrotum in males.	ncit:C33301		
+PD						Peritoneum	The tissue that lines the wall of the abdominal cavity, intestine, mesentery, and pelvic organs. It consists of the parietal peritoneum and the visceral peritoneum.	ncit:C12770		
+PD						Pleura	The tissue that lines the wall of the thoracic cavity and the surface of the lungs.	ncit:C12469		
+PD						Retroperitoneum	The back of the abdomen where the kidneys lie and the great blood vessels run.	ncit:C12298		
+PD						Shoulder	The region of the body between the neck and the upper arm.	ncit:C25203		
+PD						Thigh	A part of the lower limb, located between hip and knee.	ncit:C33763		
+PD						Upper Arm	The portion of the upper extremity between the shoulder and the elbow. For clinical purposes this term is also used to refer to the whole superior limb.	ncit:C32141		
+PD						Urogenital	Of or related to the genital and urinary organs or their functions.	ncit:C25350		
+PD						Other	Different than the one(s) previously specified or mentioned.	ncit:C17649		
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998		
+PD						Not Reported	Not provided or available.	ncit:C43234		
+VD	SITE_OTHER	String	3 - contributors shouldn’t prioritize inclusion, but can include if resources are available	Specify the "Other" SITE.		_undefined_	_undefined_	_undefined_		[nrsts_v1.0].[Tumor Assessment].[TUMOR_SITE_OTHER] skos:exactMatch [nrsts_v2.0].[Disease Site Assessment].[SITE_OTHER]
+VD	DIAMETER1	Decimal	3 - contributors shouldn’t prioritize inclusion, but can include if resources are available	The longest diameter of the tumor.	ncit:C96684	_undefined_	_undefined_	_undefined_		[nrsts_v1.0].[Tumor Assessment].[LONGEST_DIAM_DIM1] skos:exactMatch [nrsts_v2.0].[Disease Site Assessment].[DIAMETER1]
+VD	DIAMETER1_UNIT	Enum	3 - contributors shouldn’t prioritize inclusion, but can include if resources are available	The unit of measure symbol associated with a biospecimen or tissue fragment dimension.		_undefined_	_undefined_	_undefined_		New VD
+PD						cm	A basic unit of length in the former CGS version of metric system, equal to one hundredth of a meter or approximately 0.393 700 787 inch.	ncit:C49668		
+VD	DIAMETER2	Decimal	3 - contributors shouldn’t prioritize inclusion, but can include if resources are available	The second longest diameter of the tumor.	ncit:C96684	_undefined_	_undefined_	_undefined_		[nrsts_v1.0].[Tumor Assessment].[LONGEST_DIAM_DIM2] skos:exactMatch [nrsts_v2.0].[Disease Site Assessment].[DIAMETER2]
+VD	DIAMETER2_UNIT	Enum	3 - contributors shouldn’t prioritize inclusion, but can include if resources are available	The unit of measure symbol associated with a biospecimen or tissue fragment dimension.		_undefined_	_undefined_	_undefined_		New VD
+PD						cm	A basic unit of length in the former CGS version of metric system, equal to one hundredth of a meter or approximately 0.393 700 787 inch.	ncit:C49668		
+VD	DIAMETER3	Decimal	3 - contributors shouldn’t prioritize inclusion, but can include if resources are available	The third longest diameter of the tumor.	ncit:C16809	_undefined_	_undefined_	_undefined_		[nrsts_v1.0].[Tumor Assessment].[LONGEST_DIAM_DIM3] skos:exactMatch [nrsts_v2.0].[Disease Site Assessment].[DIAMETER3]
+VD	DIAMETER3_UNIT	Enum	3 - contributors shouldn’t prioritize inclusion, but can include if resources are available	The unit of measure symbol associated with a biospecimen or tissue fragment dimension.		_undefined_	_undefined_	_undefined_		New VD
+PD						cm	A basic unit of length in the former CGS version of metric system, equal to one hundredth of a meter or approximately 0.393 700 787 inch.	ncit:C49668		
+VD	TUMOR_SIZE	Enum	3 - contributors shouldn’t prioritize inclusion, but can include if resources are available	The tumor size of the largest tumor.		_undefined_	_undefined_	_undefined_		
+PD						<=5 cm	The size of the tumor is less than or equal to 5 centimeters.			
+PD						>5 cm	The size of the tumor is greater than 5 centimeters.			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998		
+VD	INVASIVENESS	Enum	3 - contributors shouldn’t prioritize inclusion, but can include if resources are available	Is there evidence of tumor invasiveness in the current diagnosis?		_undefined_	_undefined_	_undefined_		
+PD						Yes	The affirmative response to a question.	ncit:C49488		
+PD						No	The non-affirmative response to a question.	ncit:C49487		
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998		
+VD	DEPTH	Enum	3 - contributors shouldn’t prioritize inclusion, but can include if resources are available	The depth of the tumor.	ncit:C25333	_undefined_	_undefined_	_undefined_		
+PD						Superficial	Of little substance or significance; involving only a surface.	ncit:C25239		
+PD						Deep	Extending relatively far inward.	ncit:C25240		
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998		
+										
+										
+DD	Treatment									
+TD	Radiation Therapy									
+TG	One row per subject per radiation therapy administration									
+VD	HONEST_BROKER_SUBJECT_ID	String	3 - contributors shouldn’t prioritize inclusion, but can include if resources are available	The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_		New VD
+VD	AGE_AT_RT	Number		Age in Days at Start of Radiation Therapy		_undefined_	_undefined_	_undefined_		
+VD	CLASSIFICATION	Code		Tumor Classification		_undefined_	_undefined_	_undefined_		[nrsts_v1.0].[Radiation Therapy].[TUMOR_CLASSIFICATION] skos:exactMatch [nrsts_v2.0].[Radiation Therapy].[CLASSIFICATION]
+PD						Primary				
+PD						Regional Nodes				
+PD						Metastatic				
+VD	SITE	Code		Radiation Therapy Site		_undefined_	_undefined_	_undefined_		[nrsts_v1.0].[Radiation Therapy].[RT_SITE] skos:exactMatch [nrsts_v2.0].[Radiation Therapy].[SITE]
+PD						Head				
+PD						Neck				
+PD						Chest Wall				
+PD						Abdominal Wall				
+PD						Breast				
+PD						Intrathoracic				
+PD						Intraperitoneal				
+PD						Retroperitoneal				
+PD						Paraspinal				
+PD						Pelvis				
+PD						Urogenital				
+PD						Perineum				
+PD						Shoulder				
+PD						Upper Arm				
+PD						Lower Arm				
+PD						Hand				
+PD						Hip				
+PD						Thigh				
+PD						Leg				
+PD						Foot				
+PD						Lung				
+PD						Liver				
+PD						Bone				
+PD						Bone Marrow				
+PD						Distant Nodes				
+PD						Brain/Leptomeninges				
+PD						Pleura				
+PD						Peritoneum				
+PD						Other				
+PD						Unknown				
+PD						Not Reported				
+VD	ENERGY_TYPE	Code		Particles and Energy Type		_undefined_	_undefined_	_undefined_		
+PD						Protons				
+PD						Photon				
+PD						Brachytherapy				
+PD						Unknown				
+PD						Other				
+VD	DOSE	Number		Total Radiation Dose		_undefined_	_undefined_	_undefined_		[nrsts_v1.0].[Radiation Therapy].[RT_DOSE] skos:exactMatch [nrsts_v2.0].[Radiation Therapy].[DOSE]
+VD	UNIT	Code		Radiation Dose Unit		_undefined_	_undefined_	_undefined_		[nrsts_v1.0].[Radiation Therapy].[RT_UNIT] skos:exactMatch [nrsts_v2.0].[Radiation Therapy].[DOSE_UNIT]
+PD						Gy				
+										
+										
+										
+DD	Treatment									
+TD	Biopsy And Surgical Procedures									[nrsts_v1.0].[Biopsy/Surgical Procedures] skos:exactMatch [nrsts_v2.0].[Biopsy And Surgical Procedures]
+TG	One record per subject per biopsy/surgical procedure									
+VD	HONEST_BROKER_SUBJECT_ID	String	3 - contributors shouldn’t prioritize inclusion, but can include if resources are available	The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_		New VD
+VD	AGE_AT_PROCEDURE	Number		Age in Days of Procedure		_undefined_	_undefined_	_undefined_		
+VD	TUMOR_CLASSIFICATION	Code		Tumor Classification		_undefined_	_undefined_	_undefined_		[nrsts_v1.0].[Biopsy/Surgical Procedures].[TUMOR_CLASSIFICATION] skos:exactMatch [nrsts_v2.0].[Biopsy And Surgical Procedures].[CLASSIFICATION]
+PD						Primary			distant sites?	
+PD						Regional Nodes				
+PD						Metastatic				
+VD	PROCEDURE_SITE	Code		Procedure Site		_undefined_	_undefined_	_undefined_		[nrsts_v1.0].[Biopsy/Surgical Procedures].[PROCEDURE_SITE] skos:exactMatch [nrsts_v2.0].[Biopsy And Surgical Procedures].[SITE]
+PD						Head				
+PD						Neck				
+PD						Chest Wall				
+PD						Abdominal Wall				
+PD						Breast				
+PD						Intrathoracic				
+PD						Intraperitoneal				
+PD						Retroperitoneal				
+PD						Paraspinal				
+PD						Pelvis				
+PD						Urogenital				
+PD						Perineum				
+PD						Shoulder				
+PD						Upper Arm				
+PD						Lower Arm				
+PD						Hand				
+PD						Hip				
+PD						Thigh				
+PD						Leg				
+PD						Foot				
+PD						Lung				
+PD						Liver				
+PD						Bone				
+PD						Bone Marrow				
+PD						Distant Nodes				
+PD						Brain/Leptomeninges				
+PD						Pleura				
+PD						Peritoneum				
+PD						Other				
+PD						Unknown				
+PD						Not Reported				
+VD	PROCEDURE_TYPE	Code		Procedure Type		_undefined_	_undefined_	_undefined_		
+PD						Biopsy				
+PD						Surgery				
+VD	MARGINS	Code		Margins		_undefined_	_undefined_	_undefined_		
+PD						R0 - Complete Resection, Negative				
+PD						R1 - Complete Resection, Positive				
+PD						R2 - Gross Residual Disease				
+PD						Unknown				
+PD						Not Reported				
+										
+										
+DD	Response									
+TD	Subject Response									
+TG	One row per subject per response assessment per response method									
+VD	HONEST_BROKER_SUBJECT_ID	String		The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_		New VD
+VD	AGE_AT_RESPONSE	Number		Age in Days at Response Assessment		_undefined_	_undefined_	_undefined_		
+VD	TX_PRIOR_RESPONSE	Code		Treatment Type Prior to Response Assessment		_undefined_	_undefined_	_undefined_		
+PD						Chemotherapy				
+PD						Chemoradiotherapy				
+VD	RESPONSE	Code		Response		_undefined_	_undefined_	_undefined_		
+PD						Partial Response				
+PD						Stable Disease				
+PD						Progressive Disease				
+PD						Complete Response				
+PD						Not Evaluable				
+VD	NECROSIS	Code		Tumor Necrosis		_undefined_	_undefined_	_undefined_		
+PD						Score 0: No Necrosis				
+PD						<50% Necrosis				
+PD						>=50% Necrosis				
+PD						Unknown				
+VD	NECROSIS_PCT	Number		Tumor Necrosis (%)		_undefined_	_undefined_	_undefined_		
+										
+										
+DD	Events									
+TD	Subsequent Malignant Neoplasm									
+TG	One row per subject per subsequent malignancy									
+VD	HONEST_BROKER_SUBJECT_ID	String		The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_		New VD
+VD	AGE_AT_SMN	Number		Age in Days at Secondary Malignant Neoplasm		_undefined_	_undefined_	_undefined_		
+VD	SITE	Code		SMN Site		_undefined_	_undefined_	_undefined_		[nrsts_v1.0].[Secondary Malignant Neoplasm].[SMN_SITE] skos:exactMatch [nrsts_v2.0].[Subsequent Malignant Neoplasm].[SITE]
+PD						Head/Neck				
+PD						Thorax				
+PD						Limbs				
+PD						Abdomen				
+PD						Pelvis				
+PD						Other				
+PD						Not Reported				
+VD	SMN_TYPE	Code		SMN Type		_undefined_	_undefined_	_undefined_		
+PD						Leukemia				
+PD						Sarcoma				
+PD						Carcinoma				
+PD						Other				
+PD						Not Reported				

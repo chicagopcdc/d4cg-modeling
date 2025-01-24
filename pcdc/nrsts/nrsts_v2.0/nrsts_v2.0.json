@@ -1,0 +1,3047 @@
+{
+    "meta": {
+        "name": "nrsts_v2.0",
+        "timestamp": "20250124",
+        "sheet_id": "1gDTwDYylH0UakFcNoGBp6etUKKkLVCkZGr-P6NoyN5Y"
+    },
+    "info": {
+        "title": "Non-rhabdomyosarcoma Soft Tissue Sarcomas (NRSTS) Data Dictionary",
+        "name": "nrsts_v2.0",
+        "release_notes": "",
+        "parent_data_model": "pcdc_v2.0",
+        "license": "Creative Commons Attribution-NonCommercial 4.0 International License (https://creativecommons.org/licenses/by-nc/4.0/)",
+        "wiki": "https://docs.pedscommons.org/",
+        "consortium_info": "https://commons.cri.uchicago.edu/pcdc/",
+        "description": "The NRSTS data dictionary is a consensus data schema built by an international group of pediatric non-rhabdomyosarcoma soft tissue sarcoma experts and maintained by Data for the Common Good (D4CG) at the University of Chicago in collaboration with the International Soft Tissue Sarcoma Consortium (INSTRuCT). It is based on the collective requirements of its contributors.",
+        "total": 75
+    },
+    "domains": {
+        "protocol": {
+            "subject_characteristics": {
+                "HONEST_BROKER_SUBJECT_ID": {
+                    "type": "String",
+                    "tier": "",
+                    "description": "Honest Broker Subject ID",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "CONSORTIUM": {
+                    "type": "Enum",
+                    "tier": "To-do",
+                    "description": "The consortium under which this data is being contributed to the Pediatric Cancer Data Commons.",
+                    "codes": [
+                        "ncit:C61538"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ],
+                    "permissible_values": {
+                        "INSTRuCT": {
+                            "description": "International Pediatric Acute Myeloid Leukemia Consortium (INTERACT). A consortium launched in 2021 as a collaboration between acute myeloid leukemia researchers from Children's Oncology Group, European Pediatric Acute Leukemia, Japan Children's Cancer Group, and St. Jude Children's Research Hospital. To date, INTERACT has identified 18 studies from 10 clinical trials research groups that can be contributed to the data commons, and its statisticians are actively working to harmonize clinical data from more than 6,000 individuals who have had pediatric cancer.",
+                            "codes": [
+                                "ncit:C192762"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        }
+                    }
+                },
+                "DISEASE_GROUP": {
+                    "type": "Enum",
+                    "tier": "",
+                    "description": "",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ],
+                    "permissible_values": {
+                        "NRSTS": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        }
+                    }
+                },
+                "DATA_CONTRIBUTOR_ID": {
+                    "type": "Code",
+                    "tier": "",
+                    "description": "Data Contributor Identifier",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "AIEOP": {
+                            "description": "Italian Association of Pediatric Hematology and Oncology. A group from Bologna, Italy, comprised mainly of pediatricians, hematologists, oncologists, surgeons, biologists, nurses and psychologists who are devoted to addressing the problems of hematology, oncology and immunology in the child and adolescent.",
+                            "codes": [
+                                "ncit:C168887"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "COG": {
+                            "description": "Children's Oncology Group. An NCI-supported clinical cooperative group formed by the merger of the four national pediatric cancer research organizations: the Children's Cancer Group, the Intergroup Rhabdomyosarcoma Study Group, the National Wilms Tumor Study Group, and the Pediatric Oncology Group. The primary objective of the organization is to conduct clinical trials of new therapies for childhood and adolescent cancer. COG develops and coordinates clinical trials conducted at the 238 member institutions that include cancer centers of all major universities and teaching hospitals throughout the U.S. and Canada, as well as sites in Europe and Australia. COG members include over 5000 cancer researchers.",
+                            "codes": [
+                                "ncit:C39353"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "EpSSG": {
+                            "description": "European Paediatric Soft Tissue Sarcoma Study Group. An international organization of healthcare professionals devoted to the care and treatment of children and young people with soft tissue sarcoma.",
+                            "codes": [
+                                "ncit:C192774"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "SIOP MMT": {
+                            "description": "International Society of Paediatric Oncology Malignant Mesenchymal Tumour Committee. An international pediatric oncology committee that specializes in the research of malignant mesenchymal tumors. Along with the Associazione Italiana Ematologia Oncologia Pediatrica-Soft Tissue Sarcoma Committee (AIEOP-STSC), which was formerly known as the Italian Cooperative Group (ICG), SIOP-MMT founded the European pediatric Soft tissue sarcoma Study Group (EpSSG) and the Non-rhabdomyosarcoma Soft Tissue Sarcoma (NRSTS) study in 2005 with the goal of making pediatric non-rhabdomyosarcoma soft tissue sarcoma treatment uniform across Europe.",
+                            "codes": [
+                                "ncit:C192775"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "CWS": {
+                            "description": "Cooperative Weichteilsarkom Studiengruppe. An international pediatric soft tissue sarcoma study group, also known as the Cooperative Soft Tissue Sarcoma Group, that creates guidance for risk-adapted treatment of soft tissue sarcoma and soft tissue tumors in children, adolescents, and young adults in Europe.",
+                            "codes": [
+                                "ncit:C192777"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "STSC": {
+                            "description": "AIEOP Soft Tissue Sarcoma Committee",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        }
+                    }
+                },
+                "STUDY_ID": {
+                    "type": "Code",
+                    "tier": "",
+                    "description": "Study Identifier",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {}
+                },
+                "TREATMENT_ARM": {
+                    "type": "Code",
+                    "tier": "",
+                    "description": "Assigned Treatment Arm by Intention-To-Treat",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {}
+                },
+                "CENSOR_STATUS": {
+                    "type": "Code",
+                    "tier": "",
+                    "description": "Censor Status",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Subject is censored (i.e. has had no events(s))": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Subject has had one or more events": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                }
+            },
+            "time_period": {
+                "HONEST_BROKER_SUBJECT_ID": {
+                    "type": "String",
+                    "tier": "2 - contributors should prioritize inclusion if resources are available",
+                    "description": "The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a \"re-identification code\"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.",
+                    "codes": [
+                        "ncit:C168949"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ]
+                },
+                "SUBMITTER_ID": {
+                    "type": "String",
+                    "tier": "2 - contributors should prioritize inclusion if resources are available",
+                    "description": "An ID provided by the data contributor that identifies a unique time period and that is referenced throughout subsequent tabels in the TIME_PERIOD_SUBMITTER_ID variables.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ]
+                },
+                "PARENT_SUBMITTER_ID": {
+                    "type": "String",
+                    "tier": "2 - contributors should prioritize inclusion if resources are available",
+                    "description": "The SUBMITTER_ID of the time period in whose context a subsequent time period takes place. For example, multiple treatment courses occuring the \"Initial Diagnosis\" period would each reference the SUBMITTER_ID of the \"Initial Diagnosis\" period as their PARENT_SUBMITTER_ID.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ]
+                },
+                "TIME_PERIOD_TYPE": {
+                    "type": "Enum",
+                    "tier": "2 - contributors should prioritize inclusion if resources are available",
+                    "description": "The type of time period being reported.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ],
+                    "permissible_values": {
+                        "Disease Phase": {
+                            "description": "The stage or period of an individual's disease.",
+                            "codes": [
+                                "ncit:C168878"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Course": {
+                            "description": "The type of protocol treatment course administered with respect to Course Timing.",
+                            "codes": [
+                                "ncit:C187095"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "DISEASE_PHASE": {
+                    "type": "Enum",
+                    "tier": "2 - contributors should prioritize inclusion if resources are available",
+                    "description": "The phase of the cancer treatment process during which relevant observations were recorded. This variable is used across domains to frame the timing of these longitudinal observations and reduce the number of redundant variables needed to report similar concepts (see \"Disease Phase Timing and Course Table\" in the documentation for additional guidance).",
+                    "codes": [
+                        "ncit:C168878"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "[nrsts_v1.0].[Disease Phase Timing].[DISEASE_PHASE] skos:exactMatch [nrsts_v2.0].[Time Period].[DISEASE_PHASE]"
+                    ],
+                    "permissible_values": {
+                        "Initial Diagnosis": {
+                            "description": "The first diagnosis of the individual's condition.",
+                            "codes": [
+                                "ncit:C156813"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Relapse": {
+                            "description": "The return of a disease after a period of remission.",
+                            "codes": [
+                                "ncit:C38155"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Progression": {
+                            "description": "A process that manifests as the worsening of a disease over time.",
+                            "codes": [
+                                "ncit:C17747"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "COURSE": {
+                    "type": "Enum",
+                    "tier": "2 - contributors should prioritize inclusion if resources are available",
+                    "description": "The protocol treatment \"course\" during which relevant observations were recorded. This variable is used across domains to frame the timing of these longitudinal observations and reduce the number of redundant variables needed to report similar concepts (see \"Disease Phase Timing and Course Table\" in the documentation for additional guidance).",
+                    "codes": [
+                        "ncit:C168807"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "[nrsts_v1.0].[Course Timing].[COURSE] skos:exactMatch [nrsts_v2.0].[Time Period].[COURSE]"
+                    ],
+                    "permissible_values": {
+                        "Prephase": {
+                            "description": "A chemotherapy treatment administered prior to the definitive chemotherapy treatment.",
+                            "codes": [
+                                "ncit:C168826"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Induction": {
+                            "description": "The first choice of treatment for a particular type of cancer.",
+                            "codes": [
+                                "ncit:C158876"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Intensification": {
+                            "description": "A second round of intense chemotherapy as part of consolidation therapy.",
+                            "codes": [
+                                "ncit:C173105"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Consolidation": {
+                            "description": "Treatment that is given after initial therapy to kill any remaining cancer cells.",
+                            "codes": [
+                                "ncit:C15679"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Maintenance": {
+                            "description": "Continuation of treatment for an extended period of time to prevent relapse.",
+                            "codes": [
+                                "ncit:C15688"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "TIME_PERIOD_NUMBER": {
+                    "type": "Integer",
+                    "tier": "2 - contributors should prioritize inclusion if resources are available",
+                    "description": "This variable indicates the ordinal numbering of time periods of the same TIME_PERIOD_TYPE within its various subgroups (e.g., Relapse 1, Relapse 2, Relapse 3, etc.). The observations across domains can therefore be organized longitudinally without the need for specific dates.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "[nrsts_v1.0].[Disease Phase Timing].[DISEASE_PHASE_NUMBER] skos:broadMatch [nrsts_v2.0].[Time Period].[TIME_PERIOD_NUMBER] ",
+                        " [nrsts_v1.0].[Course Timing].[COURSE_NUMBER] skos:broadMatch [nrsts_v2.0].[Time Period].[TIME_PERIOD_NUMBER]"
+                    ]
+                },
+                "YEAR_AT_START": {
+                    "type": "Integer",
+                    "tier": "2 - contributors should prioritize inclusion if resources are available",
+                    "description": "The year at the start of the indicated time period.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "[nrsts_v1.0].[Disease Phase Timing].[YEAR_AT_DISEASE_PHASE] skos:exactMatch [nrsts_v2.0].[Time Period].[YEAR_AT_START]"
+                    ]
+                },
+                "AGE_AT_START": {
+                    "type": "Integer",
+                    "tier": "2 - contributors should prioritize inclusion if resources are available",
+                    "description": "The age (in days) of the patient at the start of the reported time period.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "[nrsts_v1.0].[Disease Phase Timing].[AGE_AT_DISEASE_PHASE] skos:broadMatch [nrsts_v2.0].[Time Period].[AGE_AT_START] ",
+                        " [nrsts_v1.0].[Course Timing].[AGE_AT_COURSE_START] skos:broadMatch [nrsts_v2.0].[Time Period].[AGE_AT_START]"
+                    ]
+                },
+                "AGE_AT_END": {
+                    "type": "Integer",
+                    "tier": "2 - contributors should prioritize inclusion if resources are available",
+                    "description": "The age (in days) of the patient at the end of the reported time period.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "[nrsts_v1.0].[Course Timing].[AGE_AT_COURSE_END] skos:exactMatch [nrsts_v2.0].[Time Period].[AGE_AT_END]"
+                    ]
+                }
+            }
+        },
+        "demographics": {
+            "demographics": {
+                "HONEST_BROKER_SUBJECT_ID": {
+                    "type": "String",
+                    "tier": "",
+                    "description": "The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a \"re-identification code\"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.",
+                    "codes": [
+                        "ncit:C168949"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ]
+                },
+                "SEX": {
+                    "type": "Code",
+                    "tier": "",
+                    "description": "Sex",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Male": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Female": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "RACE": {
+                    "type": "Code",
+                    "tier": "",
+                    "description": "Race",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "American Indian or Alaska Native": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Asian": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Black or African American": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Multiracial": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Native Hawaiian or Other Pacific Islander": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "White": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Other": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Reported": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "ETHNICITY": {
+                    "type": "Code",
+                    "tier": "",
+                    "description": "Ethnicity",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Hispanic or Latino": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Hispanic or Latino": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Reported": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                }
+            },
+            "medical_history": {
+                "HONEST_BROKER_SUBJECT_ID": {
+                    "type": "String",
+                    "tier": "",
+                    "description": "The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a \"re-identification code\"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.",
+                    "codes": [
+                        "ncit:C168949"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ]
+                },
+                "CONDITION": {
+                    "type": "Code",
+                    "tier": "",
+                    "description": "Medical History",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "[nrsts_v1.0].[Medical History].[MEDICAL_HISTORY] skos:exactMatch [nrsts_v2.0].[Medical History].[CONDITION]"
+                    ],
+                    "permissible_values": {
+                        "APC": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Costello": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "DICER1": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Li-Fraumeni": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "NF-1": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "RB1": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Secondary Malignancy": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Other": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                }
+            },
+            "survival_characteristics": {
+                "HONEST_BROKER_SUBJECT_ID": {
+                    "type": "String",
+                    "tier": "",
+                    "description": "The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a \"re-identification code\"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.",
+                    "codes": [
+                        "ncit:C168949"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ]
+                },
+                "AGE_AT_LKSS": {
+                    "type": "Number",
+                    "tier": "",
+                    "description": "Age in Days at Last Known Survival",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "LKSS": {
+                    "type": "Code",
+                    "tier": "",
+                    "description": "Last Known Survival Status",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Alive": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Dead": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "CAUSE_OF_DEATH": {
+                    "type": "Code",
+                    "tier": "",
+                    "description": "Cause of Death",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Disease Progression": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [
+                                "Note: If multiple causes of death, include one observation per cause of death. There can only be one record where CAUSE_OF_DEATH_RANKING=Primary."
+                            ],
+                            "mappings": []
+                        },
+                        "Treatment-Related Mortality": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Secondary Malignancy": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Other": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                }
+            }
+        },
+        "testing": {
+            "molecular_analysis": {
+                "HONEST_BROKER_SUBJECT_ID": {
+                    "type": "String",
+                    "tier": "",
+                    "description": "The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a \"re-identification code\"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.",
+                    "codes": [
+                        "ncit:C168949"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ]
+                },
+                "AGE_AT_MOLECULAR_ANALYSIS": {
+                    "type": "Number",
+                    "tier": "",
+                    "description": "Age in Days at Molecular Analysis",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "MITOSES": {
+                    "type": "Code",
+                    "tier": "",
+                    "description": "Mitotic Count",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Score 1: 0-9 Mitoses per 10 HPF": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Score 2: 10-19 Mitoses per 10 HPF": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Score 3: > 19 Mitoses per 10 HPF": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "MOLECULAR_ABNORMALITY": {
+                    "type": "Code",
+                    "tier": "",
+                    "description": "Molecular Abnormality",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "FOXO1 Rearranged": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [
+                                "Note: If multiple molecular abnormalities, include one observation per molecular abnormality."
+                            ],
+                            "mappings": []
+                        },
+                        "EWSR1 Rearranged": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "SMARCB1 Deleted/Mutated": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ETV6 Rearranged": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ALK Rearranged": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "SSX-SS18": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "CIC-DUX4": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "BCOR-CCNB3": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "EWSR1-ETV1/4": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "FUS-CREB3L2": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "EWSR1-ATF1": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "EWSR1-CREB1": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "EWSR1-PBX1/ZNF44/POU5F1": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "TGFBR3-MGEA5": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "NTRK Rearranged": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ROS1 Rearranged": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "VGLLA2 Rearranged": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "ASPSCR1-TFE3": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "BCOR ITT Rearranged": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Other": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "MOLECULAR_ABNORMALITY_OTHER": {
+                    "type": "String",
+                    "tier": "",
+                    "description": "Molecular Abnormality Other",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "CYTODIFFERENTIATION": {
+                    "type": "Code",
+                    "tier": "",
+                    "description": "Cytodifferentiation Score",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "1": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "2": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "3": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                }
+            }
+        },
+        "disease_attributes": {
+            "diagnosis": {
+                "HONEST_BROKER_SUBJECT_ID": {
+                    "type": "String",
+                    "tier": "",
+                    "description": "The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a \"re-identification code\"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.",
+                    "codes": [
+                        "ncit:C168949"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ]
+                },
+                "AGE_AT_DIAG_ASSESSMENT": {
+                    "type": "Integer",
+                    "tier": "",
+                    "description": "The age (in days) of the subject at the time of this diagnostic assessment.",
+                    "codes": [
+                        "ncit:C175004"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "[nrsts_v1.0].[Histology].[AGE_AT_HIST_ASSESSMENT] skos:exactMatch [nrsts_v2.0].[Diagnosis].[AGE_AT_DIAG_ASSESSMENT]"
+                    ]
+                },
+                "DIAGNOSIS_BASIS": {
+                    "type": "Enum",
+                    "tier": "",
+                    "description": "The type of diagnosis used for determining the medical condition.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ],
+                    "permissible_values": {
+                        "Histological": {
+                            "description": "Pertaining to the combined microscopic physical features of cells and their surrounding extracellular environment in tissues.",
+                            "codes": [
+                                "ncit:C25526"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "DIAGNOSIS": {
+                    "type": "Enum",
+                    "tier": "",
+                    "description": "The investigation, analysis and recognition of the presence and nature of disease, condition, or injury from expressed signs and symptoms; also, the scientific determination of any kind; the concise results of such an investigation.",
+                    "codes": [
+                        "ncit:C15220"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "[nrsts_v1.0].[Histology].[HISTOLOGY] skos:exactMatch [nrsts_v2.0].[Diagnosis].[DIAGNOSIS]"
+                    ],
+                    "permissible_values": {
+                        "Atypical Lipomatous Tumor": {
+                            "description": "A locally aggressive mesenchymal neoplasm composed either entirely or partly of an adipocytic proliferation showing at least focal nuclear atypia in both adipocytes and stromal cells. \"Atypical lipomatous tumor\" and \"well-differentiated liposarcoma\" are synonyms describing lesions that are morphologically and genetically identical. Amplification of MDM2 and/or CDK4 is almost always present.",
+                            "codes": [
+                                "ncit:C6505"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Well Differentiated Liposarcoma": {
+                            "description": "A locally aggressive mesenchymal neoplasm composed either entirely or partly of an adipocytic proliferation showing at least focal nuclear atypia in both adipocytes and stromal cells. \"Atypical lipomatous tumor\" and \"well-differentiated liposarcoma\" are synonyms describing lesions that are morphologically and genetically identical. Amplification of MDM2 and/or CDK4 is almost always present.",
+                            "codes": [
+                                "ncit:C6505"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Dedifferentiated Liposarcoma": {
+                            "description": "An atypical lipomatous tumor/well differentiated liposarcoma that shows progression to a usually non-lipomatous, high grade sarcoma. The non-lipomatous sarcoma component may be present in the primary lesion or at the site of recurrence.",
+                            "codes": [
+                                "ncit:C3704"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Myxoid Liposarcoma": {
+                            "description": "A liposarcoma characterized by the presence of round non-lipogenic primitive mesenchymal cells and small signet ring lipoblasts within a myxoid stoma with a branching vascular pattern. This category includes hypercellular lesions with round cell morphology, formerly known as round cell liposarcoma.",
+                            "codes": [
+                                "ncit:C27781"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Pleomorphic Liposarcoma": {
+                            "description": "A rare, aggressive liposarcoma characterized by the presence of varying proportions of pleomorphic lipoblasts in a background that resembles undifferentiated pleomorphic sarcoma.",
+                            "codes": [
+                                "ncit:C3705"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Liposarcoma, NOS": {
+                            "description": "A usually painless malignant tumor that arises from adipose tissue. Microscopically, it may contain a spectrum of neoplastic adipocytes ranging from lipoblasts to pleomorphic malignant adipocytes. Morphologic variants include: well differentiated, dedifferentiated, pleomorphic, and myxoid liposarcoma. The metastatic potential is higher in less differentiated tumors.",
+                            "codes": [
+                                "ncit:C3194"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Palmar/Plantar Fibromatosis": {
+                            "description": "A superficial fibromatosis arising from soft tissue of the plantar regions. It is characterized by the presence of spindle-shaped fibroblasts, hypercellularity, and an infiltrative growth pattern.",
+                            "codes": [
+                                "ncit:C4680"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Desmoid-Type Fibromatosis": {
+                            "description": "An insidious, locally aggressive, poorly circumscribed neoplasm arising from the deep soft tissues. It is characterized by the presence of elongated spindle-shaped fibroblasts, collagenous stroma formation, and an infiltrative growth pattern. It lacks metastatic potential.",
+                            "codes": [
+                                "ncit:C9182"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Lipofibromatosis": {
+                            "description": "A rare, slow-growing, painless tumor of infancy and early childhood that usually affects the distal extremities. It is characterized by the presence of alternating bands of mature adipose tissue and spindle-cell fibrous tissue, without destruction of the adipose tissue architecture. It does not metastasize, however the rate of local recurrences is high.",
+                            "codes": [
+                                "ncit:C99180"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Giant Cell Fibroblastoma": {
+                            "description": "A morphologic variant of dermatofibrosarcoma protuberans that is most often seen in childhood and is characterized by the presence of spindle-shaped fibroblastic cells, a storiform growth pattern, numerous multinucleated giant cells, wide vessel-like spaces, and extensive myxoid change.",
+                            "codes": [
+                                "ncit:C4700"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Dermatofibrosarcoma Protuberans": {
+                            "description": "A low grade fibroblastic neoplasm presenting as a nodular cutaneous mass, most often on the trunk and the proximal extremities. The tumor diffusely infiltrates the dermis and the subcutaneous tissues. It is considered a locally aggressive neoplasm, which often recurs but rarely metastasizes.",
+                            "codes": [
+                                "ncit:C4683"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Fibrosarcomatous Dermatofibrosarcoma Protuberans": {
+                            "description": "A morphologic variant of dermatofibrosarcoma protuberans characterized by the presence of a fibrosarcomatous component.",
+                            "codes": [
+                                "ncit:C27547"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Pigmented Dermatofibrosarcoma Protuberans": {
+                            "description": "A morphologic variant of dermatofibrosarcoma protuberans characterized by the presence of melanin-pigmented dendritic cells.",
+                            "codes": [
+                                "ncit:C9430"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Solitary Fibrous Tumor": {
+                            "description": "A localized neoplasm of probable fibroblastic derivation. It is characterized by the presence of round to spindle-shaped cells, hylanized stroma formation, thin-walled branching blood vessels, and thin bands of collagen.",
+                            "codes": [
+                                "ncit:C7634"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Solitary Fibrous Tumor, Malignant": {
+                            "description": "A malignant neoplasm of probable fibroblastic derivation. It is characterized by the presence of atypical round to spindle-shaped cells, increased cellularity, necrotic change and high mitotic activity.",
+                            "codes": [
+                                "ncit:C6894"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Inflammatory Myofibroblastic Tumor": {
+                            "description": "A multinodular intermediate fibroblastic neoplasm that arises from soft tissue or viscera, in children and young adults. It is characterized by the presence of spindle-shaped fibroblasts and myofibroblasts, and a chronic inflammatory infiltrate composed of eosinophils, lymphocytes, and plasma cells.",
+                            "codes": [
+                                "ncit:C6481"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Low-Grade Myofibroblastic Sarcoma": {
+                            "description": "A low-grade malignant neoplasm arising from the soft tissue and rarely bone. It is characterized by the presence of spindle-shaped myofibroblasts and collagenous stroma formation in a storiform growth pattern. Metastasis is very rare.",
+                            "codes": [
+                                "ncit:C49024"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Myxoinflammatory Fibroblastic Sarcoma/Atypical Myxoinflammatory Fibroblastic Tumor": {
+                            "description": "A low grade, locally aggressive, fibroblastic neoplasm that occurs primarily in the distal extremities. It is characterized by the presence of spindle-shaped fibroblasts, multivacuolated lipoblast-like cells, bizarre ganglion-like cells with inclusion-like nuclei, myxoid stroma formation, and a mixture of acute and chronic inflammatory cells. Distant metastases are very rare.",
+                            "codes": [
+                                "ncit:C49025"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Infantile Fibrosarcoma": {
+                            "description": "A fibrosarcoma that occurs in infants. It shares identical morphologic features with adult fibrosarcoma but carries the t(12;15)(p13;q25) translocation that results in ETV6-NTRK3 gene fusion. It usually affects the superficial and deep soft tissues of the extremities. The prognosis is generally much more favorable than for adult fibrosarcoma, and it rarely metastasizes.",
+                            "codes": [
+                                "ncit:C4244"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Adult Fibrosarcoma": {
+                            "description": "A malignant mesenchymal neoplasm composed of fibroblasts. It is characterized by collagen production and a herringbone architectural pattern. It is more commonly seen in middle-aged and older adults. It usually affects the deep soft tissues of extremities, trunk, head and neck. Adult fibrosarcomas may recur and metastasize to the lungs and bones.",
+                            "codes": [
+                                "ncit:C7809"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Myxofibrosarcoma": {
+                            "description": "A malignant fibroblastic neoplasm arising from the soft tissue. It is characterized by the presence of spindle-shaped cells, cellular pleomorphism, thin-walled blood vessels, fibrous septa, and myxoid stroma.",
+                            "codes": [
+                                "ncit:C6496"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Low-Grade Fibromyxoid Sarcoma": {
+                            "description": "A low-grade, late-metastasizing variant of fibrosarcoma characterized by alternating fibrous and myxoid areas and a whorling growth pattern. The neoplastic cells have a spindle morphology, and lack hyperchromasia or significant nuclear atypia. Approximately 40% of cases show the focal presence of collagen rosettes. A t(7;16)(q33;p11) translocation has been identified in the majority of cases, associated with the presence of FUS-CREB3L2 fusion protein. Rare cases carry the t(11;16)(p11;p11) translocation which is associated with the presence of the FUS-CREB3L1 fusion protein.",
+                            "codes": [
+                                "ncit:C45202"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Sclerosing Epithelioid Fibrosarcoma": {
+                            "description": "A well-circumscribed malignant fibroblastic neoplasm that usually arises from the soft tissue. It is characterized by the presence of nests of malignant epithelioid fibroblasts and sclerotic collagen stroma formation.",
+                            "codes": [
+                                "ncit:C49027"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Tenosynovial Giant Cell Tumor Localized Type": {
+                            "description": "A well-circumscribed, lobulated tumor, completely or partially covered by a fibrous capsule. It usually arises in the fingers. It is characterized by the presence of mononuclear cells, multinucleated osteoclast-like giant cells, hemosiderin-laden macrophages, foam cells, and an inflammatory infiltrate. The tumor is slow-growing, usually developing over several years. Clinical presentation includes painless edema of the affected site.",
+                            "codes": [
+                                "ncit:C6532"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Tenosynovial Giant Cell Tumor Diffuse Type": {
+                            "description": "A locally aggressive, diffusely infiltrating tumor, arising in the tendon sheath. It is composed of synovial-like mononuclear cells, hemosiderin-laden macrophages, foam cells, and inflammatory cells. Multinucleated osteoclast-like giant cells are usually present, although in a minority of cases they may be absent or rare. It predominantly affects young adults. Symptoms include joint swelling, pain, and joint effusion.",
+                            "codes": [
+                                "ncit:C3401"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Tenosynovial Giant Cell Tumor Malignant": {
+                            "description": "An uncommon malignant tumor arising from the tendon sheath. Morphologically, it is characterized by the presence of a cellular infiltrate reminiscent of a giant cell tumor with prominent malignant characteristics. Recurrent giant cell tumors with a sarcomatous dedifferentiation are included in this category as well.",
+                            "codes": [
+                                "ncit:C6535"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Plexiform Fibrohistiocytic Tumor": {
+                            "description": "An intermediate fibrohistiocytic neoplasm of the skin that usually affects children and young adults. It is a multinodular, poorly circumscribed tumor characterized by the presence of multinucleated giant cells, mononuclear histiocyte-like cells, and spindle fibroblast-like cells arranged in a plexiform pattern.",
+                            "codes": [
+                                "ncit:C6493"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Giant Cell Tumor of Soft Tissue": {
+                            "description": "A painless, well circumscribed tumor arising in soft tissue, usually of the upper and lower extremities. Morphologically, it is characterized by a multinodular growth pattern. The cellular infiltrate is composed of mononuclear round or oval cells and multinucleated osteoclast-like giant cells, in a rich vascular stroma. It rarely metastasizes.",
+                            "codes": [
+                                "ncit:C49107"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Leiomyosarcoma": {
+                            "description": "An uncommon, aggressive malignant smooth muscle neoplasm, usually occurring in post-menopausal women. It is characterized by a proliferation of neoplastic spindle cells. Morphologic variants include epithelioid, granular cell, inflammatory and myxoid leimyosarcomas.",
+                            "codes": [
+                                "ncit:C3158"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Glomus Tumor": {
+                            "description": "A benign multifocal proliferation of glomus cells forming clusters around dilated vascular spaces.",
+                            "codes": [
+                                "ncit:C27496"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Glomangiomatosis": {
+                            "description": "A benign multifocal proliferation of glomus cells forming clusters around dilated vascular spaces.",
+                            "codes": [
+                                "ncit:C27496"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Malignant Glomus Tumor": {
+                            "description": "A very rare morphologic variant of glomus tumor with a size greater than 2 cm. The tumor arises in subfascial or visceral tissues. It is characterized by the presence of atypical mitotic figures, or marked nuclear atypia, or the combination of both. It has an aggressive clinical course.",
+                            "codes": [
+                                "ncit:C4221"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Kaposiform Hemangioendothelioma": {
+                            "description": "An intermediate, locally aggressive blood vessel neoplasm characterized by the presence of spindle endothelial cells, and formation of capillary-sized and slit-like vascular channels. It is often associated with hemorrhage and hemosiderin deposition.",
+                            "codes": [
+                                "ncit:C27510"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Retiform Hemangioendothelioma": {
+                            "description": "A rare, intermediate, locally aggressive and rarely metastasizing blood vessel neoplasm of the skin and subcutaneous tissue that usually affects the distal extremities, most often the leg. It manifests as a slow-growing red/bluish nodule or plaque and is characterized by the presence of hobnail endothelial cells and formation of arborizing vascular channels.",
+                            "codes": [
+                                "ncit:C27511"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Papillary Intralymphatic Angioendothelioma": {
+                            "description": "A rare, intermediate and rarely metastasizing blood vessel neoplasm that most often affects the skin and soft tissue of the extremities and manifests as a slow-growing induration, nodule, or plaque. Rare cases have been described in the spleen, tongue, and testis as well. It is characterized by the presence of lymphatic-like vascular channels and papillary endothelial proliferation.",
+                            "codes": [
+                                "ncit:C7526"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Composite Hemangioendothelioma": {
+                            "description": "An intermediate, locally aggressive and rarely metastasizing blood vessel neoplasm that predominantly involves the skin and superficial soft tissues, with rare cases reported in the kidney, lymph nodes, and spleen. It is characterized by the presence of spindle, plump, and epithelioid endothelial cells and cellular atypia.",
+                            "codes": [
+                                "ncit:C45475"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Pseudomyogenic Hemangioendothelioma": {
+                            "description": "An intermediate, rarely metastasizing blood vessel neoplasm that more frequently affects young adult males and usually arises in the lower limbs. In approximately half of the affected patients the tumor is painful and in two-thirds of the patients the tumor is multifocal. Morphologically it is characterized by the presence of sheets and fascicles of spindle cells with abundant eosinophilic cytoplasm and vesicular nuclei. Cytologic atypia is usually mild. Approximately 60% of the patients develop local recurrences or additional tumors in the same anatomic region.",
+                            "codes": [
+                                "ncit:C121668"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Kaposi Sarcoma": {
+                            "description": "A malignant neoplasm characterized by a vascular proliferation which usually contains blunt endothelial cells. Erythrocyte extravasation and hemosiderin deposition are frequently present. The most frequent site of involvement is the skin; however it may also occur internally. It generally develops in people with compromised immune systems including those with acquired immune deficiency syndrome (AIDS).",
+                            "codes": [
+                                "ncit:C9087"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Epithelioid Haemangioendothelioma": {
+                            "description": "A low-grade malignant blood vessel neoplasm. It is characterized by the presence of epithelioid endothelial cells. The neoplastic cells are arranged in cords and nests, which are embedded in a myxoid to hyalinized stroma.",
+                            "codes": [
+                                "ncit:C3800"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Angiosarcoma Of Soft Tissue": {
+                            "description": "An angiosarcoma that arises from the soft tissues, usually in the deep muscles of the lower extremities, retroperitoneum, mediastinum, and mesentery.",
+                            "codes": [
+                                "ncit:C121671"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Soft Tissue Chondroma": {
+                            "description": "A benign neoplasm arising from the extraskeletal soft tissues near tendons and joints. It is a well circumscribed tumor characterized by the presence of chondrocytes, a lobulated hyaline cartilage growth pattern, and in some cases calcification.",
+                            "codes": [
+                                "ncit:C9482"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Extraskeletal Mesenchymal Chondrosarcoma": {
+                            "description": "A rare malignant tumor of soft tissue characterized by a bimorphic pattern composed of undifferentiated small round cells and islands of well differentiated hyaline cartilage.",
+                            "codes": [
+                                "ncit:C27481"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Extraskeletal Osteosarcoma": {
+                            "description": "An osteosarcoma arising from the soft tissue.",
+                            "codes": [
+                                "ncit:C8810"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Gastrointestinal Stromal Tumor, Uncertain Malignant Potential": {
+                            "description": "A gastrointestinal stromal tumor that is characterized by a maximum diameter greater than 5 cm and equal or less than 10 cm (gastric localization), or greater than 2 cm and equal or less than 5 cm (intestinal localization) and no more than 5 mitotic figures per 50 high power fields.",
+                            "codes": [
+                                "ncit:C54000"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Gastrointestinal Stromal Tumor, Malignant": {
+                            "description": "A gastrointestinal stromal tumor that is characterized by large size (diameter greater than 10 cm for gastric localization and greater than 5 cm for intestinal localization) or more than 5 mitotic figures per 50 high power fields.",
+                            "codes": [
+                                "ncit:C53999"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Malignant Peripheral Nerve Sheath Tumor": {
+                            "description": "An uncommon, highly aggressive malignant tumor, arising from the peripheral nerves and affecting mostly adults in their third to sixth decades of life.  It usually occurs in medium-sized and large nerves of the buttock, thigh, upper arm, or the paraspinal region. It may be associated with neurofibromatosis 1 (NF1).",
+                            "codes": [
+                                "ncit:C3798"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Epithelioid Malignant Peripheral Nerve Sheath Tumor": {
+                            "description": "A rare variant of malignant peripheral nerve sheath tumor composed predominantly or exclusively of epithelioid cells.",
+                            "codes": [
+                                "ncit:C6561"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Malignant Triton Tumor": {
+                            "description": "A malignant peripheral nerve sheath tumor which shows rhabdomyosarcomatous differentiation. More than half of the patients have neurofibromatosis type 1. The prognosis is usually poor.",
+                            "codes": [
+                                "ncit:C4335"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Malignant Granular Cell Tumor": {
+                            "description": "An uncommon granular cell tumor which may metastasize to other anatomic sites. Morphologic characteristics include the presence of spindling neoplastic cells, necrosis, extensive pleomorphism, prominent nucleoli, and increased mitiotic activity.",
+                            "codes": [
+                                "ncit:C4336"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Ectomesenchymoma": {
+                            "description": "An exceedingly rare, aggressive malignant mesenchymal neoplasm characterized by the presence of a sarcomatous component and a ganglionic or a neuroectodermal component.",
+                            "codes": [
+                                "ncit:C4716"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Hemosiderotic Fibrolipomatous Tumor": {
+                            "description": "A non-encapsulated, slow-growing, locally aggressive subcutaneous tumor characterized by the presence of adipocytes, hemosiderin-laden spindle cells, hemosiderin-laden macrophages, osteoclast-like giant cells, and scattered chronic inflammatory cells. It usually arises from the dorsum of the foot, ankle, dorsum of the hand, thigh, calf, or cheek. It may recur if it is not completely excised but does not metastasize.",
+                            "codes": [
+                                "ncit:C121752"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Atypical Fibroxanthoma": {
+                            "description": "An intermediate cutaneous mesenchymal neoplasm of uncertain differentiation, usually affecting the actinic-damaged skin of the elderly. The tumor presents as a single cutaneous nodule which is often ulcerated. Microscopically, it is characterized by the presence of highly atypical cytologic features, pleomorphism and abundant mitotic figures. The vast majority of patients have an excellent prognosis following conservative therapy. Recurrences are infrequent, and metastasis is rare.",
+                            "codes": [
+                                "ncit:C4246"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Angiomatoid Fibrous Histiocytoma": {
+                            "description": "A low malignant potential soft tissue neoplasm of uncertain differentiation. It typically affects young patients, presenting as a slowly growing nodular or cystic tumor mass, most often in the subcutaneous tissues of the extremities. Occasionally, patients have systemic symptoms (anemia, fever, and weight loss). This tumor has a relatively good prognosis. A minority of patients develop local recurrences. Metastases are rare.",
+                            "codes": [
+                                "ncit:C6494"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Ossifying Fibromyxoid Tumor": {
+                            "description": "A rare soft tissue tumor of uncertain lineage characterized by the presence of neoplastic spindle to round cells forming cords in a fibromyxoid stroma. The lesions are associated with the formation of metaplastic bone. Most patients present with painless subcutaneous masses. Recurrences have been reported in a minority of patients.",
+                            "codes": [
+                                "ncit:C6582"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Ossifying Fibromyxoid Tumor, Malignant": {
+                            "description": "An ossifying fibromyxoid tumor characterized by the presence of high grade nuclear features or increased cellularity and more than two mitotic figures per 50 HPFs.",
+                            "codes": [
+                                "ncit:C121774"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Mixed Tumour NOS": {
+                            "description": "A benign myoepithelioma characterized by the presence of a minor ductal component.",
+                            "codes": [
+                                "ncit:C121786"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Mixed Tumor NOS, Malignant": {
+                            "description": "A malignant neoplasm composed of a carcinomatous epithelial component and a sarcomatous mesenchymal component. Representative examples include malignant mixed mesodermal (Mullerian) tumor of the female reproductive system and carcinosarcoma of the salivary gland and the lung.",
+                            "codes": [
+                                "ncit:C3729"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Myoepithelioma": {
+                            "description": "A benign or malignant tumor characterized by the presence of cells that show myoepithelial differentiation. Based on its morphologic features, it is classified as benign or malignant. A representative example of benign myoepithelioma is benign salivary gland myoepithelioma. Representative examples of malignant myoepithelioma or myoepithelial carcinoma are malignant breast myoepithelioma and salivary gland myoepithelial carcinoma.",
+                            "codes": [
+                                "ncit:C40392"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Myoepithelioma Carcinoma": {
+                            "description": "An infiltrating malignant tumor characterized by the presence of atypical cells with myoepithelial differentiation. Representative examples include malignant breast myoepithelioma and salivary gland myoepithelial carcinoma.",
+                            "codes": [
+                                "ncit:C7596"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Phosphaturic Mesenchymal Tumor, Benign": {
+                            "description": "A phosphaturic mesenchymal tumor with benign histologic features. It may recur locally but does not metastasize. Complete excision is curative.",
+                            "codes": [
+                                "ncit:C121788"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Phosphaturic Mesenchymal Tumor, Malignant": {
+                            "description": "A phosphaturic mesenchymal tumor characterized by the presence of nuclear atypia, high mitotic activity, increased cellularity, marked pleomorphism, and necrosis. It usually develops in lesions that have recurred locally and metastasizes to other sites.",
+                            "codes": [
+                                "ncit:C121789"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Synovial Sarcoma, NOS": {
+                            "description": "A malignant neoplasm characterized by the chromosomal translocation t(X;18)(p11;q11). It can occur at any age, but mainly affects young adults, more commonly males. Although any site can be affected, the vast majority of the cases arise in the deep soft tissues of extremities, especially around the knee. Microscopically, synovial sarcoma is classified as monophasic (with a spindle or epithelial cell component) or biphasic (with both spindle and epithelial cell components). Synovial sarcomas can recur or metastasize to the lungs, bones, and lymph nodes.",
+                            "codes": [
+                                "ncit:C3400"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Synovial Sarcoma, Spindle Cell": {
+                            "description": "A synovial sarcoma characterized by the presence of a spindle cell component only.",
+                            "codes": [
+                                "ncit:C4277"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Synovial Sarcoma, Biphasic": {
+                            "description": "A synovial sarcoma characterized by the presence of both an epithelial and a spindle cell component.",
+                            "codes": [
+                                "ncit:C4279"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Epithelioid Sarcoma": {
+                            "description": "An aggressive malignant neoplasm of uncertain differentiation, characterized by the presence of epithelioid cells forming nodular patterns. The nodules often undergo central necrosis, resulting in a pseudogranulomatous growth pattern. It usually occurs in young adults. The most common sites of involvement are the extremities (distal-type epithelioid sarcoma), and less frequently the pelvis, perineum, and genital organs (proximal-type epithelioid sarcoma).",
+                            "codes": [
+                                "ncit:C3714"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Alveolar Soft-Part Sarcoma": {
+                            "description": "A rare malignant neoplasm characterized by the presence of large epithelioid cells with abundant cytoplasm forming nests and pseudoalveolar structures. The groups of the epithelioid cells are separated by thin-walled sinusoidal spaces. It occurs most often in adolescents and young adults. In adults the most common sites of involvement are the extremities, and in infants and children, the head and neck. It usually presents as a slowly growing mass and it frequently metastasizes to other anatomic sites. The most common sites of metastasis are the lungs, bone, and brain.",
+                            "codes": [
+                                "ncit:C3750"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Clear Cell Sarcoma Of Soft Tissue": {
+                            "description": "A rare malignant neoplasm with melanocytic differentiation characterized by the presence of polygonal or spindle shaped clear cells. This sarcoma usually affects the tendons and aponeuroses and is associated with a poor prognosis due to recurrences and metastases.",
+                            "codes": [
+                                "ncit:C3745"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Extraskeletal Myxoid Chondrosarcoma": {
+                            "description": "A rare malignant soft tissue neoplasm of uncertain differentiation, characterized by the presence of chondroblast-like cells in a myxoid stroma and a multinodular growth pattern. The most common sites of involvement are the deep soft tissues of the extremities, particularly the thigh. It usually presents as an enlarging soft tissue mass. Patients may have long survivals, but local recurrences and metastases occur in approximately half of the cases. The most common site of metastasis is the lungs.",
+                            "codes": [
+                                "ncit:C27502"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Desmoplastic Small Round Cell Tumor": {
+                            "description": "An aggressive malignant soft tissue neoplasm of uncertain differentiation. It is characterized by a recurrent chromosomal translocation t(11;22)(p13;q12) and the presence of small round cells in a desmoplastic stroma. It usually affects children and young adults. The most common site of involvement is the abdomen. Patients usually present with abdominal distention, pain, ascites, and a palpable abdominal mass. The prognosis is usually poor.",
+                            "codes": [
+                                "ncit:C8300"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Extra-Renal Rhabdoid Tumor": {
+                            "description": "A rhabdoid tumor which arises in the soft tissues. It occurs in infants and children and may be associated with loss of chromosome 22. It is characterized by the presence of cells with a large eccentric nucleus, prominent nucleolus, and abundant cytoplasm.",
+                            "codes": [
+                                "ncit:C6586"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Pecoma NOS, Benign": {
+                            "description": "A tumor with perivascular epithelioid cell differentiation characterized by the absence of pleomorphism and scarcity or absence of mitotic figures.",
+                            "codes": [
+                                "ncit:C121791"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Pecoma NOS, Malignant": {
+                            "description": "A usually large and aggressive tumor with perivascular epithelioid cell differentiation characterized by the presence of marked nuclear atypia, pleomorphism, increased mitotic activity, necrosis, and infiltrative margins. The most common metastatic sites are liver, lungs, lymph nodes, and bone.",
+                            "codes": [
+                                "ncit:C121792"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Intimal Sarcoma": {
+                            "description": "A malignant neoplasm arising from the large blood vessels. It is characterized by the presence of tumor cells that grow within the lumen of the blood vessels. The intraluminal tumor growth may result in vascular obstruction and spread of tumor emboli to peripheral organs. The prognosis is usually poor.",
+                            "codes": [
+                                "ncit:C53677"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Undifferentiated Spindle Cell Sarcoma": {
+                            "description": "An undifferentiated soft tissue sarcoma characterized by the presence of a malignant spindle cell infiltrate with amphophilic or palely eosinophilic cytoplasm.",
+                            "codes": [
+                                "ncit:C121797"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Undifferentiated Pleomorphic Sarcoma": {
+                            "description": "An undifferentiated soft tissue sarcoma characterized by the presence of a pleomorphic malignant cellular infiltrate. It is also known as malignant fibrous histiocytoma.",
+                            "codes": [
+                                "ncit:C4247"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Undifferentiated Round Cell Sarcoma": {
+                            "description": "An undifferentiated soft tissue sarcoma characterized by the presence of uniform round or ovoid malignant cells with a high nuclear to cytoplasmic ratio.",
+                            "codes": [
+                                "ncit:C121799"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Undifferentiated Epithelioid Sarcoma": {
+                            "description": "An undifferentiated soft tissue sarcoma characterized by the presence of a malignant cellular infiltrate with epithelioid morphology.",
+                            "codes": [
+                                "ncit:C121802"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Undifferentiated Sarcoma, NOS": {
+                            "description": "An undifferentiated soft tissue sarcoma which cannot be further characterized.",
+                            "codes": [
+                                "ncit:C121804"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "HISTOLOGY_GRADE": {
+                    "type": "Enum",
+                    "tier": "",
+                    "description": "The degree of abnormality of cancer cells, a measure of differentiation, the extent to which cancer cells are similar in appearance and function to healthy cells of the same tissue type. The degree of differentiation often relates to the clinical behavior of the particular tumor. Based on the microscopic findings, tumor grade is commonly described by one of four degrees of severity. Histopathologic grade of a tumor may be used to plan treatment and estimate the future course, outcome, and overall prognosis of disease. Certain types of cancers, such as soft tissue sarcoma, primary brain tumors, lymphomas, and breast have special grading systems.",
+                    "codes": [
+                        "ncit:C18000"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "FNCLCC, Grade GX": {
+                            "description": "Grade cannot be assessed.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "FNCLCC, Grade 1": {
+                            "description": "Total tumor differentiation, mitotic count, and necrosis score of 2 or 3.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "FNCLCC, Grade 2": {
+                            "description": "Total tumor differentiation, mitotic count, and necrosis score of 4 or 5.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "FNCLCC, Grade 3": {
+                            "description": "Total tumor differentiation, mitotic count, and necrosis score of 6, 7, or 8.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "Reported as unknown by the data contributor.",
+                            "codes": [
+                                "ncit:C17998"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                }
+            },
+            "disease_site_assessment": {
+                "HONEST_BROKER_SUBJECT_ID": {
+                    "type": "String",
+                    "tier": "3 - contributors shouldn\u2019t prioritize inclusion, but can include if resources are available",
+                    "description": "The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a \"re-identification code\"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.",
+                    "codes": [
+                        "ncit:C168949"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ]
+                },
+                "AGE_AT_DISEASE_SITE_ASSESSMENT": {
+                    "type": "Integer",
+                    "tier": "3 - contributors shouldn\u2019t prioritize inclusion, but can include if resources are available",
+                    "description": "The age (in days) of the subject at the time of this disease site assessment.",
+                    "codes": [
+                        "ncit:C174997"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "[nrsts_v1.0].[Tumor Assessment].[AGE_AT_TUMOR_ASSESSMENT] skos:exactMatch [nrsts_v2.0].[Disease Site Assessment].[AGE_AT_DISEASE_SITE_ASSESSMENT]"
+                    ]
+                },
+                "CLASSIFICATION": {
+                    "type": "Enum",
+                    "tier": "3 - contributors shouldn\u2019t prioritize inclusion, but can include if resources are available",
+                    "description": "The classification of a tumor based primarily on histopathological characteristics.",
+                    "codes": [
+                        "ncit:C174459"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "[nrsts_v1.0].[Tumor Assessment].[TUMOR_CLASSIFICATION] skos:exactMatch [nrsts_v2.0].[Disease Site Assessment].[CLASSIFICATION]"
+                    ],
+                    "permissible_values": {
+                        "Primary": {
+                            "description": "A tumor at the original site of origin.",
+                            "codes": [
+                                "ncit:C8509"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Metastatic": {
+                            "description": "A term referring to the clinical or pathologic observation of a tumor extension from its original site of growth to another anatomic site.",
+                            "codes": [
+                                "ncit:C14174"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "SITE": {
+                    "type": "Enum",
+                    "tier": "3 - contributors shouldn\u2019t prioritize inclusion, but can include if resources are available",
+                    "description": "The anatomical site on which the disease is assessed.",
+                    "codes": [
+                        "ncit:C166232"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "[nrsts_v1.0].[Tumor Assessment].[TUMOR_SITE] skos:exactMatch [nrsts_v2.0].[Disease Site Assessment].[SITE]"
+                    ],
+                    "permissible_values": {
+                        "Abdominal Wall": {
+                            "description": "The tissues that surround the organs that are present within the abdominal cavity. The abdominal wall tissue is composed of layers of fat, parietal peritoneum, fascia, and muscles.",
+                            "codes": [
+                                "ncit:C77608"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Bone": {
+                            "description": "The structural organ comprised of specialized connective tissue that forms the skeletal components of the body.",
+                            "codes": [
+                                "ncit:C12366"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Bone Marrow": {
+                            "description": "The tissue occupying the spaces of bone. It consists of blood vessel sinuses and a network of hematopoietic cells which give rise to the red cells, white cells, and megakaryocytes.",
+                            "codes": [
+                                "ncit:C12431"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Brain/Leptomeninges": {
+                            "description": "An organ composed of grey and white matter containing billions of neurons that is the center for intelligence and reasoning. It is protected by the bony cranium. | The two innermost layers of tissue that cover the brain and spinal cord, the arachnoid mater and the pia mater.",
+                            "codes": [
+                                "ncit:C12439",
+                                "ncit:C32979"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Breast": {
+                            "description": "One of two hemispheric projections of variable size situated in the subcutaneous layer over the pectoralis major muscle on either side of the chest.",
+                            "codes": [
+                                "ncit:C12971"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Chest Wall": {
+                            "description": "The total system of structures outside the lungs that move as a part of breathing; it includes all structures from the skin to the parietal pleura.",
+                            "codes": [
+                                "ncit:C62484"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Distant Lymph Nodes": {
+                            "description": "A bean-shaped organ surrounded by a connective tissue capsule. It is part of the lymphatic system and is found throughout the body. It is composed predominantly of lymphocytes and its main function is immune protection.",
+                            "codes": [
+                                "ncit:C12745"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Foot": {
+                            "description": "The structure found below the ankle joint required for locomotion.",
+                            "codes": [
+                                "ncit:C32622"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Hand": {
+                            "description": "The distal portion of the upper extremity. It consists of the carpus, metacarpus, and digits.",
+                            "codes": [
+                                "ncit:C32712"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Head": {
+                            "description": "The anterior and superior part of a human bearing the mouth, the brain and sensory organs.",
+                            "codes": [
+                                "ncit:C12419"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Hip": {
+                            "description": "The lateral prominence of the pelvis from the waist to the thigh.",
+                            "codes": [
+                                "ncit:C64193"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Intraperitoneal": {
+                            "description": "Relating to the peritoneal cavity as the intended site of administration.",
+                            "codes": [
+                                "ncit:C13352"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Intrathoracic": {
+                            "description": "Within the thoracic cavity.",
+                            "codes": [
+                                "ncit:C105579"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Leg": {
+                            "description": "The portion of the lower extremity between the knee and the ankle. For clinical purposes this term is also used to refer to the whole inferior limb.",
+                            "codes": [
+                                "ncit:C32974"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Liver": {
+                            "description": "A triangular-shaped organ located under the diaphragm in the right hypochondrium. It is the largest internal organ of the body, weighting up to 2 kg. Metabolism and bile secretion are its main functions. It is composed of cells which have the ability to regenerate.",
+                            "codes": [
+                                "ncit:C12392"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Lower Arm": {
+                            "description": "The lower arm, also known as the forearm, is the region of the upper limb (arm) that extends from the elbow joint to the wrist joint. It is positioned between the upper arm (which includes the upper arm bone, or humerus) and the hand. The lower arm is an essential part of the human upper extremity and plays a significant role in various daily activities, including lifting, gripping, and manipulating objects.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Lung": {
+                            "description": "One of a pair of viscera occupying the pulmonary cavities of the thorax, the organs of respiration in which aeration of the blood takes place. As a rule, the right lung is slightly larger than the left and is divided into three lobes (an upper, a middle, and a lower or basal), while the left has two lobes (an upper and a lower or basal). Each lung is irregularly conical in shape, presenting a blunt upper extremity (the apex), a concave base following the curve of the diaphragm, an outer convex surface (costal surface), an inner or mediastinal surface (mediastinal surface), a thin and sharp anterior border, and a thick and rounded posterior border.",
+                            "codes": [
+                                "ncit:C12468"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Neck": {
+                            "description": "The region that connects the head to the rest of the body.",
+                            "codes": [
+                                "ncit:C13063"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Paraspinal": {
+                            "description": "Pertaining to muscles and/or tissue adjacent to the spinal column.",
+                            "codes": [
+                                "ncit:C129461"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Pelvis": {
+                            "description": "The bony, basin-shaped structure formed by the hipbones and the base of the backbone supporting the lower limbs in humans.",
+                            "codes": [
+                                "ncit:C12767"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Perineum": {
+                            "description": "The area located between the anus and vulva in females, and anus and scrotum in males.",
+                            "codes": [
+                                "ncit:C33301"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Peritoneum": {
+                            "description": "The tissue that lines the wall of the abdominal cavity, intestine, mesentery, and pelvic organs. It consists of the parietal peritoneum and the visceral peritoneum.",
+                            "codes": [
+                                "ncit:C12770"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Pleura": {
+                            "description": "The tissue that lines the wall of the thoracic cavity and the surface of the lungs.",
+                            "codes": [
+                                "ncit:C12469"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Retroperitoneum": {
+                            "description": "The back of the abdomen where the kidneys lie and the great blood vessels run.",
+                            "codes": [
+                                "ncit:C12298"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Shoulder": {
+                            "description": "The region of the body between the neck and the upper arm.",
+                            "codes": [
+                                "ncit:C25203"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Thigh": {
+                            "description": "A part of the lower limb, located between hip and knee.",
+                            "codes": [
+                                "ncit:C33763"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Upper Arm": {
+                            "description": "The portion of the upper extremity between the shoulder and the elbow. For clinical purposes this term is also used to refer to the whole superior limb.",
+                            "codes": [
+                                "ncit:C32141"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Urogenital": {
+                            "description": "Of or related to the genital and urinary organs or their functions.",
+                            "codes": [
+                                "ncit:C25350"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Other": {
+                            "description": "Different than the one(s) previously specified or mentioned.",
+                            "codes": [
+                                "ncit:C17649"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "Reported as unknown by the data contributor.",
+                            "codes": [
+                                "ncit:C17998"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Reported": {
+                            "description": "Not provided or available.",
+                            "codes": [
+                                "ncit:C43234"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "SITE_OTHER": {
+                    "type": "String",
+                    "tier": "3 - contributors shouldn\u2019t prioritize inclusion, but can include if resources are available",
+                    "description": "Specify the \"Other\" SITE.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "[nrsts_v1.0].[Tumor Assessment].[TUMOR_SITE_OTHER] skos:exactMatch [nrsts_v2.0].[Disease Site Assessment].[SITE_OTHER]"
+                    ]
+                },
+                "DIAMETER1": {
+                    "type": "Decimal",
+                    "tier": "3 - contributors shouldn\u2019t prioritize inclusion, but can include if resources are available",
+                    "description": "The longest diameter of the tumor.",
+                    "codes": [
+                        "ncit:C96684"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "[nrsts_v1.0].[Tumor Assessment].[LONGEST_DIAM_DIM1] skos:exactMatch [nrsts_v2.0].[Disease Site Assessment].[DIAMETER1]"
+                    ]
+                },
+                "DIAMETER1_UNIT": {
+                    "type": "Enum",
+                    "tier": "3 - contributors shouldn\u2019t prioritize inclusion, but can include if resources are available",
+                    "description": "The unit of measure symbol associated with a biospecimen or tissue fragment dimension.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ],
+                    "permissible_values": {
+                        "cm": {
+                            "description": "A basic unit of length in the former CGS version of metric system, equal to one hundredth of a meter or approximately 0.393 700 787 inch.",
+                            "codes": [
+                                "ncit:C49668"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "DIAMETER2": {
+                    "type": "Decimal",
+                    "tier": "3 - contributors shouldn\u2019t prioritize inclusion, but can include if resources are available",
+                    "description": "The second longest diameter of the tumor.",
+                    "codes": [
+                        "ncit:C96684"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "[nrsts_v1.0].[Tumor Assessment].[LONGEST_DIAM_DIM2] skos:exactMatch [nrsts_v2.0].[Disease Site Assessment].[DIAMETER2]"
+                    ]
+                },
+                "DIAMETER2_UNIT": {
+                    "type": "Enum",
+                    "tier": "3 - contributors shouldn\u2019t prioritize inclusion, but can include if resources are available",
+                    "description": "The unit of measure symbol associated with a biospecimen or tissue fragment dimension.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ],
+                    "permissible_values": {
+                        "cm": {
+                            "description": "A basic unit of length in the former CGS version of metric system, equal to one hundredth of a meter or approximately 0.393 700 787 inch.",
+                            "codes": [
+                                "ncit:C49668"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "DIAMETER3": {
+                    "type": "Decimal",
+                    "tier": "3 - contributors shouldn\u2019t prioritize inclusion, but can include if resources are available",
+                    "description": "The third longest diameter of the tumor.",
+                    "codes": [
+                        "ncit:C16809"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "[nrsts_v1.0].[Tumor Assessment].[LONGEST_DIAM_DIM3] skos:exactMatch [nrsts_v2.0].[Disease Site Assessment].[DIAMETER3]"
+                    ]
+                },
+                "DIAMETER3_UNIT": {
+                    "type": "Enum",
+                    "tier": "3 - contributors shouldn\u2019t prioritize inclusion, but can include if resources are available",
+                    "description": "The unit of measure symbol associated with a biospecimen or tissue fragment dimension.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ],
+                    "permissible_values": {
+                        "cm": {
+                            "description": "A basic unit of length in the former CGS version of metric system, equal to one hundredth of a meter or approximately 0.393 700 787 inch.",
+                            "codes": [
+                                "ncit:C49668"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "TUMOR_SIZE": {
+                    "type": "Enum",
+                    "tier": "3 - contributors shouldn\u2019t prioritize inclusion, but can include if resources are available",
+                    "description": "The tumor size of the largest tumor.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "<=5 cm": {
+                            "description": "The size of the tumor is less than or equal to 5 centimeters.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        ">5 cm": {
+                            "description": "The size of the tumor is greater than 5 centimeters.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "Reported as unknown by the data contributor.",
+                            "codes": [
+                                "ncit:C17998"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "INVASIVENESS": {
+                    "type": "Enum",
+                    "tier": "3 - contributors shouldn\u2019t prioritize inclusion, but can include if resources are available",
+                    "description": "Is there evidence of tumor invasiveness in the current diagnosis?",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Yes": {
+                            "description": "The affirmative response to a question.",
+                            "codes": [
+                                "ncit:C49488"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "No": {
+                            "description": "The non-affirmative response to a question.",
+                            "codes": [
+                                "ncit:C49487"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "Reported as unknown by the data contributor.",
+                            "codes": [
+                                "ncit:C17998"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "DEPTH": {
+                    "type": "Enum",
+                    "tier": "3 - contributors shouldn\u2019t prioritize inclusion, but can include if resources are available",
+                    "description": "The depth of the tumor.",
+                    "codes": [
+                        "ncit:C25333"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Superficial": {
+                            "description": "Of little substance or significance; involving only a surface.",
+                            "codes": [
+                                "ncit:C25239"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Deep": {
+                            "description": "Extending relatively far inward.",
+                            "codes": [
+                                "ncit:C25240"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "Reported as unknown by the data contributor.",
+                            "codes": [
+                                "ncit:C17998"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                }
+            }
+        },
+        "treatment": {
+            "radiation_therapy": {
+                "HONEST_BROKER_SUBJECT_ID": {
+                    "type": "String",
+                    "tier": "3 - contributors shouldn\u2019t prioritize inclusion, but can include if resources are available",
+                    "description": "The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a \"re-identification code\"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.",
+                    "codes": [
+                        "ncit:C168949"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ]
+                },
+                "AGE_AT_RT": {
+                    "type": "Number",
+                    "tier": "",
+                    "description": "Age in Days at Start of Radiation Therapy",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "CLASSIFICATION": {
+                    "type": "Code",
+                    "tier": "",
+                    "description": "Tumor Classification",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "[nrsts_v1.0].[Radiation Therapy].[TUMOR_CLASSIFICATION] skos:exactMatch [nrsts_v2.0].[Radiation Therapy].[CLASSIFICATION]"
+                    ],
+                    "permissible_values": {
+                        "Primary": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Regional Nodes": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Metastatic": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "SITE": {
+                    "type": "Code",
+                    "tier": "",
+                    "description": "Radiation Therapy Site",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "[nrsts_v1.0].[Radiation Therapy].[RT_SITE] skos:exactMatch [nrsts_v2.0].[Radiation Therapy].[SITE]"
+                    ],
+                    "permissible_values": {
+                        "Head": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Neck": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Chest Wall": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Abdominal Wall": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Breast": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Intrathoracic": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Intraperitoneal": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Retroperitoneal": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Paraspinal": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Pelvis": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Urogenital": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Perineum": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Shoulder": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Upper Arm": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Lower Arm": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Hand": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Hip": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Thigh": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Leg": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Foot": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Lung": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Liver": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Bone": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Bone Marrow": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Distant Nodes": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Brain/Leptomeninges": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Pleura": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Peritoneum": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Other": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Reported": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "ENERGY_TYPE": {
+                    "type": "Code",
+                    "tier": "",
+                    "description": "Particles and Energy Type",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Protons": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Photon": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Brachytherapy": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Other": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "DOSE": {
+                    "type": "Number",
+                    "tier": "",
+                    "description": "Total Radiation Dose",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "[nrsts_v1.0].[Radiation Therapy].[RT_DOSE] skos:exactMatch [nrsts_v2.0].[Radiation Therapy].[DOSE]"
+                    ]
+                },
+                "UNIT": {
+                    "type": "Code",
+                    "tier": "",
+                    "description": "Radiation Dose Unit",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "[nrsts_v1.0].[Radiation Therapy].[RT_UNIT] skos:exactMatch [nrsts_v2.0].[Radiation Therapy].[DOSE_UNIT]"
+                    ],
+                    "permissible_values": {
+                        "Gy": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                }
+            },
+            "biopsy_and_surgical_procedures": {
+                "HONEST_BROKER_SUBJECT_ID": {
+                    "type": "String",
+                    "tier": "3 - contributors shouldn\u2019t prioritize inclusion, but can include if resources are available",
+                    "description": "The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a \"re-identification code\"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.",
+                    "codes": [
+                        "ncit:C168949"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ]
+                },
+                "AGE_AT_PROCEDURE": {
+                    "type": "Number",
+                    "tier": "",
+                    "description": "Age in Days of Procedure",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "TUMOR_CLASSIFICATION": {
+                    "type": "Code",
+                    "tier": "",
+                    "description": "Tumor Classification",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "[nrsts_v1.0].[Biopsy/Surgical Procedures].[TUMOR_CLASSIFICATION] skos:exactMatch [nrsts_v2.0].[Biopsy And Surgical Procedures].[CLASSIFICATION]"
+                    ],
+                    "permissible_values": {
+                        "Primary": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [
+                                "distant sites?"
+                            ],
+                            "mappings": []
+                        },
+                        "Regional Nodes": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Metastatic": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "PROCEDURE_SITE": {
+                    "type": "Code",
+                    "tier": "",
+                    "description": "Procedure Site",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "[nrsts_v1.0].[Biopsy/Surgical Procedures].[PROCEDURE_SITE] skos:exactMatch [nrsts_v2.0].[Biopsy And Surgical Procedures].[SITE]"
+                    ],
+                    "permissible_values": {
+                        "Head": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Neck": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Chest Wall": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Abdominal Wall": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Breast": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Intrathoracic": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Intraperitoneal": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Retroperitoneal": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Paraspinal": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Pelvis": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Urogenital": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Perineum": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Shoulder": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Upper Arm": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Lower Arm": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Hand": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Hip": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Thigh": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Leg": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Foot": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Lung": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Liver": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Bone": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Bone Marrow": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Distant Nodes": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Brain/Leptomeninges": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Pleura": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Peritoneum": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Other": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Reported": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "PROCEDURE_TYPE": {
+                    "type": "Code",
+                    "tier": "",
+                    "description": "Procedure Type",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Biopsy": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Surgery": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "MARGINS": {
+                    "type": "Code",
+                    "tier": "",
+                    "description": "Margins",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "R0 - Complete Resection, Negative": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "R1 - Complete Resection, Positive": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "R2 - Gross Residual Disease": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Reported": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                }
+            }
+        },
+        "response": {
+            "subject_response": {
+                "HONEST_BROKER_SUBJECT_ID": {
+                    "type": "String",
+                    "tier": "",
+                    "description": "The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a \"re-identification code\"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.",
+                    "codes": [
+                        "ncit:C168949"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ]
+                },
+                "AGE_AT_RESPONSE": {
+                    "type": "Number",
+                    "tier": "",
+                    "description": "Age in Days at Response Assessment",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "TX_PRIOR_RESPONSE": {
+                    "type": "Code",
+                    "tier": "",
+                    "description": "Treatment Type Prior to Response Assessment",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Chemotherapy": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Chemoradiotherapy": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "RESPONSE": {
+                    "type": "Code",
+                    "tier": "",
+                    "description": "Response",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Partial Response": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Stable Disease": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Progressive Disease": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Complete Response": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Evaluable": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "NECROSIS": {
+                    "type": "Code",
+                    "tier": "",
+                    "description": "Tumor Necrosis",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Score 0: No Necrosis": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "<50% Necrosis": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        ">=50% Necrosis": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "NECROSIS_PCT": {
+                    "type": "Number",
+                    "tier": "",
+                    "description": "Tumor Necrosis (%)",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                }
+            }
+        },
+        "events": {
+            "subsequent_malignant_neoplasm": {
+                "HONEST_BROKER_SUBJECT_ID": {
+                    "type": "String",
+                    "tier": "",
+                    "description": "The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a \"re-identification code\"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.",
+                    "codes": [
+                        "ncit:C168949"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ]
+                },
+                "AGE_AT_SMN": {
+                    "type": "Number",
+                    "tier": "",
+                    "description": "Age in Days at Secondary Malignant Neoplasm",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "SITE": {
+                    "type": "Code",
+                    "tier": "",
+                    "description": "SMN Site",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "[nrsts_v1.0].[Secondary Malignant Neoplasm].[SMN_SITE] skos:exactMatch [nrsts_v2.0].[Subsequent Malignant Neoplasm].[SITE]"
+                    ],
+                    "permissible_values": {
+                        "Head/Neck": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Thorax": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Limbs": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Abdomen": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Pelvis": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Other": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Reported": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "SMN_TYPE": {
+                    "type": "Code",
+                    "tier": "",
+                    "description": "SMN Type",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Leukemia": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Sarcoma": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Carcinoma": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Other": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Reported": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
