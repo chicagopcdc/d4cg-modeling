@@ -15,7 +15,7 @@ Additional disease groups who are still in the process of contribution or modeli
 
 Almost all of these changes are either renamed fields (1:1), or are related to the PCDC-wide move to using reference time periods rather than duplicated disease phases and treatment courses.
 
-Changes that still require consortia feedback and approval, and which are <u>not</u> reflected in this version, include:
+Changes that still require consortia feedback and approval, and **which are not reflected in this version**, include:
 - The restructured molecular/genetics table.
 - Expanding the diagnosis table to include medical history.
 - The restructure radiation therapy table.
