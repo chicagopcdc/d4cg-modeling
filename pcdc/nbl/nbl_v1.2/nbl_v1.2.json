@@ -1,7 +1,7 @@
 {
     "meta": {
         "name": "nbl_v1.2",
-        "timestamp": "20241202",
+        "timestamp": "20250128",
         "sheet_id": "1tdXKN6Al4xtEH2eoIdRM6vEMra1A3bdCQHQIv-IZy6k"
     },
     "info": {
@@ -13,7 +13,7 @@
         "wiki": "https://docs.pedscommons.org/",
         "consortium_info": "https://commons.cri.uchicago.edu/pcdc/",
         "description": "The NBL data dictionary is a consensus data schema built by an international group of pediatric neuroblastoma experts and maintained by Data for the Common Good (D4CG) at the University of Chicago in collaboration with the International Neuroblastoma Risk Group (INRG). It is based on the collective requirements of its contributors.",
-        "total": 88
+        "total": 75
     },
     "domains": {
         "": {
@@ -154,6 +154,14 @@
                         }
                     }
                 },
+                "AGE_AT_CENSOR_STATUS": {
+                    "type": "Number",
+                    "tier": "",
+                    "description": "The age (in days) of the subject at the time of the event censor status.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
                 "EFS_CENSOR_STATUS": {
                     "type": "Code",
                     "tier": "",
@@ -177,14 +185,6 @@
                             "mappings": []
                         }
                     }
-                },
-                "AGE_AT_CENSOR_STATUS": {
-                    "type": "Number",
-                    "tier": "",
-                    "description": "The age (in days) of the subject at the time of the event censor status.",
-                    "codes": [],
-                    "implementation_notes": [],
-                    "mappings": []
                 }
             },
             "disease_phase_timing": {
@@ -299,7 +299,9 @@
                     "tier": "",
                     "description": "Age in Days at Cycle Start",
                     "codes": [],
-                    "implementation_notes": [],
+                    "implementation_notes": [
+                        "ConsortiumNote: Only available for trail therapy, not for frontline"
+                    ],
                     "mappings": [
                         "New VD"
                     ]
@@ -309,7 +311,9 @@
                     "tier": "",
                     "description": "Age in Days at Cycle End",
                     "codes": [],
-                    "implementation_notes": [],
+                    "implementation_notes": [
+                        "ConsortiumNote: Only available for trail therapy, not for frontline"
+                    ],
                     "mappings": [
                         "New VD"
                     ]
@@ -800,401 +804,29 @@
                     "implementation_notes": [],
                     "mappings": [],
                     "permissible_values": {
-                        "INSS, Stage 1": {
-                            "description": "A relatively early stage of cancer that is usually small and contained within the organ it started in, and hasn't spread to other parts of the body",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "INSS, Stage 2a": {
+                        "INRGSS, Stage L1": {
                             "description": "",
                             "codes": [],
                             "implementation_notes": [],
                             "mappings": []
                         },
-                        "INSS, Stage 2b": {
+                        "INRGSS, Stage L2": {
                             "description": "",
                             "codes": [],
                             "implementation_notes": [],
                             "mappings": []
                         },
-                        "INSS, Stage 3": {
+                        "INRGSS, Stage M": {
                             "description": "",
                             "codes": [],
                             "implementation_notes": [],
                             "mappings": []
                         },
-                        "INSS, Stage 4": {
+                        "INRGSS, Stage MS": {
                             "description": "",
                             "codes": [],
                             "implementation_notes": [],
                             "mappings": []
-                        },
-                        "INSS, Stage 4s": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Unknown": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Not Reported": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        }
-                    }
-                }
-            },
-            "histology": {
-                "HONEST_BROKER_SUBJECT_ID": {
-                    "type": "String",
-                    "tier": "",
-                    "description": "The identifier assigned to the subject by the honest broker--an individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a \"re-identification code\"), however the information linking this re-identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.",
-                    "codes": [
-                        "C168949"
-                    ],
-                    "implementation_notes": [],
-                    "mappings": [
-                        "New VD"
-                    ]
-                },
-                "DISEASE_PHASE": {
-                    "type": "Code",
-                    "tier": "",
-                    "description": "The phase of the cancer treatment process during which relevant observations were recorded. This variable is used across domains to frame the timing of these longitudinal observations and reduce the number of redundant variables needed to report similar concepts (see \"Disease Phase Timing and Course Table\" in the documentation for additional guidance).",
-                    "codes": [
-                        "C168878"
-                    ],
-                    "implementation_notes": [],
-                    "mappings": [],
-                    "permissible_values": {
-                        "Initial Diagnosis": {
-                            "description": "The first diagnosis of the individual's condition.",
-                            "codes": [
-                                "C156813"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        }
-                    }
-                },
-                "DISEASE_PHASE_NUMBER": {
-                    "type": "Number",
-                    "tier": "",
-                    "description": "The number of the disease phase.",
-                    "codes": [
-                        "C173258"
-                    ],
-                    "implementation_notes": [],
-                    "mappings": []
-                },
-                "HISTOLOGY": {
-                    "type": "Code",
-                    "tier": "",
-                    "description": "The study of the structure of the cells and their arrangement to constitute tissues and, finally, the association among these to form organs.  In pathology, the microscopic process of identifying normal and abnormal morphologic characteristics in tissues, by employing various cytochemical and immunocytochemical stains.",
-                    "codes": [],
-                    "implementation_notes": [],
-                    "mappings": [],
-                    "permissible_values": {
-                        "Neuroblastoma (Schwannian Stroma-Poor)": {
-                            "description": "Neuroblastoma with minimal or absent Schwannian stroma. This tumor is primarily composed of neuroblasts (immature nerve cells) and is characterized by aggressive behavior and a higher likelihood of metastasis due to the lack of supportive stroma.",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Ganglioneuroblastoma, Intermixed (Schwannian Stroma-Rich)": {
-                            "description": "A type of neuroblastic tumor that contains a mixture of mature ganglion cells and immature neuroblasts within abundant Schwannian stroma. The rich stroma suggests a less aggressive tumor compared to Schwannian stroma-poor neuroblastomas.",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Ganglioneuroma (Schwannian Stroma-Dominant), Maturing Subtype": {
-                            "description": "A benign neuroblastic tumor where Schwannian stroma is the dominant component, and the tumor is composed mainly of mature ganglion cells with minimal or no immature neuroblasts. The maturing subtype indicates the tumor is well-differentiated, resulting in a favorable prognosis.",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Ganglioneuroblastoma, Nodular (Composite)": {
-                            "description": "A neuroblastic tumor with a composite structure featuring both nodular regions of immature neuroblasts and areas with mature ganglion cells within Schwannian stroma. The nodular (composite) pattern can complicate the prognosis and treatment due to the presence of both aggressive and less aggressive components.",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        }
-                    }
-                },
-                "HISTOLOGY_GRADE": {
-                    "type": "Code",
-                    "tier": "",
-                    "description": "The degree of abnormality of cancer cells, a measure of differentiation, the extent to which cancer cells are similar in appearance and function to healthy cells of the same tissue type. The degree of differentiation often relates to the clinical behavior of the particular tumor. Based on the microscopic findings, tumor grade is commonly described by one of four degrees of severity. Histopathologic grade of a tumor may be used to plan treatment and estimate the future course, outcome, and overall prognosis of disease. Certain types of cancers, such as soft tissue sarcoma, primary brain tumors, lymphomas, and breast have special grading systems.",
-                    "codes": [
-                        "C18000"
-                    ],
-                    "implementation_notes": [],
-                    "mappings": [],
-                    "permissible_values": {
-                        "Undifferentiated or Poorly Differentiated": {
-                            "description": "Tumor cells that are undifferentiated or poorly differentiated lack distinct features of the normal tissue from which they originated. They often resemble primitive or immature cells and have an abnormal appearance and behavior. These tumors typically grow faster, are more aggressive, and have a poorer prognosis compared to well-differentiated tumors.",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Differentiating": {
-                            "description": "Tumors that are differentiating contain cells that are in the process of maturing or developing characteristics more typical of the tissue of origin. While not fully mature, these tumors show some level of differentiation and may exhibit intermediate behavior, often with a more favorable prognosis compared to undifferentiated or poorly differentiated tumors.",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Grade 3": {
-                            "description": "Grade 3 is a classification used to describe the aggressiveness of a tumor based on how abnormal the tumor cells look under a microscope and how much they differ from the normal tissue. Grade 3 tumors are considered high-grade, meaning they are poorly differentiated, grow rapidly, and have a higher likelihood of spreading. The high grade reflects a more aggressive cancer with a poorer prognosis compared to lower-grade tumors.",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": [
-                                "New PD"
-                            ]
-                        },
-                        "Unknown": {
-                            "description": "Not known, observed, recorded; or reported as unknown by the data contributor.",
-                            "codes": [
-                                "C17998"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Not Reported": {
-                            "description": "Not provided or available.",
-                            "codes": [
-                                "C43234"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        }
-                    }
-                },
-                "MKI": {
-                    "type": "Code",
-                    "tier": "",
-                    "description": "A tumor cell proliferation measurement represented by the number of cells in mitosis plus the number of cells in karyorrhexis per 5000 cells.",
-                    "codes": [
-                        "C106317"
-                    ],
-                    "implementation_notes": [],
-                    "mappings": [
-                        "[nbl_v1.1].[Disease Characteristics].[MKI] skos:exactMatch [nbl_v1.2].[Histology].[MKI]"
-                    ],
-                    "permissible_values": {
-                        "Low (<2% or <100/5,000 cells)": {
-                            "description": "A low MKI indicates a slower rate of cell division and less aggressive tumor behavior.",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": [
-                                "[nbl_v1.1].[Disease Characteristics].[MKI].[Low (<2% or <100/5,000 cells)] skos:exactMatch [nbl_v1.2].[Histology].[MKI].[Low (<2% or <100/5,000 cells)]"
-                            ]
-                        },
-                        "Intermediate (2-4% or 100 to <200/5,000 cells)": {
-                            "description": "An intermediate MKI suggests a moderate rate of cell division, indicating a tumor with intermediate aggressiveness.",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": [
-                                "[nbl_v1.1].[Disease Characteristics].[MKI].[Intermediate (2-4% or 100 to <200/5,000 cells)] skos:exactMatch [nbl_v1.2].[Histology].[MKI].[Intermediate (2-4% or 100 to <200/5,000 cells)]"
-                            ]
-                        },
-                        "High (>4% or >200/5,000 cells)": {
-                            "description": "A high MKI indicates a rapid rate of cell division and a more aggressive tumor, often associated with a poorer prognosis.",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": [
-                                "[nbl_v1.1].[Disease Characteristics].[MKI].[High (>4% or >200/5,000 cells)] skos:exactMatch [nbl_v1.2].[Histology].[MKI].[High (>4% or >200/5,000 cells)]"
-                            ]
-                        },
-                        "Unknown": {
-                            "description": "Not known, observed, recorded; or reported as unknown by the data contributor.",
-                            "codes": [
-                                "C17998"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": [
-                                "[nbl_v1.1].[Disease Characteristics].[MKI].[Unknown] skos:exactMatch [nbl_v1.2].[Histology].[MKI].[Unknown]"
-                            ]
-                        },
-                        "Not Reported": {
-                            "description": "Not provided or available.",
-                            "codes": [
-                                "C43234"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": [
-                                "[nbl_v1.1].[Disease Characteristics].[MKI].[Not Reported] skos:exactMatch [nbl_v1.2].[Histology].[MKI].[Not Reported]"
-                            ]
-                        }
-                    }
-                },
-                "HISTOLOGY_INPC": {
-                    "type": "Code",
-                    "tier": "",
-                    "description": "Revised INPC Prognostic Group (2003)",
-                    "codes": [],
-                    "implementation_notes": [],
-                    "mappings": [],
-                    "permissible_values": {
-                        "Favorable": {
-                            "description": "Histology is considered favorable when the tumor cells resemble normal cells of the tissue of origin and exhibit characteristics that are associated with a better prognosis. This includes features such as well-differentiated cells, low mitotic activity, and a lack of aggressive growth patterns. Tumors with favorable histology tend to be less aggressive, respond better to treatment, and have a higher chance of successful treatment outcomes.",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Unfavorable": {
-                            "description": "Histology is considered unfavorable when the tumor cells are poorly differentiated or undifferentiated, exhibiting characteristics that are associated with a worse prognosis. This includes features such as high mitotic activity, aggressive growth patterns, and a lack of resemblance to normal tissue. Tumors with unfavorable histology tend to be more aggressive, harder to treat, and associated with a higher risk of metastasis and poor outcomes.",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Unknown": {
-                            "description": "Not known, observed, recorded; or reported as unknown by the data contributor.",
-                            "codes": [
-                                "C17998"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Not Reported": {
-                            "description": "Not provided or available.",
-                            "codes": [
-                                "C43234"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        }
-                    }
-                }
-            },
-            "labs": {
-                "HONEST_BROKER_SUBJECT_ID": {
-                    "type": "String",
-                    "tier": "",
-                    "description": "The identifier assigned to the subject by the honest broker--an individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a \"re-identification code\"), however the information linking this re-identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.",
-                    "codes": [
-                        "C168949"
-                    ],
-                    "implementation_notes": [],
-                    "mappings": [
-                        "New VD"
-                    ]
-                },
-                "DISEASE_PHASE": {
-                    "type": "Code",
-                    "tier": "",
-                    "description": "The phase of the cancer treatment process during which relevant observations were recorded. This variable is used across domains to frame the timing of these longitudinal observations and reduce the number of redundant variables needed to report similar concepts (see \"Disease Phase Timing and Course Table\" in the documentation for additional guidance).",
-                    "codes": [
-                        "C168878"
-                    ],
-                    "implementation_notes": [],
-                    "mappings": [],
-                    "permissible_values": {
-                        "Refractory": {
-                            "description": "Not responding to treatment.",
-                            "codes": [
-                                "C38014"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Relapse/Progression": {
-                            "description": "Either the return of the disease or the progression of the disease.",
-                            "codes": [
-                                "C174991"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": [
-                                "New PD"
-                            ]
-                        }
-                    }
-                },
-                "DISEASE_PHASE_NUMBER": {
-                    "type": "Number",
-                    "tier": "",
-                    "description": "The number of the disease phase.",
-                    "codes": [
-                        "C173258"
-                    ],
-                    "implementation_notes": [],
-                    "mappings": []
-                },
-                "LAB_TEST": {
-                    "type": "Code",
-                    "tier": "",
-                    "description": "Laboratory Test",
-                    "codes": [],
-                    "implementation_notes": [],
-                    "mappings": [],
-                    "permissible_values": {
-                        "LDH": {
-                            "description": "A quantitative measurement of the amount of lactate dehydrogenase present in a sample.",
-                            "codes": [
-                                "C64855"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Ferritin": {
-                            "description": "The determination of the amount of ferritin present in a sample.",
-                            "codes": [
-                                "C74737"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        }
-                    }
-                },
-                "RESULT_NUMERIC": {
-                    "type": "Decimal",
-                    "tier": "",
-                    "description": "The numeric result of the laboratory test.",
-                    "codes": [
-                        "ncit:C70952"
-                    ],
-                    "implementation_notes": [],
-                    "mappings": [
-                        "[nbl_v1.1].[Labs].[LAB_RESULT_NUMERIC] skos:exactMatch [nbl_v1.2].[Labs].[RESULT_NUMERIC]"
-                    ]
-                },
-                "RESULT_UNIT": {
-                    "type": "Code",
-                    "tier": "",
-                    "description": "The unit of the numeric result of the laboratory test.",
-                    "codes": [
-                        "ncit:C173274"
-                    ],
-                    "implementation_notes": [],
-                    "mappings": [
-                        "New VD"
-                    ],
-                    "permissible_values": {
-                        "U/L": {
-                            "description": "An arbitrary unit of substance concentration equal to the concentration at which one liter of mixture contains one unit of a substance.",
-                            "codes": [
-                                "ncit:C67456"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": [
-                                "New PD"
-                            ]
-                        },
-                        "\u00b5g/L": {
-                            "description": "A unit of mass concentration defined as the concentration of one microgram of a substance per unit volume of the mixture equal to one liter. The concept also refers to the unit of mass density (volumetric mass) defined as the density of a substance which mass equal to one microgram occupies the volume of one liter.",
-                            "codes": [
-                                "ncit:C67306"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": [
-                                "New PD"
-                            ]
                         }
                     }
                 }

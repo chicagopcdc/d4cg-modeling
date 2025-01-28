@@ -40,22 +40,6 @@ Added concepts:
 
 >[Staging].[HONEST_BROKER_SUBJECT_ID]
 
->[Histology].[HONEST_BROKER_SUBJECT_ID]
-
->[Histology].[HISTOLOGY_GRADE].[Grade 3]
-
->[Labs].[HONEST_BROKER_SUBJECT_ID]
-
->[Labs].[DISEASE_PHASE].[Relapse/Progression]
-
->[nbl_v1.1].[Labs].[LAB_RESULT_NUMERIC] skos:exactMatch [nbl_v1.2].[Labs].[RESULT_NUMERIC]
-
->[Labs].[RESULT_UNIT]
-
->[Labs].[RESULT_UNIT].[U/L]
-
->[Labs].[RESULT_UNIT].[µg/L]
-
 >[Molecular Analysis].[HONEST_BROKER_SUBJECT_ID]
 
 >[Molecular Analysis].[DISEASE_PHASE].[Relapse/Progression]
@@ -226,12 +210,4 @@ Removed concepts:
 >None. However, there are many concepts not shown in this version that will persist in the full NBL dictionary.
 
 Modified concepts:
->[nbl_v1.1].[Disease Characteristics].[MKI] skos:exactMatch [nbl_v1.2].[Histology].[MKI]
-
->[nbl_v1.1].[Disease Characteristics].[MKI].[Intermediate (2-4% or 100 to <200/5,000 cells)] skos:exactMatch [nbl_v1.2].[Histology].[MKI].[Intermediate (2-4% or 100 to <200/5,000 cells)]
-
->[nbl_v1.1].[Disease Characteristics].[MKI].[High (>4% or >200/5,000 cells)] skos:exactMatch [nbl_v1.2].[Histology].[MKI].[High (>4% or >200/5,000 cells)]
-
->[nbl_v1.1].[Disease Characteristics].[MKI].[Unknown] skos:exactMatch [nbl_v1.2].[Histology].[MKI].[Unknown]
-
->[nbl_v1.1].[Disease Characteristics].[MKI].[Not Reported] skos:exactMatch [nbl_v1.2].[Histology].[MKI].[Not Reported]
+>None
