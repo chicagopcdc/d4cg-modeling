@@ -1,0 +1,2011 @@
+{
+    "meta": {
+        "name": "nbl_v1.3",
+        "timestamp": "20250220",
+        "sheet_id": "1tdXKN6Al4xtEH2eoIdRM6vEMra1A3bdCQHQIv-IZy6k"
+    },
+    "info": {
+        "title": "Neuroblastoma (NBL) Data Dictionary",
+        "name": "nbl_v1.3",
+        "release_notes": "",
+        "parent_data_model": "pcdc_v1.8",
+        "license": "Creative Commons Attribution-NonCommercial 4.0 International License (https://creativecommons.org/licenses/by-nc/4.0/)",
+        "wiki": "https://docs.pedscommons.org/",
+        "consortium_info": "https://commons.cri.uchicago.edu/pcdc/",
+        "description": "The NBL data dictionary is a consensus data schema built by an international group of pediatric neuroblastoma experts and maintained by Data for the Common Good (D4CG) at the University of Chicago in collaboration with the International Neuroblastoma Risk Group (INRG). It is based on the collective requirements of its contributors.",
+        "total": 77
+    },
+    "domains": {
+        "protocol": {
+            "subject_characteristics": {
+                "HONEST_BROKER_SUBJECT_ID": {
+                    "type": "String",
+                    "tier": "",
+                    "description": "Honest Broker Subject ID",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "DATA_CONTRIBUTOR_ID": {
+                    "type": "Code",
+                    "tier": "",
+                    "description": "Data Contributor ID",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "COG": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "STUDY_ID": {
+                    "type": "Code",
+                    "tier": "",
+                    "description": "Study Identifier",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "ANBL1221": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "CENSOR_STATUS": {
+                    "type": "Code",
+                    "tier": "",
+                    "description": "Censor Status",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Subject is censored (i.e. has had no events(s))": {
+                            "description": "The status of a participant or subject in a study whose event or outcome of interest has not yet occurred or has not been observed within the study's follow-up period. Censoring occurs when the event of interest has not happened to a participant by the end of the study or when they are lost to follow-up before the event occurs.",
+                            "codes": [
+                                "ncit:C118962"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Subject has had one or more events": {
+                            "description": "The patient has experienced the event of interest within the study period and has reached the endpoint being evaluated, such as disease progression, relapse, recurrence, or death, and their time to event can be accurately recorded and analyzed.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "AGE_AT_ENROLLMENT": {
+                    "type": "Number",
+                    "tier": "",
+                    "description": "Age of subject (in days) when the subject enrolled in the study.",
+                    "codes": [
+                        "ncit:C168843"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ]
+                },
+                "AGE_AT_CENSOR_STATUS": {
+                    "type": "Number",
+                    "tier": "",
+                    "description": "The subject's age (in days) at the time of censor status recording.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "TREATMENT_ARM": {
+                    "type": "Code",
+                    "tier": "",
+                    "description": "Assigned Treatment Arm by Intention-To-Treat",
+                    "codes": [],
+                    "implementation_notes": [
+                        "D4CGNote: This will be an array, with a stratum + treatment arm for each patient"
+                    ],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Regimen A": {
+                            "description": "Irinotecan and Temozolomide and Temsirolimus",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Assigned to Regimen B": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Randomized to Regimen B": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Stratum 1": {
+                            "description": "Patients whose disease is measurable with conventional CT and/or MRI, no prior anti-GD2 therapy; MYCN amplified tumor",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "Stratum 2": {
+                            "description": "Patients whose disease is detected by abnormal uptake at >= 1 site on MIBG scan, no prior anti-GD2 therapy; MYCN amplified tumor. Stratum 2 patients may not have measurable disease on CT and/or MRI.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "Stratum 3": {
+                            "description": "Patients whose disease is measurable with conventional CT and/or MRI, with prior anti-GD2 therapy; MYCN amplified tumor",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "Stratum 4": {
+                            "description": "Patients whose disease is detected by abnormal uptake at >= 1 site on MIBG scan, with prior anti-GD2 therapy; MYCN amplified tumor. Stratum 4 patients may not have measurable disease on CT and/or MRI.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "Stratum 5": {
+                            "description": "Patients whose disease is measurable with conventional CT and/or MRI, no prior anti-GD2 therapy; MYCN non-amplified tumor",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "Stratum 6": {
+                            "description": "Patients whose disease is detected by abnormal uptake at >= 1 site on MIBG scan, no prior anti-GD2 therapy; MYCN non-amplified tumor. Stratum 6 patients may not have measurable disease on CT and/or MRI.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "Stratum 7": {
+                            "description": "Patients whose disease is measurable with conventional CT and/or MRI, with prior anti-GD2 therapy; MYCN non-amplified tumor",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "Stratum 8": {
+                            "description": "Patients whose disease is detected by abnormal uptake at >= 1 site on MIBG scan, with prior anti-GD2 therapy; MYCN non-amplified tumor. Stratum 8 patients may not have measurable disease on CT and/or MRI.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "Stratum 9": {
+                            "description": "Patients whose disease is measurable with conventional CT and/or MRI, no prior anti-GD2 therapy; MYCN unknown/unable to be determined.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "Stratum 10": {
+                            "description": "Patients whose disease is detected by abnormal uptake at >= 1 site on MIBG scan, no prior anti-GD2 therapy; MYCN unknown/unable to be determined. Stratum 10 patients may not have measurable disease on CT and/or MRI.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "Stratum 11": {
+                            "description": "Patients whose disease is measurable with conventional CT and/or MRI, with prior anti-GD2 therapy; MYCN unknown/unable to be determined.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "Stratum 12": {
+                            "description": "Patients whose disease is detected by abnormal uptake at >= 1 site on MIBG scan, with prior anti-GD2 therapy; MYCN unknown/unable to be determined. Stratum 12 patients may not have measurable disease on CT and/or MRI.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        }
+                    }
+                },
+                "DISEASE_STATE": {
+                    "type": "Code",
+                    "tier": "",
+                    "description": "The state of disease by CT and/or MRI at study enrollment.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ],
+                    "permissible_values": {
+                        "Measurable": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "Evaluable": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        }
+                    }
+                }
+            },
+            "off_protocol_therapy/study": {
+                "AGE_OFF": {
+                    "type": "Number",
+                    "tier": "",
+                    "description": "Age of subject (in days) when subject was off therapy or study.",
+                    "codes": [
+                        "ncit:C172678"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ]
+                },
+                "DISEASE_PHASE": {
+                    "type": "Code",
+                    "tier": "",
+                    "description": "The stage or period of an individual's disease.",
+                    "codes": [
+                        "ncit:C168878"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ],
+                    "permissible_values": {
+                        "Relapse/Progression": {
+                            "description": "Either the return of the disease or the progression of the disease.",
+                            "codes": [
+                                "ncit:C174991"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "Refractory": {
+                            "description": "Not responding to treatment.",
+                            "codes": [
+                                "ncit:C38014"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        }
+                    }
+                },
+                "DISEASE_PHASE_NUMBER": {
+                    "type": "Number",
+                    "tier": "",
+                    "description": "The number of the disease phase.",
+                    "codes": [
+                        "ncit:C173258"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ]
+                },
+                "OFF_TYPE": {
+                    "type": "Code",
+                    "tier": "",
+                    "description": "The code used to designate that the subject went off therapy or off the study.",
+                    "codes": [
+                        "ncit:C173256"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ],
+                    "permissible_values": {
+                        "Protocol Therapy": {
+                            "description": "No longer receiving protocol therapy.",
+                            "codes": [
+                                "ncit:C173257"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        }
+                    }
+                },
+                "REASON_OFF": {
+                    "type": "Code",
+                    "tier": "",
+                    "description": "The reason a subject went off the therapy or study.",
+                    "codes": [
+                        "ncit:C93611",
+                        "ncit:C173519",
+                        "ncit:C169005"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ],
+                    "permissible_values": {
+                        "Death": {
+                            "description": "Specifies whether the life of an entity has ceased.",
+                            "codes": [
+                                "ncit:C93546"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "Lost to Follow-Up": {
+                            "description": "The subject was not available for follow-up procedures.",
+                            "codes": [
+                                "ncit:C70740"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "Completion of Planned Therapy": {
+                            "description": "The end of the planned treatment.",
+                            "codes": [
+                                "ncit:C168935"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "Physician Decision": {
+                            "description": "A position, opinion or judgment reached after consideration by a physician with reference to subject.",
+                            "codes": [
+                                "ncit:C48250"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "Ineligible": {
+                            "description": "The state or quality of being disqualified by law, rule, or provision.",
+                            "codes": [
+                                "ncit:C40412"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "Withdrawal of Consent": {
+                            "description": "When the permission to do something is rescinded or withdrawn.",
+                            "codes": [
+                                "ncit:C48271"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "Subject/Guardian Refused Further Treatment": {
+                            "description": "The subject or their guardian has refused further treatment.",
+                            "codes": [
+                                "ncit:C168934"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "Disease Progression": {
+                            "description": "A clinical, pathologic, and/or molecular finding indicating that the course of a disease is worsening in terms of extent or severity.",
+                            "codes": [
+                                "ncit:C35571",
+                                "ncit:C17747"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "Secondary Malignancy": {
+                            "description": "A malignant neoplasm that arises from a pre-existing lower grade lesion, or as a result of a primary lesion that has spread to secondary sites, or due to a complication of a cancer treatment.",
+                            "codes": [
+                                "ncit:C4968"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "Intolerance of study therapy": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "Unknown": {
+                            "description": "Reported as unknown by the data contributor.",
+                            "codes": [
+                                "ncit:C17998"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "Not Reported": {
+                            "description": "Not provided or available.",
+                            "codes": [
+                                "ncit:C43234"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        }
+                    }
+                },
+                "ANOTHER_STUDY": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The subject was enrolled in another therapeutic study after the off protocol study.",
+                    "codes": [
+                        "ncit:C178073"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ],
+                    "permissible_values": {
+                        "No": {
+                            "description": "The non-affirmative response to a question.",
+                            "codes": [
+                                "ncit:C49487"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "Yes": {
+                            "description": "The affirmative response to a question.",
+                            "codes": [
+                                "ncit:C49488"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "Unknown": {
+                            "description": "Reported as unknown by the data contributor.",
+                            "codes": [
+                                "ncit:C17998"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "Not Reported": {
+                            "description": "Not provided or available.",
+                            "codes": [
+                                "ncit:C43234"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        }
+                    }
+                }
+            },
+            "disease_phase_timing": {
+                "HONEST_BROKER_SUBJECT_ID": {
+                    "type": "String",
+                    "tier": "",
+                    "description": "The identifier assigned to the subject by the honest broker--an individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a \"re-identification code\"), however the information linking this re-identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.",
+                    "codes": [
+                        "ncit:C168949"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "DISEASE_PHASE": {
+                    "type": "Code",
+                    "tier": "",
+                    "description": "The phase of the cancer treatment process during which relevant observations were recorded. This variable is used across domains to frame the timing of these longitudinal observations and reduce the number of redundant variables needed to report similar concepts (see \"Disease Phase Timing and Course Table\" in the documentation for additional guidance).",
+                    "codes": [
+                        "ncit:C168878"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Relapse/Progression": {
+                            "description": "Either the return of the disease or the progression of the disease.",
+                            "codes": [
+                                "ncit:C174991"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Refractory": {
+                            "description": "Not responding to treatment.",
+                            "codes": [
+                                "ncit:C38014"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "DISEASE_PHASE_NUMBER": {
+                    "type": "Number",
+                    "tier": "",
+                    "description": "The number of the disease phase.",
+                    "codes": [
+                        "ncit:C173258"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "AGE_AT_DISEASE_PHASE": {
+                    "type": "Number",
+                    "tier": "",
+                    "description": "Age of subject (in days) at the end of the treatment course.",
+                    "codes": [
+                        "ncit:C168851"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "YEAR_AT_DISEASE_PHASE": {
+                    "type": "Number",
+                    "tier": "",
+                    "description": "Age of subject (in days) at the disease phase.",
+                    "codes": [
+                        "ncit:C168972"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": []
+                }
+            },
+            "course_timing": {
+                "HONEST_BROKER_SUBJECT_ID": {
+                    "type": "String",
+                    "tier": "",
+                    "description": "The identifier assigned to the subject by the honest broker--an individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a \"re-identification code\"), however the information linking this re-identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.",
+                    "codes": [
+                        "ncit:C168949"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "CYCLE_NUMBER": {
+                    "type": "Number",
+                    "tier": "",
+                    "description": "Cycle Number",
+                    "codes": [
+                        "ncit:C166208"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "AGE_AT_CYCLE_START": {
+                    "type": "Number",
+                    "tier": "",
+                    "description": "Age in Days at Cycle Start",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "AGE_AT_CYCLE_END": {
+                    "type": "Number",
+                    "tier": "",
+                    "description": "Age in Days at Cycle End",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                }
+            }
+        },
+        "demographics": {
+            "demographics": {
+                "HONEST_BROKER_SUBJECT_ID": {
+                    "type": "String",
+                    "tier": "",
+                    "description": "The identifier assigned to the subject by the honest broker--an individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a \"re-identification code\"), however the information linking this re-identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.",
+                    "codes": [
+                        "ncit:C168949"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "SEX": {
+                    "type": "Code",
+                    "tier": "",
+                    "description": "Biological Sex",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Male": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Female": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Reported": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "RACE": {
+                    "type": "Code",
+                    "tier": "",
+                    "description": "Race",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "American Indian or Alaska Native": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Asian": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Black or African American": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Multiracial": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Native Hawaiian or Other Pacific Islander": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "White": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Reported": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "ETHNICITY": {
+                    "type": "Code",
+                    "tier": "",
+                    "description": "Ethnicity",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Hispanic or Latino": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Hispanic or Latino": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Reported": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                }
+            },
+            "survival_characteristics": {
+                "HONEST_BROKER_SUBJECT_ID": {
+                    "type": "String",
+                    "tier": "",
+                    "description": "The identifier assigned to the subject by the honest broker--an individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a \"re-identification code\"), however the information linking this re-identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.",
+                    "codes": [
+                        "ncit:C168949"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "AGE_AT_LKSS": {
+                    "type": "Number",
+                    "tier": "",
+                    "description": "The age (in days) when the last known survival status of the subject was captured.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "DISEASE_PHASE": {
+                    "type": "Code",
+                    "tier": "",
+                    "description": "The phase of the cancer treatment process during which relevant observations were recorded. This variable is used across domains to frame the timing of these longitudinal observations and reduce the number of redundant variables needed to report similar concepts (see \"Disease Phase Timing and Course Table\" in the documentation for additional guidance).",
+                    "codes": [
+                        "ncit:C168878"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Relapse/Progression": {
+                            "description": "Either the return of the disease or the progression of the disease.",
+                            "codes": [
+                                "ncit:C174991"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Refractory": {
+                            "description": "Not responding to treatment.",
+                            "codes": [
+                                "ncit:C38014"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "DISEASE_PHASE_NUMBER": {
+                    "type": "Number",
+                    "tier": "",
+                    "description": "The number of the disease phase.",
+                    "codes": [
+                        "ncit:C173258"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "LKSS": {
+                    "type": "Code",
+                    "tier": "",
+                    "description": "The last known survival status of the subject.",
+                    "codes": [
+                        "ncit:C168931"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Alive": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Dead": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "CAUSE_OF_DEATH": {
+                    "type": "Code",
+                    "tier": "",
+                    "description": "The circumstance or condition that results in the death of a living being.",
+                    "codes": [
+                        "ncit:C81239"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Disease Progression": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Treatment-Related Mortality": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Other": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                }
+            }
+        },
+        "disease_attributes": {
+            "tumor_assessment": {
+                "HONEST_BROKER_SUBJECT_ID": {
+                    "type": "String",
+                    "tier": "",
+                    "description": "The identifier assigned to the subject by the honest broker--an individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a \"re-identification code\"), however the information linking this re-identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.",
+                    "codes": [
+                        "ncit:C168949"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "AGE_AT_TUMOR_ASSESSMENT": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "Age in Days at Tumor Assessment",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "DISEASE_PHASE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The phase of the cancer treatment process during which relevant observations were recorded. This variable is used across domains to frame the timing of these longitudinal observations and reduce the number of redundant variables needed to report similar concepts (see \"Disease Phase Timing and Course Table\" in the documentation for additional guidance).",
+                    "codes": [
+                        "ncit:C168878"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Relapse/Progression": {
+                            "description": "Either the return of the disease or the progression of the disease.",
+                            "codes": [
+                                "ncit:C174991"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Refractory": {
+                            "description": "Not responding to treatment.",
+                            "codes": [
+                                "ncit:C38014"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "DISEASE_PHASE_NUMBER": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "The number of the disease phase.",
+                    "codes": [
+                        "ncit:C173258"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "DETECTION_METHOD": {
+                    "type": "Enum",
+                    "tier": "The method used to detect the extent of the disease involvement.",
+                    "description": "ncit:C173262|Themethodusedtodetecttheextentofthediseaseinvolvement.",
+                    "codes": [
+                        "_undefined_"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ],
+                    "permissible_values": {
+                        "CT": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "MRI": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "Other": {
+                            "description": "Different than the one(s) previously specified or mentioned.",
+                            "codes": [
+                                "ncit:C17649"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "DETECTION_METHOD_OTHER": {
+                    "type": "String",
+                    "tier": "n/a",
+                    "description": "Specify the \"Other\" detection method.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [
+                        "New VD"
+                    ]
+                },
+                "TUMOR_STATE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The classification of a tumor based primarily on histopathological characteristics.",
+                    "codes": [
+                        "ncit:C174459"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Present": {
+                            "description": "Being or existing in a specified place or at the specified time.",
+                            "codes": [
+                                "ncit:C25626"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Absent": {
+                            "description": "Not existing in a specified place at a specified time.",
+                            "codes": [
+                                "ncit:C48190"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "Not known, observed, recorded; or reported as unknown by the data contributor.",
+                            "codes": [
+                                "ncit:C17998"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "TUMOR_CLASSIFICATION": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "A condition or state of a tumor at a particular time and a particular tumor site.",
+                    "codes": [
+                        "ncit:C96643"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Primary": {
+                            "description": "A tumor at the original site of origin.",
+                            "codes": [
+                                "ncit:C8509"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "TUMOR_SITE": {
+                    "type": "Code",
+                    "tier": "",
+                    "description": "The anatomic site of the tumor.",
+                    "codes": [
+                        "ncit:C157120"
+                    ],
+                    "implementation_notes": [
+                        "ConsortiumNote: Map ICD-O codes in source data to these sites"
+                    ],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Central Nervous System": {
+                            "description": "The part of the nervous system that consists of the brain, spinal cord, and meninges.",
+                            "codes": [
+                                "ncit:C12438"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Distant Lymph Nodes": {
+                            "description": "A lymph node located distant to the anatomic site of interest.",
+                            "codes": [
+                                "ncit:C106042"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Liver": {
+                            "description": "A triangular-shaped organ located under the diaphragm in the right hypochondrium. It is the largest internal organ of the body, weighting up to 2 kg. Metabolism and bile secretion are its main functions. It is composed of cells which have the ability to regenerate.",
+                            "codes": [
+                                "ncit:C12392"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Lung": {
+                            "description": "One of a pair of viscera occupying the pulmonary cavities of the thorax, the organs of respiration in which aeration of the blood takes place. As a rule, the right lung is slightly larger than the left and is divided into three lobes (an upper, a middle, and a lower or basal), while the left has two lobes (an upper and a lower or basal). Each lung is irregularly conical in shape, presenting a blunt upper extremity (the apex), a concave base following the curve of the diaphragm, an outer convex surface (costal surface), an inner or mediastinal surface (mediastinal surface), a thin and sharp anterior border, and a thick and rounded posterior border.",
+                            "codes": [
+                                "ncit:C12468"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Adrenal Gland": {
+                            "description": "A flattened, roughly triangular body resting upon the upper end of each kidney; it is one of the ductless glands furnishing internal secretions (epinephrine and norepinephrine from the medulla and steroid hormones from the cortex).",
+                            "codes": [
+                                "ncit:C12666"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Abdomen": {
+                            "description": "The cavity located between the lungs and pelvis. It contains the lower esophagus, stomach, pancreas, intestines, liver, gallbladder and spleen.",
+                            "codes": [
+                                "ncit:C12664"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Neck": {
+                            "description": "The region that connects the head to the rest of the body.",
+                            "codes": [
+                                "ncit:C13063"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Thorax": {
+                            "description": "The division of the body lying between the neck and the abdomen.",
+                            "codes": [
+                                "ncit:Cncit:C12799"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Pelvis": {
+                            "description": "The bony, basin-shaped structure formed by the hipbones and the base of the backbone supporting the lower limbs in humans.",
+                            "codes": [
+                                "ncit:C12767"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Bone Marrow": {
+                            "description": "The tissue occupying the spaces of bone. It consists of blood vessel sinuses and a network of hematopoietic cells which give rise to the red cells, white cells, and megakaryocytes.",
+                            "codes": [
+                                "ncit:C12431"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Bone": {
+                            "description": "The structural organ comprised of specialized connective tissue that forms the skeletal components of the body.",
+                            "codes": [
+                                "ncit:C12366"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Skin": {
+                            "description": "An organ that constitutes the external surface of the body. It consists of the epidermis, dermis, and skin appendages.",
+                            "codes": [
+                                "ncit:C12470"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                }
+            },
+            "staging": {
+                "HONEST_BROKER_SUBJECT_ID": {
+                    "type": "String",
+                    "tier": "",
+                    "description": "The identifier assigned to the subject by the honest broker--an individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a \"re-identification code\"), however the information linking this re-identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.",
+                    "codes": [
+                        "ncit:C168949"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "AGE_AT_STAGING": {
+                    "type": "Number",
+                    "tier": "",
+                    "description": "Age in Days of Staging Assessment",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "DISEASE_PHASE": {
+                    "type": "Code",
+                    "tier": "",
+                    "description": "The phase of the cancer treatment process during which relevant observations were recorded. This variable is used across domains to frame the timing of these longitudinal observations and reduce the number of redundant variables needed to report similar concepts (see \"Disease Phase Timing and Course Table\" in the documentation for additional guidance).",
+                    "codes": [
+                        "ncit:C168878"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Relapse/Progression": {
+                            "description": "Either the return of the disease or the progression of the disease.",
+                            "codes": [
+                                "ncit:C174991"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Refractory": {
+                            "description": "Not responding to treatment.",
+                            "codes": [
+                                "ncit:C38014"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "DISEASE_PHASE_NUMBER": {
+                    "type": "Number",
+                    "tier": "",
+                    "description": "Disease Phase Number",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "STAGE": {
+                    "type": "Code",
+                    "tier": "",
+                    "description": "Stage",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "INSS, Stage 1": {
+                            "description": "A relatively early stage of cancer that is usually small and contained within the organ it started in, and hasn't spread to other parts of the body",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "INSS, Stage 2a": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "INSS, Stage 2b": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "INSS, Stage 3": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "INSS, Stage 4": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "INSS, Stage 4s": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Reported": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                }
+            },
+            "histology": {
+                "HONEST_BROKER_SUBJECT_ID": {
+                    "type": "String",
+                    "tier": "",
+                    "description": "The identifier assigned to the subject by the honest broker--an individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a \"re-identification code\"), however the information linking this re-identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.",
+                    "codes": [
+                        "ncit:C168949"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "AGE_AT_HIST_ASSESSMENT": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "Age in Days of Histology Assessment",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "DISEASE_PHASE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "Disease Phase",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Relapse/Progression": {
+                            "description": "Either the return of the disease or the progression of the disease.",
+                            "codes": [
+                                "ncit:C174991"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Refractory": {
+                            "description": "Not responding to treatment.",
+                            "codes": [
+                                "ncit:C38014"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "DISEASE_PHASE_NUMBER": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "Disease Phase Number",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "HISTOLOGY": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "The study of the structure of the cells and their arrangement to constitute tissues and, finally, the association among these to form organs.  In pathology, the microscopic process of identifying normal and abnormal morphologic characteristics in tissues, by employing various cytochemical and immunocytochemical stains.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Neuroblastoma (Schwannian Stroma-Poor)": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Ganglioneuroblastoma, Intermixed (Schwannian Stroma-Rich)": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Ganglioneuroma (Schwannian Stroma-Dominant), Maturing Subtype": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Ganglioneuroblastoma, Nodular (Composite)": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "HISTOLOGY_GRADE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "Histology Grade",
+                    "codes": [
+                        "ncit:C18000"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Undifferentiated or Poorly Differentiated": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Differentiating": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Reported": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "HISTOLOGY_INPC": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "Revised INPC Prognostic Group (2003)",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Favorable": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unfavorable": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Reported": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                }
+            },
+            "disease_characteristics": {
+                "HONEST_BROKER_SUBJECT_ID": {
+                    "type": "String",
+                    "tier": "",
+                    "description": "The identifier assigned to the subject by the honest broker--an individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a \"re-identification code\"), however the information linking this re-identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.",
+                    "codes": [
+                        "ncit:C168949"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "DISEASE_PHASE": {
+                    "type": "Code",
+                    "tier": "",
+                    "description": "The phase of the cancer treatment process during which relevant observations were recorded. This variable is used across domains to frame the timing of these longitudinal observations and reduce the number of redundant variables needed to report similar concepts (see \"Disease Phase Timing and Course Table\" in the documentation for additional guidance).",
+                    "codes": [
+                        "ncit:C168878"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Relapse/Progression": {
+                            "description": "Either the return of the disease or the progression of the disease.",
+                            "codes": [
+                                "ncit:C174991"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Refractory": {
+                            "description": "Not responding to treatment.",
+                            "codes": [
+                                "ncit:C38014"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "DISEASE_PHASE_NUMBER": {
+                    "type": "Number",
+                    "tier": "",
+                    "description": "The number of the disease phase.",
+                    "codes": [
+                        "ncit:C173258"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "INITIAL_TREATMENT_CATEGORY": {
+                    "type": "Code",
+                    "tier": "",
+                    "description": "The category of initial treatment that the patient receive for their disease.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "None (observation)": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Surgery alone": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Conventional-dose chemotherapy (2-8 cycles) plus surgery": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Intensive multi-modality therapy: specific type unknown": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [
+                                "ConsortiumNote: select this value for patients in strata 1, 2, 5, 6, 9, and 10."
+                            ],
+                            "mappings": []
+                        },
+                        "Intensive multi-modality therapy: no stem cell or bone marrow transplant": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Intensive multi-modality therapy: plus stem cell or bone marrow transplant": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Intensive multi-modality therapy: plus stem cell or bone marrow transplant and anti-GD2 antibody": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [
+                                "ConsortiumNote: select this value for patients in strata 3, 4, 7, 8, 11, and 12."
+                            ],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                }
+            }
+        },
+        "testing": {
+            "molecular_analysis": {
+                "AGE_AT_MOLECULAR_ANALYSIS": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "Age in Days at Molecular Analysis",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "DISEASE_PHASE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "Disease Phase",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Relapse/Progression": {
+                            "description": "Either the return of the disease or the progression of the disease.",
+                            "codes": [
+                                "ncit:C174991"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Refractory": {
+                            "description": "Not responding to treatment.",
+                            "codes": [
+                                "ncit:C38014"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "DISEASE_PHASE_NUMBER": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "Disease Phase Number",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "MOLECULAR_ABNORMALITY": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "Molecular Abnormality",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "MYCN Amplification": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "MOLECULAR_ABNORMALITY_RESULT": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "Molecular Abnormality Result",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Positive": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [
+                                "ConsortiumNote: patients with positive MYCN amplification are in strata 1, 2, 3, and 4."
+                            ],
+                            "mappings": []
+                        },
+                        "Negative": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [
+                                "ConsortiumNote: patients with negative MYCN amplification are in strata 5, 6, 7, and 8."
+                            ],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [
+                                "ConsortiumNote: patients with uncertain MYCN amplification are in strata 9, 10, 11, and 12."
+                            ],
+                            "mappings": []
+                        }
+                    }
+                },
+                "GENE1": {
+                    "type": "String",
+                    "tier": "n/a",
+                    "description": "Gene 1",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "VARIANT_TYPE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "Variant Type",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Translocation": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Inversion": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Mutation": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Single Nucleotide Variant": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Copy Number Alteration": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Rearrangement": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Deletion": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Amplification": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Gain": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Other": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Reported": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                }
+            }
+        },
+        "events": {
+            "secondary_malignant_neoplasm": {
+                "AGE_AT_SMN": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "Age in Days at Secondary Malignant Neoplasm",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "DISEASE_PHASE": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "Disease Phase",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Relapse/Progression": {
+                            "description": "Either the return of the disease or the progression of the disease.",
+                            "codes": [
+                                "ncit:C174991"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Refractory": {
+                            "description": "Not responding to treatment.",
+                            "codes": [
+                                "ncit:C38014"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "DISEASE_PHASE_NUMBER": {
+                    "type": "Number",
+                    "tier": "n/a",
+                    "description": "Disease Phase Number",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "SMN": {
+                    "type": "Code",
+                    "tier": "n/a",
+                    "description": "Secondary Malignancy",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "No": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Yes": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Reported": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                }
+            },
+            "subject_response": {
+                "HONEST_BROKER_SUBJECT_ID": {
+                    "type": "String",
+                    "tier": "",
+                    "description": "The identifier assigned to the subject by the honest broker--an individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a \"re-identification code\"), however the information linking this re-identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.",
+                    "codes": [
+                        "ncit:C168949"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "DISEASE_PHASE": {
+                    "type": "Code",
+                    "tier": "",
+                    "description": "The phase of the cancer treatment process during which relevant observations were recorded. This variable is used across domains to frame the timing of these longitudinal observations and reduce the number of redundant variables needed to report similar concepts (see \"Disease Phase Timing and Course Table\" in the documentation for additional guidance).",
+                    "codes": [
+                        "ncit:C168878"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Refractory": {
+                            "description": "Not responding to treatment.",
+                            "codes": [
+                                "ncit:C38014"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Relapse/Progression": {
+                            "description": "Either the return of the disease or the progression of the disease.",
+                            "codes": [
+                                "ncit:C174991"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "DISEASE_PHASE_NUMBER": {
+                    "type": "Number",
+                    "tier": "",
+                    "description": "The number of the disease phase.",
+                    "codes": [
+                        "ncit:C173258"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "CYCLE_NUMBER": {
+                    "type": "Number",
+                    "tier": "",
+                    "description": "Cycle Number",
+                    "codes": [
+                        "ncit:C166208"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": []
+                },
+                "RESPONSE_CATEGORY": {
+                    "type": "Code",
+                    "tier": "",
+                    "description": "The category used to assess the response to therapy.",
+                    "codes": [
+                        "ncit:C173306"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "Overall Response": {
+                            "description": "An assessment of the overall response of the disease to the therapy.",
+                            "codes": [
+                                "ncit:C96613"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "RESPONSE": {
+                    "type": "Code",
+                    "tier": "",
+                    "description": "A standard way to measure how well a cancer patient responds to treatment.",
+                    "codes": [
+                        "ncit:C50995"
+                    ],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "INRC Brodeur 1993, CR": {
+                            "description": "Complete Response: No tumor. (primary tumor); No tumor, catecholamines normal. (metastatic sites). From the \"International Neuroblastoma Response Criteria\" (Brodeur GM, Seeger RC, Barrett A, et al. International criteria for diagnosis, staging, and response to treatment in patients with neuroblastoma. J Clin Oncol. 1988;6(12):1874-1881. doi:10.1200/JCO.1988.6.12.1874)",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "INRC Brodeur 1993, VGPR": {
+                            "description": "Very Good Partial Response: Decreased by 90%-99%. (primary tumor); No tumor, catecholamines normal, residual 99Tc bone changes allowed. (metastatic sites). From the \"International Neuroblastoma Response Criteria\" (Brodeur GM, Seeger RC, Barrett A, et al. International criteria for diagnosis, staging, and response to treatment in patients with neuroblastoma. J Clin Oncol. 1988;6(12):1874-1881. doi:10.1200/JCO.1988.6.12.1874)",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "INRC Brodeur 1993, PR": {
+                            "description": "Partial Response: Decreased by >50%. (primary tumor); All measurable sites decreased by >50%. Bones and bone marrow: number of positive bone sites decreased by >50%, no more than 1 positive bone marrow site allowed. (metastatic sites). From the \"International Neuroblastoma Response Criteria\" (Brodeur GM, Seeger RC, Barrett A, et al. International criteria for diagnosis, staging, and response to treatment in patients with neuroblastoma. J Clin Oncol. 1988;6(12):1874-1881. doi:10.1200/JCO.1988.6.12.1874)",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "INRC Brodeur 1993, MR": {
+                            "description": "Mixed Response: No new lesions, >50% reduction of any measurable lesion (primary or metastases) with <50% reduction in any other, <25% increase in any existing lesion. From the \"International Neuroblastoma Response Criteria\" (Brodeur GM, Seeger RC, Barrett A, et al. International criteria for diagnosis, staging, and response to treatment in patients with neuroblastoma. J Clin Oncol. 1988;6(12):1874-1881. doi:10.1200/JCO.1988.6.12.1874)",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "INRC Brodeur 1993, NR": {
+                            "description": "No Response: No new lesions, <50% reduction but <25% increase in any existing lesion. From the \"International Neuroblastoma Response Criteria\" (Brodeur GM, Seeger RC, Barrett A, et al. International criteria for diagnosis, staging, and response to treatment in patients with neuroblastoma. J Clin Oncol. 1988;6(12):1874-1881. doi:10.1200/JCO.1988.6.12.1874)",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "INRC Brodeur 1993, PD": {
+                            "description": "Progressive Disease: Any new lesion, increase of any measurable lesion by >25%, previous negative marrow positive for tumor. From the \"International Neuroblastoma Response Criteria\" (Brodeur GM, Seeger RC, Barrett A, et al. International criteria for diagnosis, staging, and response to treatment in patients with neuroblastoma. J Clin Oncol. 1988;6(12):1874-1881. doi:10.1200/JCO.1988.6.12.1874)",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": [
+                                "New PD"
+                            ]
+                        },
+                        "Not Evaluable": {
+                            "description": "",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Done": {
+                            "description": "Indicates a task, process or examination that has either not been initiated or not been completed.",
+                            "codes": [
+                                "ncit:C49484"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Unknown": {
+                            "description": "Reported as unknown by the data contributor.",
+                            "codes": [
+                                "ncit:C17998"
+                            ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Not Involved": {
+                            "description": "The indicated response category was not involved in the response assessment.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "MIBG_SCORE_TYPE": {
+                    "type": "Code",
+                    "tier": "",
+                    "description": "The type of response score provided in RESPONSE_MEASUREMENT_NUMERIC",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": [],
+                    "permissible_values": {
+                        "MIBG SIOPEN Score": {
+                            "description": "The semi-quantitative SIOPEN score evaluates skeletal meta-iodobenzylguanidine (mIBG) uptake on a 0\u20136 scale in 12 anatomical regions.",
+                            "codes": [],
+                            "implementation_notes": [],
+                            "mappings": []
+                        }
+                    }
+                },
+                "MIBG_SCORE": {
+                    "type": "Number",
+                    "tier": "",
+                    "description": "The numeric response of the MIBG score.",
+                    "codes": [],
+                    "implementation_notes": [],
+                    "mappings": []
+                }
+            }
+        }
+    }
+}
