@@ -1,32 +1,32 @@
-INFO	Title	Neuroblastoma (NBL) Data Dictionary								
-INFO	Name	nbl_v1.3								
-INFO	Release Notes									
-INFO	Parent Data Model	pcdc_v1.8								
-INFO	License	Creative Commons Attribution-NonCommercial 4.0 International License (https://creativecommons.org/licenses/by-nc/4.0/)								
-INFO	D4CG Data Modeling Wiki	https://docs.pedscommons.org/								
-INFO	Disease Consortium Information	https://commons.cri.uchicago.edu/pcdc/								
-INFO	Description	The NBL data dictionary is a consensus data schema built by an international group of pediatric neuroblastoma experts and maintained by Data for the Common Good (D4CG) at the University of Chicago in collaboration with the International Neuroblastoma Risk Group (INRG). It is based on the collective requirements of its contributors.								
-INFO	Total Variables	77								
-										
+INFO	Title	Neuroblastoma (NBL) Data Dictionary
+INFO	Name	nbl_v1.3
+INFO	Release Notes	https://github.com/chicagopcdc/d4cg-modeling/tree/main/pcdc/nbl/nbl_v1.3									
+INFO	Parent Data Model	pcdc_v1.8
+INFO	License	Creative Commons Attribution-NonCommercial 4.0 International License (https://creativecommons.org/licenses/by-nc/4.0/)
+INFO	D4CG Data Modeling Wiki	https://docs.pedscommons.org/
+INFO	Disease Consortium Information	https://commons.cri.uchicago.edu/pcdc/
+INFO	Description	The NBL data dictionary is a consensus data schema built by an international group of pediatric neuroblastoma experts and maintained by Data for the Common Good (D4CG) at the University of Chicago in collaboration with the International Neuroblastoma Risk Group (INRG). It is based on the collective requirements of its contributors.
+INFO	Total Variables	77
+
 RowType	VariableName	DataType	Tier	VariableDescription	VariableCode	PermissibleValue	ValueDescription	ValueCode	Implementation Notes	Mappings
-										
-DD	Protocol									
-TD	Subject Characteristics									
-TG	One row per subject per study									
-VD	HONEST_BROKER_SUBJECT_ID	String		Honest Broker Subject ID		_undefined_	_undefined_	_undefined_		
-VD	DATA_CONTRIBUTOR_ID	Code		Data Contributor ID		_undefined_	_undefined_	_undefined_		
-PD						COG				
-VD	STUDY_ID	Code		Study Identifier		_undefined_	_undefined_	_undefined_		
-PD						ANBL1221				
-VD	CENSOR_STATUS	Code		Censor Status		_undefined_	_undefined_	_undefined_		
-PD						Subject is censored (i.e. has had no events(s))	The status of a participant or subject in a study whose event or outcome of interest has not yet occurred or has not been observed within the study's follow-up period. Censoring occurs when the event of interest has not happened to a participant by the end of the study or when they are lost to follow-up before the event occurs.	ncit:C118962		
-PD						Subject has had one or more events	The patient has experienced the event of interest within the study period and has reached the endpoint being evaluated, such as disease progression, relapse, recurrence, or death, and their time to event can be accurately recorded and analyzed.			
+
+DD	Protocol
+TD	Subject Characteristics
+TG	One row per subject per study
+VD	HONEST_BROKER_SUBJECT_ID	String		Honest Broker Subject ID		_undefined_	_undefined_	_undefined_
+VD	DATA_CONTRIBUTOR_ID	Code		Data Contributor ID		_undefined_	_undefined_	_undefined_
+PD						COG
+VD	STUDY_ID	Code		Study Identifier		_undefined_	_undefined_	_undefined_
+PD						ANBL1221
+VD	CENSOR_STATUS	Code		Censor Status		_undefined_	_undefined_	_undefined_
+PD						Subject is censored (i.e. has had no events(s))	The status of a participant or subject in a study whose event or outcome of interest has not yet occurred or has not been observed within the study's follow-up period. Censoring occurs when the event of interest has not happened to a participant by the end of the study or when they are lost to follow-up before the event occurs.	ncit:C118962
+PD						Subject has had one or more events	The patient has experienced the event of interest within the study period and has reached the endpoint being evaluated, such as disease progression, relapse, recurrence, or death, and their time to event can be accurately recorded and analyzed.
 VD	AGE_AT_ENROLLMENT	Number		Age of subject (in days) when the subject enrolled in the study.	ncit:C168843	_undefined_	_undefined_	_undefined_		New VD
-VD	AGE_AT_CENSOR_STATUS	Number		The subject's age (in days) at the time of censor status recording.		_undefined_	_undefined_	_undefined_		
-VD	TREATMENT_ARM	Code		Assigned Treatment Arm by Intention-To-Treat		_undefined_	_undefined_	_undefined_	D4CGNote: This will be an array, with a stratum + treatment arm for each patient	
-PD						Regimen A	Irinotecan and Temozolomide and Temsirolimus			
-PD						Assigned to Regimen B				
-PD						Randomized to Regimen B				
+VD	AGE_AT_CENSOR_STATUS	Number		The subject's age (in days) at the time of censor status recording.		_undefined_	_undefined_	_undefined_
+VD	TREATMENT_ARM	Code		Assigned Treatment Arm by Intention-To-Treat		_undefined_	_undefined_	_undefined_	D4CGNote: This will be an array, with a stratum + treatment arm for each patient
+PD						Regimen A	Irinotecan and Temozolomide and Temsirolimus
+PD						Assigned to Regimen B
+PD						Randomized to Regimen B
 PD						Stratum 1	Patients whose disease is measurable with conventional CT and/or MRI, no prior anti-GD2 therapy; MYCN amplified tumor			New PD
 PD						Stratum 2	Patients whose disease is detected by abnormal uptake at >= 1 site on MIBG scan, no prior anti-GD2 therapy; MYCN amplified tumor. Stratum 2 patients may not have measurable disease on CT and/or MRI.			New PD
 PD						Stratum 3	Patients whose disease is measurable with conventional CT and/or MRI, with prior anti-GD2 therapy; MYCN amplified tumor			New PD
@@ -42,11 +42,11 @@ PD						Stratum 12	Patients whose disease is detected by abnormal uptake at >= 1
 VD	DISEASE_STATE	Code		The state of disease by CT and/or MRI at study enrollment.		_undefined_	_undefined_	_undefined_		New VD
 PD						Measurable				New PD
 PD						Evaluable				New PD
-										
-										
-DD	Protocol									
+
+
+DD	Protocol
 TD	Off Protocol Therapy/Study									New TD
-TG	Refer to each data dictionary for specific table implementation guidance									
+TG	Refer to each data dictionary for specific table implementation guidance
 VD	AGE_OFF	Number		Age of subject (in days) when subject was off therapy or study.	ncit:C172678	_undefined_	_undefined_	_undefined_		New VD
 VD	DISEASE_PHASE	Code		The stage or period of an individual's disease.	ncit:C168878	_undefined_	_undefined_	_undefined_		New VD
 PD						Relapse/Progression	Either the return of the disease or the progression of the disease.	ncit:C174991		New PD
@@ -72,238 +72,238 @@ PD						No	The non-affirmative response to a question.	ncit:C49487		New PD
 PD						Yes	The affirmative response to a question.	ncit:C49488		New PD
 PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998		New PD
 PD						Not Reported	Not provided or available.	ncit:C43234		New PD
-										
-										
-DD	Protocol									
-TD	Disease Phase Timing									
-TG	One row per subject per disease phase									
-VD	HONEST_BROKER_SUBJECT_ID	String		The identifier assigned to the subject by the honest broker--an individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re-identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_		
-VD	DISEASE_PHASE	Code		The phase of the cancer treatment process during which relevant observations were recorded. This variable is used across domains to frame the timing of these longitudinal observations and reduce the number of redundant variables needed to report similar concepts (see "Disease Phase Timing and Course Table" in the documentation for additional guidance).	ncit:C168878	_undefined_	_undefined_	_undefined_		
-PD						Relapse/Progression	Either the return of the disease or the progression of the disease.	ncit:C174991		
-PD						Refractory	Not responding to treatment.	ncit:C38014		
-VD	DISEASE_PHASE_NUMBER	Number		The number of the disease phase.	ncit:C173258	_undefined_	_undefined_	_undefined_		
-VD	AGE_AT_DISEASE_PHASE	Number		Age of subject (in days) at the end of the treatment course.	ncit:C168851	_undefined_	_undefined_	_undefined_		
-VD	YEAR_AT_DISEASE_PHASE	Number		Age of subject (in days) at the disease phase.	ncit:C168972	_undefined_	_undefined_	_undefined_		
-										
-										
-DD	Protocol									
-TD	Course Timing									
-TG	One row per subject per course or cycle									
-VD	HONEST_BROKER_SUBJECT_ID	String		The identifier assigned to the subject by the honest broker--an individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re-identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_		
-VD	CYCLE_NUMBER	Number		Cycle Number	ncit:C166208	_undefined_	_undefined_	_undefined_		
-VD	AGE_AT_CYCLE_START	Number		Age in Days at Cycle Start		_undefined_	_undefined_	_undefined_		
-VD	AGE_AT_CYCLE_END	Number		Age in Days at Cycle End		_undefined_	_undefined_	_undefined_		
-										
-										
-DD	Demographics									
-TD	Demographics									
-TG	One row per subject									
-VD	HONEST_BROKER_SUBJECT_ID	String		The identifier assigned to the subject by the honest broker--an individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re-identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_		
-VD	SEX	Code		Biological Sex		_undefined_	_undefined_	_undefined_		
-PD						Male				
-PD						Female				
-PD						Unknown				
-PD						Not Reported				
-VD	RACE	Code		Race		_undefined_	_undefined_	_undefined_		
-PD						American Indian or Alaska Native				
-PD						Asian				
-PD						Black or African American				
-PD						Multiracial				
-PD						Native Hawaiian or Other Pacific Islander				
-PD						White				
-PD						Unknown				
-PD						Not Reported				
-VD	ETHNICITY	Code		Ethnicity		_undefined_	_undefined_	_undefined_		
-PD						Hispanic or Latino				
-PD						Not Hispanic or Latino				
-PD						Unknown				
-PD						Not Reported				
-										
-										
-DD	Demographics									
-TD	Survival Characteristics									
-TG	One row per subject per cause of death, per treatment type, per cause of death detail									
-VD	HONEST_BROKER_SUBJECT_ID	String		The identifier assigned to the subject by the honest broker--an individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re-identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_		
-VD	AGE_AT_LKSS	Number		The age (in days) when the last known survival status of the subject was captured.		_undefined_	_undefined_	_undefined_		
-VD	DISEASE_PHASE	Code		The phase of the cancer treatment process during which relevant observations were recorded. This variable is used across domains to frame the timing of these longitudinal observations and reduce the number of redundant variables needed to report similar concepts (see "Disease Phase Timing and Course Table" in the documentation for additional guidance).	ncit:C168878	_undefined_	_undefined_	_undefined_		
-PD						Relapse/Progression	Either the return of the disease or the progression of the disease.	ncit:C174991		
-PD						Refractory	Not responding to treatment.	ncit:C38014		
-VD	DISEASE_PHASE_NUMBER	Number		The number of the disease phase.	ncit:C173258	_undefined_	_undefined_	_undefined_		
-VD	LKSS	Code		The last known survival status of the subject.	ncit:C168931	_undefined_	_undefined_	_undefined_		
-PD						Alive				
-PD						Dead				
-VD	CAUSE_OF_DEATH	Code		The circumstance or condition that results in the death of a living being.	ncit:C81239	_undefined_	_undefined_	_undefined_		
-PD						Disease Progression				
-PD						Treatment-Related Mortality				
-PD						Other				
-										
-										
-DD	Disease Attributes									
-TD	Tumor Assessment									
-TG	One row per subject per tumor assessment per tumor site									
-VD	HONEST_BROKER_SUBJECT_ID	String		The identifier assigned to the subject by the honest broker--an individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re-identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_		
-VD	AGE_AT_TUMOR_ASSESSMENT	Number	n/a	Age in Days at Tumor Assessment		_undefined_	_undefined_	_undefined_		
-VD	DISEASE_PHASE	Code	n/a	The phase of the cancer treatment process during which relevant observations were recorded. This variable is used across domains to frame the timing of these longitudinal observations and reduce the number of redundant variables needed to report similar concepts (see "Disease Phase Timing and Course Table" in the documentation for additional guidance).	ncit:C168878	_undefined_	_undefined_	_undefined_		
-PD						Relapse/Progression	Either the return of the disease or the progression of the disease.	ncit:C174991		
-PD						Refractory	Not responding to treatment.	ncit:C38014		
-VD	DISEASE_PHASE_NUMBER	Number	n/a	The number of the disease phase.	ncit:C173258	_undefined_	_undefined_	_undefined_		
+
+
+DD	Protocol
+TD	Disease Phase Timing
+TG	One row per subject per disease phase
+VD	HONEST_BROKER_SUBJECT_ID	String		The identifier assigned to the subject by the honest broker--an individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re-identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_
+VD	DISEASE_PHASE	Code		The phase of the cancer treatment process during which relevant observations were recorded. This variable is used across domains to frame the timing of these longitudinal observations and reduce the number of redundant variables needed to report similar concepts (see "Disease Phase Timing and Course Table" in the documentation for additional guidance).	ncit:C168878	_undefined_	_undefined_	_undefined_
+PD						Relapse/Progression	Either the return of the disease or the progression of the disease.	ncit:C174991
+PD						Refractory	Not responding to treatment.	ncit:C38014
+VD	DISEASE_PHASE_NUMBER	Number		The number of the disease phase.	ncit:C173258	_undefined_	_undefined_	_undefined_
+VD	AGE_AT_DISEASE_PHASE	Number		Age of subject (in days) at the end of the treatment course.	ncit:C168851	_undefined_	_undefined_	_undefined_
+VD	YEAR_AT_DISEASE_PHASE	Number		Age of subject (in days) at the disease phase.	ncit:C168972	_undefined_	_undefined_	_undefined_
+
+
+DD	Protocol
+TD	Course Timing
+TG	One row per subject per course or cycle
+VD	HONEST_BROKER_SUBJECT_ID	String		The identifier assigned to the subject by the honest broker--an individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re-identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_
+VD	CYCLE_NUMBER	Number		Cycle Number	ncit:C166208	_undefined_	_undefined_	_undefined_
+VD	AGE_AT_CYCLE_START	Number		Age in Days at Cycle Start		_undefined_	_undefined_	_undefined_
+VD	AGE_AT_CYCLE_END	Number		Age in Days at Cycle End		_undefined_	_undefined_	_undefined_
+
+
+DD	Demographics
+TD	Demographics
+TG	One row per subject
+VD	HONEST_BROKER_SUBJECT_ID	String		The identifier assigned to the subject by the honest broker--an individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re-identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_
+VD	SEX	Code		Biological Sex		_undefined_	_undefined_	_undefined_
+PD						Male
+PD						Female
+PD						Unknown
+PD						Not Reported
+VD	RACE	Code		Race		_undefined_	_undefined_	_undefined_
+PD						American Indian or Alaska Native
+PD						Asian
+PD						Black or African American
+PD						Multiracial
+PD						Native Hawaiian or Other Pacific Islander
+PD						White
+PD						Unknown
+PD						Not Reported
+VD	ETHNICITY	Code		Ethnicity		_undefined_	_undefined_	_undefined_
+PD						Hispanic or Latino
+PD						Not Hispanic or Latino
+PD						Unknown
+PD						Not Reported
+
+
+DD	Demographics
+TD	Survival Characteristics
+TG	One row per subject per cause of death, per treatment type, per cause of death detail
+VD	HONEST_BROKER_SUBJECT_ID	String		The identifier assigned to the subject by the honest broker--an individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re-identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_
+VD	AGE_AT_LKSS	Number		The age (in days) when the last known survival status of the subject was captured.		_undefined_	_undefined_	_undefined_
+VD	DISEASE_PHASE	Code		The phase of the cancer treatment process during which relevant observations were recorded. This variable is used across domains to frame the timing of these longitudinal observations and reduce the number of redundant variables needed to report similar concepts (see "Disease Phase Timing and Course Table" in the documentation for additional guidance).	ncit:C168878	_undefined_	_undefined_	_undefined_
+PD						Relapse/Progression	Either the return of the disease or the progression of the disease.	ncit:C174991
+PD						Refractory	Not responding to treatment.	ncit:C38014
+VD	DISEASE_PHASE_NUMBER	Number		The number of the disease phase.	ncit:C173258	_undefined_	_undefined_	_undefined_
+VD	LKSS	Code		The last known survival status of the subject.	ncit:C168931	_undefined_	_undefined_	_undefined_
+PD						Alive
+PD						Dead
+VD	CAUSE_OF_DEATH	Code		The circumstance or condition that results in the death of a living being.	ncit:C81239	_undefined_	_undefined_	_undefined_
+PD						Disease Progression
+PD						Treatment-Related Mortality
+PD						Other
+
+
+DD	Disease Attributes
+TD	Tumor Assessment
+TG	One row per subject per tumor assessment per tumor site
+VD	HONEST_BROKER_SUBJECT_ID	String		The identifier assigned to the subject by the honest broker--an individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re-identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_
+VD	AGE_AT_TUMOR_ASSESSMENT	Number	n/a	Age in Days at Tumor Assessment		_undefined_	_undefined_	_undefined_
+VD	DISEASE_PHASE	Code	n/a	The phase of the cancer treatment process during which relevant observations were recorded. This variable is used across domains to frame the timing of these longitudinal observations and reduce the number of redundant variables needed to report similar concepts (see "Disease Phase Timing and Course Table" in the documentation for additional guidance).	ncit:C168878	_undefined_	_undefined_	_undefined_
+PD						Relapse/Progression	Either the return of the disease or the progression of the disease.	ncit:C174991
+PD						Refractory	Not responding to treatment.	ncit:C38014
+VD	DISEASE_PHASE_NUMBER	Number	n/a	The number of the disease phase.	ncit:C173258	_undefined_	_undefined_	_undefined_
 VD	DETECTION_METHOD	Enum	The method used to detect the extent of the disease involvement.	ncit:C173262|Themethodusedtodetecttheextentofthediseaseinvolvement.	_undefined_	_undefined_	_undefined_	_undefined_		New VD
 PD						CT				New PD
 PD						MRI				New PD
-PD						Other	Different than the one(s) previously specified or mentioned.	ncit:C17649		
+PD						Other	Different than the one(s) previously specified or mentioned.	ncit:C17649
 VD	DETECTION_METHOD_OTHER	String	n/a	Specify the "Other" detection method.		_undefined_	_undefined_	_undefined_		New VD
-VD	TUMOR_STATE	Code	n/a	The classification of a tumor based primarily on histopathological characteristics.	ncit:C174459	_undefined_	_undefined_	_undefined_		
-PD						Present	Being or existing in a specified place or at the specified time.	ncit:C25626		
-PD						Absent	Not existing in a specified place at a specified time.	ncit:C48190		
-PD						Unknown	Not known, observed, recorded; or reported as unknown by the data contributor.	ncit:C17998		
-VD	TUMOR_CLASSIFICATION	Code	n/a	A condition or state of a tumor at a particular time and a particular tumor site.	ncit:C96643	_undefined_	_undefined_	_undefined_		
-PD						Primary	A tumor at the original site of origin.	ncit:C8509		
-VD	TUMOR_SITE	Code		The anatomic site of the tumor.	ncit:C157120	_undefined_	_undefined_	_undefined_	ConsortiumNote: Map ICD-O codes in source data to these sites	
-PD						Central Nervous System	The part of the nervous system that consists of the brain, spinal cord, and meninges.	ncit:C12438		
-PD						Distant Lymph Nodes	A lymph node located distant to the anatomic site of interest.	ncit:C106042		
-PD						Liver	A triangular-shaped organ located under the diaphragm in the right hypochondrium. It is the largest internal organ of the body, weighting up to 2 kg. Metabolism and bile secretion are its main functions. It is composed of cells which have the ability to regenerate.	ncit:C12392		
-PD						Lung	One of a pair of viscera occupying the pulmonary cavities of the thorax, the organs of respiration in which aeration of the blood takes place. As a rule, the right lung is slightly larger than the left and is divided into three lobes (an upper, a middle, and a lower or basal), while the left has two lobes (an upper and a lower or basal). Each lung is irregularly conical in shape, presenting a blunt upper extremity (the apex), a concave base following the curve of the diaphragm, an outer convex surface (costal surface), an inner or mediastinal surface (mediastinal surface), a thin and sharp anterior border, and a thick and rounded posterior border.	ncit:C12468		
-PD						Adrenal Gland	A flattened, roughly triangular body resting upon the upper end of each kidney; it is one of the ductless glands furnishing internal secretions (epinephrine and norepinephrine from the medulla and steroid hormones from the cortex).	ncit:C12666		
-PD						Abdomen	The cavity located between the lungs and pelvis. It contains the lower esophagus, stomach, pancreas, intestines, liver, gallbladder and spleen.	ncit:C12664		
-PD						Neck	The region that connects the head to the rest of the body.	ncit:C13063		
-PD						Thorax	The division of the body lying between the neck and the abdomen.	ncit:Cncit:C12799		
-PD						Pelvis	The bony, basin-shaped structure formed by the hipbones and the base of the backbone supporting the lower limbs in humans.	ncit:C12767		
-PD						Bone Marrow	The tissue occupying the spaces of bone. It consists of blood vessel sinuses and a network of hematopoietic cells which give rise to the red cells, white cells, and megakaryocytes.	ncit:C12431		
-PD						Bone	The structural organ comprised of specialized connective tissue that forms the skeletal components of the body.	ncit:C12366		
-PD						Skin	An organ that constitutes the external surface of the body. It consists of the epidermis, dermis, and skin appendages.	ncit:C12470		
-										
-										
-DD	Disease Attributes									
-TD	Staging									
-TG	One row per subject per staging assessment									
-VD	HONEST_BROKER_SUBJECT_ID	String		The identifier assigned to the subject by the honest broker--an individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re-identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_		
-VD	AGE_AT_STAGING	Number		Age in Days of Staging Assessment		_undefined_	_undefined_	_undefined_		
-VD	DISEASE_PHASE	Code		The phase of the cancer treatment process during which relevant observations were recorded. This variable is used across domains to frame the timing of these longitudinal observations and reduce the number of redundant variables needed to report similar concepts (see "Disease Phase Timing and Course Table" in the documentation for additional guidance).	ncit:C168878	_undefined_	_undefined_	_undefined_		
-PD						Relapse/Progression	Either the return of the disease or the progression of the disease.	ncit:C174991		
-PD						Refractory	Not responding to treatment.	ncit:C38014		
-VD	DISEASE_PHASE_NUMBER	Number		Disease Phase Number		_undefined_	_undefined_	_undefined_		
-VD	STAGE	Code		Stage		_undefined_	_undefined_	_undefined_		
-PD						INSS, Stage 1	A relatively early stage of cancer that is usually small and contained within the organ it started in, and hasn't spread to other parts of the body			
-PD						INSS, Stage 2a				
-PD						INSS, Stage 2b				
-PD						INSS, Stage 3				
-PD						INSS, Stage 4				
-PD						INSS, Stage 4s				
-PD						Unknown				
-PD						Not Reported				
-										
-										
-DD	Disease Attributes									
-TD	Histology									
-TG	One row per subject per histologic assessment									
-VD	HONEST_BROKER_SUBJECT_ID	String		The identifier assigned to the subject by the honest broker--an individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re-identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_		
-VD	AGE_AT_HIST_ASSESSMENT	Number	n/a	Age in Days of Histology Assessment		_undefined_	_undefined_	_undefined_		
-VD	DISEASE_PHASE	Code	n/a	Disease Phase		_undefined_	_undefined_	_undefined_		
-PD						Relapse/Progression	Either the return of the disease or the progression of the disease.	ncit:C174991		
-PD						Refractory	Not responding to treatment.	ncit:C38014		
-VD	DISEASE_PHASE_NUMBER	Number	n/a	Disease Phase Number		_undefined_	_undefined_	_undefined_		
-VD	HISTOLOGY	Code	n/a	The study of the structure of the cells and their arrangement to constitute tissues and, finally, the association among these to form organs.  In pathology, the microscopic process of identifying normal and abnormal morphologic characteristics in tissues, by employing various cytochemical and immunocytochemical stains.		_undefined_	_undefined_	_undefined_		
-PD						Neuroblastoma (Schwannian Stroma-Poor)				
-PD						Ganglioneuroblastoma, Intermixed (Schwannian Stroma-Rich)				
-PD						Ganglioneuroma (Schwannian Stroma-Dominant), Maturing Subtype				
-PD						Ganglioneuroblastoma, Nodular (Composite)				
-VD	HISTOLOGY_GRADE	Code	n/a	Histology Grade	ncit:C18000	_undefined_	_undefined_	_undefined_		
-PD						Undifferentiated or Poorly Differentiated				
-PD						Differentiating				
-PD						Unknown				
-PD						Not Reported				
-VD	HISTOLOGY_INPC	Code	n/a	Revised INPC Prognostic Group (2003)		_undefined_	_undefined_	_undefined_		
-PD						Favorable				
-PD						Unfavorable				
-PD						Unknown				
-PD						Not Reported				
-										
-										
-DD	Disease Attributes									
-TD	Disease Characteristics									
-TG	One row per subject per disease characteristic									
-VD	HONEST_BROKER_SUBJECT_ID	String		The identifier assigned to the subject by the honest broker--an individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re-identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_		
-VD	DISEASE_PHASE	Code		The phase of the cancer treatment process during which relevant observations were recorded. This variable is used across domains to frame the timing of these longitudinal observations and reduce the number of redundant variables needed to report similar concepts (see "Disease Phase Timing and Course Table" in the documentation for additional guidance).	ncit:C168878	_undefined_	_undefined_	_undefined_		
-PD						Relapse/Progression	Either the return of the disease or the progression of the disease.	ncit:C174991		
-PD						Refractory	Not responding to treatment.	ncit:C38014		
-VD	DISEASE_PHASE_NUMBER	Number		The number of the disease phase.	ncit:C173258	_undefined_	_undefined_	_undefined_		
-VD	INITIAL_TREATMENT_CATEGORY	Code		The category of initial treatment that the patient receive for their disease.		_undefined_	_undefined_	_undefined_		
-PD						None (observation)				
-PD						Surgery alone				
-PD						Conventional-dose chemotherapy (2-8 cycles) plus surgery				
-PD						Intensive multi-modality therapy: specific type unknown			ConsortiumNote: select this value for patients in strata 1, 2, 5, 6, 9, and 10.	
-PD						Intensive multi-modality therapy: no stem cell or bone marrow transplant				
-PD						Intensive multi-modality therapy: plus stem cell or bone marrow transplant				
-PD						Intensive multi-modality therapy: plus stem cell or bone marrow transplant and anti-GD2 antibody			ConsortiumNote: select this value for patients in strata 3, 4, 7, 8, 11, and 12.	
-PD						Unknown				
-										
-										
-DD	Testing									
-TD	Molecular Analysis									
-TG	One row per subject per molecular analysis method per molecular abnormality									
-VD	AGE_AT_MOLECULAR_ANALYSIS	Number	n/a	Age in Days at Molecular Analysis		_undefined_	_undefined_	_undefined_		
-VD	DISEASE_PHASE	Code	n/a	Disease Phase		_undefined_	_undefined_	_undefined_		
-PD						Relapse/Progression	Either the return of the disease or the progression of the disease.	ncit:C174991		
-PD						Refractory	Not responding to treatment.	ncit:C38014		
-VD	DISEASE_PHASE_NUMBER	Number	n/a	Disease Phase Number		_undefined_	_undefined_	_undefined_		
-VD	MOLECULAR_ABNORMALITY	Code	n/a	Molecular Abnormality		_undefined_	_undefined_	_undefined_		
-PD						MYCN Amplification				
-VD	MOLECULAR_ABNORMALITY_RESULT	Code	n/a	Molecular Abnormality Result		_undefined_	_undefined_	_undefined_		
-PD						Positive			ConsortiumNote: patients with positive MYCN amplification are in strata 1, 2, 3, and 4.	
-PD						Negative			ConsortiumNote: patients with negative MYCN amplification are in strata 5, 6, 7, and 8.	
-PD						Unknown			ConsortiumNote: patients with uncertain MYCN amplification are in strata 9, 10, 11, and 12.	
-VD	GENE1	String	n/a	Gene 1		_undefined_	_undefined_	_undefined_		
-VD	VARIANT_TYPE	Code	n/a	Variant Type		_undefined_	_undefined_	_undefined_		
-PD						Translocation				
-PD						Inversion				
-PD						Mutation				
-PD						Single Nucleotide Variant				
-PD						Copy Number Alteration				
-PD						Rearrangement				
-PD						Deletion				
-PD						Amplification				
-PD						Gain				
-PD						Other				
-PD						Unknown				
-PD						Not Reported				
-										
-										
-DD	Events									
-TD	Secondary Malignant Neoplasm									
-TG	One row per subject per secondary malignancy									
-VD	AGE_AT_SMN	Number	n/a	Age in Days at Secondary Malignant Neoplasm		_undefined_	_undefined_	_undefined_		
-VD	DISEASE_PHASE	Code	n/a	Disease Phase		_undefined_	_undefined_	_undefined_		
-PD						Relapse/Progression	Either the return of the disease or the progression of the disease.	ncit:C174991		
-PD						Refractory	Not responding to treatment.	ncit:C38014		
-VD	DISEASE_PHASE_NUMBER	Number	n/a	Disease Phase Number		_undefined_	_undefined_	_undefined_		
-VD	SMN	Code	n/a	Secondary Malignancy		_undefined_	_undefined_	_undefined_		
-PD						No				
-PD						Yes				
-PD						Unknown				
-PD						Not Reported				
-										
-										
-TD	Subject Response									
-TG	One row per subject per response assessment									
-VD	HONEST_BROKER_SUBJECT_ID	String		The identifier assigned to the subject by the honest broker--an individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re-identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_		
-VD	DISEASE_PHASE	Code		The phase of the cancer treatment process during which relevant observations were recorded. This variable is used across domains to frame the timing of these longitudinal observations and reduce the number of redundant variables needed to report similar concepts (see "Disease Phase Timing and Course Table" in the documentation for additional guidance).	ncit:C168878	_undefined_	_undefined_	_undefined_		
-PD						Refractory	Not responding to treatment.	ncit:C38014		
-PD						Relapse/Progression	Either the return of the disease or the progression of the disease.	ncit:C174991		
-VD	DISEASE_PHASE_NUMBER	Number		The number of the disease phase.	ncit:C173258	_undefined_	_undefined_	_undefined_		
-VD	CYCLE_NUMBER	Number		Cycle Number	ncit:C166208	_undefined_	_undefined_	_undefined_		
-VD	RESPONSE_CATEGORY	Code		The category used to assess the response to therapy.	ncit:C173306	_undefined_	_undefined_	_undefined_		
-PD						Overall Response	An assessment of the overall response of the disease to the therapy.	ncit:C96613		
-VD	RESPONSE	Code		A standard way to measure how well a cancer patient responds to treatment.	ncit:C50995	_undefined_	_undefined_	_undefined_		
+VD	TUMOR_STATE	Code	n/a	The classification of a tumor based primarily on histopathological characteristics.	ncit:C174459	_undefined_	_undefined_	_undefined_
+PD						Present	Being or existing in a specified place or at the specified time.	ncit:C25626
+PD						Absent	Not existing in a specified place at a specified time.	ncit:C48190
+PD						Unknown	Not known, observed, recorded; or reported as unknown by the data contributor.	ncit:C17998
+VD	TUMOR_CLASSIFICATION	Code	n/a	A condition or state of a tumor at a particular time and a particular tumor site.	ncit:C96643	_undefined_	_undefined_	_undefined_
+PD						Primary	A tumor at the original site of origin.	ncit:C8509
+VD	TUMOR_SITE	Code		The anatomic site of the tumor.	ncit:C157120	_undefined_	_undefined_	_undefined_	ConsortiumNote: Map ICD-O codes in source data to these sites
+PD						Central Nervous System	The part of the nervous system that consists of the brain, spinal cord, and meninges.	ncit:C12438
+PD						Distant Lymph Nodes	A lymph node located distant to the anatomic site of interest.	ncit:C106042
+PD						Liver	A triangular-shaped organ located under the diaphragm in the right hypochondrium. It is the largest internal organ of the body, weighting up to 2 kg. Metabolism and bile secretion are its main functions. It is composed of cells which have the ability to regenerate.	ncit:C12392
+PD						Lung	One of a pair of viscera occupying the pulmonary cavities of the thorax, the organs of respiration in which aeration of the blood takes place. As a rule, the right lung is slightly larger than the left and is divided into three lobes (an upper, a middle, and a lower or basal), while the left has two lobes (an upper and a lower or basal). Each lung is irregularly conical in shape, presenting a blunt upper extremity (the apex), a concave base following the curve of the diaphragm, an outer convex surface (costal surface), an inner or mediastinal surface (mediastinal surface), a thin and sharp anterior border, and a thick and rounded posterior border.	ncit:C12468
+PD						Adrenal Gland	A flattened, roughly triangular body resting upon the upper end of each kidney; it is one of the ductless glands furnishing internal secretions (epinephrine and norepinephrine from the medulla and steroid hormones from the cortex).	ncit:C12666
+PD						Abdomen	The cavity located between the lungs and pelvis. It contains the lower esophagus, stomach, pancreas, intestines, liver, gallbladder and spleen.	ncit:C12664
+PD						Neck	The region that connects the head to the rest of the body.	ncit:C13063
+PD						Thorax	The division of the body lying between the neck and the abdomen.	ncit:Cncit:C12799
+PD						Pelvis	The bony, basin-shaped structure formed by the hipbones and the base of the backbone supporting the lower limbs in humans.	ncit:C12767
+PD						Bone Marrow	The tissue occupying the spaces of bone. It consists of blood vessel sinuses and a network of hematopoietic cells which give rise to the red cells, white cells, and megakaryocytes.	ncit:C12431
+PD						Bone	The structural organ comprised of specialized connective tissue that forms the skeletal components of the body.	ncit:C12366
+PD						Skin	An organ that constitutes the external surface of the body. It consists of the epidermis, dermis, and skin appendages.	ncit:C12470
+
+
+DD	Disease Attributes
+TD	Staging
+TG	One row per subject per staging assessment
+VD	HONEST_BROKER_SUBJECT_ID	String		The identifier assigned to the subject by the honest broker--an individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re-identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_
+VD	AGE_AT_STAGING	Number		Age in Days of Staging Assessment		_undefined_	_undefined_	_undefined_
+VD	DISEASE_PHASE	Code		The phase of the cancer treatment process during which relevant observations were recorded. This variable is used across domains to frame the timing of these longitudinal observations and reduce the number of redundant variables needed to report similar concepts (see "Disease Phase Timing and Course Table" in the documentation for additional guidance).	ncit:C168878	_undefined_	_undefined_	_undefined_
+PD						Relapse/Progression	Either the return of the disease or the progression of the disease.	ncit:C174991
+PD						Refractory	Not responding to treatment.	ncit:C38014
+VD	DISEASE_PHASE_NUMBER	Number		Disease Phase Number		_undefined_	_undefined_	_undefined_
+VD	STAGE	Code		Stage		_undefined_	_undefined_	_undefined_
+PD						INSS, Stage 1	A relatively early stage of cancer that is usually small and contained within the organ it started in, and hasn't spread to other parts of the body
+PD						INSS, Stage 2a
+PD						INSS, Stage 2b
+PD						INSS, Stage 3
+PD						INSS, Stage 4
+PD						INSS, Stage 4s
+PD						Unknown
+PD						Not Reported
+
+
+DD	Disease Attributes
+TD	Histology
+TG	One row per subject per histologic assessment
+VD	HONEST_BROKER_SUBJECT_ID	String		The identifier assigned to the subject by the honest broker--an individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re-identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_
+VD	AGE_AT_HIST_ASSESSMENT	Number	n/a	Age in Days of Histology Assessment		_undefined_	_undefined_	_undefined_
+VD	DISEASE_PHASE	Code	n/a	Disease Phase		_undefined_	_undefined_	_undefined_
+PD						Relapse/Progression	Either the return of the disease or the progression of the disease.	ncit:C174991
+PD						Refractory	Not responding to treatment.	ncit:C38014
+VD	DISEASE_PHASE_NUMBER	Number	n/a	Disease Phase Number		_undefined_	_undefined_	_undefined_
+VD	HISTOLOGY	Code	n/a	The study of the structure of the cells and their arrangement to constitute tissues and, finally, the association among these to form organs.  In pathology, the microscopic process of identifying normal and abnormal morphologic characteristics in tissues, by employing various cytochemical and immunocytochemical stains.		_undefined_	_undefined_	_undefined_
+PD						Neuroblastoma (Schwannian Stroma-Poor)
+PD						Ganglioneuroblastoma, Intermixed (Schwannian Stroma-Rich)
+PD						Ganglioneuroma (Schwannian Stroma-Dominant), Maturing Subtype
+PD						Ganglioneuroblastoma, Nodular (Composite)
+VD	HISTOLOGY_GRADE	Code	n/a	Histology Grade	ncit:C18000	_undefined_	_undefined_	_undefined_
+PD						Undifferentiated or Poorly Differentiated
+PD						Differentiating
+PD						Unknown
+PD						Not Reported
+VD	HISTOLOGY_INPC	Code	n/a	Revised INPC Prognostic Group (2003)		_undefined_	_undefined_	_undefined_
+PD						Favorable
+PD						Unfavorable
+PD						Unknown
+PD						Not Reported
+
+
+DD	Disease Attributes
+TD	Disease Characteristics
+TG	One row per subject per disease characteristic
+VD	HONEST_BROKER_SUBJECT_ID	String		The identifier assigned to the subject by the honest broker--an individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re-identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_
+VD	DISEASE_PHASE	Code		The phase of the cancer treatment process during which relevant observations were recorded. This variable is used across domains to frame the timing of these longitudinal observations and reduce the number of redundant variables needed to report similar concepts (see "Disease Phase Timing and Course Table" in the documentation for additional guidance).	ncit:C168878	_undefined_	_undefined_	_undefined_
+PD						Relapse/Progression	Either the return of the disease or the progression of the disease.	ncit:C174991
+PD						Refractory	Not responding to treatment.	ncit:C38014
+VD	DISEASE_PHASE_NUMBER	Number		The number of the disease phase.	ncit:C173258	_undefined_	_undefined_	_undefined_
+VD	INITIAL_TREATMENT_CATEGORY	Code		The category of initial treatment that the patient receive for their disease.		_undefined_	_undefined_	_undefined_
+PD						None (observation)
+PD						Surgery alone
+PD						Conventional-dose chemotherapy (2-8 cycles) plus surgery
+PD						Intensive multi-modality therapy: specific type unknown			ConsortiumNote: select this value for patients in strata 1, 2, 5, 6, 9, and 10.
+PD						Intensive multi-modality therapy: no stem cell or bone marrow transplant
+PD						Intensive multi-modality therapy: plus stem cell or bone marrow transplant
+PD						Intensive multi-modality therapy: plus stem cell or bone marrow transplant and anti-GD2 antibody			ConsortiumNote: select this value for patients in strata 3, 4, 7, 8, 11, and 12.
+PD						Unknown
+
+
+DD	Testing
+TD	Molecular Analysis
+TG	One row per subject per molecular analysis method per molecular abnormality
+VD	AGE_AT_MOLECULAR_ANALYSIS	Number	n/a	Age in Days at Molecular Analysis		_undefined_	_undefined_	_undefined_
+VD	DISEASE_PHASE	Code	n/a	Disease Phase		_undefined_	_undefined_	_undefined_
+PD						Relapse/Progression	Either the return of the disease or the progression of the disease.	ncit:C174991
+PD						Refractory	Not responding to treatment.	ncit:C38014
+VD	DISEASE_PHASE_NUMBER	Number	n/a	Disease Phase Number		_undefined_	_undefined_	_undefined_
+VD	MOLECULAR_ABNORMALITY	Code	n/a	Molecular Abnormality		_undefined_	_undefined_	_undefined_
+PD						MYCN Amplification
+VD	MOLECULAR_ABNORMALITY_RESULT	Code	n/a	Molecular Abnormality Result		_undefined_	_undefined_	_undefined_
+PD						Positive			ConsortiumNote: patients with positive MYCN amplification are in strata 1, 2, 3, and 4.
+PD						Negative			ConsortiumNote: patients with negative MYCN amplification are in strata 5, 6, 7, and 8.
+PD						Unknown			ConsortiumNote: patients with uncertain MYCN amplification are in strata 9, 10, 11, and 12.
+VD	GENE1	String	n/a	Gene 1		_undefined_	_undefined_	_undefined_
+VD	VARIANT_TYPE	Code	n/a	Variant Type		_undefined_	_undefined_	_undefined_
+PD						Translocation
+PD						Inversion
+PD						Mutation
+PD						Single Nucleotide Variant
+PD						Copy Number Alteration
+PD						Rearrangement
+PD						Deletion
+PD						Amplification
+PD						Gain
+PD						Other
+PD						Unknown
+PD						Not Reported
+
+
+DD	Events
+TD	Secondary Malignant Neoplasm
+TG	One row per subject per secondary malignancy
+VD	AGE_AT_SMN	Number	n/a	Age in Days at Secondary Malignant Neoplasm		_undefined_	_undefined_	_undefined_
+VD	DISEASE_PHASE	Code	n/a	Disease Phase		_undefined_	_undefined_	_undefined_
+PD						Relapse/Progression	Either the return of the disease or the progression of the disease.	ncit:C174991
+PD						Refractory	Not responding to treatment.	ncit:C38014
+VD	DISEASE_PHASE_NUMBER	Number	n/a	Disease Phase Number		_undefined_	_undefined_	_undefined_
+VD	SMN	Code	n/a	Secondary Malignancy		_undefined_	_undefined_	_undefined_
+PD						No
+PD						Yes
+PD						Unknown
+PD						Not Reported
+
+
+TD	Subject Response
+TG	One row per subject per response assessment
+VD	HONEST_BROKER_SUBJECT_ID	String		The identifier assigned to the subject by the honest broker--an individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re-identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_
+VD	DISEASE_PHASE	Code		The phase of the cancer treatment process during which relevant observations were recorded. This variable is used across domains to frame the timing of these longitudinal observations and reduce the number of redundant variables needed to report similar concepts (see "Disease Phase Timing and Course Table" in the documentation for additional guidance).	ncit:C168878	_undefined_	_undefined_	_undefined_
+PD						Refractory	Not responding to treatment.	ncit:C38014
+PD						Relapse/Progression	Either the return of the disease or the progression of the disease.	ncit:C174991
+VD	DISEASE_PHASE_NUMBER	Number		The number of the disease phase.	ncit:C173258	_undefined_	_undefined_	_undefined_
+VD	CYCLE_NUMBER	Number		Cycle Number	ncit:C166208	_undefined_	_undefined_	_undefined_
+VD	RESPONSE_CATEGORY	Code		The category used to assess the response to therapy.	ncit:C173306	_undefined_	_undefined_	_undefined_
+PD						Overall Response	An assessment of the overall response of the disease to the therapy.	ncit:C96613
+VD	RESPONSE	Code		A standard way to measure how well a cancer patient responds to treatment.	ncit:C50995	_undefined_	_undefined_	_undefined_
 PD						INRC Brodeur 1993, CR	Complete Response: No tumor. (primary tumor); No tumor, catecholamines normal. (metastatic sites). From the "International Neuroblastoma Response Criteria" (Brodeur GM, Seeger RC, Barrett A, et al. International criteria for diagnosis, staging, and response to treatment in patients with neuroblastoma. J Clin Oncol. 1988;6(12):1874-1881. doi:10.1200/JCO.1988.6.12.1874)			New PD
 PD						INRC Brodeur 1993, VGPR	Very Good Partial Response: Decreased by 90%-99%. (primary tumor); No tumor, catecholamines normal, residual 99Tc bone changes allowed. (metastatic sites). From the "International Neuroblastoma Response Criteria" (Brodeur GM, Seeger RC, Barrett A, et al. International criteria for diagnosis, staging, and response to treatment in patients with neuroblastoma. J Clin Oncol. 1988;6(12):1874-1881. doi:10.1200/JCO.1988.6.12.1874)			New PD
 PD						INRC Brodeur 1993, PR	Partial Response: Decreased by >50%. (primary tumor); All measurable sites decreased by >50%. Bones and bone marrow: number of positive bone sites decreased by >50%, no more than 1 positive bone marrow site allowed. (metastatic sites). From the "International Neuroblastoma Response Criteria" (Brodeur GM, Seeger RC, Barrett A, et al. International criteria for diagnosis, staging, and response to treatment in patients with neuroblastoma. J Clin Oncol. 1988;6(12):1874-1881. doi:10.1200/JCO.1988.6.12.1874)			New PD
 PD						INRC Brodeur 1993, MR	Mixed Response: No new lesions, >50% reduction of any measurable lesion (primary or metastases) with <50% reduction in any other, <25% increase in any existing lesion. From the "International Neuroblastoma Response Criteria" (Brodeur GM, Seeger RC, Barrett A, et al. International criteria for diagnosis, staging, and response to treatment in patients with neuroblastoma. J Clin Oncol. 1988;6(12):1874-1881. doi:10.1200/JCO.1988.6.12.1874)			New PD
 PD						INRC Brodeur 1993, NR	No Response: No new lesions, <50% reduction but <25% increase in any existing lesion. From the "International Neuroblastoma Response Criteria" (Brodeur GM, Seeger RC, Barrett A, et al. International criteria for diagnosis, staging, and response to treatment in patients with neuroblastoma. J Clin Oncol. 1988;6(12):1874-1881. doi:10.1200/JCO.1988.6.12.1874)			New PD
 PD						INRC Brodeur 1993, PD	Progressive Disease: Any new lesion, increase of any measurable lesion by >25%, previous negative marrow positive for tumor. From the "International Neuroblastoma Response Criteria" (Brodeur GM, Seeger RC, Barrett A, et al. International criteria for diagnosis, staging, and response to treatment in patients with neuroblastoma. J Clin Oncol. 1988;6(12):1874-1881. doi:10.1200/JCO.1988.6.12.1874)			New PD
-PD						Not Evaluable				
-PD						Not Done	Indicates a task, process or examination that has either not been initiated or not been completed.	ncit:C49484		
-PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998		
-PD						Not Involved	The indicated response category was not involved in the response assessment.			
-VD	MIBG_SCORE_TYPE	Code		The type of response score provided in RESPONSE_MEASUREMENT_NUMERIC		_undefined_	_undefined_	_undefined_		
-PD						MIBG SIOPEN Score	The semi-quantitative SIOPEN score evaluates skeletal meta-iodobenzylguanidine (mIBG) uptake on a 0–6 scale in 12 anatomical regions.			
-VD	MIBG_SCORE	Number		The numeric response of the MIBG score.		_undefined_	_undefined_	_undefined_		
+PD						Not Evaluable
+PD						Not Done	Indicates a task, process or examination that has either not been initiated or not been completed.	ncit:C49484
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998
+PD						Not Involved	The indicated response category was not involved in the response assessment.
+VD	MIBG_SCORE_TYPE	Code		The type of response score provided in RESPONSE_MEASUREMENT_NUMERIC		_undefined_	_undefined_	_undefined_
+PD						MIBG SIOPEN Score	The semi-quantitative SIOPEN score evaluates skeletal meta-iodobenzylguanidine (mIBG) uptake on a 0–6 scale in 12 anatomical regions.
+VD	MIBG_SCORE	Number		The numeric response of the MIBG score.		_undefined_	_undefined_	_undefined_
