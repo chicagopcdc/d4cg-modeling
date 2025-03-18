@@ -13,7 +13,7 @@
         "wiki": "https://docs.pedscommons.org/",
         "consortium_info": "https://commons.cri.uchicago.edu/pcdc/",
         "description": "The NBL data dictionary is a consensus data schema built by an international group of pediatric neuroblastoma experts and maintained by Data for the Common Good (D4CG) at the University of Chicago in collaboration with the International Neuroblastoma Risk Group (INRG). It is based on the collective requirements of its contributors.",
-        "total": 69
+        "total": 65
     },
     "domains": {
         "protocol": {
@@ -614,144 +614,6 @@
             }
         },
         "demographics": {
-            "demographics": {
-                "HONEST_BROKER_SUBJECT_ID": {
-                    "type": "String",
-                    "tier": "",
-                    "description": "The identifier assigned to the subject by the honest broker--an individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a \"re-identification code\"), however the information linking this re-identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.",
-                    "codes": [
-                        "ncit:C168949"
-                    ],
-                    "implementation_notes": [],
-                    "mappings": []
-                },
-                "SEX": {
-                    "type": "Code",
-                    "tier": "",
-                    "description": "Biological Sex",
-                    "codes": [],
-                    "implementation_notes": [],
-                    "mappings": [],
-                    "permissible_values": {
-                        "Male": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Female": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Unknown": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Not Reported": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        }
-                    }
-                },
-                "RACE": {
-                    "type": "Code",
-                    "tier": "",
-                    "description": "Race",
-                    "codes": [],
-                    "implementation_notes": [],
-                    "mappings": [],
-                    "permissible_values": {
-                        "American Indian or Alaska Native": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Asian": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Black or African American": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Multiracial": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Native Hawaiian or Other Pacific Islander": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "White": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Unknown": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Not Reported": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        }
-                    }
-                },
-                "ETHNICITY": {
-                    "type": "Code",
-                    "tier": "",
-                    "description": "Ethnicity",
-                    "codes": [],
-                    "implementation_notes": [],
-                    "mappings": [],
-                    "permissible_values": {
-                        "Hispanic or Latino": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Not Hispanic or Latino": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Unknown": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Not Reported": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        }
-                    }
-                }
-            },
             "survival_characteristics": {
                 "HONEST_BROKER_SUBJECT_ID": {
                     "type": "String",
@@ -1022,6 +884,12 @@
                             "codes": [
                                 "ncit:C8509"
                             ],
+                            "implementation_notes": [],
+                            "mappings": []
+                        },
+                        "Metastatic": {
+                            "description": "",
+                            "codes": [],
                             "implementation_notes": [],
                             "mappings": []
                         }

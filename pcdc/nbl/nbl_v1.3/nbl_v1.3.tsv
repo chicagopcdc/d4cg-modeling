@@ -88,31 +88,6 @@ VD	YEAR_AT_DISEASE_PHASE	Number		Age of subject (in days) at the disease phase.	
 																															
 																															
 DD	Demographics																														
-TD	Demographics																														
-TG	One row per subject																														
-VD	HONEST_BROKER_SUBJECT_ID	String		The identifier assigned to the subject by the honest broker--an individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re-identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_																							
-VD	SEX	Code		Biological Sex		_undefined_	_undefined_	_undefined_																							
-PD						Male																									
-PD						Female																									
-PD						Unknown																									
-PD						Not Reported																									
-VD	RACE	Code		Race		_undefined_	_undefined_	_undefined_																							
-PD						American Indian or Alaska Native																									
-PD						Asian																									
-PD						Black or African American																									
-PD						Multiracial																									
-PD						Native Hawaiian or Other Pacific Islander																									
-PD						White																									
-PD						Unknown																									
-PD						Not Reported																									
-VD	ETHNICITY	Code		Ethnicity		_undefined_	_undefined_	_undefined_																							
-PD						Hispanic or Latino																									
-PD						Not Hispanic or Latino																									
-PD						Unknown																									
-PD						Not Reported																									
-																															
-																															
-DD	Demographics																														
 TD	Survival Characteristics																														
 TG	One row per subject per cause of death, per treatment type, per cause of death detail																														
 VD	HONEST_BROKER_SUBJECT_ID	String		The identifier assigned to the subject by the honest broker--an individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re-identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_																							
@@ -150,6 +125,7 @@ PD						Absent	Not existing in a specified place at a specified time.	ncit:C4819
 PD						Unknown	Not known, observed, recorded; or reported as unknown by the data contributor.	ncit:C17998																							
 VD	TUMOR_CLASSIFICATION	Code	n/a	A condition or state of a tumor at a particular time and a particular tumor site.	ncit:C96643	_undefined_	_undefined_	_undefined_																							
 PD						Primary	A tumor at the original site of origin.	ncit:C8509																							
+PD						Metastatic																									
 VD	TUMOR_SITE	Code		The anatomic site of the tumor.	ncit:C157120	_undefined_	_undefined_	_undefined_	ConsortiumNote: Map ICD-O codes in source data to these sites																						
 PD						Central Nervous System	The part of the nervous system that consists of the brain, spinal cord, and meninges.	ncit:C12438																							
 PD						Distant Lymph Nodes	A lymph node located distant to the anatomic site of interest.	ncit:C106042																							
