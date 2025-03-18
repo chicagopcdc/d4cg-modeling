@@ -1,7 +1,7 @@
 {
     "meta": {
         "name": "nbl_v1.3",
-        "timestamp": "20250220",
+        "timestamp": "20250318",
         "sheet_id": "1tdXKN6Al4xtEH2eoIdRM6vEMra1A3bdCQHQIv-IZy6k"
     },
     "info": {
@@ -13,7 +13,7 @@
         "wiki": "https://docs.pedscommons.org/",
         "consortium_info": "https://commons.cri.uchicago.edu/pcdc/",
         "description": "The NBL data dictionary is a consensus data schema built by an international group of pediatric neuroblastoma experts and maintained by Data for the Common Good (D4CG) at the University of Chicago in collaboration with the International Neuroblastoma Risk Group (INRG). It is based on the collective requirements of its contributors.",
-        "total": 81
+        "total": 69
     },
     "domains": {
         "protocol": {
@@ -611,44 +611,6 @@
                     "implementation_notes": [],
                     "mappings": []
                 }
-            },
-            "course_timing": {
-                "HONEST_BROKER_SUBJECT_ID": {
-                    "type": "String",
-                    "tier": "",
-                    "description": "The identifier assigned to the subject by the honest broker--an individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a \"re-identification code\"), however the information linking this re-identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.",
-                    "codes": [
-                        "ncit:C168949"
-                    ],
-                    "implementation_notes": [],
-                    "mappings": []
-                },
-                "CYCLE_NUMBER": {
-                    "type": "Number",
-                    "tier": "",
-                    "description": "Cycle Number",
-                    "codes": [
-                        "ncit:C166208"
-                    ],
-                    "implementation_notes": [],
-                    "mappings": []
-                },
-                "AGE_AT_CYCLE_START": {
-                    "type": "Number",
-                    "tier": "",
-                    "description": "Age in Days at Cycle Start",
-                    "codes": [],
-                    "implementation_notes": [],
-                    "mappings": []
-                },
-                "AGE_AT_CYCLE_END": {
-                    "type": "Number",
-                    "tier": "",
-                    "description": "Age in Days at Cycle End",
-                    "codes": [],
-                    "implementation_notes": [],
-                    "mappings": []
-                }
             }
         },
         "demographics": {
@@ -1187,14 +1149,6 @@
                     "implementation_notes": [],
                     "mappings": []
                 },
-                "AGE_AT_STAGING": {
-                    "type": "Number",
-                    "tier": "",
-                    "description": "Age in Days of Staging Assessment",
-                    "codes": [],
-                    "implementation_notes": [],
-                    "mappings": []
-                },
                 "DISEASE_PHASE": {
                     "type": "Code",
                     "tier": "",
@@ -1226,16 +1180,20 @@
                 "DISEASE_PHASE_NUMBER": {
                     "type": "Number",
                     "tier": "",
-                    "description": "Disease Phase Number",
-                    "codes": [],
+                    "description": "The number of the disease phase.",
+                    "codes": [
+                        "ncit:C173258"
+                    ],
                     "implementation_notes": [],
                     "mappings": []
                 },
                 "STAGE": {
                     "type": "Code",
                     "tier": "",
-                    "description": "Stage",
-                    "codes": [],
+                    "description": "The extent of a cancer in the body. Staging is usually based on the size of the tumor, whether lymph nodes contain cancer, and whether the cancer has spread from the original site to other parts of the body.",
+                    "codes": [
+                        "ncit:C16899"
+                    ],
                     "implementation_notes": [],
                     "mappings": [],
                     "permissible_values": {
@@ -1270,176 +1228,6 @@
                             "mappings": []
                         },
                         "INSS, Stage 4s": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Unknown": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Not Reported": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        }
-                    }
-                }
-            },
-            "histology": {
-                "HONEST_BROKER_SUBJECT_ID": {
-                    "type": "String",
-                    "tier": "",
-                    "description": "The identifier assigned to the subject by the honest broker--an individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a \"re-identification code\"), however the information linking this re-identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.",
-                    "codes": [
-                        "ncit:C168949"
-                    ],
-                    "implementation_notes": [],
-                    "mappings": []
-                },
-                "AGE_AT_HIST_ASSESSMENT": {
-                    "type": "Number",
-                    "tier": "n/a",
-                    "description": "Age in Days of Histology Assessment",
-                    "codes": [],
-                    "implementation_notes": [],
-                    "mappings": []
-                },
-                "DISEASE_PHASE": {
-                    "type": "Code",
-                    "tier": "n/a",
-                    "description": "Disease Phase",
-                    "codes": [],
-                    "implementation_notes": [],
-                    "mappings": [],
-                    "permissible_values": {
-                        "Relapse/Progression": {
-                            "description": "Either the return of the disease or the progression of the disease.",
-                            "codes": [
-                                "ncit:C174991"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Refractory": {
-                            "description": "Not responding to treatment.",
-                            "codes": [
-                                "ncit:C38014"
-                            ],
-                            "implementation_notes": [],
-                            "mappings": []
-                        }
-                    }
-                },
-                "DISEASE_PHASE_NUMBER": {
-                    "type": "Number",
-                    "tier": "n/a",
-                    "description": "Disease Phase Number",
-                    "codes": [],
-                    "implementation_notes": [],
-                    "mappings": []
-                },
-                "HISTOLOGY": {
-                    "type": "Code",
-                    "tier": "n/a",
-                    "description": "The study of the structure of the cells and their arrangement to constitute tissues and, finally, the association among these to form organs.  In pathology, the microscopic process of identifying normal and abnormal morphologic characteristics in tissues, by employing various cytochemical and immunocytochemical stains.",
-                    "codes": [],
-                    "implementation_notes": [],
-                    "mappings": [],
-                    "permissible_values": {
-                        "Neuroblastoma (Schwannian Stroma-Poor)": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Ganglioneuroblastoma, Intermixed (Schwannian Stroma-Rich)": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Ganglioneuroma (Schwannian Stroma-Dominant), Maturing Subtype": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Ganglioneuroblastoma, Nodular (Composite)": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        }
-                    }
-                },
-                "HISTOLOGY_GRADE": {
-                    "type": "Code",
-                    "tier": "n/a",
-                    "description": "Histology Grade",
-                    "codes": [
-                        "ncit:C18000"
-                    ],
-                    "implementation_notes": [],
-                    "mappings": [],
-                    "permissible_values": {
-                        "Undifferentiated or Poorly Differentiated": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Differentiating": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Unknown": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Not Reported": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        }
-                    }
-                },
-                "HISTOLOGY_INPC": {
-                    "type": "Code",
-                    "tier": "n/a",
-                    "description": "Revised INPC Prognostic Group (2003)",
-                    "codes": [],
-                    "implementation_notes": [],
-                    "mappings": [],
-                    "permissible_values": {
-                        "Favorable": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Unfavorable": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Unknown": {
-                            "description": "",
-                            "codes": [],
-                            "implementation_notes": [],
-                            "mappings": []
-                        },
-                        "Not Reported": {
                             "description": "",
                             "codes": [],
                             "implementation_notes": [],
@@ -2031,8 +1819,8 @@
                     "implementation_notes": [],
                     "mappings": [],
                     "permissible_values": {
-                        "MIBG SIOPEN Score": {
-                            "description": "The semi-quantitative SIOPEN score evaluates skeletal meta-iodobenzylguanidine (mIBG) uptake on a 0\u20136 scale in 12 anatomical regions.",
+                        "MIBG Curie Score": {
+                            "description": "The Curie score is the sum of 10 segments 10 sections which are graded for extent of MIBG avidity on a 0 to 3 scale: 0 = no involvement, 1 = one site, 2 = more than one site, 3 = diffuse involvement (>50% of the segment). This method is considered \u201csemi-subjective.\u201d .",
                             "codes": [],
                             "implementation_notes": [],
                             "mappings": []
