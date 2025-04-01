@@ -1,0 +1,658 @@
+INFO	Title	Osteosarcoma (OS) Data Dictionary									
+INFO	Name	os_v2.0									
+INFO	Release Notes										
+INFO	Parent Data Model	pcdc_v2.0									
+INFO	License	Creative Commons Attribution-NonCommercial 4.0 International License (https://creativecommons.org/licenses/by-nc/4.0/)									
+INFO	D4CG Data Modeling Wiki	https://docs.pedscommons.org/									
+INFO	Disease Consortium Information	https://commons.cri.uchicago.edu/pcdc/									
+INFO	Description	The OS data dictionary is a consensus data schema built by an international group of pediatric osteosarcoma experts and maintained by Data for the Common Good (D4CG) at the University of Chicago in collaboration with the Harmonization International Bone Sarcoma Consortium (HIBiSCus). It is based on the collective requirements of its contributors.									
+INFO	Total Variables										
+											
+RowType	VariableName	DataType	Tier	VariableDescription	VariableCode	PermissibleValue	ValueDescription	ValueCode	ImplementationNotes	Mappings	Modeling Notes (ignored in processing)
+											
+											
+DD	Protocol										
+TD	Subject Characteristics										
+TG	One row per patient per study										
+VD	HONEST_BROKER_SUBJECT_ID	String	Tier 1	Subject identifier assigned by the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_			
+VD	CONSORTIUM	Enum		The consortium under which this data is being contributed to the Pediatric Cancer Data Commons.	ncit:C61538	_undefined_	_undefined_	_undefined_		New VD	
+PD						HIBiSCus	Harmonization International Bone Sarcoma Consortium (HIBiSCus)			New PD	
+VD	DISEASE_GROUP	Enum				_undefined_	_undefined_	_undefined_		New VD	
+PD						OS	Osteosarcoma			New PD	
+VD	DATA_CONTRIBUTOR_ID	Enum	Tier 1	An identifier assigned to a data contributor.	ncit:C168950	_undefined_	_undefined_	_undefined_			
+PD						COG	An NCI-supported clinical cooperative group formed by the merger of the four national pediatric cancer research organizations: the Children's Cancer Group, the Intergroup Rhabdomyosarcoma Study Group, the National Wilms Tumor Study Group, and the Pediatric Oncology Group. The primary objective of the organization is to conduct clinical trials of new therapies for childhood and adolescent cancer. COG develops and coordinates clinical trials conducted at the 238 member institutions that include cancer centers of all major universities and teaching hospitals throughout the U.S. and Canada, as well as sites in Europe and Australia. COG members include over 5000 cancer researchers.	ncit:C39353			Children's Oncology Group
+PD						UK	An information system in the United Kingdom designed for the collection, storage, and management of data on persons with sarcoma.	ncit:C174963			United Kingdom Sarcoma Registry
+PD						FSG	A research organization in France involved in the understanding, diagnosis, treatment and prognosis of sarcoma in children and adolescents.	ncit:C174962			French Sarcoma Group
+PD						ISG	A independent, scientific non-profit association formed in 2002 with the purpose of improving the quality of treatment for sarcoma.	ncit:C174965			Italian Sarcoma Group
+VD	DATA_SOURCE	Enum	Tier 1	The person or authoritative body who provided the information.	ncit:C16493	_undefined_	_undefined_	_undefined_			
+PD						Registry	Cancer registries gather a wide variety of specific information on cancer patients that can be analyzed to identify health disparity trends in cancer incidence, mortality and patient survival.	ncit:C15753			
+PD						Therapeutic Trial	A clinical study that involves administering of exposure to the agent/agents to subjects with particular disease to elucidate the most appropriate treatment for a specific medical condition, or to prolong or improve the patient's life.	ncit:C39536			
+VD	RANDOMIZED_STATUS	Enum	Tier 1	The allocation of individuals to groups by chance, especially in order to control the variables in an experiment.	ncit:C25196	_undefined_	_undefined_	_undefined_			
+PD						Randomized	The allocation of individuals to groups by chance, especially in order to control the variables in an experiment.	ncit:C25196			
+PD						Non-Randomized	A clinical trial in which participants may choose or be assigned into groups by researchers. Their assignment is not random.	ncit:C93043			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	STUDY_ID	Enum	Tier 1	A sequence of characters used to identify, name, or characterize the study.	ncit:C83082	_undefined_	_undefined_	_undefined_			
+PD						EURAMOS1	A Randomized Trial of the European and American Osteosarcoma Study Group to Optimize Treatment Strategies for Resectable Osteosarcoma Based on Histological Response to Pre-operative Chemotherapy. This randomized phase III trial is studying combination chemotherapy followed by surgery and two different combination chemotherapy regimens with or without PEG-interferon alfa-2b to compare how well they work in treating patients with osteosarcoma. (ClinicalTrials.gov Identifier: NCT00134030)	ncit:C180361	ConsortiumNote: also known by COG study id AOST0331		COG - priority, Natalie and Helen
+PD						OS2 Trial (2011-2018)	ABCB1/P-glycoprotein Expression as Biologic Stratification Factor for Patients With Non Metastatic Osteosarcoma - Prospective Study (ISG/OS-2). This is a phase II multicentre, uncontrolled trial including patients ≤ 40 years with non-metastatic extremity high-grade osteosarcoma stratified according to P-glicoprotein expression. The main objective of the study is to evaluate the impact on event-free survival (EFS) of a multi-drug chemotherapy approach and mifamurtide treatment in patients with non-metastatic osteosarcoma of the extremities according to the expression of ABCB1/P-glycoprotein. (ClinicalTrial.gov Identifier: NCT01459484)				ISG - Paola
+VD	STUDY_AGE_PRECISION	Enum				_undefined_	_undefined_	_undefined_	ConsortiumNote: this variable should only be used for ISG, to indicate that the AGE_AT variables througout are approximate. This is due to only having the birth year.	New VD	
+PD						Approximated from birth year				New PD	
+VD	AGE_AT_ENROLLMENT	Number	Tier 1	Age of subject (in days) when the subject enrolled in the study.	ncit:C168843	_undefined_	_undefined_	_undefined_			
+VD	TREATMENT_ARM	Enum	Tier 1	A specific treatment plan within a clinical trial that describes the activities a subject will be involved in as he or she progresses through the study.	ncit:C15538	_undefined_	_undefined_	_undefined_			
+PD						MAP-GR	A control arm for patients receiving a regimen of methotrexate, doxorubicin and cisplatin (MAP) after good response to the MAP regimen pre-operatively.	ncit:C186769			
+PD						MAP-IFN-GR	An experimental treatment arm for patients receiving a regimen of methotrexate, doxorubicin and cisplatin (MAP) plus interferon (IFN) post-operatively after good response to the MAP regimen pre-operatively.	ncit:C186770			
+PD						MAP-PR	A control arm for patients receiving a regimen of methotrexate, doxorubicin and cisplatin (MAP) after poor response to the MAP regimen pre-operatively.	ncit:C186771			
+PD						MAP-IE-PR	An experimental treatment arm for patients receiving a regimen of methotrexate, doxorubicin and cisplatin (MAP) plus a regimen of ifosfamide and etoposide (IE) post-operatively after poor response to the MAP regimen pre-operatively.	ncit:C186772			
+PD						MAP-NR	A control arm for patients receiving a regimen of methotrexate, doxorubicin and cisplatin (MAP) with no response.	ncit:C186773			
+PD						MAP	A regimen consisting of cisplatin, doxorubicin, and methotrexate that can be used in the treatment of osteosarcoma.	ncit:C67339			
+PD						POSTOP-CHEMO	A treatment arm for patients receiving postoperative chemotherapy.	ncit:C186775			
+PD						POSTOP-CHEMO-MIF	A treatment arm for patients receiving mifepristone as part of the postoperative chemotherapy.	ncit:C1867763			
+PD						CHEMO-ZOL	A treatment arm for patients receiving chemotherapy in combination with zoledronic acid.	ncit:C186777			
+PD						CHEMO					
+PD						REG-ACTIVE	An experimental treatment arm for patients receiving regorafenib as the active drug.	ncit:C186778			
+PD						REG-PLACEBO	A control arm for patients receiving placebo instead of the experimental drug regorafenib.	ncit:C186779			
+PD						DOX	The hydrochloride salt of doxorubicin, an anthracycline antibiotic with antineoplastic activity. Doxorubicin, isolated from the bacterium Streptomyces peucetius var. caesius, is the hydroxylated congener of daunorubicin. Doxorubicin intercalates between base pairs in the DNA helix, thereby preventing DNA replication and ultimately inhibiting protein synthesis. Additionally, doxorubicin inhibits topoisomerase II which results in an increased and stabilized cleavable enzyme-DNA linked complex during DNA replication and subsequently prevents the ligation of the nucleotide strand after double-strand breakage. Doxorubicin also forms oxygen free radicals resulting in cytotoxicity secondary to lipid peroxidation of cell membrane lipids; the formation of oxygen free radicals also contributes to the toxicity of the anthracycline antibiotics, namely the cardiac and cutaneous vascular effects.	ncit:C1326			
+PD						DOX-IFOS	A regimen consisting of doxorubicin and ifosfamide used for the treatment of unresectable soft tissue sarcoma.	ncit:C63686			
+VD	AGE_AT_TXASSIGN	Number	Tier 1	Age of subject (in days) when their neutrophil count exceeded a threshold of 500 (ANC/mm3) during the course.	ncit:C168852	_undefined_	_undefined_	_undefined_	ConsortiumNote: use date of randomization, for non-randomized patients use enrollment date.	[os_v1.2].[Course Timing].[AGE_AT_TX_ASSIGN] skos:exactMatch [os_v2.0].[Subject Characteristics].[AGE_AT_TX_ASSIGN]	
+VD	EFS_CENSOR_STATUS	Enum	Tier 1	The status of individuals in a study when their outcome (event occurrence or time to event) is censored or not censored at the time of analysis or data collection. Censoring occurs when an individual has not experienced the event of interest by the end of the study period or at the time of data analysis, often because they were lost to follow-up, withdrew from the study, or the study ended before the event could occur. In event-free survival analysis, these censored individuals are included in the analysis up to the point of censoring and are essential for estimating survival probabilities and analyzing the time to events.		_undefined_	_undefined_	_undefined_			
+PD						Censored	The status of a participant or subject in a study whose event or outcome of interest has not yet occurred or has not been observed within the study's follow-up period. Censoring occurs when the event of interest has not happened to a participant by the end of the study or when they are lost to follow-up before the event occurs.	ncit:C118962			
+PD						Not Censored	The patient has experienced the event of interest within the study period and has reached the endpoint being evaluated, such as disease progression, relapse, recurrence, or death, and their time to event can be accurately recorded and analyzed.				
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	AGE_AT_CENSOR_STATUS	Number	Tier 1	The age (in days) of the subject at the time of the event censor status.		_undefined_	_undefined_	_undefined_			
+											
+											
+DD	Protocol										
+TD	Time Period									New TD	
+TG	One row per subject per time period type										
+VD	HONEST_BROKER_SUBJECT_ID	String	1 - contributors must include, regardless of the resource cost	The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_		New VD	
+VD	SUBMITTER_ID	String	2 - contributors should prioritize inclusion if resources are available	An ID provided by the data contributor that identifies a unique time period and that is referenced throughout subsequent tabels in the TIME_PERIOD_SUBMITTER_ID variables.		_undefined_	_undefined_	_undefined_		New VD	
+VD	PARENT_SUBMITTER_ID	String	2 - contributors should prioritize inclusion if resources are available	The SUBMITTER_ID of the time period in whose context a subsequent time period takes place. For example, multiple treatment courses occuring the "Initial Diagnosis" period would each reference the SUBMITTER_ID of the "Initial Diagnosis" period as their PARENT_SUBMITTER_ID.		_undefined_	_undefined_	_undefined_		New VD	
+VD	TIME_PERIOD_TYPE	Enum	2 - contributors should prioritize inclusion if resources are available	The type of time period being reported.		_undefined_	_undefined_	_undefined_		New VD	
+PD						Disease Phase	The stage or period of an individual's disease.	ncit:C168878			
+PD						Course	The type of protocol treatment course administered with respect to Course Timing.	ncit:C187095			
+VD	DISEASE_PHASE	Enum	2 - contributors should prioritize inclusion if resources are available	The phase of the cancer treatment process during which relevant observations were recorded. This variable is used across domains to frame the timing of these longitudinal observations and reduce the number of redundant variables needed to report similar concepts (see "Disease Phase Timing and Course Table" in the documentation for additional guidance).	ncit:C168878	_undefined_	_undefined_	_undefined_		[os_v1.2].[Disease Phase Timing].[DISEASE_PHASE] skos:exactMatch [os_v2.0].[Time Period].[DISEASE_PHASE]	
+PD						Initial Diagnosis	The first diagnosis of the individual's condition.	ncit:C156813			
+PD						Relapse	The return of a disease after a period of remission.	ncit:C38155			
+PD						Progression	A process that manifests as the worsening of a disease over time.	ncit:C17747			
+PD						Relapse/Progression	Either the return of the disease or the progression of the disease.	ncit:C174991			
+VD	COURSE	Enum	2 - contributors should prioritize inclusion if resources are available	The protocol treatment "course" during which relevant observations were recorded. This variable is used across domains to frame the timing of these longitudinal observations and reduce the number of redundant variables needed to report similar concepts (see "Disease Phase Timing and Course Table" in the documentation for additional guidance).	ncit:C168807	_undefined_	_undefined_	_undefined_		[os_v1.2].[Course Timing].[COURSE] skos:exactMatch [os_v2.0].[Time Period].[COURSE]	
+PD						Induction	Therapy administered prior to the initial therapy.	ncit:C158708			
+PD						Consolidation	Treatment that is given after initial therapy to kill any remaining cancer cells.	ncit:C15679			
+PD						Maintenance	The use of synthetic or naturally-occurring chemicals for the treatment of diseases.	ncit:C15632			
+VD	TIME_PERIOD_NUMBER	Integer	2 - contributors should prioritize inclusion if resources are available	This variable indicates the ordinal numbering of time periods of the same TIME_PERIOD_TYPE within its various subgroups (e.g., Relapse 1, Relapse 2, Relapse 3, etc.). The observations across domains can therefore be organized longitudinally without the need for specific dates.		_undefined_	_undefined_	_undefined_		[os_v1.2].[Disease Phase Timing].[DISEASE_PHASE_NUMBER] skos:broadMatch [os_v2.0].[Time Period].[TIME_PERIOD_NUMBER] | [os_v1.2].[Course Timing].[COURSE_NUMBER] skos:broadMatch [os_v2.0].[Time Period].[TIME_PERIOD_NUMBER]	
+VD	YEAR_AT_START	Integer	2 - contributors should prioritize inclusion if resources are available	The year at the start of the indicated time period.		_undefined_	_undefined_	_undefined_		[os_v1.2].[Disease Phase Timing].[YEAR_AT_DISEASE_PHASE] skos:exactMatch [os_v2.0].[Time Period].[YEAR_AT_START]	
+VD	AGE_AT_START	Integer	2 - contributors should prioritize inclusion if resources are available	The age (in days) of the patient at the start of the reported time period.		_undefined_	_undefined_	_undefined_		[os_v1.2].[Disease Phase Timing].[AGE_AT_DISEASE_PHASE] skos:broadMatch [os_v2.0].[Time Period].[AGE_AT_START] | [os_v1.2].[Course Timing].[AGE_AT_COURSE_START] skos:broadMatch [os_v2.0].[Time Period].[AGE_AT_START]	
+VD	AGE_AT_END	Integer	2 - contributors should prioritize inclusion if resources are available	The age (in days) of the patient at the end of the reported time period.		_undefined_	_undefined_	_undefined_		[os_v1.2].[Course Timing].[AGE_AT_COURSE_END] skos:exactMatch [os_v2.0].[Time Period].[AGE_AT_END]	
+											
+											
+DD	Protocol										
+TD	Off Protocol Therapy/Study										
+TG	One row per subject per off-protocol therapy/study per reason off										
+VD	HONEST_BROKER_SUBJECT_ID	String	Tier 1	The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_			
+VD	AGE_OFF	Number	Tier 1	Age of subject (in days) when subject was off therapy or study.	ncit:C172678	_undefined_	_undefined_	_undefined_			
+VD	TIME_PERIOD_SUBMITTER_ID	String		This is the SUBMITTER_ID of the time period (defined in the "Time Period" table) during which this observation takes place.		_undefined_	_undefined_	_undefined_			
+VD	OFF_TYPE	Enum	Tier 1	The code used to designate that the subject went off therapy or off the study.	ncit:C173256	_undefined_	_undefined_	_undefined_			
+PD						Protocol Therapy	No longer receiving protocol therapy.	ncit:C173257			
+PD						Study	No longer participating in a study; not being followed and will not be retreated.	ncit:C29851			
+VD	REASON_OFF	Enum	Tier 1	The reason a subject went off the therapy or study.	ncit:C173519	_undefined_	_undefined_	_undefined_			
+PD						Death	Specifies whether the life of an entity has ceased.	ncit:C93546	Note: If multiple reasons for off "Protocol Therapy" or off "Study", include one observation per reason.		
+PD						Completion of Planned Therapy	The end of the planned treatment.	ncit:C168935			
+PD						Physician Decision	A position, opinion or judgment reached after consideration by a physician with reference to subject.	ncit:C48250			
+PD						Subject/Guardian Refused Further Treatment	The subject or their guardian has refused further treatment.	ncit:C168934			
+PD						Disease Progression	A process that manifests as the worsening of a disease over time.	ncit:C17747			
+PD						Development of SMN	A malignant neoplasm that arises from a pre-existing lower grade lesion, or as a result of a primary lesion that has spread to secondary sites, or due to a complication of a cancer treatment.	ncit:C4968			
+PD						Adverse Event	Any unfavorable or unintended disease, sign, or symptom (including an abnormal laboratory finding) that is temporally associated with the use of a medical treatment or procedure, and that may or may not be considered related to the medical treatment or procedure. Such events can be related to the intervention, dose, route of administration, patient, or caused by an interaction with another drug(s) or procedure(s).	ncit:C41331			
+PD						Subject Non-Compliance	Failure of a patient to follow medical advice, take medication as directed, or adhere to a prescribed course of treatment.	ncit:C91752			
+PD						Other	Different than the one(s) previously specified or mentioned.	ncit:C17649			
+											
+											
+DD	Demographics										
+TD	Demographics								No AOST0331/EURAMOS1 data		
+TG	One row per subject										
+VD	HONEST_BROKER_SUBJECT_ID	String	Tier 1	The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_			
+VD	SEX	Enum	Tier 1	The assemblage of physical properties or qualities by which male is distinguished from female; the physical difference between male and female; the distinguishing peculiarity of male or female.	ncit:C28421	_undefined_	_undefined_	_undefined_			
+PD						Male	A person who belongs to the sex that normally produces sperm. The term is used to indicate biological sex distinctions, cultural gender role distinctions, or both.	ncit:C20197			
+PD						Female	A person who belongs to the sex that normally produces ova. The term is used to indicate biological sex distinctions, or cultural gender role distinctions, or both.	ncit:C16576			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+											
+											
+DD	Demographics										
+TD	Medical History								No AOST0331/EURAMOS1 data		
+TG	One row per subject per medical history observation										
+VD	HONEST_BROKER_SUBJECT_ID	String	Tier 1	The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_			
+VD	MEDICAL_HISTORY	Enum	Tier 3	The verbatim description of the medical history being reported.	ncit:C83118	_undefined_	_undefined_	_undefined_			
+PD						Fanconi Anemia	An autosomal recessive genetic disorder characterized by bone marrow failure, skeletal abnormalities, and an increase incidence of development of neoplasias.	ncit:C62505			
+PD						NF1	The most common type of neurofibromatosis. It is characterized clinically by cutaneous and subcutaneous tumors with patches of hyperpigmentation. The hyperpigmented skin areas, are present from birth and found anywhere on the body surface. They can vary markedly in size and color. The dark brown areas are called cafe-au-lait spots. The multiple cutaneous and subcutaneous tumors are nerve sheath tumors, called neurofibromas. They can develop anywhere along the peripheral nerve fibers. Neurofibromas can become quite large, causing a major disfigurement, eroding bone, and compressing various peripheral nerve structures. Type 1 neurofibromatosis has dominant inheritance, with a gene locus on the proximal long arm of chromosome 17.	ncit:C3273			
+PD						NF2	An autosomal dominant disorder caused by mutations in the NF2 tumor suppressor gene. It is characterized by the development of peripheral and central nervous system tumors including acoustic schwannomas, neurofibromas, gliomas, and meningiomas.	ncit:C3274			
+PD						Gardner Syndrome	A variant of familial adenomatous polyposis. It is an autosomal dominant syndrome characterized by multiple colonic polyps predisposing to carcinoma of the colon, osteomas of the skull, epidermoid cysts, and fibromas. It is associated with mutation of the APC gene.	ncit:C6728			
+PD						Retinoblastoma Syndrome	A malignant tumor that originates in the nuclear layer of the retina. As the most common primary tumor of the eye in children, retinoblastoma is still relatively uncommon, accounting for only 1% of all malignant tumors in pediatric patients. Approximately 95% of cases are diagnosed before age 5. These tumors may be multifocal, bilateral, congenital, inherited, or acquired. Seventy-five percent of retinoblastomas are unilateral; 60% occur sporadically. A predisposition to retinoblastoma has been associated with 13q14 cytogenetic abnormalities. Patients with the inherited form also appear to be at increased risk for secondary nonocular malignancies such as osteosarcoma, malignant fibrous histiocytoma, and fibrosarcoma.	ncit:C7541			
+PD						Ollier Disease	A rare benign disorder characterized by lack of normal endochondral ossification, and the growth of multiple enchondromas. It primarily affects the bones of the hand, in children and young adults. Extent of the disease varies; in some cases, neoplastic involvement may be widespread causing considerable deformity.	ncit:C3008			
+PD						Maffucci Syndrome	A rare non-inherited disorder primarily affecting the skin and skeletal system. It is classified as a mesodermal dysplasia. Clinical signs appear within the first decade and are characterized by multiple soft tissue hemiangiomas and enchondromas leading to skeletal deformities. Clinical course is progressive with variable development of associated malignancies.	ncit:C3213			
+PD						Paget Disease	A malignant neoplasm composed of large cells with large nuclei, prominent nucleoli, and abundant pale cytoplasm (Paget cells). Paget cell neoplasms include Paget disease of the nipple and extramammary Paget disease which may affect the vulva, penis, anus, skin and scrotum.	ncit:C7073			
+PD						Multiple Osteochondromas	An autosomal dominant neoplastic chondrogenic process affecting multiple sites. It is caused by mutations in the EXT1 or EXT2 genes. Grossly and microscopically, the lesions resemble an osteochondroma.	ncit:C53457			
+PD						McCune-Albright Syndrome	A syndrome characterized by the presence of polyostotic fibrous dysplasia, cafe-au-lait skin lesions, and sexual precocity. It is caused by mutations within the GNAS genetic locus.	ncit:C48627			
+PD						Rothmund-Thomson Syndrome	An autosomal recessive inherited syndrome usually caused by mutations in the RECQL4 gene. It is characterized by poikilodermatous skin changes, sparse hair, cataracts, small stature, skeletal abnormalities, and an increased predisposition to cancer, particularly osteosarcoma.	ncit:C3335			
+PD						Werner Syndrome	A rare, autosomal recessive syndrome caused by mutations in the WRN gene. It is characterized by the appearance of accelerated aging following puberty. It is associated with the development of diabetes mellitus, atherosclerosis, cataracts, and cancer.	ncit:C3447			
+PD						Cherubism	A rare autosomal dominant inherited disorder usually caused by mutations in the SH3BP2 gene. It is characterized by a prominent lower part of the face due to bilateral replacement of the mandibular or maxillary bones by lesions. The lesions contain osteoclast-like cells admixed with spindle-shaped mononuclear stromal cells. With time, the lesions become more fibrotic and less osteoclast-rich.	ncit:C84630			
+PD						Li-Fraumeni	An autosomal dominant cancer predisposition syndrome caused by germline mutations of the TP53 gene. It is characterized by the development of malignant neoplasms at various anatomic sites. The malignant neoplasms associated with Li-Fraumeni syndrome include breast carcinoma, choroid plexus carcinoma, adrenal cortex carcinoma, gastric carcinoma, colorectal carcinoma, thyroid gland carcinoma, kidney carcinoma, prostate carcinoma, astrocytic tumors, medulloblastoma, osteosarcoma, soft tissue sarcoma, leukemia, and non-Hodgkin lymphoma.	ncit:C3476			
+PD						Lynch Syndrome	An autosomal dominant hereditary neoplastic syndrome characterized by the development of colorectal carcinoma and a high risk of developing endometrial carcinoma, gastric carcinoma, ovarian carcinoma, renal pelvis carcinoma, and small intestinal carcinoma. Patients often develop colorectal carcinomas at an early age (mean, 45 years). In the majority of the cases the lesions arise from the proximal colon. At the molecular level, high-frequency microsatellite instability is present.	ncit:C8494			
+PD						Bloom Syndrome	An autosomal dominant inherited syndrome caused by mutations in the BRCA1 or BRCA2 genes. Patients are at high risk of developing breast cancer, particularly before the age of fifty, high risk of developing a second primary breast cancer, and high risk of developing both breast and ovarian cancer.	ncit:C8493			
+PD						Other Cancer	A finding indicating the presence of a malignancy that is not further specified or defined.				
+PD						Diamond-Blackfan Anemia	An inherited condition characterized by aplasia of the erythroid series only. The white cells and platelets are not affected. Patients develop anemia usually in infancy.	ncit:C61236			
+											
+											
+DD	Demographics										
+TD	Survival Characteristics										
+TG	One row per subject per cause of death, per cause of death detail										
+VD	HONEST_BROKER_SUBJECT_ID	String	Tier 1	The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_			
+VD	AGE_AT_LKSS	Number	Tier 1	Age of subject (in days) at the last known survival status.	ncit:C168844	_undefined_	_undefined_	_undefined_			
+VD	TIME_PERIOD_SUBMITTER_ID	String		This is the SUBMITTER_ID of the time period (defined in the "Time Period" table) during which this observation takes place.		_undefined_	_undefined_	_undefined_			
+VD	LKSS	Enum	Tier 1	The individual's last known survival status.	ncit:C168931	_undefined_	_undefined_	_undefined_			
+PD						Alive	Showing characteristics of life; displaying signs of life.	ncit:C37987			
+PD						Dead	The cessation of life.	ncit:C28554			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	CAUSE_OF_DEATH	Enum	Tier 1	The circumstance or condition that results in the death of a living being.	ncit:C81239	_undefined_	_undefined_	_undefined_			
+PD						Disease Progression	An indication that the subject has died due to the progression of their disease.	ncit:C168970	Note: If multiple causes of death, include one observation per cause of death. However, only one cause of death can have the varaiable CAUSE_OF_DEATH_RANKING=Primary. Note: Only fill in this variable if LKSS is "Dead".		
+PD						Treatment-Related Mortality	A death that is considered to be causally linked to a treatment.	ncit:C166165			
+PD						Secondary Malignancy	A malignant neoplasm that arises from a pre-existing lower grade lesion, or as a result of a primary lesion that has spread to secondary sites, or due to a complication of a cancer treatment.	ncit:C4968			
+PD						Other	Different than the one(s) previously specified or mentioned.	ncit:C17649			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	CAUSE_OF_DEATH_RANKING	Enum	Tier 1	Assigning a weighted relevance to the cause of death.	ncit:C168932	_undefined_	_undefined_	_undefined_			
+PD						Primary	The first significant event which ultimately led to death.	ncit:C99531	Note: There may be multiple contributory causes of death, but only one primary cause of death. Note: Only fill in this variable if LKSS is "Dead".		
+PD						Contributory	Any factor contributing to the cause of death.	ncit:C168948			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+											
+											
+DD	Disease Attributes										
+TD	Disease Site Assessment										
+TG	One row per subject per evaluation and per lesion (local, regional or metastatic)										
+VD	HONEST_BROKER_SUBJECT_ID	String	1 - contributors must include, regardless of the resource cost	The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_			
+VD	AGE_AT_DISEASE_SITE_ASSESSMENT	Integer	2 - contributors should prioritize inclusion if resources are available	The age (in days) of the subject at the time of this disease site assessment.	ncit:C174997	_undefined_	_undefined_	_undefined_			
+VD	TIME_PERIOD_SUBMITTER_ID	String	2 - contributors should prioritize inclusion if resources are available	This is the SUBMITTER_ID of the time period (defined in the "Time Period" table) during which this observation takes place.		_undefined_	_undefined_	_undefined_			
+VD	TUMOR_SUBMITTER_ID	String	2 - contributors should prioritize inclusion if resources are available	The anatomic site of the tumor.		_undefined_	_undefined_	_undefined_			
+VD	PRIMARY_TUMOR_SUBMITTER_ID	String	2 - contributors should prioritize inclusion if resources are available	The reference ID of the primary tumor - this ties non-primary tumors back to their appropriate primary tumor.		_undefined_	_undefined_	_undefined_			
+VD	DETECTION_METHOD	Enum	2 - contributors should prioritize inclusion if resources are available	The method used to detect the extent of the disease involvement.	ncit:C173262	_undefined_	_undefined_	_undefined_			
+PD						CT Scan	A method of examining structures within the body by scanning them with X rays and using a computer to construct a series of cross-sectional scans along a single axis.	ncit:C17204			
+PD						MRI	Imaging that uses radiofrequency waves and a strong magnetic field rather than x-rays to provide detailed pictures of internal organs and tissues. The technique is valuable for the diagnosis of many pathologic conditions, including cancer, heart and vascular disease, stroke, and joint and musculoskeletal disorders.	ncit:C16809			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	TISSUE_TYPE	Enum	2 - contributors should prioritize inclusion if resources are available	A piece of tissue removed from an organism for examination, analysis, or propagation.	ncit:C119940	_undefined_	_undefined_	_undefined_			
+PD						Bone	The structural organ comprised of specialized connective tissue that forms the skeletal components of the body.	ncit:C12366			
+PD						Soft Tissue	A general term comprising tissue that is not hardened or calcified; including muscle, fat, blood vessels, nerves, tendons, ligaments and fascia.	ncit:C12471			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	CLASSIFICATION	Enum	2 - contributors should prioritize inclusion if resources are available	The classification of a tumor based primarily on histopathological characteristics.	ncit:C174459	_undefined_	_undefined_	_undefined_			
+PD						Primary	A tumor at the original site of origin.	ncit:C8509			
+PD						Local Extension	The spread or growth of a tumor (abnormal mass of tissue) from its initial site of origin into nearby tissues or structures within the same region of the body. Local extension is a characteristic feature of many cancers and is an important consideration in cancer staging and diagnosis.				
+PD						Metastatic	A term referring to the clinical or pathologic observation of a tumor extension from its original site of growth to another anatomic site.	ncit:C14174			
+PD						Regional	The spread or growth of a tumor (abnormal mass of tissue) from its initial site of origin to regional lymph nodes.	ncit:C41844			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	SITE	Enum	2 - contributors should prioritize inclusion if resources are available	The anatomical site on which the disease is assessed.	ncit:C166232	_undefined_	_undefined_	_undefined_	Note: If there were multiple primary sites, include one observation per primary site.		
+PD						Abdominal Wall	The tissues that surround the organs that are present within the abdominal cavity. The abdominal wall tissue is composed of layers of fat, parietal peritoneum, fascia, and muscles.	ncit:C77608			
+PD						Adjacent Organ	An organ that is next to an organ of interest.	ncit:C180347			
+PD						Adrenal Gland	A flattened, roughly triangular body resting upon the upper end of each kidney; it is one of the ductless glands furnishing internal secretions (epinephrine and norepinephrine from the medulla and steroid hormones from the cortex).	ncit:C12666			
+PD						Ankle	A gliding joint between the distal ends of the tibia and fibula and the proximal end of the talus.	ncit:C32078			
+PD						Ankle Joint	A gliding joint between the distal ends of the tibia and fibula and the proximal end of the talus.	ncit:C32078			
+PD						Anterior Skull Base	The portion of the skull that is formed laterally by the orbital plates of the frontal bone, medially by the cribriform palate and crista galli of the ethmoid bone, and posteriorly by the planum sphenoidale and lesser wings of the sphenoid bone.	ncit:C180372			
+PD						Anus	The lower opening of the digestive tract, lying in the cleft between the buttocks, through which fecal matter is extruded.	ncit:C43362			
+PD						Appendix	Small tissue projection existing as a cecal diverticulum with a questionable history of vestigial versus specialized organ.	ncit:C12380			
+PD						Axilla	The underside concavity where the arm and the shoulder are joined.	ncit:C12674			
+PD						Bladder	The distensible sac-like organ that functions as a reservoir of urine, collecting from the kidneys and eliminating via the urethra.	ncit:C12414			
+PD						Bone	The structural organ comprised of specialized connective tissue that forms the skeletal components of the body.	ncit:C12366			
+PD						Bone Face	Any bone that contributes to the facial structures, except those bones that are part of the braincase.	ncit:C63706			
+PD						Bone Foot	One of the seven tarsal, five metatarsal, or 14 phalangeal bones in the foot.	ncit:C13068			
+PD						Bone Shoulder Girdle	The bony arch formed by the collarbones and shoulder blades.	ncit:C33547			
+PD						Brain	An organ composed of grey and white matter containing billions of neurons that is the center for intelligence and reasoning. It is protected by the bony cranium.	ncit:C12439			
+PD						Breast	One of two hemispheric projections of variable size situated in the subcutaneous layer over the pectoralis major muscle on either side of the chest.	ncit:C12971			
+PD						Bronchus	Tubular structure in continuation with the trachea, serving as air passage. It terminates in the lung (terminal bronchiole).	ncit:C12683			
+PD						Buttock	Either of the fleshy mounds in the rear pelvic area of the human body formed by the gluteal muscles.	ncit:C89806			
+PD						Calcaneus					
+PD						Carpal Bone	Any of the small bones of the wrist joint, located between the radius and the ulna and the metacarpus.	ncit:C12688			
+PD						Carpus					
+PD						Cervical Spine	The set of vertebrae immediately caudal to the skull.	ncit:C69313			
+PD						Cervical Vertebra	Any one of the seven vertebrae that are caudal to the skull, denoted as C1, C2, C3, C4, C5, C6 or C7.	ncit:C12693			
+PD						Chest Wall	The total system of structures outside the lungs that move as a part of breathing; it includes all structures from the skin to the parietal pleura.	ncit:C62484			
+PD						Clavicle	One of a pair of bones linking the scapula and the sternum. The clavicle is part of the pectoral girdle.	ncit:C12695			
+PD						Coccyx	A small bone located at the bottom of the spine. The coccyx is a result of 3-5 fused rudimentary vertebrae.	ncit:C12696			
+PD						Colon	The part of the large intestine measured from the cecum to the rectum consisting of ascending, transverse, descending and sigmoid portions. The purpose of the colon is to remove water from digested food prior to excretion.	ncit:C12382			
+PD						Cutaneous	Having to do with the skin.	ncit:C13316			
+PD						Dermis	The inner layer of the two main layers of the skin. The dermis has connective tissue, blood vessels, oil and sweat glands, nerves, hair follicles, and other structures. It is made up of a thin upper layer called the papillary dermis, and a thick lower layer called the reticular dermis.	ncit:C12701			
+PD						Dorsal Spine	A spinal curve that originates at the middle of the second thoracic vertebra and terminates at the middle of the last thoracic vertebra.	ncit:C32472			
+PD						Duodenum	A jointed tube 25-30 cm long that connects the stomach to the jejunum.	ncit:C12263			
+PD						Elbow	A type of hinge joint located between the forearm and upper arm.	ncit:C32497			
+PD						Elbow Joint	A type of hinge joint located between the forearm and upper arm.	ncit:C32497			
+PD						Epididymis	A crescent-like structure located in the upper and posterior surfaces of the testis. It consists of the efferent ductules and the duct of the epididymis. It facilitates the maturation of sperm that is produced in the testis.	ncit:C12328			
+PD						Esophagus	The portion of the digestive canal between the pharynx and stomach. It is about 25 cm long and consists of three parts: the cervical part, from the cricoid cartilage to the thoracic inlet; thoracic part, from thoracic inlet to the diaphragm; and abdominal part, below the diaphragm to the cardiac opening of the stomach.	ncit:C12389			
+PD						Ethmoid Bone	A light and spongy bone that is cubical in shape. This bone is positioned at the anterior part of the cranium, sitting between the two orbits, at the roof of the nose. It consists of four parts: a horizontal or cribriform plate; a perpendicular plate; and two lateral masses or labyrinths.	ncit:C12711			
+PD						Facial Region	The anterior portion of the head extending from the forehead to the chin and ear to ear. The facial structures contain the eyes, nose and mouth, cheeks and jaws.	ncit:C13071			
+PD						Fallopian Tube	One of a pair of tubes that extend from the uterus to each of the ovaries. Following ovulation the egg travels down the fallopian tube to the uterus where fertilization may or may not occur.	ncit:C12403			
+PD						Female Reproductive System Part	Any component of the female organs and tissues involved in the production and maturation of gametes and in their union and subsequent development as offspring.	ncit:C13039			
+PD						Femur	The upper leg bone positioned between the pelvis and the knee.	ncit:C12717			
+PD						Fibula	The small, lateral calf bone extending from the knee to the ankle.	ncit:C12718			
+PD						Fibular Head	The highest portion of the fibula that articulates with the patella.	ncit:C32719			
+PD						Finger	Any of the digits of the hand.	ncit:C32608			
+PD						Foot	The structure found below the ankle joint required for locomotion.	ncit:C32622			
+PD						Foot Bone	The structure found below the ankle joint required for locomotion.	ncit:C32622			
+PD						Foot Phalanges	A bone of the foot.	ncit:C52772			
+PD						Gallbladder	A pear-shaped organ located under the liver that stores and concentrates bile secreted by the liver. From the gallbladder the bile is delivered through the bile ducts into the intestine thereby aiding the digestion of fat-containing foods.	ncit:C12377			
+PD						Gastrointestinal Tract	The upper gastrointestinal (GI) tract is comprised of mouth, pharynx, esophagus and stomach while the lower GI tract consists of intestines and anus. The primary function of the GI tract is to ingest, digest, absorb and ultimately excrete food stuff.	ncit:C34082			
+PD						Groin	The lower region of the anterior abdominal wall located laterally to the pubic region.	ncit:C12726			
+PD						Hand	The distal portion of the upper extremity. It consists of the carpus, metacarpus, and digits.	ncit:C32712			
+PD						Hand Bone	A bone of the hand.	ncit:C52771			
+PD						Hand Phalanges	The 14 bones that are found in the fingers of each hand and also in the toes of each foot. Each finger has 3 phalanges (the distal, middle, and proximal); the thumb only has 2.	ncit:C52771			
+PD						Head and Neck	For oncology, an area of the body generally construed to comprise the base of skull and facial bones, sinuses, orbits, salivary glands, oral cavity, oropharynx, larynx, thyroid, facial and neck musculature and lymph nodes draining these areas.	ncit:C12418			
+PD						Heart	A hollow organ located slightly to the left of the middle portion of the chest. It is composed of muscle and it is divided by a septum into two sides: the right side which receives de-oxygenated blood from the body and the left side which sends newly oxygenated blood to the body. Each side is composed of two chambers: the atrium (receiving blood) and ventricle (ejecting blood).	ncit:C12727			
+PD						Humerus	The upper arm bone between the shoulder and elbow.	ncit:C12731			
+PD						Hypodermis	A tissue sample that contains the epidermis, dermis, and subcutaneous adipose tissue.	ncit:C92441			
+PD						Inferior Limb	A bone of the leg (lower extremity).	ncit:C12982			
+PD						Illium					
+PD						Ischium	The most posterior and ventral bone making up the pelvis.	ncit:C32884			
+PD						Joint, NOS					
+PD						Kidney	One of the two bean-shaped organs located on each side of the spine in the retroperitoneum. The right kidney is located below the liver and the left kidney below the diaphragm. The kidneys filter and secrete metabolic products and minerals from the blood, thus maintaining homeostasis. On the superior pole of each kidney there is an adrenal gland. Each kidney and adrenal gland is surrounded by fat.	ncit:C12415			
+PD						Knee	A joint connecting the lower part of the femur with the upper part of the tibia. The lower part of the femur and the upper part of the tibia are attached to each other by ligaments. Other structures of the knee joint include the upper part of the fibula, located below and parallel to the tibia, and the patella which moves as the knee bends.	ncit:C32898			
+PD						Knee Joint	A joint connecting the lower part of the femur with the upper part of the tibia. The lower part of the femur and the upper part of the tibia are attached to each other by ligaments. Other structures of the knee joint include the upper part of the fibula, located below and parallel to the tibia, and the patella which moves as the knee bends.	ncit:C32898			
+PD						Larynx	The cartilaginous structure of the respiratory tract between the pharynx and the trachea. It contains elastic vocal cords required for sound production.	ncit:C12420			
+PD						Leg	The portion of the lower extremity between the knee and the ankle. For clinical purposes this term is also used to refer to the whole inferior limb.	ncit:C32974			
+PD						Liver	A triangular-shaped organ located under the diaphragm in the right hypochondrium. It is the largest internal organ of the body, weighting up to 2 kg. Metabolism and bile secretion are its main functions. It is composed of cells which have the ability to regenerate.	ncit:C12392			
+PD						Lower Limb	The limb that is composed of the hip, thigh, leg and foot.	ncit:C12742			
+PD						Lumbar Spine	Those vertebrae between the ribs and the pelvis, L1-L5 in man.	ncit:C69314			
+PD						Lumbar Vertebra	One of the five bones situated between the thoracic vertebrae and the sacrum in the lower part of the spine.	ncit:C12744			
+PD						Lung	One of a pair of viscera occupying the pulmonary cavities of the thorax, the organs of respiration in which aeration of the blood takes place. As a rule, the right lung is slightly larger than the left and is divided into three lobes (an upper, a middle, and a lower or basal), while the left has two lobes (an upper and a lower or basal). Each lung is irregularly conical in shape, presenting a blunt upper extremity (the apex), a concave base following the curve of the diaphragm, an outer convex surface (costal surface), an inner or mediastinal surface (mediastinal surface), a thin and sharp anterior border, and a thick and rounded posterior border.	ncit:C12468			
+PD						Lymph Nodes	A bean-shaped organ surrounded by a connective tissue capsule. It is part of the lymphatic system and is found throughout the body. It is composed predominantly of lymphocytes and its main function is immune protection.	ncit:C12745			
+PD						Lymphatic Basin	A regional collection of lymph nodes that drains lymph from a specific area of the body.	ncit:C94547			
+PD						Mandible	The lower jaw bone holding the lower teeth.	ncit:C12290			
+PD						Maxilla	The upper jawbone in vertebrates; it is fused to the cranium.	ncit:C26470			
+PD						Meninges	Any one of three membranes that surround the brain and spinal cord.	ncit:C12348			
+PD						Metacarpals	Any of the five bones between the wrist and the fingers that form the skeleton of the palm.	ncit:C12751			
+PD						Metatarsals	A bone belonging to the middle part of the foot located between toes and ankle. There are 5 metatarsal bones and they are numbered from the medial side.	ncit:C12752			
+PD						Nasal Septum	The thin wall between the two nasal cavities.	ncit:C33160			
+PD						Nasopharynx	The part of the pharynx in the back of the throat, at and above the soft palate. The nasopharynx is continuous with the nasal passages.	ncit:C12423			
+PD						Neck	The region that connects the head to the rest of the body.	ncit:C13063			
+PD						Oral Cavity	The cavity located at the upper end of the alimentary canal, behind the teeth and gums that is bounded on the outside by the lips, above by the hard and soft palates and below by the tongue.	ncit:C12421			
+PD						Orbit	The bony cavity of the skull which contains the eye, anterior portion of the optic nerve, ocular muscles and ocular adnexa. Seven bones contribute to the structure of the orbit: the frontal, maxillary, zygomatic, sphenoid, lacrimal, ethmoid, and palatine bones.	ncit:C12347			
+PD						Ovary	One of the paired female reproductive glands containing the ova or germ cells; the ovary's stroma is a vascular connective tissue containing numbers of ovarian follicles enclosing the ova.	ncit:C12404			
+PD						Pancreas	An organ behind the lower part of the stomach that is the shape of a fish and about the size of a hand. It is a compound gland composed of both exocrine and endocrine tissues. The endocrine pancreas makes insulin so that the body can use glucose (sugar) for energy. The exocrine pancreas makes enzymes that help the body digest food. Spread all over the pancreas are areas called the Islets of Langerhans. The cells in these areas each have a special purpose. The alpha cells make glucagon, which raises the level of glucose in the blood; the beta cells make insulin; the delta cells make somatostatin. There are also PP cells and D1 cells, about which little is known.	ncit:C12393			
+PD						Paranasal Sinus	Any one of the air-filled spaces within the ethmoid, frontal, maxillary, or sphenoid bones, which communicate with the nasal cavity.	ncit:C12763			
+PD						Paratesticular	A small anatomical compartment that contains the testicular collecting system, and mesothelial and mesenchymal components that represent extensions of the abdominal cavity and retroperitoneum.	ncit:C162491			
+PD						Patella	A small flat triangular bone in front of the knee that articulates with the femur and protects the knee joint.	ncit:C33282			
+PD						Pelvis	The bony, basin-shaped structure formed by the hipbones and the base of the backbone supporting the lower limbs in humans.	ncit:C12767			
+PD						Penis	The male organ of urination and copulation.	ncit:C12409			
+PD						Peritoneum	The tissue that lines the wall of the abdominal cavity, intestine, mesentery, and pelvic organs. It consists of the parietal peritoneum and the visceral peritoneum.	ncit:C12770			
+PD						Phalanges					
+PD						Pleura	The tissue that lines the wall of the thoracic cavity and the surface of the lungs.	ncit:C12469			
+PD						Prostate	The walnut shaped accessory sex gland of the male reproductive system. It is located in the pelvis just below the bladder, surrounding the prostatic part of the urethra. The prostate gland secretes a fluid which is part of the semen.	ncit:C12410			
+PD						Pubis					
+PD						Radius Bone	The long bone of the forearm that extends from the lateral aspect of the elbow to the thumb-side of the wrist.	ncit:C12777			
+PD						Rectum	The terminal portion of the gastrointestinal tract, extending from the rectosigmoid junction to the anal canal.	ncit:C12390			
+PD						Retroperitoneum	The back of the abdomen where the kidneys lie and the great blood vessels run.	ncit:C12298			
+PD						Rib	Any one of the paired bones, 12 on either side, extending from the thoracic vertebrae toward the median line on the ventral aspect of the trunk. The long curved bones which form the rib cage. Generally, ribs 1 to 7 are connected to the sternum by their costal cartilages and are called true ribs, whereas ribs 8 to 12 are termed false ribs.	ncit:C12782			
+PD						Sacrum	The triangular bone, made up of 5 fused bones of the spine, located in the lower area of the spine between the fifth lumbar vertebra and the coccyx.	ncit:C33508			
+PD						Salivary Gland	An exocrine gland that secretes saliva. Salivary glands are mostly located in and around the oral cavity.	ncit:C12426			
+PD						Scalp	The skin which covers the top of the head and which is usually covered by hair.	ncit:C89807			
+PD						Scapula	The flat triangle-shaped bone that connects the humerus with the clavicle in the back of the shoulder.	ncit:C12783			
+PD						Shoulder Girdle	The bony arch formed by the collarbones and shoulder blades.	ncit:C33547			
+PD						Shoulder Joint	A ball-and-socket joint at the upper end of the humerus, located at the junction of humerus and scapula.	ncit:C33548			
+PD						Skull	The bones that form the head, made up of the bones of the braincase and face.	ncit:C12789			
+PD						Small Intestine	The section of the intestines between the pylorus and cecum. The small intestine is approximately 20 feet long and consists of the duodenum, the jejunum, and the ileum. Its main function is to absorb nutrients from food as the food is transported to the large intestine.	ncit:C12386			
+PD						Spine	A series of bones, muscles, tendons, and other tissues reaching from the base of the skull to the tailbone. The vertebral column forms the axis of the skeleton and encloses as well as protects the spinal cord and the fluid surrounding the spinal cord.	ncit:C12998			
+PD						Spleen	An organ that is part of the hematopoietic and immune systems. It is composed of the white pulp and the red pulp and is surrounded by a capsule. It is located in the left hypochondriac region. Its functions include lymphocyte production, blood cell storage, and blood cell destruction.	ncit:C12432			
+PD						Sternum	The long, flat bone connecting with the cartilages of the first seven ribs and the clavicle.	ncit:C12793			
+PD						Stomach	An organ located under the diaphragm, between the liver and the spleen as well as between the esophagus and the small intestine. The stomach is the primary organ of food digestion.	ncit:C12391			
+PD						Superior Maxilla	The facial bone that forms the mediala floor of the orbit.	ncit:C33682			
+PD						Tarsals	Any one of the seven bones forming the instep of the foot.	ncit:C12796			
+PD						Temporal Bone	A large irregular bone situated at the base and side of the skull, connected with the mandible via the temporomandibular joint. The temporal bone consists of the squamous, tympanic and petrous parts. The petrous portion of the temporal bone contains the vestibulocochlear organ of the inner ear.	ncit:C12797			
+PD						Testis	Either of the paired male reproductive glands that produce the male germ cells and the male hormones.	ncit:C12412			
+PD						Thigh	A part of the lower limb, located between hip and knee.	ncit:C33763			
+PD						Thoracic Vertebra	One of 12 vertebrae in the human vertebral column. The thoracic vertebrae are situated between the seventh cervical vertebra down to the first lumbar vertebra.	ncit:C12798			
+PD						Thorax	The division of the body lying between the neck and the abdomen.	ncit:C12799			
+PD						Thymus	A bi-lobed organ surrounded by a connective tissue capsule. It is located in the upper anterior portion of the chest, behind the sternum. It is composed predominantly of lymphocytes and fewer epithelial cells. Connective tissue septa separate the lobes into lobules. The lobules contain an outer portion (cortical zone) which is rich in lymphocytes and an inner portion (medullary zone) which is rich in epithelial cells. It is an organ essential for the development of the immune system. Its function is the maturation of the progenitor lymphoid cells to thymocytes and subsequently to mature T-cells. It reaches its greatest weight at puberty and subsequently begins to involute.	ncit:C12433			
+PD						Thyroid	An endocrine gland located at the base of the neck that produces and secretes thyroxine and other hormones. Thyroxine is important for metabolic control.	ncit:C12400			
+PD						Tibia	A bone located between the femur and the tarsus, being part of the lower leg.	ncit:C12800			
+PD						Toe	One of the terminal digits of the foot.	ncit:C33788			
+PD						Tonsil	The two organs situated in the throat on either side of the narrow passage from the mouth to the pharynx. They are composed of lymphoid tissues.	ncit:C12802			
+PD						Trachea	The fibrocartilaginous, mucous-lined tube passing from the larynx to the bronchi.	ncit:C12428			
+PD						Ulna	One of the bones that comprise the forearm. The largest aspect articulates with the humerus at the elbow joint and the smallest portion of the ulna articulates with the carpal bones in the wrist.	ncit:C12809			
+PD						Upper Airway	The sinuses and those parts of the respiratory system above the trachea. It includes the nares, nasopharynx, oropharynx, larynx, vocal cords, glottis and upper trachea.	ncit:C33839			
+PD						Upper Arm	The portion of the upper extremity between the shoulder and the elbow. For clinical purposes this term is also used to refer to the whole superior limb.	ncit:C32141			
+PD						Upper Limb	The region of the body that includes the arm, the forearm, and hand.	ncit:C12671			
+PD						Ureter	The thick-walled tube that carries urine from each kidney to the bladder.	ncit:C12416			
+PD						Uterus	A hollow, thick-walled, muscular organ located within the pelvic cavity of a woman. Within the uterus the fertilized egg implants and the fetus develops during pregnancy.	ncit:C12405			
+PD						Vagina	The female genital canal, extending from the uterus to the vulva.	ncit:C12407			
+PD						Vasculo-Nervous	A body structure consisting of nerves traveling together with arteries, veins, and/or lymphatics.	ncit:C74603			
+PD						Viscera	Two or more internal organs.	ncit:C28287			
+PD						Vulva	The external, visible part of the female genitalia surrounding the urethral and vaginal opening. The vulva includes the clitoris and inner as well as outer labia.	ncit:C12408			
+PD						Wrist	A joint between the distal end of the radius and the proximal row of carpal bones.	ncit:C33894			
+PD						Wrist Joint	A joint between the distal end of the radius and the proximal row of carpal bones.	ncit:C33894			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	LATERALITY	Enum	2 - contributors should prioritize inclusion if resources are available	A qualifier for the side of the body the tumor findings assessment is performed.	ncit:C119931	_undefined_	_undefined_	_undefined_			
+PD						Left	A finding indicating the tumor location is on the left side of the specimen.	ncit:C160200			
+PD						Right	A finding indicating the tumor location is on the right side of the specimen.	ncit:C160199			
+PD						Bilateral	A finding indicating the tumor location is on the both sides of the specimen.	ncit:C160201			
+PD						Midline	A finding indicating the tumor location is on the midline of the specimen.	ncit:C162614			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	SITE_WITHIN_BONE	Enum	2 - contributors should prioritize inclusion if resources are available	The anatomic site within the bone.	ncit:C174998	_undefined_	_undefined_	_undefined_			
+PD						Distal	Situated farthest from a point of attachment or origin, as of a limb or bone; or directed away from the midline of the body.	ncit:C25237			
+PD						Proximal	Situated nearest to a point of attachment or origin.	ncit:C25236			
+PD						Epiphysis	The shaft of a long bone, located between the two epiphyses; it is cylindrical in shape, with walls of compact bone enclosing a central marrow cavity.	ncit:C32460			
+PD						Metaphysis	An area of a long bone located at the junction of the diaphysis and epiphysis, which harbors the epiphyseal plate in immature bones.	ncit:C52723			
+PD						Diaphysis	The round end of the long bones.	ncit:C32529			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	DIAMETER1	Decimal	2 - contributors should prioritize inclusion if resources are available	The longest diameter of the tumor.	ncit:C96684	_undefined_	_undefined_	_undefined_			
+VD	DIAMETER1_UNIT	Enum	2 - contributors should prioritize inclusion if resources are available	The unit of measure symbol associated with a biospecimen or tissue fragment dimension.		_undefined_	_undefined_	_undefined_			
+PD						cm	A basic unit of length in the former CGS version of metric system, equal to one hundredth of a meter or approximately 0.393 700 787 inch.	ncit:C49668			
+VD	DIAMETER2	Decimal	2 - contributors should prioritize inclusion if resources are available	The second longest diameter of the tumor.	ncit:C96684	_undefined_	_undefined_	_undefined_			
+VD	DIAMETER2_UNIT	Enum	2 - contributors should prioritize inclusion if resources are available	The unit of measure symbol associated with a biospecimen or tissue fragment dimension.		_undefined_	_undefined_	_undefined_			
+PD						cm	A basic unit of length in the former CGS version of metric system, equal to one hundredth of a meter or approximately 0.393 700 787 inch.	ncit:C49668			
+VD	DIAMETER3	Decimal	2 - contributors should prioritize inclusion if resources are available	The third longest diameter of the tumor.	ncit:C16809	_undefined_	_undefined_	_undefined_			
+VD	DIAMETER3_UNIT	Enum	2 - contributors should prioritize inclusion if resources are available	The unit of measure symbol associated with a biospecimen or tissue fragment dimension.		_undefined_	_undefined_	_undefined_			
+PD						cm	A basic unit of length in the former CGS version of metric system, equal to one hundredth of a meter or approximately 0.393 700 787 inch.	ncit:C49668			
+VD	TUMOR_VOLUME	Enum	2 - contributors should prioritize inclusion if resources are available	The size of a cancer measured by the amount of space taken up by the tumor. For example, the tumor volume of prostate cancer is the percentage of the prostate taken up by the tumor.	ncit:C94515	_undefined_	_undefined_	_undefined_			
+PD						<200 mL	A finding of a tumor volume that is less than 200 milliters.	ncit:C175000			
+PD						>=200 mL	A finding of a tumor volume that is equal to or greater than 200 milliters.	ncit:C175001			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	FRACTURE	Enum	2 - contributors should prioritize inclusion if resources are available	Did the subject experienced a fracture at this site?	ncit:C3046	_undefined_	_undefined_	_undefined_			
+PD						Yes	The affirmative response to a question.	ncit:C49488			
+PD						No	The non-affirmative response to a question.	ncit:C49487			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	DEPTH	Enum	2 - contributors should prioritize inclusion if resources are available	The depth of the tumor.	ncit:C25333	_undefined_	_undefined_	_undefined_			
+PD						Superficial	Of little substance or significance; involving only a surface.	ncit:C25239			
+PD						Deep	Extending relatively far inward.	ncit:C25240			
+PD						Surface	The extended two-dimensional outer boundary of a three-dimensional object.	ncit:C25245			
+PD						Cortical	The dense or compact outer layer of tissue that covers the bone.	ncit:C52714			
+PD						Intra-Medullary	Occurring in, or located within the spinal cord or the marrow space of a bone.	ncit:C96266			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+											
+											
+DD	Disease Attributes										
+TD	Disease Characteristics										
+TG	One row per subject per disease site										
+VD	HONEST_BROKER_SUBJECT_ID	String	To-do	The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_			
+VD	TIME_PERIOD_SUBMITTER_ID	String	To-do	This is the SUBMITTER_ID of the time period (defined in the "Time Period" table) during which this observation takes place.		_undefined_	_undefined_	_undefined_			
+VD	SKIP_LESION	Enum	2 - contributors should prioritize inclusion if resources are available	Was there a benign or malignant pathologic process which is patchy and skips areas which are normal (uninvolved by the pathologic process)?	ncit:C174454	_undefined_	_undefined_	_undefined_			
+PD						Yes	The affirmative response to a question.	ncit:C49488			
+PD						No	The non-affirmative response to a question.	ncit:C49487			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	SKIP_MET_INVOLVEMENT	Enum	2 - contributors should prioritize inclusion if resources are available	A question about the areas involved in the skip metastasis.	ncit:C186745	_undefined_	_undefined_	_undefined_			
+PD						Single	One metastatic area.	ncit:C180356			
+PD						Multiple	More than one metastatic area.	ncit:C180354			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+											
+											
+DD	Disease Attributes										
+TD	Diagnosis										
+TG	One row per subject per diagnosis										
+VD	HONEST_BROKER_SUBJECT_ID	String		The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_			
+VD	AGE_AT_DIAG_ASSESSMENT	Integer		The age (in days) of the subject at the time of this diagnostic assessment.	ncit:C175004	_undefined_	_undefined_	_undefined_			
+VD	TIME_PERIOD_SUBMITTER_ID	String		This is the SUBMITTER_ID of the time period (defined in the "Time Period" table) during which this observation takes place.		_undefined_	_undefined_	_undefined_			
+VD	DIAGNOSIS_BASIS	Enum		The type of diagnosis used for determining the medical condition.		_undefined_	_undefined_	_undefined_		New VD	
+PD						Histological	Pertaining to the combined microscopic physical features of cells and their surrounding extracellular environment in tissues.	ncit:C25526		New PD	
+VD	DIAGNOSIS	Enum	Tier 2	The investigation, analysis and recognition of the presence and nature of disease, condition, or injury from expressed signs and symptoms; also, the scientific determination of any kind; the concise results of such an investigation.	ncit:C15220	_undefined_	_undefined_	_undefined_			
+PD						Conventional Osteosarcoma	A high grade malignant bone-forming mesenchymal neoplasm producing osteoid. The tumor arises from the medullary portion of the bone. It affects the long bones and most commonly, the distal femur, proximal tibia, and proximal humerus. Pain with or without a palpable mass is the most common clinical presentation. It usually has an aggressive growth and may metastasize through the hematogenous route. The lung is the most frequent site of metastasis.	ncit:C35870			
+PD						Telangiectatic Osteosarcoma	An osteosarcoma usually arising from the metaphysis of long bones. It is characterized by the presence of a cystic architecture with blood-filled spaces. The prognosis is similar to that of conventional osteosarcoma.	ncit:C3902			
+PD						Small Cell Osteosarcoma	An osteosarcoma usually arising from the metaphysis of long bones. It is characterized by the presence of small cells and osteoid production. The prognosis is usually unfavorable.	ncit:C4023			
+PD						Surface Osteosarcoma	A usually aggressive malignant bone-forming mesenchymal neoplasm arising from the surface of the bone.	ncit:C7134			
+PD						Osteoblastic Osteosarcoma	A conventional osteosarcoma characterized by the predominance of osteoid matrix.	ncit:C53953			
+PD						Chondroblastic Osteosarcoma	An osteosarcoma characterised by the presence of atypical cartilage of variable cellularity. It may or may not be associated with the presence of myxoid areas or focal bone formation.	ncit:C4021			
+PD						Fibroblastic Osteosarcoma	A conventional osteosarcoma characterized by the presence of spindle shaped cells.	ncit:C4020			
+PD						Periosteal Osteosarcoma	An intermediate grade malignant bone-forming mesenchymal neoplasm with chondroblastic differentiation. It arises from the surface of the bone and affects the diaphysis or diaphyseal- metaphyseal portion of the long bones. A painless mass or swelling is the most common clinical sign. It is associated with a better prognosis than conventional osteosarcoma.	ncit:C8970			
+PD						Conventional Osteosarcoma	A high grade malignant bone-forming mesenchymal neoplasm producing osteoid. The tumor arises from the medullary portion of the bone. It affects the long bones and most commonly, the distal femur, proximal tibia, and proximal humerus. Pain with or without a palpable mass is the most common clinical presentation. It usually has an aggressive growth and may metastasize through the hematogenous route. The lung is the most frequent site of metastasis.	ncit:C35870			
+PD						Parosteal Osteosarcoma	A low grade malignant bone-forming mesenchymal neoplasm arising from the surface of the bone. It usually affects the distal posterior femur, the proximal tibia, and proximal humerus. Painless swelling is the usual clinical sign. Most patients are young adults and the prognosis is usually excellent.	ncit:C8969			
+PD						Giant Cell Rich Osteosarcoma	An exceedingly rare, high-grade variant of conventional osteosarcoma characterized by the presence of numerous osteoclast-like giant cells and variable amount of tumor osteoid.	ncit:C179410			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	HISTOLOGY_GRADE	Enum	Tier 2	The degree of abnormality of cancer cells, a measure of differentiation, the extent to which cancer cells are similar in appearance and function to healthy cells of the same tissue type. The degree of differentiation often relates to the clinical behavior of the particular tumor. Based on the microscopic findings, tumor grade is commonly described by one of four degrees of severity. Histopathologic grade of a tumor may be used to plan treatment and estimate the future course, outcome, and overall prognosis of disease. Certain types of cancers, such as soft tissue sarcoma, primary brain tumors, lymphomas, and breast have special grading systems.	ncit:C18000	_undefined_	_undefined_	_undefined_			
+PD						Grade 1	An experience that is usually transient, and requires no special treatment or intervention. The event does not generally interfere with usual daily activities. Includes transient laboratory test alterations.	ncit:C41338			
+PD						Grade 2	An experience that is alleviated with simple therapeutic treatments. The event impacts usual daily activities. Includes laboratory test alterations indicating injury, but without long-term risk.	ncit:C41339			
+PD						Grade 3	An adverse event experience that requires intensive therapeutic intervention and interrupts usual daily activities.	ncit:C41340			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+											
+											
+DD	Treatment										
+TD	Biopsy/Surgical Procedures										
+TG	One record per subject per surgery										
+VD	HONEST_BROKER_SUBJECT_ID	String	Tier 1	The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_			
+VD	AGE_AT_PROCEDURE	Number	Tier 1	Age of subject (in days) at procedure.	ncit:C175008	_undefined_	_undefined_	_undefined_			
+VD	TIME_PERIOD_SUBMITTER_ID	String		This is the SUBMITTER_ID of the time period (defined in the "Time Period" table) during which this observation takes place.		_undefined_	_undefined_	_undefined_			
+VD	STATUS	Enum		Was this procedure performed?		_undefined_	_undefined_	_undefined_			
+PD						Yes					
+PD						No					
+VD	PROCEDURE_TYPE	Enum				_undefined_	_undefined_	_undefined_			
+PD						Biopsy					
+PD						Amputation					
+PD						Limb Salvage					
+PD						Resection					
+PD						Reconstruction					
+PD						Surgery, NOS					
+VD	PROCEDURE	Enum				_undefined_	_undefined_	_undefined_			
+PD						Core Needle	The removal of a tissue sample using a needle with a relatively large diameter, for microscopic examination.				
+PD						Incisional Biopsy	A surgical procedure in which part of a lesion is removed for microscopic examination.				
+PD						Excisional Biopsy	A surgical procedure in which an entire lesion is removed for microscopic examination.				
+PD						Excision	The surgical removal of a lesion, often as part of a biopsy and with healthy margins.				
+PD						Wide Resection	Surgery to cut out the cancer and some healthy tissue around it.				
+PD						Disarticulation	The surgical separation of bones at a joint.				
+PD						Rotationplasty	A surgical procedure used to treat malignant bone tumors near the knee in which the bottom of the femur and the upper tibia are surgically removed and the lower leg is rotated 180 degrees and re-attached to the femur. The foot and ankle then function as a substitute knee joint allowing for comparable stability to a below-the-knee amputation when placed in a prosthetic.				
+PD						Amputation, through involved bone	An amputation through the diseased portion of the bone.				
+PD						Amputation, proximal to involved bone	An amputation from the nearest feasible anatomical point to the involved portion of the bone.				
+PD						Amputation, NOS	The surgical removal of all or part of a limb or other appendage.				
+PD						Internal Hemipelvectomy	Unilateral removal of the pelvic girdle by resecting the innominate bone while preserving the ipsilateral limb.				
+PD						External Hemipelvectomy	Unilateral removal of the pelvic girdle by resection of the innominate bone plus amputation of the ipsilateral limb.				
+PD						Craniofacial Resection	A surgical procedure to remove part of the craniofacial structure.				
+PD						Intra-Articular Resection	A resection performed within a joint.				
+PD						Extra-Articular Resection	A resection that is done outside the joint.				
+PD						Axial Skeleton Resection	A surgical procedure to remove part of the axial skeleton.				
+PD						Intercalary Resection	A resection of a diaphyseal segment with the goal of preserving adjacent joints. This may include portions of the metaphysis and/or epiphysis depending on the extent of disease.				
+PD						Resection, NOS					
+PD						Endoprosthetic	An artificial device inserted to replace a missing part.				
+PD						Osteoarticular Allograft	Grafting bone and cartilage that has been obtained from an individual of the same species as the intended recipient.				
+PD						Intercalary Allograft	Grafting a segment of long bone that is obtained from an individual of the same species as the intended recipient.				
+PD						Allograft-Prosthetic	Grafting a composite of an allograft and a prosthetic device.				
+PD						Non-Vascularized Autograft	Harvesting a graft from the intended recipient that has no attached blood supply.				
+PD						Vascularized Autograft	Harvesting a graft from the intended recipient that has attached blood supply.				
+PD						Allograft and Vascularized Autograft	The combination of a bone graft from a donor of the same species and a graft from the intended recipient that has attached arteries and veins.				
+PD						Vascularized Autograft Endoprosthetic Composite	The combination of a graft from the intended recipient that has attached arteries and veins and a prosthetic device intended for implant.				
+PD						Arthrodesis	Surgical fixation or immobilization of a joint, performed to allow bones to fuse or join together.				
+PD						Reconstruction, NOS					
+PD						Thoracotomy	A surgical procedure in which an large incision is made into the chest wall, for the purpose of accessing organs inside the thoracic cavity.				
+PD						Sternotomy	Incision into or through the sternum.				
+PD						Video-Assisted Thoroscopic Surgery	Thoracic surgery that is aided by the use of a video camera.				
+PD						Pneumonectomy	A lymph node located in the area below the clavicle.				
+PD						Lobectomy	Surgical removal of a lobe of an organ.				
+PD						Wedge Resection	Surgical removal of a triangular wedge shaped section of tissue.				
+VD	CLASSIFICATION	Enum	Tier 1	The classification of a tumor based primarily on histopathological characteristics.	ncit:C174459	_undefined_	_undefined_	_undefined_			
+PD						Primary	A tumor at the original site of origin.	ncit:C8509			
+PD						Local Extension	The spread or growth of a tumor (abnormal mass of tissue) from its initial site of origin into nearby tissues or structures within the same region of the body. Local extension is a characteristic feature of many cancers and is an important consideration in cancer staging and diagnosis.				
+PD						Metastatic	A term referring to the clinical or pathologic observation of a tumor extension from its original site of growth to another anatomic site.	ncit:C14174			
+PD						Regional	The spread or growth of a tumor (abnormal mass of tissue) from its initial site of origin to regional lymph nodes.	ncit:C41844			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	TISSUE_TYPE	Enum	Tier 2	The type of material sample taken from a biological entity for tumor findings assessment testing.	ncit:C119940	_undefined_	_undefined_	_undefined_			
+PD						Bone	Connective tissue that forms the skeletal components of the body.	ncit:C12366			
+PD						Soft Tissue	A general term comprising tissue that is not hardened or calcified; including muscle, fat, blood vessels, nerves, tendons, ligaments and fascia.	ncit:C12471			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	SITE	Enum	Tier 1	The anatomic site of the tumor.	ncit:C157120	_undefined_	_undefined_	_undefined_			
+PD						Abdominal Wall	The upper leg bone positioned between the pelvis and the knee.	ncit:C12717			
+PD						Adrenal	A flattened, roughly triangular body resting upon the upper end of each kidney; it is one of the ductless glands furnishing internal secretions (epinephrine and norepinephrine from the medulla and steroid hormones from the cortex).	ncit:C12666			
+PD						Ankle	A gliding joint between the distal ends of the tibia and fibula and the proximal end of the talus.	ncit:C32078			
+PD						Ankle Joint	A gliding joint between the distal ends of the tibia and fibula and the proximal end of the talus.	ncit:C32078			
+PD						Anterior Skull Base	The portion of the skull that is formed laterally by the orbital plates of the frontal bone, medially by the cribriform palate and crista galli of the ethmoid bone, and posteriorly by the planum sphenoidale and lesser wings of the sphenoid bone.	ncit:C180372			
+PD						Anus	The lower opening of the digestive tract, lying in the cleft between the buttocks, through which fecal matter is extruded.	ncit:C43362			
+PD						Appendix	Small tissue projection existing as a cecal diverticulum with a questionable history of vestigial versus specialized organ.	ncit:C12380			
+PD						Axilla	The underside concavity where the arm and the shoulder are joined.	ncit:C12695			
+PD						Bladder	The distensible sac-like organ that functions as a reservoir of urine, collecting from the kidneys and eliminating via the urethra.	ncit:C12414			
+PD						Bone Face	Any bone that contributes to the facial structures, except those bones that are part of the braincase.	ncit:C63706			
+PD						Bone Foot	One of the seven tarsal, five metatarsal, or 14 phalangeal bones in the foot.	ncit:C13068			
+PD						Bone Shoulder Girdle	The bony arch formed by the collarbones and shoulder blades.	ncit:C33547			
+PD						Brain	An organ composed of grey and white matter containing billions of neurons that is the center for intelligence and reasoning. It is protected by the bony cranium.	ncit:C12439			
+PD						Breast	One of two hemispheric projections of variable size situated in the subcutaneous layer over the pectoralis major muscle on either side of the chest.	ncit:C12971			
+PD						Bronchus	Tubular structure in continuation with the trachea, serving as air passage. It terminates in the lung (terminal bronchiole).	ncit:C12683			
+PD						Buttock	Either of the fleshy mounds in the rear pelvic area of the human body formed by the gluteal muscles.	ncit:C89806			
+PD						Carpal	Any of the small bones of the wrist joint, located between the radius and the ulna and the metacarpus.	ncit:C12688			
+PD						Cervical Spine	The set of vertebrae immediately caudal to the skull.	ncit:C69313			
+PD						Chest Wall	The total system of structures outside the lungs that move as a part of breathing; it includes all structures from the skin to the parietal pleura.	ncit:C62484			
+PD						Clavicle	The region of the body between the neck and the upper arm.	ncit:C24203			
+PD						Coccyx	A small bone located at the bottom of the spine. The coccyx is a result of 3-5 fused rudimentary vertebrae.	ncit:C12696			
+PD						Colon	The part of the large intestine measured from the cecum to the rectum consisting of ascending, transverse, descending and sigmoid portions. The purpose of the colon is to remove water from digested food prior to excretion.	ncit:C12382			
+PD						Cutaneous	Having to do with the skin.	ncit:C13316			
+PD						Dorsal Spine	A spinal curve that originates at the middle of the second thoracic vertebra and terminates at the middle of the last thoracic vertebra.	ncit:C32472			
+PD						Duodenum	A jointed tube 25-30 cm long that connects the stomach to the jejunum.	ncit:C12263			
+PD						Elbow	A type of hinge joint located between the forearm and upper arm.	ncit:C32497			
+PD						Elbow Joint	A type of hinge joint located between the forearm and upper arm.	ncit:C32497			
+PD						Epididymis	A crescent-like structure located in the upper and posterior surfaces of the testis. It consists of the efferent ductules and the duct of the epididymis. It facilitates the maturation of sperm that is produced in the testis.	ncit:C12328			
+PD						Esophagus	The portion of the digestive canal between the pharynx and stomach. It is about 25 cm long and consists of three parts: the cervical part, from the cricoid cartilage to the thoracic inlet; thoracic part, from thoracic inlet to the diaphragm; and abdominal part, below the diaphragm to the cardiac opening of the stomach.	ncit:C12389			
+PD						Ethmoid	A light and spongy bone that is cubical in shape. This bone is positioned at the anterior part of the cranium, sitting between the two orbits, at the roof of the nose. It consists of four parts: a horizontal or cribriform plate; a perpendicular plate; and two lateral masses or labyrinths.	ncit:C12711			
+PD						Facial Region	The anterior portion of the head extending from the forehead to the chin and ear to ear. The facial structures contain the eyes, nose and mouth, cheeks and jaws.	ncit:C13071			
+PD						Fallopian Tube	One of a pair of tubes that extend from the uterus to each of the ovaries. Following ovulation the egg travels down the fallopian tube to the uterus where fertilization may or may not occur.	ncit:C12403			
+PD						Female Reproductive System Part	Any component of the female organs and tissues involved in the production and maturation of gametes and in their union and subsequent development as offspring.	ncit:C13039			
+PD						Femur	The upper leg bone positioned between the pelvis and the knee.	ncit:C12717			
+PD						Fibula	The small, lateral calf bone extending from the knee to the ankle.	ncit:C12718			
+PD						Finger	Any of the digits of the hand.	ncit:C32608			
+PD						Foot	The structure found below the ankle joint required for locomotion.	ncit:C32622			
+PD						Foot Bone	The structure found below the ankle joint required for locomotion.	ncit:C32622			
+PD						Foot Phalanges	A bone of the foot.	ncit:C52772			
+PD						Forearm	The structure on the upper limb, between the elbow and the wrist.	ncit:C32628			
+PD						Gallbladder	A pear-shaped organ located under the liver that stores and concentrates bile secreted by the liver. From the gallbladder the bile is delivered through the bile ducts into the intestine thereby aiding the digestion of fat-containing foods.	ncit:C12377			
+PD						Gastrointestinal Tract	The upper gastrointestinal (GI) tract is comprised of mouth, pharynx, esophagus and stomach while the lower GI tract consists of intestines and anus. The primary function of the GI tract is to ingest, digest, absorb and ultimately excrete food stuff.	ncit:C34082			
+PD						Great Blood Vessels	Any of the major arteries or veins attached to the cardiac atria or ventricles. This includes the aorta, superior and inferior vena cava and the pulmonary arteries and veins.	ncit:C102955			
+PD						Groin	The lower region of the anterior abdominal wall located laterally to the pubic region.	ncit:C12726			
+PD						Hand	The distal portion of the upper extremity. It consists of the carpus, metacarpus, and digits.	ncit:C32712			
+PD						Hand Bone	A bone of the hand.	ncit:C52771			
+PD						Hand Phalanges	The hinge synovial joints between the phalanges of the fingers.	ncit:C32868			
+PD						Head and Neck	For oncology, an area of the body generally construed to comprise the base of skull and facial bones, sinuses, orbits, salivary glands, oral cavity, oropharynx, larynx, thyroid, facial and neck musculature and lymph nodes draining these areas.	ncit:C12418			
+PD						Heart	A hollow organ located slightly to the left of the middle portion of the chest. It is composed of muscle and it is divided by a septum into two sides: the right side which receives de-oxygenated blood from the body and the left side which sends newly oxygenated blood to the body. Each side is composed of two chambers: the atrium (receiving blood) and ventricle (ejecting blood).	ncit:C12727			
+PD						Humerus	The upper arm bone between the shoulder and elbow.	ncit:C12731			
+PD						Inferior Limb	A bone of the leg (lower extremity).	ncit:C12982			
+PD						Kidney	One of the two bean-shaped organs located on each side of the spine in the retroperitoneum. The right kidney is located below the liver and the left kidney below the diaphragm. The kidneys filter and secrete metabolic products and minerals from the blood, thus maintaining homeostasis. On the superior pole of each kidney there is an adrenal gland. Each kidney and adrenal gland is surrounded by fat.	ncit:C12415			
+PD						Knee	A joint connecting the lower part of the femur with the upper part of the tibia. The lower part of the femur and the upper part of the tibia are attached to each other by ligaments. Other structures of the knee joint include the upper part of the fibula, located below and parallel to the tibia, and the patella which moves as the knee bends.	ncit:C32898			
+PD						Knee Joint	A joint connecting the lower part of the femur with the upper part of the tibia. The lower part of the femur and the upper part of the tibia are attached to each other by ligaments. Other structures of the knee joint include the upper part of the fibula, located below and parallel to the tibia, and the patella which moves as the knee bends.	ncit:C32898			
+PD						Larynx	The cartilaginous structure of the respiratory tract between the pharynx and the trachea. It contains elastic vocal cords required for sound production.	ncit:C12420			
+PD						Leg	The portion of the lower extremity between the knee and the ankle. For clinical purposes this term is also used to refer to the whole inferior limb.	ncit:C32974			
+PD						Liver	A triangular-shaped organ located under the diaphragm in the right hypochondrium. It is the largest internal organ of the body, weighting up to 2 kg. Metabolism and bile secretion are its main functions. It is composed of cells which have the ability to regenerate.	ncit:C12392			
+PD						Lower Limb	The limb that is composed of the hip, thigh, leg and foot.	ncit:C12742			
+PD						Lumbar Spine	Those vertebrae between the ribs and the pelvis, L1-L5 in man.	ncit:C69314			
+PD						Lung	One of a pair of viscera occupying the pulmonary cavities of the thorax, the organs of respiration in which aeration of the blood takes place. As a rule, the right lung is slightly larger than the left and is divided into three lobes (an upper, a middle, and a lower or basal), while the left has two lobes (an upper and a lower or basal). Each lung is irregularly conical in shape, presenting a blunt upper extremity (the apex), a concave base following the curve of the diaphragm, an outer convex surface (costal surface), an inner or mediastinal surface (mediastinal surface), a thin and sharp anterior border, and a thick and rounded posterior border.	ncit:C12468			
+PD						Lymph Nodes	A bean-shaped organ surrounded by a connective tissue capsule. It is part of the lymphatic system and is found throughout the body. It is composed predominantly of lymphocytes and its main function is immune protection.	ncit:C12745			
+PD						Lymphatic Basin	A regional collection of lymph nodes that drains lymph from a specific area of the body.	ncit:C94547			
+PD						Mandible	The lower jaw bone holding the lower teeth.	ncit:C12290			
+PD						Maxilla	The upper jawbone in vertebrates; it is fused to the cranium.	ncit:C26470			
+PD						Meninges	Any one of three membranes that surround the brain and spinal cord.	ncit:C12348			
+PD						Metacarpals	Any of the five bones between the wrist and the fingers that form the skeleton of the palm.	ncit:C12751			
+PD						Metatarsals	A bone belonging to the middle part of the foot located between toes and ankle. There are 5 metatarsal bones and they are numbered from the medial side.	ncit:C12752			
+PD						Nasal Septum	The thin wall between the two nasal cavities.	ncit:C33160			
+PD						Nasopharynx	The part of the pharynx in the back of the throat, at and above the soft palate. The nasopharynx is continuous with the nasal passages.	ncit:C12423			
+PD						Neck	The region that connects the head to the rest of the body.	ncit:C13063			
+PD						Oral Cavity	The cavity located at the upper end of the alimentary canal, behind the teeth and gums that is bounded on the outside by the lips, above by the hard and soft palates and below by the tongue.	ncit:C12421			
+PD						Orbit	The bony cavity of the skull which contains the eye, anterior portion of the optic nerve, ocular muscles and ocular adnexa. Seven bones contribute to the structure of the orbit: the frontal, maxillary, zygomatic, sphenoid, lacrimal, ethmoid, and palatine bones.	ncit:C12347			
+PD						Ovary	One of the paired female reproductive glands containing the ova or germ cells; the ovary's stroma is a vascular connective tissue containing numbers of ovarian follicles enclosing the ova.	ncit:C12404			
+PD						Pancreas	An organ behind the lower part of the stomach that is the shape of a fish and about the size of a hand. It is a compound gland composed of both exocrine and endocrine tissues. The endocrine pancreas makes insulin so that the body can use glucose (sugar) for energy. The exocrine pancreas makes enzymes that help the body digest food. Spread all over the pancreas are areas called the Islets of Langerhans. The cells in these areas each have a special purpose. The alpha cells make glucagon, which raises the level of glucose in the blood; the beta cells make insulin; the delta cells make somatostatin. There are also PP cells and D1 cells, about which little is known.	ncit:C12393			
+PD						Paratesticular	A small anatomical compartment that contains the testicular collecting system, and mesothelial and mesenchymal components that represent extensions of the abdominal cavity and retroperitoneum.	ncit:C162491			
+PD						Patella	A small flat triangular bone in front of the knee that articulates with the femur and protects the knee joint.	ncit:C33282			
+PD						Pelvis	The bony, basin-shaped structure formed by the hipbones and the base of the backbone supporting the lower limbs in humans.	ncit:C12767			
+PD						Penis	The male organ of urination and copulation.	ncit:C12409			
+PD						Peritoneum	The tissue that lines the wall of the abdominal cavity, intestine, mesentery, and pelvic organs. It consists of the parietal peritoneum and the visceral peritoneum.	ncit:C12770			
+PD						Pleura	The tissue that lines the wall of the thoracic cavity and the surface of the lungs.	ncit:C12469			
+PD						Prostate	The walnut shaped accessory sex gland of the male reproductive system. It is located in the pelvis just below the bladder, surrounding the prostatic part of the urethra. The prostate gland secretes a fluid which is part of the semen.	ncit:C12410			
+PD						Radius	The long bone of the forearm that extends from the lateral aspect of the elbow to the thumb-side of the wrist.	ncit:C12777			
+PD						Rectum	The terminal portion of the gastrointestinal tract, extending from the rectosigmoid junction to the anal canal.	ncit:C12390			
+PD						Retroperitoneum	The back of the abdomen where the kidneys lie and the great blood vessels run.	ncit:C12298			
+PD						Rib	Any one of the paired bones, 12 on either side, extending from the thoracic vertebrae toward the median line on the ventral aspect of the trunk. The long curved bones which form the rib cage. Generally, ribs 1 to 7 are connected to the sternum by their costal cartilages and are called true ribs, whereas ribs 8 to 12 are termed false ribs.	ncit:C12782			
+PD						Sacrum	The triangular bone, made up of 5 fused bones of the spine, located in the lower area of the spine between the fifth lumbar vertebra and the coccyx.	ncit:C33508			
+PD						Salivary Gland	An exocrine gland that secretes saliva. Salivary glands are mostly located in and around the oral cavity.	ncit:C12426			
+PD						Scalp	The skin which covers the top of the head and which is usually covered by hair.	ncit:C89807			
+PD						Scapula	The flat triangle-shaped bone that connects the humerus with the clavicle in the back of the shoulder.	ncit:C12744			
+PD						Shoulder Girdle	The bony arch formed by the collarbones and shoulder blades.	ncit:C33547			
+PD						Shoulder Joint	A ball-and-socket joint at the upper end of the humerus, located at the junction of humerus and scapula.	ncit:C33548			
+PD						Paranasal Sinus	Any one of the air-filled spaces within the ethmoid, frontal, maxillary, or sphenoid bones, which communicate with the nasal cavity.	ncit:C12763			
+PD						Skull	The bones that form the head, made up of the bones of the braincase and face.	ncit:C12789			
+PD						Small Intestine	The section of the intestines between the pylorus and cecum. The small intestine is approximately 20 feet long and consists of the duodenum, the jejunum, and the ileum. Its main function is to absorb nutrients from food as the food is transported to the large intestine.	ncit:C12386			
+PD						Spine	A series of bones, muscles, tendons, and other tissues reaching from the base of the skull to the tailbone. The vertebral column forms the axis of the skeleton and encloses as well as protects the spinal cord and the fluid surrounding the spinal cord.	ncit:C12998			
+PD						Spleen	An organ that is part of the hematopoietic and immune systems. It is composed of the white pulp and the red pulp and is surrounded by a capsule. It is located in the left hypochondriac region. Its functions include lymphocyte production, blood cell storage, and blood cell destruction.	ncit:C12432			
+PD						Sternum	The long, flat bone connecting with the cartilages of the first seven ribs and the clavicle.	ncit:C62484			
+PD						Stomach	An organ located under the diaphragm, between the liver and the spleen as well as between the esophagus and the small intestine. The stomach is the primary organ of food digestion.	ncit:C12391			
+PD						Superior Maxilla	The facial bone that forms the mediala floor of the orbit.	ncit:C33682			
+PD						Tarsals	Any one of the seven bones forming the instep of the foot.	ncit:C12796			
+PD						Temporal Bone	A large irregular bone situated at the base and side of the skull, connected with the mandible via the temporomandibular joint. The temporal bone consists of the squamous, tympanic and petrous parts. The petrous portion of the temporal bone contains the vestibulocochlear organ of the inner ear.	ncit:C12797			
+PD						Testis	Either of the paired male reproductive glands that produce the male germ cells and the male hormones.	ncit:C12412			
+PD						Thigh	A part of the lower limb, located between hip and knee.	ncit:C33763			
+PD						Thorax	The division of the body lying between the neck and the abdomen.	ncit:C12799			
+PD						Thymus	A bi-lobed organ surrounded by a connective tissue capsule. It is located in the upper anterior portion of the chest, behind the sternum. It is composed predominantly of lymphocytes and fewer epithelial cells. Connective tissue septa separate the lobes into lobules. The lobules contain an outer portion (cortical zone) which is rich in lymphocytes and an inner portion (medullary zone) which is rich in epithelial cells. It is an organ essential for the development of the immune system. Its function is the maturation of the progenitor lymphoid cells to thymocytes and subsequently to mature T-cells. It reaches its greatest weight at puberty and subsequently begins to involute.	ncit:C12433			
+PD						Thyroid	An endocrine gland located at the base of the neck that produces and secretes thyroxine and other hormones. Thyroxine is important for metabolic control.	ncit:C12400			
+PD						Tibia	A bone located between the femur and the tarsus, being part of the lower leg.	ncit:C12800			
+PD						Toe	One of the terminal digits of the foot.	ncit:C33788			
+PD						Tonsil	The two organs situated in the throat on either side of the narrow passage from the mouth to the pharynx. They are composed of lymphoid tissues.	ncit:C12802			
+PD						Trachea	The fibrocartilaginous, mucous-lined tube passing from the larynx to the bronchi.	ncit:C12428			
+PD						Ulna	One of the bones that comprise the forearm. The largest aspect articulates with the humerus at the elbow joint and the smallest portion of the ulna articulates with the carpal bones in the wrist.	ncit:C12809			
+PD						Upper Airway	The sinuses and those parts of the respiratory system above the trachea. It includes the nares, nasopharynx, oropharynx, larynx, vocal cords, glottis and upper trachea.	ncit:C33839			
+PD						Upper Arm	The portion of the upper extremity between the shoulder and the elbow. For clinical purposes this term is also used to refer to the whole superior limb.	ncit:C32141			
+PD						Upper Limb	The region of the body that includes the arm, the forearm, and hand.	ncit:C12671			
+PD						Ureter	The thick-walled tube that carries urine from each kidney to the bladder.	ncit:C12416			
+PD						Uterus	A hollow, thick-walled, muscular organ located within the pelvic cavity of a woman. Within the uterus the fertilized egg implants and the fetus develops during pregnancy.	ncit:C12405			
+PD						Vagina	The female genital canal, extending from the uterus to the vulva.	ncit:C12407			
+PD						Viscera	Two or more internal organs.	ncit:C28287			
+PD						Vulva	The external, visible part of the female genitalia surrounding the urethral and vaginal opening. The vulva includes the clitoris and inner as well as outer labia.	ncit:C12408			
+PD						Wrist	A joint between the distal end of the radius and the proximal row of carpal bones.	ncit:C33894			
+PD						Wrist Joint	A joint between the distal end of the radius and the proximal row of carpal bones.	ncit:C33894			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	LATERALITY	Enum	Tier 2	Dominant use or manifestations of one side of the body versus the other; referring to a side of the body or of a structure.	ncit:C25185	_undefined_	_undefined_	_undefined_			
+PD						Left	Being or located on or directed toward the side of the body to the west when facing north.	ncit:C25229			
+PD						Right	Being or located on or directed toward the side of the body to the east when facing north.	ncit:C25228			
+PD						Bilateral	Affecting both sides of the body or a matched pair of organs.	ncit:C13332			
+PD						Midline	A medial line, especially the medial line or medial plane of the body (or some part of the body).	ncit:C81170			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	INTRAOP_ADJUVANT	Enum				_undefined_	_undefined_	_undefined_			
+PD						Navigation and Robotics	A surgical technique that uses a specially designed robotic system to aid with the surgical procedure.				
+PD						Indocyanine Green (ICG) Fluorescence Angiography	A diagnostic imaging procedure to examine blood flow and associated pathology using intravenous indocyanine green dye.				
+PD						Methylene Blue Dye Marking	The use of methylene blue, a commonly used stain to enhance tissue specimens viewed under a microscope.				
+PD						Wire Localization	A procedure involving the use of a wire for the localization of a usually non-palpable breast lesion that needs to be surgically removed.				
+PD						Other	Different than the one(s) previously specified or mentioned.				
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	EXTENT	Enum	Tier 2	The degree to which the lesion has been cut out, or resected.	ncit:C157443	_undefined_	_undefined_	_undefined_			
+PD						Gross Total	Surgical removal of an entire visible lesion, with no obvious lesion detected on post-operative evaluation; microscopic residual disease may be present.	ncit:C131672			
+PD						Complete Resection	Complete clearance of the tumor with histologically proved negative margins.	ncit:C175027			
+PD						Partial Resection	Surgical removal of a part of a lesion; some portion of the lesion is detectable on post-operative evaluation.	ncit:C131680			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	MARGINS	Enum	Tier 2	One of the criteria for assessment of the effectiveness of given surgical procedure in achieving the local control of a neoplasm and the adequacy of tumor removal. It is defined by the tissue plane through which the dissection has been done and the actual or potential neoplastic tissue which has been left outside the boundary of a resected specimen within the patient. There are four types of surgical margins: intracapsular or intralesional, marginal, wide, and radical.	ncit:C41227	_undefined_	_undefined_	_undefined_			
+PD						R0 - Complete Resection, Negative Margins	No detectable presence of residual tumor after treatment	ncit:C139578			
+PD						R1 - Complete Resection, Positive Margins	Presence of microscopic residual tumor after treatment.	ncit:C139579			
+PD						R2 - Gross Residual Disease	Presence of macroscopic residual tumor after treatment.	ncit:C139580			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	DISTANCE_FROM_MARGIN	Decimal	Tier 3	The distance of the closest surgical margin from tumor after surgical resection of the tumor. The closest distance between a tumor and its resection margin has prognostic significance.	ncit:C137815	_undefined_	_undefined_	_undefined_			
+											
+											
+DD	Treatment										
+TD	Medication										
+TG	One row per subject per medication administered										
+VD	HONEST_BROKER_SUBJECT_ID	String	1 - contributors must include, regardless of the resource cost	The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_			
+VD	AGE_AT_MEDICATION_START	Integer	2 - contributors should prioritize inclusion if resources are available	The age (in days) of the subject at the start of this medication treatment.	ncit:C172698	_undefined_	_undefined_	_undefined_			
+VD	AGE_AT_MEDICATION_END	Integer	2 - contributors should prioritize inclusion if resources are available	The age (in days) of the subject at the end of this medication treatment.	ncit:C172686	_undefined_	_undefined_	_undefined_			
+VD	TIME_PERIOD_SUBMITTER_ID	String	2 - contributors should prioritize inclusion if resources are available	This is the SUBMITTER_ID of the time period (defined in the "Time Period" table) during which this observation takes place.		_undefined_	_undefined_	_undefined_			
+VD	MEDICATION	Enum	2 - contributors should prioritize inclusion if resources are available	A dosage form that contains one or more active and/or inactive ingredients. Medications come in many dosage forms, including tablets, capsules, liquids, creams, and patches. They can also be given in different ways, such as by mouth, by infusion into a vein, or by drops that are put into the ear or eye. The form with the active ingredient is used to prevent, diagnose, treat, or relieve symptoms of a disease or abnormal condition. A medication that does not contain an active ingredient and is used in research studies is called a placebo. Also called drug product.	ncit:C459	_undefined_	_undefined_	_undefined_			
+PD						Carboplatin	A second-generation platinum compound with a broad spectrum of antineoplastic properties. Carboplatin contains a platinum atom complexed with two ammonia groups and a cyclobutane-dicarboxyl residue. This agent is activated intracellularly to form reactive platinum complexes that bind to nucleophilic groups such as GC-rich sites in DNA, thereby inducing intrastrand and interstrand DNA cross-links, as well as DNA-protein cross-links. These carboplatin-induced DNA and protein effects result in apoptosis and cell growth inhibition. This agent possesses tumoricidal activity similar to that of its parent compound, cisplatin, but is more stable and less toxic. (NCI04)	ncit:C1282|rxcui:40048			
+PD						Cabozantinib	An orally bioavailable, small molecule receptor tyrosine kinase (RTK) inhibitor with potential antineoplastic activity. Cabozantinib strongly binds to and inhibits several RTKs, which are often overexpressed in a variety of cancer cell types, including hepatocyte growth factor receptor (MET), RET (rearranged during transfection), vascular endothelial growth factor receptor types 1 (VEGFR-1), 2 (VEGFR-2), and 3 (VEGFR-3), mast/stem cell growth factor (KIT), FMS-like tyrosine kinase 3 (FLT-3), TIE-2 (TEK tyrosine kinase, endothelial), tropomyosin-related kinase B (TRKB) and AXL. This may result in an inhibition of both tumor growth and angiogenesis, and eventually lead to tumor regression.	ncit:C52200|rxcui:1363268			
+PD						Cisplatin	An alkylating-like inorganic platinum agent (cis-diamminedichloroplatinum) with antineoplastic activity. Cisplatin forms highly reactive, charged, platinum complexes which bind to nucleophilic groups such as GC-rich sites in DNA inducing intrastrand and interstrand DNA cross-links, as well as DNA-protein cross-links. These cross-links result in apoptosis and cell growth inhibition.	ncit:C376			
+PD						Denosumab	A fully human monoclonal antibody directed against the receptor activator of nuclear factor kappa beta ligand (RANKL) with antiosteoclast activity. Denosumab specifically binds to RANKL and blocks the interaction of RANKL with RANK, a receptor located on osteoclast cell surfaces, resulting in inhibition of osteoclast activity, a decrease in bone resorption, and a potential increase in bone mineral density. RANKL, a protein expressed by osteoblastic cells, plays an important role in osteoclastic differentiation and activation.	ncit:C61313			
+PD						Dinutuximab	A chimeric mouse/human monoclonal antibody with potential antineoplastic activity. Dinutuximab binds to the ganglioside GD2 and induces antibody-dependent cell-mediated cytotoxicity and complement-dependent cytotoxicity against GD2-expressing tumor cells. GD2 is overexpressed in malignant melanoma, neuroblastoma, osteosarcoma, and small cell carcinoma of the lung.	ncit:C1570			
+PD						Docetaxel	A semi-synthetic, second-generation taxane derived from a compound found in the European yew tree, Taxus baccata. Docetaxel displays potent and broad antineoplastic properties; it binds to and stabilizes tubulin, thereby inhibiting microtubule disassembly which results in cell- cycle arrest at the G2/M phase and cell death. This agent also inhibits pro-angiogenic factors such as vascular endothelial growth factor (VEGF) and displays immunomodulatory and pro-inflammatory properties by inducing various mediators of the inflammatory response. Docetaxel has been studied for use as a radiation-sensitizing agent. (NCI04)	ncit:C1526|rxcui:72962			
+PD						Doxorubicin	An anthracycline antibiotic with antineoplastic activity. Doxorubicin, isolated from the bacterium Streptomyces peucetius var. caesius, is the hydroxylated congener of daunorubicin. Doxorubicin intercalates between base pairs in the DNA helix, thereby preventing DNA replication and ultimately inhibiting protein synthesis. Additionally, doxorubicin inhibits topoisomerase II which results in an increased and stabilized cleavable enzyme-DNA linked complex during DNA replication and subsequently prevents the ligation of the nucleotide strand after double-strand breakage. Doxorubicin also forms oxygen free radicals resulting in cytotoxicity secondary to lipid peroxidation of cell membrane lipids; the formation of oxygen free radicals also contributes to the toxicity of the anthracycline antibiotics, namely the cardiac and cutaneous vascular effects.	ncit:C456|rxcui:3639			
+PD						Etoposide	A semisynthetic derivative of podophyllotoxin, a substance extracted from the mandrake root Podophyllum peltatum. Possessing potent antineoplastic properties, etoposide binds to and inhibits topoisomerase II and its function in ligating cleaved DNA molecules, resulting in the accumulation of single- or double-strand DNA breaks, the inhibition of DNA replication and transcription, and apoptotic cell death. Etoposide acts primarily in the G2 and S phases of the cell cycle. (NCI04)	ncit:C491|rxcui:4179			
+PD						Gemcitabine	A broad-spectrum antimetabolite and deoxycytidine analogue with antineoplastic activity. Upon administration, gemcitabine is converted into the active metabolites difluorodeoxycytidine diphosphate (dFdCDP) and difluorodeoxycytidine triphosphate (dFdCTP) by deoxycytidine kinase. dFdCTP competes with deoxycytidine triphosphate (dCTP) and is incorporated into DNA. This locks DNA polymerase thereby resulting in "masked termination" during DNA replication. On the other hand, dFdCDP inhibits ribonucleotide reductase, thereby decreasing the deoxynucleotide pool available for DNA synthesis. The reduction in the intracellular concentration of dCTP potentiates the incorporation of dFdCTP into DNA.	ncit:C66876|rxcui:12574			
+PD						Glembatumumab	A human monoclonal antibody against transmembrane glycoprotein non-metastatic melanoma protein B (GPNMB). Glembatumumab binds to GPNMB on cancer cells, but alone does not appear to inhibit cancer cell growth. However, this antibody could be utilized to deliver a conjugated cytotoxic agent to GPNMB-expressing tumor cells. GPNMB, overexpressed on the surface of various cancer cells, plays a key role in cancer cell proliferation.	ncit:C84520			
+PD						Interferon	Human interferons have been classified into 3 groups: alpha, beta, and gamma. Both alpha- and beta-IFNs, previously designated type I, are acid-stable, but they differ immunologically and in regard to some biologic and physiochemical properties. The IFNs produced by virus-stimulated leukocytes (leukocyte IFNs) are predominantly of the alpha type. Those produced by lymphoblastoid cells are about 90% alpha and 10% beta. Induced fibroblasts produce mainly or exclusively the beta type. The alpha- and beta-IFNs differ widely in amino acid sequence. The gamma or immune IFNs, which are produced by T lymphocytes in response to mitogens or to antigens to which they are sensitized, are acid-labile and serologically distinct from alpha- and beta-IFNs. (from OMIM 147570)	ncit:C20493			
+PD						Ifosfamide	A synthetic analogue of the nitrogen mustard cyclophosphamide with antineoplastic activity. Ifosfamide alkylates and forms DNA crosslinks, thereby preventing DNA strand separation and DNA replication. This agent is a prodrug that must be activated through hydroxylation by hepatic microsomal enzymes. (NCI04)	ncit:C564|rxcui:5657			
+PD						Methotrexate	An antimetabolite and antifolate agent with antineoplastic and immunosuppressant activities. Methotrexate binds to and inhibits the enzyme dihydrofolate reductase, resulting in inhibition of purine nucleotide and thymidylate synthesis and, subsequently, inhibition of DNA and RNA syntheses. Methotrexate also exhibits potent immunosuppressant activity although the mechanism(s) of actions is unclear.	ncit:C642|rxcui:6851			
+PD						Mifamurtide	A liposomal formulation containing a muramyl dipeptide (MDP) analogue with potential immunomodulatory and antineoplastic activities. Muramyl tripeptide phosphatidylethanolamine (MTP-PE), a derivative of the mycobacterial cell wall component MDP, activates both monocytes and macrophages. Activated macrophages secrete cytokines and induce the recruitment and activation of other immune cells, which may result in indirect tumoricidal effects. Liposomal encapsulation of MTP-PE prolongs its half-life and enhances tissue targeting.	ncit:C1394			
+PD						Regorafenib	The anhydrous form of regorafenib, an orally bioavailable small molecule with potential antiangiogenic and antineoplastic activities. Regorafenib binds to and inhibits vascular endothelial growth factor receptors (VEGFRs) 2 and 3, and Ret, Kit, PDGFR and Raf kinases, which may result in the inhibition of tumor angiogenesis and tumor cell proliferation. VEGFRs are receptor tyrosine kinases that play important roles in tumor angiogenesis; the receptor tyrosine kinases RET, KIT, and PDGFR, and the serine/threonine-specific Raf kinase are involved in tumor cell signaling.	ncit:C78204|rxcui:1312397			
+PD						Zoledronic Acid	A synthetic imidazole bisphosphonate analog of pyrophosphate with anti-bone-resorption activity. A third-generation bisphosphonate, zoledronic acid binds to hydroxyapatite crystals in the bone matrix, slowing their dissolution and inhibiting the formation and aggregation of these crystals. This agent also inhibits farnesyl pyrophosphate synthase, an enzyme involved in terpenoid biosynthesis. Inhibition of this enzyme prevents the biosynthesis of isoprenoid lipids, donor substrates of farnesylation and geranylgeranylation during the post-translational modification of small GTPase signalling proteins, which are important in the process of osteoclast turnover. Decreased bone turnover and stabilization of the bone matrix contribute to the analgesic effect of zoledronic acid with respect to painful osteoblastic tumors. The agent also reduces serum calcium concentrations associated with hypercalcemia.	ncit:C1699|rxcui:77655			
+VD	NORMALIZATION_BASIS	Enum	2 - contributors should prioritize inclusion if resources are available	An indication of what method was used to normalize the data.	ncit:C186693	_undefined_	_undefined_	_undefined_			
+PD						Weight	The weight of a subject.	ncit:C81328			
+PD						BSA	A measure of the 2-dimensional extent of the body surface (i.e., the skin). Body surface area (BSA) can be calculated by mathematical formula or from a chart that relates height to weight. BSA is often an important factor in dosing.	ncit:C25157			
+PD						Flat/Fixed	An indication that normalization was at a fixed or flat basis.	ncit:C186692			
+PD						Unknown	Reported as unknown by the data contributor.	ncit:C17998			
+PD						Not Reported	Not provided or available.	ncit:C43234			
+VD	TOTAL_DOSE_ADMINISTERED	Decimal	2 - contributors should prioritize inclusion if resources are available	Total amount of medication administered between the AGE_AT_MEDICATION_START and AGE_AT_MEDICATION values. Assuming all doses administered are the same amount of medication, this value should be equal to the amount of medication given at each dose multiplied by the number of doses.	ncit:C94394	_undefined_	_undefined_	_undefined_			
+VD	TOTAL_DOSE_UNIT	Enum	2 - contributors should prioritize inclusion if resources are available	The units of the total dose administered to the subject.	ncit:C17395	_undefined_	_undefined_	_undefined_			
+PD						mg	A metric unit of mass equal to one thousandth of a gram or 1000 micrograms. One milligram equals approximately 0.015 432 grain or 35.274 x 10E-6 ounce.	ncit:C28253			
+											
+											
+DD	Events										
+TD	Secondary Malignant Neoplasm										
+TG	One row per subject per secondary malignant neoplasm										
+VD	HONEST_BROKER_SUBJECT_ID	String	1 - contributors must include, regardless of the resource cost	The identifier assigned to the subject by the honest broker. An individual, organization or system acting for, or on behalf of, a covered entity to collect and provide health information to research investigators in such a manner whereby it would not be reasonably possible for the investigators or others to identify the corresponding patients-subjects directly or indirectly. The honest broker cannot be one of the investigators. The information provided to the investigators by the honest broker may incorporate linkage codes to permit information collation and/or subsequent inquiries (i.e., a "re-identification code"), however the information linking this re- identification code to the patient's identity must be retained by the honest broker and subsequent inquiries are conducted through the honest broker.	ncit:C168949	_undefined_	_undefined_	_undefined_			
+VD	AGE_AT_SMN	Number	Tier 1	Age of subject (in days) at the diagnosis of the secondary malignant neoplasm.	ncit:C168860	_undefined_	_undefined_	_undefined_			
+VD	TIME_PERIOD_SUBMITTER_ID	String		This is the SUBMITTER_ID of the time period (defined in the "Time Period" table) during which this observation takes place.		_undefined_	_undefined_	_undefined_			
+VD	SMN_ICD_O_MORPH	String	Tier 1	ICD-O morphology code of the secondary malignant neoplasm.	ncit:C168862	_undefined_	_undefined_	_undefined_			
+VD	SMN_ICD_O_TOP	String	Tier 1	ICD-O Tumor Topography Code: A code for the primary site of a tumor being reported using either ICD-O-2 or ICD-O-3.	ncit:C160903	_undefined_	_undefined_	_undefined_			
