@@ -1,4 +1,4 @@
-# d4cg-modeling
+# legacy documentation
 
 This repo contains the various data models / dictionaries created and maintained by the D4CG Data Standards and Modeling (DSM) team. As shown below, each model has 4 associated files:
 
