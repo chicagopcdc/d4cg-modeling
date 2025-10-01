@@ -168,7 +168,7 @@
                 "lkss",
                 "age_lost_to_follow_up",
                 "cause_of_death",
-                "trm_type",
+                "TRM_type",
                 "cause_of_death_detail",
                 "cause_of_death_ranking"
             ],
@@ -193,12 +193,13 @@
                 "who_aml",
                 "disease_site",
                 "detection_method",
-                "cns_disease_status",
-                "mpal",
-                "mlds",
-                "tamds",
-                "secondary_aml",
-                "bulky_nodal_aggregate"
+                "CNS_disease_status",
+                "MPAL",
+                "MLDS",
+                "TAMDS",
+                "secondary_AML",
+                "bulky_nodal_aggregate",
+                "BULK_MED_MASS"
             ],
             "comments": [],
             "in_subset": [
@@ -505,7 +506,7 @@
         },
         "FunctionTest": {
             "slots": [
-                "age_at_function_test",
+                "age_at",
                 "disease_phase",
                 "disease_phase_number",
                 "course",
@@ -570,7 +571,8 @@
                 "tumor_classification",
                 "tumor_site",
                 "tumor_laterality",
-                "tumor_state"
+                "tumor_state",
+                "nodal_involvement"
             ],
             "comments": [],
             "in_subset": [
@@ -588,9 +590,9 @@
                 "age_at_staging",
                 "disease_phase",
                 "disease_phase_number",
-                "ab",
-                "e",
-                "s",
+                "AB",
+                "E",
+                "S",
                 "stage_system",
                 "stage"
             ],
@@ -616,7 +618,7 @@
                 "histology_result",
                 "histology_result_numeric",
                 "histology_result_unit",
-                "hist_icd_o_morph_code",
+                "hist_ICD_O_morph_code",
                 "histology_grade",
                 "mature_glial_implants",
                 "somatic_malignancy_type"
@@ -761,6 +763,7 @@
                 "smn_morph_txt",
                 "smn_site",
                 "smn_top_sno",
+                "smn_top_txt",
                 "smn_type",
                 "smn_yn",
                 "smn_morph_icdo",
@@ -1363,7 +1366,7 @@
                 "tier_mandatory": "aml_v1.8,hl_v1.0"
             }
         },
-        "trm_type": {
+        "TRM_type": {
             "slot_uri": "ncit:C173260",
             "range": "TrmTypeEnum",
             "comments": [
@@ -1455,7 +1458,7 @@
                 "tier_mandatory": "hl_v1.0"
             }
         },
-        "cns_disease_status": {
+        "CNS_disease_status": {
             "slot_uri": "ncit:C173264",
             "range": "CnsDiseaseStatusEnum",
             "comments": [
@@ -1466,7 +1469,7 @@
             ],
             "annotations": {}
         },
-        "mpal": {
+        "MPAL": {
             "slot_uri": "ncit:C82179",
             "range": "YesNoEnum",
             "comments": [],
@@ -1475,7 +1478,7 @@
             ],
             "annotations": {}
         },
-        "mlds": {
+        "MLDS": {
             "slot_uri": "ncit:C43223",
             "range": "YesNoEnum",
             "comments": [],
@@ -1484,7 +1487,7 @@
             ],
             "annotations": {}
         },
-        "tamds": {
+        "TAMDS": {
             "slot_uri": "ncit:C82339",
             "range": "YesNoEnum",
             "comments": [],
@@ -1493,7 +1496,7 @@
             ],
             "annotations": {}
         },
-        "secondary_aml": {
+        "secondary_AML": {
             "slot_uri": "ncit:C25765",
             "range": "YesNoEnum",
             "comments": [],
@@ -3023,6 +3026,15 @@
             ],
             "annotations": {}
         },
+        "nodal_involvement": {
+            "slot_uri": "",
+            "range": "YesNoEnum",
+            "comments": [],
+            "in_subset": [
+                "gct_v1.2"
+            ],
+            "annotations": {}
+        },
         "age_at_staging": {
             "slot_uri": "ncit:C177359",
             "range": "integer",
@@ -3132,7 +3144,7 @@
             ],
             "annotations": {}
         },
-        "hist_icd_o_morph_code": {
+        "hist_ICD_O_morph_code": {
             "slot_uri": "ncit:C176985",
             "range": "string",
             "comments": [],
@@ -3665,6 +3677,15 @@
             ],
             "annotations": {}
         },
+        "smn_top_txt": {
+            "slot_uri": "",
+            "range": "string",
+            "comments": [],
+            "in_subset": [
+                "nbl_v1.1"
+            ],
+            "annotations": {}
+        },
         "smn_type": {
             "slot_uri": "",
             "range": "SmnTypeEnum",
@@ -3876,7 +3897,7 @@
                 "tier_mandatory": "hl_v1.0"
             }
         },
-        "bulk_med_mass": {
+        "BULK_MED_MASS": {
             "slot_uri": "ncit:C178075",
             "range": "YesNoEnum",
             "comments": [],
@@ -3964,7 +3985,7 @@
                 "tier_mandatory": "hl_v1.0"
             }
         },
-        "ab": {
+        "AB": {
             "slot_uri": "ncit:C181839",
             "range": "AbEnum",
             "comments": [],
@@ -3975,7 +3996,7 @@
                 "tier_mandatory": "hl_v1.0"
             }
         },
-        "e": {
+        "E": {
             "slot_uri": "ncit:C177586",
             "range": "YesNoEnum",
             "comments": [],
@@ -3986,7 +4007,7 @@
                 "tier_mandatory": "hl_v1.0"
             }
         },
-        "s": {
+        "S": {
             "slot_uri": "ncit:C185484",
             "range": "YesNoEnum",
             "comments": [],
@@ -4322,7 +4343,7 @@
                 "tier_mandatory": "hl_v1.0"
             }
         },
-        "age_at_function_test": {
+        "age_at": {
             "slot_uri": "ncit:C185624",
             "range": "integer",
             "comments": [],
