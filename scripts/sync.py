@@ -351,6 +351,8 @@ if __name__ == '__main__':
             print("\nERROR: Unknown disease group: " + disease_group)
     
     elif scope == "full":
+        print("No support for syncing full. Sync individuals instead for now.")
+        """
         print("\nParsing all dictionaries with a parent model of: {version}...")
         dictionaries = []
         for disease_group in gsheets_ids[commons]:
@@ -368,6 +370,6 @@ if __name__ == '__main__':
                 task_manager = sync(dictionary)
                 print(elapsed_time(start))
                 task_manager.write("tasks/" + disease_group + "-taskfile-" + datetime.today().strftime("%Y%m%d") + ".tsv")
-
+        """
     else:
         print("\nERROR: Invalid scope: " + scope)
