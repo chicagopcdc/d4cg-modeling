@@ -93,11 +93,11 @@
                 "consortium",
                 "disease_group",
                 "sex",
+                "gender_identity",
                 "race",
+                "race_identification_source",
                 "ethnicity",
                 "country",
-                "gender_identity",
-                "race_identification_source",
                 "study_id",
                 "treatment_arm",
                 "study_phase",
@@ -3982,7 +3982,7 @@
             ]
         },
         "laterality": {
-            "slot_uri": "ncit:C175523",
+            "slot_uri": "ncit:C164550",
             "range": "LateralityEnum",
             "comments": [],
             "in_subset": [
@@ -20698,13 +20698,6 @@
                         "hl_v2.0"
                     ]
                 },
-                "Chemotherapy": {
-                    "meaning": "ncit:C15632",
-                    "comments": [],
-                    "in_subset": [
-                        "hl_v2.0"
-                    ]
-                },
                 "Consolidation": {
                     "meaning": "ncit:C15679",
                     "comments": [
@@ -20857,7 +20850,8 @@
                         "(npc_v1.0) ConsortiumNote: Only when DISEASE_PHASE = 'Relapse'."
                     ],
                     "in_subset": [
-                        "npc_v1.0"
+                        "npc_v1.0",
+                        "hl_v2.0"
                     ]
                 },
                 "Other": {
@@ -44314,7 +44308,8 @@
                         "gct_v2.0",
                         "hl_v2.0",
                         "npc_v1.0",
-                        "os_v2.0"
+                        "os_v2.0",
+                        "rb_v1.2"
                     ]
                 },
                 "Left": {
@@ -44357,15 +44352,8 @@
                         "rb_v1.2"
                     ]
                 },
-                "Unilateral Eyes": {
-                    "meaning": "ncit:C8714",
-                    "comments": [],
-                    "in_subset": [
-                        "rb_v1.2"
-                    ]
-                },
-                "Bilateral Eyes": {
-                    "meaning": "ncit:C8713",
+                "Unilateral": {
+                    "meaning": "ncit:C28012",
                     "comments": [],
                     "in_subset": [
                         "rb_v1.2"
@@ -61537,7 +61525,8 @@
                     "meaning": "ncit:C185306",
                     "comments": [],
                     "in_subset": [
-                        "hl_v2.0"
+                        "hl_v2.0",
+                        "npc_v1.0"
                     ]
                 },
                 "Retrieval": {
@@ -61545,13 +61534,6 @@
                     "comments": [],
                     "in_subset": [
                         "hl_v2.0",
-                        "npc_v1.0"
-                    ]
-                },
-                "Frontline": {
-                    "meaning": "ncit:C185306",
-                    "comments": [],
-                    "in_subset": [
                         "npc_v1.0"
                     ]
                 },
