@@ -104,20 +104,6 @@ def parse(sheet):
                 "mappings": [m.strip() for m in check_field(dictionary["info"]["name"], line, 10, "Mappings", i).split("|") if m.strip()]
             })
 
-    """
-    #Order tables by sequence_group
-    dictionary.tables = sorted(dictionary.tables, key=lambda t: (t.sequence_group, t.name.lower()))
-    for t in dictionary.tables:
-        #Order variables by sequence_group
-        t.variables = sorted(t.variables, key=lambda v: (v.sequence_group, v.name.lower()))
-        for v in t.variables:
-            if len(v.permissible_values) > 5:
-                for p in v.permissible_values:
-                    sg = str(p.sequence_group) if p.sequence_group is not None else ""
-                    p.sequence_group = (lambda sg: sg[:-3] + '777' if len(sg) >= 3 and sg[-3:] not in ('888', '999') else sg)(sg)            
-            #Order permissible values by sequence_group
-            v.permissible_values = sorted(v.permissible_values, key=lambda p: (p.sequence_group, p.value.lower()))
-    """
     dictionary["info"]["total_variables"] = var_num
     return dictionary
 

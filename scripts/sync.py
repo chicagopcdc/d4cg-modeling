@@ -326,7 +326,6 @@ if __name__ == '__main__':
     version = sys.argv[3]
 
     if scope == "single":
-        
         print("\nSyncing a single dictionary: " + version)
         disease_group = version.split("_")[0]
         if disease_group in gsheets_ids[commons]:
