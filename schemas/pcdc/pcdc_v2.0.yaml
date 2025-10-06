@@ -16587,11 +16587,6 @@ enums:
                 - npc_v1.0
                 - os_v2.0
                 - rb_v1.2
-            Development of SNM:
-                meaning: ncit:C4968
-                comments: []
-                in_subset:
-                - hl_v2.0
             Disease Progression:
                 meaning: ncit:C17747
                 comments: []
@@ -16702,6 +16697,7 @@ enums:
                 comments: []
                 in_subset:
                 - os_v2.0
+                - hl_v2.0
             Major Deviation:
                 meaning: ''
                 comments: []
