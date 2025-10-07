@@ -271,7 +271,7 @@ classes:
         - number_of_live_births
         - number_of_abortions
         - laterality
-        - procedure
+        - family_medical_history_procedure
         comments:
         - 'D4CGNote: One observation/row per CONDITION when instantiated'
         in_subset:
@@ -342,8 +342,8 @@ classes:
         slots:
         - age_at_lab
         - time_period_submitter_id
-        - category
-        - test
+        - laboratory_test_category
+        - laboratory_test
         - specimen
         - specimen_other
         - collection_time
@@ -507,7 +507,7 @@ classes:
         slots:
         - age_at_function_test
         - time_period_submitter_id
-        - test
+        - function_test
         - measurement_type
         - result
         - result_text
@@ -531,13 +531,13 @@ classes:
         slots:
         - age_at_ihc
         - time_period_submitter_id
+        - review_source
         - markers
         - specimen
         - result
         - result_text
         - result_numeric
         - result_unit
-        - review_source
         comments:
         - 'D4CGNote: One observation/row per result when instantiated.'
         in_subset:
@@ -883,7 +883,7 @@ classes:
         - time_period_submitter_id
         - protocol_medication
         - non_protocol_timing
-        - category
+        - medication_category
         - administration_status
         - route
         - route_detail
@@ -2518,9 +2518,9 @@ slots:
             tier_priority: lt_v1.0,rb_v1.2
         exact_mappings:
         - (ews_v2.0) skos:exactMatch [EWS].[v1.0].[Lab].[AGE_AT_LAB]
-    category:
+    laboratory_test_category:
         slot_uri: ncit:C83017
-        range: CategoryEnum
+        range: LaboratoryTestCategoryEnum
         comments: []
         in_subset:
         - aml_v2.0
@@ -2538,9 +2538,17 @@ slots:
         - '[gct_v1.2].[Labs].[LAB_CATEGORY] skos:exactMatch [gct_v2.0].[Laboratory
             Test].[CATEGORY]'
         - '[hl_v1.0].[Labs].[LAB_CATEGORY] skos:exactMatch [hl_v2.0].[Laboratory Test].[CATEGORY]'
-    test:
+    medication_category:
+        slot_uri: ncit:C459
+        range: MedicationCategoryEnum
+        comments: []
+        in_subset:
+        - aml_v2.0
+        - gct_v2.0
+        - hl_v2.0    
+    laboratory_test:
         slot_uri: ncit:C117142
-        range: TestEnum
+        range: LaboratoryTestEnum
         comments: []
         in_subset:
         - aml_v2.0
@@ -2556,16 +2564,29 @@ slots:
             tier_mandatory: fa_v1.0,npc_v1.0
             tier_priority: lt_v1.0,rb_v1.2
         exact_mappings:
-        - (aml_v2.0) [aml_v1.7].[Function Test].[FUNCTION_CATEGORY] skos:exactMatch
-            [aml_v2.0].[Function Test].[TEST]
         - (aml_v2.0) [aml_v1.7].[Labs].[LAB_TEST] skos:exactMatch [aml_v2.0].[Laboratory
             Test].[TEST]
         - skos:exactMatch [EWS].[v1.0].[Lab].[LAB_TEST]
         - '[gct_v1.2].[Labs].[LAB_TEST] skos:exactMatch [gct_v2.0].[Laboratory Test].[TEST]'
-        - '[hl_v1.0].[Function Test].[FUNCTION_CATEGORY] skos:exactMatch [hl_v2.0].[Function
-            Test].[TEST]'
         - '[hl_v1.0].[Labs].[LAB_TEST] skos:exactMatch [hl_v2.0].[Laboratory Test].[TEST]'
         - '[nbl_v1.1].[Labs].[LAB_TEST] skos:exactMatch [nbl_v2.0].[Laboratory Test].[TEST]'
+    function_test:
+        slot_uri: ncit:C186304
+        range: FunctionTestEnum
+        comments: []
+        in_subset:
+        - aml_v2.0
+        - fa_v1.0
+        - hl_v2.0
+        - npc_v1.0
+        annotations:
+            tier_mandatory: fa_v1.0,npc_v1.0
+        exact_mappings:
+        - (aml_v2.0) [aml_v1.7].[Function Test].[FUNCTION_CATEGORY] skos:exactMatch
+            [aml_v2.0].[Function Test].[TEST]
+        - '[gct_v1.2].[Labs].[LAB_TEST] skos:exactMatch [gct_v2.0].[Laboratory Test].[TEST]'
+        - '[hl_v1.0].[Function Test].[FUNCTION_CATEGORY] skos:exactMatch [hl_v2.0].[Function
+            Test].[TEST]'
     specimen:
         slot_uri: ncit:C70713
         range: SpecimenEnum
@@ -6450,6 +6471,14 @@ slots:
         - fa_v1.0
         annotations:
             tier_optional: fa_v1.0
+    family_medical_history_procedure:
+        slot_uri: ncit:C161601
+        range: FamilyMedicalHistoryProcedureEnum
+        comments: []
+        in_subset:
+        - rb_v1.2
+        annotations:
+            tier_optional: rb_v1.2
     age_at_last_follow_up:
         slot_uri: ''
         range: integer
@@ -16676,7 +16705,7 @@ enums:
                 - hl_v2.0
                 - npc_v1.0
                 - rb_v1.2
-            Secondary Malignancy:
+            Development of SMN:
                 meaning: ncit:C4968
                 comments: []
                 in_subset:
@@ -16685,6 +16714,8 @@ enums:
                 - ews_v2.0
                 - npc_v1.0
                 - rb_v1.2
+                - os_v2.0
+                - hl_v2.0
             Toxicity:
                 meaning: ncit:C27990
                 comments: []
@@ -16692,12 +16723,6 @@ enums:
                 - ews_v2.0
                 - npc_v1.0
                 - rb_v1.2
-            Development of SMN:
-                meaning: ncit:C4968
-                comments: []
-                in_subset:
-                - os_v2.0
-                - hl_v2.0
             Major Deviation:
                 meaning: ''
                 comments: []
@@ -17731,7 +17756,7 @@ enums:
                 - gct_v2.0
                 - lt_v1.0
                 - npc_v1.0
-    CategoryEnum:
+    LaboratoryTestCategoryEnum:
         in_subset:
         - aml_v2.0
         - fa_v1.0
@@ -17766,28 +17791,6 @@ enums:
                 - fa_v1.0
                 - hl_v2.0
                 - npc_v1.0
-            Chemotherapeutic Agent:
-                meaning: ncit:C274
-                comments: []
-                in_subset:
-                - aml_v2.0
-            Concomitant Agent:
-                meaning: ncit:C70902
-                comments: []
-                in_subset:
-                - aml_v2.0
-            Antineoplastic Agent:
-                meaning: ncit:C274
-                comments: []
-                in_subset:
-                - gct_v2.0
-                - hl_v2.0
-            Supportive Care Agent:
-                meaning: ncit:C70902
-                comments: []
-                in_subset:
-                - gct_v2.0
-                - hl_v2.0
             Bone Marrow Aspirate:
                 meaning: ''
                 comments:
@@ -17818,6 +17821,34 @@ enums:
                 - fa_v1.0
                 - gct_v2.0
                 - rb_v1.2
+    MedicationCategoryEnum:
+        in_subset:
+        - aml_v2.0
+        - gct_v2.0
+        - hl_v2.0
+        permissible_values:
+            Chemotherapeutic Agent:
+                meaning: ncit:C274
+                comments: []
+                in_subset:
+                - aml_v2.0
+            Concomitant Agent:
+                meaning: ncit:C70902
+                comments: []
+                in_subset:
+                - aml_v2.0
+            Antineoplastic Agent:
+                meaning: ncit:C274
+                comments: []
+                in_subset:
+                - gct_v2.0
+                - hl_v2.0
+            Supportive Care Agent:
+                meaning: ncit:C70902
+                comments: []
+                in_subset:
+                - gct_v2.0
+                - hl_v2.0
     TestEnum:
         in_subset:
         - aml_v2.0
@@ -22439,7 +22470,7 @@ enums:
                 - lt_v1.0
                 - npc_v1.0
             Central:
-                meaning: ncit:C185326
+                meaning: ncit:C191951
                 comments: []
                 in_subset:
                 - cns_v1.2
@@ -22447,14 +22478,8 @@ enums:
                 - hl_v2.0
                 - lt_v1.0
                 - npc_v1.0
-            Central Review:
-                meaning: ncit:C185326
-                comments: []
-                in_subset:
-                - ews_v2.0
                 - fa_v1.0
                 - gct_v2.0
-                - lt_v1.0
             Unknown:
                 meaning: ncit:C17998
                 comments: []
@@ -44029,6 +44054,15 @@ enums:
                 comments: []
                 in_subset:
                 - fa_v1.0
+                - rb_v1.2
+    FamilyMedicalHistoryProcedureEnum:
+        in_subset:
+        - rb_v1.2
+        permissible_values:
+            Enucleation of Eye:
+                meaning: ncit:C198837
+                comments: []
+                in_subset:
                 - rb_v1.2
     BreakageSourceLabEnum:
         in_subset:
