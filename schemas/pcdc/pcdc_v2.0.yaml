@@ -262,7 +262,7 @@ classes:
         slots:
         - age_at_condition
         - condition_status
-        - condition
+        - family_medical_history_condition
         - relation
         - lkss_of_relative
         - age_at_lkss_of_relative
@@ -285,7 +285,7 @@ classes:
         slots:
         - age_at_condition
         - condition_status
-        - condition
+        - medical_history_condition
         - condition_other
         - condition_category
         - diagnosis_basis
@@ -2189,9 +2189,9 @@ slots:
             [gct_v2.0].[Medical History].[CONDITION_STATUS]
         - '[hl_v1.0].[Family Medical History].[FAMILY_HISTORY] skos:exactMatch [hl_v2.0].[Family
             Medical History].[CONDITION_STATUS]'
-    condition:
+    medical_history_condition:
         slot_uri: ncit:C18772
-        range: string
+        range: MedicalHistoryConditionEnum
         comments:
         - '(aml_v2.0) ConsortiumNote: If subject had multiple prior medical conditions,
             include one observation per condition.'
@@ -2223,12 +2223,26 @@ slots:
         - skos:exactMatch [EWS].[v1.0].[Medical History].[MEDICAL_HISTORY]
         - '[gct_v1.2].[Medical History].[MEDICAL_HISTORY] skos:exactMatch [gct_v2.0].[Medical
             History].[CONDITION]'
-        - '[hl_v1.0].[Family Medical History].[PRIOR_CANCER] skos:exactMatch [hl_v2.0].[Family
-            Medical History].[CONDITION]'
         - '[hl_v1.0].[Medical History].[MEDICAL_HISTORY] skos:exactMatch [hl_v2.0].[Medical
             History].[CONDITION]'
         - '[nrsts_v1.0].[Medical History].[MEDICAL_HISTORY] skos:exactMatch [nrsts_v2.0].[Medical
             History].[CONDITION]'
+    family_medical_history_condition:
+        slot_uri: ncit:C18772
+        range: string
+        comments: []
+        in_subset:
+        - fa_v1.0
+        - hl_v2.0
+        - npc_v1.0
+        - rb_v1.2
+        annotations:
+            tier_mandatory: fa_v1.0
+            tier_priority: npc_v1.0,rb_v1.2
+            tier_optional: hl_v2.0
+        exact_mappings:
+        - '[hl_v1.0].[Family Medical History].[PRIOR_CANCER] skos:exactMatch [hl_v2.0].[Family
+            Medical History].[CONDITION]'
     relation:
         slot_uri: ncit:C21480
         range: RelationEnum
@@ -17849,7 +17863,65 @@ enums:
                 in_subset:
                 - gct_v2.0
                 - hl_v2.0
-    TestEnum:
+    FunctionTestEnum:
+        in_subset:
+        - aml_v2.0
+        - fa_v1.0
+        - hl_v2.0
+        - npc_v1.0
+        permissible_values:
+            Audiogram, NOS:
+                meaning: ncit:C92448
+                comments: []
+                in_subset:
+                - npc_v1.0
+            Cochlear, OEAP:
+                meaning: ''
+                comments: []
+                in_subset:
+                - npc_v1.0
+            Cochlear, PEAP:
+                meaning: ''
+                comments: []
+                in_subset:
+                - npc_v1.0
+            EKG:
+                meaning: ncit:C168186
+                comments: []
+                in_subset:
+                - hl_v2.0
+            Echocardiogram:
+                meaning: ncit:C16525
+                comments: []
+                in_subset:
+                - aml_v2.0
+                - hl_v2.0
+            Pulmonary Function Test:
+                meaning: ncit:C38081
+                comments: []
+                in_subset:
+                - hl_v2.0
+            Vestibular, VHIT:
+                meaning: ''
+                comments: []
+                in_subset:
+                - npc_v1.0
+            Vestibular, cVEMP:
+                meaning: ''
+                comments: []
+                in_subset:
+                - npc_v1.0
+            Visual Acuity:
+                meaning: C87149
+                comments: []
+                in_subset:
+                - fa_v1.0
+            Visual Evoked Potentials:
+                meaning: ''
+                comments: []
+                in_subset:
+                - fa_v1.0
+    LaboratoryTestEnum:
         in_subset:
         - aml_v2.0
         - ews_v2.0
@@ -17956,11 +18028,6 @@ enums:
                 comments: []
                 in_subset:
                 - fa_v1.0
-            Audiogram, NOS:
-                meaning: ''
-                comments: []
-                in_subset:
-                - npc_v1.0
             Auer Rods:
                 meaning: ncit:C74657
                 comments: []
@@ -18077,16 +18144,6 @@ enums:
                 comments: []
                 in_subset:
                 - fa_v1.0
-            Cochlear, OEAP:
-                meaning: ''
-                comments: []
-                in_subset:
-                - npc_v1.0
-            Cochlear, PEAP:
-                meaning: ''
-                comments: []
-                in_subset:
-                - npc_v1.0
             Creatinine:
                 meaning: ncit:C64547
                 comments:
@@ -18141,11 +18198,6 @@ enums:
                 comments: []
                 in_subset:
                 - npc_v1.0
-            EKG:
-                meaning: ncit:C168186
-                comments: []
-                in_subset:
-                - hl_v2.0
             ESR:
                 meaning: ncit:C74611
                 comments: []
@@ -18493,11 +18545,6 @@ enums:
                 comments: []
                 in_subset:
                 - hl_v2.0
-            Pulmonary Function Test:
-                meaning: ncit:C38081
-                comments: []
-                in_subset:
-                - hl_v2.0
             RBC:
                 meaning: ncit:C51946
                 comments:
@@ -18589,26 +18636,6 @@ enums:
                 comments: []
                 in_subset:
                 - hl_v2.0
-            Vestibular, VHIT:
-                meaning: ''
-                comments: []
-                in_subset:
-                - npc_v1.0
-            Vestibular, cVEMP:
-                meaning: ''
-                comments: []
-                in_subset:
-                - npc_v1.0
-            Visual Acuity:
-                meaning: ''
-                comments: []
-                in_subset:
-                - fa_v1.0
-            Visual Evoked Potentials:
-                meaning: ''
-                comments: []
-                in_subset:
-                - fa_v1.0
             Vitamin D 25:
                 meaning: ''
                 comments: []
@@ -39153,7 +39180,7 @@ enums:
                 comments: []
                 in_subset:
                 - aml_v2.0
-    ConditionEnum:
+    MedicalHistoryConditionEnum:
         in_subset:
         - aml_v2.0
         - pre_v1.0
