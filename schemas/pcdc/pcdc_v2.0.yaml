@@ -554,6 +554,8 @@ classes:
         - time_period_submitter_id
         - disease_site_assessment_submitter_id
         - review_source
+        - determination_source
+        - diagnosis_method
         - diagnosis_status
         - diagnosis_category
         - diagnosis_basis
@@ -565,21 +567,19 @@ classes:
         - result_text
         - result_numeric
         - result_unit
+        - path_morph_reporting
+        - morph_code_text
         - morph_code
         - morph_code_system
+        - morph_code_system_version
+        - diagnosis_conf_source
+        - transformation
+        - transformation_conf_source
         - grade
         - mature_glial_implants
         - somatic_malignancy_type
         - histology_grade
         - revised_inpc
-        - path_morph_reporting
-        - morph_code_text
-        - morph_code_system_version
-        - diagnosis_conf_source
-        - transformation
-        - transformation_conf_source
-        - determination_source
-        - method
         - histologic_features
         - histologic_basis
         comments:
@@ -1124,7 +1124,7 @@ classes:
         slots:
         - age_at_mrd_assessment
         - time_period_submitter_id
-        - method
+        - mrd_method
         - result_text
         - result_numeric
         - result_unit
@@ -2654,6 +2654,20 @@ slots:
         - skos:exactMatch [EWS].[v1.0].[Molecular Analysis].[MOLECULAR_ANALYSIS_METHOD]
         - '[gct_v1.2].[Labs].[LAB_METHOD] skos:exactMatch [gct_v2.0].[Laboratory Test].[METHOD]'
         - '[hl_v1.0].[Labs].[LAB_METHOD] skos:exactMatch [hl_v2.0].[Laboratory Test].[METHOD]'
+    mrd_method:
+        slot_uri: ncit:C168933
+        range: MRDMethodEnum
+        comments: []
+        in_subset:
+        - aml_v2.0
+        annotations: {}
+    diagnosis_method:
+        slot_uri: ncit:C82535
+        range: DiagnosisMethodEnum
+        comments: []
+        in_subset:
+        - cns_v1.2
+        annotations: {}
     result:
         slot_uri: ncit:C36292
         range: ResultEnum
@@ -18903,6 +18917,125 @@ enums:
                 - gct_v2.0
                 - npc_v1.0
                 - rb_v1.2
+    DiagnosisMethodEnum:
+        in_subset:
+        - cns_v1.2
+        permissible_values:
+            Array CGH:
+                meaning: ncit:C18084
+                comments: []
+                in_subset:
+                - pre_v1.0
+                - cns_v1.2
+            DNA Methylation Array:
+                meaning: ncit:C165222
+                comments: []
+                in_subset:
+                - cns_v1.2
+            Fluorescence In Situ Hybridization:
+                meaning: ncit:C17563
+                comments: []
+                in_subset:
+                - cns_v1.2
+            Immunohistochemistry:
+                meaning: ncit:C23020
+                comments: []
+                in_subset:
+                - cns_v1.2
+            Methylation:
+                meaning: ncit:C17961
+                comments: []
+                in_subset:
+                - cns_v1.2
+            Nanostring:
+                meaning: ''
+                comments: []
+                in_subset:
+                - cns_v1.2
+            Sequencing, NOS:
+                meaning: ncit:C101293
+                comments: []
+                in_subset:
+                - cns_v1.2
+            Sequencing, Targeted DNA:
+                meaning: ''
+                comments: []
+                in_subset:
+                - cns_v1.2
+            Sequencing, Targeted RNA:
+                meaning: ''
+                comments: []
+                in_subset:
+                - cns_v1.2
+            Sequencing, Total RNA:
+                meaning: ncit:C124261
+                comments: []
+                in_subset:
+                - cns_v1.2
+            Sequencing, Whole Exome:
+                meaning: ncit:C101295
+                comments: []
+                in_subset:
+                - cns_v1.2
+            Sequencing, Whole Genome:
+                meaning: ncit:C101294
+                comments: []
+                in_subset:
+                - cns_v1.2
+            Single Gene DNA:
+                meaning: ''
+                comments: []
+                in_subset:
+                - cns_v1.2
+            SNP Array:
+                meaning: ncit:C116151
+                comments: []
+                in_subset:
+                - cns_v1.2
+    MRDMethodEnum:
+        in_subset:
+        - aml_v2.0
+        permissible_values:
+            Flow Cytometry, Different-From-Normal:
+                meaning: ncit:C168956
+                comments: []
+                in_subset:
+                - aml_v2.0
+            Flow Cytometry, Leukemia-Associated Immunophenotypes:
+                meaning: ncit:C168812
+                comments: []
+                in_subset:
+                - aml_v2.0
+            Flow Cytometry, NOS:
+                meaning: ncit:C16585
+                comments: []
+                in_subset:
+                - aml_v2.0
+            Molecular Real-time Quantitative PCR:
+                meaning: ncit:C51962
+                comments: []
+                in_subset:
+                - aml_v2.0
+            Next Generation Sequencing:
+                meaning: ncit:C101293
+                comments: []
+                in_subset:
+                - aml_v2.0
+            Other:
+                meaning: ncit:C17649
+                comments: []
+                in_subset:
+                - aml_v2.0
+            Unknown:
+                meaning: ncit:C17998
+                comments: []
+                in_subset:
+                - aml_v2.0
+            Not Reported:
+                meaning: ncit:C43234
+                comments: []
+                in_subset:
+                - aml_v2.0
     MethodEnum:
         in_subset:
         - aml_v2.0
@@ -19103,26 +19236,6 @@ enums:
                 - pre_v1.0
                 - cns_v1.2
                 - fa_v1.0
-            Flow Cytometry, Different-From-Normal:
-                meaning: ncit:C168956
-                comments: []
-                in_subset:
-                - aml_v2.0
-            Flow Cytometry, Leukemia-Associated Immunophenotypes:
-                meaning: ncit:C168812
-                comments: []
-                in_subset:
-                - aml_v2.0
-            Flow Cytometry, NOS:
-                meaning: ncit:C16585
-                comments: []
-                in_subset:
-                - aml_v2.0
-            Molecular Real-time Quantitative PCR:
-                meaning: ncit:C51962
-                comments: []
-                in_subset:
-                - aml_v2.0
             Next Generation Sequencing:
                 meaning: ncit:C101293
                 comments: []
@@ -19143,61 +19256,6 @@ enums:
                 comments: []
                 in_subset:
                 - pre_v1.0
-            DNA Methylation Array:
-                meaning: ncit:C165222
-                comments: []
-                in_subset:
-                - cns_v1.2
-            Immunohistochemistry:
-                meaning: ncit:C23020
-                comments: []
-                in_subset:
-                - cns_v1.2
-            Methylation:
-                meaning: ncit:C17961
-                comments: []
-                in_subset:
-                - cns_v1.2
-            Nanostring:
-                meaning: ''
-                comments: []
-                in_subset:
-                - cns_v1.2
-            Sequencing, NOS:
-                meaning: ncit:C101293
-                comments: []
-                in_subset:
-                - cns_v1.2
-            Sequencing, Targeted DNA:
-                meaning: ''
-                comments: []
-                in_subset:
-                - cns_v1.2
-            Sequencing, Targeted RNA:
-                meaning: ''
-                comments: []
-                in_subset:
-                - cns_v1.2
-            Sequencing, Total RNA:
-                meaning: ncit:C124261
-                comments: []
-                in_subset:
-                - cns_v1.2
-            Sequencing, Whole Exome:
-                meaning: ncit:C101295
-                comments: []
-                in_subset:
-                - cns_v1.2
-            Sequencing, Whole Genome:
-                meaning: ncit:C101294
-                comments: []
-                in_subset:
-                - cns_v1.2
-            Single Gene DNA:
-                meaning: ''
-                comments: []
-                in_subset:
-                - cns_v1.2
             Morphology:
                 meaning: ncit:C17943
                 comments: []
