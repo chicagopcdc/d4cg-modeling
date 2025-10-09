@@ -320,7 +320,8 @@ classes:
         slots:
         - age_at_measurement
         - time_period_submitter_id
-        - measurement_type
+        - vital_measurement_type
+        - anthropometric_measurement_type
         - result_text
         - result_numeric
         - result_unit
@@ -1148,7 +1149,7 @@ classes:
         - ae_code_system
         - ae_system
         - ae_system_version
-        - grade
+        - ae_grade
         - attribution
         - outcome
         - icu
@@ -1161,7 +1162,6 @@ classes:
         - gvhd_organ
         - grade_system
         - grade_system_version
-        - ae_grade
         - ae_immune
         - ae_infusion
         - ae_reported
@@ -2281,10 +2281,17 @@ slots:
             And Anthropometrics].[AGE_AT_MEASUREMENT]'
         - '[hl_v1.0].[Vitals].[AGE_AT_VITALS] skos:exactMatch [hl_v2.0].[Vitals And
             Anthropometrics].[AGE_AT_MEASUREMENT]'
-    measurement_type:
+    vital_measurement_type:
         slot_uri: ncit:C49672
-        range: MeasurementTypeEnum
-        comments:
+        range: VitalMeasurementTypeEnum
+        comments: []
+        in_subset:
+        - fa_v1.0
+        annotations: {}
+    anthropometric_measurement_type:
+        slot_uri: C219071
+        range: AnthropometricMeasurementTypeEnum
+        comments: 
         - '(cns_v1.2) ConsortiumNote: Note: BMI should only be what is reported on
             CRF, not calculated from weight and height when submitting data to the
             PCDC'
@@ -2295,11 +2302,9 @@ slots:
             CRF, not calculated from weight and height when submitting data to the
             PCDC'
         in_subset:
-        - aml_v2.0
-        - pre_v1.0
+        - fa_v1.0
         - cns_v1.2
         - ews_v2.0
-        - fa_v1.0
         - gct_v2.0
         - hl_v2.0
         - npc_v1.0
@@ -2308,13 +2313,22 @@ slots:
         exact_mappings:
         - (aml_v2.0) [aml_v1.7].[Vitals].[VITALS_TEST] skos:exactMatch [aml_v2.0].[Vitals
             And Anthropometrics].[MEASUREMENT_TYPE]
-        - (aml_v2.0) [aml_v1.7].[Function Test].[FUNCTION_TEST] skos:exactMatch [aml_v2.0].[Function
-            Test].[MEASUREMENT_TYPE]
         - skos:exactMatch [EWS].[v1.0].[Vitals].[VITALS_TEST]
         - '[gct_v1.2].[Vitals].[VITALS_TEST] skos:exactMatch [gct_v2.0].[Vitals And
             Anthropometrics].[MEASUREMENT_TYPE]'
         - '[hl_v1.0].[Vitals].[VITALS_TEST] skos:exactMatch [hl_v2.0].[Vitals And
             Anthropometrics].[MEASUREMENT_TYPE]'
+    functional_measurement_type:
+        slot_uri: ncit:C185625
+        range: FunctionalMeasurementTypeEnum
+        comments: []
+        in_subset:
+        - aml_v2.0
+        - hl_v2.0
+        annotations: {}
+        exact_mappings:
+        - (aml_v2.0) [aml_v1.7].[Function Test].[FUNCTION_TEST] skos:exactMatch [aml_v2.0].[Function
+            Test].[MEASUREMENT_TYPE]
         - '[hl_v1.0].[Function Test].[FUNCTION_RESULT_MEASUREMENT] skos:exactMatch
             [hl_v2.0].[Function Test].[MEASUREMENT_TYPE]'
     result_text:
@@ -3434,26 +3448,14 @@ slots:
         - gct_v2.0
         annotations: {}
     grade:
-        slot_uri: ncit:C166200
+        slot_uri: ncit:C18000
         range: GradeEnum
-        comments:
-        - '(aml_v2.0) ConsortiumNote: Only applicable for CTCAE- or EBMT-coded AEs'
+        comments: []
         in_subset:
-        - aml_v2.0
-        - ews_v2.0
         - gct_v2.0
-        - npc_v1.0
-        - rb_v1.2
-        annotations:
-            tier_priority: rb_v1.2
-            tier_optional: npc_v1.0
+        annotations: {}
         exact_mappings:
-        - (aml_v2.0) [aml_v1.7].[Adverse Events].[AE_GRADE] skos:exactMatch [aml_v2.0].[Adverse
-            Events].[GRADE]
-        - skos:exactMatch [EWS].[v1.0].[Adverse Events].[AE_GRADE]
         - '[gct_v1.2].[Histology].[HISTOLOGY_GRADE] skos:exactMatch [gct_v2.0].[Diagnosis].[GRADE]'
-        - '[gct_v1.2].[Adverse Events].[AE_GRADE] skos:exactMatch [gct_v2.0].[Adverse
-            Events].[GRADE]'
     mature_glial_implants:
         slot_uri: ncit:C177363
         range: YesNoEnum
@@ -6883,11 +6885,25 @@ slots:
     ae_grade:
         slot_uri: ncit:C166200
         range: AeGradeEnum
-        comments: []
+        comments:
+        - '(aml_v2.0) ConsortiumNote: Only applicable for CTCAE- or EBMT-coded AEs'
         in_subset:
         - hl_v2.0
+        - aml_v2.0
+        - ews_v2.0
+        - gct_v2.0
+        - npc_v1.0
+        - rb_v1.2
         annotations:
             tier_mandatory: hl_v2.0
+            tier_priority: rb_v1.2
+            tier_optional: npc_v1.0
+        exact_mappings:
+        - (aml_v2.0) [aml_v1.7].[Adverse Events].[AE_GRADE] skos:exactMatch [aml_v2.0].[Adverse
+            Events].[GRADE]
+        - skos:exactMatch [EWS].[v1.0].[Adverse Events].[AE_GRADE]
+        - '[gct_v1.2].[Adverse Events].[AE_GRADE] skos:exactMatch [gct_v2.0].[Adverse
+            Events].[GRADE]'    
     ae_immune:
         slot_uri: ncit:C185661
         range: YesNoEnum
@@ -17426,7 +17442,7 @@ enums:
                 comments: []
                 in_subset:
                 - hl_v2.0
-    MeasurementTypeEnum:
+    AnthropometricMeasurementTypeEnum:
         in_subset:
         - aml_v2.0
         - pre_v1.0
@@ -17478,6 +17494,49 @@ enums:
                 - fa_v1.0
                 - hl_v2.0
                 - npc_v1.0
+            Head Circumference:
+                meaning: ncit:C81255
+                comments:
+                - '(fa_v1.0) ConsortiumNote: Prioritize Head Circumference at birth
+                    and at other evaluations.'
+                in_subset:
+                - pre_v1.0
+                - cns_v1.2
+                - fa_v1.0
+    VitalMeasurementTypeEnum:
+        in_subset:
+        - fa_v1.0
+        permissible_values:
+            Pulse:
+                meaning: ncit:C25749
+                comments: []
+                in_subset:
+                - fa_v1.0
+            Systolic Blood Pressure:
+                meaning: ncit:C25298
+                comments: []
+                in_subset:
+                - fa_v1.0
+            Diastolic Blood Pressure:
+                meaning: ncit:C25299
+                comments: []
+                in_subset:
+                - fa_v1.0
+            Respiratory Rate:
+                meaning: ncit:C49678
+                comments: []
+                in_subset:
+                - fa_v1.0
+            Temperature:
+                meaning: ncit:C25206
+                comments: []
+                in_subset:
+                - fa_v1.0
+    FunctionalMeasurementTypeEnum:
+        in_subset:
+        - aml_v2.0
+        - hl_v2.0
+        permissible_values:
             DLCO:
                 meaning: ncit:C38083
                 comments: []
@@ -17520,40 +17579,6 @@ enums:
                 comments: []
                 in_subset:
                 - hl_v2.0
-            Head Circumference:
-                meaning: ncit:C81255
-                comments:
-                - '(fa_v1.0) ConsortiumNote: Prioritize Head Circumference at birth
-                    and at other evaluations.'
-                in_subset:
-                - pre_v1.0
-                - cns_v1.2
-                - fa_v1.0
-            Pulse:
-                meaning: ncit:C25749
-                comments: []
-                in_subset:
-                - fa_v1.0
-            Systolic Blood Pressure:
-                meaning: ncit:C25298
-                comments: []
-                in_subset:
-                - fa_v1.0
-            Diastolic Blood Pressure:
-                meaning: ncit:C25299
-                comments: []
-                in_subset:
-                - fa_v1.0
-            Respiratory Rate:
-                meaning: ncit:C49678
-                comments: []
-                in_subset:
-                - fa_v1.0
-            Temperature:
-                meaning: ncit:C25206
-                comments: []
-                in_subset:
-                - fa_v1.0
     ResultUnitEnum:
         in_subset:
         - aml_v2.0
@@ -29592,11 +29617,7 @@ enums:
                 - gct_v2.0
     GradeEnum:
         in_subset:
-        - aml_v2.0
-        - ews_v2.0
         - gct_v2.0
-        - npc_v1.0
-        - rb_v1.2
         permissible_values:
             Norris Immature Teratoma Grading System, Grade 1:
                 meaning: ncit:C28077
@@ -29615,76 +29636,6 @@ enums:
                 comments: []
                 in_subset:
                 - gct_v2.0
-            Grade 1:
-                meaning: ncit:C41338
-                comments: []
-                in_subset:
-                - aml_v2.0
-                - ews_v2.0
-                - gct_v2.0
-                - rb_v1.2
-            Grade 2:
-                meaning: ncit:C41339
-                comments: []
-                in_subset:
-                - aml_v2.0
-                - ews_v2.0
-                - gct_v2.0
-                - rb_v1.2
-            Grade 3:
-                meaning: ncit:C41340
-                comments: []
-                in_subset:
-                - aml_v2.0
-                - ews_v2.0
-                - gct_v2.0
-                - rb_v1.2
-            Grade 4:
-                meaning: ncit:C41337
-                comments: []
-                in_subset:
-                - aml_v2.0
-                - ews_v2.0
-                - gct_v2.0
-                - rb_v1.2
-            Grade 5:
-                meaning: ncit:C48275
-                comments: []
-                in_subset:
-                - aml_v2.0
-                - ews_v2.0
-                - gct_v2.0
-                - rb_v1.2
-            CTCAE, Grade 1:
-                meaning: ''
-                comments: []
-                in_subset:
-                - ews_v2.0
-                - rb_v1.2
-            CTCAE, Grade 2:
-                meaning: ''
-                comments: []
-                in_subset:
-                - ews_v2.0
-                - rb_v1.2
-            CTCAE, Grade 3:
-                meaning: ''
-                comments: []
-                in_subset:
-                - ews_v2.0
-                - rb_v1.2
-            CTCAE, Grade 4:
-                meaning: ''
-                comments: []
-                in_subset:
-                - ews_v2.0
-                - rb_v1.2
-            CTCAE, Grade 5:
-                meaning: ''
-                comments: []
-                in_subset:
-                - ews_v2.0
-                - rb_v1.2
             SIOP Boston, Grade 0:
                 meaning: ''
                 comments: []
@@ -46419,32 +46370,97 @@ enums:
     AeGradeEnum:
         in_subset:
         - hl_v2.0
+        - ews_v2.0
+        - rb_v1.2
+        - gct_v2.0
+        - aml_v2.0
         permissible_values:
             Grade 1:
                 meaning: ncit:C41338
                 comments: []
                 in_subset:
                 - hl_v2.0
+                - gct_v2.0
+                - ews_v2.0
+                - aml_v2.0
             Grade 2:
                 meaning: ncit:C41339
                 comments: []
                 in_subset:
                 - hl_v2.0
+                - gct_v2.0
+                - ews_v2.0
+                - aml_v2.0
             Grade 3:
                 meaning: ncit:C41340
                 comments: []
                 in_subset:
                 - hl_v2.0
+                - gct_v2.0
+                - ews_v2.0
+                - aml_v2.0
             Grade 4:
                 meaning: ncit:C41337
                 comments: []
                 in_subset:
                 - hl_v2.0
+                - gct_v2.0
+                - ews_v2.0
+                - aml_v2.0
             Grade 5:
                 meaning: ncit:C48275
                 comments: []
                 in_subset:
                 - hl_v2.0
+                - gct_v2.0
+                - ews_v2.0
+                - aml_v2.0
+            CTCAE, Grade 1:
+                meaning: ''
+                comments: []
+                in_subset:
+                - ews_v2.0
+                - rb_v1.2
+            CTCAE, Grade 2:
+                meaning: ''
+                comments: []
+                in_subset:
+                - ews_v2.0
+                - rb_v1.2
+            CTCAE, Grade 3:
+                meaning: ''
+                comments: []
+                in_subset:
+                - ews_v2.0
+                - rb_v1.2
+            CTCAE, Grade 4:
+                meaning: ''
+                comments: []
+                in_subset:
+                - ews_v2.0
+                - rb_v1.2
+            CTCAE, Grade 5:
+                meaning: ''
+                comments: []
+                in_subset:
+                - ews_v2.0
+                - rb_v1.2
+            Unknown:
+                meaning: ncit:C17998
+                comments: []
+                in_subset:
+                - aml_v2.0
+                - ews_v2.0
+                - gct_v2.0
+                - rb_v1.2
+            Not Reported:
+                meaning: ncit:C43234
+                comments: []
+                in_subset:
+                - aml_v2.0
+                - ews_v2.0
+                - gct_v2.0
+                - rb_v1.2
     AeAttributionEnum:
         in_subset:
         - hl_v2.0
