@@ -198,8 +198,20 @@
                 "MLDS",
                 "TAMDS",
                 "secondary_AML",
+                "bulk_disease",
+                "karnofsky",
+                "lansky",
+                "fever",
                 "bulky_nodal_aggregate",
-                "BULK_MED_MASS"
+                "BULK_MED_MASS",
+                "igccc_risk_group",
+                "initial_treatment_category",
+                "magic_risk_group",
+                "med_ratio",
+                "mki",
+                "night_sweats",
+                "nodular_splenic",
+                "weight_loss"
             ],
             "comments": [],
             "in_subset": [
@@ -529,6 +541,7 @@
         "AdverseEvent": {
             "slots": [
                 "age_at_ae",
+                "age_at_ae_resolved",
                 "disease_phase",
                 "disease_phase_number",
                 "course",
@@ -621,7 +634,8 @@
                 "hist_ICD_O_morph_code",
                 "histology_grade",
                 "mature_glial_implants",
-                "somatic_malignancy_type"
+                "somatic_malignancy_type",
+                "histology_inpc"
             ],
             "comments": [],
             "in_subset": [
@@ -679,8 +693,12 @@
                 "procedure_site",
                 "procedure_laterality",
                 "procedure_type",
+                "procedure_purpose",
                 "procedure_extent",
-                "margins"
+                "margins",
+                "biopsy_type",
+                "number_nodes",
+                "number_nodes_numeric"
             ],
             "comments": [],
             "in_subset": [
@@ -4576,7 +4594,7 @@
         },
         "age_at_ae_resolved": {
             "slot_uri": "ncit:C175043",
-            "range": "enum",
+            "range": "integer",
             "comments": [],
             "in_subset": [
                 "hl_v1.0"
