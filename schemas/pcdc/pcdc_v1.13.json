@@ -109,7 +109,10 @@
                 "age_at_course_start",
                 "age_at_course_end",
                 "age_at_course_anc_500",
-                "timing_type"
+                "timing_type",
+                "age_at_cycle_start",
+                "age_at_cycle_end",
+                "cycle_number"
             ],
             "comments": [],
             "in_subset": [
@@ -132,7 +135,8 @@
                 "course",
                 "course_number",
                 "off_type",
-                "reason_off"
+                "reason_off",
+                "another_study"
             ],
             "comments": [],
             "in_subset": [
@@ -145,7 +149,10 @@
         },
         "MedicalHistory": {
             "slots": [
-                "medical_history"
+                "medical_history",
+                "medical_history_status",
+                "medical_history_category",
+                "assisted_conception"
             ],
             "comments": [],
             "in_subset": [
@@ -168,6 +175,7 @@
                 "lkss",
                 "age_lost_to_follow_up",
                 "cause_of_death",
+                "cause_of_death_other",
                 "TRM_type",
                 "cause_of_death_detail",
                 "cause_of_death_ranking"
@@ -262,11 +270,15 @@
                 "lab_cat",
                 "lab_test",
                 "lab_spec_type",
+                "lab_seq_method",
                 "lab_result",
                 "lab_result_numeric",
                 "lab_result_unit",
                 "lab_method",
-                "traumatic_tap"
+                "traumatic_tap",
+                "pmid_ref",
+                "threshold_high",
+                "threshold_low"
             ],
             "comments": [],
             "in_subset": [
@@ -298,7 +310,16 @@
                 "genetic_seq",
                 "aa_mutation",
                 "molecular_abnormality_result",
-                "allelic_ratio"
+                "allelic_ratio",
+                "anaplasia",
+                "anaplasia_extent",
+                "copy_number_status",
+                "cytodifferentiation",
+                "dna_index",
+                "dna_index_numeric",
+                "karyotype_status",
+                "mitoses",
+                "num_chromosomes"
             ],
             "comments": [],
             "in_subset": [
@@ -324,7 +345,13 @@
                 "administration_status",
                 "rt_site",
                 "rt_dose",
-                "rt_unit"
+                "rt_unit",
+                "boost_dose",
+                "boost",
+                "energy_type",
+                "num_fraction",
+                "rt_laterality",
+                "tumor_classification"
             ],
             "comments": [],
             "in_subset": [
@@ -346,7 +373,9 @@
                 "course",
                 "course_number",
                 "tmp_type",
-                "tmp_product"
+                "tmp_product",
+                "tmp_product_type",
+                "tmp_number_units"
             ],
             "comments": [],
             "in_subset": [
@@ -382,13 +411,15 @@
                 "disease_phase_number",
                 "course",
                 "course_number",
+                "cycle_number",
                 "administration_status",
                 "route",
                 "antineoplastic_agent",
                 "number_doses",
                 "total_dose_administered",
                 "total_dose_intended",
-                "total_dose_units"
+                "total_dose_units",
+                "route_detail"
             ],
             "comments": [],
             "in_subset": [
@@ -438,7 +469,8 @@
                 "hla_drb1_result",
                 "hla_dq_result",
                 "sct_conditioning_type",
-                "sct_tbi"
+                "sct_tbi",
+                "sct_cd34_coll"
             ],
             "comments": [],
             "in_subset": [
@@ -490,7 +522,15 @@
                 "anc_at_response",
                 "anc_threshold_at_response",
                 "platelet_count_at_response",
-                "platelet_threshold_at_response"
+                "platelet_threshold_at_response",
+                "interim_response",
+                "necrosis",
+                "necrosis_pct",
+                "nodular_splenic",
+                "palpable_nodes",
+                "response_method",
+                "symptoms",
+                "tx_prior_response"
             ],
             "comments": [],
             "in_subset": [
@@ -572,7 +612,18 @@
                 "tumor_site",
                 "tumor_laterality",
                 "tumor_state",
-                "nodal_involvement"
+                "nodal_involvement",
+                "depth",
+                "invasiveness",
+                "longest_diam_dim1",
+                "longest_diam_dim2",
+                "longest_diam_dim3",
+                "nodal_clinical",
+                "nodal_pathology",
+                "parameningeal_extension",
+                "pleural_effusion",
+                "tumor_site_other",
+                "tumor_size"
             ],
             "comments": [],
             "in_subset": [
@@ -594,7 +645,9 @@
                 "E",
                 "S",
                 "stage_system",
-                "stage"
+                "stage",
+                "irs_group",
+                "tnm_finding"
             ],
             "comments": [],
             "in_subset": [
@@ -767,7 +820,8 @@
                 "smn_type",
                 "smn_yn",
                 "smn_morph_icdo",
-                "smn_top_icdo"
+                "smn_top_icdo",
+                "smn_field"
             ],
             "comments": [],
             "in_subset": [
