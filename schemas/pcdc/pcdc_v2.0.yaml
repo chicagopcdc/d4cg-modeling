@@ -343,13 +343,12 @@ classes:
         slots:
         - age_at_lab
         - time_period_submitter_id
-        - category
-        - test
+        - laboratory_test_category
+        - laboratory_test
         - laboratory_test_method
         - laboratory_test_specimen
         - laboratory_test_specimen_other
         - collection_time
-        - method
         - result
         - result_text
         - result_numeric
@@ -376,43 +375,6 @@ classes:
         - rb_v1.2
         annotations:
             domain: testing
-    MolecularAnalysis:
-        slots:
-        - honest_broker_subject_id
-        - age_at_molecular_analysis
-        - time_period_submitter_id
-        - molecular_analysis_method
-        - iscn
-        - indepen_ab
-        - num_metaphases
-        - molecular_abnormality
-        - chromosome
-        - gene1
-        - gene2
-        - variant_type
-        - genetic_seq
-        - aa_mutation
-        - molecular_abnormality_result
-        - allelic_ratio
-        - karyotype_status
-        - num_chromosomes
-        - dna_index
-        - dna_index_numeric
-        - copy_number_status
-        - mitoses
-        - molecular_abnormality_other
-        - cytodifferentiation
-        - anaplasia
-        - anaplasia_extent
-        comments: []
-        in_subset:
-        - aml_v2.0
-        - gct_v2.0
-        - nbl_v2.0
-        - nrsts_v2.0
-        - rms_v2.0
-        annotations:
-            domain: testing
     GeneticAnalysis:
         slots:
         - age_at_genetic_analysis
@@ -424,12 +386,6 @@ classes:
         - test_version
         - gene_panel_size
         - cascade_testing
-        - genetic_analysis_method
-        - genetic_analysis_specimen
-        - classification
-        - biological_analyte
-        - source_pct
-        - source_pct_numeric
         - genetic_analysis_method
         - genetic_analysis_specimen
         - classification
@@ -531,7 +487,7 @@ classes:
         - hz_frequency
         - average_loss_low
         - average_loss_high
-        - grade
+        - function_test_grade
         comments:
         - 'D4CGNote: One observation/row per result when instantiated'
         in_subset:
@@ -589,7 +545,6 @@ classes:
         - diagnosis_conf_source
         - transformation
         - transformation_conf_source
-        - grade
         - mature_glial_implants
         - somatic_malignancy_type
         - histology_grade
@@ -3463,15 +3418,13 @@ slots:
         - pre_v1.0
         - gct_v2.0
         annotations: {}
-    grade:
-        slot_uri: ncit:C18000
-        range: GradeEnum
+    function_test_grade:
+        slot_uri: ''
+        range: FunctionTestGradeEnum
         comments: []
         in_subset:
-        - gct_v2.0
+        - npc_v1.0
         annotations: {}
-        exact_mappings:
-        - '[gct_v1.2].[Histology].[HISTOLOGY_GRADE] skos:exactMatch [gct_v2.0].[Diagnosis].[GRADE]'
     mature_glial_implants:
         slot_uri: ncit:C177363
         range: YesNoEnum
@@ -3499,6 +3452,7 @@ slots:
         - nbl_v2.0
         - nrsts_v2.0
         - os_v2.0
+        - gct_v2.0
         annotations: {}
     revised_inpc:
         slot_uri: ''
@@ -18738,67 +18692,65 @@ enums:
                 comments: []
                 in_subset:
                 - gct_v2.0
-    SpecimenEnum:
+    MrdSpecimenEnum:
         in_subset:
         - aml_v2.0
-        - pre_v1.0
-        - ews_v2.0
-        - fa_v1.0
-        - gct_v2.0
-        - hl_v2.0
-        - npc_v1.0
-        - rb_v1.2
         permissible_values:
             Blood:
                 meaning: ncit:C17610
                 comments: []
                 in_subset:
                 - aml_v2.0
-                - ews_v2.0
-                - fa_v1.0
-                - gct_v2.0
-                - hl_v2.0
-                - npc_v1.0
-                - rb_v1.2
             Bone Marrow:
                 meaning: ncit:C12431
                 comments: []
                 in_subset:
                 - aml_v2.0
+    GeneticAnalysisSpecimenEnum:
+        in_subset:
+        - fa_v1.0
+        - rms_v2.0
+        - nbl_v2.0
+        - rb_v1.2
+        permissible_values:
+            Blood:
+                meaning: ncit:C17610
+                comments: []
+                in_subset:
                 - fa_v1.0
                 - rb_v1.2
+                - rms_v2.0
+                - nbl_v2.0
+            Bone Marrow:
+                meaning: ncit:C12431
+                comments: []
+                in_subset:
+                - rms_v2.0
+                - nbl_v2.0
+                - fa_v1.0
             Cerebrospinal Fluid:
                 meaning: ncit:C12692
                 comments: []
                 in_subset:
-                - aml_v2.0
-                - fa_v1.0
-                - gct_v2.0
+                - nbl_v2.0
+            Tumor:
+                meaning: ncit:C18009
+                comments: []
+                in_subset:
+                - rms_v2.0
+                - nbl_v2.0
                 - rb_v1.2
-            Peritoneal Fluid:
-                meaning: ncit:C185197
+            Tissue (Non-Neoplastic):
+                meaning: ''
                 comments: []
                 in_subset:
                 - fa_v1.0
-                - gct_v2.0
-            Plasma:
-                meaning: ncit:C185204
+                - rb_v1.2
+            Lymph Node:
+                meaning: ncit:C12745
                 comments: []
                 in_subset:
-                - fa_v1.0
-                - gct_v2.0
-            Pleural Fluid:
-                meaning: ncit:C77613
-                comments: []
-                in_subset:
-                - gct_v2.0
-            Serum:
-                meaning: ncit:C178987
-                comments: []
-                in_subset:
-                - fa_v1.0
-                - gct_v2.0
-                - npc_v1.0
+                - nbl_v2.0
             Aqueous:
                 meaning: ncit:C28273
                 comments: []
@@ -18810,10 +18762,6 @@ enums:
                 in_subset:
                 - fa_v1.0
                 - rb_v1.2
-            Lymph Node:
-                meaning: ncit:C12745
-                comments: []
-                in_subset: []
             Saliva:
                 meaning: ncit:C174119
                 comments:
@@ -18822,39 +18770,6 @@ enums:
                 - pre_v1.0
                 - fa_v1.0
                 - rb_v1.2
-            Tissue (Non-Neoplastic):
-                meaning: ''
-                comments: []
-                in_subset:
-                - rb_v1.2
-            Tumor:
-                meaning: ncit:C18009
-                comments: []
-                in_subset:
-                - npc_v1.0
-                - rb_v1.2
-            Tissue:
-                meaning: ncit:C12801
-                comments: []
-                in_subset:
-                - hl_v2.0
-            K2EDTA:
-                meaning: ''
-                comments: []
-                in_subset:
-                - pre_v1.0
-                - pre_v1.0
-            Cell Free DNA BCT:
-                meaning: ''
-                comments: []
-                in_subset:
-                - pre_v1.0
-            Stool Sample:
-                meaning: ncit:C189125
-                comments: []
-                in_subset:
-                - pre_v1.0
-                - fa_v1.0
             Cord Blood:
                 meaning: ''
                 comments: []
@@ -18882,16 +18797,6 @@ enums:
                 - fa_v1.0
             Primary Fibroblast:
                 meaning: ncit:C12482
-                comments: []
-                in_subset:
-                - fa_v1.0
-            Urine:
-                meaning: ncit:C13283
-                comments: []
-                in_subset:
-                - fa_v1.0
-            Other Tissue (Non-Neoplastic):
-                meaning: ''
                 comments: []
                 in_subset:
                 - fa_v1.0
@@ -18930,15 +18835,6 @@ enums:
                 comments: []
                 in_subset:
                 - fa_v1.0
-            Other:
-                meaning: ncit:C17649
-                comments: []
-                in_subset:
-                - aml_v2.0
-                - pre_v1.0
-                - fa_v1.0
-                - hl_v2.0
-                - rb_v1.2
             Unknown:
                 meaning: ncit:C17998
                 comments: []
@@ -18958,6 +18854,124 @@ enums:
                 - gct_v2.0
                 - npc_v1.0
                 - rb_v1.2
+    LaboratoryTestSpecimenEnum:
+        in_subset:
+        - aml_v2.0
+        - pre_v1.0
+        - ews_v2.0
+        - fa_v1.0
+        - gct_v2.0
+        - hl_v2.0
+        - npc_v1.0
+        - rb_v1.2
+        - os_v2.0
+        permissible_values:
+            Blood:
+                meaning: ncit:C17610
+                comments: []
+                in_subset:
+                - aml_v2.0
+                - ews_v2.0
+                - fa_v1.0
+                - gct_v2.0
+                - hl_v2.0
+                - npc_v1.0
+                - os_v2.0
+            Bone Marrow:
+                meaning: ncit:C12431
+                comments: []
+                in_subset:
+                - aml_v2.0
+                - fa_v1.0
+                - rb_v1.2
+            Cerebrospinal Fluid:
+                meaning: ncit:C12692
+                comments: []
+                in_subset:
+                - aml_v2.0
+                - fa_v1.0
+                - gct_v2.0
+                - rb_v1.2
+            Peritoneal Fluid:
+                meaning: ncit:C185197
+                comments: []
+                in_subset:
+                - fa_v1.0
+                - gct_v2.0
+            Plasma:
+                meaning: ncit:C185204
+                comments: []
+                in_subset:
+                - fa_v1.0
+                - gct_v2.0
+            Pleural Fluid:
+                meaning: ncit:C77613
+                comments: []
+                in_subset:
+                - gct_v2.0
+            Serum:
+                meaning: ncit:C178987
+                comments: []
+                in_subset:
+                - fa_v1.0
+                - gct_v2.0
+                - npc_v1.0 
+            Saliva:
+                meaning: ncit:C174119
+                comments: []
+                in_subset:
+                - pre_v1.0
+                - fa_v1.0
+            Tumor:
+                meaning: ncit:C18009
+                comments: []
+                in_subset:
+                - npc_v1.0
+                - rb_v1.2
+            K2EDTA:
+                meaning: ''
+                comments: []
+                in_subset:
+                - pre_v1.0
+            Cell Free DNA BCT:
+                meaning: ''
+                comments: []
+                in_subset:
+                - pre_v1.0
+            Stool Sample:
+                meaning: ncit:C189125
+                comments: []
+                in_subset:
+                - pre_v1.0
+                - fa_v1.0
+            Urine:
+                meaning: ncit:C13283
+                comments: []
+                in_subset:
+                - os_v2.0
+                - fa_v1.0
+            Unknown:
+                meaning: ncit:C17998
+                comments: []
+                in_subset:
+                - aml_v2.0
+                - ews_v2.0
+                - fa_v1.0
+                - gct_v2.0
+                - hl_v2.0
+                - npc_v1.0
+                - os_v2.0
+            Not Reported:
+                meaning: ncit:C43234
+                comments: []
+                in_subset:
+                - aml_v2.0
+                - ews_v2.0
+                - fa_v1.0
+                - gct_v2.0
+                - hl_v2.0
+                - npc_v1.0
+                - os_v2.0           
     DiagnosisMethodEnum:
         in_subset:
         - cns_v1.2
@@ -19077,13 +19091,9 @@ enums:
                 comments: []
                 in_subset:
                 - aml_v2.0
-    MethodEnum:
+    LaboratoryTestMethodEnum:
         in_subset:
         - aml_v2.0
-        - pre_v1.0
-        - cns_v1.2
-        - ews_v2.0
-        - fa_v1.0
         - gct_v2.0
         - hl_v2.0
         - rb_v1.2
@@ -19128,221 +19138,6 @@ enums:
                 comments: []
                 in_subset:
                 - gct_v2.0
-            Array CGH:
-                meaning: ncit:C18084
-                comments: []
-                in_subset:
-                - pre_v1.0
-                - cns_v1.2
-            CGH:
-                meaning: ncit:C18084
-                comments: []
-                in_subset:
-                - fa_v1.0
-            Cytogenetics, NOS:
-                meaning: ncit:C16487
-                comments: []
-                in_subset:
-                - pre_v1.0
-                - ews_v2.0
-            Fluorescence In Situ Hybridization:
-                meaning: ncit:C17563
-                comments: []
-                in_subset:
-                - pre_v1.0
-                - cns_v1.2
-                - ews_v2.0
-                - fa_v1.0
-            Genotyping, NOS:
-                meaning: ncit:C45447
-                comments: []
-                in_subset:
-                - pre_v1.0
-                - ews_v2.0
-            Karyotyping:
-                meaning: ncit:C25215
-                comments: []
-                in_subset:
-                - pre_v1.0
-                - fa_v1.0
-            Methylation, NOS:
-                meaning: ncit:C16848
-                comments: []
-                in_subset:
-                - pre_v1.0
-            RT-PCR:
-                meaning: ncit:C18136
-                comments: []
-                in_subset:
-                - pre_v1.0
-            Sequencing, Methylation Array:
-                meaning: ncit:C165222
-                comments: []
-                in_subset:
-                - pre_v1.0
-                - cns_v1.2
-            Sequencing, Nanostring:
-                meaning: ''
-                comments: []
-                in_subset:
-                - pre_v1.0
-                - cns_v1.2
-            Sequencing, NGS, lcWGS:
-                meaning: ''
-                comments: []
-                in_subset: []
-            Sequencing, NGS, Multi-Gene Panel:
-                meaning: ncit:C198412
-                comments: []
-                in_subset:
-                - pre_v1.0
-                - fa_v1.0
-                - rb_v1.2
-            Sequencing, NGS, NOS:
-                meaning: ncit:C101293
-                comments: []
-                in_subset:
-                - pre_v1.0
-                - cns_v1.2
-                - ews_v2.0
-                - fa_v1.0
-                - rb_v1.2
-            Sequencing, NGS, Single Gene DNA:
-                meaning: ''
-                comments: []
-                in_subset:
-                - cns_v1.2
-                - fa_v1.0
-                - rb_v1.2
-            Sequencing, NGS, Single Site:
-                meaning: ''
-                comments: []
-                in_subset:
-                - rb_v1.2
-            Sequencing, NGS, Targeted DNA:
-                meaning: ncit:C158253
-                comments: []
-                in_subset:
-                - cns_v1.2
-            Sequencing, NGS, Targeted RNA:
-                meaning: ncit:C158252
-                comments: []
-                in_subset:
-                - cns_v1.2
-            Sequencing, NGS, TDS:
-                meaning: ''
-                comments: []
-                in_subset: []
-            Sequencing, NGS, Total RNA:
-                meaning: ncit:C124261
-                comments: []
-                in_subset:
-                - pre_v1.0
-                - cns_v1.2
-            Sequencing, NGS, Whole Exome:
-                meaning: ncit:C101295
-                comments: []
-                in_subset:
-                - pre_v1.0
-                - cns_v1.2
-                - fa_v1.0
-                - rb_v1.2
-            Sequencing, NGS, Whole Genome:
-                meaning: ncit:C101295
-                comments: []
-                in_subset:
-                - pre_v1.0
-                - cns_v1.2
-                - fa_v1.0
-                - rb_v1.2
-            Sequencing, Sanger, Capillary Electropheresis:
-                meaning: ''
-                comments: []
-                in_subset:
-                - pre_v1.0
-            Sequencing, Sanger, Gel Electropheresis:
-                meaning: ''
-                comments: []
-                in_subset:
-                - pre_v1.0
-            Sequencing, Sanger, NOS:
-                meaning: ''
-                comments: []
-                in_subset:
-                - pre_v1.0
-            SNP Array:
-                meaning: ncit:C116151
-                comments: []
-                in_subset:
-                - pre_v1.0
-                - cns_v1.2
-                - fa_v1.0
-            Next Generation Sequencing:
-                meaning: ncit:C101293
-                comments: []
-                in_subset:
-                - aml_v2.0
-            MLPA:
-                meaning: ncit:C116161
-                comments: []
-                in_subset:
-                - pre_v1.0
-            Methylome:
-                meaning: ncit:C106057
-                comments: []
-                in_subset:
-                - pre_v1.0
-            Not Applicable:
-                meaning: ncit:C48660
-                comments: []
-                in_subset:
-                - pre_v1.0
-            Morphology:
-                meaning: ncit:C17943
-                comments: []
-                in_subset:
-                - fa_v1.0
-            SMRT Sequencing:
-                meaning: ncit:C146819
-                comments:
-                - '(fa_v1.0) ConsortiumNote: PacBio Sequencing'
-                in_subset:
-                - fa_v1.0
-            Nanopore Sequencing:
-                meaning: ncit:C146818
-                comments: []
-                in_subset:
-                - fa_v1.0
-            RNA-seq:
-                meaning: ncit:C124261
-                comments: []
-                in_subset:
-                - fa_v1.0
-            Single Cell, RNA-seq:
-                meaning: ncit:C171152
-                comments: []
-                in_subset:
-                - fa_v1.0
-            ATAC Sequencing:
-                meaning: ncit:C156056
-                comments: []
-                in_subset:
-                - fa_v1.0
-            Methylation Array:
-                meaning: ncit:C165222
-                comments: []
-                in_subset:
-                - fa_v1.0
-            Sequencing, Sanger:
-                meaning: ''
-                comments: []
-                in_subset:
-                - fa_v1.0
-            Western Blot:
-                meaning: ncit:C16357
-                comments: []
-                in_subset:
-                - fa_v1.0
             Other:
                 meaning: ncit:C17649
                 comments: []
@@ -19354,7 +19149,6 @@ enums:
                 comments: []
                 in_subset:
                 - aml_v2.0
-                - fa_v1.0
                 - gct_v2.0
                 - hl_v2.0
                 - rb_v1.2
@@ -19363,10 +19157,237 @@ enums:
                 comments: []
                 in_subset:
                 - aml_v2.0
-                - fa_v1.0
                 - gct_v2.0
                 - hl_v2.0
                 - rb_v1.2
+    GeneticAnalysisMethodEnum:
+        in_subset:
+            - aml_v2.0
+            - pre_v1.0
+            - cns_v1.2
+            - ews_v2.0
+            - fa_v1.0
+            - gct_v2.0
+            - rb_v1.0
+        permissible_values:
+            # Cytogenetics
+            Cytogenetics, NOS:
+                meaning: ncit:C16487
+                comments: []
+                in_subset:
+                    - ews_v2.0
+                    - pre_v1.0
+                    - gct_v2.0
+            Cytogenetics, Karyotyping:
+                meaning: ncit:C25215
+                comments: []
+                in_subset:
+                    - aml_v2.0
+                    - pre_v1.0
+                    - fa_v1.0
+                    - gct_v2.0
+            Cytogenetics, FISH:
+                meaning: ncit:C17563
+                comments: []
+                in_subset:
+                    - aml_v2.0
+                    - pre_v1.0
+                    - cns_v1.2
+                    - ews_v2.0
+                    - fa_v1.0
+            Cytogenetics, Microarray, aCGH:
+                meaning: ncit:C18084
+                comments: []
+                in_subset:
+                    - pre_v1.0
+                    - cns_v1.2
+                    - fa_v1.0
+            Cytogenetics, Microarray, SNP Array:
+                meaning: ncit:C116151
+                comments: []
+                in_subset:
+                    - pre_v1.0
+                    - cns_v1.2
+                    - fa_v1.0
+
+            # PCR (non-NGS)
+            PCR, NOS:
+                meaning: ncit:C17003
+                comments: []
+                in_subset:
+                    - ews_v2.0
+            PCR, RT-PCR:
+                meaning: ncit:C18136
+                comments: []
+                in_subset:
+                    - aml_v2.0
+                    - pre_v1.0
+            PCR, MLPA:
+                meaning: ncit:C116161
+                comments: []
+                in_subset:
+                    - pre_v1.0
+
+            # Sequencing — Sanger
+            Sequencing, Sanger, NOS:
+                meaning: ''
+                comments: []
+                in_subset:
+                    - pre_v1.0
+                    - fa_v1.0
+            Sequencing, Sanger, Capillary Electrophoresis:
+                meaning: ''
+                comments: []
+                in_subset:
+                    - aml_v2.0
+                    - pre_v1.0
+            Sequencing, Sanger, Gel Electrophoresis:
+                meaning: ''
+                comments: []
+                in_subset:
+                    - aml_v2.0
+                    - pre_v1.0
+
+            # Sequencing — NGS (short-read & RNA)
+            Sequencing, NGS, NOS:
+                meaning: ncit:C101293
+                comments: []
+                in_subset:
+                    - aml_v2.0
+                    - pre_v1.0
+                    - cns_v1.2
+                    - ews_v2.0
+                    - fa_v1.0
+                    - rb_v1.0
+            Sequencing, NGS, Whole Genome:
+                meaning: ncit:C101294
+                comments: []
+                in_subset:
+                    - pre_v1.0
+                    - cns_v1.2
+                    - fa_v1.0
+                    - rb_v1.0
+            Sequencing, NGS, Whole Exome:
+                meaning: ncit:C101295
+                comments: []
+                in_subset:
+                    - pre_v1.0
+                    - cns_v1.2
+                    - fa_v1.0
+                    - rb_v1.0
+            Sequencing, NGS, Targeted DNA Panel:
+                meaning: ncit:C158253
+                comments: []
+                in_subset:
+                    - pre_v1.0
+                    - cns_v1.2
+                    - fa_v1.0
+                    - rb_v1.0
+            Sequencing, NGS, Targeted RNA Panel:
+                meaning: ncit:C158252
+                comments: []
+                in_subset:
+                    - cns_v1.2
+            Sequencing, NGS, Single Gene (DNA):
+                meaning: ''
+                comments: []
+                in_subset:
+                    - cns_v1.2
+                    - fa_v1.0
+                    - rb_v1.0
+            Sequencing, NGS, Single Site (Hotspot):
+                meaning: ''
+                comments: []
+                in_subset:
+                    - rb_v1.0
+            Sequencing, NGS, Total RNA:
+                meaning: ncit:C124261
+                comments: []
+                in_subset:
+                    - pre_v1.0
+                    - cns_v1.2
+                    - fa_v1.0
+            Sequencing, NGS, RNA-seq:
+                meaning: ncit:C124261
+                comments: []
+                in_subset:
+                    - fa_v1.0
+            Sequencing, NGS, Single Cell RNA-seq:
+                meaning: ncit:C171152
+                comments: []
+                in_subset:
+                    - fa_v1.0
+            Sequencing, NGS, ATAC-seq:
+                meaning: ncit:C156056
+                comments: []
+                in_subset:
+                    - fa_v1.0
+
+            # Sequencing — Long-read (kept under NGS for clarity)
+            Sequencing, NGS, Long-Read, SMRT:
+                meaning: ncit:C146819
+                comments: []
+                in_subset:
+                    - fa_v1.0
+            Sequencing, NGS, Long-Read, Nanopore:
+                meaning: ncit:C146818
+                comments: []
+                in_subset:
+                    - fa_v1.0
+
+            # Expression / targeted hybridization (not sequencing)
+            Expression Profiling, Nanostring:
+                meaning: ''
+                comments: []
+                in_subset:
+                    - pre_v1.0
+                    - cns_v1.2
+
+            # DNA methylation (array-based)
+            DNA Methylation, NOS:
+                meaning: ncit:C16848
+                comments: []
+                in_subset:
+                    - pre_v1.0
+            DNA Methylation, Array:
+                meaning: ncit:C165222
+                comments: []
+                in_subset:
+                    - pre_v1.0
+                    - cns_v1.2
+                    - fa_v1.0
+
+            # Protein (non-genomic)
+            Western Blot:
+                meaning: ncit:C16357
+                comments: []
+                in_subset:
+                    - fa_v1.0
+
+            # Utility / administrative
+            Genotyping, NOS:
+                meaning: ncit:C45447
+                comments: []
+                in_subset:
+                    - ews_v2.0
+                    - pre_v1.0
+            Unknown:
+                meaning: ncit:C17998
+                comments: []
+                in_subset:
+                    - aml_v2.0
+                    - ews_v2.0
+                    - fa_v1.0
+                    - gct_v2.0
+            Not Reported:
+                meaning: ncit:C43234
+                comments: []
+                in_subset:
+                    - aml_v2.0
+                    - aml_v2.0
+                    - ews_v2.0
+                    - fa_v1.0
+                    - gct_v2.0
     ResultEnum:
         in_subset:
         - ews_v2.0
@@ -19477,7 +19498,7 @@ enums:
                 - gct_v2.0
                 - npc_v1.0
                 - rb_v1.2
-    SeqMethodEnum:
+    QuantificationTypeEnum:
         in_subset:
         - gct_v2.0
         permissible_values:
@@ -19501,30 +19522,6 @@ enums:
                 comments: []
                 in_subset:
                 - gct_v2.0
-    GenePanelSourceEnum:
-        in_subset:
-        - rb_v1.2
-        permissible_values:
-            OncoKids:
-                meaning: ''
-                comments: []
-                in_subset:
-                - rb_v1.2
-            Sloan Kettering:
-                meaning: ''
-                comments: []
-                in_subset:
-                - rb_v1.2
-            Toronto:
-                meaning: ''
-                comments: []
-                in_subset:
-                - rb_v1.2
-            Boston Children's:
-                meaning: ''
-                comments: []
-                in_subset:
-                - rb_v1.2
     GenePanelSizeEnum:
         in_subset: []
         permissible_values:
@@ -29631,27 +29628,10 @@ enums:
                 in_subset:
                 - pre_v1.0
                 - gct_v2.0
-    GradeEnum:
+    FunctionTestGradeEnum:
         in_subset:
-        - gct_v2.0
+        - npc_v1.0
         permissible_values:
-            Norris Immature Teratoma Grading System, Grade 1:
-                meaning: ncit:C28077
-                comments:
-                - '(gct_v2.0) ConsortiumNote: Note: Only associated with Immature
-                    Teratoma.'
-                in_subset:
-                - gct_v2.0
-            Norris Immature Teratoma Grading System, Grade 2:
-                meaning: ncit:C28078
-                comments: []
-                in_subset:
-                - gct_v2.0
-            Norris Immature Teratoma Grading System, Grade 3:
-                meaning: ncit:C28079
-                comments: []
-                in_subset:
-                - gct_v2.0
             SIOP Boston, Grade 0:
                 meaning: ''
                 comments: []
@@ -29785,6 +29765,23 @@ enums:
         - nrsts_v2.0
         - os_v2.0
         permissible_values:
+            Norris Immature Teratoma Grading System, Grade 1:
+                meaning: ncit:C28077
+                comments:
+                - '(gct_v2.0) ConsortiumNote: Note: Only associated with Immature
+                    Teratoma.'
+                in_subset:
+                - gct_v2.0
+            Norris Immature Teratoma Grading System, Grade 2:
+                meaning: ncit:C28078
+                comments: []
+                in_subset:
+                - gct_v2.0
+            Norris Immature Teratoma Grading System, Grade 3:
+                meaning: ncit:C28079
+                comments: []
+                in_subset:
+                - gct_v2.0
             Differentiating:
                 meaning: ''
                 comments: []
@@ -40112,835 +40109,84 @@ enums:
                 - hl_v2.0
                 - lt_v1.0
                 - rb_v1.2
-    MolecularAnalysisMethodEnum:
+    GeneticAnalysisStatusEnum:
         in_subset:
-        - aml_v2.0
-        - gct_v2.0
-        permissible_values:
-            Karyotype:
-                meaning: ncit:C16768
-                comments: []
-                in_subset:
-                - aml_v2.0
-            Fluorescence In Situ Hybridization:
-                meaning: ncit:C17563
-                comments: []
-                in_subset:
-                - aml_v2.0
-            Reverse Transcriptase-Polymerase Chain Reaction:
-                meaning: ncit:C18136
-                comments: []
-                in_subset:
-                - aml_v2.0
-            Next Generation Sequencing:
-                meaning: ncit:C101293
-                comments: []
-                in_subset:
-                - aml_v2.0
-            Capillary Electropheresis:
-                meaning: ncit:C17637
-                comments: []
-                in_subset:
-                - aml_v2.0
-            Gel Electropheresis:
-                meaning: ncit:C18091
-                comments: []
-                in_subset:
-                - aml_v2.0
-            Karyotyping:
-                meaning: ncit:C16768
-                comments: []
-                in_subset:
-                - gct_v2.0
-            Cytogenetics:
-                meaning: ncit:C16487
-                comments: []
-                in_subset:
-                - gct_v2.0
-            Other:
-                meaning: ncit:C17649
-                comments: []
-                in_subset:
-                - aml_v2.0
-            Unknown:
-                meaning: ncit:C17998
-                comments: []
-                in_subset:
-                - aml_v2.0
-                - gct_v2.0
-            Not Reported:
-                meaning: ncit:C43234
-                comments: []
-                in_subset:
-                - aml_v2.0
-                - gct_v2.0
-    MolecularAbnormalityEnum:
-        in_subset:
+        - pre_v1.0
+        - cns_v1.2
+        - ews_v2.0
+        - fa_v1.0
+        - rb_v1.2
         - aml_v2.0
         - gct_v2.0
         - nbl_v2.0
         - nrsts_v2.0
         - rms_v2.0
         permissible_values:
-            RUNX1-RUNX1T1 Fusion:
-                meaning: ncit:C99294
+            Present:
+                meaning: ncit:C25626
                 comments: []
                 in_subset:
+                - pre_v1.0
+                - cns_v1.2
+                - ews_v2.0
+                - fa_v1.0
+                - rb_v1.2
                 - aml_v2.0
-            Trisomy 3:
-                meaning: ncit:C36425
-                comments: []
-                in_subset:
-                - aml_v2.0
-            t(v;q23,3); KMT2A:
-                meaning: ''
-                comments: []
-                in_subset:
-                - aml_v2.0
-            Biallelic CEBPA Gene Mutation:
-                meaning: ncit:C157569
-                comments: []
-                in_subset:
-                - aml_v2.0
-            CEBPA Gene Mutation:
-                meaning: ncit:C38372
-                comments: []
-                in_subset:
-                - aml_v2.0
-            CEBPA Mutation - Mutation Unspecified:
-                meaning: ''
-                comments: []
-                in_subset:
-                - aml_v2.0
-            CKIT Mutation - Ex17:
-                meaning: ncit:C116396
-                comments: []
-                in_subset:
-                - aml_v2.0
-            CKIT Mutation - Ex8:
-                meaning: ncit:C128660
-                comments: []
-                in_subset:
-                - aml_v2.0
-            CKIT Mutation - Unspecified:
-                meaning: ncit:C39712
-                comments:
-                - '(aml_v2.0) ConsortiumNote: t(9;11)(p21.3;q23.3)'
-                in_subset:
-                - aml_v2.0
-            del(13q):
-                meaning: ncit:C36497
-                comments: []
-                in_subset:
-                - aml_v2.0
-            del(13q)(13q14-21):
-                meaning: ncit:C168770
-                comments: []
-                in_subset:
-                - aml_v2.0
-            del(17p):
-                meaning: ncit:C36499
-                comments: []
-                in_subset:
-                - aml_v2.0
-            del(5q)(5q31-q32):
-                meaning: ncit:C168769
-                comments: []
-                in_subset:
-                - aml_v2.0
-            der.12p:
-                meaning: ncit:C173542
-                comments: []
-                in_subset:
-                - aml_v2.0
-            ETV6-MN1 Fusion:
-                meaning: ncit:C99678
-                comments: []
-                in_subset:
-                - aml_v2.0
-            FLT3 D835N Pathogenic Variant:
-                meaning: ''
-                comments: []
-                in_subset:
-                - aml_v2.0
-            FLT3 Internal Tandem Duplication:
-                meaning: ncit:C67494
-                comments: []
-                in_subset:
-                - aml_v2.0
-            FLT3 Tyrosine Kinase Domain Point Mutation:
-                meaning: ncit:C67495
-                comments:
-                - '(aml_v2.0) ConsortiumNote: t(6;9)(p23;q34.1)'
-                in_subset:
-                - aml_v2.0
-            GATA1 Mutation:
-                meaning: ncit:C82340
-                comments: []
-                in_subset:
-                - aml_v2.0
-            inv(16)(p13.3q24.3) / CBFA2T3-GLIS2:
-                meaning: ncit:C167195
-                comments: []
-                in_subset:
-                - aml_v2.0
-            inv(16)(p13q22):
-                meaning: ncit:C36373
-                comments: []
-                in_subset:
-                - aml_v2.0
-            inv(16) / t(16;16)(p13.1q22.1):
-                meaning: ncit:C27759
-                comments: []
-                in_subset:
-                - aml_v2.0
-            inv(3)(q21.3;q26.2):
-                meaning: ncit:C36407
-                comments:
-                - '(aml_v2.0) ConsortiumNote: t(v;11q23.3)'
-                in_subset:
-                - aml_v2.0
-            K-RAS Mutation:
-                meaning: ncit:C41361
-                comments:
-                - '(aml_v2.0) ConsortiumNote: t(11;17)(q23;q12-21)'
-                in_subset:
-                - aml_v2.0
-            KMT2A (MLL) t(X;11)(q24;q23):
-                meaning: ''
-                comments: []
-                in_subset:
-                - aml_v2.0
-            KMT2A (MLL) t(l;11)(q23;q23):
-                meaning: ''
-                comments: []
-                in_subset:
-                - aml_v2.0
-            MLL Other Partner:
-                meaning: ncit:C36517
-                comments:
-                - '(aml_v2.0) ConsortiumNote: t(8;16)(p11.2;p13.3)'
-                in_subset:
-                - aml_v2.0
-            MLL Rearrangement:
-                meaning: ncit:C122623
-                comments: []
-                in_subset:
-                - aml_v2.0
-            MLL-MLLT10(AF10) Fusion:
-                meaning: ''
-                comments: []
-                in_subset:
-                - aml_v2.0
-            MLL-MLLT3 Fusion:
-                meaning: ''
-                comments: []
-                in_subset:
-                - aml_v2.0
-            Monoallelic CEBPA Gene Mutation:
-                meaning: ncit:C168774
-                comments: []
-                in_subset:
-                - aml_v2.0
-            Monosomy 5:
-                meaning: ncit:C36523
-                comments: []
-                in_subset:
-                - aml_v2.0
-            Monosomy 7:
-                meaning: ncit:C36411
-                comments:
-                - '(aml_v2.0) ConsortiumNote: split'
-                in_subset:
-                - aml_v2.0
-            N-RAS Mutation:
-                meaning: ncit:C41381
-                comments:
-                - '(aml_v2.0) ConsortiumNote: split'
-                in_subset:
-                - aml_v2.0
-            Non-KMT2A MLLT10:
-                meaning: ncit:C168771
-                comments: []
-                in_subset:
-                - aml_v2.0
-            NPM1 Mutation:
-                meaning: ncit:C168774
-                comments: []
-                in_subset:
-                - aml_v2.0
-            PML-RARA Fusion:
-                meaning: ''
-                comments:
-                - '(aml_v2.0) ConsortiumNote: t(9;22)(q34.1;q11.2)'
-                in_subset:
-                - aml_v2.0
-            PTPN11 Mutation:
-                meaning: ncit:C82612
-                comments: []
-                in_subset:
-                - aml_v2.0
-            RUNX1 Mutation:
-                meaning: ncit:C38362
-                comments:
-                - '(aml_v2.0) ConsortiumNote: GATA2/MECOM Fusion Gene'
-                in_subset:
-                - aml_v2.0
-            t(1;11)(q21;q23) / MLL-MLLT11(AF1Q):
-                meaning: ncit:C168759
-                comments: []
-                in_subset:
-                - aml_v2.0
-            t(1;22)(RBM15-MKL1):
-                meaning: ncit:C36417
-                comments: []
-                in_subset:
-                - aml_v2.0
-            t(l;22) (pl2 ;ql3):
-                meaning: ''
-                comments: []
-                in_subset:
-                - aml_v2.0
-            t(10;11)(p11.2;q23):
-                meaning: ncit:C168758
-                comments: []
-                in_subset:
-                - aml_v2.0
-            t(10;11)(p12;q23) / MLL-MLLT10(AF10):
-                meaning: ncit:C132102
-                comments:
-                - '(aml_v2.0) ConsortiumNote: t(1;22)(p13.3;q13.1)'
-                in_subset:
-                - aml_v2.0
-            t(11;15)(p15;q35) / NUP98/JARID1A:
-                meaning: ncit:C131505
-                comments: []
-                in_subset:
-                - aml_v2.0
-            t(11;17)(AF17):
-                meaning: ncit:C168760
-                comments: []
-                in_subset:
-                - aml_v2.0
-            t(11;19)(q23;p13.1) / (MLL-ELL):
-                meaning: ncit:C36371
-                comments:
-                - '(aml_v2.0) ConsortiumNote: KMT2A Gene Rearrangement'
-                in_subset:
-                - aml_v2.0
-            t(11;19)(q23;p13.3) / (MLL-ENL):
-                meaning: ncit:C36372
-                comments: []
-                in_subset:
-                - aml_v2.0
-            t(11;19)(q23;p13) / (MLL-ENL)/(MLL-ELL):
-                meaning: ncit:C168764
-                comments: []
-                in_subset:
-                - aml_v2.0
-            t(15;17)(q24;q21):
-                meaning: ncit:C27758
-                comments: []
-                in_subset:
-                - aml_v2.0
-            t(16;16)(p13.1;q22):
-                meaning: ncit:C27759
-                comments: []
-                in_subset:
-                - aml_v2.0
-            t(16;21)(p11;q22) / FUS/ERG:
-                meaning: ncit:C36616
-                comments: []
-                in_subset:
-                - aml_v2.0
-            t(16;21)(q24;q22) / RUNX1-CBFA2T3:
-                meaning: ncit:C168773
-                comments: []
-                in_subset:
-                - aml_v2.0
-            t(2;12):
-                meaning: ncit:C173543
-                comments: []
-                in_subset:
-                - aml_v2.0
-            t(3;12)(q23;p12.3) / ETV6/EVI1:
-                meaning: ncit:C168766
-                comments: []
-                in_subset:
-                - aml_v2.0
-            t(3;3)(q21;q26.2):
-                meaning: ncit:C36406
-                comments: []
-                in_subset:
-                - aml_v2.0
-            t(3;5)(q25;q34) / NPM1/MLF1:
-                meaning: ncit:C36415
-                comments: []
-                in_subset:
-                - aml_v2.0
-            t(4;11)(q21;q23) / MLL-MLLT2(AF4):
-                meaning: ncit:C36365
-                comments: []
-                in_subset:
-                - aml_v2.0
-            t(5;11)(q35;p15) / NSD1/NUP98:
-                meaning: ncit:C131503
-                comments: []
-                in_subset:
-                - aml_v2.0
-            t(6;11)(q27;q23) / MLL-MLLT4(AF6):
-                meaning: ncit:C36610
-                comments: []
-                in_subset:
-                - aml_v2.0
-            t(6;9)(p23;q34) (DEK/NUP214):
-                meaning: ncit:C36532
-                comments: []
-                in_subset:
-                - aml_v2.0
-            t(7;12)(q36;p13) / HLXB9(MNX1)/ETV6(TEL):
-                meaning: ncit:C122689
-                comments: []
-                in_subset:
-                - aml_v2.0
-            t(8;16)MOZ/CBP:
-                meaning: ncit:C167194
-                comments: []
-                in_subset:
-                - aml_v2.0
-            t(8;21)(q22;q22) RUNX1/ETO:
-                meaning: ''
-                comments: []
-                in_subset:
-                - aml_v2.0
-            t(8;21)(q21.3;q22):
-                meaning: ''
-                comments: []
-                in_subset:
-                - aml_v2.0
-            t(9;11)(p22;q23) / MLL-MLLT3(AF9):
-                meaning: ncit:C36370
-                comments: []
-                in_subset:
-                - aml_v2.0
-            t(9;22)(q34;q11.2) / ABL/BCR:
-                meaning: ncit:C13271
-                comments: []
-                in_subset:
-                - aml_v2.0
-            TCF3-PBX1 Fusion:
-                meaning: ncit:C99291
-                comments: []
-                in_subset:
-                - aml_v2.0
-            Trisomy 21:
-                meaning: ncit:C43224
-                comments: []
-                in_subset:
-                - aml_v2.0
-            Trisomy 8:
-                meaning: ncit:C36396
-                comments: []
-                in_subset:
-                - aml_v2.0
-            Wild Type:
-                meaning: ncit:C62195
-                comments: []
-                in_subset:
-                - aml_v2.0
-            WT1 Mutation:
-                meaning: ncit:C146726
-                comments: []
-                in_subset:
-                - aml_v2.0
-            45XO:
-                meaning: ncit:C26900
-                comments:
-                - '(gct_v2.0) ConsortiumNote: Note: If multiple molecular abnormalities,
-                    include one observation per molecular abnormality.'
-                in_subset:
                 - gct_v2.0
-            45XO w/ Y Chromosomal Material:
-                meaning: ncit:C176781
-                comments: []
-                in_subset:
-                - gct_v2.0
-            46XX:
-                meaning: ncit:C120197
-                comments: []
-                in_subset:
-                - gct_v2.0
-            46XY:
-                meaning: ncit:C120198
-                comments: []
-                in_subset:
-                - gct_v2.0
-            47XYY:
-                meaning: ncit:C85237
-                comments: []
-                in_subset:
-                - gct_v2.0
-            47XXY:
-                meaning: ncit:C34752
-                comments: []
-                in_subset:
-                - gct_v2.0
-            47XXX:
-                meaning: ncit:C129718
-                comments: []
-                in_subset:
-                - gct_v2.0
-            48XXXY:
-                meaning: ncit:C89799
-                comments: []
-                in_subset:
-                - gct_v2.0
-            48XXXX:
-                meaning: ncit:C176787
-                comments: []
-                in_subset:
-                - gct_v2.0
-            Loss of Chromosome 11q (Deletion):
-                meaning: ''
-                comments: []
-                in_subset:
                 - nbl_v2.0
-            Loss of Chromosome 1p (Deletion):
-                meaning: ''
-                comments: []
-                in_subset:
-                - nbl_v2.0
-            17q Gain:
-                meaning: ''
-                comments: []
-                in_subset:
-                - nbl_v2.0
-            ALK Mutation:
-                meaning: ''
-                comments: []
-                in_subset:
-                - nbl_v2.0
-            ALK Rearrangement:
-                meaning: ''
-                comments: []
-                in_subset:
-                - nbl_v2.0
-            ALK Copy Number Gain:
-                meaning: ''
-                comments: []
-                in_subset:
-                - nbl_v2.0
-            ALK Copy Number Loss:
-                meaning: ''
-                comments: []
-                in_subset:
-                - nbl_v2.0
-            ALK Amplification:
-                meaning: ''
-                comments: []
-                in_subset:
-                - nbl_v2.0
-            p.F1174L:
-                meaning: ''
-                comments: []
-                in_subset:
-                - nbl_v2.0
-            p.R1275L:
-                meaning: ''
-                comments: []
-                in_subset:
-                - nbl_v2.0
-            MYCN Amplification:
-                meaning: ''
-                comments: []
-                in_subset:
-                - nbl_v2.0
-            FOXO1 Rearranged:
-                meaning: ''
-                comments:
-                - '(nrsts_v2.0) ConsortiumNote: Note: If multiple molecular abnormalities,
-                    include one observation per molecular abnormality.'
-                in_subset:
                 - nrsts_v2.0
-            EWSR1 Rearranged:
-                meaning: ''
-                comments: []
-                in_subset:
-                - nrsts_v2.0
-            SMARCB1 Deleted/Mutated:
-                meaning: ''
-                comments: []
-                in_subset:
-                - nrsts_v2.0
-            ETV6 Rearranged:
-                meaning: ''
-                comments: []
-                in_subset:
-                - nrsts_v2.0
-            ALK Rearranged:
-                meaning: ''
-                comments: []
-                in_subset:
-                - nrsts_v2.0
-            SSX-SS18:
-                meaning: ''
-                comments: []
-                in_subset:
-                - nrsts_v2.0
-            CIC-DUX4:
-                meaning: ''
-                comments: []
-                in_subset:
-                - nrsts_v2.0
-            BCOR-CCNB3:
-                meaning: ''
-                comments: []
-                in_subset:
-                - nrsts_v2.0
-            EWSR1-ETV1/4:
-                meaning: ''
-                comments: []
-                in_subset:
-                - nrsts_v2.0
-            FUS-CREB3L2:
-                meaning: ''
-                comments: []
-                in_subset:
-                - nrsts_v2.0
-            EWSR1-ATF1:
-                meaning: ''
-                comments: []
-                in_subset:
-                - nrsts_v2.0
-            EWSR1-CREB1:
-                meaning: ''
-                comments: []
-                in_subset:
-                - nrsts_v2.0
-            EWSR1-PBX1/ZNF44/POU5F1:
-                meaning: ''
-                comments: []
-                in_subset:
-                - nrsts_v2.0
-            TGFBR3-MGEA5:
-                meaning: ''
-                comments: []
-                in_subset:
-                - nrsts_v2.0
-            NTRK Rearranged:
-                meaning: ''
-                comments: []
-                in_subset:
-                - nrsts_v2.0
-            ROS1 Rearranged:
-                meaning: ''
-                comments: []
-                in_subset:
-                - nrsts_v2.0
-            VGLLA2 Rearranged:
-                meaning: ''
-                comments: []
-                in_subset:
-                - nrsts_v2.0
-            ASPSCR1-TFE3:
-                meaning: ''
-                comments: []
-                in_subset:
-                - nrsts_v2.0
-            BCOR ITT Rearranged:
-                meaning: ''
-                comments: []
-                in_subset:
-                - nrsts_v2.0
-            PAX3-FOXO1:
-                meaning: ''
-                comments:
-                - '(rms_v2.0) ConsortiumNote: Note: If multiple molecular abnormalities,
-                    include one observation per molecular abnormality.'
-                in_subset:
                 - rms_v2.0
-            PAX7-FOXO1:
-                meaning: ''
+            Absent:
+                meaning: ncit:C48190
                 comments: []
                 in_subset:
-                - rms_v2.0
-            PAX3-Other:
-                meaning: ''
-                comments: []
-                in_subset:
-                - rms_v2.0
-            Other-FOXO1:
-                meaning: ''
-                comments: []
-                in_subset:
-                - rms_v2.0
-            Other:
-                meaning: ncit:C17649
-                comments: []
-                in_subset:
+                - pre_v1.0
+                - cns_v1.2
+                - ews_v2.0
+                - fa_v1.0
+                - rb_v1.2
                 - aml_v2.0
+                - gct_v2.0
                 - nbl_v2.0
                 - nrsts_v2.0
-            Unknown:
-                meaning: ncit:C17998
-                comments: []
-                in_subset:
-                - aml_v2.0
-                - gct_v2.0
-                - nbl_v2.0
-            Not Reported:
-                meaning: ncit:C43234
-                comments: []
-                in_subset:
-                - aml_v2.0
-                - gct_v2.0
-                - nbl_v2.0
-    VariantTypeEnum:
-        in_subset:
-        - aml_v2.0
-        - gct_v2.0
-        - nbl_v2.0
-        - rms_v2.0
-        permissible_values:
-            Translocation:
-                meaning: ncit:C25756
-                comments:
-                - '(gct_v2.0) ConsortiumNote: Derived by PCDC'
-                in_subset:
-                - aml_v2.0
-                - gct_v2.0
-                - nbl_v2.0
-                - rms_v2.0
-            Inversion:
-                meaning: ncit:C45589
-                comments: []
-                in_subset:
-                - aml_v2.0
-                - gct_v2.0
-                - nbl_v2.0
-                - rms_v2.0
-            Mutation:
-                meaning: ncit:C45576
-                comments: []
-                in_subset:
-                - aml_v2.0
-                - gct_v2.0
-                - nbl_v2.0
-                - rms_v2.0
-            Single Nucleotide Variant:
-                meaning: ncit:C146674
-                comments: []
-                in_subset:
-                - aml_v2.0
-                - gct_v2.0
-                - nbl_v2.0
-                - rms_v2.0
-            Copy Number Alteration:
-                meaning: ncit:C40207
-                comments: []
-                in_subset:
-                - aml_v2.0
-                - gct_v2.0
-                - nbl_v2.0
-            Rearrangement:
-                meaning: ncit:C16611
-                comments: []
-                in_subset:
-                - aml_v2.0
-                - gct_v2.0
-                - nbl_v2.0
-                - rms_v2.0
-            Gain:
-                meaning: ncit:C36438
-                comments: []
-                in_subset:
-                - aml_v2.0
-                - nbl_v2.0
-            Insertion:
-                meaning: ncit:C6828
-                comments: []
-                in_subset:
-                - aml_v2.0
-            Deletion:
-                meaning: ncit:C19296
-                comments: []
-                in_subset:
-                - aml_v2.0
-                - gct_v2.0
-                - nbl_v2.0
-                - rms_v2.0
-            Amplification:
-                meaning: ncit:C25418
-                comments: []
-                in_subset:
-                - nbl_v2.0
-                - rms_v2.0
-            Copy Integer Alteration:
-                meaning: ncit:C40207
-                comments: []
-                in_subset:
-                - rms_v2.0
-            Other:
-                meaning: ncit:C17649
-                comments: []
-                in_subset:
-                - aml_v2.0
-                - gct_v2.0
-                - nbl_v2.0
-                - rms_v2.0
-            Unknown:
-                meaning: ncit:C17998
-                comments: []
-                in_subset:
-                - aml_v2.0
-                - gct_v2.0
-                - nbl_v2.0
-                - rms_v2.0
-            Not Reported:
-                meaning: ncit:C43234
-                comments: []
-                in_subset:
-                - aml_v2.0
-                - gct_v2.0
-                - nbl_v2.0
-                - rms_v2.0
-    MolecularAbnormalityResultEnum:
-        in_subset:
-        - aml_v2.0
-        - nbl_v2.0
-        - rms_v2.0
-        permissible_values:
-            Positive:
-                meaning: ncit:C38758
-                comments: []
-                in_subset:
-                - aml_v2.0
-                - nbl_v2.0
-                - rms_v2.0
-            Negative:
-                meaning: ncit:C38757
-                comments: []
-                in_subset:
-                - aml_v2.0
-                - nbl_v2.0
                 - rms_v2.0
             Not Done:
                 meaning: ncit:C49484
                 comments: []
                 in_subset:
+                - pre_v1.0
+                - cns_v1.2
+                - ews_v2.0
+                - fa_v1.0
+                - rb_v1.2
                 - aml_v2.0
+                - gct_v2.0
+                - nbl_v2.0
+                - nrsts_v2.0
                 - rms_v2.0
             Unknown:
                 meaning: ncit:C17998
                 comments: []
                 in_subset:
+                - pre_v1.0
+                - cns_v1.2
+                - ews_v2.0
+                - fa_v1.0
+                - rb_v1.2
                 - aml_v2.0
+                - gct_v2.0
                 - nbl_v2.0
+                - nrsts_v2.0
                 - rms_v2.0
             Not Reported:
                 meaning: ncit:C43234
                 comments: []
                 in_subset:
+                - pre_v1.0
+                - cns_v1.2
+                - ews_v2.0
+                - fa_v1.0
+                - rb_v1.2
                 - aml_v2.0
     AdverseEventEnum:
         in_subset:
@@ -41584,20 +40830,6 @@ enums:
                 - pre_v1.0
                 - hl_v2.0
                 - rb_v1.2
-    AlterationCategoryEnum:
-        in_subset:
-        - pre_v1.0
-        permissible_values:
-            Region/Chromosome:
-                meaning: ''
-                comments: []
-                in_subset:
-                - pre_v1.0
-            Specific Gene:
-                meaning: ''
-                comments: []
-                in_subset:
-                - pre_v1.0
     AssociatedConditionEnum:
         in_subset:
         - pre_v1.0
@@ -44200,7 +43432,6 @@ enums:
                 comments: []
                 in_subset:
                 - rb_v1.2
-        permissible_values:
             University of Minnesota:
                 meaning: ''
                 comments: []
