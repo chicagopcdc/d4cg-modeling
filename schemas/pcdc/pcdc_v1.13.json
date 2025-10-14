@@ -689,7 +689,8 @@
                 "hist_ICD_O_morph_code",
                 "histology_grade",
                 "mature_glial_implants",
-                "somatic_malignancy_type"
+                "somatic_malignancy_type",
+                "histology_inpc"
             ],
             "comments": [],
             "in_subset": [
