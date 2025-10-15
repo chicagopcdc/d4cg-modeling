@@ -1407,7 +1407,7 @@
             "description": "Foreign-key reference to a Subject record (by submitter_id)",
             "comments": [],
             "inlined": false,
-            "multivalued": false,
+            "multivalued": true,
              "in_subset": [
                 "aml_v1.8-live",
                 "gct_v1.2-live",
