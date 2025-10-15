@@ -503,7 +503,6 @@ classes:
         - time_period_submitter_id
         - review_source
         - markers
-        - specimen
         - result
         - result_text
         - result_numeric
@@ -575,28 +574,28 @@ classes:
         - age_at_staging
         - time_period_submitter_id
         - disease_site_assessment_submitter_id
-        - stage
+        - review_source
+        - stage_category
         - stage_system
         - stage_system_version
+        - stage
         - stage_text
-        - stage_category
         - ann_arbor_mod_ab
         - ann_arbor_mod_e
         - ann_arbor_mod_s
         - tnm_finding
-        - group
         - tnm_tumor_t
         - tnm_node_n
         - tnm_metastasis_m
-        - review_source
+        - h_stage
+        - group_system
+        - group
         - pretext_mod_v
         - pretext_mod_p
         - pretext_mod_e
         - pretext_mod_m
         - pretext_mod_f
         - pretext_mod_r
-        - h_stage
-        - group_system
         comments:
         - 'D4CGNote: One observation/row per STAGE when instantiated.'
         in_subset:
@@ -1101,7 +1100,7 @@ classes:
         - result_numeric
         - result_unit
         - sensitivity
-        - specimen
+        - mrd_specimen
         - molecular_markers
         comments:
         - 'D4CGNote: One observation/row per result when instantiated.'
@@ -2586,9 +2585,29 @@ slots:
         - '[gct_v1.2].[Labs].[LAB_TEST] skos:exactMatch [gct_v2.0].[Laboratory Test].[TEST]'
         - '[hl_v1.0].[Function Test].[FUNCTION_CATEGORY] skos:exactMatch [hl_v2.0].[Function
             Test].[TEST]'
-    specimen:
+    genetic_analysis_specimen:
         slot_uri: ncit:C70713
-        range: SpecimenEnum
+        range: GeneticAnalysisSpecimenEnum
+        comments: []
+        in_subset:
+        - fa_v1.0
+        - rms_v2.0
+        - nbl_v2.0
+        - npc_v1.0
+        - rb_v1.2
+        annotations:
+            tier_priority: rb_v1.2
+    mrd_specimen:
+        slot_uri: 
+        range: MrdSpecimenEnum
+        comments: []
+        in_subset:
+        - aml_v2.0
+        annotations:
+            tier_optional: aml_v2.0
+    laboratory_test_specimen:
+        slot_uri: ncit:C70713
+        range: LaboratoryTestSpecimenEnum
         comments: []
         in_subset:
         - aml_v2.0
@@ -2598,34 +2617,20 @@ slots:
         - gct_v2.0
         - hl_v2.0
         - npc_v1.0
+        - os_v2.0
         - rb_v1.2
         annotations:
             tier_priority: rb_v1.2
             tier_optional: npc_v1.0
-        exact_mappings:
-        - (aml_v2.0) [aml_v1.7].[Labs].[LAB_SPEC_TYPE] skos:exactMatch [aml_v2.0].[Laboratory
-            Test].[SPECIMEN]
-        - (aml_v2.0) [aml_v1.7].[Minimal Residual Disease].[MRD_SAMPLE_SOURCE] skos:exactMatch
-            [aml_v2.0].[Minimal Residual Disease].[SPECIMEN]
-        - skos:exactMatch [EWS].[v1.0].[Lab].[LAB_SPEC_TYPE]
-        - '[gct_v1.2].[Labs].[LAB_SPEC_TYPE] skos:exactMatch [gct_v2.0].[Laboratory
-            Test].[SPECIMEN]'
-        - '[hl_v1.0].[Labs].[LAB_SPEC_TYPE] skos:exactMatch [hl_v2.0].[Laboratory
-            Test].[SPECIMEN]'
-        - '[hl_v1.0].[Immunohistochemistry].[IHC_SPEC_TYPE] skos:exactMatch [hl_v2.0].[Immunohistochemistry].[SPECIMEN]'
-    method:
+    laboratory_test_method:
         slot_uri: ncit:C83312
-        range: MethodEnum
+        range: LaboratoryTestMethodEnum
         comments:
         - '(hl_v2.0) ConsortiumNote: Note: Only fill in this variable only when relevant,
             for example if the LAB_TEST is ''blasts'' and the LAB_SAMPLE_SOURCE is
             ''Bone Marrow'' - ie bone marrow blasts'
         in_subset:
         - aml_v2.0
-        - pre_v1.0
-        - cns_v1.2
-        - ews_v2.0
-        - fa_v1.0
         - gct_v2.0
         - hl_v2.0
         - rb_v1.2
@@ -2634,18 +2639,18 @@ slots:
         exact_mappings:
         - (aml_v2.0) [aml_v1.7].[Labs].[LAB_METHOD] skos:exactMatch [aml_v2.0].[Laboratory
             Test].[METHOD]
-        - (aml_v2.0) [aml_v1.7].[Minimal Residual Disease].[MRD_METHOD] skos:exactMatch
-            [aml_v2.0].[Minimal Residual Disease].[METHOD]
-        - skos:exactMatch [EWS].[v1.0].[Molecular Analysis].[MOLECULAR_ANALYSIS_METHOD]
         - '[gct_v1.2].[Labs].[LAB_METHOD] skos:exactMatch [gct_v2.0].[Laboratory Test].[METHOD]'
         - '[hl_v1.0].[Labs].[LAB_METHOD] skos:exactMatch [hl_v2.0].[Laboratory Test].[METHOD]'
     mrd_method:
         slot_uri: ncit:C168933
-        range: MRDMethodEnum
+        range: MrdMethodEnum
         comments: []
         in_subset:
         - aml_v2.0
         annotations: {}
+        exact_mappings:
+         - (aml_v2.0) [aml_v1.7].[Minimal Residual Disease].[MRD_METHOD] skos:exactMatch
+            [aml_v2.0].[Minimal Residual Disease].[METHOD]
     diagnosis_method:
         slot_uri: ncit:C82535
         range: DiagnosisMethodEnum
@@ -5234,110 +5239,24 @@ slots:
         exact_mappings:
         - (aml_v2.0) [aml_v1.7].[Minimal Residual Disease].[MRD_MOLECULAR_MARKERS]
             skos:exactMatch [aml_v2.0].[Minimal Residual Disease].[MOLECULAR_MARKERS]
-    age_at_molecular_analysis:
-        slot_uri: ncit:C168848
-        range: integer
-        comments: []
-        in_subset:
-        - aml_v2.0
-        - gct_v2.0
-        - nbl_v2.0
-        - nrsts_v2.0
-        - rms_v2.0
-        annotations: {}
-    molecular_analysis_method:
+    genetic_analysis_method:
         slot_uri: ncit:C158954
-        range: MolecularAnalysisMethodEnum
+        range: GeneticAnalysisMethodEnum
         comments: []
         in_subset:
         - aml_v2.0
-        - gct_v2.0
-        annotations: {}
-    indepen_ab:
-        slot_uri: ncit:C173279
-        range: integer
-        comments:
-        - '(aml_v2.0) ConsortiumNote: Only fill in this variable if MOLECULAR_ANALYSIS_METHOD
-            is ''Karyotype'''
-        in_subset:
-        - aml_v2.0
-        - gct_v2.0
-        annotations: {}
-    num_metaphases:
-        slot_uri: ncit:C168918
-        range: integer
-        comments:
-        - '(aml_v2.0) ConsortiumNote: Only fill in this variable if MOLECULAR_ANALYSIS_METHOD
-            is ''Karyotype'''
-        in_subset:
-        - aml_v2.0
-        annotations: {}
-    molecular_abnormality:
-        slot_uri: ncit:C3910
-        range: MolecularAbnormalityEnum
-        comments:
-        - '(aml_v2.0) ConsortiumNote: If multiple molecular abnormalities, include
-            one observation per molecular abnormality.'
-        - '(nbl_v2.0) ConsortiumNote: If multiple molecular abnormalities, include
-            one observation per molecular abnormality.'
-        in_subset:
-        - aml_v2.0
-        - gct_v2.0
-        - nbl_v2.0
-        - nrsts_v2.0
-        - rms_v2.0
-        annotations: {}
-    gene1:
-        slot_uri: ncit:C173595
-        range: string
-        comments: []
-        in_subset:
-        - aml_v2.0
-        - gct_v2.0
-        - nbl_v2.0
-        - rms_v2.0
-        annotations: {}
-    gene2:
-        slot_uri: ncit:C171253
-        range: string
-        comments: []
-        in_subset:
-        - aml_v2.0
+        - pre_v1.0
+        - cns_v1.2
         - ews_v2.0
+        - fa_v1.0
         - gct_v2.0
-        - nbl_v2.0
-        - rms_v2.0
+        - rb_v1.0
         annotations: {}
         exact_mappings:
-        - (ews_v2.0) skos:exactMatch [EWS].[v1.0].[Molecular Analysis].[GENE2]
-    variant_type:
-        slot_uri: ncit:C97926
-        range: VariantTypeEnum
-        comments: []
-        in_subset:
-        - aml_v2.0
-        - gct_v2.0
-        - nbl_v2.0
-        - rms_v2.0
-        annotations: {}
-    genetic_seq:
-        slot_uri: ncit:C97927
-        range: string
-        comments: []
-        in_subset:
-        - aml_v2.0
-        annotations: {}
-    aa_mutation:
-        slot_uri: ncit:C97928
-        range: string
-        comments: []
-        in_subset:
-        - aml_v2.0
-        - nbl_v2.0
-        annotations: {}
-    molecular_abnormality_result:
+        - skos:exactMatch [EWS].[v1.0].[Molecular Analysis].[MOLECULAR_ANALYSIS_METHOD]
+    genetic_analysis_status:
         slot_uri: ncit:C173596
-        range: MolecularAbnormalityResultEnum
+        range: GeneticAnalysisStatusEnum
         comments:
         - '(aml_v2.0) ConsortiumNote: This variable indicates the result of testing
             for the molecular abnormality listed in MOLECULAR_ABNORMALITY'
@@ -5593,7 +5512,7 @@ slots:
         exact_mappings:
         - (hl_v2.0) [hl_v1.0].[Medical History].[MEDICAL_HISTORY_CATEGORY] skos:exactMatch
             [hl_v2.0].[Medical History].[CONDITION_CATEGORY]
-    specimen_other:
+    laboratory_test_specimen_other:
         slot_uri: ''
         range: string
         comments: []
@@ -19047,7 +18966,7 @@ enums:
                 comments: []
                 in_subset:
                 - cns_v1.2
-    MRDMethodEnum:
+    MrdMethodEnum:
         in_subset:
         - aml_v2.0
         permissible_values:
@@ -19227,7 +19146,6 @@ enums:
                 comments: []
                 in_subset:
                     - pre_v1.0
-
             # Sequencing — Sanger
             Sequencing, Sanger, NOS:
                 meaning: ''
@@ -19247,7 +19165,6 @@ enums:
                 in_subset:
                     - aml_v2.0
                     - pre_v1.0
-
             # Sequencing — NGS (short-read & RNA)
             Sequencing, NGS, NOS:
                 meaning: ncit:C101293
@@ -19446,36 +19363,6 @@ enums:
                 - fa_v1.0
             Decreased:
                 meaning: ncit:C164132
-                comments: []
-                in_subset:
-                - fa_v1.0
-            Pending:
-                meaning: ncit:C53470
-                comments: []
-                in_subset:
-                - fa_v1.0
-            Ubiquitinated:
-                meaning: ''
-                comments: []
-                in_subset:
-                - fa_v1.0
-            Not Ubiquitinated:
-                meaning: ''
-                comments: []
-                in_subset:
-                - fa_v1.0
-            Increased breakage in FA range:
-                meaning: ''
-                comments: []
-                in_subset:
-                - fa_v1.0
-            Non-increased (Normal) breakage:
-                meaning: ''
-                comments: []
-                in_subset:
-                - fa_v1.0
-            Possible mosaicism:
-                meaning: ''
                 comments: []
                 in_subset:
                 - fa_v1.0
