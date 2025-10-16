@@ -38,13 +38,13 @@
     "classes": {
         "Person": {
             "slots": [
-                "subject_reference",
+                "subjects_submitter_id",
                 "sex",
                 "race",
                 "ethnicity"
             ],
             "slot_usage": {
-                "subject_reference": {
+                "subjects_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Subject"
@@ -92,7 +92,7 @@
         },
         "Study": {
             "slots": [
-                "subject_reference", 
+                "subjects_submitter_id", 
                 "submitter_id",
                 "age_at_enrollment",
                 "enrolled_status",
@@ -107,7 +107,7 @@
                     "identifier": true,
                     "range": "string"
                 },
-                "subject_reference": {
+                "subjects_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Subject"
@@ -128,7 +128,7 @@
         },
         "Timing": {
             "slots": [
-                "subject_reference", 
+                "subjects_submitter_id", 
                 "submitter_id",
                 "timing_type",
                 "disease_phase",
@@ -149,7 +149,7 @@
                     "identifier": true,
                     "range": "string"
                 },
-                "subject_reference": {
+                "subjects_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Subject"
@@ -170,20 +170,20 @@
         },
         "OffProtocolTherapyStudy": {
             "slots": [
-                "subject_reference",
-                "timing_reference",
+                "subjects_submitter_id",
+                "timings_submitter_id",
                 "age_off",
                 "off_type",
                 "reason_off",
                 "another_study"
             ],
             "slot_usage": {
-                "subject_reference": {
+                "subjects_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Subject"
                 },
-                "timing_reference": {
+                "timings_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Timing"
@@ -200,14 +200,14 @@
         },
         "MedicalHistory": {
             "slots": [
-                "subject_reference",
+                "subjects_submitter_id",
                 "medical_history",
                 "medical_history_status",
                 "medical_history_category",
                 "assisted_conception"
             ],
             "slot_usage": {
-                "subject_reference": {
+                "subjects_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Subject"
@@ -226,8 +226,8 @@
         },
         "SurvivalCharacteristic": {
             "slots": [
-                "subject_reference", 
-                "timing_reference",
+                "subjects_submitter_id", 
+                "timings_submitter_id",
                 "age_at_lkss",
                 "lkss",
                 "lkss_with_disease",
@@ -239,12 +239,12 @@
                 "cause_of_death_ranking"
             ],
             "slot_usage": {
-                "subject_reference": {
+                "subjects_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Subject"
                 },
-                "timing_reference": {
+                "timings_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Timing"
@@ -265,8 +265,8 @@
         },
         "DiseaseCharacteristic": {
             "slots": [
-                "subject_reference",
-                "timing_reference",
+                "subjects_submitter_id",
+                "timings_submitter_id",
                 "fab_type",
                 "who_aml",
                 "disease_site",
@@ -293,12 +293,12 @@
                 "histology_inpc"
             ],
             "slot_usage": {
-                "subject_reference": {
+                "subjects_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Subject"
                 },
-                "timing_reference": {
+                "timings_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Timing"
@@ -317,18 +317,18 @@
         },
         "MyeloidSarcomaInvolvement": {
             "slots": [
-                "subject_reference",
-                "timing_reference",
+                "subjects_submitter_id",
+                "timings_submitter_id",
                 "myeloid_sarcoma",
                 "myeloid_sarcoma_site"
             ],
             "slot_usage": {
-                "subject_reference": {
+                "subjects_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Subject"
                 },
-                "timing_reference": {
+                "timings_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Timing"
@@ -344,8 +344,8 @@
         },
         "Vital": {
             "slots": [
-                "subject_reference",
-                "timing_reference",
+                "subjects_submitter_id",
+                "timings_submitter_id",
                 "age_at_vitals",
                 "vitals_test",
                 "vitals_result",
@@ -353,12 +353,12 @@
                 "vitals_result_unit"
             ],
             "slot_usage": {
-                "subject_reference": {
+                "subjects_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Subject"
                 },
-                "timing_reference": {
+                "timings_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Timing"
@@ -376,8 +376,8 @@
         },
         "Lab": {
             "slots": [
-                "subject_reference",
-                "timing_reference",
+                "subjects_submitter_id",
+                "timings_submitter_id",
                 "age_at_lab",
                 "lab_cat",
                 "lab_test",
@@ -393,12 +393,12 @@
                 "threshold_low"
             ],
             "slot_usage": {
-                "subject_reference": {
+                "subjects_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Subject"
                 },
-                "timing_reference": {
+                "timings_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Timing"
@@ -417,8 +417,8 @@
         },
         "MolecularAnalysis": {
             "slots": [
-                "subject_reference",
-                "timing_reference",
+                "subjects_submitter_id",
+                "timings_submitter_id",
                 "age_at_molecular_analysis",
                 "molecular_analysis_method",
                 "iscn",
@@ -444,12 +444,12 @@
                 "num_chromosomes"
             ],
             "slot_usage": {
-                "subject_reference": {
+                "subjects_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Subject"
                 },
-                "timing_reference": {
+                "timings_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Timing"
@@ -469,8 +469,8 @@
         },
         "RadiationTherapy": {
             "slots": [
-                "subject_reference",
-                "timing_reference",
+                "subjects_submitter_id",
+                "timings_submitter_id",
                 "age_at_rt_start",
                 "age_at_rt_end",
                 "rt_timing",
@@ -486,12 +486,12 @@
                 "tumor_classification"
             ],
             "slot_usage": {
-                "subject_reference": {
+                "subjects_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Subject"
                 },
-                "timing_reference": {
+                "timings_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Timing"
@@ -511,8 +511,8 @@
         },
         "TransfusionMedicineProcedure": {
             "slots": [
-                "subject_reference",
-                "timing_reference",
+                "subjects_submitter_id",
+                "timings_submitter_id",
                 "age_at_tmp_start",
                 "tmp_type",
                 "tmp_product",
@@ -520,12 +520,12 @@
                 "tmp_number_units"
             ],
             "slot_usage": {
-                "subject_reference": {
+                "subjects_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Subject"
                 },
-                "timing_reference": {
+                "timings_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Timing"
@@ -542,18 +542,18 @@
         },
         "CellularImmunotherapy": {
             "slots": [
-                "subject_reference",
-                "timing_reference",
+                "subjects_submitter_id",
+                "timings_submitter_id",
                 "age_at_imt_start",
                 "cimt_type"
             ],
             "slot_usage": {
-                "subject_reference": {
+                "subjects_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Subject"
                 },
-                "timing_reference": {
+                "timings_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Timing"
@@ -569,8 +569,8 @@
         },
         "TotalDose": {
             "slots": [
-                "subject_reference",
-                "timing_reference",
+                "subjects_submitter_id",
+                "timings_submitter_id",
                 "age_at_total_dose_start",
                 "age_at_total_dose_end",
                 "cycle_number",
@@ -584,12 +584,12 @@
                 "route_detail"
             ],
             "slot_usage": {
-                "subject_reference": {
+                "subjects_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Subject"
                 },
-                "timing_reference": {
+                "timings_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Timing"
@@ -607,20 +607,20 @@
         },
         "ConcomitantMedication": {
             "slots": [
-                "subject_reference",
-                "timing_reference",
+                "subjects_submitter_id",
+                "timings_submitter_id",
                 "age_at_medication_start",
                 "age_at_medication_end",
                 "medication",
                 "medication_admn_status"
             ],
             "slot_usage": {
-                "subject_reference": {
+                "subjects_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Subject"
                 },
-                "timing_reference": {
+                "timings_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Timing"
@@ -636,8 +636,8 @@
         },
         "StemCellTransplant": {
             "slots": [
-                "subject_reference",
-                "timing_reference",
+                "subjects_submitter_id",
+                "timings_submitter_id",
                 "age_at_sct",
                 "sct_type",
                 "sct_source",
@@ -655,12 +655,12 @@
                 "sct_cd34_coll"
             ],
             "slot_usage": {
-                "subject_reference": {
+                "subjects_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Subject"
                 },
-                "timing_reference": {
+                "timings_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Timing"
@@ -678,8 +678,8 @@
         },
         "MinimalResidualDisease": {
             "slots": [
-                "subject_reference",
-                "timing_reference",
+                "subjects_submitter_id",
+                "timings_submitter_id",
                 "age_at_mrd_assessment",
                 "mrd_method",
                 "flow_cytometry_type",
@@ -691,12 +691,12 @@
                 "mrd_molecular_markers"
             ],
             "slot_usage": {
-                "subject_reference": {
+                "subjects_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Subject"
                 },
-                "timing_reference": {
+                "timings_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Timing"
@@ -712,8 +712,8 @@
         },
         "SubjectResponse": {
             "slots": [
-                "subject_reference",
-                "timing_reference",
+                "subjects_submitter_id",
+                "timings_submitter_id",
                 "age_at_response",
                 "response_category",
                 "response_criteria",
@@ -735,12 +735,12 @@
                 "tx_prior_response"
             ],
             "slot_usage": {
-                "subject_reference": {
+                "subjects_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Subject"
                 },
-                "timing_reference": {
+                "timings_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Timing"
@@ -760,8 +760,8 @@
         },
         "FunctionTest": {
             "slots": [
-                "subject_reference",
-                "timing_reference",
+                "subjects_submitter_id",
+                "timings_submitter_id",
                 "age_at",
                 "function_category",
                 "function_result",
@@ -770,12 +770,12 @@
                 "function_result_unit"
             ],
             "slot_usage": {
-                "subject_reference": {
+                "subjects_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Subject"
                 },
-                "timing_reference": {
+                "timings_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Timing"
@@ -792,8 +792,8 @@
         },
         "AdverseEvent": {
             "slots": [
-                "subject_reference",
-                "timing_reference",
+                "subjects_submitter_id",
+                "timings_submitter_id",
                 "age_at_ae",
                 "age_at_ae_resolved",
                 "adverse_event",
@@ -813,12 +813,12 @@
                 "gvhd_organ"
             ],
             "slot_usage": {
-                "subject_reference": {
+                "subjects_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Subject"
                 },
-                "timing_reference": {
+                "timings_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Timing"
@@ -836,8 +836,8 @@
         },
         "TumorAssessment": {
             "slots": [
-                "subject_reference",
-                "timing_reference",
+                "subjects_submitter_id",
+                "timings_submitter_id",
                 "age_at_tumor_assessment",
                 "necrosis",
                 "necrosis_pct",
@@ -861,12 +861,12 @@
                 "tumor_size"
             ],
             "slot_usage": {
-                "subject_reference": {
+                "subjects_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Subject"
                 },
-                "timing_reference": {
+                "timings_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Timing"
@@ -885,8 +885,8 @@
         },
         "Staging": {
             "slots": [
-                "subject_reference",
-                "timing_reference",
+                "subjects_submitter_id",
+                "timings_submitter_id",
                 "age_at_staging",
                 "AB",
                 "E",
@@ -897,12 +897,12 @@
                 "tnm_finding"
             ],
             "slot_usage": {
-                "subject_reference": {
+                "subjects_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Subject"
                 },
-                "timing_reference": {
+                "timings_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Timing"
@@ -921,8 +921,8 @@
         },
         "Histology": {
             "slots": [
-                "subject_reference",
-                "timing_reference",
+                "subjects_submitter_id",
+                "timings_submitter_id",
                 "age_at_hist_assessment",
                 "hist_assessment_review",
                 "histology",
@@ -937,12 +937,12 @@
                 "histology_inpc"
             ],
             "slot_usage": {
-                "subject_reference": {
+                "subjects_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Subject"
                 },
-                "timing_reference": {
+                "timings_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Timing"
@@ -962,20 +962,20 @@
         },
         "Immunohistochemistry": {
             "slots": [
-                "subject_reference",
-                "timing_reference",
+                "subjects_submitter_id",
+                "timings_submitter_id",
                 "age_at_ihc",
                 "ihc_test",
                 "ihc_result",
                 "ihc_result_numeric"
             ],
             "slot_usage": {
-                "subject_reference": {
+                "subjects_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Subject"
                 },
-                "timing_reference": {
+                "timings_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Timing"
@@ -992,19 +992,19 @@
         },
         "Cytology": {
             "slots": [
-                "subject_reference",
-                "timing_reference",
+                "subjects_submitter_id",
+                "timings_submitter_id",
                 "age_at_cytology",
                 "malignant_cells",
                 "cytology_spec_type"
             ],
             "slot_usage": {
-                "subject_reference": {
+                "subjects_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Subject"
                 },
-                "timing_reference": {
+                "timings_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Timing"
@@ -1020,8 +1020,8 @@
         },
         "BiopsySurgicalProcedure": {
             "slots": [
-                "subject_reference",
-                "timing_reference",
+                "subjects_submitter_id",
+                "timings_submitter_id",
                 "age_at_procedure",
                 "procedure_performed",
                 "procedure_treatment_timing",
@@ -1033,12 +1033,12 @@
                 "tumor_classification"
             ],
             "slot_usage": {
-                "subject_reference": {
+                "subjects_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Subject"
                 },
-                "timing_reference": {
+                "timings_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Timing"
@@ -1057,7 +1057,7 @@
         },
         "Biospecimen": {
             "slots": [
-                "subject_reference",
+                "subjects_submitter_id",
                 "biospecimen_container_type",
                 "biospecimen_media",
                 "biospecimen_type",
@@ -1065,7 +1065,7 @@
                 "current_qty_value"
             ],
             "slot_usage": {
-                "subject_reference": {
+                "subjects_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Subject"
@@ -1088,7 +1088,7 @@
         },
         "ExternalReference": {
             "slots": [
-                "subject_reference",
+                "subjects_submitter_id",
                 "external_links",
                 "external_resource_icon_path",
                 "external_resource_id",
@@ -1098,7 +1098,7 @@
                 "external_subject_url"
             ],
             "slot_usage": {
-                "subject_reference": {
+                "subjects_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Subject"
@@ -1117,19 +1117,19 @@
         },
         "ConcomitantMedications": {
             "slots": [
-                "subject_reference",
-                "timing_reference",
+                "subjects_submitter_id",
+                "timings_submitter_id",
                 "age_at_medication_start",
                 "age_at_medication_end",
                 "medication"
             ],
             "slot_usage": {
-                "subject_reference": {
+                "subjects_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Subject"
                 },
-                "timing_reference": {
+                "timings_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Timing"
@@ -1146,8 +1146,8 @@
         },
         "SecondaryMalignantNeoplasm": {
             "slots": [
-                "subject_reference",
-                "timing_reference",
+                "subjects_submitter_id",
+                "timings_submitter_id",
                 "age_at_smn",
                 "smn_morph_sno",
                 "smn_morph_txt",
@@ -1161,12 +1161,12 @@
                 "smn_field"
             ],
             "slot_usage": {
-                "subject_reference": {
+                "subjects_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Subject"
                 },
-                "timing_reference": {
+                "timings_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Timing"
@@ -1183,18 +1183,18 @@
         },
         "GrowingTeratomaSyndrome": {
             "slots": [
-                "subject_reference",
-                "timing_reference",
+                "subjects_submitter_id",
+                "timings_submitter_id",
                 "age_at_gts",
                 "gts_treatment"
             ],
             "slot_usage": {
-                "subject_reference": {
+                "subjects_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Subject"
                 },
-                "timing_reference": {
+                "timings_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Timing"
@@ -1210,13 +1210,13 @@
         },
         "FamilyMedicalHistory": {
             "slots": [
-                "subject_reference",
+                "subjects_submitter_id",
                 "family_history",
                 "relative",
                 "prior_cancer"
             ],
             "slot_usage": {
-                "subject_reference": {
+                "subjects_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Subject"
@@ -1232,8 +1232,8 @@
         },
         "LesionCharacteristic": {
             "slots": [
-                "subject_reference",
-                "timing_reference",
+                "subjects_submitter_id",
+                "timings_submitter_id",
                 "age_at_lesion_assessment",
                 "lesion_assessment_review",
                 "lesion_detection_method",
@@ -1254,12 +1254,12 @@
                 "lesion_pct_change"
             ],
             "slot_usage": {
-                "subject_reference": {
+                "subjects_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Subject"
                 },
-                "timing_reference": {
+                "timings_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Timing"
@@ -1275,8 +1275,8 @@
         },
         "Imaging": {
             "slots": [
-                "subject_reference",
-                "timing_reference",
+                "subjects_submitter_id",
+                "timings_submitter_id",
                 "age_at_imaging",
                 "imaging_method",
                 "imaging_result",
@@ -1284,12 +1284,12 @@
                 "qpet_score"
             ],
             "slot_usage": {
-                "subject_reference": {
+                "subjects_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Subject"
                 },
-                "timing_reference": {
+                "timings_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Timing"
@@ -1305,8 +1305,8 @@
         },
         "ProtocolTreatmentModifications": {
             "slots": [
-                "subject_reference",
-                "timing_reference",
+                "subjects_submitter_id",
+                "timings_submitter_id",
                 "age_at_mod",
                 "mod_type",
                 "mod_rationale",
@@ -1318,12 +1318,12 @@
                 "sub_agent"
             ],
             "slot_usage": {
-                "subject_reference": {
+                "subjects_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Subject"
                 },
-                "timing_reference": {
+                "timings_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Timing"
@@ -1339,7 +1339,7 @@
         },
         "LateEffects": {
             "slots": [
-                "subject_reference",
+                "subjects_submitter_id",
                 "age_at_le_eval",
                 "le",
                 "le_detail",
@@ -1348,7 +1348,7 @@
                 "le_ctcae_version"
             ],
             "slot_usage": {
-                "subject_reference": {
+                "subjects_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Subject"
@@ -1364,13 +1364,13 @@
         },
         "NonProtocolTherapy": {
             "slots": [
-                "subject_reference",
+                "subjects_submitter_id",
                 "npt_timing",
                 "npt_type",
                 "npt_sct_type"
             ],
             "slot_usage": {
-                "subject_reference": {
+                "subjects_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Subject"
@@ -1401,7 +1401,7 @@
             ],
             "annotations": {}
         },
-        "subject_reference": {
+        "subjects_submitter_id": {
             "slot_uri": "",
             "range": "Subject",
             "description": "Foreign-key reference to a Subject record (by submitter_id)",
@@ -1418,7 +1418,7 @@
             ],
             "annotations": {}
         },
-        "timing_reference": {
+        "timings_submitter_id": {
             "slot_uri": "",
             "range": "Timing",
             "description": "Foreign-key reference to a Timing record (by submitter_id)",
