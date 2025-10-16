@@ -4084,7 +4084,7 @@
         },
         "age_at_gts": {
             "slot_uri": "ncit:C177375",
-            "range": "enum",
+            "range": "integer",
             "comments": [],
             "in_subset": [
                 "gct_v1.2-live"
