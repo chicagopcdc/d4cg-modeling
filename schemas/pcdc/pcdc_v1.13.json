@@ -5110,7 +5110,7 @@
         },
         "cause_of_death_other": {
             "slot_uri": "",
-            "range": "enum",
+            "range": "string",
             "comments": [],
             "in_subset": [
                 "rms_v2.0-live"
@@ -5187,6 +5187,7 @@
                 "aml_v1.8-live",
                 "hl_v1.0-live",
                 "gct_v1.2-live",
+                "nbl_v1.1-live",
                 "nrsts_v1.0-live",
                 "rms_v2.0-live"
             ],
@@ -5194,22 +5195,50 @@
                 "No": {
                     "meaning": "ncit:C49487",
                     "comments": [],
-                    "in_subset": []
+                    "in_subset": [
+                        "aml_v1.8-live",
+                        "hl_v1.0-live",
+                        "gct_v1.2-live",
+                        "nbl_v1.1-live",
+                        "nrsts_v1.0-live",
+                        "rms_v2.0-live"
+                    ]
                 },
                 "Yes": {
                     "meaning": "ncit:C49488",
                     "comments": [],
-                    "in_subset": []
+                    "in_subset": [
+                        "aml_v1.8-live",
+                        "hl_v1.0-live",
+                        "gct_v1.2-live",
+                        "nbl_v1.1-live",
+                        "nrsts_v1.0-live",
+                        "rms_v2.0-live"
+                    ]
                 },
                 "Unknown": {
                     "meaning": "ncit:C17998",
                     "comments": [],
-                    "in_subset": []
+                    "in_subset": [
+                        "aml_v1.8-live",
+                        "hl_v1.0-live",
+                        "gct_v1.2-live",
+                        "nbl_v1.1-live",
+                        "nrsts_v1.0-live",
+                        "rms_v2.0-live"
+                    ]
                 },
                 "Not Reported": {
                     "meaning": "ncit:C43234",
                     "comments": [],
-                    "in_subset": []
+                    "in_subset": [
+                        "aml_v1.8-live",
+                        "hl_v1.0-live",
+                        "gct_v1.2-live",
+                        "nbl_v1.1-live",
+                        "nrsts_v1.0-live",
+                        "rms_v2.0-live"
+                    ]
                 }
             }
         },
