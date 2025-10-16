@@ -1,4 +1,4 @@
-import sys, os, json, requests, urllib.parse, datetime, time
+import sys, os, json, requests, urllib.parse, datetime, time, re
 
 subset_info = {
      "pcdc": {
@@ -87,8 +87,6 @@ def parseMappings(slot, target):
 def parseNotes(raw, target):
     parsed = ""
     for note in raw:
-        parsed += note
-        """
         if "ConsortiumNote" in note:
             # Match anything inside the first pair of parentheses
             match = re.match(r"\(([^)]+)\)", note)
@@ -102,11 +100,12 @@ def parseNotes(raw, target):
         
         else:
             parsed += note + '\n'
-        """
     return parsed.rstrip('\n')
 
 def parseType(slot):
     type = slot['range']
+    if type in ["Subject", "Timing"]:
+        type = 'string'
     if 'Enum' in type:
         type = 'enum'
     return type
@@ -122,6 +121,7 @@ def parseTier(target, slot):
     return tier
 
 def fetchDefinition(raw):
+    print("Fetching definition for: " + raw)
     if ":" in raw:
         system = raw.split(":")[0]
         code = raw.split(":")[1]
@@ -217,23 +217,24 @@ def export(commons, disease_group, parent, schema, target, id):
     rows.append(['info','License','CC BY-NC 4.0'])
     rows.append(['info', 'Documentation', 'https://commons.cri.uchicago.edu/pcdc/'])
     rows.append([])
-    rows.append(['RowType', 'VariableName', 'DataType', 'Tier', 'VariableDescription', 'VariableCode', 'PermissibleValue', 'ValueDescription', 'ValueCode', 'ImplementationNotes', 'SequenceGroup', 'SyntacticMappings', 'SemanticMappings'])
+    rows.append(['RowType', 'VariableName', 'DataType', 'Tier', 'VariableDescription', 'VariableCode', 'PermissibleValue', 'ValueDescription', 'ValueCode', 'ImplementationNotes', 'SyntacticMappings', 'SemanticMappings'])
     rows.append([])
     for c in schema['classes']:
-        #if target in schema['classes'][c]['in_subset']:
+        if target in schema['classes'][c]['in_subset']:
             table_count += 1
             rows.append(['domain', schema['classes'][c]['annotations']['domain']])
             rows.append(['table', c, '', '', '', '', '', '', '', '\n'.join(schema['classes'][c]['comments'])])
             for s in schema['classes'][c]['slots']:
                 slot = schema['slots'][s]
-               # if target in slot['in_subset']:
-                variable_count += 1
-                rows.append(['var', s, parseType(slot), parseTier(target, slot), fetchDefinition(slot['slot_uri']), slot['slot_uri'], '', '', '', parseNotes(slot['comments'], target), '', parseMappings(slot, target)])
-                if 'Enum' in slot['range']:
-                    for value in schema['enums'][slot['range']]['permissible_values']:
-                        pv = schema['enums'][slot['range']]['permissible_values'][value]
-                        #if target in pv['in_subset']:
-                        rows.append(['pv', '', '', '', '','', value, fetchDefinition(pv['meaning']), pv['meaning'], parseNotes(pv['comments'], target), '', parseMappings(pv,target)])
+                if target in slot['in_subset']:
+                    variable_count += 1
+                    print(c + " " + s)
+                    rows.append(['var', s, parseType(slot), parseTier(target, slot), fetchDefinition(slot['slot_uri']), slot['slot_uri'], '', '', '', parseNotes(slot['comments'], target), parseMappings(slot, target)])
+                    if 'Enum' in slot['range']:
+                        for value in schema['enums'][slot['range']]['permissible_values']:
+                            pv = schema['enums'][slot['range']]['permissible_values'][value]
+                            if target in pv['in_subset']:
+                                rows.append(['pv', '', '', '', '','', value, fetchDefinition(pv['meaning']), pv['meaning'], parseNotes(pv['comments'], target), parseMappings(pv,target)])
             rows.append([]) 
             rows.append([])
     rows.append(['','Tables: ' + str(table_count)])
@@ -267,16 +268,16 @@ if __name__ == '__main__':
     Use Ctrl+C to abort if needed
     ______________________________________________
     Usage: 
-        python export.py [parent] [target]
+        python export.py [schema] [subset]
 
     Examples: 
-        - python export.py pcdc_v1.9 aml_v1.8
+        - python export.py pcdc_v1.13 aml_v1.8-live
     ______________________________________________
     """
     )
     if len(sys.argv) == 3:
         parent = sys.argv[1]
-        parent_file = "schemas/" + parent + ".json"
+        parent_file = "../schemas/pcdc/" + parent + ".json"
         if os.path.exists(parent_file):
             target = sys.argv[2]
             with open(parent_file, "r") as schema_file:
@@ -284,7 +285,7 @@ if __name__ == '__main__':
                 if target in schema["subsets"]:
                     print("Exporting: " + target + "\n")
                     commons = parent.split("_")[0]     
-                    disease_group = target.split("_")[0]
+                    disease_group = target.split("_")[0].split("-")[0]
                     if disease_group in subset_info[commons]:
                         export(commons, disease_group, parent, schema, target, subset_info[commons][disease_group]["id"])
                     else:

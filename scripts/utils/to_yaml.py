@@ -2,7 +2,7 @@ import sys, json, yaml
 
 if __name__ == '__main__':
     if len(sys.argv) != 3:
-        print("\nExample usage: python to_yaml.py schemas/pcdc_v2.0.json schemas/pcdc_v2.0.yaml")
+        print("\nExample usage: python to_yaml.py schemas/pcdc/pcdc_v2.0.json schemas/pcdc/pcdc_v2.0.yaml")
         sys.exit()
     target = sys.argv[1]
     out_file = sys.argv[2]
