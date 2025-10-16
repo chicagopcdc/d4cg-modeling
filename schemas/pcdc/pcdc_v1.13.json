@@ -90,6 +90,35 @@
                 "domain": "demographics"
             }
         },
+        "ExternalReference": {
+            "slots": [
+                "subjects_submitter_id",
+                "external_links",
+                "external_resource_icon_path",
+                "external_resource_id",
+                "external_resource_name",
+                "external_subject_id",
+                "external_subject_submitter_id",
+                "external_subject_url"
+            ],
+            "slot_usage": {
+                "subjects_submitter_id": {
+                    "required": true,
+                    "inlined": false,
+                    "range": "Subject"
+                }
+            },
+            "comments": [
+                "D4CGNote: One observation/row per ___ when instantiated"
+            ],
+            "in_subset": [
+                "aml_v1.8-live",
+                "nbl_v1.1-live"
+            ],
+            "annotations": {
+                "domain": "demographics"
+            }
+        },
         "Study": {
             "slots": [
                 "subjects_submitter_id",
@@ -198,33 +227,7 @@
                 "domain": "demographics"
             }
         },
-        "MedicalHistory": {
-            "slots": [
-                "subjects_submitter_id",
-                "medical_history",
-                "medical_history_status",
-                "medical_history_category",
-                "assisted_conception"
-            ],
-            "slot_usage": {
-                "subjects_submitter_id": {
-                    "required": true,
-                    "inlined": false,
-                    "range": "Subject"
-                }
-            },
-            "comments": [],
-            "in_subset": [
-                "aml_v1.8-live",
-                "gct_v1.2-live",
-                "hl_v1.0-live",
-                "nrsts_v1.0-live"
-            ],
-            "annotations": {
-                "domain": "demographics"
-            }
-        },
-        "SurvivalCharacteristic": {
+         "SurvivalCharacteristic": {
             "slots": [
                 "subjects_submitter_id",
                 "timings_submitter_id",
@@ -263,45 +266,41 @@
                 "domain": "demographics"
             }
         },
-        "DiseaseCharacteristic": {
+        "FamilyMedicalHistory": {
             "slots": [
                 "subjects_submitter_id",
-                "timings_submitter_id",
-                "fab_type",
-                "who_aml",
-                "disease_site",
-                "detection_method",
-                "CNS_disease_status",
-                "MPAL",
-                "MLDS",
-                "TAMDS",
-                "secondary_AML",
-                "bulky_nodal_aggregate",
-                "BULK_MED_MASS",
-                "bulk_disease",
-                "fever",
-                "igccc_risk_group",
-                "initial_treatment_category",
-                "karnofsky",
-                "lansky",
-                "magic_risk_group",
-                "med_ratio",
-                "mki",
-                "night_sweats",
-                "nodular_splenic",
-                "weight_loss",
-                "histology_inpc"
+                "family_history",
+                "relative",
+                "prior_cancer"
             ],
             "slot_usage": {
                 "subjects_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Subject"
-                },
-                "timings_submitter_id": {
+                }
+            },
+            "comments": [],
+            "in_subset": [
+                "hl_v1.0-live"
+            ],
+            "annotations": {
+                "domain": "demographics"
+            }
+        },
+        "MedicalHistory": {
+            "slots": [
+                "subjects_submitter_id",
+                "medical_history",
+                "medical_history_status",
+                "medical_history_category",
+                "assisted_conception"
+            ],
+            "slot_usage": {
+                "subjects_submitter_id": {
                     "required": true,
                     "inlined": false,
-                    "range": "Timing"
+                    "range": "Subject"
                 }
             },
             "comments": [],
@@ -309,37 +308,10 @@
                 "aml_v1.8-live",
                 "gct_v1.2-live",
                 "hl_v1.0-live",
-                "nbl_v1.1-live"
+                "nrsts_v1.0-live"
             ],
             "annotations": {
-                "domain": "disease_attributes"
-            }
-        },
-        "MyeloidSarcomaInvolvement": {
-            "slots": [
-                "subjects_submitter_id",
-                "timings_submitter_id",
-                "myeloid_sarcoma",
-                "myeloid_sarcoma_site"
-            ],
-            "slot_usage": {
-                "subjects_submitter_id": {
-                    "required": true,
-                    "inlined": false,
-                    "range": "Subject"
-                },
-                "timings_submitter_id": {
-                    "required": true,
-                    "inlined": false,
-                    "range": "Timing"
-                }
-            },
-            "comments": [],
-            "in_subset": [
-                "aml_v1.8-live"
-            ],
-            "annotations": {
-                "domain": "disease_attributes"
+                "domain": "demographics"
             }
         },
         "Vital": {
@@ -368,6 +340,38 @@
             "in_subset": [
                 "aml_v1.8-live",
                 "gct_v1.2-live",
+                "hl_v1.0-live"
+            ],
+            "annotations": {
+                "domain": "testing"
+            }
+        },
+        "FunctionTest": {
+            "slots": [
+                "subjects_submitter_id",
+                "timings_submitter_id",
+                "age_at",
+                "function_category",
+                "function_result",
+                "function_test",
+                "function_result_numeric",
+                "function_result_unit"
+            ],
+            "slot_usage": {
+                "subjects_submitter_id": {
+                    "required": true,
+                    "inlined": false,
+                    "range": "Subject"
+                },
+                "timings_submitter_id": {
+                    "required": true,
+                    "inlined": false,
+                    "range": "Timing"
+                }
+            },
+            "comments": [],
+            "in_subset": [
+                "aml_v1.8-live",
                 "hl_v1.0-live"
             ],
             "annotations": {
@@ -467,497 +471,35 @@
                 "domain": "testing"
             }
         },
-        "RadiationTherapy": {
+        "Biospecimen": {
             "slots": [
                 "subjects_submitter_id",
-                "timings_submitter_id",
-                "age_at_rt_start",
-                "age_at_rt_end",
-                "rt_timing",
-                "administration_status",
-                "rt_site",
-                "rt_dose",
-                "rt_unit",
-                "boost_dose",
-                "boost",
-                "energy_type",
-                "num_fraction",
-                "rt_laterality",
-                "tumor_classification"
+                "biospecimen_container_type",
+                "biospecimen_media",
+                "biospecimen_type",
+                "current_qty_unit",
+                "current_qty_value"
             ],
             "slot_usage": {
                 "subjects_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Subject"
-                },
-                "timings_submitter_id": {
-                    "required": true,
-                    "inlined": false,
-                    "range": "Timing"
                 }
             },
-            "comments": [],
+            "comments": [
+                "D4CGNote: One observation/row per biospecimen when instantiated"
+            ],
             "in_subset": [
                 "aml_v1.8-live",
                 "gct_v1.2-live",
                 "hl_v1.0-live",
                 "nrsts_v1.0-live",
+                "nbl_v1.1-live",
                 "rms_v2.0-live"
-            ],
-            "annotations": {
-                "domain": "intervention"
-            }
-        },
-        "TransfusionMedicineProcedure": {
-            "slots": [
-                "subjects_submitter_id",
-                "timings_submitter_id",
-                "age_at_tmp_start",
-                "tmp_type",
-                "tmp_product",
-                "tmp_product_type",
-                "tmp_number_units"
-            ],
-            "slot_usage": {
-                "subjects_submitter_id": {
-                    "required": true,
-                    "inlined": false,
-                    "range": "Subject"
-                },
-                "timings_submitter_id": {
-                    "required": true,
-                    "inlined": false,
-                    "range": "Timing"
-                }
-            },
-            "comments": [],
-            "in_subset": [
-                "aml_v1.8-live",
-                "hl_v1.0-live"
-            ],
-            "annotations": {
-                "domain": "intervention"
-            }
-        },
-        "CellularImmunotherapy": {
-            "slots": [
-                "subjects_submitter_id",
-                "timings_submitter_id",
-                "age_at_imt_start",
-                "cimt_type"
-            ],
-            "slot_usage": {
-                "subjects_submitter_id": {
-                    "required": true,
-                    "inlined": false,
-                    "range": "Subject"
-                },
-                "timings_submitter_id": {
-                    "required": true,
-                    "inlined": false,
-                    "range": "Timing"
-                }
-            },
-            "comments": [],
-            "in_subset": [
-                "aml_v1.8-live"
-            ],
-            "annotations": {
-                "domain": "intervention"
-            }
-        },
-        "TotalDose": {
-            "slots": [
-                "subjects_submitter_id",
-                "timings_submitter_id",
-                "age_at_total_dose_start",
-                "age_at_total_dose_end",
-                "cycle_number",
-                "administration_status",
-                "route",
-                "antineoplastic_agent",
-                "number_doses",
-                "total_dose_administered",
-                "total_dose_intended",
-                "total_dose_units",
-                "route_detail"
-            ],
-            "slot_usage": {
-                "subjects_submitter_id": {
-                    "required": true,
-                    "inlined": false,
-                    "range": "Subject"
-                },
-                "timings_submitter_id": {
-                    "required": true,
-                    "inlined": false,
-                    "range": "Timing"
-                }
-            },
-            "comments": [],
-            "in_subset": [
-                "aml_v1.8-live",
-                "gct_v1.2-live",
-                "hl_v1.0-live"
-            ],
-            "annotations": {
-                "domain": "intervention"
-            }
-        },
-        "ConcomitantMedication": {
-            "slots": [
-                "subjects_submitter_id",
-                "timings_submitter_id",
-                "age_at_medication_start",
-                "age_at_medication_end",
-                "medication",
-                "medication_admn_status"
-            ],
-            "slot_usage": {
-                "subjects_submitter_id": {
-                    "required": true,
-                    "inlined": false,
-                    "range": "Subject"
-                },
-                "timings_submitter_id": {
-                    "required": true,
-                    "inlined": false,
-                    "range": "Timing"
-                }
-            },
-            "comments": [],
-            "in_subset": [
-                "aml_v1.8-live"
-            ],
-            "annotations": {
-                "domain": "intervention"
-            }
-        },
-        "StemCellTransplant": {
-            "slots": [
-                "subjects_submitter_id",
-                "timings_submitter_id",
-                "age_at_sct",
-                "sct_type",
-                "sct_source",
-                "sct_donor_relationship",
-                "hla_match",
-                "number_hla",
-                "number_matches",
-                "hla_a_result",
-                "hla_b_result",
-                "hla_c_result",
-                "hla_drb1_result",
-                "hla_dq_result",
-                "sct_conditioning_type",
-                "sct_tbi",
-                "sct_cd34_coll"
-            ],
-            "slot_usage": {
-                "subjects_submitter_id": {
-                    "required": true,
-                    "inlined": false,
-                    "range": "Subject"
-                },
-                "timings_submitter_id": {
-                    "required": true,
-                    "inlined": false,
-                    "range": "Timing"
-                }
-            },
-            "comments": [],
-            "in_subset": [
-                "aml_v1.8-live",
-                "gct_v1.2-live",
-                "hl_v1.0-live"
-            ],
-            "annotations": {
-                "domain": "intervention"
-            }
-        },
-        "MinimalResidualDisease": {
-            "slots": [
-                "subjects_submitter_id",
-                "timings_submitter_id",
-                "age_at_mrd_assessment",
-                "mrd_method",
-                "flow_cytometry_type",
-                "mrd_result",
-                "mrd_result_numeric",
-                "mrd_result_unit",
-                "mrd_sensitivity",
-                "mrd_sample_source",
-                "mrd_molecular_markers"
-            ],
-            "slot_usage": {
-                "subjects_submitter_id": {
-                    "required": true,
-                    "inlined": false,
-                    "range": "Subject"
-                },
-                "timings_submitter_id": {
-                    "required": true,
-                    "inlined": false,
-                    "range": "Timing"
-                }
-            },
-            "comments": [],
-            "in_subset": [
-                "aml_v1.8-live"
-            ],
-            "annotations": {
-                "domain": "monitoring"
-            }
-        },
-        "SubjectResponse": {
-            "slots": [
-                "subjects_submitter_id",
-                "timings_submitter_id",
-                "age_at_response",
-                "response_category",
-                "response_criteria",
-                "response_criteria_version",
-                "response",
-                "bm_pct_blasts_at_response",
-                "bm_analysis_method_at_response",
-                "anc_at_response",
-                "anc_threshold_at_response",
-                "platelet_count_at_response",
-                "platelet_threshold_at_response",
-                "interim_response",
-                "necrosis",
-                "necrosis_pct",
-                "nodular_splenic",
-                "palpable_nodes",
-                "response_method",
-                "symptoms",
-                "tx_prior_response"
-            ],
-            "slot_usage": {
-                "subjects_submitter_id": {
-                    "required": true,
-                    "inlined": false,
-                    "range": "Subject"
-                },
-                "timings_submitter_id": {
-                    "required": true,
-                    "inlined": false,
-                    "range": "Timing"
-                }
-            },
-            "comments": [],
-            "in_subset": [
-                "aml_v1.8-live",
-                "gct_v1.2-live",
-                "hl_v1.0-live",
-                "nrsts_v1.0-live",
-                "rms_v2.0-live"
-            ],
-            "annotations": {
-                "domain": "monitoring"
-            }
-        },
-        "FunctionTest": {
-            "slots": [
-                "subjects_submitter_id",
-                "timings_submitter_id",
-                "age_at",
-                "function_category",
-                "function_result",
-                "function_test",
-                "function_result_numeric",
-                "function_result_unit"
-            ],
-            "slot_usage": {
-                "subjects_submitter_id": {
-                    "required": true,
-                    "inlined": false,
-                    "range": "Subject"
-                },
-                "timings_submitter_id": {
-                    "required": true,
-                    "inlined": false,
-                    "range": "Timing"
-                }
-            },
-            "comments": [],
-            "in_subset": [
-                "aml_v1.8-live",
-                "hl_v1.0-live"
             ],
             "annotations": {
                 "domain": "testing"
-            }
-        },
-        "AdverseEvent": {
-            "slots": [
-                "subjects_submitter_id",
-                "timings_submitter_id",
-                "age_at_ae",
-                "age_at_ae_resolved",
-                "adverse_event",
-                "ae_code",
-                "ae_system",
-                "ae_system_version",
-                "ae_grade",
-                "ae_attribution",
-                "ae_outcome",
-                "ae_icu",
-                "ae_medication",
-                "ae_intervention",
-                "ae_med_intervention_detail",
-                "ae_pathogen",
-                "ae_pathogen_confirmation",
-                "gvhd_acuity",
-                "gvhd_organ"
-            ],
-            "slot_usage": {
-                "subjects_submitter_id": {
-                    "required": true,
-                    "inlined": false,
-                    "range": "Subject"
-                },
-                "timings_submitter_id": {
-                    "required": true,
-                    "inlined": false,
-                    "range": "Timing"
-                }
-            },
-            "comments": [],
-            "in_subset": [
-                "aml_v1.8-live",
-                "gct_v1.2-live",
-                "hl_v1.0-live"
-            ],
-            "annotations": {
-                "domain": "monitoring"
-            }
-        },
-        "TumorAssessment": {
-            "slots": [
-                "subjects_submitter_id",
-                "timings_submitter_id",
-                "age_at_tumor_assessment",
-                "necrosis",
-                "necrosis_pct",
-                "nodal_site",
-                "tumor_detection_method",
-                "tumor_classification",
-                "tumor_site",
-                "tumor_laterality",
-                "tumor_state",
-                "nodal_involvement",
-                "depth",
-                "invasiveness",
-                "longest_diam_dim1",
-                "longest_diam_dim2",
-                "longest_diam_dim3",
-                "nodal_clinical",
-                "nodal_pathology",
-                "parameningeal_extension",
-                "pleural_effusion",
-                "tumor_site_other",
-                "tumor_size"
-            ],
-            "slot_usage": {
-                "subjects_submitter_id": {
-                    "required": true,
-                    "inlined": false,
-                    "range": "Subject"
-                },
-                "timings_submitter_id": {
-                    "required": true,
-                    "inlined": false,
-                    "range": "Timing"
-                }
-            },
-            "comments": [],
-            "in_subset": [
-                "gct_v1.2-live",
-                "nbl_v1.1-live",
-                "nrsts_v1.0-live",
-                "rms_v2.0-live"
-            ],
-            "annotations": {
-                "domain": "disease_attributes"
-            }
-        },
-        "Staging": {
-            "slots": [
-                "subjects_submitter_id",
-                "timings_submitter_id",
-                "age_at_staging",
-                "AB",
-                "E",
-                "S",
-                "stage_system",
-                "stage",
-                "irs_group",
-                "tnm_finding"
-            ],
-            "slot_usage": {
-                "subjects_submitter_id": {
-                    "required": true,
-                    "inlined": false,
-                    "range": "Subject"
-                },
-                "timings_submitter_id": {
-                    "required": true,
-                    "inlined": false,
-                    "range": "Timing"
-                }
-            },
-            "comments": [],
-            "in_subset": [
-                "gct_v1.2-live",
-                "hl_v1.0-live",
-                "nbl_v1.1-live",
-                "rms_v2.0-live"
-            ],
-            "annotations": {
-                "domain": "disease_attributes"
-            }
-        },
-        "Histology": {
-            "slots": [
-                "subjects_submitter_id",
-                "timings_submitter_id",
-                "age_at_hist_assessment",
-                "hist_assessment_review",
-                "histology",
-                "tumor_site",
-                "histology_result",
-                "histology_result_numeric",
-                "histology_result_unit",
-                "hist_ICD_O_morph_code",
-                "histology_grade",
-                "mature_glial_implants",
-                "somatic_malignancy_type",
-                "histology_inpc"
-            ],
-            "slot_usage": {
-                "subjects_submitter_id": {
-                    "required": true,
-                    "inlined": false,
-                    "range": "Subject"
-                },
-                "timings_submitter_id": {
-                    "required": true,
-                    "inlined": false,
-                    "range": "Timing"
-                }
-            },
-            "comments": [],
-            "in_subset": [
-                "gct_v1.2-live",
-                "hl_v1.0-live",
-                "nbl_v1.1-live",
-                "nrsts_v1.0-live",
-                "rms_v2.0-live"
-            ],
-            "annotations": {
-                "domain": "disease_attributes"
             }
         },
         "Immunohistochemistry": {
@@ -1018,19 +560,52 @@
                 "domain": "testing"
             }
         },
-        "BiopsySurgicalProcedure": {
+        "Imaging": {
             "slots": [
                 "subjects_submitter_id",
                 "timings_submitter_id",
-                "age_at_procedure",
-                "procedure_performed",
-                "procedure_treatment_timing",
-                "procedure_site",
-                "procedure_laterality",
-                "procedure_type",
-                "procedure_extent",
-                "margins",
-                "tumor_classification"
+                "age_at_imaging",
+                "imaging_method",
+                "imaging_result",
+                "deauville_score",
+                "qpet_score"
+            ],
+            "slot_usage": {
+                "subjects_submitter_id": {
+                    "required": true,
+                    "inlined": false,
+                    "range": "Subject"
+                },
+                "timings_submitter_id": {
+                    "required": true,
+                    "inlined": false,
+                    "range": "Timing"
+                }
+            },
+            "comments": [],
+            "in_subset": [
+                "hl_v1.0-live"
+            ],
+            "annotations": {
+                "domain": "testing"
+            }
+        },
+        "Histology": {
+            "slots": [
+                "subjects_submitter_id",
+                "timings_submitter_id",
+                "age_at_hist_assessment",
+                "hist_assessment_review",
+                "histology",
+                "tumor_site",
+                "histology_result",
+                "histology_result_numeric",
+                "histology_result_unit",
+                "hist_ICD_O_morph_code",
+                "histology_grade",
+                "mature_glial_implants",
+                "somatic_malignancy_type",
+                "histology_inpc"
             ],
             "slot_usage": {
                 "subjects_submitter_id": {
@@ -1048,80 +623,154 @@
             "in_subset": [
                 "gct_v1.2-live",
                 "hl_v1.0-live",
+                "nbl_v1.1-live",
                 "nrsts_v1.0-live",
                 "rms_v2.0-live"
             ],
             "annotations": {
-                "domain": "intervention"
+                "domain": "disease_attributes"
             }
         },
-        "Biospecimen": {
+        "Staging": {
             "slots": [
                 "subjects_submitter_id",
-                "biospecimen_container_type",
-                "biospecimen_media",
-                "biospecimen_type",
-                "current_qty_unit",
-                "current_qty_value"
+                "timings_submitter_id",
+                "age_at_staging",
+                "AB",
+                "E",
+                "S",
+                "stage_system",
+                "stage",
+                "irs_group",
+                "tnm_finding"
             ],
             "slot_usage": {
                 "subjects_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Subject"
+                },
+                "timings_submitter_id": {
+                    "required": true,
+                    "inlined": false,
+                    "range": "Timing"
                 }
             },
-            "comments": [
-                "D4CGNote: One observation/row per biospecimen when instantiated"
-            ],
+            "comments": [],
             "in_subset": [
-                "aml_v1.8-live",
                 "gct_v1.2-live",
                 "hl_v1.0-live",
-                "nrsts_v1.0-live",
                 "nbl_v1.1-live",
                 "rms_v2.0-live"
             ],
             "annotations": {
-                "domain": "testing"
+                "domain": "disease_attributes"
             }
         },
-        "ExternalReference": {
+        "DiseaseCharacteristic": {
             "slots": [
                 "subjects_submitter_id",
-                "external_links",
-                "external_resource_icon_path",
-                "external_resource_id",
-                "external_resource_name",
-                "external_subject_id",
-                "external_subject_submitter_id",
-                "external_subject_url"
+                "timings_submitter_id",
+                "fab_type",
+                "who_aml",
+                "disease_site",
+                "detection_method",
+                "CNS_disease_status",
+                "MPAL",
+                "MLDS",
+                "TAMDS",
+                "secondary_AML",
+                "bulky_nodal_aggregate",
+                "BULK_MED_MASS",
+                "bulk_disease",
+                "fever",
+                "igccc_risk_group",
+                "initial_treatment_category",
+                "karnofsky",
+                "lansky",
+                "magic_risk_group",
+                "med_ratio",
+                "mki",
+                "night_sweats",
+                "nodular_splenic",
+                "weight_loss",
+                "histology_inpc"
             ],
             "slot_usage": {
                 "subjects_submitter_id": {
                     "required": true,
                     "inlined": false,
                     "range": "Subject"
+                },
+                "timings_submitter_id": {
+                    "required": true,
+                    "inlined": false,
+                    "range": "Timing"
                 }
             },
-            "comments": [
-                "D4CGNote: One observation/row per ___ when instantiated"
-            ],
+            "comments": [],
             "in_subset": [
                 "aml_v1.8-live",
+                "gct_v1.2-live",
+                "hl_v1.0-live",
                 "nbl_v1.1-live"
             ],
             "annotations": {
-                "domain": "testing"
+                "domain": "disease_attributes"
             }
         },
-        "ConcomitantMedications": {
+        "MyeloidSarcomaInvolvement": {
             "slots": [
                 "subjects_submitter_id",
                 "timings_submitter_id",
-                "age_at_medication_start",
-                "age_at_medication_end",
-                "medication"
+                "myeloid_sarcoma",
+                "myeloid_sarcoma_site"
+            ],
+            "slot_usage": {
+                "subjects_submitter_id": {
+                    "required": true,
+                    "inlined": false,
+                    "range": "Subject"
+                },
+                "timings_submitter_id": {
+                    "required": true,
+                    "inlined": false,
+                    "range": "Timing"
+                }
+            },
+            "comments": [],
+            "in_subset": [
+                "aml_v1.8-live"
+            ],
+            "annotations": {
+                "domain": "disease_attributes"
+            }
+        },
+        "TumorAssessment": {
+            "slots": [
+                "subjects_submitter_id",
+                "timings_submitter_id",
+                "age_at_tumor_assessment",
+                "necrosis",
+                "necrosis_pct",
+                "nodal_site",
+                "tumor_detection_method",
+                "tumor_classification",
+                "tumor_site",
+                "tumor_laterality",
+                "tumor_state",
+                "nodal_involvement",
+                "depth",
+                "invasiveness",
+                "longest_diam_dim1",
+                "longest_diam_dim2",
+                "longest_diam_dim3",
+                "nodal_clinical",
+                "nodal_pathology",
+                "parameningeal_extension",
+                "pleural_effusion",
+                "tumor_site_other",
+                "tumor_size"
             ],
             "slot_usage": {
                 "subjects_submitter_id": {
@@ -1138,96 +787,12 @@
             "comments": [],
             "in_subset": [
                 "gct_v1.2-live",
-                "hl_v1.0-live"
+                "nbl_v1.1-live",
+                "nrsts_v1.0-live",
+                "rms_v2.0-live"
             ],
             "annotations": {
-                "domain": "intervention"
-            }
-        },
-        "SecondaryMalignantNeoplasm": {
-            "slots": [
-                "subjects_submitter_id",
-                "timings_submitter_id",
-                "age_at_smn",
-                "smn_morph_sno",
-                "smn_morph_txt",
-                "smn_site",
-                "smn_top_sno",
-                "smn_top_txt",
-                "smn_type",
-                "smn_yn",
-                "smn_morph_icdo",
-                "smn_top_icdo",
-                "smn_field"
-            ],
-            "slot_usage": {
-                "subjects_submitter_id": {
-                    "required": true,
-                    "inlined": false,
-                    "range": "Subject"
-                },
-                "timings_submitter_id": {
-                    "required": true,
-                    "inlined": false,
-                    "range": "Timing"
-                }
-            },
-            "comments": [],
-            "in_subset": [
-                "gct_v1.2-live",
-                "hl_v1.0-live"
-            ],
-            "annotations": {
-                "domain": "monitoring"
-            }
-        },
-        "GrowingTeratomaSyndrome": {
-            "slots": [
-                "subjects_submitter_id",
-                "timings_submitter_id",
-                "age_at_gts",
-                "gts_treatment"
-            ],
-            "slot_usage": {
-                "subjects_submitter_id": {
-                    "required": true,
-                    "inlined": false,
-                    "range": "Subject"
-                },
-                "timings_submitter_id": {
-                    "required": true,
-                    "inlined": false,
-                    "range": "Timing"
-                }
-            },
-            "comments": [],
-            "in_subset": [
-                "gct_v1.2-live"
-            ],
-            "annotations": {
-                "domain": "monitoring"
-            }
-        },
-        "FamilyMedicalHistory": {
-            "slots": [
-                "subjects_submitter_id",
-                "family_history",
-                "relative",
-                "prior_cancer"
-            ],
-            "slot_usage": {
-                "subjects_submitter_id": {
-                    "required": true,
-                    "inlined": false,
-                    "range": "Subject"
-                }
-            },
-            "comments": [],
-            "in_subset": [
-                "hl_v1.0-live"
-            ],
-            "annotations": {
-                "domain": "demographics"
+                "domain": "disease_attributes"
             }
         },
         "LesionCharacteristic": {
@@ -1273,15 +838,19 @@
                 "domain": "disease_attributes"
             }
         },
-        "Imaging": {
+        "BiopsySurgicalProcedure": {
             "slots": [
                 "subjects_submitter_id",
                 "timings_submitter_id",
-                "age_at_imaging",
-                "imaging_method",
-                "imaging_result",
-                "deauville_score",
-                "qpet_score"
+                "age_at_procedure",
+                "procedure_performed",
+                "procedure_treatment_timing",
+                "procedure_site",
+                "procedure_laterality",
+                "procedure_type",
+                "procedure_extent",
+                "margins",
+                "tumor_classification"
             ],
             "slot_usage": {
                 "subjects_submitter_id": {
@@ -1297,13 +866,169 @@
             },
             "comments": [],
             "in_subset": [
+                "gct_v1.2-live",
+                "hl_v1.0-live",
+                "nrsts_v1.0-live",
+                "rms_v2.0-live"
+            ],
+            "annotations": {
+                "domain": "intervention"
+            }
+        },
+        "StemCellTransplant": {
+            "slots": [
+                "subjects_submitter_id",
+                "timings_submitter_id",
+                "age_at_sct",
+                "sct_type",
+                "sct_source",
+                "sct_donor_relationship",
+                "hla_match",
+                "number_hla",
+                "number_matches",
+                "hla_a_result",
+                "hla_b_result",
+                "hla_c_result",
+                "hla_drb1_result",
+                "hla_dq_result",
+                "sct_conditioning_type",
+                "sct_tbi",
+                "sct_cd34_coll"
+            ],
+            "slot_usage": {
+                "subjects_submitter_id": {
+                    "required": true,
+                    "inlined": false,
+                    "range": "Subject"
+                },
+                "timings_submitter_id": {
+                    "required": true,
+                    "inlined": false,
+                    "range": "Timing"
+                }
+            },
+            "comments": [],
+            "in_subset": [
+                "aml_v1.8-live",
+                "gct_v1.2-live",
                 "hl_v1.0-live"
             ],
             "annotations": {
-                "domain": "testing"
+                "domain": "intervention"
             }
         },
-        "ProtocolTreatmentModifications": {
+        "TransfusionMedicineProcedure": {
+            "slots": [
+                "subjects_submitter_id",
+                "timings_submitter_id",
+                "age_at_tmp_start",
+                "tmp_type",
+                "tmp_product",
+                "tmp_product_type",
+                "tmp_number_units"
+            ],
+            "slot_usage": {
+                "subjects_submitter_id": {
+                    "required": true,
+                    "inlined": false,
+                    "range": "Subject"
+                },
+                "timings_submitter_id": {
+                    "required": true,
+                    "inlined": false,
+                    "range": "Timing"
+                }
+            },
+            "comments": [],
+            "in_subset": [
+                "aml_v1.8-live",
+                "hl_v1.0-live"
+            ],
+            "annotations": {
+                "domain": "intervention"
+            }
+        },
+        "RadiationTherapy": {
+            "slots": [
+                "subjects_submitter_id",
+                "timings_submitter_id",
+                "age_at_rt_start",
+                "age_at_rt_end",
+                "rt_timing",
+                "administration_status",
+                "rt_site",
+                "rt_dose",
+                "rt_unit",
+                "boost_dose",
+                "boost",
+                "energy_type",
+                "num_fraction",
+                "rt_laterality",
+                "tumor_classification"
+            ],
+            "slot_usage": {
+                "subjects_submitter_id": {
+                    "required": true,
+                    "inlined": false,
+                    "range": "Subject"
+                },
+                "timings_submitter_id": {
+                    "required": true,
+                    "inlined": false,
+                    "range": "Timing"
+                }
+            },
+            "comments": [],
+            "in_subset": [
+                "aml_v1.8-live",
+                "gct_v1.2-live",
+                "hl_v1.0-live",
+                "nrsts_v1.0-live",
+                "rms_v2.0-live"
+            ],
+            "annotations": {
+                "domain": "intervention"
+            }
+        },
+         "TotalDose": {
+            "slots": [
+                "subjects_submitter_id",
+                "timings_submitter_id",
+                "age_at_total_dose_start",
+                "age_at_total_dose_end",
+                "cycle_number",
+                "administration_status",
+                "route",
+                "antineoplastic_agent",
+                "number_doses",
+                "total_dose_administered",
+                "total_dose_intended",
+                "total_dose_units",
+                "route_detail"
+            ],
+            "slot_usage": {
+                "subjects_submitter_id": {
+                    "required": true,
+                    "inlined": false,
+                    "range": "Subject"
+                },
+                "timings_submitter_id": {
+                    "required": true,
+                    "inlined": false,
+                    "range": "Timing"
+                }
+            },
+            "comments": [],
+            "in_subset": [
+                "aml_v1.8-live",
+                "gct_v1.2-live",
+                "hl_v1.0-live"
+            ],
+            "annotations": {
+                "domain": "intervention"
+            }
+        },
+         "ProtocolTreatmentModifications": {
             "slots": [
                 "subjects_submitter_id",
                 "timings_submitter_id",
@@ -1337,6 +1062,245 @@
                 "domain": "intervention"
             }
         },
+        "CellularImmunotherapy": {
+            "slots": [
+                "subjects_submitter_id",
+                "timings_submitter_id",
+                "age_at_imt_start",
+                "cimt_type"
+            ],
+            "slot_usage": {
+                "subjects_submitter_id": {
+                    "required": true,
+                    "inlined": false,
+                    "range": "Subject"
+                },
+                "timings_submitter_id": {
+                    "required": true,
+                    "inlined": false,
+                    "range": "Timing"
+                }
+            },
+            "comments": [],
+            "in_subset": [
+                "aml_v1.8-live"
+            ],
+            "annotations": {
+                "domain": "intervention"
+            }
+        },
+        "NonProtocolTherapy": {
+            "slots": [
+                "subjects_submitter_id",
+                "npt_timing",
+                "npt_type",
+                "npt_sct_type"
+            ],
+            "slot_usage": {
+                "subjects_submitter_id": {
+                    "required": true,
+                    "inlined": false,
+                    "range": "Subject"
+                }
+            },
+            "comments": [],
+            "in_subset": [
+                "hl_v1.0-live"
+            ],
+            "annotations": {
+                "domain": "intervention"
+            }
+        },
+        "SubjectResponse": {
+            "slots": [
+                "subjects_submitter_id",
+                "timings_submitter_id",
+                "age_at_response",
+                "response_category",
+                "response_criteria",
+                "response_criteria_version",
+                "response",
+                "bm_pct_blasts_at_response",
+                "bm_analysis_method_at_response",
+                "anc_at_response",
+                "anc_threshold_at_response",
+                "platelet_count_at_response",
+                "platelet_threshold_at_response",
+                "interim_response",
+                "necrosis",
+                "necrosis_pct",
+                "nodular_splenic",
+                "palpable_nodes",
+                "response_method",
+                "symptoms",
+                "tx_prior_response"
+            ],
+            "slot_usage": {
+                "subjects_submitter_id": {
+                    "required": true,
+                    "inlined": false,
+                    "range": "Subject"
+                },
+                "timings_submitter_id": {
+                    "required": true,
+                    "inlined": false,
+                    "range": "Timing"
+                }
+            },
+            "comments": [],
+            "in_subset": [
+                "aml_v1.8-live",
+                "gct_v1.2-live",
+                "hl_v1.0-live",
+                "nrsts_v1.0-live",
+                "rms_v2.0-live"
+            ],
+            "annotations": {
+                "domain": "monitoring"
+            }
+        }, 
+        "MinimalResidualDisease": {
+            "slots": [
+                "subjects_submitter_id",
+                "timings_submitter_id",
+                "age_at_mrd_assessment",
+                "mrd_method",
+                "flow_cytometry_type",
+                "mrd_result",
+                "mrd_result_numeric",
+                "mrd_result_unit",
+                "mrd_sensitivity",
+                "mrd_sample_source",
+                "mrd_molecular_markers"
+            ],
+            "slot_usage": {
+                "subjects_submitter_id": {
+                    "required": true,
+                    "inlined": false,
+                    "range": "Subject"
+                },
+                "timings_submitter_id": {
+                    "required": true,
+                    "inlined": false,
+                    "range": "Timing"
+                }
+            },
+            "comments": [],
+            "in_subset": [
+                "aml_v1.8-live"
+            ],
+            "annotations": {
+                "domain": "monitoring"
+            }
+        },
+        "SecondaryMalignantNeoplasm": {
+            "slots": [
+                "subjects_submitter_id",
+                "timings_submitter_id",
+                "age_at_smn",
+                "smn_morph_sno",
+                "smn_morph_txt",
+                "smn_site",
+                "smn_top_sno",
+                "smn_top_txt",
+                "smn_type",
+                "smn_yn",
+                "smn_morph_icdo",
+                "smn_top_icdo",
+                "smn_field"
+            ],
+            "slot_usage": {
+                "subjects_submitter_id": {
+                    "required": true,
+                    "inlined": false,
+                    "range": "Subject"
+                },
+                "timings_submitter_id": {
+                    "required": true,
+                    "inlined": false,
+                    "range": "Timing"
+                }
+            },
+            "comments": [],
+            "in_subset": [
+                "gct_v1.2-live",
+                "hl_v1.0-live"
+            ],
+            "annotations": {
+                "domain": "monitoring"
+            }
+        },
+        "AdverseEvent": {
+            "slots": [
+                "subjects_submitter_id",
+                "timings_submitter_id",
+                "age_at_ae",
+                "age_at_ae_resolved",
+                "adverse_event",
+                "ae_code",
+                "ae_system",
+                "ae_system_version",
+                "ae_grade",
+                "ae_attribution",
+                "ae_outcome",
+                "ae_icu",
+                "ae_medication",
+                "ae_intervention",
+                "ae_med_intervention_detail",
+                "ae_pathogen",
+                "ae_pathogen_confirmation",
+                "gvhd_acuity",
+                "gvhd_organ"
+            ],
+            "slot_usage": {
+                "subjects_submitter_id": {
+                    "required": true,
+                    "inlined": false,
+                    "range": "Subject"
+                },
+                "timings_submitter_id": {
+                    "required": true,
+                    "inlined": false,
+                    "range": "Timing"
+                }
+            },
+            "comments": [],
+            "in_subset": [
+                "aml_v1.8-live",
+                "gct_v1.2-live",
+                "hl_v1.0-live"
+            ],
+            "annotations": {
+                "domain": "monitoring"
+            }
+        },
+        "GrowingTeratomaSyndrome": {
+            "slots": [
+                "subjects_submitter_id",
+                "timings_submitter_id",
+                "age_at_gts",
+                "gts_treatment"
+            ],
+            "slot_usage": {
+                "subjects_submitter_id": {
+                    "required": true,
+                    "inlined": false,
+                    "range": "Subject"
+                },
+                "timings_submitter_id": {
+                    "required": true,
+                    "inlined": false,
+                    "range": "Timing"
+                }
+            },
+            "comments": [],
+            "in_subset": [
+                "gct_v1.2-live"
+            ],
+            "annotations": {
+                "domain": "monitoring"
+            }
+        },
         "LateEffects": {
             "slots": [
                 "subjects_submitter_id",
@@ -1361,29 +1325,7 @@
             "annotations": {
                 "domain": "monitoring"
             }
-        },
-        "NonProtocolTherapy": {
-            "slots": [
-                "subjects_submitter_id",
-                "npt_timing",
-                "npt_type",
-                "npt_sct_type"
-            ],
-            "slot_usage": {
-                "subjects_submitter_id": {
-                    "required": true,
-                    "inlined": false,
-                    "range": "Subject"
-                }
-            },
-            "comments": [],
-            "in_subset": [
-                "hl_v1.0-live"
-            ],
-            "annotations": {
-                "domain": "intervention"
-            }
-        }
+        } 
     },
     "slots": {
         "submitter_id": {
@@ -2699,56 +2641,6 @@
             "annotations": {
                 "tier_optional": "hl_v1.0-live"
             }
-        },
-        "age_at_medication_start": {
-            "slot_uri": "ncit:C172692",
-            "range": "integer",
-            "comments": [],
-            "in_subset": [
-                "aml_v1.8-live",
-                "gct_v1.2-live",
-                "hl_v1.0-live"
-            ],
-            "annotations": {
-                "tier_optional": "hl_v1.0-live"
-            }
-        },
-        "age_at_medication_end": {
-            "slot_uri": "ncit:C172693",
-            "range": "integer",
-            "comments": [],
-            "in_subset": [
-                "aml_v1.8-live",
-                "gct_v1.2-live",
-                "hl_v1.0-live"
-            ],
-            "annotations": {
-                "tier_optional": "hl_v1.0-live"
-            }
-        },
-        "medication": {
-            "slot_uri": "ncit:C70902",
-            "range": "MedicationEnum",
-            "comments": [],
-            "in_subset": [
-                "aml_v1.8-live",
-                "gct_v1.2-live",
-                "hl_v1.0-live"
-            ],
-            "annotations": {
-                "tier_optional": "hl_v1.0-live"
-            }
-        },
-        "medication_admn_status": {
-            "slot_uri": "ncit:C173297",
-            "range": "MedicationAdmnStatusEnum",
-            "comments": [
-                "(aml_v1.8-live) ConsortiumNote: If medication was given, the start and end ages correspond to the time period when it was given. If medication was explicitly NOT given (i.e. only if the explicit decision to not give the medicine is available in the data), leave start and end ages blank, and ony fill in the disease phase (and number) / course (and number) during which the explicit decision to not give the medication occured."
-            ],
-            "in_subset": [
-                "aml_v1.8-live"
-            ],
-            "annotations": {}
         },
         "age_at_sct": {
             "slot_uri": "ncit:C168853",
@@ -13788,156 +13680,6 @@
                     "in_subset": [
                         "aml_v1.8-live",
                         "gct_v1.2-live"
-                    ]
-                },
-                "Not Reported": {
-                    "meaning": "ncit:C43234",
-                    "comments": [],
-                    "in_subset": [
-                        "aml_v1.8-live"
-                    ]
-                }
-            }
-        },
-        "MedicationEnum": {
-            "in_subset": [
-                "aml_v1.8-live",
-                "gct_v1.2-live",
-                "hl_v1.0-live"
-            ],
-            "permissible_values": {
-                "Dexrazoxane": {
-                    "meaning": "ncit:C1333",
-                    "comments": [],
-                    "in_subset": [
-                        "aml_v1.8-live",
-                        "hl_v1.0-live"
-                    ]
-                },
-                "Erythropoeitin": {
-                    "meaning": "ncit:C20429",
-                    "comments": [],
-                    "in_subset": [
-                        "hl_v1.0-live"
-                    ]
-                },
-                "Filgrastim": {
-                    "meaning": "ncit:C1474",
-                    "comments": [],
-                    "in_subset": [
-                        "hl_v1.0-live"
-                    ]
-                },
-                "Gabapentin": {
-                    "meaning": "ncit:C1108",
-                    "comments": [],
-                    "in_subset": [
-                        "hl_v1.0-live"
-                    ]
-                },
-                "Morphine": {
-                    "meaning": "ncit:C62051",
-                    "comments": [],
-                    "in_subset": [
-                        "hl_v1.0-live"
-                    ]
-                },
-                "Non-Corticosteroid Immunosuppressive Agent": {
-                    "meaning": "ncit:C185652",
-                    "comments": [],
-                    "in_subset": [
-                        "hl_v1.0-live"
-                    ]
-                },
-                "PEG-filgrastim": {
-                    "meaning": "ncit:C1854",
-                    "comments": [],
-                    "in_subset": [
-                        "hl_v1.0-live"
-                    ]
-                },
-                "Plerixafor": {
-                    "meaning": "ncit:C1777",
-                    "comments": [],
-                    "in_subset": [
-                        "hl_v1.0-live"
-                    ]
-                },
-                "Sodium Thiosulfate": {
-                    "meaning": "ncit:C1230",
-                    "comments": [],
-                    "in_subset": [
-                        "gct_v1.2-live"
-                    ]
-                },
-                "Systemic Corticosteroid": {
-                    "meaning": "ncit:C122080",
-                    "comments": [],
-                    "in_subset": [
-                        "hl_v1.0-live"
-                    ]
-                },
-                "Thyroid Hormone Replacement": {
-                    "meaning": "ncit:C888",
-                    "comments": [],
-                    "in_subset": [
-                        "hl_v1.0-live"
-                    ]
-                },
-                "Topical Corticosteroid": {
-                    "meaning": "ncit:C29505",
-                    "comments": [],
-                    "in_subset": [
-                        "hl_v1.0-live"
-                    ]
-                },
-                "Other": {
-                    "meaning": "ncit:C17649",
-                    "comments": [],
-                    "in_subset": [
-                        "aml_v1.8-live"
-                    ]
-                },
-                "Unknown": {
-                    "meaning": "ncit:C17998",
-                    "comments": [],
-                    "in_subset": [
-                        "aml_v1.8-live"
-                    ]
-                },
-                "Not Reported": {
-                    "meaning": "ncit:C43234",
-                    "comments": [],
-                    "in_subset": [
-                        "aml_v1.8-live"
-                    ]
-                }
-            }
-        },
-        "MedicationAdmnStatusEnum": {
-            "in_subset": [
-                "aml_v1.8-live"
-            ],
-            "permissible_values": {
-                "Medication Administered": {
-                    "meaning": "ncit:C173298",
-                    "comments": [],
-                    "in_subset": [
-                        "aml_v1.8-live"
-                    ]
-                },
-                "Medication Not Administered": {
-                    "meaning": "ncit:C173299",
-                    "comments": [],
-                    "in_subset": [
-                        "aml_v1.8-live"
-                    ]
-                },
-                "Unknown": {
-                    "meaning": "ncit:C17998",
-                    "comments": [],
-                    "in_subset": [
-                        "aml_v1.8-live"
                     ]
                 },
                 "Not Reported": {
