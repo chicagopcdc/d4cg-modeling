@@ -229,7 +229,11 @@ def export(commons, disease_group, parent, schema, target, id):
                 if target in slot['in_subset']:
                     variable_count += 1
                     print(c + " " + s)
-                    rows.append(['var', s, parseType(slot), parseTier(target, slot), fetchDefinition(slot['slot_uri']), slot['slot_uri'], '', '', '', parseNotes(slot['comments'], target), parseMappings(slot, target)])
+                    definition = fetchDefinition(slot['slot_uri'])
+                    #Custom fields with no semantic code binding and a description field instead
+                    if s in ["submitter_id", "subjects_submitter_id", "timings_submitter_id"]:
+                        definition = slot["description"]
+                    rows.append(['var', s, parseType(slot), parseTier(target, slot), definition, slot['slot_uri'], '', '', '', parseNotes(slot['comments'], target), parseMappings(slot, target)])
                     if 'Enum' in slot['range']:
                         for value in schema['enums'][slot['range']]['permissible_values']:
                             pv = schema['enums'][slot['range']]['permissible_values'][value]
