@@ -437,14 +437,6 @@ classes:
         - cytodifferentiation
         - mitotic_rate
         - alt_status
-        - alteration_category
-        - chromosomal_region
-        - associated_condition
-        - gene2
-        - determination_source
-        - source_lab
-        - reference_version
-        - reference_accession
         - founder_population_status
         - founder_population
         - acmg_based_significance
@@ -461,6 +453,11 @@ classes:
         - ews_v2.0
         - fa_v1.0
         - rb_v1.2
+        - aml_v2.0
+        - gct_v2.0
+        - nbl_v2.0
+        - nrsts_v2.0
+        - rms_v2.0
         annotations:
             domain: testing
     Biospecimen:
@@ -2735,27 +2732,34 @@ slots:
         - ews_v2.0
         - fa_v1.0
         - rb_v1.2
+        - aml_v2.0
+        - gct_v2.0
+        - nbl_v2.0
+        - nrsts_v2.0
+        - rms_v2.0
         annotations:
             tier_priority: rb_v1.2
         exact_mappings:
         - (ews_v2.0) skos:exactMatch [EWS].[v1.0].[Molecular Analysis].[AGE_AT_MOLECULAR_ANALYSIS]
-    gene_panel_source:
+    source_lab:
         slot_uri: ''
-        range: GenePanelSourceEnum
+        range: SourceLabEnum
         comments: []
         in_subset:
+        - fa_v1.0
         - rb_v1.2
         annotations:
             tier_optional: rb_v1.2
-    gene_panel_name:
+    test_name:
         slot_uri: ''
         range: string
-        comments: []
+        comments:
+        - '(rb_v1.2) ConsortiumNote: OncoKids should be designated in this field.'
         in_subset:
         - rb_v1.2
         annotations:
             tier_optional: rb_v1.2
-    gene_panel_version:
+    test_version:
         slot_uri: ''
         range: string
         comments: []
@@ -2775,7 +2779,8 @@ slots:
         slot_uri: ''
         range: GenePanelSizeEnum
         comments: []
-        in_subset: []
+        in_subset:
+        - rms_v2.0
         annotations: {}
     genomic_source_class:
         slot_uri: ''
@@ -2828,12 +2833,21 @@ slots:
     alteration:
         slot_uri: ncit:C3910
         range: AlterationEnum
-        comments: []
+        comments:
+        - '(aml_v2.0) ConsortiumNote: If multiple molecular abnormalities, include
+            one observation per molecular abnormality.'
+        - '(nbl_v2.0) ConsortiumNote: If multiple molecular abnormalities, include
+            one observation per molecular abnormality.'
         in_subset:
         - pre_v1.0
         - cns_v1.2
         - ews_v2.0
         - rb_v1.2
+        - aml_v2.0
+        - gct_v2.0
+        - nbl_v2.0
+        - nrsts_v2.0
+        - rms_v2.0
         annotations:
             tier_priority: rb_v1.2
         exact_mappings:
@@ -2886,6 +2900,10 @@ slots:
         - ews_v2.0
         - fa_v1.0
         - rb_v1.2
+        - aml_v2.0
+        - gct_v2.0
+        - nbl_v2.0
+        - rms_v2.0
         annotations:
             tier_optional: rb_v1.2
         exact_mappings:
@@ -2894,9 +2912,14 @@ slots:
         slot_uri: ncit:C171253
         range: string
         comments: []
-        in_subset: []
+        in_subset:
+        - aml_v2.0
+        - ews_v2.0
+        - gct_v2.0
+        - nbl_v2.0
+        - rms_v2.0
         annotations: {}
-    hgvs_accession:
+    hgvs_genomic_transcript:
         slot_uri: ''
         range: string
         comments: []
@@ -2919,6 +2942,7 @@ slots:
         - ews_v2.0
         - fa_v1.0
         - rb_v1.2
+        - aml_v2.0
         annotations:
             tier_priority: rb_v1.2
     hgvs_protein:
@@ -2931,6 +2955,8 @@ slots:
         - ews_v2.0
         - fa_v1.0
         - rb_v1.2
+        - aml_v2.0
+        - nbl_v2.0
         annotations:
             tier_optional: rb_v1.2
     alteration_type:
@@ -2943,6 +2969,10 @@ slots:
         - ews_v2.0
         - fa_v1.0
         - rb_v1.2
+        - aml_v2.0
+        - gct_v2.0
+        - nbl_v2.0
+        - rms_v2.0
         annotations:
             tier_optional: rb_v1.2
         narrow_mappings:
@@ -3105,19 +3135,23 @@ slots:
         slot_uri: ncit:C177370
         range: decimal
         comments: []
-        in_subset: []
+        in_subset:
+        - gct_v2.0
         annotations: {}
     independent_aberrations:
         slot_uri: ncit:C173279
         range: decimal
         comments: []
-        in_subset: []
+        in_subset:
+        - aml_v2.0
+        - gct_v2.0
         annotations: {}
     cells_in_metaphase:
         slot_uri: ncit:C168918
         range: decimal
         comments: []
-        in_subset: []
+        in_subset:
+        - aml_v2.0
         annotations: {}
     allele_count:
         slot_uri: ''
@@ -3238,7 +3272,8 @@ slots:
         slot_uri: ncit:C138982
         range: MitoticRateEnum
         comments: []
-        in_subset: []
+        in_subset:
+        - nrsts_v2.0
         annotations: {}
     alt_status:
         slot_uri: ''
@@ -5252,8 +5287,6 @@ slots:
         - gct_v2.0
         - rb_v1.0
         annotations: {}
-        exact_mappings:
-        - skos:exactMatch [EWS].[v1.0].[Molecular Analysis].[MOLECULAR_ANALYSIS_METHOD]
     genetic_analysis_status:
         slot_uri: ncit:C173596
         range: GeneticAnalysisStatusEnum
@@ -5520,14 +5553,7 @@ slots:
         - pre_v1.0
         - fa_v1.0
         annotations: {}
-    alteration_category:
-        slot_uri: ''
-        range: AlterationCategoryEnum
-        comments: []
-        in_subset:
-        - pre_v1.0
-        annotations: {}
-    chromosomal_region:
+    cytoband:
         slot_uri: ncit:C13202
         range: string
         comments: []
@@ -6445,21 +6471,14 @@ slots:
         in_subset:
         - fa_v1.0
         annotations: {}
-    source_lab:
-        slot_uri: ''
-        range: SourceLabEnum
-        comments: []
-        in_subset:
-        - fa_v1.0
-        annotations: {}
-    reference_version:
+    reference_genome:
         slot_uri: ncit:C164815
         range: string
         comments: []
         in_subset:
         - fa_v1.0
         annotations: {}
-    reference_accession:
+    reference_genome_accession:
         slot_uri: ''
         range: string
         comments: []
@@ -7189,13 +7208,6 @@ slots:
         in_subset:
         - nrsts_v2.0
         annotations: {}
-    molecular_abnormality_other:
-        slot_uri: ''
-        range: string
-        comments: []
-        in_subset:
-        - nrsts_v2.0
-        annotations: {}
     age_at_rt:
         slot_uri: ''
         range: decimal
@@ -7759,16 +7771,23 @@ slots:
         - rb_v1.2
         annotations:
             tier_priority: rb_v1.2
-    anaplasia:
+    anaplasia_status:
         slot_uri: ''
-        range: AnaplasiaEnum
+        range: YesNoEnum
         comments: []
         in_subset:
         - rms_v2.0
         annotations: {}
-    anaplasia_extent:
+    anaplasia_type:
         slot_uri: ''
-        range: AnaplasiaExtentEnum
+        range: AnaplasiaTypeEnum
+        comments: []
+        in_subset:
+        - rms_v2.0
+        annotations: {}
+    anaplasia_pct_numeric:
+        slot_uri: ''
+        range: decimal
         comments: []
         in_subset:
         - rms_v2.0
@@ -18890,126 +18909,7 @@ enums:
                 - gct_v2.0
                 - hl_v2.0
                 - npc_v1.0
-                - os_v2.0           
-    DiagnosisMethodEnum:
-        in_subset:
-        - cns_v1.2
-        permissible_values:
-            Array CGH:
-                meaning: ncit:C18084
-                comments: []
-                in_subset:
-                - pre_v1.0
-                - cns_v1.2
-            DNA Methylation Array:
-                meaning: ncit:C165222
-                comments: []
-                in_subset:
-                - cns_v1.2
-            Fluorescence In Situ Hybridization:
-                meaning: ncit:C17563
-                comments: []
-                in_subset:
-                - cns_v1.2
-            Immunohistochemistry:
-                meaning: ncit:C23020
-                comments: []
-                in_subset:
-                - cns_v1.2
-            Methylation:
-                meaning: ncit:C17961
-                comments: []
-                in_subset:
-                - cns_v1.2
-            Nanostring:
-                meaning: ''
-                comments: []
-                in_subset:
-                - cns_v1.2
-            Sequencing, NOS:
-                meaning: ncit:C101293
-                comments: []
-                in_subset:
-                - cns_v1.2
-            Sequencing, Targeted DNA:
-                meaning: ''
-                comments: []
-                in_subset:
-                - cns_v1.2
-            Sequencing, Targeted RNA:
-                meaning: ''
-                comments: []
-                in_subset:
-                - cns_v1.2
-            Sequencing, Total RNA:
-                meaning: ncit:C124261
-                comments: []
-                in_subset:
-                - cns_v1.2
-            Sequencing, Whole Exome:
-                meaning: ncit:C101295
-                comments: []
-                in_subset:
-                - cns_v1.2
-            Sequencing, Whole Genome:
-                meaning: ncit:C101294
-                comments: []
-                in_subset:
-                - cns_v1.2
-            Single Gene DNA:
-                meaning: ''
-                comments: []
-                in_subset:
-                - cns_v1.2
-            SNP Array:
-                meaning: ncit:C116151
-                comments: []
-                in_subset:
-                - cns_v1.2
-    MrdMethodEnum:
-        in_subset:
-        - aml_v2.0
-        permissible_values:
-            Flow Cytometry, Different-From-Normal:
-                meaning: ncit:C168956
-                comments: []
-                in_subset:
-                - aml_v2.0
-            Flow Cytometry, Leukemia-Associated Immunophenotypes:
-                meaning: ncit:C168812
-                comments: []
-                in_subset:
-                - aml_v2.0
-            Flow Cytometry, NOS:
-                meaning: ncit:C16585
-                comments: []
-                in_subset:
-                - aml_v2.0
-            Molecular Real-time Quantitative PCR:
-                meaning: ncit:C51962
-                comments: []
-                in_subset:
-                - aml_v2.0
-            Next Generation Sequencing:
-                meaning: ncit:C101293
-                comments: []
-                in_subset:
-                - aml_v2.0
-            Other:
-                meaning: ncit:C17649
-                comments: []
-                in_subset:
-                - aml_v2.0
-            Unknown:
-                meaning: ncit:C17998
-                comments: []
-                in_subset:
-                - aml_v2.0
-            Not Reported:
-                meaning: ncit:C43234
-                comments: []
-                in_subset:
-                - aml_v2.0
+                - os_v2.0
     LaboratoryTestMethodEnum:
         in_subset:
         - aml_v2.0
@@ -19089,6 +18989,7 @@ enums:
             - gct_v2.0
             - rb_v1.0
         permissible_values:
+
             # Cytogenetics
             Cytogenetics, NOS:
                 meaning: ncit:C16487
@@ -19146,6 +19047,7 @@ enums:
                 comments: []
                 in_subset:
                     - pre_v1.0
+
             # Sequencing — Sanger
             Sequencing, Sanger, NOS:
                 meaning: ''
@@ -19165,6 +19067,7 @@ enums:
                 in_subset:
                     - aml_v2.0
                     - pre_v1.0
+
             # Sequencing — NGS (short-read & RNA)
             Sequencing, NGS, NOS:
                 meaning: ncit:C101293
@@ -19301,10 +19204,11 @@ enums:
                 comments: []
                 in_subset:
                     - aml_v2.0
-                    - aml_v2.0
                     - ews_v2.0
                     - fa_v1.0
                     - gct_v2.0
+
+
     ResultEnum:
         in_subset:
         - ews_v2.0
@@ -19410,7 +19314,8 @@ enums:
                 in_subset:
                 - gct_v2.0
     GenePanelSizeEnum:
-        in_subset: []
+        in_subset:
+        - rms_v2.0
         permissible_values:
             <5 Genes:
                 meaning: ''
@@ -39996,6 +39901,7 @@ enums:
                 - hl_v2.0
                 - lt_v1.0
                 - rb_v1.2
+    
     GeneticAnalysisStatusEnum:
         in_subset:
         - pre_v1.0
