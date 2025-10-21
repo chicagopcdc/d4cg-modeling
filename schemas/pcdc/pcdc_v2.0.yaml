@@ -573,13 +573,6 @@ classes:
         - disease_site_assessment_submitter_id
         - review_source
         - stage_category
-        - stage_system
-        - stage_system_version
-        - stage
-        - stage_text
-        - ann_arbor_mod_ab
-        - ann_arbor_mod_e
-        - ann_arbor_mod_s
         - tnm_finding
         - tnm_tumor_t
         - tnm_node_n
@@ -587,6 +580,13 @@ classes:
         - h_stage
         - group_system
         - group
+        - stage_system
+        - stage_system_version
+        - stage
+        - stage_text
+        - ann_arbor_mod_ab
+        - ann_arbor_mod_e
+        - ann_arbor_mod_s
         - pretext_mod_v
         - pretext_mod_p
         - pretext_mod_e
@@ -29424,62 +29424,62 @@ enums:
         in_subset:
         - npc_v1.0
         permissible_values:
-            SIOP Boston, Grade 0:
+            SIOP Boston >> Grade 0:
                 meaning: ''
                 comments: []
                 in_subset:
                 - npc_v1.0
-            SIOP Boston, Grade 1:
+            SIOP Boston >> Grade 1:
                 meaning: ''
                 comments: []
                 in_subset:
                 - npc_v1.0
-            SIOP Boston, Grade 2:
+            SIOP Boston >> Grade 2:
                 meaning: ''
                 comments: []
                 in_subset:
                 - npc_v1.0
-            SIOP Boston, Grade 3:
+            SIOP Boston >> Grade 3:
                 meaning: ''
                 comments: []
                 in_subset:
                 - npc_v1.0
-            SIOP Boston, Grade 4:
+            SIOP Boston >> Grade 4:
                 meaning: ''
                 comments: []
                 in_subset:
                 - npc_v1.0
-            Chang, Grade 0:
+            Chang >> Grade 0:
                 meaning: ''
                 comments: []
                 in_subset:
                 - npc_v1.0
-            Chang, Grade 1a:
+            Chang >> Grade 1a:
                 meaning: ''
                 comments: []
                 in_subset:
                 - npc_v1.0
-            Chang, Grade 1b:
+            Chang >> Grade 1b:
                 meaning: ''
                 comments: []
                 in_subset:
                 - npc_v1.0
-            Chang, Grade 2a:
+            Chang >> Grade 2a:
                 meaning: ''
                 comments: []
                 in_subset:
                 - npc_v1.0
-            Chang, Grade 2b:
+            Chang >> Grade 2b:
                 meaning: ''
                 comments: []
                 in_subset:
                 - npc_v1.0
-            Chang, Grade 3:
+            Chang >> Grade 3:
                 meaning: ''
                 comments: []
                 in_subset:
                 - npc_v1.0
-            Chang, Grade 4:
+            Chang >> Grade 4:
                 meaning: ''
                 comments: []
                 in_subset:
@@ -29557,106 +29557,94 @@ enums:
         - nrsts_v2.0
         - os_v2.0
         permissible_values:
-            Norris Immature Teratoma Grading System, Grade 1:
+            Norris Immature Teratoma Grading System >> Grade 1:
                 meaning: ncit:C28077
                 comments:
                 - '(gct_v2.0) ConsortiumNote: Note: Only associated with Immature
                     Teratoma.'
                 in_subset:
                 - gct_v2.0
-            Norris Immature Teratoma Grading System, Grade 2:
+            Norris Immature Teratoma Grading System >> Grade 2:
                 meaning: ncit:C28078
                 comments: []
                 in_subset:
                 - gct_v2.0
-            Norris Immature Teratoma Grading System, Grade 3:
+            Norris Immature Teratoma Grading System >> Grade 3:
                 meaning: ncit:C28079
                 comments: []
                 in_subset:
                 - gct_v2.0
-            Differentiating:
+            INPC >> Differentiating:
                 meaning: ''
                 comments: []
                 in_subset:
                 - nbl_v2.0
-            FNCLCC, Grade 1:
-                meaning: ''
-                comments: []
-                in_subset:
-                - nrsts_v2.0
-            FNCLCC, Grade 2:
-                meaning: ''
-                comments: []
-                in_subset:
-                - nrsts_v2.0
-            FNCLCC, Grade 3:
-                meaning: ''
-                comments: []
-                in_subset:
-                - nrsts_v2.0
-            FNCLCC, Grade GX:
-                meaning: ''
-                comments: []
-                in_subset:
-                - nrsts_v2.0
-            Undifferentiated or Poorly Differentiated:
+            INPC >> Undifferentiated or Poorly Differentiated:
                 meaning: ''
                 comments: []
                 in_subset:
                 - nbl_v2.0
-            WHO CNS, Grade 1:
+            FNCLCC >> Grade 1:
+                meaning: ''
+                comments: []
+                in_subset:
+                - nrsts_v2.0
+            FNCLCC >> Grade 2:
+                meaning: ''
+                comments: []
+                in_subset:
+                - nrsts_v2.0
+            FNCLCC >> Grade 3:
+                meaning: ''
+                comments: []
+                in_subset:
+                - nrsts_v2.0
+            FNCLCC >> Grade GX:
+                meaning: ''
+                comments: []
+                in_subset:
+                - nrsts_v2.0
+            WHO CNS >> Grade 1:
                 meaning: ncit:C62394
                 comments:
                 - '(cns_v1.2) ConsortiumNote: DIAGNOSIS_CATEGORY = ''Low-Grade Glioma'''
                 in_subset:
                 - cns_v1.2
-            WHO CNS, Grade 2:
+            WHO CNS >> Grade 2:
                 meaning: ncit:C62395
                 comments:
                 - '(cns_v1.2) ConsortiumNote: DIAGNOSIS_CATEGORY = ''Low-Grade Glioma'''
                 in_subset:
                 - cns_v1.2
-            WHO CNS, Grade 3:
+            WHO CNS >> Grade 3:
                 meaning: ncit:C62396
                 comments:
                 - '(cns_v1.2) ConsortiumNote: DIAGNOSIS_CATEGORY = ''High-Grade Glioma'''
                 in_subset:
                 - cns_v1.2
-            WHO CNS, Grade 4:
+            WHO CNS >> Grade 4:
                 meaning: ncit:C62397
                 comments:
                 - '(cns_v1.2) ConsortiumNote: DIAGNOSIS_CATEGORY = ''High-Grade Glioma'''
                 in_subset:
                 - cns_v1.2
-            System NOS, Grade 1:
-                meaning: ncit:C28077
-                comments: []
-                in_subset:
-                - fa_v1.0
-            System NOS, Grade 2:
-                meaning: ncit:C28078
-                comments: []
-                in_subset:
-                - fa_v1.0
-            System NOS, Grade 3:
-                meaning: ncit:C28079
-                comments: []
-                in_subset:
-                - fa_v1.0
-            Grade 1:
+            System NOS >> Grade 1:
                 meaning: ncit:C41338
                 comments: []
                 in_subset:
+                - fa_v1.0
                 - os_v2.0
-            Grade 2:
+            System NOS >> Grade 2:
                 meaning: ncit:C41339
                 comments: []
                 in_subset:
+                - fa_v1.0
                 - os_v2.0
-            Grade 3:
+            System NOS >> Grade 3:
                 meaning: ncit:C41340
                 comments: []
                 in_subset:
+                - fa_v1.0
                 - os_v2.0
             Unknown:
                 meaning: ncit:C17998
@@ -29707,206 +29695,6 @@ enums:
         - nbl_v2.0
         - rb_v1.2
         permissible_values:
-            AJCC, Stage 0:
-                meaning: ncit:C4523
-                comments: []
-                in_subset:
-                - gct_v2.0
-            AJCC, Stage I:
-                meaning: ncit:C7901
-                comments: []
-                in_subset:
-                - gct_v2.0
-            AJCC, Stage IA:
-                meaning: ncit:C6361
-                comments: []
-                in_subset:
-                - gct_v2.0
-            AJCC, Stage IB:
-                meaning: ncit:C6362
-                comments: []
-                in_subset:
-                - gct_v2.0
-            AJCC, Stage II:
-                meaning: ncit:C9073
-                comments: []
-                in_subset:
-                - gct_v2.0
-            AJCC, Stage IIA:
-                meaning: ncit:C6364
-                comments: []
-                in_subset:
-                - gct_v2.0
-            AJCC, Stage IIB:
-                meaning: ncit:C6365
-                comments: []
-                in_subset:
-                - gct_v2.0
-            AJCC, Stage IIC:
-                meaning: ncit:C6366
-                comments: []
-                in_subset:
-                - gct_v2.0
-            AJCC, Stage III:
-                meaning: ncit:C9074
-                comments: []
-                in_subset:
-                - gct_v2.0
-            AJCC, Stage IIIA:
-                meaning: ncit:C6369
-                comments: []
-                in_subset:
-                - gct_v2.0
-            AJCC, Stage IIIB:
-                meaning: ncit:C6368
-                comments: []
-                in_subset:
-                - gct_v2.0
-            AJCC, Stage IIIC:
-                meaning: ncit:C6367
-                comments: []
-                in_subset:
-                - gct_v2.0
-            AJCC, Stage IS:
-                meaning: ncit:C6363
-                comments: []
-                in_subset:
-                - gct_v2.0
-            Ann Arbor, Stage I:
-                meaning: ncit:C8071
-                comments: []
-                in_subset:
-                - hl_v2.0
-            Ann Arbor, Stage II:
-                meaning: ncit:C8116
-                comments: []
-                in_subset:
-                - hl_v2.0
-            Ann Arbor, Stage III:
-                meaning: ncit:C8129
-                comments: []
-                in_subset:
-                - hl_v2.0
-            Ann Arbor, Stage IV:
-                meaning: ncit:C8142
-                comments: []
-                in_subset:
-                - hl_v2.0
-            COG, Stage I:
-                meaning: ncit:C27966
-                comments: []
-                in_subset:
-                - gct_v2.0
-            COG, Stage II:
-                meaning: ncit:C28054
-                comments: []
-                in_subset:
-                - gct_v2.0
-            COG, Stage III:
-                meaning: ncit:C27970
-                comments: []
-                in_subset:
-                - gct_v2.0
-            COG, Stage IV:
-                meaning: ncit:C27971
-                comments: []
-                in_subset:
-                - gct_v2.0
-            EVANS, Stage I:
-                meaning: ncit:C27966
-                comments: []
-                in_subset:
-                - nbl_v2.0
-            EVANS, Stage II:
-                meaning: ncit:C28054
-                comments: []
-                in_subset:
-                - nbl_v2.0
-            EVANS, Stage III:
-                meaning: ncit:C27970
-                comments: []
-                in_subset:
-                - nbl_v2.0
-            EVANS, Stage IV:
-                meaning: ncit:C27971
-                comments: []
-                in_subset:
-                - nbl_v2.0
-            EVANS, Stage IVs:
-                meaning: ''
-                comments: []
-                in_subset:
-                - nbl_v2.0
-            FIGO, Stage I:
-                meaning: ncit:C96244
-                comments: []
-                in_subset:
-                - gct_v2.0
-            FIGO, Stage II:
-                meaning: ncit:C96252
-                comments: []
-                in_subset:
-                - gct_v2.0
-            FIGO, Stage III:
-                meaning: ncit:C96255
-                comments: []
-                in_subset:
-                - gct_v2.0
-            FIGO, Stage IV:
-                meaning: ncit:C96261
-                comments: []
-                in_subset:
-                - gct_v2.0
-            INRGSS, Stage L1:
-                meaning: ''
-                comments: []
-                in_subset:
-                - nbl_v2.0
-            INRGSS, Stage L2:
-                meaning: ''
-                comments: []
-                in_subset:
-                - nbl_v2.0
-            INRGSS, Stage M:
-                meaning: ''
-                comments: []
-                in_subset:
-                - nbl_v2.0
-            INRGSS, Stage MS:
-                meaning: ''
-                comments: []
-                in_subset:
-                - nbl_v2.0
-            INSS, Stage 1:
-                meaning: ''
-                comments: []
-                in_subset:
-                - nbl_v2.0
-            INSS, Stage 2a:
-                meaning: ''
-                comments: []
-                in_subset:
-                - nbl_v2.0
-            INSS, Stage 2b:
-                meaning: ''
-                comments: []
-                in_subset:
-                - nbl_v2.0
-            INSS, Stage 3:
-                meaning: ''
-                comments: []
-                in_subset:
-                - nbl_v2.0
-            INSS, Stage 4:
-                meaning: ''
-                comments: []
-                in_subset:
-                - nbl_v2.0
-            INSS, Stage 4s:
-                meaning: ''
-                comments: []
-                in_subset:
-                - nbl_v2.0
             Stage 0:
                 meaning: ''
                 comments: []
@@ -30089,146 +29877,132 @@ enums:
                 comments: []
                 in_subset:
                 - pre_v1.0
-            M0:
-                meaning: ncit:C48699
-                comments: []
-                in_subset:
-                - cns_v1.2
-            M0 / M1:
-                meaning: ''
-                comments: []
-                in_subset:
-                - cns_v1.2
-            M1:
-                meaning: ncit:C48700
-                comments: []
-                in_subset:
-                - cns_v1.2
-            M2:
-                meaning: ''
-                comments: []
-                in_subset:
-                - cns_v1.2
-            M3:
-                meaning: ''
-                comments: []
-                in_subset:
-                - cns_v1.2
-            M4:
-                meaning: ''
-                comments: []
-                in_subset:
-                - cns_v1.2
-            M+:
-                meaning: ''
-                comments: []
-                in_subset:
-                - cns_v1.2
             Modified Chang Staging >> M0:
                 meaning: ncit:C48699
                 comments: []
                 in_subset:
                 - fa_v1.0
+                - cns_v1.2
             Modified Chang Staging >> M0 / M1:
                 meaning: ''
                 comments: []
                 in_subset:
                 - fa_v1.0
+                - cns_v1.2
             Modified Chang Staging >> M1:
                 meaning: ncit:C48700
                 comments: []
                 in_subset:
                 - fa_v1.0
+                - cns_v1.2
             Modified Chang Staging >> M2:
                 meaning: ''
                 comments: []
                 in_subset:
                 - fa_v1.0
+                - cns_v1.2
             Modified Chang Staging >> M3:
                 meaning: ''
                 comments: []
                 in_subset:
                 - fa_v1.0
+                - cns_v1.2
             Modified Chang Staging >> M4:
                 meaning: ''
                 comments: []
                 in_subset:
                 - fa_v1.0
+                - cns_v1.2
             Modified Chang Staging >> M+:
                 meaning: ''
                 comments: []
                 in_subset:
                 - fa_v1.0
+                - cns_v1.2
             INSS >> Stage 1:
                 meaning: ''
                 comments: []
                 in_subset:
                 - fa_v1.0
-            INSS >> Stage 2A:
+                - nbl_v2.0
+            INSS >> Stage 2a:
                 meaning: ''
                 comments: []
                 in_subset:
                 - fa_v1.0
-            INSS >> Stage 2B:
+                - nbl_v2.0
+            INSS >> Stage 2b:
                 meaning: ''
                 comments: []
                 in_subset:
                 - fa_v1.0
+                - nbl_v2.0
             INSS >> Stage 3:
                 meaning: ''
                 comments: []
                 in_subset:
                 - fa_v1.0
+                - nbl_v2.0
             INSS >> Stage 4:
                 meaning: ''
                 comments: []
                 in_subset:
                 - fa_v1.0
-            INSS >> Stage 4S:
+                - nbl_v2.0
+            INSS >> Stage 4s:
                 meaning: ''
                 comments: []
                 in_subset:
                 - fa_v1.0
+                - nbl_v2.0
             FIGO >> Stage 1:
                 meaning: ncit:C96244
                 comments: []
                 in_subset:
                 - fa_v1.0
+                - gct_v2.0
             FIGO >> Stage 2:
                 meaning: ncit:C96252
                 comments: []
                 in_subset:
                 - fa_v1.0
+                - gct_v2.0
             FIGO >> Stage 3:
                 meaning: ncit:C96255
                 comments: []
                 in_subset:
                 - fa_v1.0
+                - gct_v2.0
             FIGO >> Stage 4:
                 meaning: ncit:C96261
                 comments: []
                 in_subset:
                 - fa_v1.0
+                - gct_v2.0
             COG >> Stage 1:
                 meaning: ncit:C27966
                 comments: []
                 in_subset:
                 - fa_v1.0
+                - gct_v2.0
             COG >> Stage 2:
                 meaning: ncit:C28054
                 comments: []
                 in_subset:
                 - fa_v1.0
+                - gct_v2.0
             COG >> Stage 3:
                 meaning: ncit:C27970
                 comments: []
                 in_subset:
                 - fa_v1.0
+                - gct_v2.0
             COG >> Stage 4:
                 meaning: ncit:C27971
                 comments: []
                 in_subset:
                 - fa_v1.0
+                - gct_v2.0
             COG >> Stage 4S:
                 meaning: ''
                 comments: []
@@ -30239,206 +30013,223 @@ enums:
                 comments: []
                 in_subset:
                 - fa_v1.0
+                - gct_v2.0
+                - npc_v1.0
             AJCC >> Stage 1:
                 meaning: ncit:C7901
                 comments: []
                 in_subset:
                 - fa_v1.0
+                - gct_v2.0
+                - npc_v1.0
             AJCC >> Stage 1A:
                 meaning: ncit:C6361
                 comments: []
                 in_subset:
                 - fa_v1.0
+                - gct_v2.0
+                - npc_v1.0
             AJCC >> Stage 1B:
                 meaning: ncit:C6362
                 comments: []
                 in_subset:
                 - fa_v1.0
+                - gct_v2.0
+                - npc_v1.0
             AJCC >> Stage 1s:
                 meaning: ncit:C6363
                 comments: []
                 in_subset:
                 - fa_v1.0
+                - gct_v2.0
+                - npc_v1.0
             AJCC >> Stage 2:
                 meaning: ncit:C9073
                 comments: []
                 in_subset:
                 - fa_v1.0
+                - gct_v2.0
+                - npc_v1.0
             AJCC >> Stage 2A:
                 meaning: ncit:C6364
                 comments: []
                 in_subset:
                 - fa_v1.0
+                - gct_v2.0
+                - npc_v1.0
             AJCC >> Stage 2B:
                 meaning: ncit:C6365
                 comments: []
                 in_subset:
                 - fa_v1.0
+                - gct_v2.0
+                - npc_v1.0
             AJCC >> Stage 2C:
                 meaning: ncit:C6366
                 comments: []
                 in_subset:
                 - fa_v1.0
+                - gct_v2.0
+                - npc_v1.0
             AJCC >> Stage 3:
                 meaning: ncit:C9074
                 comments: []
                 in_subset:
                 - fa_v1.0
+                - gct_v2.0
+                - npc_v1.0
             AJCC >> Stage 3A:
                 meaning: ncit:C6369
                 comments: []
                 in_subset:
                 - fa_v1.0
+                - gct_v2.0
+                - npc_v1.0
             AJCC >> Stage 3B:
                 meaning: ncit:C6368
                 comments: []
                 in_subset:
                 - fa_v1.0
+                - gct_v2.0
+                - npc_v1.0
             AJCC >> Stage 3C:
                 meaning: ncit:C6367
                 comments: []
                 in_subset:
                 - fa_v1.0
+                - gct_v2.0
+                - npc_v1.0
             Evans >> Stage 1:
                 meaning: ''
                 comments: []
                 in_subset:
                 - fa_v1.0
+                - nbl_v2.0
             Evans >> Stage 2:
                 meaning: ''
                 comments: []
                 in_subset:
                 - fa_v1.0
+                - nbl_v2.0
             Evans >> Stage 3:
                 meaning: ''
                 comments: []
                 in_subset:
                 - fa_v1.0
+                - nbl_v2.0
             Evans >> Stage 4:
                 meaning: ''
                 comments: []
                 in_subset:
                 - fa_v1.0
+                - nbl_v2.0
+            Evans >> Stage 4s:
+                meaning: ''
+                comments: []
+                in_subset:
+                - nbl_v2.0
             INRGSS >> Stage L1:
                 meaning: ''
                 comments: []
                 in_subset:
                 - fa_v1.0
+                - nbl_v2.0
             INRGSS >> Stage L2:
                 meaning: ''
                 comments: []
                 in_subset:
                 - fa_v1.0
+                - nbl_v2.0
             INRGSS >> Stage M:
                 meaning: ''
                 comments: []
                 in_subset:
                 - fa_v1.0
+                - nbl_v2.0
             INRGSS >> Stage Ms:
                 meaning: ''
                 comments: []
                 in_subset:
                 - fa_v1.0
+                - nbl_v2.0
             IRSS >> Group 0:
                 meaning: ''
                 comments: []
                 in_subset:
                 - fa_v1.0
+                - rb_v1.2
             IRSS >> Group 1a:
                 meaning: ''
                 comments: []
                 in_subset:
                 - fa_v1.0
+                - rb_v1.2
             IRSS >> Group 1b:
                 meaning: ''
                 comments: []
                 in_subset:
                 - fa_v1.0
+                - rb_v1.2
             IRSS >> Group 2a:
                 meaning: ''
                 comments: []
                 in_subset:
                 - fa_v1.0
+                - rb_v1.2
             IRSS >> Group 2b:
                 meaning: ''
                 comments: []
                 in_subset:
                 - fa_v1.0
+                - rb_v1.2
             IRSS >> Group 3a:
                 meaning: ''
                 comments: []
                 in_subset:
                 - fa_v1.0
+                - rb_v1.2
             IRSS >> Group 3b:
                 meaning: ''
                 comments: []
                 in_subset:
                 - fa_v1.0
+                - rb_v1.2
             IRSS >> Group 4a:
                 meaning: ''
                 comments: []
                 in_subset:
                 - fa_v1.0
+                - rb_v1.2
             IRSS >> Group 4b:
                 meaning: ''
                 comments: []
                 in_subset:
                 - fa_v1.0
+                - rb_v1.2
             Ann Arbor >> Stage 1:
                 meaning: ncit:C8071
                 comments: []
                 in_subset:
                 - fa_v1.0
+                - hl_v2.0
             Ann Arbor >> Stage 2:
                 meaning: ncit:C8116
                 comments: []
                 in_subset:
                 - fa_v1.0
+                - hl_v2.0
             Ann Arbor >> Stage 3:
                 meaning: ncit:C8129
                 comments: []
                 in_subset:
                 - fa_v1.0
+                - hl_v2.0
             Ann Arbor >> Stage 4:
                 meaning: ncit:C8142
                 comments: []
                 in_subset:
                 - fa_v1.0
-            INSS >> Stage 2a:
-                meaning: ''
-                comments: []
-                in_subset:
-                - fa_v1.0
-            INSS >> Stage 2b:
-                meaning: ''
-                comments: []
-                in_subset:
-                - fa_v1.0
-            INSS >> Stage 4s:
-                meaning: ''
-                comments: []
-                in_subset:
-                - fa_v1.0
-            Evans >> Stage I:
-                meaning: ''
-                comments: []
-                in_subset:
-                - fa_v1.0
-            Evans >> Stage II:
-                meaning: ''
-                comments: []
-                in_subset:
-                - fa_v1.0
-            Evans >> Stage III:
-                meaning: ''
-                comments: []
-                in_subset:
-                - fa_v1.0
-            Evans >> Stage IV:
-                meaning: ''
-                comments: []
-                in_subset:
-                - fa_v1.0
+                - hl_v2.0
             IRS >> Stage 1:
                 meaning: ''
                 comments: []
@@ -30494,26 +30285,6 @@ enums:
                 comments: []
                 in_subset:
                 - fa_v1.0
-            System NOS >> L1:
-                meaning: ''
-                comments: []
-                in_subset:
-                - fa_v1.0
-            System NOS >> L2:
-                meaning: ''
-                comments: []
-                in_subset:
-                - fa_v1.0
-            System NOS >> M:
-                meaning: ''
-                comments: []
-                in_subset:
-                - fa_v1.0
-            System NOS >> MS:
-                meaning: ''
-                comments: []
-                in_subset:
-                - fa_v1.0
             Pretext Group I:
                 meaning: ''
                 comments:
@@ -30538,71 +30309,6 @@ enums:
                 - '(lt_v1.0) ConsortiumNote: STAGE_SYSTEM = ''PRETEXT Staging System'''
                 in_subset:
                 - lt_v1.0
-            AJCC>>Stage I:
-                meaning: ncit:C27966
-                comments: []
-                in_subset:
-                - npc_v1.0
-            AJCC>>Stage II:
-                meaning: ncit:C28054
-                comments: []
-                in_subset:
-                - npc_v1.0
-            AJCC>>Stage IIA:
-                meaning: ncit:C6364
-                comments: []
-                in_subset:
-                - npc_v1.0
-            AJCC>>Stage IIB:
-                meaning: ncit:C6365
-                comments: []
-                in_subset:
-                - npc_v1.0
-            AJCC>>Stage III:
-                meaning: ncit:C27970
-                comments: []
-                in_subset:
-                - npc_v1.0
-            AJCC>>Stage IV:
-                meaning: ncit:C27971
-                comments: []
-                in_subset:
-                - npc_v1.0
-            AJCC>>Stage IVA:
-                meaning: ''
-                comments: []
-                in_subset:
-                - npc_v1.0
-            AJCC>>Stage IVB:
-                meaning: ''
-                comments: []
-                in_subset:
-                - npc_v1.0
-            AJCC>>Stage IVC:
-                meaning: ''
-                comments: []
-                in_subset:
-                - npc_v1.0
-            Stage 3a:
-                meaning: ''
-                comments: []
-                in_subset:
-                - rb_v1.2
-            Stage 3b:
-                meaning: ''
-                comments: []
-                in_subset:
-                - rb_v1.2
-            Stage 4a:
-                meaning: ''
-                comments: []
-                in_subset:
-                - rb_v1.2
-            Stage 4b:
-                meaning: ''
-                comments: []
-                in_subset:
-                - rb_v1.2
             Unknown:
                 meaning: ncit:C17998
                 comments: []
@@ -45472,31 +45178,31 @@ enums:
                 - gct_v2.0
                 - ews_v2.0
                 - aml_v2.0
-            CTCAE, Grade 1:
+            CTCAE >> Grade 1:
                 meaning: ''
                 comments: []
                 in_subset:
                 - ews_v2.0
                 - rb_v1.2
-            CTCAE, Grade 2:
+            CTCAE >> Grade 2:
                 meaning: ''
                 comments: []
                 in_subset:
                 - ews_v2.0
                 - rb_v1.2
-            CTCAE, Grade 3:
+            CTCAE >> Grade 3:
                 meaning: ''
                 comments: []
                 in_subset:
                 - ews_v2.0
                 - rb_v1.2
-            CTCAE, Grade 4:
+            CTCAE >> Grade 4:
                 meaning: ''
                 comments: []
                 in_subset:
                 - ews_v2.0
                 - rb_v1.2
-            CTCAE, Grade 5:
+            CTCAE >> Grade 5:
                 meaning: ''
                 comments: []
                 in_subset:
