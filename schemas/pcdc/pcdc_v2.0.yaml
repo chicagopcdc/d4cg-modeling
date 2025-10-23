@@ -348,8 +348,6 @@ classes:
         - laboratory_test_method
         - laboratory_test_specimen
         - laboratory_test_specimen_other
-        - collection_time
-        - result
         - result_text
         - result_numeric
         - result_unit
@@ -358,6 +356,7 @@ classes:
         - threshold_level
         - threshold_high
         - threshold_low
+        - collection_time
         - pmid_ref
         - breakage_source_lab
         comments:
@@ -380,7 +379,6 @@ classes:
         - age_at_genetic_analysis
         - year_at_genetic_analysis
         - time_period_submitter_id
-        - course_timepoint
         - source_lab
         - test_name
         - test_version
@@ -476,7 +474,6 @@ classes:
         - time_period_submitter_id
         - function_test
         - measurement_type
-        - result
         - result_text
         - result_numeric
         - result_unit
@@ -500,7 +497,6 @@ classes:
         - time_period_submitter_id
         - review_source
         - markers
-        - result
         - result_text
         - result_numeric
         - result_unit
@@ -616,18 +612,14 @@ classes:
         - tumor_submitter_id
         - primary_tumor_submitter_id
         - review_source
-        - status
-        - state
+        - tumor_state
         - detection_method
         - classification
+        - classification_status
         - site
         - site_other
         - laterality
         - e_extension_site
-        - longest_diam_dim1
-        - longest_diam_dim2
-        - longest_diam_dim3
-        - longest_diam_unit
         - diameter1
         - diameter1_unit
         - diameter1_axis
@@ -663,7 +655,6 @@ classes:
         - mri_sequence
         - tumor_presentation
         - tissue_type
-        - classification_status
         - multiplicity
         - tumor_volume
         - estimated_volume
@@ -1070,7 +1061,7 @@ classes:
         - necrosis_pct
         - mri_sequence
         - neurological_status
-        - anaplasia_status
+        - anaplasia
         - anaplasia_type
         - anaplasia_pct_numeric
         comments:
@@ -2342,6 +2333,9 @@ slots:
             a single numeric value, and include the entire available data as a string,
             including units if applicable'
         - 'D4CGNote: modifier note'
+        - '(npc_v1.0) ConsortiumNote: ConditionalStatement: If ''RESULT_MODIFIER''
+            and ''RESULT_NUMERIC'' are null.'
+        - (ews_v2.0) skos:exactMatch [EWS].[v1.0].[Lab].[LAB_RESULT]
         in_subset:
         - aml_v2.0
         - pre_v1.0
@@ -2351,8 +2345,9 @@ slots:
         - gct_v2.0
         - hl_v2.0
         - npc_v1.0
+        - rb_v1.2
         annotations:
-            tier_priority: npc_v1.0
+            tier_priority: npc_v1.0,rb_v1.2
         exact_mappings:
         - (aml_v2.0) [aml_v1.7].[Vitals].[VITALS_RESULT] skos:exactMatch [aml_v2.0].[Vitals
             And Anthropometrics].[RESULT_TEXT]
@@ -2379,7 +2374,7 @@ slots:
         - '[hl_v1.0].[Immunohistochemistry].[IHC_RESULT] skos:exactMatch [hl_v2.0].[Immunohistochemistry].[RESULT_TEXT]'
     result_numeric:
         slot_uri: ncit:C185629
-        range: integer
+        range: decimal
         comments:
         - '(aml_v2.0) ConsortiumNote: Note: Only fill in this variable if the available
             data is a single numeric value.'
@@ -2655,26 +2650,6 @@ slots:
         in_subset:
         - cns_v1.2
         annotations: {}
-    result:
-        slot_uri: ncit:C36292
-        range: ResultEnum
-        comments:
-        - '(ews_v2.0) ConsortiumNote: Note: String result can include anything that
-            is not a numeric result, i.e. ''Positive'', ''Negative'', ''Present'',
-            ''Absent'', ''Yes'', ''No'', ''Elevated,'' ''Depressed'', ''Above threshold'',
-            ''Below threshold'', as well as bucketed categories, etc...'
-        - '(npc_v1.0) ConsortiumNote: ConditionalStatement: If ''RESULT_MODIFIER''
-            and ''RESULT_NUMERIC'' are null.'
-        in_subset:
-        - ews_v2.0
-        - fa_v1.0
-        - gct_v2.0
-        - npc_v1.0
-        - rb_v1.2
-        annotations:
-            tier_priority: npc_v1.0,rb_v1.2
-        exact_mappings:
-        - (ews_v2.0) skos:exactMatch [EWS].[v1.0].[Lab].[LAB_RESULT]
     traumatic_tap:
         slot_uri: ncit:C168879
         range: YesNoEnum
@@ -3229,12 +3204,6 @@ slots:
             Therapy].[CLASSIFICATION]'
         - '[rms_v1.0].[Biopsy/Surgical Procedures].[TUMOR_CLASSIFICATION] skos:exactMatch
             [rms_v2.0].[Biopsy And Surgical Procedures].[CLASSIFICATION]'
-    course_timepoint:
-        slot_uri: ''
-        range: CourseTimepointEnum
-        comments: []
-        in_subset: []
-        annotations: {}
     biological_analyte:
         slot_uri: ''
         range: BiologicalAnalyteEnum
@@ -3635,16 +3604,19 @@ slots:
         - rb_v1.2
         annotations:
             tier_priority: npc_v1.0,rb_v1.2
-    state:
+    tumor_state:
         slot_uri: ''
-        range: StateEnum
+        range: AbsentPresentEnum
         comments: []
         in_subset:
         - gct_v2.0
+        - nbl_v2.0
         annotations: {}
         exact_mappings:
         - (gct_v2.0) [gct_v1.2].[Tumor Assessment].[TUMOR_STATE] skos:exactMatch [gct_v2.0].[Disease
             Site Assessment].[STATE]
+        - (nbl_v2.0) [nbl_v1.1].[Tumor Assessment].[TUMOR_STATE] skos:exactMatch [nbl_v2.0].[Disease
+            Site Assessment].[STATUS]
     detection_method:
         slot_uri: ncit:C173262
         range: DetectionMethodEnum
@@ -3822,6 +3794,7 @@ slots:
         - os_v2.0
         - rb_v1.2
         - rms_v2.0
+        - pre_v1.0
         annotations:
             tier_priority: rb_v1.2
             tier_optional: npc_v1.0
@@ -3845,6 +3818,7 @@ slots:
         - os_v2.0
         - rb_v1.2
         - rms_v2.0
+        - pre_v1.0
         annotations:
             tier_priority: rb_v1.2
             tier_optional: npc_v1.0
@@ -3874,6 +3848,7 @@ slots:
         - os_v2.0
         - rb_v1.2
         - rms_v2.0
+        - pre_v1.0
         annotations:
             tier_priority: rb_v1.2
             tier_optional: npc_v1.0
@@ -3897,6 +3872,7 @@ slots:
         - os_v2.0
         - rb_v1.2
         - rms_v2.0
+        - pre_v1.0
         annotations:
             tier_priority: rb_v1.2
             tier_optional: npc_v1.0
@@ -3926,6 +3902,7 @@ slots:
         - os_v2.0
         - rb_v1.2
         - rms_v2.0
+        - pre_v1.0
         annotations:
             tier_priority: rb_v1.2
             tier_optional: npc_v1.0
@@ -3949,6 +3926,7 @@ slots:
         - os_v2.0
         - rb_v1.2
         - rms_v2.0
+        - pre_v1.0
         annotations:
             tier_priority: rb_v1.2
             tier_optional: npc_v1.0
@@ -5638,34 +5616,6 @@ slots:
         in_subset:
         - pre_v1.0
         annotations: {}
-    longest_diam_dim1:
-        slot_uri: ncit:C96684
-        range: decimal
-        comments: []
-        in_subset:
-        - pre_v1.0
-        annotations: {}
-    longest_diam_dim2:
-        slot_uri: ncit:C96684
-        range: decimal
-        comments: []
-        in_subset:
-        - pre_v1.0
-        annotations: {}
-    longest_diam_dim3:
-        slot_uri: ncit:C96684
-        range: decimal
-        comments: []
-        in_subset:
-        - pre_v1.0
-        annotations: {}
-    longest_diam_unit:
-        slot_uri: ''
-        range: LongestDiamUnitEnum
-        comments: []
-        in_subset:
-        - pre_v1.0
-        annotations: {}
     tumor_number:
         slot_uri: ''
         range: decimal
@@ -6582,7 +6532,7 @@ slots:
         annotations: {}
     association_status:
         slot_uri: ''
-        range: AssociationStatusEnum
+        range: AbsentPresentEnum
         comments: []
         in_subset:
         - fa_v1.0
@@ -7000,7 +6950,7 @@ slots:
             tier_priority: lt_v1.0,rb_v1.2
     pretext_mod_v:
         slot_uri: ''
-        range: PretextModVEnum
+        range: AbsentPresentEnum
         comments: []
         in_subset:
         - lt_v1.0
@@ -7008,7 +6958,7 @@ slots:
             tier_priority: lt_v1.0
     pretext_mod_p:
         slot_uri: ''
-        range: PretextModPEnum
+        range: AbsentPresentEnum
         comments: []
         in_subset:
         - lt_v1.0
@@ -7016,7 +6966,7 @@ slots:
             tier_priority: lt_v1.0
     pretext_mod_e:
         slot_uri: ''
-        range: PretextModEEnum
+        range: AbsentPresentEnum
         comments: []
         in_subset:
         - lt_v1.0
@@ -7024,7 +6974,7 @@ slots:
             tier_priority: lt_v1.0
     pretext_mod_m:
         slot_uri: ''
-        range: PretextModMEnum
+        range: AbsentPresentEnum
         comments: []
         in_subset:
         - lt_v1.0
@@ -7032,7 +6982,7 @@ slots:
             tier_priority: lt_v1.0
     pretext_mod_f:
         slot_uri: ''
-        range: PretextModFEnum
+        range: AbsentPresentEnum
         comments: []
         in_subset:
         - lt_v1.0
@@ -7040,7 +6990,7 @@ slots:
             tier_priority: lt_v1.0
     pretext_mod_r:
         slot_uri: ''
-        range: PretextModREnum
+        range: AbsentPresentEnum
         comments: []
         in_subset:
         - lt_v1.0
@@ -7102,7 +7052,7 @@ slots:
             tier_optional: npc_v1.0
     diagnosis_status:
         slot_uri: ''
-        range: DiagnosisStatusEnum
+        range: AbsentPresentEnum
         comments: []
         in_subset:
         - npc_v1.0
@@ -7160,31 +7110,6 @@ slots:
         - npc_v1.0
         annotations:
             tier_optional: npc_v1.0
-    age_at_tumor_assessment:
-        slot_uri: ''
-        range: integer
-        comments: []
-        in_subset:
-        - nbl_v2.0
-        annotations: {}
-    tumor_state:
-        slot_uri: ''
-        range: TumorStateEnum
-        comments: []
-        in_subset:
-        - nbl_v2.0
-        annotations: {}
-    tumor_classification:
-        slot_uri: ''
-        range: TumorClassificationEnum
-        comments: []
-        in_subset:
-        - nbl_v2.0
-        - nrsts_v2.0
-        annotations: {}
-        exact_mappings:
-        - (nrsts_v2.0) [nrsts_v1.0].[Biopsy/Surgical Procedures].[TUMOR_CLASSIFICATION]
-            skos:exactMatch [nrsts_v2.0].[Biopsy And Surgical Procedures].[CLASSIFICATION]
     tumor_site:
         slot_uri: ''
         range: TumorSiteEnum
@@ -7771,9 +7696,9 @@ slots:
         - rb_v1.2
         annotations:
             tier_priority: rb_v1.2
-    anaplasia_status:
+    anaplasia:
         slot_uri: ''
-        range: YesNoEnum
+        range: AbsentPresentEnum
         comments: []
         in_subset:
         - rms_v2.0
@@ -7793,6 +7718,56 @@ slots:
         - rms_v2.0
         annotations: {}
 enums:
+    AbsentPresentEnum:
+        in_subset:
+        - hl_v2.0
+        - rms_v2.0
+        - gct_v2.0
+        - nbl_v2.0
+        - npc_v1.0
+        - lt_v1.0
+        - fa_v1.0
+        permissible_values:
+            Absent:
+                meaning: ncit:C25567
+                comments: []
+                in_subset:
+                - hl_v2.0
+                - rms_v2.0
+                - gct_v2.0
+                - nbl_v2.0
+                - npc_v1.0
+                - lt_v1.0
+                - fa_v1.0
+            Present:
+                meaning: ncit:C25566
+                comments: []
+                in_subset:
+                - hl_v2.0
+                - rms_v2.0
+                - gct_v2.0
+                - nbl_v2.0
+                - npc_v1.0
+                - lt_v1.0
+                - fa_v1.0
+            Not Evaluated:
+                meaning: ncit:C103424
+                comments: []
+                in_subset:
+                - gct_v2.0
+                - nbl_v2.0           
+            Unknown:
+                meaning: ncit:C17998
+                comments: []
+                in_subset:
+                - rms_v2.0
+                - lt_v1.0
+                - fa_v1.0
+            Not Reported:
+                meaning: ncit:C43234
+                comments: []
+                in_subset:
+                - lt_v1.0
     YesNoEnum:
         in_subset:
         - aml_v2.0
@@ -19207,88 +19182,6 @@ enums:
                     - ews_v2.0
                     - fa_v1.0
                     - gct_v2.0
-
-
-    ResultEnum:
-        in_subset:
-        - ews_v2.0
-        - fa_v1.0
-        - gct_v2.0
-        - npc_v1.0
-        - rb_v1.2
-        permissible_values:
-            Present:
-                meaning: ncit:C25626
-                comments: []
-                in_subset:
-                - fa_v1.0
-                - gct_v2.0
-                - rb_v1.2
-            Absent:
-                meaning: ncit:C48190
-                comments: []
-                in_subset:
-                - fa_v1.0
-                - gct_v2.0
-                - rb_v1.2
-            Positive:
-                meaning: ncit:C35682
-                comments: []
-                in_subset:
-                - ews_v2.0
-                - npc_v1.0
-            Negative:
-                meaning: ncit:C38757
-                comments: []
-                in_subset:
-                - ews_v2.0
-                - npc_v1.0
-            Elevated:
-                meaning: ''
-                comments: []
-                in_subset:
-                - fa_v1.0
-            Normal:
-                meaning: ncit:C35655
-                comments: []
-                in_subset:
-                - fa_v1.0
-                - npc_v1.0
-            Abnormal:
-                meaning: ncit:C35553
-                comments: []
-                in_subset:
-                - fa_v1.0
-                - npc_v1.0
-            Increased:
-                meaning: ncit:C164135
-                comments: []
-                in_subset:
-                - fa_v1.0
-            Decreased:
-                meaning: ncit:C164132
-                comments: []
-                in_subset:
-                - fa_v1.0
-            Not Done:
-                meaning: ncit:C49484
-                comments: []
-                in_subset:
-                - fa_v1.0
-            Unknown:
-                meaning: ncit:C17998
-                comments: []
-                in_subset:
-                - gct_v2.0
-                - rb_v1.2
-            Not Reported:
-                meaning: ncit:C43234
-                comments: []
-                in_subset:
-                - fa_v1.0
-                - gct_v2.0
-                - npc_v1.0
-                - rb_v1.2
     QuantificationTypeEnum:
         in_subset:
         - gct_v2.0
@@ -22530,21 +22423,6 @@ enums:
                 - os_v2.0
                 - rb_v1.2
                 - rms_v2.0
-    CourseTimepointEnum:
-        in_subset: []
-        permissible_values:
-            Start:
-                meaning: ''
-                comments: []
-                in_subset: []
-            During:
-                meaning: ''
-                comments: []
-                in_subset: []
-            End:
-                meaning: ''
-                comments: []
-                in_subset: []
     BiologicalAnalyteEnum:
         in_subset:
         - rb_v1.2
@@ -30389,127 +30267,157 @@ enums:
         - rb_v1.2
         - rms_v2.0
         permissible_values:
-            IRS, Group I:
+            IRS >> Group I:
                 meaning: ''
                 comments:
                 - '(rms_v2.0) ConsortiumNote: Note: Tied to AGE_AT_STAGING.'
                 in_subset:
                 - rms_v2.0
-            IRS, Group II NOS:
+            IRS >> Group II NOS:
                 meaning: ''
                 comments: []
                 in_subset:
                 - rms_v2.0
-            IRS, Group IIA:
+            IRS >> Group IIA:
                 meaning: ''
                 comments: []
                 in_subset:
                 - rms_v2.0
-            IRS, Group IIB:
+            IRS >> Group IIB:
                 meaning: ''
                 comments: []
                 in_subset:
                 - rms_v2.0
-            IRS, Group IIC:
+            IRS >> Group IIC:
                 meaning: ''
                 comments: []
                 in_subset:
                 - rms_v2.0
-            IRS, Group III:
+            IRS >> Group III:
                 meaning: ''
                 comments: []
                 in_subset:
                 - rms_v2.0
-            IRS, Group IV:
+            IRS >> Group IV:
                 meaning: ''
                 comments: []
                 in_subset:
                 - rms_v2.0
-            Group A:
+            ICRB >> Group A:
                 meaning: ''
                 comments:
                 - '(rb_v1.2) ConsortiumNote: GROUP_SYSTEM = ''ICRB'' or ''IIRC'''
                 in_subset:
                 - rb_v1.2
-            Group B:
+            ICRB >> Group B:
                 meaning: ''
                 comments:
                 - '(rb_v1.2) ConsortiumNote: GROUP_SYSTEM = ''ICRB'' or ''IIRC'''
                 in_subset:
                 - rb_v1.2
-            Group C:
+            ICRB >> Group C:
                 meaning: ''
                 comments:
                 - '(rb_v1.2) ConsortiumNote: GROUP_SYSTEM = ''ICRB'' or ''IIRC'''
                 in_subset:
                 - rb_v1.2
-            Group D:
+            ICRB >> Group D:
                 meaning: ''
                 comments:
                 - '(rb_v1.2) ConsortiumNote: GROUP_SYSTEM = ''ICRB'' or ''IIRC'''
                 in_subset:
                 - rb_v1.2
-            Group E:
+            ICRB >> Group E:
                 meaning: ''
                 comments:
                 - '(rb_v1.2) ConsortiumNote: GROUP_SYSTEM = ''ICRB'' or ''IIRC'''
                 in_subset:
                 - rb_v1.2
-            Group 1A:
+            IIRC >> Group A:
+                meaning: ''
+                comments:
+                - '(rb_v1.2) ConsortiumNote: GROUP_SYSTEM = ''ICRB'' or ''IIRC'''
+                in_subset:
+                - rb_v1.2
+            IIRC >> Group B:
+                meaning: ''
+                comments:
+                - '(rb_v1.2) ConsortiumNote: GROUP_SYSTEM = ''ICRB'' or ''IIRC'''
+                in_subset:
+                - rb_v1.2
+            IIRC >> Group C:
+                meaning: ''
+                comments:
+                - '(rb_v1.2) ConsortiumNote: GROUP_SYSTEM = ''ICRB'' or ''IIRC'''
+                in_subset:
+                - rb_v1.2
+            IIRC >> Group D:
+                meaning: ''
+                comments:
+                - '(rb_v1.2) ConsortiumNote: GROUP_SYSTEM = ''ICRB'' or ''IIRC'''
+                in_subset:
+                - rb_v1.2
+            IIRC >> Group E:
+                meaning: ''
+                comments:
+                - '(rb_v1.2) ConsortiumNote: GROUP_SYSTEM = ''ICRB'' or ''IIRC'''
+                in_subset:
+                - rb_v1.2
+            Reese-Ellsworth >> Group 1A:
                 meaning: ''
                 comments:
                 - '(rb_v1.2) ConsortiumNote: GROUP_SYSTEM = ''Reese Ellsworth'''
                 in_subset:
                 - rb_v1.2
-            Group 1B:
+            Reese-Ellsworth >> Group 1B:
                 meaning: ''
                 comments:
                 - '(rb_v1.2) ConsortiumNote: GROUP_SYSTEM = ''Reese Ellsworth'''
                 in_subset:
                 - rb_v1.2
-            Group 2A:
+            Reese-Ellsworth >> Group 2A:
                 meaning: ''
                 comments:
                 - '(rb_v1.2) ConsortiumNote: GROUP_SYSTEM = ''Reese Ellsworth'''
                 in_subset:
                 - rb_v1.2
-            Group 2B:
+            Reese-Ellsworth >> Group 2B:
                 meaning: ''
                 comments:
                 - '(rb_v1.2) ConsortiumNote: GROUP_SYSTEM = ''Reese Ellsworth'''
                 in_subset:
                 - rb_v1.2
-            Group 3A:
+            Reese-Ellsworth >> Group 3A:
                 meaning: ''
                 comments:
                 - '(rb_v1.2) ConsortiumNote: GROUP_SYSTEM = ''Reese Ellsworth'''
                 in_subset:
                 - rb_v1.2
-            Group 3B:
+            Reese-Ellsworth >> Group 3B:
                 meaning: ''
                 comments:
                 - '(rb_v1.2) ConsortiumNote: GROUP_SYSTEM = ''Reese Ellsworth'''
                 in_subset:
                 - rb_v1.2
-            Group 4A:
+            Reese-Ellsworth >> Group 4A:
                 meaning: ''
                 comments:
                 - '(rb_v1.2) ConsortiumNote: GROUP_SYSTEM = ''Reese Ellsworth'''
                 in_subset:
                 - rb_v1.2
-            Group 4B:
+            Reese-Ellsworth >> Group 4B:
                 meaning: ''
                 comments:
                 - '(rb_v1.2) ConsortiumNote: GROUP_SYSTEM = ''Reese Ellsworth'''
                 in_subset:
                 - rb_v1.2
-            Group 5A:
+            Reese-Ellsworth >> Group 5A:
                 meaning: ''
                 comments:
                 - '(rb_v1.2) ConsortiumNote: GROUP_SYSTEM = ''Reese Ellsworth'''
                 in_subset:
                 - rb_v1.2
-            Group 5B:
+            Reese-Ellsworth >> Group 5B:
                 meaning: ''
                 comments:
                 - '(rb_v1.2) ConsortiumNote: GROUP_SYSTEM = ''Reese Ellsworth'''
@@ -30527,25 +30435,6 @@ enums:
                 in_subset:
                 - rb_v1.2
                 - rms_v2.0
-    StateEnum:
-        in_subset:
-        - gct_v2.0
-        permissible_values:
-            Present:
-                meaning: ncit:C25626
-                comments: []
-                in_subset:
-                - gct_v2.0
-            Absent:
-                meaning: ncit:C48190
-                comments: []
-                in_subset:
-                - gct_v2.0
-            Not Evaluated:
-                meaning: ncit:C103424
-                comments: []
-                in_subset:
-                - gct_v2.0
     DetectionMethodEnum:
         in_subset:
         - aml_v2.0
@@ -33415,6 +33304,7 @@ enums:
         - os_v2.0
         - rb_v1.2
         - rms_v2.0
+        - pre_v1.0
         permissible_values:
             cm:
                 meaning: ncit:C49668
@@ -33483,6 +33373,7 @@ enums:
         - os_v2.0
         - rb_v1.2
         - rms_v2.0
+        - pre_v1.0
         permissible_values:
             cm:
                 meaning: ncit:C49668
@@ -33496,6 +33387,7 @@ enums:
                 - os_v2.0
                 - rb_v1.2
                 - rms_v2.0
+                - pre_v1.0
             mm:
                 meaning: ncit:C28251
                 comments: []
@@ -33551,6 +33443,7 @@ enums:
         - os_v2.0
         - rb_v1.2
         - rms_v2.0
+        - pre_v1.0
         permissible_values:
             cm:
                 meaning: ncit:C49668
@@ -33564,6 +33457,7 @@ enums:
                 - os_v2.0
                 - rb_v1.2
                 - rms_v2.0
+                - pre_v1.0
             mm:
                 meaning: ncit:C28251
                 comments: []
@@ -43581,25 +43475,6 @@ enums:
                 - '(fa_v1.0) ConsortiumNote: [Fiesco-Roa et al. - 2019]'
                 in_subset:
                 - fa_v1.0
-    AssociationStatusEnum:
-        in_subset:
-        - fa_v1.0
-        permissible_values:
-            Present:
-                meaning: ''
-                comments: []
-                in_subset:
-                - fa_v1.0
-            Absent:
-                meaning: ''
-                comments: []
-                in_subset:
-                - fa_v1.0
-            Unknown:
-                meaning: ''
-                comments: []
-                in_subset:
-                - fa_v1.0
     ClinicalFindingEnum:
         in_subset:
         - fa_v1.0
@@ -45956,150 +45831,6 @@ enums:
                 comments: []
                 in_subset:
                 - rb_v1.2
-    PretextModVEnum:
-        in_subset:
-        - lt_v1.0
-        permissible_values:
-            Present:
-                meaning: ncit:C38758
-                comments: []
-                in_subset:
-                - lt_v1.0
-            Absent:
-                meaning: ''
-                comments: []
-                in_subset:
-                - lt_v1.0
-            Unknown:
-                meaning: ''
-                comments: []
-                in_subset:
-                - lt_v1.0
-            Not Reported:
-                meaning: ''
-                comments: []
-                in_subset:
-                - lt_v1.0
-    PretextModPEnum:
-        in_subset:
-        - lt_v1.0
-        permissible_values:
-            Present:
-                meaning: ''
-                comments: []
-                in_subset:
-                - lt_v1.0
-            Absent:
-                meaning: ''
-                comments: []
-                in_subset:
-                - lt_v1.0
-            Unknown:
-                meaning: ''
-                comments: []
-                in_subset:
-                - lt_v1.0
-            Not Reported:
-                meaning: ''
-                comments: []
-                in_subset:
-                - lt_v1.0
-    PretextModEEnum:
-        in_subset:
-        - lt_v1.0
-        permissible_values:
-            Present:
-                meaning: ''
-                comments: []
-                in_subset:
-                - lt_v1.0
-            Absent:
-                meaning: ''
-                comments: []
-                in_subset:
-                - lt_v1.0
-            Unknown:
-                meaning: ''
-                comments: []
-                in_subset:
-                - lt_v1.0
-            Not Reported:
-                meaning: ''
-                comments: []
-                in_subset:
-                - lt_v1.0
-    PretextModMEnum:
-        in_subset:
-        - lt_v1.0
-        permissible_values:
-            Present:
-                meaning: ''
-                comments: []
-                in_subset:
-                - lt_v1.0
-            Absent:
-                meaning: ''
-                comments: []
-                in_subset:
-                - lt_v1.0
-            Unknown:
-                meaning: ''
-                comments: []
-                in_subset:
-                - lt_v1.0
-            Not Reported:
-                meaning: ''
-                comments: []
-                in_subset:
-                - lt_v1.0
-    PretextModFEnum:
-        in_subset:
-        - lt_v1.0
-        permissible_values:
-            Unifocal:
-                meaning: ''
-                comments: []
-                in_subset:
-                - lt_v1.0
-            Multifocal:
-                meaning: ''
-                comments: []
-                in_subset:
-                - lt_v1.0
-            Unknown:
-                meaning: ''
-                comments: []
-                in_subset:
-                - lt_v1.0
-            Not Reported:
-                meaning: ''
-                comments: []
-                in_subset:
-                - lt_v1.0
-    PretextModREnum:
-        in_subset:
-        - lt_v1.0
-        permissible_values:
-            Present:
-                meaning: ''
-                comments: []
-                in_subset:
-                - lt_v1.0
-            Absent:
-                meaning: ''
-                comments: []
-                in_subset:
-                - lt_v1.0
-            Unknown:
-                meaning: ''
-                comments: []
-                in_subset:
-                - lt_v1.0
-            Not Reported:
-                meaning: ''
-                comments: []
-                in_subset:
-                - lt_v1.0
     HzFrequencyEnum:
         in_subset:
         - npc_v1.0
@@ -46144,20 +45875,6 @@ enums:
                 in_subset:
                 - npc_v1.0
             Without Lymphoid Infiltration:
-                meaning: ''
-                comments: []
-                in_subset:
-                - npc_v1.0
-    DiagnosisStatusEnum:
-        in_subset:
-        - npc_v1.0
-        permissible_values:
-            Present:
-                meaning: ''
-                comments: []
-                in_subset:
-                - npc_v1.0
-            Absent:
                 meaning: ''
                 comments: []
                 in_subset:
@@ -46237,122 +45954,6 @@ enums:
                 - '(npc_v1.0) ConsortiumNote: Use for PTV1'
                 in_subset:
                 - npc_v1.0
-    TumorStateEnum:
-        in_subset:
-        - nbl_v2.0
-        permissible_values:
-            Present:
-                meaning: ''
-                comments: []
-                in_subset:
-                - nbl_v2.0
-            Absent:
-                meaning: ''
-                comments: []
-                in_subset:
-                - nbl_v2.0
-            Unknown:
-                meaning: ''
-                comments: []
-                in_subset:
-                - nbl_v2.0
-    TumorClassificationEnum:
-        in_subset:
-        - nbl_v2.0
-        - nrsts_v2.0
-        permissible_values:
-            Primary:
-                meaning: ''
-                comments:
-                - '(nrsts_v2.0) ConsortiumNote: distant sites?'
-                in_subset:
-                - nbl_v2.0
-                - nrsts_v2.0
-            Metastatic:
-                meaning: ''
-                comments: []
-                in_subset:
-                - nbl_v2.0
-                - nrsts_v2.0
-            Regional Nodes:
-                meaning: ''
-                comments: []
-                in_subset:
-                - nrsts_v2.0
-            Unknown:
-                meaning: ''
-                comments: []
-                in_subset:
-                - nbl_v2.0
-            Not Reported:
-                meaning: ''
-                comments: []
-                in_subset:
-                - nbl_v2.0
-    TumorSiteEnum:
-        in_subset:
-        - nbl_v2.0
-        permissible_values:
-            Abdomen:
-                meaning: ''
-                comments: []
-                in_subset:
-                - nbl_v2.0
-            Adrenal Gland:
-                meaning: ''
-                comments: []
-                in_subset:
-                - nbl_v2.0
-            Bone:
-                meaning: ''
-                comments: []
-                in_subset:
-                - nbl_v2.0
-            Bone Marrow:
-                meaning: ''
-                comments: []
-                in_subset:
-                - nbl_v2.0
-            Central Nervous System:
-                meaning: ''
-                comments: []
-                in_subset:
-                - nbl_v2.0
-            Distant Lymph Nodes:
-                meaning: ''
-                comments: []
-                in_subset:
-                - nbl_v2.0
-            Liver:
-                meaning: ''
-                comments: []
-                in_subset:
-                - nbl_v2.0
-            Lung:
-                meaning: ''
-                comments: []
-                in_subset:
-                - nbl_v2.0
-            Neck:
-                meaning: ''
-                comments: []
-                in_subset:
-                - nbl_v2.0
-            Pelvis:
-                meaning: ''
-                comments: []
-                in_subset:
-                - nbl_v2.0
-            Skin:
-                meaning: ''
-                comments: []
-                in_subset:
-                - nbl_v2.0
-            Thorax:
-                meaning: ''
-                comments: []
-                in_subset:
-                - nbl_v2.0
     MitosesEnum:
         in_subset:
         - nrsts_v2.0
