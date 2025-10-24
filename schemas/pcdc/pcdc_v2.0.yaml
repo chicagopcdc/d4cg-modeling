@@ -103,12 +103,32 @@ subsets:
             with the International Soft Tissue Sarcoma Consortium (INSTRuCT). It is
             based on the collective requirements of its contributors.
 classes:
-    DataContributorSubject:
+    Person:
         slots:
+        - submitter_id
+        slot_usage:
+            submitter_id:
+                identifer: true
+                range: string
+        comments: []
+        in_subset: []
+        annotations: {}
+    DataContributorPersonRecord:
+        slots:
+        - submitter_id
+        - person_submitter_id
         - honest_broker_subject_id
         - data_contributor_id
+        slot_usage:
+            submitter_id:
+                identifer: true
+                range: string
+            person_submitter_id:
+                required: true
+                inlined: false
+                range: Person
         comments:
-        - 'D4CGNote: One observation/row per patient'
+        - 'D4CGNote: One observation/row per a data contributor record of a person.'
         in_subset:
         - aml_v2.0
         - pre_v1.0
@@ -126,33 +146,104 @@ classes:
         - npc_v1.0
         annotations:
             domain: demographics
-    StudySubject:
+    Subject:
         slots:
+        - submitter_id
+        - data_contributor_person_record_submitter_id
         - consortium
         - disease_group
+        - data_source
         - sex
         - gender_identity
         - race
         - race_identification_source
         - ethnicity
         - country
-        - study_id
-        - treatment_arm
-        - study_phase
-        - study_type
-        - age_at_enrollment
         - enrolled_status
+        - age_at_enrollment
         - year_at_enrollment
-        - age_at_txassign
-        - randomized_status
-        - age_at_censor_status
+        - study_age_precision
         - efs_censor_status
-        - data_source
+        - age_at_censor_status
         - ever_disease_free
         - age_at_disease_free
-        - study_age_precision
+        slot_usage:
+            submitter_id:
+                identifer: true
+                range: string
+            data_contributor_person_record_submitter_id:
+                required: true
+                inlined: false
+                range: DataContributorPersonRecord
         comments:
-        - 'D4CGNote: One observation/row per STUDY_ID'
+        - 'D4CGNote: One observation/row per instance of a DataContributorPerson being enrolled on a study'
+        in_subset:
+        - npc_v1.0
+        - aml_v2.0
+        - pre_v1.0
+        - cns_v1.2
+        - ews_v2.0
+        - fa_v1.0
+        - gct_v2.0
+        - hl_v2.0
+        - lt_v1.0
+        - nbl_v2.0
+        - nrsts_v2.0
+        - os_v2.0
+        - rb_v1.2
+        - rms_v2.0
+        annotations:
+            domain: demographics
+    StudyMetadata:
+        slots:
+        - submitter_id
+        - subjects_submitter_id
+        - study_id
+        - study_phase
+        - study_type
+        - urls
+        slot_usage:
+            submitter_id:
+                identifer: true
+                range: string
+            subjects_submitter_id:
+                required: true
+                inlined: false
+                range: Subject
+        comments:
+        - 'D4CGNote: One observation/row per study'
+        in_subset:
+        - npc_v1.0
+        - aml_v2.0
+        - pre_v1.0
+        - cns_v1.2
+        - ews_v2.0
+        - fa_v1.0
+        - gct_v2.0
+        - hl_v2.0
+        - lt_v1.0
+        - nbl_v2.0
+        - nrsts_v2.0
+        - os_v2.0
+        - rb_v1.2
+        - rms_v2.0
+        annotations:
+            domain: demographics
+    StudySubgroupAssignment:
+        slots:
+        - subjects_submitter_id
+        - subgroup_type
+        - subgroup_name
+        - subgroup_assignment_order
+        - age_at_subgroup_assignment
+        - randomized
+        slot_usage:
+            subjects_submitter_id:
+                required: true
+                inlined: false
+                range: Subject
+        comments:
+        - 'D4CGNote: One observation/row per Subject'
         in_subset:
         - npc_v1.0
         - aml_v2.0
@@ -173,6 +264,7 @@ classes:
     Timing:
         slots:
         - submitter_id
+        - subjects_submitter_id
         - parent_submitter_id
         - time_period_type
         - disease_phase
@@ -184,6 +276,18 @@ classes:
         - age_at_end
         - age_at_course_anc_500
         - age_precision
+        slot_usage:
+            submitter_id:
+                identifer: true
+                range: string
+            subjects_submitter_id:
+                required: true
+                inlined: false
+                range: Subject
+            parent_submitter_id:
+                required: false
+                inlined: false
+                range: Timing
         comments:
         - 'D4CGNote: One observation/row per time period when instantiated'
         in_subset:
@@ -205,12 +309,22 @@ classes:
             domain: demographics
     OffProtocolTherapyOrStudy:
         slots:
+        - subjects_submitter_id
+        - timings_submitter_id
         - age_off
-        - time_period_submitter_id
         - off_type
         - reason_off
         - reason_off_other
         - another_study
+        slot_usage:
+            subjects_submitter_id:
+                required: true
+                inlined: false
+                range: Subject
+            timings_submitter_id:
+                required: false
+                inlined: false
+                range: Timing
         comments:
         - 'D4CGNote: If patient went off protocol therapy or study then include an
             observation.'
@@ -226,10 +340,11 @@ classes:
             domain: demographics
     SurvivalCharacteristics:
         slots:
+        - subjects_submitter_id
+        - timings_submitter_id
         - age_at_lkss
         - age_lost_to_follow_up
         - age_at_last_follow_up
-        - time_period_submitter_id
         - lkss
         - lkss_with_disease
         - cause_of_death
@@ -239,6 +354,15 @@ classes:
         - cause_of_death_detail
         - cause_of_death_detail_other
         - cause_of_death_ranking
+        slot_usage:
+            subjects_submitter_id:
+                required: true
+                inlined: false
+                range: Subject
+            timings_submitter_id:
+                required: false
+                inlined: false
+                range: Timing
         comments:
         - 'D4CGNote: One observation/row per LKSS when instantiated'
         in_subset:
@@ -260,6 +384,7 @@ classes:
             domain: demographics
     FamilyMedicalHistory:
         slots:
+        - subjects_submitter_id
         - age_at_condition
         - condition_status
         - family_medical_history_condition
@@ -272,6 +397,11 @@ classes:
         - number_of_abortions
         - laterality
         - family_medical_history_procedure
+        slot_usage:
+            subjects_submitter_id:
+                required: true
+                inlined: false
+                range: Subject
         comments:
         - 'D4CGNote: One observation/row per CONDITION when instantiated'
         in_subset:
@@ -283,6 +413,7 @@ classes:
             domain: demographics
     MedicalHistory:
         slots:
+        - subjects_submitter_id
         - age_at_condition
         - condition_status
         - medical_history_condition
@@ -290,6 +421,11 @@ classes:
         - condition_category
         - diagnosis_basis
         - assisted_conception
+        slot_usage:
+            subjects_submitter_id:
+                required: true
+                inlined: false
+                range: Subject
         comments:
         - '(os_v2.0) ConsortiumNote: No AOST0331/EURAMOS1 data'
         in_subset:
@@ -306,26 +442,41 @@ classes:
             domain: demographics
     SocialAndBehavioralDeterminantsOfHealth:
         slots:
-        - honest_broker_subject_id
+        - subjects_submitter_id
         - exposure
         - exposure_status
         - sunscreen_use
         - occupation
         comments: []
+        slot_usage:
+            subjects_submitter_id:
+                required: true
+                inlined: false
+                range: Subject
         in_subset:
         - fa_v1.0
         annotations:
             domain: demographics
     VitalsAndAnthropometrics:
         slots:
+        - subjects_submitter_id
+        - timings_submitter_id
         - age_at_measurement
-        - time_period_submitter_id
         - vital_measurement_type
         - anthropometric_measurement_type
         - result_text
         - result_numeric
         - result_unit
         - gestational_age_at_birth_weeks
+        slot_usage:
+            subjects_submitter_id:
+                required: true
+                inlined: false
+                range: Subject
+            timings_submitter_id:
+                required: false
+                inlined: false
+                range: Timing
         comments:
         - 'D4CGNote: One observation/row per measurement when instantiated'
         in_subset:
@@ -341,8 +492,9 @@ classes:
             domain: testing
     LaboratoryTest:
         slots:
+        - subjects_submitter_id
+        - timings_submitter_id
         - age_at_lab
-        - time_period_submitter_id
         - laboratory_test_category
         - laboratory_test
         - laboratory_test_method
@@ -359,6 +511,15 @@ classes:
         - collection_time
         - pmid_ref
         - breakage_source_lab
+        slot_usage:
+            subjects_submitter_id:
+                required: true
+                inlined: false
+                range: Subject
+            timings_submitter_id:
+                required: false
+                inlined: false
+                range: Timing
         comments:
         - 'D4CGNote: One observation/row per result when instantiated'
         in_subset:
@@ -376,9 +537,10 @@ classes:
             domain: testing
     GeneticAnalysis:
         slots:
+        - subjects_submitter_id
+        - timings_submitter_id
         - age_at_genetic_analysis
         - year_at_genetic_analysis
-        - time_period_submitter_id
         - source_lab
         - test_name
         - test_version
@@ -443,6 +605,15 @@ classes:
         - independent_aberrations
         - cells_in_metaphase
         - associated_condition
+        slot_usage:
+            subjects_submitter_id:
+                required: true
+                inlined: false
+                range: Subject
+            timings_submitter_id:
+                required: false
+                inlined: false
+                range: Timing
         comments:
         - 'D4CGNote: One observation/row per genetic alteration'
         in_subset:
@@ -460,8 +631,14 @@ classes:
             domain: testing
     Biospecimen:
         slots:
+        - subjects_submitter_id
         - container_type
         - media
+        slot_usage:
+            subjects_submitter_id:
+                required: true
+                inlined: false
+                range: Subject
         comments:
         - 'D4CGNote: One observation/row per biospecimen when instantiated'
         in_subset:
@@ -470,8 +647,9 @@ classes:
             domain: testing
     FunctionTest:
         slots:
+        - subjects_submitter_id
+        - timings_submitter_id
         - age_at_function_test
-        - time_period_submitter_id
         - function_test
         - measurement_type
         - result_text
@@ -482,6 +660,15 @@ classes:
         - average_loss_low
         - average_loss_high
         - function_test_grade
+        slot_usage:
+            subjects_submitter_id:
+                required: true
+                inlined: false
+                range: Subject
+            timings_submitter_id:
+                required: false
+                inlined: false
+                range: Timing
         comments:
         - 'D4CGNote: One observation/row per result when instantiated'
         in_subset:
@@ -493,13 +680,23 @@ classes:
             domain: testing
     Immunohistochemistry:
         slots:
+        - subjects_submitter_id
+        - timings_submitter_id
         - age_at_ihc
-        - time_period_submitter_id
         - review_source
         - markers
         - result_text
         - result_numeric
         - result_unit
+        slot_usage:
+            subjects_submitter_id:
+                required: true
+                inlined: false
+                range: Subject
+            timings_submitter_id:
+                required: false
+                inlined: false
+                range: Timing
         comments:
         - 'D4CGNote: One observation/row per result when instantiated.'
         in_subset:
@@ -510,10 +707,11 @@ classes:
             domain: testing
     Diagnosis:
         slots:
+        - subjects_submitter_id
+        - timings_submitter_id
         - age_at_diag_assessment
         - year_at_diagnosis
         - age_at_diag_resolved
-        - time_period_submitter_id
         - disease_site_assessment_submitter_id
         - review_source
         - determination_source
@@ -543,6 +741,15 @@ classes:
         - revised_inpc
         - histologic_features
         - histologic_basis
+        slot_usage:
+            subjects_submitter_id:
+                required: true
+                inlined: false
+                range: Subject
+            timings_submitter_id:
+                required: false
+                inlined: false
+                range: Timing
         comments:
         - 'D4CGNote: One observation/row per DIAGNOSIS'
         in_subset:
@@ -564,8 +771,9 @@ classes:
             domain: disease_attributes
     Staging:
         slots:
+        - subjects_submitter_id
+        - timings_submitter_id
         - age_at_staging
-        - time_period_submitter_id
         - disease_site_assessment_submitter_id
         - review_source
         - stage_category
@@ -589,6 +797,15 @@ classes:
         - pretext_mod_m
         - pretext_mod_f
         - pretext_mod_r
+        slot_usage:
+            subjects_submitter_id:
+                required: true
+                inlined: false
+                range: Subject
+            timings_submitter_id:
+                required: false
+                inlined: false
+                range: Timing
         comments:
         - 'D4CGNote: One observation/row per STAGE when instantiated.'
         in_subset:
@@ -606,8 +823,9 @@ classes:
             domain: disease_attributes
     DiseaseSiteAssessment:
         slots:
+        - subjects_submitter_id
+        - timings_submitter_id
         - age_at_disease_site_assessment
-        - time_period_submitter_id
         - submitter_id
         - tumor_submitter_id
         - primary_tumor_submitter_id
@@ -678,6 +896,15 @@ classes:
         - seeds_pattern
         - seeds_type
         - seeds_classification
+        slot_usage:
+            subjects_submitter_id:
+                required: true
+                inlined: false
+                range: Subject
+            timings_submitter_id:
+                required: false
+                inlined: false
+                range: Timing
         comments:
         - 'D4CGNote: One observation/row per tumor or lesion when instantiated. Multiple
             tumors or lesions can be reported in a single obvservation/row if no individual
@@ -707,8 +934,9 @@ classes:
             domain: disease_attributes
     DiseaseCharacteristics:
         slots:
+        - subjects_submitter_id
+        - timings_submitter_id
         - age_at_disease_characteristic
-        - time_period_submitter_id
         - detection_method
         - risk_group
         - gts_treatment
@@ -749,6 +977,15 @@ classes:
         - intraocular_pressure_unit
         - retinal_detachment
         - advanced_disease_signs
+        slot_usage:
+            subjects_submitter_id:
+                required: true
+                inlined: false
+                range: Subject
+            timings_submitter_id:
+                required: false
+                inlined: false
+                range: Timing
         comments:
         - 'D4CGNote: One observation/row per characteristic when instantiated.'
         in_subset:
@@ -764,8 +1001,9 @@ classes:
             domain: disease_attributes
     BiopsyAndSurgicalProcedures:
         slots:
+        - subjects_submitter_id
+        - timings_submitter_id
         - age_at_procedure
-        - time_period_submitter_id
         - disease_site_assessment_submitter_id
         - protocol_procedure
         - non_protocol_timing
@@ -813,6 +1051,15 @@ classes:
         - laser_duration_numeric
         - cryotherapy_freezes
         - freeze_thaw_cycle_number
+        slot_usage:
+            subjects_submitter_id:
+                required: true
+                inlined: false
+                range: Subject
+            timings_submitter_id:
+                required: false
+                inlined: false
+                range: Timing
         comments:
         - 'D4CGNote: One observation/row per procedure when instantiated.'
         in_subset:
@@ -832,11 +1079,12 @@ classes:
             domain: intervention
     Medication:
         slots:
+        - subjects_submitter_id
+        - timings_submitter_id
         - age_at_medication_start
         - year_at_medication_start
         - age_at_medication_end
         - disease_site_assessment_submitter_id
-        - time_period_submitter_id
         - protocol_medication
         - non_protocol_timing
         - medication_category
@@ -862,6 +1110,15 @@ classes:
         - administration_site
         - total_dose_given
         - delivery_status
+        slot_usage:
+            subjects_submitter_id:
+                required: true
+                inlined: false
+                range: Subject
+            timings_submitter_id:
+                required: false
+                inlined: false
+                range: Timing
         comments:
         - 'D4CGNote: One observation/row per medication administration when instantiated.'
         - '(lt_v1.0) ConsortiumNote: If multiple, include only 5 most recent'
@@ -880,8 +1137,9 @@ classes:
             domain: intervention
     ProtocolTreatmentModifications:
         slots:
+        - subjects_submitter_id
+        - timings_submitter_id
         - age_at_modification
-        - time_period_submitter_id
         - modification
         - modification_other
         - modification_basis
@@ -895,6 +1153,15 @@ classes:
         - original_agent_other
         - sub_agent
         - sub_agent_other
+        slot_usage:
+            subjects_submitter_id:
+                required: true
+                inlined: false
+                range: Subject
+            timings_submitter_id:
+                required: false
+                inlined: false
+                range: Timing
         comments:
         - 'D4CGNote: One observation/row per MODIFICATION when instantiated.'
         in_subset:
@@ -905,11 +1172,12 @@ classes:
             domain: intervention
     RadiationTherapy:
         slots:
+        - subjects_submitter_id
+        - timings_submitter_id
         - age_at_rt
         - age_at_rt_start
         - year_at_rt_start
         - age_at_rt_end
-        - time_period_submitter_id
         - protocol_radiation_therapy
         - non_protocol_timing
         - classification
@@ -947,6 +1215,15 @@ classes:
         - dose_rate_at_apex
         - implant_duration
         - suture_coordinates
+        slot_usage:
+            subjects_submitter_id:
+                required: true
+                inlined: false
+                range: Subject
+            timings_submitter_id:
+                required: false
+                inlined: false
+                range: Timing
         comments:
         - 'D4CGNote: One observation/row per cycle OR course when instantiated.'
         in_subset:
@@ -965,11 +1242,12 @@ classes:
             domain: intervention
     StemCellTransplant:
         slots:
+        - subjects_submitter_id
+        - timings_submitter_id
         - age_at_sct
         - year_at_sct
         - age_at_sct_harvest
         - age_at_recovery
-        - time_period_submitter_id
         - non_protocol_timing
         - protocol_sct
         - sct_type
@@ -997,6 +1275,15 @@ classes:
         - chimerism_unit
         - cd34_coll
         - sct_success
+        slot_usage:
+            subjects_submitter_id:
+                required: true
+                inlined: false
+                range: Subject
+            timings_submitter_id:
+                required: false
+                inlined: false
+                range: Timing
         comments:
         - 'D4CGNote: One observation/row per SCT when instantiated.'
         in_subset:
@@ -1010,12 +1297,22 @@ classes:
             domain: intervention
     TransfusionMedicineProcedure:
         slots:
+        - subjects_submitter_id
+        - timings_submitter_id
         - age_at_tmp_start
-        - time_period_submitter_id
         - type
         - product
         - product_type
         - number_units
+        slot_usage:
+            subjects_submitter_id:
+                required: true
+                inlined: false
+                range: Subject
+            timings_submitter_id:
+                required: false
+                inlined: false
+                range: Timing
         comments:
         - 'D4CGNote: One observation/row per transfusion when instantiated.'
         in_subset:
@@ -1029,6 +1326,15 @@ classes:
         - age_at_cimt_start
         - time_period_submitter_id
         - type
+        slot_usage:
+            subjects_submitter_id:
+                required: true
+                inlined: false
+                range: Subject
+            timings_submitter_id:
+                required: false
+                inlined: false
+                range: Timing
         comments:
         - 'D4CGNote: One observation/row per infusion when instantiated.'
         in_subset:
@@ -1037,8 +1343,9 @@ classes:
             domain: intervention
     SubjectResponse:
         slots:
+        - subjects_submitter_id
+        - timings_submitter_id
         - age_at_response
-        - time_period_submitter_id
         - disease_site_assessment_submitter_id
         - response_category
         - response
@@ -1064,6 +1371,15 @@ classes:
         - anaplasia
         - anaplasia_type
         - anaplasia_pct_numeric
+        slot_usage:
+            subjects_submitter_id:
+                required: true
+                inlined: false
+                range: Subject
+            timings_submitter_id:
+                required: false
+                inlined: false
+                range: Timing
         comments:
         - 'D4CGNote: One observation/row per result when instantiated.'
         - '(cns_v1.2) ConsortiumNote: Sarah: Will have COG response data for ACNS0334'
@@ -1081,8 +1397,9 @@ classes:
             domain: monitoring
     MinimalResidualDisease:
         slots:
+        - subjects_submitter_id
+        - timings_submitter_id
         - age_at_mrd_assessment
-        - time_period_submitter_id
         - mrd_method
         - result_text
         - result_numeric
@@ -1090,6 +1407,15 @@ classes:
         - sensitivity
         - mrd_specimen
         - molecular_markers
+        slot_usage:
+            subjects_submitter_id:
+                required: true
+                inlined: false
+                range: Subject
+            timings_submitter_id:
+                required: false
+                inlined: false
+                range: Timing
         comments:
         - 'D4CGNote: One observation/row per result when instantiated.'
         in_subset:
@@ -1098,9 +1424,10 @@ classes:
             domain: monitoring
     AdverseEvents:
         slots:
+        - subjects_submitter_id
+        - timings_submitter_id
         - age_at_ae
         - age_at_ae_resolved
-        - time_period_submitter_id
         - disease_site_assessment_submitter_id
         - adverse_event
         - ae_code
@@ -1134,6 +1461,15 @@ classes:
         - hospitalization
         - hospitalization_reason
         - hospitalization_reason_other
+        slot_usage:
+            subjects_submitter_id:
+                required: true
+                inlined: false
+                range: Subject
+            timings_submitter_id:
+                required: false
+                inlined: false
+                range: Timing
         comments: []
         in_subset:
         - aml_v2.0
@@ -1146,13 +1482,23 @@ classes:
             domain: monitoring
     SecondaryMalignantNeoplasm:
         slots:
+        - subjects_submitter_id
+        - timings_submitter_id
         - age_at_smn
-        - time_period_submitter_id
         - smn_morph_icdo
         - smn_top_icdo
         - smn_icd_o_morph
         - smn_icd_o_top
         - smn_field
+        slot_usage:
+            subjects_submitter_id:
+                required: true
+                inlined: false
+                range: Subject
+            timings_submitter_id:
+                required: false
+                inlined: false
+                range: Timing
         comments: []
         in_subset:
         - gct_v2.0
@@ -1161,18 +1507,137 @@ classes:
             domain: monitoring
     LateEffects:
         slots:
+        - subjects_submitter_id
         - age_at_le_eval
         - le
         - le_detail
         - le_sub_detail
         - le_severity_grade
         - le_ctcae_version
+        slot_usage:
+            subjects_submitter_id:
+                required: true
+                inlined: false
+                range: Subject
         comments: []
         in_subset:
         - hl_v2.0
         annotations:
             domain: monitoring
 slots:
+    submitter_id:
+        slot_uri: ""
+        range: string
+        description: "Submitter-provided identifer"
+        comments: []
+        in_subset:
+        - aml_v2.0
+        - pre_v1.0
+        - cns_v1.2
+        - ews_v2.0
+        - fa_v1.0
+        - gct_v2.0
+        - hl_v2.0
+        - lt_v1.0
+        - npc_v1.0
+        - nbl_v2.0
+        - nrsts_v2.0
+        - os_v2.0
+        - rb_v1.2
+        - rms_v2.0
+        annotations: {}
+    person_submitter_id:
+        slot_uri: ""
+        range: Person
+        description: "Foreign-key reference to a Person record (by submitter_id)"
+        comments: []
+        inlined: false
+        multivalued: false
+        in_subset:
+        - aml_v2.0
+        - pre_v1.0
+        - cns_v1.2
+        - ews_v2.0
+        - fa_v1.0
+        - gct_v2.0
+        - hl_v2.0
+        - lt_v1.0
+        - npc_v1.0
+        - nbl_v2.0
+        - nrsts_v2.0
+        - os_v2.0
+        - rb_v1.2
+        - rms_v2.0
+        annotations: {}
+    data_contributor_person_record_submitter_id:
+        slot_uri: ""
+        range: DataContributorPersonRecord
+        description: "Foreign-key reference to a DataContributorPersonRecord record (by submitter_id)"
+        comments: []
+        inlined: false
+        multivalued: false
+        in_subset:
+        - aml_v2.0
+        - pre_v1.0
+        - cns_v1.2
+        - ews_v2.0
+        - fa_v1.0
+        - gct_v2.0
+        - hl_v2.0
+        - lt_v1.0
+        - npc_v1.0
+        - nbl_v2.0
+        - nrsts_v2.0
+        - os_v2.0
+        - rb_v1.2
+        - rms_v2.0
+        annotations: {}
+    subjects_submitter_id:
+        slot_uri: ""
+        range: Subject
+        description: "Foreign-key reference to a Subject record (by submitter_id)"
+        comments: []
+        inlined: false
+        multivalued: true
+        in_subset:
+        - aml_v2.0
+        - pre_v1.0
+        - cns_v1.2
+        - ews_v2.0
+        - fa_v1.0
+        - gct_v2.0
+        - hl_v2.0
+        - lt_v1.0
+        - npc_v1.0
+        - nbl_v2.0
+        - nrsts_v2.0
+        - os_v2.0
+        - rb_v1.2
+        - rms_v2.0
+        annotations: {}
+    timings_submitter_id:
+        slot_uri: ""
+        range: Timing
+        description: "Foreign-key reference to a Timing record (by submitter_id)"
+        comments: []
+        inlined: false
+        multivalued: true
+        in_subset:
+        - aml_v2.0
+        - pre_v1.0
+        - cns_v1.2
+        - ews_v2.0
+        - fa_v1.0
+        - gct_v2.0
+        - hl_v2.0
+        - lt_v1.0
+        - npc_v1.0
+        - nbl_v2.0
+        - nrsts_v2.0
+        - os_v2.0
+        - rb_v1.2
+        - rms_v2.0
+        annotations: {}
     honest_broker_subject_id:
         slot_uri: ncit:C168949
         range: string
@@ -1312,9 +1777,9 @@ slots:
         annotations:
             tier_mandatory: fa_v1.0,hl_v2.0,lt_v1.0,npc_v1.0,os_v2.0
             tier_priority: rb_v1.2
-    treatment_arm:
+    subgroup_name:
         slot_uri: ncit:C15538
-        range: TreatmentArmEnum
+        range: SubgroupNameEnum
         comments:
         - '(ews_v2.0) ConsortiumNote: Assigned at the time of randomization'
         in_subset:
@@ -1332,6 +1797,22 @@ slots:
             tier_mandatory: hl_v2.0
             tier_priority: os_v2.0
             tier_optional: npc_v1.0
+    subgroup_assignment_order:
+        slot_uri: ""
+        range: integer
+        comments: []
+        in_subset:
+        - aml_v2.0
+        - cns_v1.2
+        - ews_v2.0
+        - gct_v2.0
+        - hl_v2.0
+        - npc_v1.0
+        - nbl_v2.0
+        - nrsts_v2.0
+        - os_v2.0
+        - rms_v2.0
+        annotations: {}
     year_at_enrollment:
         slot_uri: ncit:C177353
         range: integer
@@ -1442,28 +1923,6 @@ slots:
             tier_mandatory: hl_v2.0
             tier_priority: rb_v1.2
             tier_optional: fa_v1.0
-    submitter_id:
-        slot_uri: ''
-        range: string
-        comments: []
-        in_subset:
-        - aml_v2.0
-        - pre_v1.0
-        - cns_v1.2
-        - ews_v2.0
-        - fa_v1.0
-        - gct_v2.0
-        - hl_v2.0
-        - lt_v1.0
-        - npc_v1.0
-        - nbl_v2.0
-        - nrsts_v2.0
-        - os_v2.0
-        - rb_v1.2
-        - rms_v2.0
-        annotations:
-            tier_mandatory: fa_v1.0,npc_v1.0
-            tier_priority: lt_v1.0,rb_v1.2
     parent_submitter_id:
         slot_uri: ''
         range: string
@@ -5754,8 +6213,8 @@ slots:
         in_subset:
         - pre_v1.0
         annotations: {}
-    age_at_txassign:
-        slot_uri: ncit:C168852
+    age_at_subgroup_assignment:
+        slot_uri: ""
         range: integer
         comments:
         - '(ews_v2.0) ConsortiumNote: Date of assignment, regardless of if the treatment
@@ -7160,9 +7619,9 @@ slots:
         exact_mappings:
         - (nrsts_v2.0) [nrsts_v1.0].[Biopsy/Surgical Procedures].[PROCEDURE_SITE]
             skos:exactMatch [nrsts_v2.0].[Biopsy And Surgical Procedures].[SITE]
-    randomized_status:
+    randomized:
         slot_uri: ncit:C25196
-        range: RandomizedStatusEnum
+        range: RandomizedEnum
         comments: []
         in_subset:
         - os_v2.0
@@ -11890,7 +12349,7 @@ enums:
                 comments: []
                 in_subset:
                 - rb_v1.2
-    TreatmentArmEnum:
+    SubgroupNameEnum:
         in_subset:
         - aml_v2.0
         - cns_v1.2
@@ -34872,7 +35331,7 @@ enums:
                 - cns_v1.2
                 - ews_v2.0
             Cellcept (MMF):
-                meaning: 'ncit: C1468'
+                meaning: 'ncit:C1468'
                 comments:
                 - '(lt_v1.0) ConsortiumNote: Supportive Care Agent, Liver Transplant'
                 in_subset:
@@ -37094,12 +37553,7 @@ enums:
                 in_subset:
                 - fa_v1.0
             mm/mg2:
-                meaning: The area between the x-axis and the curve given by the integrand.
-                    It is equal to the definite integral of a function. In the field
-                    of pharmacokinetics, the area under the curve (AUC) is the area
-                    under the curve in a plot of concentration of a drug in plasma
-                    against time. AUC is usually given for the time interval zero
-                    to infinity, and other time intervals are indicated.
+                meaning: ""
                 comments: []
                 in_subset:
                 - fa_v1.0
@@ -42621,27 +43075,27 @@ enums:
         - fa_v1.0
         permissible_values:
             Identifies as nonbinary gender:
-                meaning: 'SCTID: 33791000087105'
+                meaning: 'SCTID:33791000087105'
                 comments: []
                 in_subset:
                 - fa_v1.0
             Male-to-female transsexual:
-                meaning: 'SCTID: 407377005'
+                meaning: 'SCTID:407377005'
                 comments: []
                 in_subset:
                 - fa_v1.0
             Female-to-male transsexual:
-                meaning: 'SCTID: 407377005'
+                meaning: 'SCTID:407377005'
                 comments: []
                 in_subset:
                 - fa_v1.0
             Identifies as female gender:
-                meaning: 'SCTID: 446141000124107'
+                meaning: 'SCTID:446141000124107'
                 comments: []
                 in_subset:
                 - fa_v1.0
             Identifies as male gender:
-                meaning: 'SCTID: 446151000124109'
+                meaning: 'SCTID:446151000124109'
                 comments: []
                 in_subset:
                 - fa_v1.0
@@ -46146,7 +46600,7 @@ enums:
                 comments: []
                 in_subset:
                 - nrsts_v2.0
-    RandomizedStatusEnum:
+    RandomizedEnum:
         in_subset:
         - os_v2.0
         permissible_values:
