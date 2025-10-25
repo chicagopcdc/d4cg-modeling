@@ -833,33 +833,30 @@ classes:
     Medication:
         slots:
         - age_at_medication_start
-        - year_at_medication_start
         - age_at_medication_end
-        - disease_site_assessment_submitter_id
+        - year_at_medication_start
         - time_period_submitter_id
-        - protocol_medication
-        - non_protocol_timing
-        - medication_category
-        - administration_status
-        - route
-        - route_detail
-        - medication
-        - number_doses
-        - total_dose_administered
-        - total_dose_intended
-        - total_dose_unit
-        - supportive_care_detail
-        - non_protocol_reason
-        - medication_other
-        - frequency_other
-        - frequency
-        - dose_administered
-        - dose_unit
         - cycles_planned
         - cycle_number
-        - normalization_basis
         - session_number
+        - disease_site_assessment_submitter_id
+        - protocol_medication
+        - non_protocol_timing
+        - non_protocol_reason
+        - medication_category
+        - supportive_care_detail
+        - administration_status
+        - route
+        - medication
+        - medication_other
+        - normalization_basis
         - administration_site
+        - number_doses
+        - dose_administered
+        - dose_intended
+        - medication_dose_unit
+        - frequency
+        - frequency_other
         - total_dose_given
         - delivery_status
         comments:
@@ -907,35 +904,37 @@ classes:
         slots:
         - age_at_rt
         - age_at_rt_start
-        - year_at_rt_start
         - age_at_rt_end
+        - year_at_rt_start
         - time_period_submitter_id
         - protocol_radiation_therapy
         - non_protocol_timing
+        - rt_data_source
         - classification
         - site
         - laterality
         - energy_type
-        - dose
-        - dose_unit
+        - proton_delivery_mode
+        - technique
+        - reporting_level
+        - rt_dose
+        - rt_dose_unit
         - boost
         - boost_type
-        - num_fraction
         - boost_dose
-        - technique
-        - margins
-        - rt_data_source
-        - reporting_level
+        - num_fraction
         - fraction_dose
         - fraction_dose_unit
         - cumulative_target_dose
         - cumulative_target_dose_unit
+        - apex_dose
+        - dose_rate_at_apex
+        - treatment_volume
+        - margins
         - tissue_type
         - transposition_organ
         - treatment_volume
-        - unit
         - indication
-        - proton_delivery_mode
         - rt_completed
         - plaque_size
         - rad_seeds_type
@@ -943,8 +942,6 @@ classes:
         - plaque_source
         - plaque_model
         - brach_calc_type
-        - apex_dose
-        - dose_rate_at_apex
         - implant_duration
         - suture_coordinates
         comments:
@@ -4405,13 +4402,6 @@ slots:
         - rb_v1.2
         annotations:
             tier_priority: rb_v1.2
-    route_detail:
-        slot_uri: ncit:C38114
-        range: RouteDetailEnum
-        comments: []
-        in_subset:
-        - hl_v2.0
-        annotations: {}
     medication:
         slot_uri: ncit:C459
         range: MedicationEnum
@@ -4456,7 +4446,7 @@ slots:
         annotations:
             tier_priority: rb_v1.2
             tier_optional: npc_v1.0
-    total_dose_administered:
+    dose_administered:
         slot_uri: ncit:C94394
         range: decimal
         comments:
@@ -4483,7 +4473,7 @@ slots:
         annotations:
             tier_priority: rb_v1.2
             tier_optional: npc_v1.0
-    total_dose_intended:
+    dose_intended:
         slot_uri: ncit:C173294
         range: decimal
         comments:
@@ -4504,9 +4494,9 @@ slots:
         - rb_v1.2
         annotations:
             tier_optional: npc_v1.0,rb_v1.2
-    total_dose_unit:
+    medication_dose_unit:
         slot_uri: ncit:C17395
-        range: TotalDoseUnitEnum
+        range: MedicationDoseUnitEnum
         comments:
         - '(aml_v2.0) ConsortiumNote: Note: Unit for TOTAL_DOSE_ADMINISTERED and TOTAL_DOSE_INTENDED
             must be the same.'
@@ -4522,6 +4512,7 @@ slots:
         - npc_v1.0
         - os_v2.0
         - rb_v1.2
+        - fa_v1.0
         annotations:
             tier_priority: rb_v1.2
             tier_optional: npc_v1.0
@@ -4696,7 +4687,7 @@ slots:
             tier_optional: npc_v1.0
         broad_mappings:
         - (ews_v2.0) skos:broadMatch [EWS].[v1.0].[Radiation Therapy].[ENERGY_TYPE]
-    dose:
+    rt_dose:
         slot_uri: ncit:C173282
         range: integer
         comments:
@@ -4731,7 +4722,7 @@ slots:
             Therapy].[DOSE]'
         - '[rms_v1.0].[Radiation Therapy].[RT_DOSE] skos:exactMatch [rms_v2.0].[Radiation
             Therapy].[DOSE]'
-    dose_unit:
+    rt_dose_unit:
         slot_uri: ncit:C18068
         range: DoseUnitEnum
         comments: []
@@ -4745,6 +4736,7 @@ slots:
         - npc_v1.0
         - rb_v1.2
         - rms_v2.0
+        - nrsts_v2.0
         annotations:
             tier_mandatory: hl_v2.0
             tier_priority: npc_v1.0
@@ -4761,6 +4753,8 @@ slots:
             Therapy].[DOSE_UNIT]'
         - '[rms_v1.0].[Radiation Therapy].[RT_UNIT] skos:exactMatch [rms_v2.0].[Radiation
             Therapy].[DOSE_UNIT]'
+        - (nrsts_v2.0) [nrsts_v1.0].[Radiation Therapy].[RT_UNIT] skos:exactMatch
+            [nrsts_v2.0].[Radiation Therapy].[DOSE_UNIT]
     boost:
         slot_uri: ncit:C137812
         range: YesNoEnum
@@ -6642,13 +6636,6 @@ slots:
         in_subset:
         - fa_v1.0
         annotations: {}
-    dose_administered:
-        slot_uri: ncit:C25488
-        range: decimal
-        comments: []
-        in_subset:
-        - fa_v1.0
-        annotations: {}
     age_at_tmp:
         slot_uri: ncit:C172697
         range: integer
@@ -7140,16 +7127,6 @@ slots:
         in_subset:
         - nrsts_v2.0
         annotations: {}
-    unit:
-        slot_uri: ''
-        range: UnitEnum
-        comments: []
-        in_subset:
-        - nrsts_v2.0
-        annotations: {}
-        exact_mappings:
-        - (nrsts_v2.0) [nrsts_v1.0].[Radiation Therapy].[RT_UNIT] skos:exactMatch
-            [nrsts_v2.0].[Radiation Therapy].[DOSE_UNIT]
     procedure_site:
         slot_uri: ''
         range: ProcedureSiteEnum
@@ -33802,181 +33779,181 @@ enums:
         - hl_v2.0
         - npc_v1.0
         permissible_values:
-            Karnofsky, 0:
+            Karnofsky >> 0:
                 meaning: ncit:C105720
                 comments: []
                 in_subset:
                 - ews_v2.0
                 - hl_v2.0
                 - npc_v1.0
-            Karnofsky, 10:
+            Karnofsky >> 10:
                 meaning: ncit:C105718
                 comments: []
                 in_subset:
                 - ews_v2.0
                 - hl_v2.0
                 - npc_v1.0
-            Karnofsky, 100:
+            Karnofsky >> 100:
                 meaning: ncit:C105707
                 comments: []
                 in_subset:
                 - ews_v2.0
                 - hl_v2.0
                 - npc_v1.0
-            Karnofsky, 20:
+            Karnofsky >> 20:
                 meaning: ncit:C105716
                 comments: []
                 in_subset:
                 - ews_v2.0
                 - hl_v2.0
                 - npc_v1.0
-            Karnofsky, 30:
+            Karnofsky >> 30:
                 meaning: ncit:C105715
                 comments: []
                 in_subset:
                 - ews_v2.0
                 - hl_v2.0
                 - npc_v1.0
-            Karnofsky, 40:
+            Karnofsky >> 40:
                 meaning: ncit:C105714
                 comments: []
                 in_subset:
                 - ews_v2.0
                 - hl_v2.0
                 - npc_v1.0
-            Karnofsky, 50:
+            Karnofsky >> 50:
                 meaning: ncit:C105713
                 comments: []
                 in_subset:
                 - ews_v2.0
                 - hl_v2.0
                 - npc_v1.0
-            Karnofsky, 60:
+            Karnofsky >> 60:
                 meaning: ncit:C105712
                 comments: []
                 in_subset:
                 - ews_v2.0
                 - hl_v2.0
                 - npc_v1.0
-            Karnofsky, 70:
+            Karnofsky >> 70:
                 meaning: ncit:C105711
                 comments: []
                 in_subset:
                 - ews_v2.0
                 - hl_v2.0
                 - npc_v1.0
-            Karnofsky, 80:
+            Karnofsky >> 80:
                 meaning: ncit:C105710
                 comments: []
                 in_subset:
                 - ews_v2.0
                 - hl_v2.0
                 - npc_v1.0
-            Karnofsky, 90:
+            Karnofsky >> 90:
                 meaning: ncit:C105709
                 comments: []
                 in_subset:
                 - ews_v2.0
                 - hl_v2.0
                 - npc_v1.0
-            Lansky, 0:
+            Lansky >> 0:
                 meaning: ncit:C70538
                 comments: []
                 in_subset:
                 - ews_v2.0
                 - hl_v2.0
                 - npc_v1.0
-            Lansky, 10:
+            Lansky >> 10:
                 meaning: ncit:C70539
                 comments: []
                 in_subset:
                 - ews_v2.0
                 - hl_v2.0
                 - npc_v1.0
-            Lansky, 100:
-                meaning: ncit:C69426
-                comments: []
-                in_subset:
-                - ews_v2.0
-                - hl_v2.0
-                - npc_v1.0
-            Lansky, 20:
+            Lansky >> 20:
                 meaning: ncit:C70540
                 comments: []
                 in_subset:
                 - ews_v2.0
                 - hl_v2.0
                 - npc_v1.0
-            Lansky, 30:
+            Lansky >> 30:
                 meaning: ncit:C70541
                 comments: []
                 in_subset:
                 - ews_v2.0
                 - hl_v2.0
                 - npc_v1.0
-            Lansky, 40:
+            Lansky >> 40:
                 meaning: ncit:C70542
                 comments: []
                 in_subset:
                 - ews_v2.0
                 - hl_v2.0
                 - npc_v1.0
-            Lansky, 50:
+            Lansky >> 50:
                 meaning: ncit:C69421
                 comments: []
                 in_subset:
                 - ews_v2.0
                 - hl_v2.0
                 - npc_v1.0
-            Lansky, 60:
+            Lansky >> 60:
                 meaning: ncit:C69422
                 comments: []
                 in_subset:
                 - ews_v2.0
                 - hl_v2.0
                 - npc_v1.0
-            Lansky, 70:
+            Lansky >> 70:
                 meaning: ncit:C69423
                 comments: []
                 in_subset:
                 - ews_v2.0
                 - hl_v2.0
                 - npc_v1.0
-            Lansky, 80:
+            Lansky >> 80:
                 meaning: ncit:C69424
                 comments: []
                 in_subset:
                 - ews_v2.0
                 - hl_v2.0
                 - npc_v1.0
-            Lansky, 90:
+            Lansky >> 90:
                 meaning: ncit:C69425
                 comments: []
                 in_subset:
                 - ews_v2.0
                 - hl_v2.0
                 - npc_v1.0
-            GPOH, 1:
+            Lansky >> 100:
+                meaning: ncit:C69426
+                comments: []
+                in_subset:
+                - ews_v2.0
+                - hl_v2.0
+                - npc_v1.0
+            GPOH >> 1:
                 meaning: ncit:C174992
                 comments: []
                 in_subset:
                 - ews_v2.0
-            GPOH, 2:
+            GPOH >> 2:
                 meaning: ncit:C174993
                 comments: []
                 in_subset:
                 - ews_v2.0
-            GPOH, 3:
+            GPOH >> 3:
                 meaning: ncit:C174994
                 comments: []
                 in_subset:
                 - ews_v2.0
-            GPOH, 4:
+            GPOH >> 4:
                 meaning: ncit:C174995
                 comments: []
                 in_subset:
                 - ews_v2.0
-            GPOH, 5:
+            GPOH >> 5:
                 meaning: ncit:C174996
                 comments: []
                 in_subset:
@@ -34563,6 +34540,12 @@ enums:
                 comments: []
                 in_subset:
                 - fa_v1.0
+                - hl_v2.0
+            Parenteral:
+                meaning: ncit:C38291
+                comments: []
+                in_subset:
+                - hl_v2.0
             Subcutaneous:
                 meaning: ''
                 comments: []
@@ -34608,20 +34591,6 @@ enums:
                 - aml_v2.0
                 - fa_v1.0
                 - rb_v1.2
-    RouteDetailEnum:
-        in_subset:
-        - hl_v2.0
-        permissible_values:
-            Parenteral:
-                meaning: ncit:C38291
-                comments: []
-                in_subset:
-                - hl_v2.0
-            Oral:
-                meaning: ncit:C38288
-                comments: []
-                in_subset:
-                - hl_v2.0
     MedicationEnum:
         in_subset:
         - aml_v2.0
@@ -36086,7 +36055,7 @@ enums:
                 - lt_v1.0
                 - npc_v1.0
                 - rb_v1.2
-    TotalDoseUnitEnum:
+    MedicationDoseUnitEnum:
         in_subset:
         - aml_v2.0
         - ews_v2.0
@@ -36095,6 +36064,7 @@ enums:
         - npc_v1.0
         - os_v2.0
         - rb_v1.2
+        - fa_v1.0
         permissible_values:
             IU:
                 meaning: ncit:C48579
@@ -37014,7 +36984,7 @@ enums:
                 - hl_v2.0
                 - npc_v1.0
                 - rb_v1.2
-    DoseUnitEnum:
+    RtDoseUnitEnum:
         in_subset:
         - aml_v2.0
         - cns_v1.2
@@ -37045,6 +37015,7 @@ enums:
                 - cns_v1.2
                 - fa_v1.0
                 - npc_v1.0
+                - rb_v1.2
             CGE:
                 meaning: ncit:C128269
                 comments: []
@@ -37052,66 +37023,6 @@ enums:
                 - cns_v1.2
                 - fa_v1.0
                 - npc_v1.0
-                - rb_v1.2
-            g:
-                meaning: ''
-                comments: []
-                in_subset:
-                - fa_v1.0
-            mg/m2:
-                meaning: ncit:C67402
-                comments: []
-                in_subset:
-                - fa_v1.0
-            mg/kilo:
-                meaning: ncit:C67401
-                comments: []
-                in_subset:
-                - fa_v1.0
-            mg:
-                meaning: ncit:C67402
-                comments: []
-                in_subset:
-                - fa_v1.0
-            IU:
-                meaning: ncit:C48579
-                comments: []
-                in_subset:
-                - fa_v1.0
-            IU/m2:
-                meaning: ncit:C67378
-                comments: []
-                in_subset:
-                - fa_v1.0
-            mcg:
-                meaning: ncit:C48152
-                comments: []
-                in_subset:
-                - fa_v1.0
-            AUC:
-                meaning: ncit:C64774
-                comments: []
-                in_subset:
-                - fa_v1.0
-            mm/mg2:
-                meaning: The area between the x-axis and the curve given by the integrand.
-                    It is equal to the definite integral of a function. In the field
-                    of pharmacokinetics, the area under the curve (AUC) is the area
-                    under the curve in a plot of concentration of a drug in plasma
-                    against time. AUC is usually given for the time interval zero
-                    to infinity, and other time intervals are indicated.
-                comments: []
-                in_subset:
-                - fa_v1.0
-            mg/kg:
-                meaning: ncit:C173589
-                comments: []
-                in_subset:
-                - fa_v1.0
-            cGY:
-                meaning: ncit:C64693
-                comments: []
-                in_subset:
                 - rb_v1.2
             Unknown:
                 meaning: ncit:C17998
