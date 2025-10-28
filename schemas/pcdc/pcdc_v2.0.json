@@ -1046,6 +1046,7 @@
                 "subjects_submitter_id",
                 "timings_submitter_id",
                 "age_at_disease_characteristic",
+                "disease_site_assessment_submitter_id",
                 "detection_method",
                 "risk_group",
                 "gts_treatment",
@@ -1070,7 +1071,6 @@
                 "cranial_nerve_involvement",
                 "skip_lesion",
                 "skip_met_involvement",
-                "disease_site_assessment_submitter_id",
                 "trilateral_retinoblastoma",
                 "evaluator",
                 "presentation_symptoms",
@@ -1408,7 +1408,6 @@
                 "conditioning_type",
                 "prior_tbi",
                 "total_cycles",
-                "cd34_collect",
                 "recovery_type",
                 "recovery_status",
                 "cd34_collected",
@@ -1417,7 +1416,6 @@
                 "stem_cell_processing_other",
                 "chimerism",
                 "chimerism_unit",
-                "cd34_coll",
                 "sct_success"
             ],
             "slot_usage": {
@@ -1452,7 +1450,7 @@
                 "subjects_submitter_id",
                 "timings_submitter_id",
                 "age_at_tmp_start",
-                "type",
+                "tmp_type",
                 "product",
                 "product_type",
                 "number_units"
@@ -1485,7 +1483,7 @@
             "slots": [
                 "age_at_cimt_start",
                 "time_period_submitter_id",
-                "type"
+                "cimt_type"
             ],
             "slot_usage": {
                 "subjects_submitter_id": {
@@ -1515,8 +1513,10 @@
                 "timings_submitter_id",
                 "age_at_response",
                 "disease_site_assessment_submitter_id",
+                "tx_prior_response",
                 "response_category",
                 "response",
+                "response_method",
                 "response_system",
                 "response_system_version",
                 "bm_pct_blasts_at_response",
@@ -1525,13 +1525,11 @@
                 "anc_threshold_at_response",
                 "platelet_count_at_response",
                 "platelet_threshold_at_response",
-                "response_method",
                 "interim_response",
                 "pct_change",
                 "symptoms",
                 "palpable_nodes",
                 "nodular_splenic",
-                "tx_prior_response",
                 "necrosis",
                 "necrosis_pct",
                 "mri_sequence",
@@ -5477,13 +5475,6 @@
             ],
             "annotations": {}
         },
-        "cd34_collect": {
-            "slot_uri": "ncit:C175036",
-            "range": "decimal",
-            "comments": [],
-            "in_subset": [],
-            "annotations": {}
-        },
         "age_at_tmp_start": {
             "slot_uri": "ncit:C172697",
             "range": "integer",
@@ -5496,9 +5487,9 @@
                 "tier_optional": "hl_v2.0"
             }
         },
-        "type": {
+        "tmp_type": {
             "slot_uri": "ncit:C173057",
-            "range": "TypeEnum",
+            "range": "TmpTypeEnum",
             "comments": [],
             "in_subset": [
                 "aml_v2.0",
@@ -5508,6 +5499,15 @@
             "annotations": {
                 "tier_optional": "hl_v2.0"
             }
+        },
+         "cimt_type": {
+            "slot_uri": "ncit:C173057",
+            "range": "CimtTypeEnum",
+            "comments": [],
+            "in_subset": [
+                "aml_v2.0"
+            ],
+            "annotations": {}
         },
         "product": {
             "slot_uri": "ncit:C173287",
@@ -6979,7 +6979,9 @@
                 "ews_v2.0",
                 "fa_v1.0"
             ],
-            "annotations": {}
+            "annotations": {
+                 "tier_mandatory": "hl_v2.0"
+            }
         },
         "cd34_transplant": {
             "slot_uri": "ncit:C175037",
@@ -6987,7 +6989,8 @@
             "comments": [],
             "in_subset": [
                 "ews_v2.0",
-                "fa_v1.0"
+                "fa_v1.0",
+                "hl_v2.0"
             ],
             "annotations": {}
         },
@@ -7594,17 +7597,6 @@
             ],
             "annotations": {
                 "tier_optional": "hl_v2.0"
-            }
-        },
-        "cd34_coll": {
-            "slot_uri": "ncit:C175036",
-            "range": "integer",
-            "comments": [],
-            "in_subset": [
-                "hl_v2.0"
-            ],
-            "annotations": {
-                "tier_mandatory": "hl_v2.0"
             }
         },
         "ae_system": {
@@ -51685,7 +51677,7 @@
                 }
             }
         },
-        "TypeEnum": {
+        "TmpTypeEnum": {
             "in_subset": [
                 "aml_v2.0",
                 "fa_v1.0",
@@ -51699,20 +51691,6 @@
                         "aml_v2.0",
                         "fa_v1.0",
                         "hl_v2.0"
-                    ]
-                },
-                "Donor Lymphocyte Infusion": {
-                    "meaning": "ncit:C16145",
-                    "comments": [],
-                    "in_subset": [
-                        "aml_v2.0"
-                    ]
-                },
-                "Chimeric Antigen Receptor T-cell Therapy": {
-                    "meaning": "ncit:C126102",
-                    "comments": [],
-                    "in_subset": [
-                        "aml_v2.0"
                     ]
                 },
                 "Exchange Transfusion": {
@@ -51745,6 +51723,42 @@
                         "hl_v2.0"
                     ]
                 },
+                "Not Reported": {
+                    "meaning": "ncit:C43234",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v2.0",
+                        "fa_v1.0"
+                    ]
+                }
+            }
+        },
+        "CimtTypeEnum": {
+            "in_subset": [
+                "aml_v2.0"
+            ],
+            "permissible_values": {
+                "Donor Lymphocyte Infusion": {
+                    "meaning": "ncit:C16145",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v2.0"
+                    ]
+                },
+                "Chimeric Antigen Receptor T-cell Therapy": {
+                    "meaning": "ncit:C126102",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v2.0"
+                    ]
+                },
+                "Other": {
+                    "meaning": "ncit:C17649",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v2.0"
+                    ]
+                },
                 "Unknown": {
                     "meaning": "ncit:C17998",
                     "comments": [],
@@ -51756,8 +51770,7 @@
                     "meaning": "ncit:C43234",
                     "comments": [],
                     "in_subset": [
-                        "aml_v2.0",
-                        "fa_v1.0"
+                        "aml_v2.0"
                     ]
                 }
             }
@@ -52110,126 +52123,126 @@
                         "cns_v1.2"
                     ]
                 },
-                "RECIST>>Complete Response": {
+                "RECIST >> Complete Response": {
                     "meaning": "ncit:C4870",
                     "comments": [],
                     "in_subset": [
                         "npc_v1.0"
                     ]
                 },
-                "RECIST>>Partial Response": {
+                "RECIST >> Partial Response": {
                     "meaning": "ncit:C159547",
                     "comments": [],
                     "in_subset": [
                         "npc_v1.0"
                     ]
                 },
-                "RECIST>>Progressive Disease": {
+                "RECIST >> Progressive Disease": {
                     "meaning": "ncit:C159716",
                     "comments": [],
                     "in_subset": [
                         "npc_v1.0"
                     ]
                 },
-                "RECIST>>Stable Disease": {
+                "RECIST >> Stable Disease": {
                     "meaning": "ncit:C159546",
                     "comments": [],
                     "in_subset": [
                         "npc_v1.0"
                     ]
                 },
-                "WHO>>Complete Response": {
+                "WHO >> Complete Response": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
                         "npc_v1.0"
                     ]
                 },
-                "WHO>>Partial Response": {
+                "WHO >> Partial Response": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
                         "npc_v1.0"
                     ]
                 },
-                "WHO>>Progressive Disease": {
+                "WHO >> Progressive Disease": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
                         "npc_v1.0"
                     ]
                 },
-                "WHO>>Stable Disease": {
+                "WHO >> Stable Disease": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
                         "npc_v1.0"
                     ]
                 },
-                "EXPeRT>>Complete Response": {
+                "EXPeRT >> Complete Response": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
                         "npc_v1.0"
                     ]
                 },
-                "EXPeRT>>Very Good Partial Response": {
+                "EXPeRT >> Very Good Partial Response": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
                         "npc_v1.0"
                     ]
                 },
-                "EXPeRT>>Partial Response": {
+                "EXPeRT >> Partial Response": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
                         "npc_v1.0"
                     ]
                 },
-                "EXPeRT>>Minor Response": {
+                "EXPeRT >> Minor Response": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
                         "npc_v1.0"
                     ]
                 },
-                "EXPeRT>>Stable Disease": {
+                "EXPeRT >> Stable Disease": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
                         "npc_v1.0"
                     ]
                 },
-                "EXPeRT>>Progressive Disease": {
+                "EXPeRT >> Progressive Disease": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
                         "npc_v1.0"
                     ]
                 },
-                "System NOS>>Very Good Partial Response": {
+                "System NOS >> Very Good Partial Response": {
                     "meaning": "ncit:C123618",
                     "comments": [],
                     "in_subset": [
                         "npc_v1.0"
                     ]
                 },
-                "System NOS>>Partial Response": {
+                "System NOS >> Partial Response": {
                     "meaning": "ncit:C18058",
                     "comments": [],
                     "in_subset": [
                         "npc_v1.0"
                     ]
                 },
-                "System NOS>>Progressive Disease": {
+                "System NOS >> Progressive Disease": {
                     "meaning": "ncit:C35571",
                     "comments": [],
                     "in_subset": [
                         "npc_v1.0"
                     ]
                 },
-                "System NOS>>Stable Disease": {
+                "System NOS >> Stable Disease": {
                     "meaning": "ncit:C18213",
                     "comments": [],
                     "in_subset": [
