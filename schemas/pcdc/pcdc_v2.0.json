@@ -22004,6 +22004,13 @@
                         "npc_v1.0"
                     ]
                 },
+                "dB": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "npc_v1.0"
+                    ]
+                },
                 "kg/m2": {
                     "meaning": "ncit:C49671",
                     "comments": [],
@@ -22147,13 +22154,6 @@
                 },
                 "mg/dL": {
                     "meaning": "ncit:C67015",
-                    "comments": [],
-                    "in_subset": [
-                        "fa_v1.0"
-                    ]
-                },
-                "\u00b5g/L": {
-                    "meaning": "ncit:C67306",
                     "comments": [],
                     "in_subset": [
                         "fa_v1.0"
