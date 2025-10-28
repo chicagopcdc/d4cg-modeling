@@ -1076,10 +1076,6 @@
                 "presentation_symptoms",
                 "clinical_signs",
                 "suspected_referring_diagnosis",
-                "visual_acuity_technique",
-                "visual_acuity_result",
-                "visual_acuity_result_numeric",
-                "visual_acuity_notation",
                 "anterior_segment_exam",
                 "anterior_segment_details",
                 "intraocular_pressure",
@@ -2852,9 +2848,12 @@
             "comments": [],
             "in_subset": [
                 "aml_v2.0",
-                "hl_v2.0"
+                "hl_v2.0",
+                "rb_v1.2"
             ],
-            "annotations": {}
+            "annotations": {
+                "tier_priority": "rb_v1.2"
+            }
         },
         "result_text": {
             "slot_uri": "ncit:C36292",
@@ -2868,7 +2867,8 @@
                 "(hl_v2.0) ConsortiumNote: Note: String result can include anything that is not a single numeric result, i.e. 'Positive', 'Negative', 'Present', 'Absent', 'Yes', 'No', 'Elevated,' 'Depressed', 'Above threshold', 'Below threshold', ranges, as well as bucketed categories, etc... Note: Only fill in this variable when the available data is anything EXCEPT a single numeric value, and include the entire available data as a string, including units if applicable",
                 "D4CGNote: modifier note",
                 "(npc_v1.0) ConsortiumNote: ConditionalStatement: If 'RESULT_MODIFIER' and 'RESULT_NUMERIC' are null.",
-                "(ews_v2.0) skos:exactMatch [EWS].[v1.0].[Lab].[LAB_RESULT]"
+                "(ews_v2.0) skos:exactMatch [EWS].[v1.0].[Lab].[LAB_RESULT]",
+                "(rb_v1.2) ConsortiumNote: For Visual Acuity tests, report specifically these results: 'Blinks to Light', 'Fix and Follow', 'Central Steady Maintained', 'Counting Fingers', 'Hand Motion', 'Light Perception', 'No Light Perception'"
             ],
             "in_subset": [
                 "aml_v2.0",
@@ -2905,11 +2905,12 @@
                 "hl_v2.0",
                 "lt_v1.0",
                 "npc_v1.0",
-                "nbl_v2.0"
+                "nbl_v2.0",
+                "rb_v1.2"
             ],
             "annotations": {
                 "tier_mandatory": "npc_v1.0",
-                "tier_priority": "lt_v1.0,npc_v1.0"
+                "tier_priority": "lt_v1.0,npc_v1.0,rb_v1.2"
             }
         },
         "result_unit": {
@@ -2935,10 +2936,11 @@
                 "gct_v2.0",
                 "hl_v2.0",
                 "lt_v1.0",
-                "npc_v1.0"
+                "npc_v1.0",
+                "rb_v1.2"
             ],
             "annotations": {
-                "tier_priority": "lt_v1.0,npc_v1.0",
+                "tier_priority": "lt_v1.0,npc_v1.0,rb_v1.2",
                 "tier_optional": "npc_v1.0"
             }
         },
@@ -3018,7 +3020,8 @@
                 "aml_v2.0",
                 "fa_v1.0",
                 "hl_v2.0",
-                "npc_v1.0"
+                "npc_v1.0",
+                "rb_v1.2"
             ],
             "annotations": {
                 "tier_mandatory": "fa_v1.0,npc_v1.0"
@@ -8425,50 +8428,6 @@
             ],
             "annotations": {
                 "tier_optional": "rb_v1.2"
-            }
-        },
-        "visual_acuity_technique": {
-            "slot_uri": "",
-            "range": "VisualAcuityTechniqueEnum",
-            "comments": [],
-            "in_subset": [
-                "rb_v1.2"
-            ],
-            "annotations": {
-                "tier_priority": "rb_v1.2"
-            }
-        },
-        "visual_acuity_result": {
-            "slot_uri": "",
-            "range": "VisualAcuityResultEnum",
-            "comments": [],
-            "in_subset": [
-                "rb_v1.2"
-            ],
-            "annotations": {
-                "tier_priority": "rb_v1.2"
-            }
-        },
-        "visual_acuity_result_numeric": {
-            "slot_uri": "",
-            "range": "decimal",
-            "comments": [],
-            "in_subset": [
-                "rb_v1.2"
-            ],
-            "annotations": {
-                "tier_priority": "rb_v1.2"
-            }
-        },
-        "visual_acuity_notation": {
-            "slot_uri": "",
-            "range": "VisualAcuityNotationEnum",
-            "comments": [],
-            "in_subset": [
-                "rb_v1.2"
-            ],
-            "annotations": {
-                "tier_priority": "rb_v1.2"
             }
         },
         "anterior_segment_exam": {
@@ -21853,7 +21812,8 @@
         "FunctionalMeasurementTypeEnum": {
             "in_subset": [
                 "aml_v2.0",
-                "hl_v2.0"
+                "hl_v2.0",
+                "rb_v1.2"
             ],
             "permissible_values": {
                 "DLCO": {
@@ -21913,6 +21873,84 @@
                     "in_subset": [
                         "hl_v2.0"
                     ]
+                },
+                "Allen Picture Card": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "rb_v1.2"
+                    ]
+                },
+                "Cardiff Acuity Card": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "rb_v1.2"
+                    ]
+                },
+                "HOTV Test": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "rb_v1.2"
+                    ]
+                },
+                "Landolt C": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "rb_v1.2"
+                    ]
+                },
+                "Lea Numbers": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "rb_v1.2"
+                    ]
+                },
+                "Lea Symbols": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "rb_v1.2"
+                    ]
+                },
+                "LogMAR Chart": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "rb_v1.2"
+                    ]
+                },
+                "Snellen Chart": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "rb_v1.2"
+                    ]
+                },
+                "Teller Acuity Card": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "rb_v1.2"
+                    ]
+                },
+                "Tumbling E": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "rb_v1.2"
+                    ]
+                },
+                "Visual Evoked Potentials (VEP)": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "rb_v1.2",
+                        "fa_v1.0"
+                    ]
                 }
             }
         },
@@ -21926,7 +21964,8 @@
                 "gct_v2.0",
                 "hl_v2.0",
                 "lt_v1.0",
-                "npc_v1.0"
+                "npc_v1.0",
+                "rb_v1.2"
             ],
             "permissible_values": {
                 "kg": {
@@ -21954,6 +21993,13 @@
                         "fa_v1.0",
                         "gct_v2.0",
                         "hl_v2.0",
+                        "npc_v1.0"
+                    ]
+                },
+                "dB": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
                         "npc_v1.0"
                     ]
                 },
@@ -22105,13 +22151,6 @@
                         "fa_v1.0"
                     ]
                 },
-                "\u00b5g/L": {
-                    "meaning": "ncit:C67306",
-                    "comments": [],
-                    "in_subset": [
-                        "fa_v1.0"
-                    ]
-                },
                 "seconds": {
                     "meaning": "ncit:C42535",
                     "comments": [],
@@ -22182,11 +22221,32 @@
                         "npc_v1.0"
                     ]
                 },
-                "dB": {
+                "Decimal": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
-                        "npc_v1.0"
+                        "rb_v1.2"
+                    ]
+                },
+                "LogMAR": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "rb_v1.2"
+                    ]
+                },
+                "Snellen in Feet": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "rb_v1.2"
+                    ]
+                },
+                "Snellen in Meters": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "rb_v1.2"
                     ]
                 },
                 "Unknown": {
@@ -22341,7 +22401,8 @@
                 "aml_v2.0",
                 "fa_v1.0",
                 "hl_v2.0",
-                "npc_v1.0"
+                "npc_v1.0",
+                "rb_v1.2"
             ],
             "permissible_values": {
                 "Audiogram, NOS": {
@@ -22405,14 +22466,8 @@
                     "meaning": "C87149",
                     "comments": [],
                     "in_subset": [
-                        "fa_v1.0"
-                    ]
-                },
-                "Visual Evoked Potentials": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "fa_v1.0"
+                        "fa_v1.0",
+                        "rb_v1.2"
                     ]
                 }
             }
@@ -64384,223 +64439,6 @@
                 },
                 "Not Applicable": {
                     "meaning": "ncit:C48660",
-                    "comments": [],
-                    "in_subset": [
-                        "rb_v1.2"
-                    ]
-                }
-            }
-        },
-        "VisualAcuityTechniqueEnum": {
-            "in_subset": [
-                "rb_v1.2"
-            ],
-            "permissible_values": {
-                "LogMAR Chart": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "rb_v1.2"
-                    ]
-                },
-                "Snellen Chart": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "rb_v1.2"
-                    ]
-                },
-                "Tumbling E": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "rb_v1.2"
-                    ]
-                },
-                "Landolt C": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "rb_v1.2"
-                    ]
-                },
-                "Lea Symbols": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "rb_v1.2"
-                    ]
-                },
-                "Lea Numbers": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "rb_v1.2"
-                    ]
-                },
-                "Allen Picture Card": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "rb_v1.2"
-                    ]
-                },
-                "HOTV Test": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "rb_v1.2"
-                    ]
-                },
-                "Cardiff Acuity Card": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "rb_v1.2"
-                    ]
-                },
-                "Teller Acuity Card": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "rb_v1.2"
-                    ]
-                },
-                "Visual Evoked Potentials (VEP)": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "rb_v1.2"
-                    ]
-                },
-                "Unknown": {
-                    "meaning": "ncit:C17998",
-                    "comments": [],
-                    "in_subset": [
-                        "rb_v1.2"
-                    ]
-                },
-                "Not Reported": {
-                    "meaning": "ncit:C43234",
-                    "comments": [],
-                    "in_subset": [
-                        "rb_v1.2"
-                    ]
-                }
-            }
-        },
-        "VisualAcuityResultEnum": {
-            "in_subset": [
-                "rb_v1.2"
-            ],
-            "permissible_values": {
-                "Blinks to Light": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "rb_v1.2"
-                    ]
-                },
-                "Fix and Follow": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "rb_v1.2"
-                    ]
-                },
-                "Central Steady Maintained (CSM)": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "rb_v1.2"
-                    ]
-                },
-                "Counting Fingers (CF)": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "rb_v1.2"
-                    ]
-                },
-                "Hand Motion (HM)": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "rb_v1.2"
-                    ]
-                },
-                "Light Perception (LP)": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "rb_v1.2"
-                    ]
-                },
-                "No Light Perception (NLP)": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "rb_v1.2"
-                    ]
-                },
-                "Unknown": {
-                    "meaning": "ncit:C17998",
-                    "comments": [],
-                    "in_subset": [
-                        "rb_v1.2"
-                    ]
-                },
-                "Not Reported": {
-                    "meaning": "ncit:C43234",
-                    "comments": [],
-                    "in_subset": [
-                        "rb_v1.2"
-                    ]
-                }
-            }
-        },
-        "VisualAcuityNotationEnum": {
-            "in_subset": [
-                "rb_v1.2"
-            ],
-            "permissible_values": {
-                "Decimal": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "rb_v1.2"
-                    ]
-                },
-                "Snellen in Feet": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "rb_v1.2"
-                    ]
-                },
-                "Snellen in Meters": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "rb_v1.2"
-                    ]
-                },
-                "LogMAR": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "rb_v1.2"
-                    ]
-                },
-                "Unknown": {
-                    "meaning": "ncit:C17998",
-                    "comments": [],
-                    "in_subset": [
-                        "rb_v1.2"
-                    ]
-                },
-                "Not Reported": {
-                    "meaning": "ncit:C43234",
                     "comments": [],
                     "in_subset": [
                         "rb_v1.2"
