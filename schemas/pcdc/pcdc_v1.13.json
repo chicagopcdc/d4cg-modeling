@@ -596,7 +596,6 @@
                 "age_at_hist_assessment",
                 "hist_assessment_review",
                 "histology",
-                "tumor_site",
                 "histology_result",
                 "histology_result_numeric",
                 "histology_result_unit",
@@ -1060,6 +1059,33 @@
                 "domain": "intervention"
             }
         },
+        "CellularImmunotherapy": {
+            "slots": [
+                "subjects_submitter_id",
+                "timings_submitter_id",
+                "age_at_cimt_start",
+                "cimt_type"
+            ],
+            "slot_usage": {
+                "subjects_submitter_id": {
+                    "required": true,
+                    "inlined": false,
+                    "range": "Subject"
+                },
+                "timings_submitter_id": {
+                    "required": true,
+                    "inlined": false,
+                    "range": "Timing"
+                }
+            },
+            "comments": [],
+            "in_subset": [
+                "aml_v1.8-live"
+            ],
+            "annotations": {
+                "domain": "intervention"
+            }
+        },
         "NonProtocolTherapy": {
             "slots": [
                 "subjects_submitter_id",
@@ -1087,6 +1113,7 @@
                 "subjects_submitter_id",
                 "timings_submitter_id",
                 "age_at_response",
+                "response_method",
                 "response_category",
                 "response_criteria",
                 "response_criteria_version",
@@ -1102,7 +1129,6 @@
                 "necrosis_pct",
                 "nodular_splenic",
                 "palpable_nodes",
-                "response_method",
                 "symptoms",
                 "tx_prior_response"
             ],
@@ -1237,6 +1263,7 @@
             },
             "comments": [],
             "in_subset": [
+                "aml_v1.8-live",
                 "gct_v1.2-live",
                 "hl_v1.0-live"
             ],
@@ -1311,7 +1338,9 @@
                 "nrsts_v1.0-live",
                 "rms_v2.0-live"
             ],
-            "annotations": {}
+            "annotations": {
+                "tier_optional": "rms_v2.0-live"
+            }
         },
         "subjects_submitter_id": {
             "slot_uri": "",
@@ -1328,7 +1357,9 @@
                 "nrsts_v1.0-live",
                 "rms_v2.0-live"
             ],
-            "annotations": {}
+            "annotations": {
+                "tier_optional": "rms_v2.0-live"
+            }
         },
         "timings_submitter_id": {
             "slot_uri": "",
@@ -1345,7 +1376,9 @@
                 "nrsts_v1.0-live",
                 "rms_v2.0-live"
             ],
-            "annotations": {}
+            "annotations": {
+                "tier_optional": "rms_v2.0-live"
+            }
         },
         "honest_broker_subject_id": {
             "slot_uri": "ncit:C168949",
@@ -1360,7 +1393,7 @@
                 "rms_v2.0-live"
             ],
             "annotations": {
-                "tier_priority": "aml_v1.8-live,hl_v1.0-live"
+                "tier_priority": "aml_v1.8-live,hl_v1.0-live,rms_v2.0-live"
             }
         },
         "data_contributor_id": {
@@ -1376,7 +1409,7 @@
                 "rms_v2.0-live"
             ],
             "annotations": {
-                "tier_priority": "aml_v1.8-live,hl_v1.0-live"
+                "tier_priority": "aml_v1.8-live,hl_v1.0-live,rms_v2.0-live"
             }
         },
         "study_id": {
@@ -1392,7 +1425,7 @@
                 "rms_v2.0-live"
             ],
             "annotations": {
-                "tier_priority": "aml_v1.8-live,hl_v1.0-live"
+                "tier_priority": "aml_v1.8-live,hl_v1.0-live,rms_v2.0-live"
             }
         },
         "age_at_enrollment": {
@@ -1421,7 +1454,7 @@
                 "rms_v2.0-live"
             ],
             "annotations": {
-                "tier_priority": "aml_v1.8-live,hl_v1.0-live"
+                "tier_priority": "aml_v1.8-live,hl_v1.0-live,rms_v2.0-live"
             }
         },
         "enrolled_status": {
@@ -1449,7 +1482,9 @@
                 "nrsts_v1.0-live",
                 "rms_v2.0-live"
             ],
-            "annotations": {}
+            "annotations": {
+                "tier_optional": "rms_v2.0-live"
+            }
         },
         "disease_phase": {
             "slot_uri": "ncit:C168878",
@@ -1472,7 +1507,7 @@
                 "rms_v2.0-live"
             ],
             "annotations": {
-                "tier_priority": "aml_v1.8-live,hl_v1.0-live",
+                "tier_priority": "aml_v1.8-live,hl_v1.0-live,rms_v2.0-live",
                 "tier_optional": "hl_v1.0-live"
             }
         },
@@ -1496,7 +1531,7 @@
                 "rms_v2.0-live"
             ],
             "annotations": {
-                "tier_priority": "hl_v1.0-live",
+                "tier_priority": "hl_v1.0-live,rms_v2.0-live",
                 "tier_optional": "hl_v1.0-live"
             }
         },
@@ -1516,7 +1551,7 @@
                 "rms_v2.0-live"
             ],
             "annotations": {
-                "tier_priority": "aml_v1.8-live,hl_v1.0-live"
+                "tier_priority": "aml_v1.8-live,hl_v1.0-live,rms_v2.0-live"
             }
         },
         "year_at_disease_phase": {
@@ -1535,7 +1570,7 @@
                 "rms_v2.0-live"
             ],
             "annotations": {
-                "tier_priority": "aml_v1.8-live,hl_v1.0-live"
+                "tier_priority": "aml_v1.8-live,hl_v1.0-live,rms_v2.0-live"
             }
         },
         "course": {
@@ -1547,8 +1582,7 @@
             "in_subset": [
                 "aml_v1.8-live",
                 "hl_v1.0-live",
-                "nrsts_v1.0-live",
-                "rms_v2.0-live"
+                "nrsts_v1.0-live"
             ],
             "annotations": {
                 "tier_priority": "aml_v1.8-live,hl_v1.0-live",
@@ -1565,9 +1599,7 @@
             ],
             "in_subset": [
                 "aml_v1.8-live",
-                "hl_v1.0-live",
-                "nrsts_v1.0-live",
-                "rms_v2.0-live"
+                "hl_v1.0-live"
             ],
             "annotations": {
                 "tier_priority": "hl_v1.0-live",
@@ -1580,9 +1612,7 @@
             "comments": [],
             "in_subset": [
                 "aml_v1.8-live",
-                "hl_v1.0-live",
-                "nrsts_v1.0-live",
-                "rms_v2.0-live"
+                "hl_v1.0-live"
             ],
             "annotations": {
                 "tier_priority": "hl_v1.0-live"
@@ -1594,9 +1624,7 @@
             "comments": [],
             "in_subset": [
                 "aml_v1.8-live",
-                "hl_v1.0-live",
-                "nrsts_v1.0-live",
-                "rms_v2.0-live"
+                "hl_v1.0-live"
             ],
             "annotations": {
                 "tier_priority": "hl_v1.0-live"
@@ -1666,7 +1694,7 @@
                 "rms_v2.0-live"
             ],
             "annotations": {
-                "tier_priority": "aml_v1.8-live,hl_v1.0-live"
+                "tier_priority": "aml_v1.8-live,hl_v1.0-live,rms_v2.0-live"
             }
         },
         "race": {
@@ -1682,7 +1710,7 @@
                 "rms_v2.0-live"
             ],
             "annotations": {
-                "tier_priority": "aml_v1.8-live,hl_v1.0-live"
+                "tier_priority": "aml_v1.8-live,hl_v1.0-live,rms_v2.0-live"
             }
         },
         "ethnicity": {
@@ -1698,7 +1726,7 @@
                 "rms_v2.0-live"
             ],
             "annotations": {
-                "tier_priority": "aml_v1.8-live,hl_v1.0-live"
+                "tier_priority": "aml_v1.8-live,hl_v1.0-live,rms_v2.0-live"
             }
         },
         "medical_history": {
@@ -1730,7 +1758,7 @@
                 "rms_v2.0-live"
             ],
             "annotations": {
-                "tier_priority": "aml_v1.8-live,hl_v1.0-live"
+                "tier_priority": "aml_v1.8-live,hl_v1.0-live,rms_v2.0-live"
             }
         },
         "lkss": {
@@ -1746,7 +1774,7 @@
                 "rms_v2.0-live"
             ],
             "annotations": {
-                "tier_priority": "aml_v1.8-live,hl_v1.0-live"
+                "tier_priority": "aml_v1.8-live,hl_v1.0-live,rms_v2.0-live"
             }
         },
         "age_lost_to_follow_up": {
@@ -1777,7 +1805,7 @@
                 "rms_v2.0-live"
             ],
             "annotations": {
-                "tier_priority": "aml_v1.8-live,hl_v1.0-live"
+                "tier_priority": "aml_v1.8-live,hl_v1.0-live,rms_v2.0-live"
             }
         },
         "TRM_type": {
@@ -2162,7 +2190,7 @@
                 "rms_v2.0-live"
             ],
             "annotations": {
-                "tier_priority": "aml_v1.8-live"
+                "tier_priority": "aml_v1.8-live,rms_v2.0-live"
             }
         },
         "molecular_analysis_method": {
@@ -2233,7 +2261,7 @@
                 "rms_v2.0-live"
             ],
             "annotations": {
-                "tier_priority": "aml_v1.8-live"
+                "tier_priority": "aml_v1.8-live,rms_v2.0-live"
             }
         },
         "chromosome": {
@@ -2243,8 +2271,7 @@
             "in_subset": [
                 "aml_v1.8-live",
                 "gct_v1.2-live",
-                "nbl_v1.1-live",
-                "rms_v2.0-live"
+                "nbl_v1.1-live"
             ],
             "annotations": {
                 "tier_priority": "aml_v1.8-live"
@@ -2261,7 +2288,7 @@
                 "rms_v2.0-live"
             ],
             "annotations": {
-                "tier_priority": "aml_v1.8-live"
+                "tier_priority": "aml_v1.8-live,rms_v2.0-live"
             }
         },
         "gene2": {
@@ -2275,7 +2302,7 @@
                 "rms_v2.0-live"
             ],
             "annotations": {
-                "tier_priority": "aml_v1.8-live"
+                "tier_priority": "aml_v1.8-live,rms_v2.0-live"
             }
         },
         "variant_type": {
@@ -2285,8 +2312,7 @@
             "in_subset": [
                 "aml_v1.8-live",
                 "gct_v1.2-live",
-                "nbl_v1.1-live",
-                "rms_v2.0-live"
+                "nbl_v1.1-live"
             ],
             "annotations": {
                 "tier_priority": "aml_v1.8-live"
@@ -2327,7 +2353,7 @@
                 "rms_v2.0-live"
             ],
             "annotations": {
-                "tier_priority": "aml_v1.8-live"
+                "tier_priority": "aml_v1.8-live,rms_v2.0-live"
             }
         },
         "allelic_ratio": {
@@ -2352,9 +2378,7 @@
             "in_subset": [
                 "aml_v1.8-live",
                 "gct_v1.2-live",
-                "hl_v1.0-live",
-                "rms_v2.0-live",
-                "nrsts_v1.0-live"
+                "hl_v1.0-live"
             ],
             "annotations": {
                 "tier_priority": "hl_v1.0-live"
@@ -2367,9 +2391,7 @@
             "in_subset": [
                 "aml_v1.8-live",
                 "gct_v1.2-live",
-                "hl_v1.0-live",
-                "rms_v2.0-live",
-                "nrsts_v1.0-live"
+                "hl_v1.0-live"
             ],
             "annotations": {
                 "tier_priority": "hl_v1.0-live"
@@ -2383,7 +2405,9 @@
                 "nrsts_v1.0-live",
                 "rms_v2.0-live"
             ],
-            "annotations": {}
+            "annotations": {
+                "tier_optional": "rms_v2.0-live"
+            }
         },
         "administration_status": {
             "slot_uri": "",
@@ -2393,7 +2417,9 @@
                 "nrsts_v1.0-live",
                 "rms_v2.0-live"
             ],
-            "annotations": {}
+            "annotations": {
+                "tier_optional": "rms_v2.0-live"
+            }
         },
         "rt_site": {
             "slot_uri": "ncit:C173281",
@@ -2402,9 +2428,7 @@
             "in_subset": [
                 "aml_v1.8-live",
                 "gct_v1.2-live",
-                "hl_v1.0-live",
-                "nrsts_v1.0-live",
-                "rms_v2.0-live"
+                "hl_v1.0-live"
             ],
             "annotations": {
                 "tier_priority": "hl_v1.0-live"
@@ -2424,7 +2448,7 @@
                 "rms_v2.0-live"
             ],
             "annotations": {
-                "tier_priority": "hl_v1.0-live"
+                "tier_priority": "hl_v1.0-live,rms_v2.0-live"
             }
         },
         "rt_unit": {
@@ -2434,9 +2458,7 @@
             "in_subset": [
                 "aml_v1.8-live",
                 "gct_v1.2-live",
-                "hl_v1.0-live",
-                "nrsts_v1.0-live",
-                "rms_v2.0-live"
+                "hl_v1.0-live"
             ],
             "annotations": {
                 "tier_priority": "hl_v1.0-live"
@@ -2478,7 +2500,7 @@
                 "tier_optional": "hl_v1.0-live"
             }
         },
-        "age_at_imt_start": {
+        "age_at_cimt_start": {
             "slot_uri": "ncit:C173195",
             "range": "integer",
             "comments": [],
@@ -2889,9 +2911,7 @@
             "in_subset": [
                 "aml_v1.8-live",
                 "gct_v1.2-live",
-                "hl_v1.0-live",
-                "nrsts_v1.0-live",
-                "rms_v2.0-live"
+                "hl_v1.0-live"
             ],
             "annotations": {
                 "tier_priority": "hl_v1.0-live"
@@ -3284,9 +3304,12 @@
             "in_subset": [
                 "aml_v1.8-live",
                 "gct_v1.2-live",
-                "nbl_v1.1-live"
+                "nbl_v1.1-live",
+                "rms_v2.0-live"
             ],
-            "annotations": {}
+            "annotations": {
+                "tier_optional": "rms_v2.0-live"
+            }
         },
         "medical_history_status": {
             "slot_uri": "",
@@ -3325,7 +3348,9 @@
                 "nrsts_v1.0-live",
                 "rms_v2.0-live"
             ],
-            "annotations": {}
+            "annotations": {
+                "tier_optional": "rms_v2.0-live"
+            }
         },
         "nodal_site": {
             "slot_uri": "",
@@ -3355,7 +3380,9 @@
                 "nrsts_v1.0-live",
                 "rms_v2.0-live"
             ],
-            "annotations": {}
+            "annotations": {
+                "tier_optional": "rms_v2.0-live"
+            }
         },
         "tumor_site": {
             "slot_uri": "ncit:C157120",
@@ -3369,7 +3396,9 @@
                 "nrsts_v1.0-live",
                 "rms_v2.0-live"
             ],
-            "annotations": {}
+            "annotations": {
+                "tier_optional": "rms_v2.0-live"
+            }
         },
         "tumor_laterality": {
             "slot_uri": "ncit:C119931",
@@ -3386,9 +3415,12 @@
             "comments": [],
             "in_subset": [
                 "gct_v1.2-live",
-                "nbl_v1.1-live"
+                "nbl_v1.1-live",
+                "rms_v2.0-live"
             ],
-            "annotations": {}
+            "annotations": {
+                "tier_optional": "rms_v2.0-live"
+            }
         },
         "nodal_involvement": {
             "slot_uri": "",
@@ -3410,7 +3442,7 @@
                 "rms_v2.0-live"
             ],
             "annotations": {
-                "tier_priority": "hl_v1.0-live"
+                "tier_priority": "hl_v1.0-live,rms_v2.0-live"
             }
         },
         "stage_system": {
@@ -3452,7 +3484,7 @@
                 "rms_v2.0-live"
             ],
             "annotations": {
-                "tier_priority": "hl_v1.0-live"
+                "tier_priority": "hl_v1.0-live,rms_v2.0-live"
             }
         },
         "hist_assessment_review": {
@@ -3478,7 +3510,7 @@
                 "rms_v2.0-live"
             ],
             "annotations": {
-                "tier_priority": "hl_v1.0-live"
+                "tier_priority": "hl_v1.0-live,rms_v2.0-live"
             }
         },
         "histology_result": {
@@ -3687,9 +3719,7 @@
             "comments": [],
             "in_subset": [
                 "gct_v1.2-live",
-                "hl_v1.0-live",
-                "rms_v2.0-live",
-                "nrsts_v1.0-live"
+                "hl_v1.0-live"
             ],
             "annotations": {
                 "tier_optional": "hl_v1.0-live"
@@ -3702,7 +3732,9 @@
             "in_subset": [
                 "rms_v2.0-live"
             ],
-            "annotations": {}
+            "annotations": {
+                "tier_optional": "rms_v2.0-live"
+            }
         },
         "procedure_treatment_timing": {
             "slot_uri": "",
@@ -3711,7 +3743,9 @@
             "in_subset": [
                 "rms_v2.0-live"
             ],
-            "annotations": {}
+            "annotations": {
+                "tier_optional": "rms_v2.0-live"
+            }
         },
         "procedure_site": {
             "slot_uri": "ncit:C164323",
@@ -3719,9 +3753,7 @@
             "comments": [],
             "in_subset": [
                 "gct_v1.2-live",
-                "hl_v1.0-live",
-                "nrsts_v1.0-live",
-                "rms_v2.0-live"
+                "hl_v1.0-live"
             ],
             "annotations": {
                 "tier_optional": "hl_v1.0-live"
@@ -3747,7 +3779,7 @@
                 "rms_v2.0-live"
             ],
             "annotations": {
-                "tier_optional": "hl_v1.0-live"
+                "tier_optional": "hl_v1.0-live,rms_v2.0-live"
             }
         },
         "procedure_extent": {
@@ -3771,7 +3803,9 @@
                 "nrsts_v1.0-live",
                 "rms_v2.0-live"
             ],
-            "annotations": {}
+            "annotations": {
+                "tier_optional": "rms_v2.0-live"
+            }
         },
         "biospecimen_container_type": {
             "slot_uri": "",
@@ -3785,7 +3819,9 @@
                 "nbl_v1.1-live",
                 "rms_v2.0-live"
             ],
-            "annotations": {}
+            "annotations": {
+                "tier_optional": "rms_v2.0-live"
+            }
         },
         "biospecimen_media": {
             "slot_uri": "",
@@ -3799,7 +3835,9 @@
                 "nbl_v1.1-live",
                 "rms_v2.0-live"
             ],
-            "annotations": {}
+            "annotations": {
+                "tier_optional": "rms_v2.0-live"
+            }
         },
         "biospecimen_type": {
             "slot_uri": "",
@@ -3813,7 +3851,9 @@
                 "nbl_v1.1-live",
                 "rms_v2.0-live"
             ],
-            "annotations": {}
+            "annotations": {
+                "tier_optional": "rms_v2.0-live"
+            }
         },
         "current_qty_unit": {
             "slot_uri": "",
@@ -3827,7 +3867,9 @@
                 "nbl_v1.1-live",
                 "rms_v2.0-live"
             ],
-            "annotations": {}
+            "annotations": {
+                "tier_optional": "rms_v2.0-live"
+            }
         },
         "current_qty_value": {
             "slot_uri": "",
@@ -3841,7 +3883,9 @@
                 "nbl_v1.1-live",
                 "rms_v2.0-live"
             ],
-            "annotations": {}
+            "annotations": {
+                "tier_optional": "rms_v2.0-live"
+            }
         },
         "external_links": {
             "slot_uri": "",
@@ -3924,7 +3968,7 @@
                 "rms_v2.0-live"
             ],
             "annotations": {
-                "tier_priority": "hl_v1.0-live"
+                "tier_priority": "hl_v1.0-live,rms_v2.0-live"
             }
         },
         "boost": {
@@ -3951,7 +3995,8 @@
             "comments": [],
             "in_subset": [
                 "gct_v1.2-live",
-                "hl_v1.0-live"
+                "hl_v1.0-live",
+                "rms_v2.0-live"
             ],
             "annotations": {
                 "tier_priority": "hl_v1.0-live"
@@ -4434,7 +4479,7 @@
                 "rms_v2.0-live"
             ],
             "annotations": {
-                "tier_optional": "hl_v1.0-live"
+                "tier_optional": "hl_v1.0-live,rms_v2.0-live"
             }
         },
         "diam_dim1_type": {
@@ -4458,7 +4503,7 @@
                 "rms_v2.0-live"
             ],
             "annotations": {
-                "tier_optional": "hl_v1.0-live"
+                "tier_optional": "hl_v1.0-live,rms_v2.0-live"
             }
         },
         "diam_dim2_type": {
@@ -4482,7 +4527,7 @@
                 "rms_v2.0-live"
             ],
             "annotations": {
-                "tier_optional": "hl_v1.0-live"
+                "tier_optional": "hl_v1.0-live,rms_v2.0-live"
             }
         },
         "diam_dim3_type": {
@@ -4936,7 +4981,9 @@
                 "rms_v2.0-live",
                 "gct_v1.2-live"
             ],
-            "annotations": {}
+            "annotations": {
+                "tier_optional": "rms_v2.0-live"
+            }
         },
         "initial_treatment_category": {
             "slot_uri": "",
@@ -4965,7 +5012,9 @@
                 "nrsts_v1.0-live",
                 "rms_v2.0-live"
             ],
-            "annotations": {}
+            "annotations": {
+                "tier_optional": "rms_v2.0-live"
+            }
         },
         "histology_inpc": {
             "slot_uri": "",
@@ -5013,7 +5062,9 @@
                 "nrsts_v1.0-live",
                 "rms_v2.0-live"
             ],
-            "annotations": {}
+            "annotations": {
+                "tier_optional": "rms_v2.0-live"
+            }
         },
         "invasiveness": {
             "slot_uri": "",
@@ -5023,7 +5074,9 @@
                 "nrsts_v1.0-live",
                 "rms_v2.0-live"
             ],
-            "annotations": {}
+            "annotations": {
+                "tier_optional": "rms_v2.0-live"
+            }
         },
         "depth": {
             "slot_uri": "",
@@ -5087,7 +5140,9 @@
             "in_subset": [
                 "rms_v2.0-live"
             ],
-            "annotations": {}
+            "annotations": {
+                "tier_optional": "rms_v2.0-live"
+            }
         },
         "nodal_pathology": {
             "slot_uri": "",
@@ -5096,7 +5151,9 @@
             "in_subset": [
                 "rms_v2.0-live"
             ],
-            "annotations": {}
+            "annotations": {
+                "tier_optional": "rms_v2.0-live"
+            }
         },
         "nodal_clinical": {
             "slot_uri": "",
@@ -5105,7 +5162,9 @@
             "in_subset": [
                 "rms_v2.0-live"
             ],
-            "annotations": {}
+            "annotations": {
+                "tier_optional": "rms_v2.0-live"
+            }
         },
         "parameningeal_extension": {
             "slot_uri": "",
@@ -5114,7 +5173,9 @@
             "in_subset": [
                 "rms_v2.0-live"
             ],
-            "annotations": {}
+            "annotations": {
+                "tier_optional": "rms_v2.0-live"
+            }
         },
         "tnm_finding": {
             "slot_uri": "",
@@ -5123,7 +5184,9 @@
             "in_subset": [
                 "rms_v2.0-live"
             ],
-            "annotations": {}
+            "annotations": {
+                "tier_optional": "rms_v2.0-live"
+            }
         },
         "irs_group": {
             "slot_uri": "",
@@ -5132,7 +5195,9 @@
             "in_subset": [
                 "rms_v2.0-live"
             ],
-            "annotations": {}
+            "annotations": {
+                "tier_optional": "rms_v2.0-live"
+            }
         },
         "anaplasia": {
             "slot_uri": "",
@@ -5141,7 +5206,9 @@
             "in_subset": [
                 "rms_v2.0-live"
             ],
-            "annotations": {}
+            "annotations": {
+                "tier_optional": "rms_v2.0-live"
+            }
         },
         "anaplasia_extent": {
             "slot_uri": "",
@@ -5150,7 +5217,9 @@
             "in_subset": [
                 "rms_v2.0-live"
             ],
-            "annotations": {}
+            "annotations": {
+                "tier_optional": "rms_v2.0-live"
+            }
         }
     },
     "enums": {
@@ -5164,8 +5233,8 @@
                 "rms_v2.0-live"
             ],
             "permissible_values": {
-                "No": {
-                    "meaning": "ncit:C49487",
+                "Yes": {
+                    "meaning": "ncit:C49488",
                     "comments": [],
                     "in_subset": [
                         "aml_v1.8-live",
@@ -5176,8 +5245,8 @@
                         "rms_v2.0-live"
                     ]
                 },
-                "Yes": {
-                    "meaning": "ncit:C49488",
+                "No": {
+                    "meaning": "ncit:C49487",
                     "comments": [],
                     "in_subset": [
                         "aml_v1.8-live",
@@ -7703,7 +7772,7 @@
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
-                        "rms_v2.0-live"
+                        "nrsts_v1.0-live"
                     ]
                 },
                 "ADxE": {
@@ -8347,7 +8416,7 @@
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
-                        "rms_v2.0-live"
+                        "nrsts_v1.0-live"
                     ]
                 },
                 "Baseline Treatment with 2 cycles": {
@@ -8382,7 +8451,7 @@
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
-                        "rms_v2.0-live"
+                        "nrsts_v1.0-live"
                     ]
                 },
                 "CDxA": {
@@ -8459,7 +8528,7 @@
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
-                        "rms_v2.0-live"
+                        "nrsts_v1.0-live"
                     ]
                 },
                 "Death immiately after therapy start, received exchange transfusion": {
@@ -8704,7 +8773,7 @@
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
-                        "rms_v2.0-live"
+                        "nrsts_v1.0-live"
                     ]
                 },
                 "NOT RANDOMISED": {
@@ -9161,6 +9230,13 @@
                     "in_subset": [
                         "rms_v2.0-live"
                     ]
+                },
+                "Unknown": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "rms_v2.0-live"
+                    ]
                 }
             }
         },
@@ -9200,9 +9276,7 @@
                     "comments": [],
                     "in_subset": [
                         "aml_v1.8-live",
-                        "hl_v1.0-live",
-                        "nrsts_v1.0-live",
-                        "rms_v2.0-live"
+                        "hl_v1.0-live"
                     ]
                 },
                 "Disease Phase": {
@@ -9289,9 +9363,7 @@
         "CourseEnum": {
             "in_subset": [
                 "aml_v1.8-live",
-                "hl_v1.0-live",
-                "nrsts_v1.0-live",
-                "rms_v2.0-live"
+                "hl_v1.0-live"
             ],
             "permissible_values": {
                 "Chemoimmunotherapy": {
@@ -9315,9 +9387,7 @@
                     "meaning": "ncit:C15679",
                     "comments": [],
                     "in_subset": [
-                        "aml_v1.8-live",
-                        "nrsts_v1.0-live",
-                        "rms_v2.0-live"
+                        "aml_v1.8-live"
                     ]
                 },
                 "Immunotherapy": {
@@ -9331,27 +9401,21 @@
                     "meaning": "ncit:C158876",
                     "comments": [],
                     "in_subset": [
-                        "aml_v1.8-live",
-                        "nrsts_v1.0-live",
-                        "rms_v2.0-live"
+                        "aml_v1.8-live"
                     ]
                 },
                 "Intensification": {
                     "meaning": "ncit:C173105",
                     "comments": [],
                     "in_subset": [
-                        "aml_v1.8-live",
-                        "nrsts_v1.0-live",
-                        "rms_v2.0-live"
+                        "aml_v1.8-live"
                     ]
                 },
                 "Maintenance": {
                     "meaning": "ncit:C15688",
                     "comments": [],
                     "in_subset": [
-                        "aml_v1.8-live",
-                        "nrsts_v1.0-live",
-                        "rms_v2.0-live"
+                        "aml_v1.8-live"
                     ]
                 },
                 "Palliative Treatment": {
@@ -9365,9 +9429,7 @@
                     "meaning": "ncit:C168826",
                     "comments": [],
                     "in_subset": [
-                        "aml_v1.8-live",
-                        "nrsts_v1.0-live",
-                        "rms_v2.0-live"
+                        "aml_v1.8-live"
                     ]
                 },
                 "Radiation Therapy": {
@@ -12848,8 +12910,7 @@
             "in_subset": [
                 "aml_v1.8-live",
                 "gct_v1.2-live",
-                "nbl_v1.1-live",
-                "rms_v2.0-live"
+                "nbl_v1.1-live"
             ],
             "permissible_values": {
                 "Amplification": {
@@ -12857,8 +12918,7 @@
                     "comments": [],
                     "in_subset": [
                         "aml_v1.8-live",
-                        "nbl_v1.1-live",
-                        "rms_v2.0-live"
+                        "nbl_v1.1-live"
                     ]
                 },
                 "Copy Number Alteration": {
@@ -12867,8 +12927,7 @@
                     "in_subset": [
                         "aml_v1.8-live",
                         "gct_v1.2-live",
-                        "nbl_v1.1-live",
-                        "rms_v2.0-live"
+                        "nbl_v1.1-live"
                     ]
                 },
                 "Deletion": {
@@ -12877,8 +12936,7 @@
                     "in_subset": [
                         "aml_v1.8-live",
                         "gct_v1.2-live",
-                        "nbl_v1.1-live",
-                        "rms_v2.0-live"
+                        "nbl_v1.1-live"
                     ]
                 },
                 "Gain": {
@@ -12902,8 +12960,7 @@
                     "in_subset": [
                         "aml_v1.8-live",
                         "gct_v1.2-live",
-                        "nbl_v1.1-live",
-                        "rms_v2.0-live"
+                        "nbl_v1.1-live"
                     ]
                 },
                 "Mutation": {
@@ -12912,8 +12969,7 @@
                     "in_subset": [
                         "aml_v1.8-live",
                         "gct_v1.2-live",
-                        "nbl_v1.1-live",
-                        "rms_v2.0-live"
+                        "nbl_v1.1-live"
                     ]
                 },
                 "Rearrangement": {
@@ -12922,8 +12978,7 @@
                     "in_subset": [
                         "aml_v1.8-live",
                         "gct_v1.2-live",
-                        "nbl_v1.1-live",
-                        "rms_v2.0-live"
+                        "nbl_v1.1-live"
                     ]
                 },
                 "Single Nucleotide Variant": {
@@ -12932,8 +12987,7 @@
                     "in_subset": [
                         "aml_v1.8-live",
                         "gct_v1.2-live",
-                        "nbl_v1.1-live",
-                        "rms_v2.0-live"
+                        "nbl_v1.1-live"
                     ]
                 },
                 "Translocation": {
@@ -12944,8 +12998,7 @@
                     "in_subset": [
                         "aml_v1.8-live",
                         "gct_v1.2-live",
-                        "nbl_v1.1-live",
-                        "rms_v2.0-live"
+                        "nbl_v1.1-live"
                     ]
                 },
                 "Other": {
@@ -12954,8 +13007,7 @@
                     "in_subset": [
                         "aml_v1.8-live",
                         "gct_v1.2-live",
-                        "nbl_v1.1-live",
-                        "rms_v2.0-live"
+                        "nbl_v1.1-live"
                     ]
                 },
                 "Unknown": {
@@ -12964,8 +13016,7 @@
                     "in_subset": [
                         "aml_v1.8-live",
                         "gct_v1.2-live",
-                        "nbl_v1.1-live",
-                        "rms_v2.0-live"
+                        "nbl_v1.1-live"
                     ]
                 },
                 "Not Reported": {
@@ -12974,8 +13025,7 @@
                     "in_subset": [
                         "aml_v1.8-live",
                         "gct_v1.2-live",
-                        "nbl_v1.1-live",
-                        "rms_v2.0-live"
+                        "nbl_v1.1-live"
                     ]
                 }
             }
@@ -13073,6 +13123,13 @@
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
+                        "nrsts_v1.0-live"
+                    ]
+                },
+                "Other": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
                         "nrsts_v1.0-live",
                         "rms_v2.0-live"
                     ]
@@ -13094,6 +13151,22 @@
             ],
             "permissible_values": {
                 "Administered": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "nrsts_v1.0-live",
+                        "rms_v2.0-live"
+                    ]
+                },
+                "Medication Administered": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "nrsts_v1.0-live",
+                        "rms_v2.0-live"
+                    ]
+                },
+                "Medication Not Administered": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
@@ -13842,9 +13915,7 @@
             "in_subset": [
                 "aml_v1.8-live",
                 "gct_v1.2-live",
-                "hl_v1.0-live",
-                "nrsts_v1.0-live",
-                "rms_v2.0-live"
+                "hl_v1.0-live"
             ],
             "permissible_values": {
                 "Gy": {
@@ -13853,9 +13924,7 @@
                     "in_subset": [
                         "aml_v1.8-live",
                         "gct_v1.2-live",
-                        "hl_v1.0-live",
-                        "nrsts_v1.0-live",
-                        "rms_v2.0-live"
+                        "hl_v1.0-live"
                     ]
                 },
                 "Unknown": {
@@ -16844,16 +16913,6 @@
                 "rms_v2.0-live"
             ],
             "permissible_values": {
-                "Metastatic": {
-                    "meaning": "ncit:C3261",
-                    "comments": [],
-                    "in_subset": [
-                        "gct_v1.2-live",
-                        "nbl_v1.1-live",
-                        "nrsts_v1.0-live",
-                        "rms_v2.0-live"
-                    ]
-                },
                 "Primary": {
                     "meaning": "ncit:C8509",
                     "comments": [
@@ -16866,20 +16925,21 @@
                         "rms_v2.0-live"
                     ]
                 },
-                "Regional": {
-                    "meaning": "ncit:C41844",
-                    "comments": [
-                        "(rms_v2.0-live) ConsortiumNote: Changed from 'Regional Nodes' to 'Regional' BTF 20210801"
-                    ],
+                "Metastatic": {
+                    "meaning": "ncit:C3261",
+                    "comments": [],
                     "in_subset": [
                         "gct_v1.2-live",
+                        "nbl_v1.1-live",
+                        "nrsts_v1.0-live",
                         "rms_v2.0-live"
                     ]
                 },
                 "Regional Nodes": {
-                    "meaning": "",
+                    "meaning": "ncit:C41844",
                     "comments": [],
                     "in_subset": [
+                        "gct_v1.2-live",
                         "nrsts_v1.0-live",
                         "rms_v2.0-live"
                     ]
@@ -17679,7 +17739,8 @@
         "TumorStateEnum": {
             "in_subset": [
                 "gct_v1.2-live",
-                "nbl_v1.1-live"
+                "nbl_v1.1-live",
+                "rms_v2.0-live"
             ],
             "permissible_values": {
                 "Absent": {
@@ -17687,7 +17748,8 @@
                     "comments": [],
                     "in_subset": [
                         "gct_v1.2-live",
-                        "nbl_v1.1-live"
+                        "nbl_v1.1-live",
+                        "rms_v2.0-live"
                     ]
                 },
                 "Present": {
@@ -17695,7 +17757,8 @@
                     "comments": [],
                     "in_subset": [
                         "gct_v1.2-live",
-                        "nbl_v1.1-live"
+                        "nbl_v1.1-live",
+                        "rms_v2.0-live"
                     ]
                 },
                 "Unknown": {
@@ -17703,7 +17766,8 @@
                     "comments": [],
                     "in_subset": [
                         "gct_v1.2-live",
-                        "nbl_v1.1-live"
+                        "nbl_v1.1-live",
+                        "rms_v2.0-live"
                     ]
                 }
             }
@@ -20129,7 +20193,8 @@
                     "meaning": "ncit:C17998",
                     "comments": [],
                     "in_subset": [
-                        "gct_v1.2-live"
+                        "gct_v1.2-live",
+                        "rms_v2.0-live"
                     ]
                 }
             }
@@ -20200,39 +20265,25 @@
                 "rms_v2.0-live"
             ],
             "permissible_values": {
-                "Gross Total Resection, Unknown Margins": {
+                "Biopsy Only": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
-                        "rms_v2.0-live"
+                        "nrsts_v1.0-live"
                     ]
                 },
                 "Incomplete Resection": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
-                        "rms_v2.0-live"
-                    ]
-                },
-                "R0 - Complete Resection, Negative": {
-                    "meaning": "ncit:C139578",
-                    "comments": [],
-                    "in_subset": [
-                        "nrsts_v1.0-live",
-                        "rms_v2.0-live"
+                        "gct_v1.2-live"
                     ]
                 },
                 "R0 - Complete Resection, Negative Margins": {
                     "meaning": "ncit:C139578",
                     "comments": [],
                     "in_subset": [
-                        "gct_v1.2-live"
-                    ]
-                },
-                "R1 - Complete Resection, Positive": {
-                    "meaning": "ncit:C139579",
-                    "comments": [],
-                    "in_subset": [
+                        "gct_v1.2-live",
                         "nrsts_v1.0-live",
                         "rms_v2.0-live"
                     ]
@@ -20241,14 +20292,15 @@
                     "meaning": "ncit:C139579",
                     "comments": [],
                     "in_subset": [
-                        "gct_v1.2-live"
+                        "gct_v1.2-live",
+                        "nrsts_v1.0-live",
+                        "rms_v2.0-live"
                     ]
                 },
                 "R2 - Gross Residual Disease": {
                     "meaning": "ncit:C139580",
                     "comments": [],
                     "in_subset": [
-                        "gct_v1.2-live",
                         "nrsts_v1.0-live",
                         "rms_v2.0-live"
                     ]
@@ -20257,16 +20309,6 @@
                     "meaning": "ncit:C17998",
                     "comments": [],
                     "in_subset": [
-                        "gct_v1.2-live",
-                        "nrsts_v1.0-live",
-                        "rms_v2.0-live"
-                    ]
-                },
-                "Not Reported": {
-                    "meaning": "ncit:C43234",
-                    "comments": [],
-                    "in_subset": [
-                        "gct_v1.2-live",
                         "nrsts_v1.0-live",
                         "rms_v2.0-live"
                     ]
@@ -20339,7 +20381,8 @@
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
-                        "nrsts_v1.0-live"
+                        "nrsts_v1.0-live",
+                        "rms_v2.0-live"
                     ]
                 },
                 "Unknown": {
@@ -20400,7 +20443,8 @@
                     "meaning": "ncit:C17220",
                     "comments": [],
                     "in_subset": [
-                        "gct_v1.2-live"
+                        "gct_v1.2-live",
+                        "rms_v2.0-live"
                     ]
                 },
                 "MRI": {
