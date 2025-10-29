@@ -65,9 +65,9 @@
         },
         "Subject": {
             "slots": [
-                "data_contributor_id",
-                "honest_broker_subject_id",
                 "submitter_id",
+                "honest_broker_subject_id",
+                "data_contributor_id",
                 "age_at_censor_status",
                 "censor_status"
             ],
@@ -121,8 +121,8 @@
         },
         "Study": {
             "slots": [
-                "subjects_submitter_id",
                 "submitter_id",
+                "subjects_submitter_id",
                 "age_at_enrollment",
                 "enrolled_status",
                 "study_id",
@@ -157,8 +157,8 @@
         },
         "Timing": {
             "slots": [
-                "subjects_submitter_id",
                 "submitter_id",
+                "subjects_submitter_id",
                 "timing_type",
                 "disease_phase",
                 "disease_phase_number",
@@ -227,7 +227,7 @@
                 "domain": "demographics"
             }
         },
-         "SurvivalCharacteristic": {
+        "SurvivalCharacteristic": {
             "slots": [
                 "subjects_submitter_id",
                 "timings_submitter_id",
@@ -371,7 +371,6 @@
             },
             "comments": [],
             "in_subset": [
-                "aml_v1.8-live",
                 "hl_v1.0-live"
             ],
             "annotations": {
@@ -990,7 +989,7 @@
                 "domain": "intervention"
             }
         },
-         "TotalDose": {
+        "TotalDose": {
             "slots": [
                 "subjects_submitter_id",
                 "timings_submitter_id",
@@ -1020,7 +1019,6 @@
             },
             "comments": [],
             "in_subset": [
-                "aml_v1.8-live",
                 "gct_v1.2-live",
                 "hl_v1.0-live"
             ],
@@ -1028,7 +1026,7 @@
                 "domain": "intervention"
             }
         },
-         "ProtocolTreatmentModifications": {
+        "ProtocolTreatmentModifications": {
             "slots": [
                 "subjects_submitter_id",
                 "timings_submitter_id",
@@ -1057,33 +1055,6 @@
             "comments": [],
             "in_subset": [
                 "hl_v1.0-live"
-            ],
-            "annotations": {
-                "domain": "intervention"
-            }
-        },
-        "CellularImmunotherapy": {
-            "slots": [
-                "subjects_submitter_id",
-                "timings_submitter_id",
-                "age_at_imt_start",
-                "cimt_type"
-            ],
-            "slot_usage": {
-                "subjects_submitter_id": {
-                    "required": true,
-                    "inlined": false,
-                    "range": "Subject"
-                },
-                "timings_submitter_id": {
-                    "required": true,
-                    "inlined": false,
-                    "range": "Timing"
-                }
-            },
-            "comments": [],
-            "in_subset": [
-                "aml_v1.8-live"
             ],
             "annotations": {
                 "domain": "intervention"
@@ -1158,7 +1129,7 @@
             "annotations": {
                 "domain": "monitoring"
             }
-        }, 
+        },
         "MinimalResidualDisease": {
             "slots": [
                 "subjects_submitter_id",
@@ -1266,7 +1237,6 @@
             },
             "comments": [],
             "in_subset": [
-                "aml_v1.8-live",
                 "gct_v1.2-live",
                 "hl_v1.0-live"
             ],
@@ -1325,7 +1295,7 @@
             "annotations": {
                 "domain": "monitoring"
             }
-        } 
+        }
     },
     "slots": {
         "submitter_id": {
@@ -2728,7 +2698,7 @@
         },
         "hla_a_result": {
             "slot_uri": "ncit:C168923",
-            "range": "HlaAResultEnum",
+            "range": "HlaResultEnum",
             "comments": [],
             "in_subset": [
                 "aml_v1.8-live"
@@ -2739,7 +2709,7 @@
         },
         "hla_b_result": {
             "slot_uri": "ncit:C168924",
-            "range": "HlaBResultEnum",
+            "range": "HlaResultEnum",
             "comments": [],
             "in_subset": [
                 "aml_v1.8-live"
@@ -2750,7 +2720,7 @@
         },
         "hla_c_result": {
             "slot_uri": "ncit:C168925",
-            "range": "HlaCResultEnum",
+            "range": "HlaResultEnum",
             "comments": [],
             "in_subset": [
                 "aml_v1.8-live"
@@ -2761,7 +2731,7 @@
         },
         "hla_drb1_result": {
             "slot_uri": "ncit:C168926",
-            "range": "HlaDrb1ResultEnum",
+            "range": "HlaResultEnum",
             "comments": [],
             "in_subset": [
                 "aml_v1.8-live"
@@ -2772,7 +2742,7 @@
         },
         "hla_dq_result": {
             "slot_uri": "ncit:C168927",
-            "range": "HlaDqResultEnum",
+            "range": "HlaResultEnum",
             "comments": [],
             "in_subset": [
                 "aml_v1.8-live"
@@ -3312,6 +3282,7 @@
             "range": "integer",
             "comments": [],
             "in_subset": [
+                "aml_v1.8-live",
                 "gct_v1.2-live",
                 "nbl_v1.1-live"
             ],
@@ -4959,6 +4930,7 @@
             "range": "CensorStatusEnum",
             "comments": [],
             "in_subset": [
+                "aml_v1.8-live",
                 "nbl_v1.1-live",
                 "nrsts_v1.0-live",
                 "rms_v2.0-live",
@@ -7713,11 +7685,382 @@
                         "rms_v2.0-live"
                     ]
                 },
+                "A Randomized Trial Of Clofarabine Plus Cytarabine Versus Conventional Induction Therapy And Of Natural Killer Cell Transplantation Versus Conventional Consolidation Therapy In Patients With Newly Diagnosed Acute Myeloid Leukemia": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "A Randomized Trial Of Clofarabine Plus Cytarabine Versus Conventional Induction Therapy And Of Natural Killer Cell Transplantation Versus Conventional Consolidation Therapy In Patients With Newly Diagnosed Acute Myeloid Leukemia, dated 04/03/08": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
                 "A: No adjuvant treatment": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
                         "rms_v2.0-live"
+                    ]
+                },
+                "ADxE": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "ADxE - AI-haM, AI- HAE - standard maintenance(Standard Risk arm)": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "ADxE - ATRA - ATO (HR)": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "ADxE- AI-haM-HAE- Standard maintenance (Standard Risk arm)": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "ADxE- AI-haM-HAE- Standard maintenance, 12 Gy (Standard Risk arm)": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "ADxE- AI/2CDA-haM-HAE- Standard maintenance, 12 Gy (Standard Risk arm)": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "ADxE- HAM Sorafenib, AI Sorafenib, haM Sorafenib, standard maintenance (Intermediate Risk arm)": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "ADxE- HAM Sorafenib, AI Sorafenib, haM Sorafenib, Stem Cell Transplantation (High Risk arm)": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "ADxE-AI-hAM-HAE, ATRA, 12Gy": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "ADxE-AI-hAM-HAE, ATRA, 18Gy": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "ADxE-HAM- AI-haM, HAE- Standard maintenance (High Risk arm)": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "ADxE-HAM- AI-haM, HAE- Standard maintenance (Intermediate Risk arm)": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "ADxE-HAM- AI-haM, HAE- Standard maintenance, 12 Gy (High Risk arm)": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "ADxE-HAM- AI-haM, HAE- Standard maintenance, 12 Gy (Standard Risk arm)": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "ADxE-HAM- AI-haM, HAE- Standard maintenance, 18 Gy (High Risk arm)": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "ADxE-HAM- AI-haM, SCT": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "ADxE-HAM- AI-haM, SCT (High risk arm)": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "ADxE-HAM- AI/2CDA-haM, HAE- Standard maintenance (High Risk arm)": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "ADxE-HAM- AI/2CDA-haM, HAE- Standard maintenance, 12 Gy (High Risk arm)": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "ADxE-HAM- AI/2CDA-haM, HAE- Standard maintenance, 18 Gy (High Risk arm)": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "ADxE-HAM- AI/2CDA-haM, SCT": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "ADxE-HAM-AI-haM, SCT (High Risk arm)": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "AI-ATRA-ATO (High Risk)": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "AIE - ATRA - ATO (HR)": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "AIE, AI, haM, HA, ATRA": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "AIE, AI, haM, HAE, 18Gy, ATRA": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "AIE, ATO-ATRA": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "AIE- AI-haM-HAE- Standard maintenance (Standard Risk arm)": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "AIE- AI-haM-HAE- Standard maintenance, 12 Gy (Standard Risk arm)": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "AIE- AI-haM-HAE- Standard maintenance, 18 Gy (Standard Risk arm)": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "AIE- AI/2CDA-haM-HAE- Standard maintenance, 12 Gy (Standard Risk arm)": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "AIE-AI-hAM-HAE, ATRA, 12Gy": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "AIE-AI-hAM-HAE, ATRA, 18Gy": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "AIE-AI-hAM-HAE- Standard maintenance (Standard Risk- inv16)": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "AIE-HAM- AI-haM, HAE- Standard maintenance, 12 Gy (High Risk arm)": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "AIE-HAM- AI-haM, HAE- Standard maintenance, 12 Gy (Standard Risk arm)": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "AIE-HAM- AI-haM, HAE- Standard maintenance, 18 Gy (High Risk arm)": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "AIE-HAM- AI-haM, SCT": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "AIE-HAM- AI/2CDA-haM, HAE- Standard maintenance (High Risk arm)": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "AIE-HAM- AI/2CDA-haM, HAE- Standard maintenance, 12 Gy (High Risk arm)": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "AIE-HAM- AI/2CDA-haM, HAE- Standard maintenance, 18 Gy (High Risk arm)": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "AIE-HAM-AI-haM-HAE- Standard maintenance (Standard Risk)": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "AIE-HAM-AI/2CDA-haM-HAE- Standard maintenance (Intermediate Risk)": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "AIE-HAM-AI/2CDA-haM-HSCT (High Risk)": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "AIE-HAM-AI/2CDA-haM-HSCT(High Risk)": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "AIE-HAM-haM, HAE- Standard maintenance, 12 Gy (High Risk arm)": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "AIET": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "AIET-AM-HAM-HAE-HA-HAE": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "AIET-AM-HAM-HAE-HA-SCT": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "AIET-AM-HAM-HAE-SCT": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "AIET-AM-HAM-SCT": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
                     ]
                 },
                 "AMD/VCR - D9602": {
@@ -7727,14 +8070,70 @@
                         "rms_v2.0-live"
                     ]
                 },
-                "ARM A": {
+                "AML BFM 2004 High Risk": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
-                        "rms_v2.0-live"
+                        "aml_v1.8-live"
                     ]
                 },
-                "ARM B": {
+                "AML BFM 87 High Risk": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "AML BFM 93 High Risk": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "AML BFM 98 High Risk": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "AML BFM 98 Standard Risk": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "AML2002: A Collaborative Trial for the Treatment of Patients with Newly Diagnosed Acute Myeloid Leukemia or Myelodysplasia": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "APL AI-ATRA-ATO (High Risk)": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "APL ATRA-ATO ( Standard Risk)": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "APL ATRA-ATO (Standard Risk)": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "ARM A": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
@@ -7748,11 +8147,67 @@
                         "nbl_v1.1-live"
                     ]
                 },
+                "Arm A DS": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "Arm A HR": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "Arm A IR": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "Arm A LR": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "ARM B": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "rms_v2.0-live"
+                    ]
+                },
                 "Arm B": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
                         "nbl_v1.1-live"
+                    ]
+                },
+                "Arm B HR": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "Arm B IR": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "Arm B LR": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
                     ]
                 },
                 "Arm C": {
@@ -7781,6 +8236,104 @@
                     "comments": [],
                     "in_subset": [
                         "nbl_v1.1-live"
+                    ]
+                },
+                "ATEDox": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "ATEDox-AM-HAM-HAE-HA-HAE": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "ATEDox-AM-HAM-HAE-HA-HAE-SCT": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "ATEDox-ATEDox-HAM-HAE-HA-HAE": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "ATEDox-ATEDox-HAM-HAE-HA-SCT": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "ATEDox-ATEDox-HAM-HAE-SCT": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "ATEDox-ATEDox-HAM-SCT": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "ATEDox-ATEDox-SCT": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "ATEDox-HA-HAM": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "ATEDox-HA-HAM-HAE": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "ATEDox-HA-HAM-HAE-HA-SCT": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "ATEDox-HA-HAM-SCT": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "ATEDox-HA-MACE": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "ATRA - ATO (SR)": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
                     ]
                 },
                 "B": {
@@ -7832,11 +8385,39 @@
                         "rms_v2.0-live"
                     ]
                 },
+                "CDxA": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "CDxA- AI-haM, AI- HAE - standard maintenance(Standard Risk arm)": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "CDxA-HAM- AI-haM- HAE -Standard maintenance (Intermediate Risk arm)": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
                 "CEVAIE": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
                         "rms_v2.0-live"
+                    ]
+                },
+                "cisRA": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "nbl_v1.1-live"
                     ]
                 },
                 "CPT-11/VAC - D9802": {
@@ -7881,14 +8462,35 @@
                         "rms_v2.0-live"
                     ]
                 },
-                "HIGH-2002P": {
+                "Death immiately after therapy start, received exchange transfusion": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "Died too early": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "Early death": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "High": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
                         "rms_v2.0-live"
                     ]
                 },
-                "High": {
+                "HIGH-2002P": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
@@ -7937,11 +8539,46 @@
                         "rms_v2.0-live"
                     ]
                 },
+                "High-Risk patient": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "HR": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
                 "IMC - ARST08P1": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
                         "rms_v2.0-live"
+                    ]
+                },
+                "individuell": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "rms_v2.0-live"
+                    ]
+                },
+                "individuell Topoteca": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "rms_v2.0-live"
+                    ]
+                },
+                "IR": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
                     ]
                 },
                 "IVA": {
@@ -7993,18 +8630,39 @@
                         "rms_v2.0-live"
                     ]
                 },
-                "NON-RMS": {
+                "LR": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
-                        "rms_v2.0-live"
+                        "aml_v1.8-live"
                     ]
                 },
-                "NOT RANDOMISED": {
+                "MEC-ADE-HA3E-FLA (low risk)": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
-                        "rms_v2.0-live"
+                        "aml_v1.8-live"
+                    ]
+                },
+                "MEC-ADE-HAM-HA3E-FLA": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "MEC-ADE-HAM-HA3E-FLA + SCT (high risk 3)": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "N/A": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
                     ]
                 },
                 "No cisRA": {
@@ -8012,6 +8670,20 @@
                     "comments": [],
                     "in_subset": [
                         "nbl_v1.1-live"
+                    ]
+                },
+                "No data": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "NON protocol patient": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
                     ]
                 },
                 "Non-randomized conventional chemotherapy": {
@@ -8028,11 +8700,32 @@
                         "nbl_v1.1-live"
                     ]
                 },
+                "NON-RMS": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "rms_v2.0-live"
+                    ]
+                },
+                "NOT RANDOMISED": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "rms_v2.0-live"
+                    ]
+                },
                 "Not Randomized": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
                         "nbl_v1.1-live"
+                    ]
+                },
+                "Off protocol before risk stratification": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
                     ]
                 },
                 "Purged": {
@@ -8133,6 +8826,20 @@
                         "nbl_v1.1-live"
                     ]
                 },
+                "SR": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "SR: AIE, Konsolidierung, AI, HAM, HAE, 12gy": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
                 "Stadium Dok IV-2002": {
                     "meaning": "",
                     "comments": [],
@@ -8231,6 +8938,13 @@
                         "rms_v2.0-live"
                     ]
                 },
+                "Stadium IV-andere": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "rms_v2.0-live"
+                    ]
+                },
                 "Stadium IV-B": {
                     "meaning": "",
                     "comments": [],
@@ -8294,13 +9008,6 @@
                         "rms_v2.0-live"
                     ]
                 },
-                "Stadium IV-andere": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "rms_v2.0-live"
-                    ]
-                },
                 "Stand.-A-2002P": {
                     "meaning": "",
                     "comments": [],
@@ -8336,11 +9043,25 @@
                         "rms_v2.0-live"
                     ]
                 },
+                "Standard-Risk patient": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
                 "TEM - ARST08P1": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
                         "rms_v2.0-live"
+                    ]
+                },
+                "Treatment of Patients with Newly Diagnosed Acute Myeloid Leukemia or Myelodysplasia": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
                     ]
                 },
                 "Unpurged": {
@@ -8420,13 +9141,6 @@
                         "rms_v2.0-live"
                     ]
                 },
-                "VI/VDC/IE/VAC - ARST0431": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "rms_v2.0-live"
-                    ]
-                },
                 "Very-High-2002P": {
                     "meaning": "",
                     "comments": [],
@@ -8441,21 +9155,7 @@
                         "rms_v2.0-live"
                     ]
                 },
-                "cisRA": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "nbl_v1.1-live"
-                    ]
-                },
-                "individuell": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "rms_v2.0-live"
-                    ]
-                },
-                "individuell Topoteca": {
+                "VI/VDC/IE/VAC - ARST0431": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
@@ -9195,13 +9895,6 @@
                         "hl_v1.0-live"
                     ]
                 },
-                "DICER1": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "nrsts_v1.0-live"
-                    ]
-                },
                 "Denys-Drash Syndrome": {
                     "meaning": "ncit:C84668",
                     "comments": [],
@@ -9214,6 +9907,13 @@
                     "comments": [],
                     "in_subset": [
                         "hl_v1.0-live"
+                    ]
+                },
+                "DICER1": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "nrsts_v1.0-live"
                     ]
                 },
                 "Down Syndrome": {
@@ -9356,18 +10056,18 @@
                         "hl_v1.0-live"
                     ]
                 },
-                "NF-1": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "nrsts_v1.0-live"
-                    ]
-                },
                 "Neurofibromatosis Type I": {
                     "meaning": "ncit:C143014",
                     "comments": [],
                     "in_subset": [
                         "hl_v1.0-live"
+                    ]
+                },
+                "NF-1": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "nrsts_v1.0-live"
                     ]
                 },
                 "Noonan Syndrome": {
@@ -9620,6 +10320,7 @@
                     "meaning": "ncit:C17649",
                     "comments": [],
                     "in_subset": [
+                        "aml_v1.8-live",
                         "gct_v1.2-live",
                         "hl_v1.0-live",
                         "nbl_v1.1-live",
@@ -9706,6 +10407,13 @@
                 "hl_v1.0-live"
             ],
             "permissible_values": {
+                "Acute Respiratory Distress Syndrome": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
                 "Bacterial Infection": {
                     "meaning": "ncit:C2890",
                     "comments": [],
@@ -9758,11 +10466,12 @@
                     "meaning": "ncit:C128320",
                     "comments": [],
                     "in_subset": [
+                        "aml_v1.8-live",
                         "hl_v1.0-live"
                     ]
                 },
-                "Infection, Not Otherwise Specified": {
-                    "meaning": "ncit:C128320",
+                "Multi Organ Failure": {
+                    "meaning": "",
                     "comments": [],
                     "in_subset": [
                         "aml_v1.8-live"
@@ -9779,6 +10488,7 @@
                     "meaning": "ncit:C3198",
                     "comments": [],
                     "in_subset": [
+                        "aml_v1.8-live",
                         "hl_v1.0-live"
                     ]
                 },
@@ -9878,7 +10588,7 @@
                 "aml_v1.8-live"
             ],
             "permissible_values": {
-                "AML Not Further Subclassified": {
+                "AML, NOS": {
                     "meaning": "ncit:C27753",
                     "comments": [],
                     "in_subset": [
@@ -9971,118 +10681,14 @@
                 "aml_v1.8-live"
             ],
             "permissible_values": {
-                "AML, Not Otherwise Specified": {
-                    "meaning": "ncit:C27753",
-                    "comments": [],
-                    "in_subset": [
-                        "aml_v1.8-live"
-                    ]
-                },
-                "WHO >> Version 4 >> AML (megakaryoblastic) with t(1;22)(p13.3;q13.3); RBM15-MKL1": {
-                    "meaning": "ncit:C82427",
-                    "comments": [],
-                    "in_subset": [
-                        "aml_v1.8-live"
-                    ]
-                },
-                "WHO >> Version 4 >> AML with Biallelic Mutations of CEBPA": {
-                    "meaning": "ncit:C129782",
-                    "comments": [],
-                    "in_subset": [
-                        "aml_v1.8-live"
-                    ]
-                },
-                "WHO >> Version 4 >> AML with Maturation": {
-                    "meaning": "ncit:C3250",
-                    "comments": [
-                        "(aml_v1.8-live) ConsortiumNote: M2"
-                    ],
-                    "in_subset": [
-                        "aml_v1.8-live"
-                    ]
-                },
-                "WHO >> Version 4 >> AML with Minimal Differentiation": {
-                    "meaning": "ncit:C8460",
-                    "comments": [
-                        "(aml_v1.8-live) ConsortiumNote: M0"
-                    ],
-                    "in_subset": [
-                        "aml_v1.8-live"
-                    ]
-                },
-                "WHO >> Version 4 >> AML with Mutated NPM1": {
-                    "meaning": "ncit:C82431",
-                    "comments": [],
-                    "in_subset": [
-                        "aml_v1.8-live"
-                    ]
-                },
-                "WHO >> Version 4 >> AML with Myelodysplasia-related Changes": {
-                    "meaning": "ncit:C7600",
-                    "comments": [],
-                    "in_subset": [
-                        "aml_v1.8-live"
-                    ]
-                },
-                "WHO >> Version 4 >> AML with inv(16)(p13.1q22) or t(16;16)(p13.1;q22); CBFB-MYH11": {
-                    "meaning": "ncit:C9287",
-                    "comments": [],
-                    "in_subset": [
-                        "aml_v1.8-live"
-                    ]
-                },
-                "WHO >> Version 4 >> AML with inv(3)(q21.3q26.2) or t(3;3)(q21.3;q26.2); GATA2, MECOM": {
-                    "meaning": "ncit:C82426",
-                    "comments": [],
-                    "in_subset": [
-                        "aml_v1.8-live"
-                    ]
-                },
-                "WHO >> Version 4 >> AML with t(6;9)(p23;q34.1);DEK-NUP214": {
-                    "meaning": "ncit:C82423",
-                    "comments": [],
-                    "in_subset": [
-                        "aml_v1.8-live"
-                    ]
-                },
-                "WHO >> Version 4 >> AML with t(8;21)(q22;q22.1); RUNX1-RUNX1T1": {
-                    "meaning": "ncit:C9288",
-                    "comments": [],
-                    "in_subset": [
-                        "aml_v1.8-live"
-                    ]
-                },
-                "WHO >> Version 4 >> AML with t(9;11)(p21.3;q23.3); KMT2A-MLLT3": {
-                    "meaning": "ncit:C82403",
-                    "comments": [],
-                    "in_subset": [
-                        "aml_v1.8-live"
-                    ]
-                },
-                "WHO >> Version 4 >> AML without Maturation": {
-                    "meaning": "ncit:C3249",
-                    "comments": [
-                        "(aml_v1.8-live) ConsortiumNote: M1"
-                    ],
-                    "in_subset": [
-                        "aml_v1.8-live"
-                    ]
-                },
-                "WHO >> Version 4 >> APL with PML-RARA": {
-                    "meaning": "ncit:C7968",
-                    "comments": [],
-                    "in_subset": [
-                        "aml_v1.8-live"
-                    ]
-                },
-                "WHO >> Version 4 >> Acute Basophilic Leukemia": {
+                "Acute Basophilic Leukemia": {
                     "meaning": "ncit:C3164",
                     "comments": [],
                     "in_subset": [
                         "aml_v1.8-live"
                     ]
                 },
-                "WHO >> Version 4 >> Acute Megakaryoblastic Leukemia": {
+                "Acute Megakaryoblastic Leukemia": {
                     "meaning": "ncit:C3170",
                     "comments": [
                         "(aml_v1.8-live) ConsortiumNote: M7"
@@ -10091,14 +10697,14 @@
                         "aml_v1.8-live"
                     ]
                 },
-                "WHO >> Version 4 >> Acute Monoblastic/Monocytic Leukemia": {
+                "Acute Monoblastic/Monocytic Leukemia": {
                     "meaning": "ncit:C7318",
                     "comments": [],
                     "in_subset": [
                         "aml_v1.8-live"
                     ]
                 },
-                "WHO >> Version 4 >> Acute Myelomonocytic Leukemia": {
+                "Acute Myelomonocytic Leukemia": {
                     "meaning": "ncit:C7463",
                     "comments": [
                         "(aml_v1.8-live) ConsortiumNote: M4"
@@ -10107,71 +10713,175 @@
                         "aml_v1.8-live"
                     ]
                 },
-                "WHO >> Version 4 >> Acute Panmyelosis with Myelofibrosis": {
+                "Acute Panmyelosis with Myelofibrosis": {
                     "meaning": "ncit:C4344",
                     "comments": [],
                     "in_subset": [
                         "aml_v1.8-live"
                     ]
                 },
-                "WHO >> Version 4 >> Myeloid Leukemia Associated with Down Syndrome": {
+                "AML (megakaryoblastic) with t(1;22)(p13.3;q13.3); RBM15-MKL1": {
+                    "meaning": "ncit:C82427",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "AML with Biallelic Mutations of CEBPA": {
+                    "meaning": "ncit:C129782",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "AML with inv(16)(p13.1q22) or t(16;16)(p13.1;q22); CBFB-MYH11": {
+                    "meaning": "ncit:C9287",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "AML with inv(3)(q21.3q26.2) or t(3;3)(q21.3;q26.2); GATA2, MECOM": {
+                    "meaning": "ncit:C82426",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "AML with KMT2A Rearrangement": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "AML with Maturation": {
+                    "meaning": "ncit:C3250",
+                    "comments": [
+                        "(aml_v1.8-live) ConsortiumNote: M2"
+                    ],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "AML with Minimal Differentiation": {
+                    "meaning": "ncit:C8460",
+                    "comments": [
+                        "(aml_v1.8-live) ConsortiumNote: M0"
+                    ],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "AML with Mutated NPM1": {
+                    "meaning": "ncit:C82431",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "AML with Myelodysplasia-related Changes": {
+                    "meaning": "ncit:C7600",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "AML with t(6;9)(p23;q34.1);DEK-NUP214": {
+                    "meaning": "ncit:C82423",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "AML with t(8;21)(q22;q22.1); RUNX1-RUNX1T1": {
+                    "meaning": "ncit:C9288",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "AML with t(9;11)(p21.3;q23.3); KMT2A-MLLT3": {
+                    "meaning": "ncit:C82403",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "AML without Maturation": {
+                    "meaning": "ncit:C3249",
+                    "comments": [
+                        "(aml_v1.8-live) ConsortiumNote: M1"
+                    ],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "AML, NOS": {
+                    "meaning": "ncit:C27753",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "APL with PML-RARA": {
+                    "meaning": "ncit:C7968",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "Myeloid Leukemia Associated with Down Syndrome": {
                     "meaning": "ncit:C43223",
                     "comments": [],
                     "in_subset": [
                         "aml_v1.8-live"
                     ]
                 },
-                "WHO >> Version 4 >> Myeloid Proliferations Related to Down Syndrome": {
+                "Myeloid Proliferations Related to Down Syndrome": {
                     "meaning": "ncit:C82338",
                     "comments": [],
                     "in_subset": [
                         "aml_v1.8-live"
                     ]
                 },
-                "WHO >> Version 4 >> Myeloid Sarcoma": {
+                "Myeloid Sarcoma": {
                     "meaning": "ncit:C3520",
                     "comments": [],
                     "in_subset": [
                         "aml_v1.8-live"
                     ]
                 },
-                "WHO >> Version 4 >> Provisional Entity: AML with BCR-ABL1": {
+                "Provisional Entity: AML with BCR-ABL1": {
                     "meaning": "ncit:C129785",
                     "comments": [],
                     "in_subset": [
                         "aml_v1.8-live"
                     ]
                 },
-                "WHO >> Version 4 >> Provisional Entity: AML with Mutated RUNX1": {
+                "Provisional Entity: AML with Mutated RUNX1": {
                     "meaning": "ncit:C129786",
                     "comments": [],
                     "in_subset": [
                         "aml_v1.8-live"
                     ]
                 },
-                "WHO >> Version 4 >> Pure Erythroid Leukemia": {
+                "Pure Erythroid Leukemia": {
                     "meaning": "ncit:C7467",
                     "comments": [],
                     "in_subset": [
                         "aml_v1.8-live"
                     ]
                 },
-                "WHO >> Version 4 >> Therapy-Related Myeloid Neoplasms": {
+                "Therapy-Related Myeloid Neoplasms": {
                     "meaning": "ncit:C27912",
                     "comments": [],
                     "in_subset": [
                         "aml_v1.8-live"
                     ]
                 },
-                "WHO >> Version 4 >> Transient Abnormal Myelopoiesis (TAM)": {
+                "Transient Abnormal Myelopoiesis (TAM)": {
                     "meaning": "ncit:C82339",
-                    "comments": [],
-                    "in_subset": [
-                        "aml_v1.8-live"
-                    ]
-                },
-                "WHO >> Version 5 >> AML with KMT2A Rearrangement": {
-                    "meaning": "",
                     "comments": [],
                     "in_subset": [
                         "aml_v1.8-live"
@@ -10371,7 +11081,7 @@
                         "aml_v1.8-live"
                     ]
                 },
-                "Central Nervous System": {
+                "CNS": {
                     "meaning": "ncit:C12438",
                     "comments": [],
                     "in_subset": [
@@ -10481,7 +11191,7 @@
                         "hl_v1.0-live"
                     ]
                 },
-                "kg": {
+                "Kg": {
                     "meaning": "ncit:C28252",
                     "comments": [
                         "(gct_v1.2-live) ConsortiumNote: Note: Only fill in this variable if a numeric result is provided in VITALS_RESULT_NUMERIC."
@@ -10547,19 +11257,19 @@
                         "gct_v1.2-live"
                     ]
                 },
+                "microRNA Sequencing": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "gct_v1.2-live"
+                    ]
+                },
                 "Peripheral Blood Analysis": {
                     "meaning": "ncit:C173271",
                     "comments": [],
                     "in_subset": [
                         "aml_v1.8-live",
                         "hl_v1.0-live"
-                    ]
-                },
-                "microRNA Sequencing": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "gct_v1.2-live"
                     ]
                 },
                 "Other": {
@@ -10638,6 +11348,13 @@
                         "hl_v1.0-live"
                     ]
                 },
+                "cfDNA": {
+                    "meaning": "ncit:C128274",
+                    "comments": [],
+                    "in_subset": [
+                        "gct_v1.2-live"
+                    ]
+                },
                 "CRP": {
                     "meaning": "ncit:C64548",
                     "comments": [],
@@ -10659,15 +11376,15 @@
                         "hl_v1.0-live"
                     ]
                 },
-                "ESR": {
-                    "meaning": "ncit:C74611",
+                "Eosinophils": {
+                    "meaning": "ncit:C64550",
                     "comments": [],
                     "in_subset": [
                         "hl_v1.0-live"
                     ]
                 },
-                "Eosinophils": {
-                    "meaning": "ncit:C64550",
+                "ESR": {
+                    "meaning": "ncit:C74611",
                     "comments": [],
                     "in_subset": [
                         "hl_v1.0-live"
@@ -10709,6 +11426,41 @@
                     "comments": [],
                     "in_subset": [
                         "hl_v1.0-live"
+                    ]
+                },
+                "miR-367-3p": {
+                    "meaning": "ncit:C177302",
+                    "comments": [],
+                    "in_subset": [
+                        "gct_v1.2-live"
+                    ]
+                },
+                "miR-371a-3p": {
+                    "meaning": "ncit:C158711",
+                    "comments": [],
+                    "in_subset": [
+                        "gct_v1.2-live"
+                    ]
+                },
+                "miR-372-3p": {
+                    "meaning": "ncit:C82190",
+                    "comments": [],
+                    "in_subset": [
+                        "gct_v1.2-live"
+                    ]
+                },
+                "miR-373-3p": {
+                    "meaning": "ncit:C82191",
+                    "comments": [],
+                    "in_subset": [
+                        "gct_v1.2-live"
+                    ]
+                },
+                "miR-375-3p": {
+                    "meaning": "ncit:C101665",
+                    "comments": [],
+                    "in_subset": [
+                        "gct_v1.2-live"
                     ]
                 },
                 "Monocytes": {
@@ -10769,15 +11521,15 @@
                         "hl_v1.0-live"
                     ]
                 },
-                "TSH": {
-                    "meaning": "ncit:C64813",
+                "Total T4": {
+                    "meaning": "",
                     "comments": [],
                     "in_subset": [
                         "hl_v1.0-live"
                     ]
                 },
-                "Total T4": {
-                    "meaning": "",
+                "TSH": {
+                    "meaning": "ncit:C64813",
                     "comments": [],
                     "in_subset": [
                         "hl_v1.0-live"
@@ -10796,48 +11548,6 @@
                     "in_subset": [
                         "aml_v1.8-live",
                         "hl_v1.0-live"
-                    ]
-                },
-                "cfDNA": {
-                    "meaning": "ncit:C128274",
-                    "comments": [],
-                    "in_subset": [
-                        "gct_v1.2-live"
-                    ]
-                },
-                "miR-367-3p": {
-                    "meaning": "ncit:C177302",
-                    "comments": [],
-                    "in_subset": [
-                        "gct_v1.2-live"
-                    ]
-                },
-                "miR-371a-3p": {
-                    "meaning": "ncit:C158711",
-                    "comments": [],
-                    "in_subset": [
-                        "gct_v1.2-live"
-                    ]
-                },
-                "miR-372-3p": {
-                    "meaning": "ncit:C82190",
-                    "comments": [],
-                    "in_subset": [
-                        "gct_v1.2-live"
-                    ]
-                },
-                "miR-373-3p": {
-                    "meaning": "ncit:C82191",
-                    "comments": [],
-                    "in_subset": [
-                        "gct_v1.2-live"
-                    ]
-                },
-                "miR-375-3p": {
-                    "meaning": "ncit:C101665",
-                    "comments": [],
-                    "in_subset": [
-                        "gct_v1.2-live"
                     ]
                 },
                 "\u03b2-hCG": {
@@ -10948,22 +11658,6 @@
                         "hl_v1.0-live"
                     ]
                 },
-                "IU/L": {
-                    "meaning": "ncit:C67376",
-                    "comments": [],
-                    "in_subset": [
-                        "gct_v1.2-live"
-                    ]
-                },
-                "U/L": {
-                    "meaning": "ncit:C67456",
-                    "comments": [],
-                    "in_subset": [
-                        "aml_v1.8-live",
-                        "gct_v1.2-live",
-                        "hl_v1.0-live"
-                    ]
-                },
                 "count/mm3": {
                     "meaning": "ncit:C173275",
                     "comments": [],
@@ -10978,6 +11672,13 @@
                     "in_subset": [
                         "aml_v1.8-live",
                         "hl_v1.0-live"
+                    ]
+                },
+                "IU/L": {
+                    "meaning": "ncit:C67376",
+                    "comments": [],
+                    "in_subset": [
+                        "gct_v1.2-live"
                     ]
                 },
                 "mcg/mL": {
@@ -11008,6 +11709,15 @@
                     "comments": [],
                     "in_subset": [
                         "gct_v1.2-live"
+                    ]
+                },
+                "U/L": {
+                    "meaning": "ncit:C67456",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live",
+                        "gct_v1.2-live",
+                        "hl_v1.0-live"
                     ]
                 },
                 "uIU/mL": {
@@ -11049,6 +11759,13 @@
                         "gct_v1.2-live"
                     ]
                 },
+                "ddPCR": {
+                    "meaning": "ncit:C166064",
+                    "comments": [],
+                    "in_subset": [
+                        "gct_v1.2-live"
+                    ]
+                },
                 "Flow Cytometry": {
                     "meaning": "ncit:C16585",
                     "comments": [],
@@ -11082,13 +11799,6 @@
                     "comments": [],
                     "in_subset": [
                         "hl_v1.0-live"
-                    ]
-                },
-                "ddPCR": {
-                    "meaning": "ncit:C166064",
-                    "comments": [],
-                    "in_subset": [
-                        "gct_v1.2-live"
                     ]
                 },
                 "qPCR": {
@@ -11220,11 +11930,39 @@
                 "rms_v2.0-live"
             ],
             "permissible_values": {
+                "11q deletion": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "16q loss": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "17q gain": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
                 "17q Gain": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
                         "nbl_v1.1-live"
+                    ]
+                },
+                "1p deletion": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
                     ]
                 },
                 "45XO": {
@@ -11247,6 +11985,7 @@
                     "meaning": "ncit:C120197",
                     "comments": [],
                     "in_subset": [
+                        "aml_v1.8-live",
                         "gct_v1.2-live"
                     ]
                 },
@@ -11254,6 +11993,7 @@
                     "meaning": "ncit:C120198",
                     "comments": [],
                     "in_subset": [
+                        "aml_v1.8-live",
                         "gct_v1.2-live"
                     ]
                 },
@@ -11261,6 +12001,7 @@
                     "meaning": "ncit:C129718",
                     "comments": [],
                     "in_subset": [
+                        "aml_v1.8-live",
                         "gct_v1.2-live"
                     ]
                 },
@@ -11290,6 +12031,13 @@
                     "comments": [],
                     "in_subset": [
                         "gct_v1.2-live"
+                    ]
+                },
+                "8q gain": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
                     ]
                 },
                 "ALK Amplification": {
@@ -11369,7 +12117,7 @@
                         "aml_v1.8-live"
                     ]
                 },
-                "CEBPA Mutation - Mutation Unspecified": {
+                "CEBPA mutation - mutation unspecified": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
@@ -11383,25 +12131,67 @@
                         "nrsts_v1.0-live"
                     ]
                 },
-                "CKIT Mutation - Ex17": {
+                "CKIT mutation - ex17": {
                     "meaning": "ncit:C116396",
                     "comments": [],
                     "in_subset": [
                         "aml_v1.8-live"
                     ]
                 },
-                "CKIT Mutation - Ex8": {
+                "CKIT mutation - ex8": {
                     "meaning": "ncit:C128660",
                     "comments": [],
                     "in_subset": [
                         "aml_v1.8-live"
                     ]
                 },
-                "CKIT Mutation - Unspecified": {
+                "CKIT mutation - unspecified": {
                     "meaning": "ncit:C39712",
                     "comments": [
                         "(aml_v1.8-live) ConsortiumNote: t(9;11)(p21.3;q23.3)"
                     ],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "del(13q)": {
+                    "meaning": "ncit:C36497",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "del(13q)(13q14-21)": {
+                    "meaning": "ncit:C168770",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "del(17p)": {
+                    "meaning": "ncit:C36499",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "del(5q)(5q31-q32)": {
+                    "meaning": "ncit:C168769",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "der.12p": {
+                    "meaning": "ncit:C173542",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "ETV6 rearranged": {
+                    "meaning": "",
+                    "comments": [],
                     "in_subset": [
                         "aml_v1.8-live"
                     ]
@@ -11462,14 +12252,14 @@
                         "aml_v1.8-live"
                     ]
                 },
-                "FLT3 Internal Tandem Duplication": {
+                "FLT3 internal tandem duplication (ITD)": {
                     "meaning": "ncit:C67494",
                     "comments": [],
                     "in_subset": [
                         "aml_v1.8-live"
                     ]
                 },
-                "FLT3 Tyrosine Kinase Domain Point Mutation": {
+                "FLT3-TKD": {
                     "meaning": "ncit:C67495",
                     "comments": [
                         "(aml_v1.8-live) ConsortiumNote: t(6;9)(p23;q34.1)"
@@ -11494,14 +12284,51 @@
                         "nrsts_v1.0-live"
                     ]
                 },
-                "GATA1 Mutation": {
+                "GATA1 mutation": {
                     "meaning": "ncit:C82340",
                     "comments": [],
                     "in_subset": [
                         "aml_v1.8-live"
                     ]
                 },
-                "K-RAS Mutation": {
+                "iAMP21": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "inv(16)(p13.3q24.3)/CBFA2T3-GLIS2": {
+                    "meaning": "ncit:C167195",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "inv(16)(p13q22)": {
+                    "meaning": "ncit:C36373",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "inv(3)(q21.3;q26.2)": {
+                    "meaning": "ncit:C36407",
+                    "comments": [
+                        "(aml_v1.8-live) ConsortiumNote: t(v;11q23.3)"
+                    ],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "inv(3)(q21;q21.2)": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "K-RAS mutation": {
                     "meaning": "ncit:C41361",
                     "comments": [
                         "(aml_v1.8-live) ConsortiumNote: t(11;17)(q23;q12-21)"
@@ -11524,7 +12351,7 @@
                         "nbl_v1.1-live"
                     ]
                 },
-                "MLL Other Partner": {
+                "MLL Other partner": {
                     "meaning": "ncit:C36517",
                     "comments": [
                         "(aml_v1.8-live) ConsortiumNote: t(8;16)(p11.2;p13.3)"
@@ -11533,7 +12360,7 @@
                         "aml_v1.8-live"
                     ]
                 },
-                "MLL Rearrangement": {
+                "MLL rearrangement": {
                     "meaning": "ncit:C122623",
                     "comments": [],
                     "in_subset": [
@@ -11552,13 +12379,6 @@
                     "comments": [],
                     "in_subset": [
                         "aml_v1.8-live"
-                    ]
-                },
-                "MYCN Amplification": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "nbl_v1.1-live"
                     ]
                 },
                 "Monoallelic CEBPA Gene Mutation": {
@@ -11584,7 +12404,14 @@
                         "aml_v1.8-live"
                     ]
                 },
-                "N-RAS Mutation": {
+                "MYCN Amplification": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "nbl_v1.1-live"
+                    ]
+                },
+                "N-RAS mutation": {
                     "meaning": "ncit:C41381",
                     "comments": [
                         "(aml_v1.8-live) ConsortiumNote: split"
@@ -11593,7 +12420,21 @@
                         "aml_v1.8-live"
                     ]
                 },
-                "NPM1 Mutation": {
+                "Non-KMT2A MLLT10": {
+                    "meaning": "ncit:C168771",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "None detected": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "NPM1 mutation": {
                     "meaning": "ncit:C168774",
                     "comments": [],
                     "in_subset": [
@@ -11607,18 +12448,25 @@
                         "nrsts_v1.0-live"
                     ]
                 },
-                "Non-KMT2A MLLT10": {
-                    "meaning": "ncit:C168771",
-                    "comments": [],
-                    "in_subset": [
-                        "aml_v1.8-live"
-                    ]
-                },
                 "Other-FOXO1": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
                         "rms_v2.0-live"
+                    ]
+                },
+                "p.F1174L": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "nbl_v1.1-live"
+                    ]
+                },
+                "p.R1275L": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "nbl_v1.1-live"
                     ]
                 },
                 "PAX3-FOXO1": {
@@ -11653,7 +12501,7 @@
                         "aml_v1.8-live"
                     ]
                 },
-                "PTPN11 Mutation": {
+                "PTPN11 mutation": {
                     "meaning": "ncit:C82612",
                     "comments": [],
                     "in_subset": [
@@ -11667,7 +12515,7 @@
                         "nrsts_v1.0-live"
                     ]
                 },
-                "RUNX1 Mutation": {
+                "RUNX1 mutation": {
                     "meaning": "ncit:C38362",
                     "comments": [
                         "(aml_v1.8-live) ConsortiumNote: GATA2/MECOM Fusion Gene"
@@ -11697,134 +12545,6 @@
                         "nrsts_v1.0-live"
                     ]
                 },
-                "TCF3-PBX1 Fusion": {
-                    "meaning": "ncit:C99291",
-                    "comments": [],
-                    "in_subset": [
-                        "aml_v1.8-live"
-                    ]
-                },
-                "TGFBR3-MGEA5": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "nrsts_v1.0-live"
-                    ]
-                },
-                "Trisomy 21": {
-                    "meaning": "ncit:C43224",
-                    "comments": [],
-                    "in_subset": [
-                        "aml_v1.8-live"
-                    ]
-                },
-                "Trisomy 3": {
-                    "meaning": "ncit:C36425",
-                    "comments": [],
-                    "in_subset": [
-                        "aml_v1.8-live"
-                    ]
-                },
-                "Trisomy 8": {
-                    "meaning": "ncit:C36396",
-                    "comments": [],
-                    "in_subset": [
-                        "aml_v1.8-live"
-                    ]
-                },
-                "VGLLA2 Rearranged": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "nrsts_v1.0-live"
-                    ]
-                },
-                "WT1 Mutation": {
-                    "meaning": "ncit:C146726",
-                    "comments": [],
-                    "in_subset": [
-                        "aml_v1.8-live"
-                    ]
-                },
-                "Wild Type": {
-                    "meaning": "ncit:C62195",
-                    "comments": [],
-                    "in_subset": [
-                        "aml_v1.8-live"
-                    ]
-                },
-                "del(13q)": {
-                    "meaning": "ncit:C36497",
-                    "comments": [],
-                    "in_subset": [
-                        "aml_v1.8-live"
-                    ]
-                },
-                "del(13q)(13q14-21)": {
-                    "meaning": "ncit:C168770",
-                    "comments": [],
-                    "in_subset": [
-                        "aml_v1.8-live"
-                    ]
-                },
-                "del(17p)": {
-                    "meaning": "ncit:C36499",
-                    "comments": [],
-                    "in_subset": [
-                        "aml_v1.8-live"
-                    ]
-                },
-                "del(5q)(5q31-q32)": {
-                    "meaning": "ncit:C168769",
-                    "comments": [],
-                    "in_subset": [
-                        "aml_v1.8-live"
-                    ]
-                },
-                "der.12p": {
-                    "meaning": "ncit:C173542",
-                    "comments": [],
-                    "in_subset": [
-                        "aml_v1.8-live"
-                    ]
-                },
-                "inv(16)(p13.3q24.3) / CBFA2T3-GLIS2": {
-                    "meaning": "ncit:C167195",
-                    "comments": [],
-                    "in_subset": [
-                        "aml_v1.8-live"
-                    ]
-                },
-                "inv(16)(p13q22)": {
-                    "meaning": "ncit:C36373",
-                    "comments": [],
-                    "in_subset": [
-                        "aml_v1.8-live"
-                    ]
-                },
-                "inv(3)(q21.3;q26.2)": {
-                    "meaning": "ncit:C36407",
-                    "comments": [
-                        "(aml_v1.8-live) ConsortiumNote: t(v;11q23.3)"
-                    ],
-                    "in_subset": [
-                        "aml_v1.8-live"
-                    ]
-                },
-                "p.F1174L": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "nbl_v1.1-live"
-                    ]
-                },
-                "p.R1275L": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "nbl_v1.1-live"
-                    ]
-                },
                 "t(10;11)(p11.2;q23)": {
                     "meaning": "ncit:C168758",
                     "comments": [],
@@ -11841,7 +12561,7 @@
                         "aml_v1.8-live"
                     ]
                 },
-                "t(11;15)(p15;q35) / NUP98/JARID1A": {
+                "t(11;15)(p15;q35)/NUP98/JARID1A": {
                     "meaning": "ncit:C131505",
                     "comments": [],
                     "in_subset": [
@@ -11855,14 +12575,14 @@
                         "aml_v1.8-live"
                     ]
                 },
-                "t(11;19)(q23;p13) / (MLL-ENL)/(MLL-ELL)": {
+                "t(11;19)(q23;p13) (MLL-ENL)/(MLL-ELL)": {
                     "meaning": "ncit:C168764",
                     "comments": [],
                     "in_subset": [
                         "aml_v1.8-live"
                     ]
                 },
-                "t(11;19)(q23;p13.1) / (MLL-ELL)": {
+                "t(11;19)(q23;p13.1) (MLL-ELL)": {
                     "meaning": "ncit:C36371",
                     "comments": [
                         "(aml_v1.8-live) ConsortiumNote: KMT2A Gene Rearrangement"
@@ -11871,7 +12591,7 @@
                         "aml_v1.8-live"
                     ]
                 },
-                "t(11;19)(q23;p13.3) / (MLL-ENL)": {
+                "t(11;19)(q23;p13.3) (MLL-ENL)": {
                     "meaning": "ncit:C36372",
                     "comments": [],
                     "in_subset": [
@@ -11892,14 +12612,14 @@
                         "aml_v1.8-live"
                     ]
                 },
-                "t(16;21)(p11;q22) / FUS/ERG": {
+                "t(16;21)(p11;q22)FUS/ERG": {
                     "meaning": "ncit:C36616",
                     "comments": [],
                     "in_subset": [
                         "aml_v1.8-live"
                     ]
                 },
-                "t(16;21)(q24;q22) / RUNX1-CBFA2T3": {
+                "t(16;21)(q24;q22)RUNX1-CBFA2T3": {
                     "meaning": "ncit:C168773",
                     "comments": [],
                     "in_subset": [
@@ -11934,14 +12654,14 @@
                         "aml_v1.8-live"
                     ]
                 },
-                "t(3;3)(q21;q26.2)": {
+                "t(3;3)(q21;q26.2), RPN1-EVI1": {
                     "meaning": "ncit:C36406",
                     "comments": [],
                     "in_subset": [
                         "aml_v1.8-live"
                     ]
                 },
-                "t(3;5)(q25;q34) / NPM1/MLF1": {
+                "t(3;5)(q25;q34)NPM1/MLF1": {
                     "meaning": "ncit:C36415",
                     "comments": [],
                     "in_subset": [
@@ -11955,7 +12675,7 @@
                         "aml_v1.8-live"
                     ]
                 },
-                "t(5;11)(q35;p15) / NSD1/NUP98": {
+                "t(5;11)(q35;p15) NSD1/NUP98": {
                     "meaning": "ncit:C131503",
                     "comments": [],
                     "in_subset": [
@@ -11976,7 +12696,7 @@
                         "aml_v1.8-live"
                     ]
                 },
-                "t(7;12)(q36;p13) / HLXB9(MNX1)/ETV6(TEL)": {
+                "t(7;12)(q36;p13) HLXB9(MNX1)/ETV6(TEL)": {
                     "meaning": "ncit:C122689",
                     "comments": [],
                     "in_subset": [
@@ -12004,7 +12724,7 @@
                         "aml_v1.8-live"
                     ]
                 },
-                "t(9;22)(q34;q11.2) / ABL/BCR": {
+                "t(9;22)(q34;q11.2) ABL/BCR": {
                     "meaning": "ncit:C13271",
                     "comments": [],
                     "in_subset": [
@@ -12013,6 +12733,83 @@
                 },
                 "t(v;q23,3); KMT2A": {
                     "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "TCF3-PBX1 Fusion": {
+                    "meaning": "ncit:C99291",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "TGFBR3-MGEA5": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "nrsts_v1.0-live"
+                    ]
+                },
+                "TP53 mutation": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "Trisomy 10": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "Trisomy 21": {
+                    "meaning": "ncit:C43224",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "Trisomy 3": {
+                    "meaning": "ncit:C36425",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "Trisomy 4": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "Trisomy 8": {
+                    "meaning": "ncit:C36396",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "VGLLA2 Rearranged": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "nrsts_v1.0-live"
+                    ]
+                },
+                "Wild Type": {
+                    "meaning": "ncit:C62195",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "WT1 mutation": {
+                    "meaning": "ncit:C146726",
                     "comments": [],
                     "in_subset": [
                         "aml_v1.8-live"
@@ -12059,6 +12856,7 @@
                     "meaning": "ncit:C25418",
                     "comments": [],
                     "in_subset": [
+                        "aml_v1.8-live",
                         "nbl_v1.1-live",
                         "rms_v2.0-live"
                     ]
@@ -12189,7 +12987,7 @@
                 "rms_v2.0-live"
             ],
             "permissible_values": {
-                "Negative": {
+                "Absent": {
                     "meaning": "ncit:C38757",
                     "comments": [],
                     "in_subset": [
@@ -12206,7 +13004,7 @@
                         "rms_v2.0-live"
                     ]
                 },
-                "Positive": {
+                "Present": {
                     "meaning": "ncit:C38758",
                     "comments": [],
                     "in_subset": [
@@ -13665,25 +14463,11 @@
                         "hl_v1.0-live"
                     ]
                 },
-                "Not reported": {
-                    "meaning": "ncit:C43234",
-                    "comments": [],
-                    "in_subset": [
-                        "gct_v1.2-live"
-                    ]
-                },
                 "mg": {
                     "meaning": "ncit:C28253",
                     "comments": [],
                     "in_subset": [
                         "gct_v1.2-live",
-                        "hl_v1.0-live"
-                    ]
-                },
-                "mg/Kilo": {
-                    "meaning": "ncit:C67401",
-                    "comments": [],
-                    "in_subset": [
                         "hl_v1.0-live"
                     ]
                 },
@@ -13694,6 +14478,13 @@
                         "gct_v1.2-live"
                     ]
                 },
+                "mg/Kilo": {
+                    "meaning": "ncit:C67401",
+                    "comments": [],
+                    "in_subset": [
+                        "hl_v1.0-live"
+                    ]
+                },
                 "mg/m2": {
                     "meaning": "ncit:C67402",
                     "comments": [],
@@ -13701,6 +14492,13 @@
                         "aml_v1.8-live",
                         "gct_v1.2-live",
                         "hl_v1.0-live"
+                    ]
+                },
+                "Not reported": {
+                    "meaning": "ncit:C43234",
+                    "comments": [],
+                    "in_subset": [
+                        "gct_v1.2-live"
                     ]
                 },
                 "Unknown": {
@@ -13764,7 +14562,7 @@
                 "hl_v1.0-live"
             ],
             "permissible_values": {
-                "Bone Marrow": {
+                "Bone marrow": {
                     "meaning": "ncit:C15194",
                     "comments": [],
                     "in_subset": [
@@ -13772,7 +14570,7 @@
                         "hl_v1.0-live"
                     ]
                 },
-                "Cord Blood": {
+                "Cord blood": {
                     "meaning": "ncit:C15640",
                     "comments": [],
                     "in_subset": [
@@ -13784,22 +14582,16 @@
                     "meaning": "ncit:C168886",
                     "comments": [],
                     "in_subset": [
+                        "aml_v1.8-live",
                         "hl_v1.0-live"
                     ]
                 },
-                "Peripheral Blood": {
+                "Peripheral blood": {
                     "meaning": "ncit:C15430",
                     "comments": [],
                     "in_subset": [
                         "aml_v1.8-live",
                         "hl_v1.0-live"
-                    ]
-                },
-                "Stem Cell Mixture": {
-                    "meaning": "ncit:C168886",
-                    "comments": [],
-                    "in_subset": [
-                        "aml_v1.8-live"
                     ]
                 },
                 "Other": {
@@ -13915,26 +14707,26 @@
                 }
             }
         },
-        "HlaAResultEnum": {
+        "HlaResultEnum": {
             "in_subset": [
                 "aml_v1.8-live"
             ],
             "permissible_values": {
-                "Both Alleles Matched": {
+                "Both alleles matched": {
                     "meaning": "ncit:C168821",
                     "comments": [],
                     "in_subset": [
                         "aml_v1.8-live"
                     ]
                 },
-                "One Allele Mismatched": {
+                "One allele mismatched": {
                     "meaning": "ncit:C168819",
                     "comments": [],
                     "in_subset": [
                         "aml_v1.8-live"
                     ]
                 },
-                "Two Alleles Mismatched": {
+                "Two alleles mismatched": {
                     "meaning": "ncit:C168820",
                     "comments": [],
                     "in_subset": [
@@ -14344,6 +15136,13 @@
                 "aml_v1.8-live"
             ],
             "permissible_values": {
+                "Any MLL rearrangement": {
+                    "meaning": "ncit:C122623",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
                 "Biallelic CEBPA Gene Mutation": {
                     "meaning": "ncit:C157569",
                     "comments": [],
@@ -14381,14 +15180,42 @@
                         "aml_v1.8-live"
                     ]
                 },
-                "FLT3 Internal Tandem Duplication": {
+                "del(13q) (13q 14 - 21)": {
+                    "meaning": "ncit:C168770",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "del(17p)": {
+                    "meaning": "ncit:C36499",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "del(5q)(5q31-q32)": {
+                    "meaning": "ncit:C168769",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "der.12p": {
+                    "meaning": "ncit:C173542",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "FLT3 internal tandem duplication": {
                     "meaning": "ncit:C67494",
                     "comments": [],
                     "in_subset": [
                         "aml_v1.8-live"
                     ]
                 },
-                "FLT3 Tyrosine Kinase Domain Point Mutation": {
+                "FLT3-TKD": {
                     "meaning": "ncit:C67495",
                     "comments": [
                         "(aml_v1.8-live) ConsortiumNote: t(6;9)(p23;q34.1)"
@@ -14400,6 +15227,29 @@
                 "GATA1 Mutation": {
                     "meaning": "ncit:C82340",
                     "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "inv(16)(p13.3q24.3) / CBFA2T3-GLIS2": {
+                    "meaning": "ncit:C167195",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "inv(16)(p13q22) (G2704-G2759)": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "inv(3)(q21.3;q26.2)": {
+                    "meaning": "ncit:C36407",
+                    "comments": [
+                        "(aml_v1.8-live) ConsortiumNote: t(v;11q23.3)"
+                    ],
                     "in_subset": [
                         "aml_v1.8-live"
                     ]
@@ -14418,13 +15268,6 @@
                     "comments": [
                         "(aml_v1.8-live) ConsortiumNote: t(8;16)(p11.2;p13.3)"
                     ],
-                    "in_subset": [
-                        "aml_v1.8-live"
-                    ]
-                },
-                "MLL Rearrangement": {
-                    "meaning": "ncit:C122623",
-                    "comments": [],
                     "in_subset": [
                         "aml_v1.8-live"
                     ]
@@ -14461,15 +15304,15 @@
                         "aml_v1.8-live"
                     ]
                 },
-                "NPM1 Mutation": {
-                    "meaning": "ncit:C82429",
+                "Non-KMT2A MLLT10": {
+                    "meaning": "ncit:C168771",
                     "comments": [],
                     "in_subset": [
                         "aml_v1.8-live"
                     ]
                 },
-                "Non-KMT2A MLLT10": {
-                    "meaning": "ncit:C168771",
+                "NPM1 mutation": {
+                    "meaning": "ncit:C82429",
                     "comments": [],
                     "in_subset": [
                         "aml_v1.8-live"
@@ -14484,7 +15327,7 @@
                         "aml_v1.8-live"
                     ]
                 },
-                "RUNX1 Mutation": {
+                "RUNX1 mutation": {
                     "meaning": "ncit:C38362",
                     "comments": [
                         "(aml_v1.8-live) ConsortiumNote: GATA2/MECOM Fusion Gene"
@@ -14496,71 +15339,6 @@
                 "RUNX1-RUNXT1 Fusion": {
                     "meaning": "",
                     "comments": [],
-                    "in_subset": [
-                        "aml_v1.8-live"
-                    ]
-                },
-                "Trisomy 8": {
-                    "meaning": "ncit:C36396",
-                    "comments": [],
-                    "in_subset": [
-                        "aml_v1.8-live"
-                    ]
-                },
-                "WT1 Mutation": {
-                    "meaning": "ncit:C146726",
-                    "comments": [],
-                    "in_subset": [
-                        "aml_v1.8-live"
-                    ]
-                },
-                "del(13q) (13q 14 - 21)": {
-                    "meaning": "ncit:C168770",
-                    "comments": [],
-                    "in_subset": [
-                        "aml_v1.8-live"
-                    ]
-                },
-                "del(17p)": {
-                    "meaning": "ncit:C36499",
-                    "comments": [],
-                    "in_subset": [
-                        "aml_v1.8-live"
-                    ]
-                },
-                "del(5q)(5q31-q32)": {
-                    "meaning": "ncit:C168769",
-                    "comments": [],
-                    "in_subset": [
-                        "aml_v1.8-live"
-                    ]
-                },
-                "der.12p": {
-                    "meaning": "ncit:C173542",
-                    "comments": [],
-                    "in_subset": [
-                        "aml_v1.8-live"
-                    ]
-                },
-                "inv(16)(p13.3q24.3) / CBFA2T3-GLIS2": {
-                    "meaning": "ncit:C167195",
-                    "comments": [],
-                    "in_subset": [
-                        "aml_v1.8-live"
-                    ]
-                },
-                "inv(16)(p13q22) (G2704-G2759)": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "aml_v1.8-live"
-                    ]
-                },
-                "inv(3)(q21.3;q26.2)": {
-                    "meaning": "ncit:C36407",
-                    "comments": [
-                        "(aml_v1.8-live) ConsortiumNote: t(v;11q23.3)"
-                    ],
                     "in_subset": [
                         "aml_v1.8-live"
                     ]
@@ -14681,7 +15459,7 @@
                         "aml_v1.8-live"
                     ]
                 },
-                "t(3;5)(q25;q34) / NPM1/MLF1": {
+                "t(3;5)(q25;q34)NPM1/MLF1": {
                     "meaning": "ncit:C36415",
                     "comments": [],
                     "in_subset": [
@@ -14765,6 +15543,20 @@
                         "aml_v1.8-live"
                     ]
                 },
+                "Trisomy 8": {
+                    "meaning": "ncit:C36396",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "WT1 mutation": {
+                    "meaning": "ncit:C146726",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
                 "Other": {
                     "meaning": "ncit:C17649",
                     "comments": [],
@@ -14802,6 +15594,13 @@
                         "gct_v1.2-live"
                     ]
                 },
+                "mRECIST": {
+                    "meaning": "ncit:C126031",
+                    "comments": [],
+                    "in_subset": [
+                        "gct_v1.2-live"
+                    ]
+                },
                 "PERCIST": {
                     "meaning": "ncit:C126039",
                     "comments": [],
@@ -14818,13 +15617,6 @@
                 },
                 "WHO": {
                     "meaning": "ncit:C75419",
-                    "comments": [],
-                    "in_subset": [
-                        "gct_v1.2-live"
-                    ]
-                },
-                "mRECIST": {
-                    "meaning": "ncit:C126031",
                     "comments": [],
                     "in_subset": [
                         "gct_v1.2-live"
@@ -14931,19 +15723,13 @@
                 "rms_v2.0-live"
             ],
             "permissible_values": {
-                "Complete Remission": {
-                    "meaning": "ncit:C4870",
-                    "comments": [],
-                    "in_subset": [
-                        "aml_v1.8-live"
-                    ]
-                },
                 "Complete Response": {
                     "meaning": "ncit:C4870",
                     "comments": [
                         "(hl_v1.0-live) ConsortiumNote: Note: For HL, refers to end of chemotherapy or late response."
                     ],
                     "in_subset": [
+                        "aml_v1.8-live",
                         "gct_v1.2-live",
                         "hl_v1.0-live",
                         "nrsts_v1.0-live",
@@ -15068,13 +15854,6 @@
                 "hl_v1.0-live"
             ],
             "permissible_values": {
-                "EKG": {
-                    "meaning": "ncit:C38155",
-                    "comments": [],
-                    "in_subset": [
-                        "hl_v1.0-live"
-                    ]
-                },
                 "Echocardiogram": {
                     "meaning": "ncit:C156813",
                     "comments": [
@@ -15082,6 +15861,13 @@
                     ],
                     "in_subset": [
                         "aml_v1.8-live",
+                        "hl_v1.0-live"
+                    ]
+                },
+                "EKG": {
+                    "meaning": "ncit:C38155",
+                    "comments": [],
+                    "in_subset": [
                         "hl_v1.0-live"
                     ]
                 },
@@ -17561,13 +18347,6 @@
                         "hl_v1.0-live"
                     ]
                 },
-                "Hodgkin Lymphoma, NOS": {
-                    "meaning": "ncit:C9357",
-                    "comments": [],
-                    "in_subset": [
-                        "hl_v1.0-live"
-                    ]
-                },
                 "Hodgkin Lymphoma, Nodular Lymphocyte Predominance": {
                     "meaning": "ncit:C7258",
                     "comments": [],
@@ -17577,6 +18356,13 @@
                 },
                 "Hodgkin Lymphoma, Nodular Sclerosis, NOS": {
                     "meaning": "ncit:C3518",
+                    "comments": [],
+                    "in_subset": [
+                        "hl_v1.0-live"
+                    ]
+                },
+                "Hodgkin Lymphoma, NOS": {
+                    "meaning": "ncit:C9357",
                     "comments": [],
                     "in_subset": [
                         "hl_v1.0-live"
@@ -17659,20 +18445,6 @@
                         "nrsts_v1.0-live"
                     ]
                 },
-                "Malignant Teratoma": {
-                    "meaning": "ncit:C4287",
-                    "comments": [],
-                    "in_subset": [
-                        "gct_v1.2-live"
-                    ]
-                },
-                "Malignant Triton tumour": {
-                    "meaning": "icdo:9561/3",
-                    "comments": [],
-                    "in_subset": [
-                        "nrsts_v1.0-live"
-                    ]
-                },
                 "Malignant glomus tumour": {
                     "meaning": "icdo:8711/3",
                     "comments": [],
@@ -17689,6 +18461,20 @@
                 },
                 "Malignant peripheral nerve sheath tumor": {
                     "meaning": "icdo:9540/3",
+                    "comments": [],
+                    "in_subset": [
+                        "nrsts_v1.0-live"
+                    ]
+                },
+                "Malignant Teratoma": {
+                    "meaning": "ncit:C4287",
+                    "comments": [],
+                    "in_subset": [
+                        "gct_v1.2-live"
+                    ]
+                },
+                "Malignant Triton tumour": {
+                    "meaning": "icdo:9561/3",
                     "comments": [],
                     "in_subset": [
                         "nrsts_v1.0-live"
@@ -17785,20 +18571,6 @@
                         "nrsts_v1.0-live"
                     ]
                 },
-                "PEComa NOS, benign": {
-                    "meaning": "icdo:8714/0",
-                    "comments": [],
-                    "in_subset": [
-                        "nrsts_v1.0-live"
-                    ]
-                },
-                "PEComa NOS, malignant": {
-                    "meaning": "icdo:8714/3",
-                    "comments": [],
-                    "in_subset": [
-                        "nrsts_v1.0-live"
-                    ]
-                },
                 "Palmar/plantar fibromatosis": {
                     "meaning": "icdo:8813/1",
                     "comments": [],
@@ -17808,6 +18580,20 @@
                 },
                 "Papillary intralymphatic angioendothelioma": {
                     "meaning": "icdo:9135/1",
+                    "comments": [],
+                    "in_subset": [
+                        "nrsts_v1.0-live"
+                    ]
+                },
+                "PEComa NOS, benign": {
+                    "meaning": "icdo:8714/0",
+                    "comments": [],
+                    "in_subset": [
+                        "nrsts_v1.0-live"
+                    ]
+                },
+                "PEComa NOS, malignant": {
+                    "meaning": "icdo:8714/3",
                     "comments": [],
                     "in_subset": [
                         "nrsts_v1.0-live"
@@ -18307,6 +19093,13 @@
                 "hl_v1.0-live"
             ],
             "permissible_values": {
+                "beta-catenin": {
+                    "meaning": "ncit:C17478",
+                    "comments": [],
+                    "in_subset": [
+                        "gct_v1.2-live"
+                    ]
+                },
                 "CD20": {
                     "meaning": "ncit:C38896",
                     "comments": [],
@@ -18341,13 +19134,6 @@
                     "comments": [],
                     "in_subset": [
                         "hl_v1.0-live"
-                    ]
-                },
-                "beta-catenin": {
-                    "meaning": "ncit:C17478",
-                    "comments": [],
-                    "in_subset": [
-                        "gct_v1.2-live"
                     ]
                 }
             }
@@ -19631,6 +20417,13 @@
                         "hl_v1.0-live"
                     ]
                 },
+                "Pathology": {
+                    "meaning": "ncit:C18189",
+                    "comments": [],
+                    "in_subset": [
+                        "gct_v1.2-live"
+                    ]
+                },
                 "PET": {
                     "meaning": "ncit:C17007",
                     "comments": [
@@ -19652,13 +20445,6 @@
                     "comments": [],
                     "in_subset": [
                         "hl_v1.0-live"
-                    ]
-                },
-                "Pathology": {
-                    "meaning": "ncit:C18189",
-                    "comments": [],
-                    "in_subset": [
-                        "gct_v1.2-live"
                     ]
                 },
                 "Tumor Marker": {
@@ -22173,15 +22959,15 @@
                         "hl_v1.0-live"
                     ]
                 },
-                "GI Disorder": {
-                    "meaning": "ncit:C2990",
+                "Genitourinary Disorder": {
+                    "meaning": "ncit:C156660",
                     "comments": [],
                     "in_subset": [
                         "hl_v1.0-live"
                     ]
                 },
-                "Genitourinary Disorder": {
-                    "meaning": "ncit:C156660",
+                "GI Disorder": {
+                    "meaning": "ncit:C2990",
                     "comments": [],
                     "in_subset": [
                         "hl_v1.0-live"
@@ -22313,15 +23099,15 @@
                         "hl_v1.0-live"
                     ]
                 },
-                "GI Adhesions": {
-                    "meaning": "ncit:C185688",
+                "Gastritis": {
+                    "meaning": "ncit:C26780",
                     "comments": [],
                     "in_subset": [
                         "hl_v1.0-live"
                     ]
                 },
-                "Gastritis": {
-                    "meaning": "ncit:C26780",
+                "GI Adhesions": {
+                    "meaning": "ncit:C185688",
                     "comments": [],
                     "in_subset": [
                         "hl_v1.0-live"
@@ -22827,6 +23613,7 @@
         },
         "CensorStatusEnum": {
             "in_subset": [
+                "aml_v1.8-live",
                 "nbl_v1.1-live",
                 "nrsts_v1.0-live",
                 "rms_v2.0-live"
@@ -22836,15 +23623,9 @@
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
+                        "aml_v1.8-live",
                         "nbl_v1.1-live",
                         "nrsts_v1.0-live",
-                        "rms_v2.0-live"
-                    ]
-                },
-                "Subject is censored (i.e. has had no events(s)": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
                         "rms_v2.0-live"
                     ]
                 },
@@ -22852,8 +23633,10 @@
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
+                        "aml_v1.8-live",
                         "nbl_v1.1-live",
-                        "nrsts_v1.0-live"
+                        "nrsts_v1.0-live",
+                        "rms_v2.0-live"
                     ]
                 },
                 "Unknown": {
