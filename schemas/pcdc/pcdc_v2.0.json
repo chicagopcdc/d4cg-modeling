@@ -1559,7 +1559,8 @@
                 "npc_v1.0",
                 "nrsts_v2.0",
                 "rb_v1.2",
-                "rms_v2.0"
+                "rms_v2.0", 
+                "nbl_v2.0"
             ],
             "annotations": {
                 "domain": "monitoring"
@@ -5608,7 +5609,8 @@
                 "npc_v1.0",
                 "nrsts_v2.0",
                 "rb_v1.2",
-                "rms_v2.0"
+                "rms_v2.0",
+                "nbl_v2.0"
             ],
             "annotations": {
                 "tier_mandatory": "hl_v2.0,npc_v1.0",
@@ -52067,7 +52069,8 @@
                 "npc_v1.0",
                 "nrsts_v2.0",
                 "rb_v1.2",
-                "rms_v2.0"
+                "rms_v2.0",
+                "nbl_v2.0"
             ],
             "permissible_values": {
                 "Complete Remission": {
@@ -52176,6 +52179,90 @@
                     ],
                     "in_subset": [
                         "cns_v1.2"
+                    ]
+                },
+                "INRC Park 2017 >> Complete Response": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "nbl_v2.0"
+                    ]
+                },
+                "INRC Park 2017 >> Partial Response": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "nbl_v2.0"
+                    ]
+                },
+                "INRC Park 2017 >> Stable Disease": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "nbl_v2.0"
+                    ]
+                },
+                "INRC Park 2017 >> Minor Response": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "nbl_v2.0"
+                    ]
+                },
+                "INRC Park 2017 >> Minimal Disease": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "nbl_v2.0"
+                    ]
+                },
+                "INRC Park 2017 >> Progressive Disease": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "nbl_v2.0"
+                    ]
+                },
+                "INRC Brodeur 1993 >> Complete Response": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "nbl_v2.0"
+                    ]
+                },
+                "INRC Brodeur 1993 >> Very Good Partial Response": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "nbl_v2.0"
+                    ]
+                },
+                "INRC Brodeur 1993 >> Partial Response": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "nbl_v2.0"
+                    ]
+                },
+                "INRC Brodeur 1993 >> Mixed Response": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "nbl_v2.0"
+                    ]
+                },
+                "INRC Brodeur 1993 >> No Response": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "nbl_v2.0"
+                    ]
+                },
+                "INRC Brodeur 1993 >> Progressive Disease": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "nbl_v2.0"
                     ]
                 },
                 "RECIST >> Complete Response": {
@@ -52619,6 +52706,20 @@
                     "comments": [],
                     "in_subset": [
                         "cns_v1.2"
+                    ]
+                },
+                "INRC, Park 2017": {
+                    "meaning": [],
+                    "comments": [],
+                    "in_subset": [
+                        "nbl_v2.0"
+                    ]
+                },
+                 "INRC, Brodeur 1993": {
+                    "meaning": [],
+                    "comments": [],
+                    "in_subset": [
+                        "nbl_v2.0"
                     ]
                 },
                 "iRANO": {
