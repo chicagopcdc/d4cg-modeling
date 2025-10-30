@@ -600,7 +600,7 @@
                 "cascade_testing",
                 "genetic_analysis_method",
                 "genetic_analysis_specimen",
-                "classification",
+                "tumor_classification",
                 "biological_analyte",
                 "source_pct",
                 "source_pct_numeric",
@@ -795,7 +795,6 @@
                 "age_at_diag_assessment",
                 "year_at_diagnosis",
                 "age_at_diag_resolved",
-                "disease_site_assessment_submitter_id",
                 "review_source",
                 "determination_source",
                 "diagnosis_method",
@@ -865,7 +864,6 @@
                 "subjects_submitter_id",
                 "timings_submitter_id",
                 "age_at_staging",
-                "disease_site_assessment_submitter_id",
                 "review_source",
                 "stage_category",
                 "tnm_finding",
@@ -922,15 +920,13 @@
         },
         "DiseaseSiteAssessment": {
             "slots": [
-                "submitter_id",
-                "primary_disease_site_submitter_id",
                 "subjects_submitter_id",
                 "timings_submitter_id",
                 "age_at_disease_site_assessment",
                 "review_source",
                 "tumor_state",
                 "detection_method",
-                "classification",
+                "tumor_classification",
                 "classification_status",
                 "disease_site",
                 "site_other",
@@ -957,7 +953,6 @@
                 "nodal_pathology",
                 "nodal_clinical",
                 "parameningeal_extension",
-                "age_at_site_assessment",
                 "assessment_reason",
                 "morph_code",
                 "morph_code_text",
@@ -1070,7 +1065,6 @@
                 "cranial_nerve_involvement",
                 "skip_lesion",
                 "skip_met_involvement",
-                "disease_site_assessment_submitter_id",
                 "trilateral_retinoblastoma",
                 "evaluator",
                 "presentation_symptoms",
@@ -1117,17 +1111,14 @@
                 "subjects_submitter_id",
                 "timings_submitter_id",
                 "age_at_procedure",
-                "disease_site_assessment_submitter_id",
                 "protocol_procedure",
                 "non_protocol_timing",
                 "status",
-                "classification",
                 "tumor_classification",
+                "procedure_class",
                 "procedure",
                 "procedure_other",
                 "procedure_type",
-                "biopsy_type",
-                "surgery_type",
                 "procedure_site",
                 "site_other",
                 "laterality",
@@ -1137,7 +1128,6 @@
                 "number_nodes_numeric",
                 "purpose",
                 "nephron_sparing_partial_nephrectomy",
-                "surgery_type_limb",
                 "tumor_rupture",
                 "surgical_complications",
                 "surgical_complications_other",
@@ -1146,9 +1136,6 @@
                 "posterior_fossa_syndrome",
                 "csf_diversion",
                 "tissue_type",
-                "surgery_type_amputation",
-                "surgery_type_limb_salvage",
-                "reconstruction_type",
                 "procedure_extent",
                 "met_non_lung_mgmt",
                 "met_lung_mgmt",
@@ -1204,7 +1191,6 @@
                 "age_at_medication_start",
                 "age_at_medication_end",
                 "year_at_medication_start",
-                "disease_site_assessment_submitter_id",
                 "cycles_planned",
                 "cycle_number",
                 "session_number",
@@ -1313,7 +1299,7 @@
                 "protocol_radiation_therapy",
                 "non_protocol_timing",
                 "rt_data_source",
-                "classification",
+                "tumor_classification",
                 "rt_site",
                 "laterality",
                 "energy_type",
@@ -1510,7 +1496,6 @@
                 "subjects_submitter_id",
                 "timings_submitter_id",
                 "age_at_response",
-                "disease_site_assessment_submitter_id",
                 "response_category",
                 "response",
                 "response_system",
@@ -1608,7 +1593,6 @@
                 "timings_submitter_id",
                 "age_at_ae",
                 "age_at_ae_resolved",
-                "disease_site_assessment_submitter_id",
                 "adverse_event",
                 "ae_code",
                 "ae_code_system",
@@ -1804,31 +1788,6 @@
             "slot_uri": "",
             "range": "Subject",
             "description": "Foreign-key reference to a Subject record (by submitter_id)",
-            "comments": [],
-            "inlined": false,
-            "multivalued": true,
-            "in_subset": [
-                "aml_v2.0",
-                "pre_v1.0",
-                "cns_v1.2",
-                "ews_v2.0",
-                "fa_v1.0",
-                "gct_v2.0",
-                "hl_v2.0",
-                "lt_v1.0",
-                "npc_v1.0",
-                "nbl_v2.0",
-                "nrsts_v2.0",
-                "os_v2.0",
-                "rb_v1.2",
-                "rms_v2.0"
-            ],
-            "annotations": {}
-        },
-        "primary_disease_site_submitter_id": {
-            "slot_uri": "",
-            "range": "DiseaseSiteAssessment",
-            "description": "Foreign-key reference to a DiseaseSiteAssessment record (by submitter_id)",
             "comments": [],
             "inlined": false,
             "multivalued": true,
@@ -3120,15 +3079,6 @@
             ],
             "annotations": {}
         },
-        "seq_method": {
-            "slot_uri": "ncit:C49142",
-            "range": "SeqMethodEnum",
-            "comments": [],
-            "in_subset": [
-                "gct_v2.0"
-            ],
-            "annotations": {}
-        },
         "threshold_high": {
             "slot_uri": "ncit:C177365",
             "range": "decimal",
@@ -3700,9 +3650,9 @@
                 "tier_optional": "npc_v1.0"
             }
         },
-        "classification": {
+        "tumor_classification": {
             "slot_uri": "ncit:C174459",
-            "range": "ClassificationEnum",
+            "range": "TumorClassificationEnum",
             "comments": [],
             "in_subset": [
                 "pre_v1.0",
@@ -4118,6 +4068,7 @@
             "range": "integer",
             "comments": [],
             "in_subset": [
+                "aml_v2.0",
                 "pre_v1.0",
                 "cns_v1.2",
                 "ews_v2.0",
@@ -4739,20 +4690,6 @@
                 "rms_v2.0"
             ],
             "annotations": {
-                "tier_optional": "hl_v2.0"
-            }
-        },
-        "biopsy_type": {
-            "slot_uri": "ncit:C15189",
-            "range": "BiopsyTypeEnum",
-            "comments": [],
-            "in_subset": [
-                "ews_v2.0",
-                "hl_v2.0",
-                "npc_v1.0"
-            ],
-            "annotations": {
-                "tier_priority": "npc_v1.0",
                 "tier_optional": "hl_v2.0"
             }
         },
@@ -5859,17 +5796,6 @@
             ],
             "annotations": {}
         },
-        "age_at_site_assessment": {
-            "slot_uri": "ncit:C175004",
-            "range": "integer",
-            "comments": [],
-            "in_subset": [
-                "aml_v2.0"
-            ],
-            "annotations": {
-                "tier_optional": "aml_v2.0"
-            }
-        },
         "age_at_ae": {
             "slot_uri": "ncit:C172677",
             "range": "integer",
@@ -6371,15 +6297,6 @@
             ],
             "annotations": {}
         },
-        "surgery_type_limb": {
-            "slot_uri": "ncit:C175009",
-            "range": "SurgeryTypeLimbEnum",
-            "comments": [],
-            "in_subset": [
-                "pre_v1.0"
-            ],
-            "annotations": {}
-        },
         "tumor_rupture": {
             "slot_uri": "",
             "range": "YesNoEnum",
@@ -6660,6 +6577,25 @@
                 "tier_optional": "rb_v1.2"
             }
         },
+        "procedure_class": {
+            "slot_uri": "",
+            "range": "ProcedureClassEnum",
+            "comments": [],
+            "in_subset": [
+                "cns_v1.2",
+                "ews_v2.0",
+                "fa_v1.0",
+                "lt_v1.0",
+                "npc_v1.0",
+                "os_v2.0",
+                "rb_v1.2"
+            ],
+            "annotations": {
+                "tier_priority": "lt_v1.0,rb_v1.2",
+                "tier_mandatory": "npc_v1.0",
+                "tier_optional": "rb_v1.2"
+            }
+        },
         "procedure": {
             "slot_uri": "ncit:C161601",
             "range": "ProcedureEnum",
@@ -6850,33 +6786,6 @@
         "transposition_organ": {
             "slot_uri": "ncit:C175035",
             "range": "TranspositionOrganEnum",
-            "comments": [],
-            "in_subset": [
-                "ews_v2.0"
-            ],
-            "annotations": {}
-        },
-        "surgery_type_amputation": {
-            "slot_uri": "ncit:C15179",
-            "range": "SurgeryTypeAmputationEnum",
-            "comments": [],
-            "in_subset": [
-                "ews_v2.0"
-            ],
-            "annotations": {}
-        },
-        "surgery_type_limb_salvage": {
-            "slot_uri": "ncit:C16042",
-            "range": "SurgeryTypeLimbSalvageEnum",
-            "comments": [],
-            "in_subset": [
-                "ews_v2.0"
-            ],
-            "annotations": {}
-        },
-        "reconstruction_type": {
-            "slot_uri": "ncit:C25351",
-            "range": "ReconstructionTypeEnum",
             "comments": [],
             "in_subset": [
                 "ews_v2.0"
@@ -7523,15 +7432,6 @@
             ],
             "annotations": {}
         },
-        "num_chromosomes": {
-            "slot_uri": "ncit:C177370",
-            "range": "integer",
-            "comments": [],
-            "in_subset": [
-                "gct_v2.0"
-            ],
-            "annotations": {}
-        },
         "age_at_smn": {
             "slot_uri": "ncit:C168860",
             "range": "integer",
@@ -8067,17 +7967,6 @@
                 "tier_optional": "npc_v1.0"
             }
         },
-        "surgery_type": {
-            "slot_uri": "ncit:C186756",
-            "range": "SurgeryTypeEnum",
-            "comments": [],
-            "in_subset": [
-                "npc_v1.0"
-            ],
-            "annotations": {
-                "tier_priority": "npc_v1.0"
-            }
-        },
         "procedure_purpose": {
             "slot_uri": "ncit:C185526",
             "range": "ProcedurePurposeEnum",
@@ -8347,18 +8236,6 @@
             ],
             "annotations": {
                 "tier_priority": "rb_v1.2"
-            }
-        },
-        "disease_site_assessment_submitter_id": {
-            "slot_uri": "",
-            "range": "string",
-            "comments": [],
-            "in_subset": [
-                "rb_v1.2"
-            ],
-            "annotations": {
-                "tier_priority": "rb_v1.2",
-                "tier_optional": "rb_v1.2"
             }
         },
         "h_stage": {
@@ -28477,7 +28354,7 @@
                 }
             }
         },
-        "ClassificationEnum": {
+        "TumorClassificationEnum": {
             "in_subset": [
                 "pre_v1.0",
                 "cns_v1.2",
@@ -28532,13 +28409,14 @@
                         "rms_v2.0"
                     ]
                 },
-                "Regional": {
+                "Regional Nodes": {
                     "meaning": "ncit:C41844",
                     "comments": [
-                        "(npc_v1.0) ConsortiumNote: Includes 'PTV2' and 'PTV3'",
-                        "(rms_v2.0) ConsortiumNote: Changed from 'Regional Nodes' to 'Regional' BTF 20210801"
+                        "(npc_v1.0) ConsortiumNote: Includes 'PTV2' and 'PTV3'"
                     ],
                     "in_subset": [
+                        "nrsts_v2.0",
+                        "rms_v2.0",
                         "pre_v1.0",
                         "ews_v2.0",
                         "fa_v1.0",
@@ -28546,14 +28424,6 @@
                         "lt_v1.0",
                         "npc_v1.0",
                         "os_v2.0",
-                        "rms_v2.0"
-                    ]
-                },
-                "Regional Nodes": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "nrsts_v2.0",
                         "rms_v2.0"
                     ]
                 },
@@ -47309,64 +47179,6 @@
                 }
             }
         },
-        "BiopsyTypeEnum": {
-            "in_subset": [
-                "ews_v2.0",
-                "hl_v2.0",
-                "npc_v1.0"
-            ],
-            "permissible_values": {
-                "Core Needle Biopsy": {
-                    "meaning": "ncit:C15680",
-                    "comments": [],
-                    "in_subset": [
-                        "ews_v2.0",
-                        "hl_v2.0",
-                        "npc_v1.0"
-                    ]
-                },
-                "Incisional Biopsy": {
-                    "meaning": "ncit:C15386",
-                    "comments": [],
-                    "in_subset": [
-                        "ews_v2.0",
-                        "hl_v2.0",
-                        "npc_v1.0"
-                    ]
-                },
-                "Excisional Biopsy": {
-                    "meaning": "ncit:C15385",
-                    "comments": [],
-                    "in_subset": [
-                        "ews_v2.0",
-                        "npc_v1.0"
-                    ]
-                },
-                "Other": {
-                    "meaning": "ncit:C17649",
-                    "comments": [],
-                    "in_subset": [
-                        "hl_v2.0"
-                    ]
-                },
-                "Unknown": {
-                    "meaning": "ncit:C17998",
-                    "comments": [],
-                    "in_subset": [
-                        "ews_v2.0",
-                        "npc_v1.0"
-                    ]
-                },
-                "Not Reported": {
-                    "meaning": "ncit:C43234",
-                    "comments": [],
-                    "in_subset": [
-                        "ews_v2.0",
-                        "npc_v1.0"
-                    ]
-                }
-            }
-        },
         "ExtentEnum": {
             "in_subset": [
                 "cns_v1.2",
@@ -56350,69 +56162,6 @@
                 }
             }
         },
-        "SurgeryTypeLimbEnum": {
-            "in_subset": [
-                "pre_v1.0"
-            ],
-            "permissible_values": {
-                "Amputation": {
-                    "meaning": "ncit:C15179",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0"
-                    ]
-                },
-                "Limb-salvage": {
-                    "meaning": "ncit:C16042",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0"
-                    ]
-                },
-                "Excision": {
-                    "meaning": "ncit:C15232",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0"
-                    ]
-                },
-                "Wide Resection": {
-                    "meaning": "ncit:C94441",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0"
-                    ]
-                },
-                "Not Applicable": {
-                    "meaning": "ncit:C48660",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0"
-                    ]
-                },
-                "Other": {
-                    "meaning": "ncit:C17649",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0"
-                    ]
-                },
-                "Unknown": {
-                    "meaning": "ncit:C17998",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0"
-                    ]
-                },
-                "Not Reported": {
-                    "meaning": "ncit:C43234",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0"
-                    ]
-                }
-            }
-        },
         "SurgicalComplicationsEnum": {
             "in_subset": [
                 "pre_v1.0"
@@ -57126,6 +56875,97 @@
                     "in_subset": [
                         "cns_v1.2",
                         "ews_v2.0",
+                        "rb_v1.2"
+                    ]
+                }
+            }
+        },
+        "ProcedureClassEnum": {
+            "in_subset": [
+                "cns_v1.2",
+                "ews_v2.0",
+                "fa_v1.0",
+                "lt_v1.0",
+                "npc_v1.0",
+                "os_v2.0",
+                "rb_v1.2"
+            ],
+            "permissible_values": {
+                "Biopsy": {
+                    "meaning": "ncit:C15189",
+                    "comments": [],
+                    "in_subset": [
+                        "cns_v1.2",
+                        "ews_v2.0",
+                        "fa_v1.0",
+                        "lt_v1.0",
+                        "npc_v1.0",
+                        "os_v2.0",
+                        "rb_v1.2"
+                    ]
+                },
+                "Amputation": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "cns_v1.2",
+                        "ews_v2.0",
+                        "fa_v1.0",
+                        "lt_v1.0",
+                        "npc_v1.0",
+                        "os_v2.0",
+                        "rb_v1.2"
+                    ]
+                },
+                "Limb Salvage": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "cns_v1.2",
+                        "ews_v2.0",
+                        "fa_v1.0",
+                        "lt_v1.0",
+                        "npc_v1.0",
+                        "os_v2.0",
+                        "rb_v1.2"
+                    ]
+                },
+                "Resection": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "cns_v1.2",
+                        "ews_v2.0",
+                        "fa_v1.0",
+                        "lt_v1.0",
+                        "npc_v1.0",
+                        "os_v2.0",
+                        "rb_v1.2"
+                    ]
+                },
+                "Reconstruction": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "cns_v1.2",
+                        "ews_v2.0",
+                        "fa_v1.0",
+                        "lt_v1.0",
+                        "npc_v1.0",
+                        "os_v2.0",
+                        "rb_v1.2"
+                    ]
+                },
+                "Surgery, NOS": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "cns_v1.2",
+                        "ews_v2.0",
+                        "fa_v1.0",
+                        "lt_v1.0",
+                        "npc_v1.0",
+                        "os_v2.0",
                         "rb_v1.2"
                     ]
                 }
@@ -58328,202 +58168,6 @@
             "permissible_values": {
                 "Ovaries": {
                     "meaning": "ncit:C12404",
-                    "comments": [],
-                    "in_subset": [
-                        "ews_v2.0"
-                    ]
-                },
-                "Unknown": {
-                    "meaning": "ncit:C17998",
-                    "comments": [],
-                    "in_subset": [
-                        "ews_v2.0"
-                    ]
-                },
-                "Not Reported": {
-                    "meaning": "ncit:C43234",
-                    "comments": [],
-                    "in_subset": [
-                        "ews_v2.0"
-                    ]
-                }
-            }
-        },
-        "SurgeryTypeAmputationEnum": {
-            "in_subset": [
-                "ews_v2.0"
-            ],
-            "permissible_values": {
-                "Amputation - Through Involved Bone": {
-                    "meaning": "ncit:C15179",
-                    "comments": [],
-                    "in_subset": [
-                        "ews_v2.0"
-                    ]
-                },
-                "Amputation - Proximal to Involved Bone": {
-                    "meaning": "ncit:C16042",
-                    "comments": [],
-                    "in_subset": [
-                        "ews_v2.0"
-                    ]
-                },
-                "Disarticulation": {
-                    "meaning": "ncit:C175012",
-                    "comments": [],
-                    "in_subset": [
-                        "ews_v2.0"
-                    ]
-                },
-                "Internal Hemipelvectomy": {
-                    "meaning": "ncit:C175013",
-                    "comments": [],
-                    "in_subset": [
-                        "ews_v2.0"
-                    ]
-                },
-                "External Hemipelvectomy": {
-                    "meaning": "ncit:C175014",
-                    "comments": [],
-                    "in_subset": [
-                        "ews_v2.0"
-                    ]
-                },
-                "Unknown": {
-                    "meaning": "ncit:C17998",
-                    "comments": [],
-                    "in_subset": [
-                        "ews_v2.0"
-                    ]
-                },
-                "Not Reported": {
-                    "meaning": "ncit:C43234",
-                    "comments": [],
-                    "in_subset": [
-                        "ews_v2.0"
-                    ]
-                }
-            }
-        },
-        "SurgeryTypeLimbSalvageEnum": {
-            "in_subset": [
-                "ews_v2.0"
-            ],
-            "permissible_values": {
-                "Intra-Articular Resection": {
-                    "meaning": "ncit:C175015",
-                    "comments": [],
-                    "in_subset": [
-                        "ews_v2.0"
-                    ]
-                },
-                "Extra-Articular Resection": {
-                    "meaning": "ncit:C175016",
-                    "comments": [],
-                    "in_subset": [
-                        "ews_v2.0"
-                    ]
-                },
-                "Intercalary Resection": {
-                    "meaning": "ncit:C175017",
-                    "comments": [],
-                    "in_subset": [
-                        "ews_v2.0"
-                    ]
-                },
-                "Internal Hemipelvectomy": {
-                    "meaning": "ncit:C175013",
-                    "comments": [],
-                    "in_subset": [
-                        "ews_v2.0"
-                    ]
-                },
-                "Unknown": {
-                    "meaning": "ncit:C17998",
-                    "comments": [],
-                    "in_subset": [
-                        "ews_v2.0"
-                    ]
-                },
-                "Not Reported": {
-                    "meaning": "ncit:C43234",
-                    "comments": [],
-                    "in_subset": [
-                        "ews_v2.0"
-                    ]
-                }
-            }
-        },
-        "ReconstructionTypeEnum": {
-            "in_subset": [
-                "ews_v2.0"
-            ],
-            "permissible_values": {
-                "Endoprosthetic": {
-                    "meaning": "ncit:C175018",
-                    "comments": [],
-                    "in_subset": [
-                        "ews_v2.0"
-                    ]
-                },
-                "Osteoarticular Allograft": {
-                    "meaning": "ncit:C175019",
-                    "comments": [],
-                    "in_subset": [
-                        "ews_v2.0"
-                    ]
-                },
-                "Intercalary Allograft": {
-                    "meaning": "ncit:C175020",
-                    "comments": [],
-                    "in_subset": [
-                        "ews_v2.0"
-                    ]
-                },
-                "Allograft-Prosthetic": {
-                    "meaning": "ncit:C175021",
-                    "comments": [],
-                    "in_subset": [
-                        "ews_v2.0"
-                    ]
-                },
-                "Non-Vascularized Autograft": {
-                    "meaning": "ncit:C175022",
-                    "comments": [],
-                    "in_subset": [
-                        "ews_v2.0"
-                    ]
-                },
-                "Vascularized Autograft": {
-                    "meaning": "ncit:C175023",
-                    "comments": [],
-                    "in_subset": [
-                        "ews_v2.0"
-                    ]
-                },
-                "Allograft + Vascularized Autograft": {
-                    "meaning": "ncit:C175024",
-                    "comments": [],
-                    "in_subset": [
-                        "ews_v2.0"
-                    ]
-                },
-                "Vascularized Autograft Endoprosthetic Composite": {
-                    "meaning": "ncit:C175025",
-                    "comments": [],
-                    "in_subset": [
-                        "ews_v2.0"
-                    ]
-                },
-                "Arthrodesis": {
-                    "meaning": "ncit:C52007",
-                    "comments": [],
-                    "in_subset": [
-                        "ews_v2.0"
-                    ]
-                },
-                "No Reconstruction": {
-                    "meaning": "ncit:C175026",
                     "comments": [],
                     "in_subset": [
                         "ews_v2.0"
