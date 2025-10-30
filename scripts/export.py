@@ -182,7 +182,7 @@ def createSheet(target, id):
     # ----- IGNORE BLOCK, CUSTOM CODE TO ENABLE AN AUTH FOLDER ---- #
     orig_dir = os.getcwd()
     # Change to auth folder where pickle files are
-    os.chdir('auth')
+    os.chdir('scripts/auth')
     import ezsheets 
     try:
         ss = ezsheets.Spreadsheet(id)
@@ -281,7 +281,7 @@ if __name__ == '__main__':
     )
     if len(sys.argv) == 3:
         parent = sys.argv[1]
-        parent_file = "../schemas/pcdc/" + parent + ".json"
+        parent_file = "schemas/pcdc/" + parent + ".json"
         if os.path.exists(parent_file):
             target = sys.argv[2]
             with open(parent_file, "r") as schema_file:

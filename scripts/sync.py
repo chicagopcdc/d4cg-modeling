@@ -1,4 +1,4 @@
-import sys, os, json, time
+import sys, os, json, time, subprocess
 from datetime import datetime
 from utils import load_sheet
 
@@ -17,18 +17,36 @@ class TaskManager:
 
     def write(self, filename):
         """Write tasks to file."""
+        os.makedirs(os.path.dirname(filename), exist_ok=True)
         with open(filename, "w") as f:
             f.writelines(self.tasks)
 
     def __iter__(self):
         return iter(self.tasks)
 
+def enforce_repo_root():
+    try:
+        # Get the top-level directory of the current Git repo
+        repo_root = subprocess.check_output(
+            ["git", "rev-parse", "--show-toplevel"],
+            stderr=subprocess.DEVNULL
+        ).decode().strip()
+    except subprocess.CalledProcessError:
+        print("Error: Not inside a Git repository.")
+        sys.exit(1)
 
-def sync(dictionary):
+    # Compare to current working directory
+    cwd = os.getcwd()
+    if os.path.abspath(cwd) != os.path.abspath(repo_root):
+        print(f"\nPlease run this script from the repository root:\n   {repo_root}\n")
+        print(f"   You are currently in:\n   {cwd}\n")
+        sys.exit(1)
+
+def sync(commons, dictionary):
     task_manager = TaskManager()
     parent = dictionary["info"]["parent_model"]
-    if os.path.exists("schemas/" + parent + ".json"):
-        with open("schemas/" + parent + ".json", "r") as schema_file:
+    if os.path.exists("schemas/" + commons + "/" + parent + ".json"):
+        with open("schemas/" + commons + "/" + parent + ".json", "r") as schema_file:
             schema = json.load(schema_file)
             for table in dictionary["tables"]:
                 t_name = table['name']
@@ -41,7 +59,7 @@ def sync(dictionary):
                             checkSlot(task_manager, dictionary["info"]['name'], variable, schema["slots"][var_name])
                             if variable["permissible_values"]:
                                 enum_name = "".join(word.capitalize() for word in variable['name'].lower().split('_')) + "Enum"
-                                if "Yes" in variable["permissible_values"] and "No" in variable["permissible_values"]:
+                                if any(v["value"] in ("Yes", "No") for v in variable["permissible_values"]):
                                     enum_name = "YesNoEnum"
                                 if enum_name in schema["enums"]:
                                     checkEnum(task_manager, dictionary["info"]['name'], enum_name, schema["enums"][enum_name])
@@ -58,7 +76,7 @@ def sync(dictionary):
                 else:
                     proposeClass(task_manager, dictionary["info"]['name'], table)
     else:
-        print("\nERROR: A schema for parent model: {parent} does not yet exist.")
+        print(f"\nERROR: A schema for parent model: {parent} does not yet exist.")
     return task_manager
 
 def format_note(note, source):
@@ -132,7 +150,7 @@ def checkSlot(task_manager, source, variable, schema_slot):
     range = variable["type"]
     if range and range not in ["enum", "string", "decimal", "integer"]:
         range = legacy_types[range]
-    if range != "enum" and range != schema_slot["range"]:
+    if range != "enum" and range != schema_slot["range"] and schema_slot["range"] not in ["Subject", "Timing"]:
         task_manager.add(f"{source}\tslot\tchangeRange()\t{variable['name']}\t{range}\n")
     #Check tier
     if variable['tier'] == 'mandatory':
@@ -173,9 +191,7 @@ def checkSlot(task_manager, source, variable, schema_slot):
     #Check in_subset
     if source not in schema_slot["in_subset"]:
         task_manager.add(f"{source}\tslot\tsetSubset()\t{variable['name']}\t{source}\n")
-    #Check sequence_group
-    if variable['sequence_group']  and variable['sequence_group'].isdigit() and variable['sequence_group'] != schema_slot['annotations']['sequence_group']:
-        task_manager.add(f"{source}\tslot\tchangeSequenceGroup()\t{variable['name']}\t{variable['sequence_group'].strip()}\n")
+    
 
 def proposeSlot(task_manager, source, variable):
     task_manager.add(f"{source}\tslot\tnewSlot()\t-\t{variable['name']}\n")
@@ -185,7 +201,7 @@ def proposeSlot(task_manager, source, variable):
     #range
     if variable["permissible_values"]:
         enum_name = "".join(word.capitalize() for word in variable['name'].lower().split('_')) + "Enum"
-        if "Yes" in variable["permissible_values"] and "No" in variable["permissible_values"]:
+        if any(v["value"] in ("Yes", "No") for v in variable["permissible_values"]):
             enum_name = "YesNoEnum"
         task_manager.add(f"{source}\tslot\tsetRange()\t{variable['name']}\t{enum_name}\n")
         proposeEnum(task_manager, source, enum_name, variable)
@@ -201,9 +217,6 @@ def proposeSlot(task_manager, source, variable):
             task_manager.add(f"{source}\tslot\tsetComment()\t{variable['name']}\t{note}\n")
     #in_subset
     task_manager.add(f"{source}\tslot\tsetSubset()\t{variable['name']}\t{source}\n")
-    #sequence_group
-    if variable['sequence_group'] and variable['sequence_group'].isdigit():
-        task_manager.add(f"{source}\tslot\tsetSequenceGroup()\t{variable['name']}\t{variable['sequence_group'].strip()}\n")
     #tier
     if variable['tier'] == 'mandatory':
         task_manager.add(f"{source}\tslot\tsetTier()\t{variable['name']}\t{variable['tier']}|{source}\n")
@@ -318,6 +331,7 @@ if __name__ == '__main__':
     ______________________________________________
     """
     )
+    enforce_repo_root()
     if len(sys.argv) != 4:
         print("\nERROR: Incorrect number of parameters included\n")
         sys.exit()
@@ -341,7 +355,7 @@ if __name__ == '__main__':
                 if dictionary:
                     start = time.time()
                     print("...syncing sheet to schema")
-                    task_manager = sync(dictionary)
+                    task_manager = sync(commons, dictionary)
                     print(elapsed_time(start))
                     task_manager.write("tasks/" + disease_group + "-taskfile-" + datetime.today().strftime("%Y%m%d") + ".tsv")
             else:

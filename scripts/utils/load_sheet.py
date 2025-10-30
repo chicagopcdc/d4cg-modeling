@@ -6,7 +6,7 @@ def load(gsheet_id, version, scope):
     # ----- IGNORE BLOCK, CUSTOM CODE TO ENABLE AN AUTH FOLDER ---- #
     orig_dir = os.getcwd()
     # Change to auth folder where pickle files are
-    os.chdir('auth')
+    os.chdir('scripts/auth')
     import ezsheets 
     try:
         ss = ezsheets.Spreadsheet(gsheet_id)
@@ -55,7 +55,7 @@ def parse(sheet):
                 dictionary["info"]["name"] = line[2]
             if line[1] == "Release Notes":
                 dictionary["info"]["release_note"] = line[2]
-            if line[1] == "Parent Data Model":
+            if line[1] in ["Parent Data Model", "Parent Model"]:
                 dictionary["info"]["parent_model"] = line[2]
             if line[1] == "Description":
                 dictionary["info"]["description"] = line[2]
@@ -69,8 +69,7 @@ def parse(sheet):
                 current_var = None
                 dictionary["tables"].append(current_table)
             #Create a new table
-            table_name = check_field(dictionary["info"]["name"], line, 1, "table name", i).split(" ")
-            table_name = "".join(word.capitalize() for word in table_name if word)
+            table_name = check_field(dictionary["info"]["name"], line, 1, "table name", i).replace(" ", "")
             current_table = {
                 "name": table_name,
                 "domain": current_domain,
