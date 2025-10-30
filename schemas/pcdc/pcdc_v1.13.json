@@ -10729,6 +10729,13 @@
                         "aml_v1.8-live"
                     ]
                 },
+                "Unknown": {
+                    "meaning": "ncit:C17998",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
                 "Not Reported": {
                     "meaning": "ncit:C43234",
                     "comments": [],
@@ -10743,14 +10750,14 @@
                 "aml_v1.8-live"
             ],
             "permissible_values": {
-                "Acute Basophilic Leukemia": {
+                "Acute basophilic leukemia": {
                     "meaning": "ncit:C3164",
                     "comments": [],
                     "in_subset": [
                         "aml_v1.8-live"
                     ]
                 },
-                "Acute Megakaryoblastic Leukemia": {
+                "Acute megakaryoblastic leukemia": {
                     "meaning": "ncit:C3170",
                     "comments": [
                         "(aml_v1.8-live) ConsortiumNote: M7"
@@ -10759,14 +10766,14 @@
                         "aml_v1.8-live"
                     ]
                 },
-                "Acute Monoblastic/Monocytic Leukemia": {
+                "Acute monoblastic/monocytic leukemia": {
                     "meaning": "ncit:C7318",
                     "comments": [],
                     "in_subset": [
                         "aml_v1.8-live"
                     ]
                 },
-                "Acute Myelomonocytic Leukemia": {
+                "Acute myelomonocytic leukemia": {
                     "meaning": "ncit:C7463",
                     "comments": [
                         "(aml_v1.8-live) ConsortiumNote: M4"
@@ -10775,7 +10782,7 @@
                         "aml_v1.8-live"
                     ]
                 },
-                "Acute Panmyelosis with Myelofibrosis": {
+                "Acute panmyelosis with myelofibrosis": {
                     "meaning": "ncit:C4344",
                     "comments": [],
                     "in_subset": [
@@ -10789,7 +10796,7 @@
                         "aml_v1.8-live"
                     ]
                 },
-                "AML with Biallelic Mutations of CEBPA": {
+                "AML with biallelic mutations of CEBPA": {
                     "meaning": "ncit:C129782",
                     "comments": [],
                     "in_subset": [
@@ -10810,14 +10817,14 @@
                         "aml_v1.8-live"
                     ]
                 },
-                "AML with KMT2A Rearrangement": {
+                "AML with KMT2A rearrangement": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
                         "aml_v1.8-live"
                     ]
                 },
-                "AML with Maturation": {
+                "AML with maturation": {
                     "meaning": "ncit:C3250",
                     "comments": [
                         "(aml_v1.8-live) ConsortiumNote: M2"
@@ -10826,7 +10833,7 @@
                         "aml_v1.8-live"
                     ]
                 },
-                "AML with Minimal Differentiation": {
+                "AML with minimal differentiation": {
                     "meaning": "ncit:C8460",
                     "comments": [
                         "(aml_v1.8-live) ConsortiumNote: M0"
@@ -10835,14 +10842,14 @@
                         "aml_v1.8-live"
                     ]
                 },
-                "AML with Mutated NPM1": {
+                "AML with mutated NPM1": {
                     "meaning": "ncit:C82431",
                     "comments": [],
                     "in_subset": [
                         "aml_v1.8-live"
                     ]
                 },
-                "AML with Myelodysplasia-related Changes": {
+                "AML with myelodysplasia-related changes": {
                     "meaning": "ncit:C7600",
                     "comments": [],
                     "in_subset": [
@@ -10870,7 +10877,7 @@
                         "aml_v1.8-live"
                     ]
                 },
-                "AML without Maturation": {
+                "AML without maturation": {
                     "meaning": "ncit:C3249",
                     "comments": [
                         "(aml_v1.8-live) ConsortiumNote: M1"
@@ -10893,56 +10900,56 @@
                         "aml_v1.8-live"
                     ]
                 },
-                "Myeloid Leukemia Associated with Down Syndrome": {
+                "Myeloid leukemia associated with Down syndrome": {
                     "meaning": "ncit:C43223",
                     "comments": [],
                     "in_subset": [
                         "aml_v1.8-live"
                     ]
                 },
-                "Myeloid Proliferations Related to Down Syndrome": {
+                "Myeloid proliferations related to Down syndrome": {
                     "meaning": "ncit:C82338",
                     "comments": [],
                     "in_subset": [
                         "aml_v1.8-live"
                     ]
                 },
-                "Myeloid Sarcoma": {
+                "Myeloid sarcoma": {
                     "meaning": "ncit:C3520",
                     "comments": [],
                     "in_subset": [
                         "aml_v1.8-live"
                     ]
                 },
-                "Provisional Entity: AML with BCR-ABL1": {
+                "Provisional entity: AML with BCR-ABL1": {
                     "meaning": "ncit:C129785",
                     "comments": [],
                     "in_subset": [
                         "aml_v1.8-live"
                     ]
                 },
-                "Provisional Entity: AML with Mutated RUNX1": {
+                "Provisional entity: AML with mutated RUNX1": {
                     "meaning": "ncit:C129786",
                     "comments": [],
                     "in_subset": [
                         "aml_v1.8-live"
                     ]
                 },
-                "Pure Erythroid Leukemia": {
+                "Pure erythroid leukemia": {
                     "meaning": "ncit:C7467",
                     "comments": [],
                     "in_subset": [
                         "aml_v1.8-live"
                     ]
                 },
-                "Therapy-Related Myeloid Neoplasms": {
+                "Therapy-related myeloid neoplasms": {
                     "meaning": "ncit:C27912",
                     "comments": [],
                     "in_subset": [
                         "aml_v1.8-live"
                     ]
                 },
-                "Transient Abnormal Myelopoiesis (TAM)": {
+                "Transient abnormal myelopoiesis (TAM)": {
                     "meaning": "ncit:C82339",
                     "comments": [],
                     "in_subset": [
@@ -12223,7 +12230,7 @@
                         "aml_v1.8-live"
                     ]
                 },
-                "del(13q)(13q14-21)": {
+                "del(13q)(13q 14 - 21)": {
                     "meaning": "ncit:C168770",
                     "comments": [],
                     "in_subset": [
@@ -14693,7 +14700,7 @@
                 "hl_v1.0-live"
             ],
             "permissible_values": {
-                "Biological Parent": {
+                "Biological parent": {
                     "meaning": "ncit:C166114",
                     "comments": [],
                     "in_subset": [
@@ -14701,7 +14708,7 @@
                         "hl_v1.0-live"
                     ]
                 },
-                "Biological Relative": {
+                "Biological relative": {
                     "meaning": "ncit:C71384",
                     "comments": [],
                     "in_subset": [
@@ -14709,7 +14716,7 @@
                         "hl_v1.0-live"
                     ]
                 },
-                "Biological Sibling": {
+                "Biological sibling": {
                     "meaning": "ncit:C100809",
                     "comments": [],
                     "in_subset": [
@@ -14717,7 +14724,7 @@
                         "hl_v1.0-live"
                     ]
                 },
-                "Biologically Unrelated": {
+                "Biologically unrelated": {
                     "meaning": "ncit:C130053",
                     "comments": [],
                     "in_subset": [
