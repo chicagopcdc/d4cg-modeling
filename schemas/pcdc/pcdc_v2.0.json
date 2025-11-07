@@ -3041,7 +3041,7 @@
             }
         },
         "mrd_specimen": {
-            "slot_uri": null,
+            "slot_uri": "ncit:C168958",
             "range": "MrdSpecimenEnum",
             "comments": [],
             "in_subset": [
