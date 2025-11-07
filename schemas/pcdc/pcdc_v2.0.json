@@ -4098,7 +4098,8 @@
             "comments": [],
             "in_subset": [
                 "rb_v1.2",
-                "rms_v3.0"
+                "rms_v3.0",
+                "pre_v1.0"
             ],
             "annotations": {
                 "tier_priority": "rb_v1.2"
@@ -7184,7 +7185,7 @@
         },
         "founder_population": {
             "slot_uri": "",
-            "range": "FounderPopulationEnum",
+            "range": "string",
             "comments": [],
             "in_subset": [
                 "fa_v1.0"
@@ -7265,7 +7266,8 @@
             "in_subset": [
                 "fa_v1.0",
                 "npc_v1.0",
-                "rb_v1.2"
+                "rb_v1.2",
+                "pre_v1.0"
             ],
             "annotations": {
                 "tier_optional": "npc_v1.0",
@@ -8211,7 +8213,8 @@
             "range": "GroupSystemEnum",
             "comments": [],
             "in_subset": [
-                "rb_v1.2"
+                "rb_v1.2",
+                "pre_v1.0"
             ],
             "annotations": {
                 "tier_priority": "rb_v1.2"
@@ -9528,7 +9531,7 @@
                         "rms_v3.0"
                     ]
                 },
-                "Fanconi Anemia": {
+                "FA": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
@@ -38843,258 +38846,6 @@
                 "rb_v1.2"
             ],
             "permissible_values": {
-                "Stage 0": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0",
-                        "rb_v1.2"
-                    ]
-                },
-                "Stage 1": {
-                    "meaning": "ncit:C27966",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0",
-                        "lt_v1.0",
-                        "rb_v1.2"
-                    ]
-                },
-                "Stage 1A": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0"
-                    ]
-                },
-                "Stage 1B": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0"
-                    ]
-                },
-                "Stage 1S": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0"
-                    ]
-                },
-                "Stage 2": {
-                    "meaning": "ncit:C28054",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0",
-                        "lt_v1.0",
-                        "rb_v1.2"
-                    ]
-                },
-                "Stage 2A": {
-                    "meaning": "ncit:C96244",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0"
-                    ]
-                },
-                "Stage 2B": {
-                    "meaning": "ncit:C96252",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0"
-                    ]
-                },
-                "Stage 2C": {
-                    "meaning": "ncit:C96255",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0"
-                    ]
-                },
-                "Stage 3": {
-                    "meaning": "ncit:C27970",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0",
-                        "lt_v1.0"
-                    ]
-                },
-                "Stage 3A": {
-                    "meaning": "ncit:C27966",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0"
-                    ]
-                },
-                "Stage 3B": {
-                    "meaning": "ncit:C28054",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0"
-                    ]
-                },
-                "Stage 3C": {
-                    "meaning": "ncit:C27970",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0"
-                    ]
-                },
-                "Stage 4": {
-                    "meaning": "ncit:C27971",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0",
-                        "lt_v1.0"
-                    ]
-                },
-                "Stage 4s": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0"
-                    ]
-                },
-                "Stage L1": {
-                    "meaning": "ncit:C4523",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0"
-                    ]
-                },
-                "Stage L2": {
-                    "meaning": "ncit:C7901",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0"
-                    ]
-                },
-                "Stage M": {
-                    "meaning": "ncit:C6361",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0"
-                    ]
-                },
-                "Stage M0": {
-                    "meaning": "ncit:C6362",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0"
-                    ]
-                },
-                "Stage M0 / M1": {
-                    "meaning": "ncit:C6363",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0"
-                    ]
-                },
-                "Stage M1": {
-                    "meaning": "ncit:C9073",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0"
-                    ]
-                },
-                "Stage M2": {
-                    "meaning": "ncit:C6364",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0"
-                    ]
-                },
-                "Stage M3": {
-                    "meaning": "ncit:C6365",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0"
-                    ]
-                },
-                "Stage M4": {
-                    "meaning": "ncit:C6366",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0"
-                    ]
-                },
-                "Stage M+": {
-                    "meaning": "ncit:C9074",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0"
-                    ]
-                },
-                "Stage MS": {
-                    "meaning": "ncit:C6369",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0"
-                    ]
-                },
-                "Group 0": {
-                    "meaning": "ncit:C6368",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0"
-                    ]
-                },
-                "Group 1a": {
-                    "meaning": "ncit:C6367",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0"
-                    ]
-                },
-                "Group 1b": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0"
-                    ]
-                },
-                "Group 2a": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0"
-                    ]
-                },
-                "Group 2b": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0"
-                    ]
-                },
-                "Group 3a": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0"
-                    ]
-                },
-                "Group 3b": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0"
-                    ]
-                },
-                "Group 4a": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0"
-                    ]
-                },
-                "Group 4b": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0"
-                    ]
-                },
                 "Modified Chang Staging >> M0": {
                     "meaning": "ncit:C48699",
                     "comments": [],
@@ -39156,7 +38907,8 @@
                     "comments": [],
                     "in_subset": [
                         "fa_v1.0",
-                        "nbl_v2.0"
+                        "nbl_v2.0",
+                        "pre_v1.0"
                     ]
                 },
                 "INSS >> Stage 2a": {
@@ -39164,7 +38916,8 @@
                     "comments": [],
                     "in_subset": [
                         "fa_v1.0",
-                        "nbl_v2.0"
+                        "nbl_v2.0",
+                        "pre_v1.0"
                     ]
                 },
                 "INSS >> Stage 2b": {
@@ -39172,7 +38925,8 @@
                     "comments": [],
                     "in_subset": [
                         "fa_v1.0",
-                        "nbl_v2.0"
+                        "nbl_v2.0",
+                        "pre_v1.0"
                     ]
                 },
                 "INSS >> Stage 3": {
@@ -39180,7 +38934,8 @@
                     "comments": [],
                     "in_subset": [
                         "fa_v1.0",
-                        "nbl_v2.0"
+                        "nbl_v2.0",
+                        "pre_v1.0"
                     ]
                 },
                 "INSS >> Stage 4": {
@@ -39188,7 +38943,8 @@
                     "comments": [],
                     "in_subset": [
                         "fa_v1.0",
-                        "nbl_v2.0"
+                        "nbl_v2.0",
+                        "pre_v1.0"
                     ]
                 },
                 "INSS >> Stage 4s": {
@@ -39196,7 +38952,8 @@
                     "comments": [],
                     "in_subset": [
                         "fa_v1.0",
-                        "nbl_v2.0"
+                        "nbl_v2.0",
+                        "pre_v1.0"
                     ]
                 },
                 "FIGO >> Stage 1": {
@@ -39204,7 +38961,8 @@
                     "comments": [],
                     "in_subset": [
                         "fa_v1.0",
-                        "gct_v2.0"
+                        "gct_v2.0",
+                        "pre_v1.0"
                     ]
                 },
                 "FIGO >> Stage 2": {
@@ -39212,7 +38970,8 @@
                     "comments": [],
                     "in_subset": [
                         "fa_v1.0",
-                        "gct_v2.0"
+                        "gct_v2.0",
+                        "pre_v1.0"
                     ]
                 },
                 "FIGO >> Stage 3": {
@@ -39220,7 +38979,8 @@
                     "comments": [],
                     "in_subset": [
                         "fa_v1.0",
-                        "gct_v2.0"
+                        "gct_v2.0",
+                        "pre_v1.0"
                     ]
                 },
                 "FIGO >> Stage 4": {
@@ -39228,7 +38988,8 @@
                     "comments": [],
                     "in_subset": [
                         "fa_v1.0",
-                        "gct_v2.0"
+                        "gct_v2.0",
+                        "pre_v1.0"
                     ]
                 },
                 "COG >> Stage 1": {
@@ -39236,7 +38997,8 @@
                     "comments": [],
                     "in_subset": [
                         "fa_v1.0",
-                        "gct_v2.0"
+                        "gct_v2.0",
+                        "pre_v1.0"
                     ]
                 },
                 "COG >> Stage 2": {
@@ -39244,7 +39006,8 @@
                     "comments": [],
                     "in_subset": [
                         "fa_v1.0",
-                        "gct_v2.0"
+                        "gct_v2.0",
+                        "pre_v1.0"
                     ]
                 },
                 "COG >> Stage 3": {
@@ -39252,7 +39015,8 @@
                     "comments": [],
                     "in_subset": [
                         "fa_v1.0",
-                        "gct_v2.0"
+                        "gct_v2.0",
+                        "pre_v1.0"
                     ]
                 },
                 "COG >> Stage 4": {
@@ -39260,14 +39024,16 @@
                     "comments": [],
                     "in_subset": [
                         "fa_v1.0",
-                        "gct_v2.0"
+                        "gct_v2.0",
+                        "pre_v1.0"
                     ]
                 },
                 "COG >> Stage 4S": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
-                        "fa_v1.0"
+                        "fa_v1.0",
+                        "pre_v1.0"
                     ]
                 },
                 "AJCC >> Stage 0": {
@@ -39276,7 +39042,8 @@
                     "in_subset": [
                         "fa_v1.0",
                         "gct_v2.0",
-                        "npc_v1.0"
+                        "npc_v1.0",
+                        "pre_v1.0"
                     ]
                 },
                 "AJCC >> Stage 1": {
@@ -39285,7 +39052,8 @@
                     "in_subset": [
                         "fa_v1.0",
                         "gct_v2.0",
-                        "npc_v1.0"
+                        "npc_v1.0",
+                        "pre_v1.0"
                     ]
                 },
                 "AJCC >> Stage 1A": {
@@ -39294,7 +39062,8 @@
                     "in_subset": [
                         "fa_v1.0",
                         "gct_v2.0",
-                        "npc_v1.0"
+                        "npc_v1.0",
+                        "pre_v1.0"
                     ]
                 },
                 "AJCC >> Stage 1B": {
@@ -39303,7 +39072,8 @@
                     "in_subset": [
                         "fa_v1.0",
                         "gct_v2.0",
-                        "npc_v1.0"
+                        "npc_v1.0",
+                        "pre_v1.0"
                     ]
                 },
                 "AJCC >> Stage 1s": {
@@ -39312,7 +39082,8 @@
                     "in_subset": [
                         "fa_v1.0",
                         "gct_v2.0",
-                        "npc_v1.0"
+                        "npc_v1.0",
+                        "pre_v1.0"
                     ]
                 },
                 "AJCC >> Stage 2": {
@@ -39321,7 +39092,8 @@
                     "in_subset": [
                         "fa_v1.0",
                         "gct_v2.0",
-                        "npc_v1.0"
+                        "npc_v1.0",
+                        "pre_v1.0"
                     ]
                 },
                 "AJCC >> Stage 2A": {
@@ -39330,7 +39102,8 @@
                     "in_subset": [
                         "fa_v1.0",
                         "gct_v2.0",
-                        "npc_v1.0"
+                        "npc_v1.0",
+                        "pre_v1.0"
                     ]
                 },
                 "AJCC >> Stage 2B": {
@@ -39339,7 +39112,8 @@
                     "in_subset": [
                         "fa_v1.0",
                         "gct_v2.0",
-                        "npc_v1.0"
+                        "npc_v1.0",
+                        "pre_v1.0"
                     ]
                 },
                 "AJCC >> Stage 2C": {
@@ -39348,7 +39122,8 @@
                     "in_subset": [
                         "fa_v1.0",
                         "gct_v2.0",
-                        "npc_v1.0"
+                        "npc_v1.0",
+                        "pre_v1.0"
                     ]
                 },
                 "AJCC >> Stage 3": {
@@ -39357,7 +39132,8 @@
                     "in_subset": [
                         "fa_v1.0",
                         "gct_v2.0",
-                        "npc_v1.0"
+                        "npc_v1.0",
+                        "pre_v1.0"
                     ]
                 },
                 "AJCC >> Stage 3A": {
@@ -39366,7 +39142,8 @@
                     "in_subset": [
                         "fa_v1.0",
                         "gct_v2.0",
-                        "npc_v1.0"
+                        "npc_v1.0",
+                        "pre_v1.0"
                     ]
                 },
                 "AJCC >> Stage 3B": {
@@ -39375,7 +39152,8 @@
                     "in_subset": [
                         "fa_v1.0",
                         "gct_v2.0",
-                        "npc_v1.0"
+                        "npc_v1.0",
+                        "pre_v1.0"
                     ]
                 },
                 "AJCC >> Stage 3C": {
@@ -39384,7 +39162,8 @@
                     "in_subset": [
                         "fa_v1.0",
                         "gct_v2.0",
-                        "npc_v1.0"
+                        "npc_v1.0",
+                        "pre_v1.0"
                     ]
                 },
                 "Evans >> Stage 1": {
@@ -39392,7 +39171,8 @@
                     "comments": [],
                     "in_subset": [
                         "fa_v1.0",
-                        "nbl_v2.0"
+                        "nbl_v2.0",
+                        "pre_v1.0"
                     ]
                 },
                 "Evans >> Stage 2": {
@@ -39400,7 +39180,8 @@
                     "comments": [],
                     "in_subset": [
                         "fa_v1.0",
-                        "nbl_v2.0"
+                        "nbl_v2.0",
+                        "pre_v1.0"
                     ]
                 },
                 "Evans >> Stage 3": {
@@ -39408,7 +39189,8 @@
                     "comments": [],
                     "in_subset": [
                         "fa_v1.0",
-                        "nbl_v2.0"
+                        "nbl_v2.0",
+                        "pre_v1.0"
                     ]
                 },
                 "Evans >> Stage 4": {
@@ -39416,14 +39198,16 @@
                     "comments": [],
                     "in_subset": [
                         "fa_v1.0",
-                        "nbl_v2.0"
+                        "nbl_v2.0",
+                        "pre_v1.0"
                     ]
                 },
                 "Evans >> Stage 4s": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
-                        "nbl_v2.0"
+                        "nbl_v2.0",
+                        "pre_v1.0"
                     ]
                 },
                 "INRGSS >> Stage L1": {
@@ -39431,7 +39215,8 @@
                     "comments": [],
                     "in_subset": [
                         "fa_v1.0",
-                        "nbl_v2.0"
+                        "nbl_v2.0",
+                        "pre_v1.0"
                     ]
                 },
                 "INRGSS >> Stage L2": {
@@ -39439,7 +39224,8 @@
                     "comments": [],
                     "in_subset": [
                         "fa_v1.0",
-                        "nbl_v2.0"
+                        "nbl_v2.0",
+                        "pre_v1.0"
                     ]
                 },
                 "INRGSS >> Stage M": {
@@ -39447,7 +39233,8 @@
                     "comments": [],
                     "in_subset": [
                         "fa_v1.0",
-                        "nbl_v2.0"
+                        "nbl_v2.0",
+                        "pre_v1.0"
                     ]
                 },
                 "INRGSS >> Stage Ms": {
@@ -39455,10 +39242,11 @@
                     "comments": [],
                     "in_subset": [
                         "fa_v1.0",
-                        "nbl_v2.0"
+                        "nbl_v2.0",
+                        "pre_v1.0"
                     ]
                 },
-                "IRSS >> Group 0": {
+                "IRSS >> Stage 0": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
@@ -39466,7 +39254,7 @@
                         "rb_v1.2"
                     ]
                 },
-                "IRSS >> Group 1a": {
+                "IRSS >> Stage 1a": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
@@ -39474,7 +39262,7 @@
                         "rb_v1.2"
                     ]
                 },
-                "IRSS >> Group 1b": {
+                "IRSS >> Stage 1b": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
@@ -39482,7 +39270,7 @@
                         "rb_v1.2"
                     ]
                 },
-                "IRSS >> Group 2a": {
+                "IRSS >> Stage 2a": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
@@ -39490,7 +39278,7 @@
                         "rb_v1.2"
                     ]
                 },
-                "IRSS >> Group 2b": {
+                "IRSS >> Stage 2b": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
@@ -39498,7 +39286,7 @@
                         "rb_v1.2"
                     ]
                 },
-                "IRSS >> Group 3a": {
+                "IRSS >> Stage 3a": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
@@ -39506,7 +39294,7 @@
                         "rb_v1.2"
                     ]
                 },
-                "IRSS >> Group 3b": {
+                "IRSS >> Stage 3b": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
@@ -39514,7 +39302,7 @@
                         "rb_v1.2"
                     ]
                 },
-                "IRSS >> Group 4a": {
+                "IRSS >> Stage 4a": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
@@ -39522,7 +39310,7 @@
                         "rb_v1.2"
                     ]
                 },
-                "IRSS >> Group 4b": {
+                "IRSS >> Stage 4b": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
@@ -39535,7 +39323,8 @@
                     "comments": [],
                     "in_subset": [
                         "fa_v1.0",
-                        "hl_v2.0"
+                        "hl_v2.0",
+                        "pre_v1.0"
                     ]
                 },
                 "Ann Arbor >> Stage 2": {
@@ -39543,7 +39332,8 @@
                     "comments": [],
                     "in_subset": [
                         "fa_v1.0",
-                        "hl_v2.0"
+                        "hl_v2.0",
+                        "pre_v1.0"
                     ]
                 },
                 "Ann Arbor >> Stage 3": {
@@ -39551,7 +39341,8 @@
                     "comments": [],
                     "in_subset": [
                         "fa_v1.0",
-                        "hl_v2.0"
+                        "hl_v2.0",
+                        "pre_v1.0"
                     ]
                 },
                 "Ann Arbor >> Stage 4": {
@@ -39559,35 +39350,8 @@
                     "comments": [],
                     "in_subset": [
                         "fa_v1.0",
-                        "hl_v2.0"
-                    ]
-                },
-                "IRS >> Stage 1": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "fa_v1.0"
-                    ]
-                },
-                "IRS >> Stage 2": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "fa_v1.0"
-                    ]
-                },
-                "IRS >> Stage 3": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "fa_v1.0"
-                    ]
-                },
-                "IRS >> Stage 4": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "fa_v1.0"
+                        "hl_v2.0",
+                        "pre_v1.0"
                     ]
                 },
                 "System NOS >> Localized": {
@@ -39611,68 +39375,87 @@
                         "fa_v1.0"
                     ]
                 },
+                 "System NOS >> Stage 0": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0"
+                    ]
+                },
                 "System NOS >> Stage 1": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
-                        "fa_v1.0"
+                        "fa_v1.0",
+                        "lt_v1.0",
+                        "pre_v1.0"
                     ]
                 },
                 "System NOS >> Stage 2": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
-                        "fa_v1.0"
+                        "fa_v1.0",
+                        "lt_v1.0",
+                        "pre_v1.0"
                     ]
                 },
                 "System NOS >> Stage 3": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
-                        "fa_v1.0"
+                        "fa_v1.0",
+                        "lt_v1.0",
+                        "pre_v1.0"
                     ]
                 },
                 "System NOS >> Stage 4": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
-                        "fa_v1.0"
+                        "fa_v1.0",
+                        "lt_v1.0",
+                        "pre_v1.0"
                     ]
                 },
-                "Pretext Group I": {
+                "PRETEXT >> Group I": {
                     "meaning": "",
                     "comments": [
                         "(lt_v1.0) ConsortiumNote: STAGE_SYSTEM = 'PRETEXT Staging System'"
                     ],
                     "in_subset": [
-                        "lt_v1.0"
+                        "lt_v1.0",
+                        "pre_v1.0"
                     ]
                 },
-                "Pretext Group II": {
+                "PRETEXT >> Group II": {
                     "meaning": "",
                     "comments": [
                         "(lt_v1.0) ConsortiumNote: STAGE_SYSTEM = 'PRETEXT Staging System'"
                     ],
                     "in_subset": [
-                        "lt_v1.0"
+                        "lt_v1.0",
+                        "pre_v1.0"
                     ]
                 },
-                "Pretext Group III": {
+                "PRETEXT >> Group III": {
                     "meaning": "",
                     "comments": [
                         "(lt_v1.0) ConsortiumNote: STAGE_SYSTEM = 'PRETEXT Staging System'"
                     ],
                     "in_subset": [
-                        "lt_v1.0"
+                        "lt_v1.0",
+                        "pre_v1.0"
                     ]
                 },
-                "Pretext Group IV": {
+                "PRETEXT >> Group IV": {
                     "meaning": "",
                     "comments": [
                         "(lt_v1.0) ConsortiumNote: STAGE_SYSTEM = 'PRETEXT Staging System'"
                     ],
                     "in_subset": [
-                        "lt_v1.0"
+                        "lt_v1.0",
+                        "pre_v1.0"
                     ]
                 },
                 "Unknown": {
@@ -39786,7 +39569,8 @@
         "GroupEnum": {
             "in_subset": [
                 "rb_v1.2",
-                "rms_v3.0"
+                "rms_v3.0",
+                "pre_v1.0"
             ],
             "permissible_values": {
                 "IRS >> Group I": {
@@ -39936,7 +39720,8 @@
                         "(rb_v1.2) ConsortiumNote: GROUP_SYSTEM = 'Reese Ellsworth'"
                     ],
                     "in_subset": [
-                        "rb_v1.2"
+                        "rb_v1.2",
+                        "pre_v1.0"
                     ]
                 },
                 "Reese-Ellsworth >> Group 1B": {
@@ -39945,7 +39730,8 @@
                         "(rb_v1.2) ConsortiumNote: GROUP_SYSTEM = 'Reese Ellsworth'"
                     ],
                     "in_subset": [
-                        "rb_v1.2"
+                        "rb_v1.2",
+                        "pre_v1.0"
                     ]
                 },
                 "Reese-Ellsworth >> Group 2A": {
@@ -39954,7 +39740,8 @@
                         "(rb_v1.2) ConsortiumNote: GROUP_SYSTEM = 'Reese Ellsworth'"
                     ],
                     "in_subset": [
-                        "rb_v1.2"
+                        "rb_v1.2",
+                        "pre_v1.0"
                     ]
                 },
                 "Reese-Ellsworth >> Group 2B": {
@@ -39963,7 +39750,8 @@
                         "(rb_v1.2) ConsortiumNote: GROUP_SYSTEM = 'Reese Ellsworth'"
                     ],
                     "in_subset": [
-                        "rb_v1.2"
+                        "rb_v1.2",
+                        "pre_v1.0"
                     ]
                 },
                 "Reese-Ellsworth >> Group 3A": {
@@ -39972,7 +39760,8 @@
                         "(rb_v1.2) ConsortiumNote: GROUP_SYSTEM = 'Reese Ellsworth'"
                     ],
                     "in_subset": [
-                        "rb_v1.2"
+                        "rb_v1.2",
+                        "pre_v1.0"
                     ]
                 },
                 "Reese-Ellsworth >> Group 3B": {
@@ -39981,7 +39770,8 @@
                         "(rb_v1.2) ConsortiumNote: GROUP_SYSTEM = 'Reese Ellsworth'"
                     ],
                     "in_subset": [
-                        "rb_v1.2"
+                        "rb_v1.2",
+                        "pre_v1.0"
                     ]
                 },
                 "Reese-Ellsworth >> Group 4A": {
@@ -39990,7 +39780,8 @@
                         "(rb_v1.2) ConsortiumNote: GROUP_SYSTEM = 'Reese Ellsworth'"
                     ],
                     "in_subset": [
-                        "rb_v1.2"
+                        "rb_v1.2",
+                        "pre_v1.0"
                     ]
                 },
                 "Reese-Ellsworth >> Group 4B": {
@@ -39999,7 +39790,8 @@
                         "(rb_v1.2) ConsortiumNote: GROUP_SYSTEM = 'Reese Ellsworth'"
                     ],
                     "in_subset": [
-                        "rb_v1.2"
+                        "rb_v1.2",
+                        "pre_v1.0"
                     ]
                 },
                 "Reese-Ellsworth >> Group 5A": {
@@ -40008,7 +39800,8 @@
                         "(rb_v1.2) ConsortiumNote: GROUP_SYSTEM = 'Reese Ellsworth'"
                     ],
                     "in_subset": [
-                        "rb_v1.2"
+                        "rb_v1.2",
+                        "pre_v1.0"
                     ]
                 },
                 "Reese-Ellsworth >> Group 5B": {
@@ -40017,7 +39810,8 @@
                         "(rb_v1.2) ConsortiumNote: GROUP_SYSTEM = 'Reese Ellsworth'"
                     ],
                     "in_subset": [
-                        "rb_v1.2"
+                        "rb_v1.2",
+                        "pre_v1.0"
                     ]
                 },
                 "Unknown": {
@@ -56450,7 +56244,8 @@
                     "meaning": "ncit:C54179",
                     "comments": [],
                     "in_subset": [
-                        "pre_v1.0"
+                        "pre_v1.0",
+                        "hl_v2.0"
                     ]
                 },
                 "Children's Oncology Group Liver Tumor Staging System": {
@@ -56485,7 +56280,9 @@
                     "meaning": "ncit:C39353",
                     "comments": [],
                     "in_subset": [
-                        "pre_v1.0"
+                        "pre_v1.0",
+                        "fa_v1.0",
+                        "gct_v2.0"
                     ]
                 },
                 "Childrens Oncology Group/National Wilms Tumor Study Group Staging System": {
@@ -56513,7 +56310,9 @@
                     "meaning": "ncit:C125738",
                     "comments": [],
                     "in_subset": [
-                        "pre_v1.0"
+                        "pre_v1.0",
+                        "fa_v1.0",
+                        "gct_v2.0"
                     ]
                 },
                 "Intergroup Rhabdomyosarcoma Study Group Clinical Staging and Grouping System": {
@@ -56527,14 +56326,18 @@
                     "meaning": "ncit:C133427",
                     "comments": [],
                     "in_subset": [
-                        "pre_v1.0"
+                        "pre_v1.0",
+                        "fa_v1.0",
+                        "nbl_v2.0"
                     ]
                 },
                 "INSS": {
                     "meaning": "ncit:C85416",
                     "comments": [],
                     "in_subset": [
-                        "pre_v1.0"
+                        "pre_v1.0",
+                        "fa_v1.0",
+                        "nbl_v2.0"
                     ]
                 },
                 "International Society of Pediatric Oncology Staging System": {
@@ -56566,22 +56369,8 @@
                         "lt_v1.0"
                     ]
                 },
-                "Reese-Ellsworth Staging System": {
-                    "meaning": "ncit:C123333",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0"
-                    ]
-                },
                 "St. Jude Stage": {
                     "meaning": "ncit:C141216",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0"
-                    ]
-                },
-                "TNM Staging System": {
-                    "meaning": "ncit:C25384",
                     "comments": [],
                     "in_subset": [
                         "pre_v1.0"
@@ -58712,83 +58501,6 @@
                 }
             }
         },
-        "FounderPopulationEnum": {
-            "in_subset": [
-                "fa_v1.0"
-            ],
-            "permissible_values": {
-                "Amish/Mennonite/Hutterite": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "fa_v1.0"
-                    ]
-                },
-                "Jewish (Ashkenazi)": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "fa_v1.0"
-                    ]
-                },
-                "Dutch": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "fa_v1.0"
-                    ]
-                },
-                "South Asian": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "fa_v1.0"
-                    ]
-                },
-                "South African": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "fa_v1.0"
-                    ]
-                },
-                "Gypsy": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "fa_v1.0"
-                    ]
-                },
-                "Brazilian": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "fa_v1.0"
-                    ]
-                },
-                "French Canadian": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "fa_v1.0"
-                    ]
-                },
-                "Indian": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "fa_v1.0"
-                    ]
-                },
-                "Mixe": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "fa_v1.0"
-                    ]
-                }
-            }
-        },
         "StageCategoryEnum": {
             "in_subset": [
                 "fa_v1.0",
@@ -59088,7 +58800,8 @@
             "in_subset": [
                 "fa_v1.0",
                 "npc_v1.0",
-                "rb_v1.2"
+                "rb_v1.2",
+                "pre_v1.0"
             ],
             "permissible_values": {
                 "MX": {
@@ -59105,7 +58818,8 @@
                     "in_subset": [
                         "fa_v1.0",
                         "npc_v1.0",
-                        "rb_v1.2"
+                        "rb_v1.2",
+                        "pre_v1.0"
                     ]
                 },
                 "M1": {
@@ -59114,7 +58828,8 @@
                     "in_subset": [
                         "fa_v1.0",
                         "npc_v1.0",
-                        "rb_v1.2"
+                        "rb_v1.2",
+                        "pre_v1.0"
                     ]
                 },
                 "M1a": {
@@ -61538,7 +61253,7 @@
                 "aml_v2.0"
             ],
             "permissible_values": {
-                "Grade 1": {
+                "System NOS >> Grade 1": {
                     "meaning": "ncit:C41338",
                     "comments": [],
                     "in_subset": [
@@ -61548,7 +61263,7 @@
                         "aml_v2.0"
                     ]
                 },
-                "Grade 2": {
+                "System NOS >> Grade 2": {
                     "meaning": "ncit:C41339",
                     "comments": [],
                     "in_subset": [
@@ -61568,7 +61283,7 @@
                         "aml_v2.0"
                     ]
                 },
-                "Grade 4": {
+                "System NOS >> Grade 4": {
                     "meaning": "ncit:C41337",
                     "comments": [],
                     "in_subset": [
@@ -61578,7 +61293,7 @@
                         "aml_v2.0"
                     ]
                 },
-                "Grade 5": {
+                "System NOS >> Grade 5": {
                     "meaning": "ncit:C48275",
                     "comments": [],
                     "in_subset": [
@@ -62375,35 +62090,35 @@
                 "hl_v2.0"
             ],
             "permissible_values": {
-                "Grade 1": {
+                "CTCAE >> Grade 1": {
                     "meaning": "ncit:C41338",
                     "comments": [],
                     "in_subset": [
                         "hl_v2.0"
                     ]
                 },
-                "Grade 2": {
+                "CTCAE >> Grade 2": {
                     "meaning": "ncit:C41339",
                     "comments": [],
                     "in_subset": [
                         "hl_v2.0"
                     ]
                 },
-                "Grade 3": {
+                "CTCAE >> Grade 3": {
                     "meaning": "ncit:C41340",
                     "comments": [],
                     "in_subset": [
                         "hl_v2.0"
                     ]
                 },
-                "Grade 4": {
+                "CTCAE >> Grade 4": {
                     "meaning": "ncit:C84266",
                     "comments": [],
                     "in_subset": [
                         "hl_v2.0"
                     ]
                 },
-                "Grade 5": {
+                "CTCAE >> Grade 5": {
                     "meaning": "ncit:C48275",
                     "comments": [],
                     "in_subset": [
@@ -63373,7 +63088,9 @@
         },
         "GroupSystemEnum": {
             "in_subset": [
-                "rb_v1.2"
+                "rb_v1.2",
+                "pre_v1.0",
+                "rms_v3.0"
             ],
             "permissible_values": {
                 "ICRB": {
@@ -63394,7 +63111,15 @@
                     "meaning": "ncit:C123333",
                     "comments": [],
                     "in_subset": [
-                        "rb_v1.2"
+                        "rb_v1.2",
+                        "pre_v1.0"
+                    ]
+                },
+                "Intergroup Rhabdomyosarcoma Study Group Clinical Staging and Grouping System": {
+                    "meaning":"ncit:C148010",
+                    "comments": [],
+                    "in_subset": [
+                        "rms_v3.0"
                     ]
                 },
                 "Unknown": {
