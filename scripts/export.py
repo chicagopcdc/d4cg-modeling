@@ -1,4 +1,4 @@
-import sys, os, json, requests, urllib.parse, datetime, time, re
+import sys, os, json, requests, urllib.parse, datetime, time, re, argparse
 
 subset_info = {
      "pcdc": {
@@ -241,7 +241,7 @@ def init_rows(commons, disease_group, parent, schema, target):
 
 
 #TODO add parsing for SyntacticMappings and SemanticMappings
-def assemble(scope, commons, disease_group, parent, schema, target):
+def assemble(definitions, commons, disease_group, parent, schema, target):
     table_count = 0
     variable_count = 0
     start = time.time()
@@ -249,17 +249,17 @@ def assemble(scope, commons, disease_group, parent, schema, target):
     rows = init_rows(commons, disease_group, parent, schema, target)
     for c in schema['classes']:
         sclass = schema['classes'][c]
-        if target in sclass['in_subset'] or scope == "full":
+        if target in sclass['in_subset'] or disease_group == "pcdc":
             table_count += 1
             if 'domain' in sclass['annotations']:
                 rows.append(['domain', sclass['annotations']['domain']])
             rows.append(['table', c, '', '', '', '', '', '', '', '\n'.join(sclass['comments'])])
             for s in sclass['slots']:
                 slot = schema['slots'][s]
-                if target in slot['in_subset'] or scope == "full":
+                if target in slot['in_subset'] or disease_group == "pcdc":
                     variable_count += 1
                     print(c + " " + s)
-                    if scope == "single":
+                    if definitions == "retrieve":
                         definition = fetch_definition(slot['slot_uri'])
                     else:
                         definition = ""
@@ -270,11 +270,11 @@ def assemble(scope, commons, disease_group, parent, schema, target):
                     if 'Enum' in slot['range']:
                         for value in schema['enums'][slot['range']]['permissible_values']:
                             pv = schema['enums'][slot['range']]['permissible_values'][value]
-                            if scope == "single":
+                            if definitions == "retrieve":
                                 definition = fetch_definition(pv['meaning'])
                             else:
                                 definition = ""
-                            if target in pv['in_subset'] or scope == "full":
+                            if target in pv['in_subset'] or disease_group == "pcdc":
                                 rows.append(['pv', '', '', '', '','', value, definition, pv['meaning'], parse_notes(pv['comments'], target), parse_mappings(pv,target)])
             rows.append([]) 
             rows.append([])
@@ -313,36 +313,41 @@ if __name__ == '__main__':
     Use Ctrl+C to abort if needed
     ______________________________________________
     Usage: 
-        python export.py [schema] [subset]
+        python export.py [schema] [subset] --fast (optional)
 
     Examples: 
-        - python export.py pcdc_v1.13 aml_v1.8-live
+        - python export.py schemas/pcdc/pcdc_v1.13 aml_v1.8-live 
+        - python export.py schemas/pcdc/pcdc_v2.0 pcdc_v2.0 --fast
     ______________________________________________
     """
     )
-    if len(sys.argv) == 3:
-        parent = sys.argv[1]
-        parent_file = "schemas/pcdc/" + parent + ".json"
-        if os.path.exists(parent_file):
-            target = sys.argv[2]
-            with open(parent_file, "r") as schema_file:
-                schema = json.load(schema_file)
-                if target in schema["subsets"]:
-                    print("Exporting: " + target + "\n")
-                    commons = parent.split("_")[0]
-                    disease_group = target.split("_")[0].split("-")[0]
-                    if disease_group == "pcdc":
-                        scope = "full"
-                    else:
-                        scope = "single"
-                    if disease_group in subset_info[commons]:
-                        rows = assemble(scope, commons, disease_group, parent, schema, target)
-                        export(rows, subset_info[commons][disease_group]["id"])
-                    else:
-                            print("\nERROR: Subset metadata is not present in export.py for target: " + target + "\n")
+    parser = argparse.ArgumentParser(description="Export a schema subset as a Google Sheets data dictionary.")
+    parser.add_argument("schema", help="Path to the schema JSON file.")
+    parser.add_argument("subset", help="Subset of the schema that should be exported.")
+    parser.add_argument("--fast", action="store_true", help="Skip the definition fetching.")
+    args = parser.parse_args()
+    parent_file = args.schema
+    if os.path.exists(parent_file):
+        target = args.subset
+        with open(parent_file, "r") as schema_file:
+            schema = json.load(schema_file)
+            if target in schema["subsets"]:
+                print("Exporting: " + target + "\n")
+                parent_path = parent_file.replace(".json","")
+                parent = parent_path.split("/")[2]
+                commons = parent_path.split("/")[1]
+                disease_group = target.split("_")[0].split("-")[0]
+                if args.fast:
+                    definitions = "skip"
                 else:
-                    print("\nERROR: Parent schema does not include this target: " + target + "\n")
-        else:
-            print("\nERROR: Parent schema not found locally: " + parent_file + "\n")
+                    definitions = "retrieve"
+                if disease_group in subset_info[commons]:
+                    rows = assemble(definitions, commons, disease_group, parent, schema, target)
+                    export(rows, subset_info[commons][disease_group]["id"])
+                else:
+                        print("\nERROR: Subset metadata is not present in export.py for target: " + target + "\n")
+            else:
+                print("\nERROR: Parent schema does not include this target: " + target + "\n")
     else:
-         print("\nERROR: Incorrect number of parameters included\n")
+        print("\nERROR: Parent schema not found locally: " + parent_file + "\n")
+    
