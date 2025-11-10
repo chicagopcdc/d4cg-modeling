@@ -8,6 +8,16 @@ if __name__ == '__main__':
     target = sys.argv[1]
     with open(target, "r") as file_in:
         schema = json.load(file_in)
+        #Check for multiple or missing slot_uri
+        for s in schema["slots"]:
+            if "slot_uri" not in schema["slots"][s]:
+                print("Missing slot_uri for: " + s)
+            else:
+                if schema["slots"][s]["slot_uri"] is None:
+                    print("Malformed slot_uri for: " + s)
+                    continue
+                if (",") in schema["slots"][s]["slot_uri"]:
+                    print("Multiple slot_uri for: " + s)
         #Check for undeclared slots
         for s in schema["slots"]:
             declared = False
