@@ -445,7 +445,6 @@
                 "medical_history_condition",
                 "condition_other",
                 "condition_category",
-                "diagnosis_basis",
                 "assisted_conception"
             ],
             "slot_usage": {
@@ -1730,8 +1729,8 @@
         "person_submitter_id": {
             "slot_uri": "",
             "range": "Person",
-            "description": "Foreign-key reference to a Person record (by submitter_id)",
-            "comments": [],
+            "description": "Foreign-key reference to a Person record",
+            "comments": "D4CGNote: The person_submitter_id will be provided by D4CG. Data contributors do not need to supply this value.",
             "inlined": false,
             "multivalued": false,
             "in_subset": [
@@ -1805,6 +1804,7 @@
         "parent_submitter_id": {
             "slot_uri": "",
             "range": "Timing",
+            "description": "The SUBMITTER_ID of the time period in whose context a subsequent time period takes place. For example, multiple treatment courses occuring the 'Initial Diagnosis' period would each reference the SUBMITTER_ID of the 'Initial Diagnosis' period as their PARENT_SUBMITTER_ID.",
             "comments": [],
             "multivalued": true,
             "in_subset": [
@@ -2229,6 +2229,7 @@
         "time_period_type": {
             "slot_uri": "",
             "range": "TimePeriodTypeEnum",
+            "description": "The type of time period being reported.",
             "comments": [],
             "in_subset": [
                 "aml_v2.0",
@@ -2308,6 +2309,7 @@
         "time_period_number": {
             "slot_uri": "",
             "range": "integer",
+            "description": "This variable indicates the ordinal numbering of time periods of the same TIME_PERIOD_TYPE within its various subgroups (e.g., Relapse 1, Relapse 2, Relapse 3, etc.). The observations across domains can therefore be organized longitudinally without the need for specific dates.",
             "comments": [
                 "(rb_v1.2) ConsortiumNote: The order of this exam in relation to others (EUA 1, EUA 2, etc.)"
             ],
@@ -2815,7 +2817,8 @@
             "range": "VitalMeasurementTypeEnum",
             "comments": [],
             "in_subset": [
-                "fa_v1.0"
+                "fa_v1.0",
+                "os_v2.0"
             ],
             "annotations": {}
         },
@@ -2833,7 +2836,9 @@
                 "ews_v2.0",
                 "gct_v2.0",
                 "hl_v2.0",
-                "npc_v1.0"
+                "npc_v1.0",
+                "aml_v2.0",
+                "os_v2.0"
             ],
             "annotations": {
                 "tier_mandatory": "fa_v1.0,npc_v1.0"
@@ -21598,7 +21603,8 @@
                         "fa_v1.0",
                         "gct_v2.0",
                         "hl_v2.0",
-                        "npc_v1.0"
+                        "npc_v1.0",
+                        "os_v2.0"
                     ]
                 },
                 "Height": {
@@ -21612,7 +21618,8 @@
                         "fa_v1.0",
                         "gct_v2.0",
                         "hl_v2.0",
-                        "npc_v1.0"
+                        "npc_v1.0",
+                        "os_v2.0"
                     ]
                 },
                 "BMI": {
@@ -21633,7 +21640,8 @@
                         "ews_v2.0",
                         "fa_v1.0",
                         "hl_v2.0",
-                        "npc_v1.0"
+                        "npc_v1.0",
+                        "os_v2.0"
                     ]
                 },
                 "Head Circumference": {
@@ -21658,35 +21666,40 @@
                     "meaning": "ncit:C25749",
                     "comments": [],
                     "in_subset": [
-                        "fa_v1.0"
+                        "fa_v1.0",
+                        "os_v2.0"
                     ]
                 },
                 "Systolic Blood Pressure": {
                     "meaning": "ncit:C25298",
                     "comments": [],
                     "in_subset": [
-                        "fa_v1.0"
+                        "fa_v1.0",
+                        "os_v2.0"
                     ]
                 },
                 "Diastolic Blood Pressure": {
                     "meaning": "ncit:C25299",
                     "comments": [],
                     "in_subset": [
-                        "fa_v1.0"
+                        "fa_v1.0",
+                        "os_v2.0"
                     ]
                 },
                 "Respiratory Rate": {
                     "meaning": "ncit:C49678",
                     "comments": [],
                     "in_subset": [
-                        "fa_v1.0"
+                        "fa_v1.0",
+                        "os_v2.0"
                     ]
                 },
                 "Temperature": {
                     "meaning": "ncit:C25206",
                     "comments": [],
                     "in_subset": [
-                        "fa_v1.0"
+                        "fa_v1.0",
+                        "os_v2.0"
                     ]
                 }
             }
