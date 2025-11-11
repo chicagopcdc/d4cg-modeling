@@ -200,7 +200,7 @@ def get_so_definition(code):
         return ""
 
 
-def create_sheet(target, id):
+def create_sheet(subset, id):
     # ----- IGNORE BLOCK, CUSTOM CODE TO ENABLE AN AUTH FOLDER ---- #
     orig_dir = os.getcwd()
     # Change to auth folder where pickle files are
@@ -215,7 +215,7 @@ def create_sheet(target, id):
         return
     os.chdir(orig_dir)
     # -------------------------------------------------------- #
-    name = datetime.datetime.now().strftime("%Y%m%d") + " " + target
+    name = datetime.datetime.now().strftime("%Y%m%d") + " " + subset
     existing_sheet = next((s for s in ss.sheets if s.title == name), None)
     if existing_sheet:
         print("...deleting existing sheet with same name (from an earlier run today)")
@@ -284,11 +284,11 @@ def assemble(definitions, commons, disease_group, parent, schema, target):
     return rows
     
 
-def export(rows, id):
+def export(subset, rows, id):
     #Create a new sheet object
     start = time.time()
     print('\n...creating sheet')
-    new_sheet = create_sheet(target, id)
+    new_sheet = create_sheet(subset, id)
     print(elapsed_time(start)) 
     #Add rows to the new sheet
     start = time.time() 
@@ -360,7 +360,7 @@ if __name__ == '__main__':
                     definitions = "retrieve"
                 if disease_group in subset_info[commons]:
                     rows = assemble(definitions, commons, disease_group, parent, schema, args.subset)
-                    export(rows, subset_info[commons][disease_group]["id"])
+                    export(args.subset, rows, subset_info[commons][disease_group]["id"])
                 else:
                         print("\nERROR: Subset metadata is not present in export.py for target: " + args.subset + "\n")
             else:
