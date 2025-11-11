@@ -1,7 +1,7 @@
 import os, re
 
 
-def load(gsheet_id, version, scope):
+def load(gsheet_id, subset):
 
     # ----- IGNORE BLOCK, CUSTOM CODE TO ENABLE AN AUTH FOLDER ---- #
     orig_dir = os.getcwd()
@@ -26,15 +26,14 @@ def load(gsheet_id, version, scope):
             line = rows[i]
             if line[0] in ["info", "INFO"]:
                 # Only load the target version sheet (single)
-                if scope == "single":
-                    if line[1] == "Name":
-                        if line[2] == version:
-                            return sheet
+                if line[1] == "Name":
+                    if line[2] == subset:
+                        return sheet
                 # Only load sheets for the target parent model (all)
-                if scope == "full":
-                    if line[1] == "Parent Data Model":
-                        if line[2] == version:
-                            return sheet
+                #if scope == "full":
+                #    if line[1] == "Parent Data Model":
+                #        if line[2] == version:
+                #            return sheet
             if line[0] in ["domain","DD"]:
                 break
    

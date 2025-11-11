@@ -1,4 +1,4 @@
-import sys, os, json, time, subprocess
+import sys, os, json, time, subprocess, argparse
 from datetime import datetime
 from utils import load_sheet
 
@@ -313,76 +313,49 @@ def elapsed_time(start):
 
 #Code starts here
 if __name__ == '__main__':
+    enforce_repo_root()
     print(
     """
     ▛▀▖▞▀▖▙▗▌   ▞▀▖▌ ▌▙ ▌▞▀▖
     ▌ ▌▚▄ ▌▘▌▄▄▖▚▄ ▝▞ ▌▌▌▌  
     ▌ ▌▖ ▌▌ ▌   ▖ ▌ ▌ ▌▝▌▌ ▖
     ▀▀ ▝▀ ▘ ▘   ▝▀  ▘ ▘ ▘▝▀ 
-                      
     Use Ctrl+C to abort if needed
     ______________________________________________
     Usage: 
-        python sync.py [commons] [scope] [version]
+        python scripts/sync.py [schema_path] [subset]
 
     Examples: 
-        - python sync.py pcdc single aml_v1.5
-        - python sync.py pcdc full pcdc_v1.8
+        - python scripts/sync.py schemas/pcdc/pcdc_v1.13 aml_v1.8-live
     ______________________________________________
     """
     )
-    enforce_repo_root()
-    if len(sys.argv) != 4:
-        print("\nERROR: Incorrect number of parameters included\n")
-        sys.exit()
-    commons = sys.argv[1]
-    scope = sys.argv[2]
-    version = sys.argv[3]
-
-    if scope == "single":
-        print("\nSyncing a single dictionary: " + version)
-        disease_group = version.split("_")[0]
-        if disease_group in gsheets_ids[commons]:
+    parser = argparse.ArgumentParser(description="Compare a Google Sheets data dictionary against the full schema to detect potential updates.")
+    parser.add_argument("schema", help="Path to the schema JSON file.")
+    parser.add_argument("subset", help="Subset of the schema that should be exported.")
+    args = parser.parse_args()
+    print("\nSyncing a single dictionary: " + args.subset)
+    disease_group = args.subset.split("-")[0].split("_")[0]    
+    schema_path = args.schema.replace(".json","")
+    parent = schema_path.split("/")[2]
+    commons = schema_path.split("/")[1]
+    if disease_group in gsheets_ids[commons]:
+        start = time.time()
+        print("...loading sheet")
+        sheet = load_sheet.load(gsheets_ids[commons][disease_group], args.subset)
+        print(elapsed_time(start))   
+        if sheet != None:
             start = time.time()
-            print("...loading sheet")
-            sheet = load_sheet.load(gsheets_ids[commons][disease_group], version, scope)
-            print(elapsed_time(start))   
-            if sheet != None:
-                start = time.time()
-                print("...parsing sheet")
-                dictionary = load_sheet.parse(sheet)
-                print(elapsed_time(start))   
-                if dictionary:
-                    start = time.time()
-                    print("...syncing sheet to schema")
-                    task_manager = sync(commons, dictionary)
-                    print(elapsed_time(start))
-                    task_manager.write("tasks/" + disease_group + "-taskfile-" + datetime.today().strftime("%Y%m%d") + ".tsv")
-            else:
-                print("\nERROR: The target was not found in this spreadsheet\n") 
-        else:
-            print("\nERROR: Unknown disease group: " + disease_group)
-    
-    elif scope == "full":
-        print("No support for syncing full. Sync individuals instead for now.")
-        """
-        print("\nParsing all dictionaries with a parent model of: {version}...")
-        dictionaries = []
-        for disease_group in gsheets_ids[commons]:
-            print("\n[  {disease_group}  ]\n...loading sheet")
-            sheet = load_sheet.load(gsheets_ids[commons][disease_group], version, scope)
-            if sheet == None:
-                print("The target was not found in this spreadsheet\n")
-                continue
             print("...parsing sheet")
-            dictionaries.append(load_sheet.parse(sheet))
-            print("...done!\n")
-            for dictionary in dictionaries:
+            dictionary = load_sheet.parse(sheet)
+            print(elapsed_time(start))   
+            if dictionary:
                 start = time.time()
-                print("...syncing sheet to schema: " + dictionary["info"]["name"])
-                task_manager = sync(dictionary)
+                print("...syncing sheet to schema")
+                task_manager = sync(commons, dictionary)
                 print(elapsed_time(start))
                 task_manager.write("tasks/" + disease_group + "-taskfile-" + datetime.today().strftime("%Y%m%d") + ".tsv")
-        """
+        else:
+            print("\nERROR: The target was not found in this spreadsheet\n") 
     else:
-        print("\nERROR: Invalid scope: " + scope)
+        print("\nERROR: Unknown disease group: " + disease_group)

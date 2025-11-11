@@ -1,4 +1,4 @@
-import sys, os, json, requests, urllib.parse, datetime, time, re, argparse
+import sys, os, json, requests, urllib.parse, datetime, time, re, argparse, subprocess
 
 subset_info = {
      "pcdc": {
@@ -302,8 +302,27 @@ def elapsed_time(start):
     m, s = divmod(seconds, 60)
     return f"{int(m)}m {s:.2f}s"
 
+def enforce_repo_root():
+    try:
+        # Get the top-level directory of the current Git repo
+        repo_root = subprocess.check_output(
+            ["git", "rev-parse", "--show-toplevel"],
+            stderr=subprocess.DEVNULL
+        ).decode().strip()
+    except subprocess.CalledProcessError:
+        print("Error: Not inside a Git repository.")
+        sys.exit(1)
+
+    # Compare to current working directory
+    cwd = os.getcwd()
+    if os.path.abspath(cwd) != os.path.abspath(repo_root):
+        print(f"\nPlease run this script from the repository root:\n   {repo_root}\n")
+        print(f"   You are currently in:\n   {cwd}\n")
+        sys.exit(1)
+
 #Code starts here d
 if __name__ == '__main__':
+    enforce_repo_root()
     print(
     """
     ▛▀▖▞▀▖▙▗▌   ▛▀▘▌ ▌▛▀▖▞▀▖▛▀▖▀▛▘
@@ -313,11 +332,11 @@ if __name__ == '__main__':
     Use Ctrl+C to abort if needed
     ______________________________________________
     Usage: 
-        python export.py [schema] [subset] --fast (optional)
+        python scripts/export.py [schema_path] [subset] --fast (optional)
 
     Examples: 
-        - python export.py schemas/pcdc/pcdc_v1.13 aml_v1.8-live 
-        - python export.py schemas/pcdc/pcdc_v2.0 pcdc_v2.0 --fast
+        - python scripts/export.py schemas/pcdc/pcdc_v1.13 aml_v1.8-live 
+        - python scripts/export.py schemas/pcdc/pcdc_v2.0 pcdc_v2.0 --fast
     ______________________________________________
     """
     )
@@ -326,28 +345,26 @@ if __name__ == '__main__':
     parser.add_argument("subset", help="Subset of the schema that should be exported.")
     parser.add_argument("--fast", action="store_true", help="Skip the definition fetching.")
     args = parser.parse_args()
-    parent_file = args.schema
-    if os.path.exists(parent_file):
-        target = args.subset
-        with open(parent_file, "r") as schema_file:
-            schema = json.load(schema_file)
-            if target in schema["subsets"]:
-                print("Exporting: " + target + "\n")
-                parent_path = parent_file.replace(".json","")
-                parent = parent_path.split("/")[2]
-                commons = parent_path.split("/")[1]
-                disease_group = target.split("_")[0].split("-")[0]
+    if os.path.exists(args.schema):
+        with open(args.schema, "r") as file_in:
+            schema = json.load(file_in)
+            if args.subset in schema["subsets"]:
+                print("Exporting: " + args.subset + "\n")
+                schema_path = args.schema.replace(".json","")
+                parent = schema_path.split("/")[2]
+                commons = schema_path.split("/")[1]
+                disease_group = args.subset.split("_")[0].split("-")[0]
                 if args.fast:
                     definitions = "skip"
                 else:
                     definitions = "retrieve"
                 if disease_group in subset_info[commons]:
-                    rows = assemble(definitions, commons, disease_group, parent, schema, target)
+                    rows = assemble(definitions, commons, disease_group, parent, schema, args.subset)
                     export(rows, subset_info[commons][disease_group]["id"])
                 else:
-                        print("\nERROR: Subset metadata is not present in export.py for target: " + target + "\n")
+                        print("\nERROR: Subset metadata is not present in export.py for target: " + args.subset + "\n")
             else:
-                print("\nERROR: Parent schema does not include this target: " + target + "\n")
+                print("\nERROR: Schema does not include this subset: " + args.subset + "\n")
     else:
-        print("\nERROR: Parent schema not found locally: " + parent_file + "\n")
+        print("\nERROR: Schema not found locally: " + args.schema + "\n")
     

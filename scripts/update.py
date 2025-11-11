@@ -1,4 +1,4 @@
-import sys, json
+import sys, json, subprocess, argparse
 
 
 subset_info = {
@@ -259,10 +259,27 @@ ACTIONS = {
     "changeMeaning()": changeMeaning,
 }
 
+def enforce_repo_root():
+    try:
+        # Get the top-level directory of the current Git repo
+        repo_root = subprocess.check_output(
+            ["git", "rev-parse", "--show-toplevel"],
+            stderr=subprocess.DEVNULL
+        ).decode().strip()
+    except subprocess.CalledProcessError:
+        print("Error: Not inside a Git repository.")
+        sys.exit(1)
 
+    # Compare to current working directory
+    cwd = os.getcwd()
+    if os.path.abspath(cwd) != os.path.abspath(repo_root):
+        print(f"\nPlease run this script from the repository root:\n   {repo_root}\n")
+        print(f"   You are currently in:\n   {cwd}\n")
+        sys.exit(1)
 
 #Code starts here
 if __name__ == '__main__':
+    enforce_repo_root()
     print(
     """
     ▛▀▖▞▀▖▙▗▌   ▌ ▌▛▀▖▛▀▖▞▀▖▀▛▘▛▀▘
@@ -273,24 +290,17 @@ if __name__ == '__main__':
     Use Ctrl+C to abort if needed
     ______________________________________________
     Usage: 
-        python update.py [schema] [task file]
-
-    Arguments:
-        schema (str): The target schema for the update
-        task file (str): The task file to process
+        python update.py [schema_path] [task_file_path]
 
     Examples: 
-        - python update.py schemas/pcdc_v1.8.json tasks/ews-taskfile-20240912.tsv
+        - python update.py schemas/pcdc/pcdc_v1.8.json tasks/ews-taskfile-20240912.tsv
     ______________________________________________
     """
     )
-    if len(sys.argv) != 3:
-        print("\nERROR: Incorrect number of parameters included\n")
-        sys.exit()
-    schema = sys.argv[1]
-    task_file = sys.argv[2]
-    updated = openTasks(schema, task_file)
-    with open(schema, "w") as file_out:
-        file_out.write(json.dumps(updated, indent=4))
-    with open(schema, "w") as file_out:
+    parser = argparse.ArgumentParser(description="Apply the changes in a task file to a schema.")
+    parser.add_argument("schema", help="Path to the schema JSON file.")
+    parser.add_argument("task_file", help="Path to the task file.")
+    args = parser.parse_args()
+    updated = openTasks(args.schema, args.task_file)
+    with open(args.schema, "w") as file_out:
         file_out.write(json.dumps(updated, indent=4))
