@@ -2861,15 +2861,9 @@
             "slot_uri": "ncit:C36292",
             "range": "string",
             "comments": [
-                "(aml_v2.0-live) ConsortiumNote: Note: String result can include anything that is not a single numeric result, i.e. 'Positive', 'Negative', 'Present', 'Absent', 'Yes', 'No', 'Elevated,' 'Depressed', 'Above threshold', 'Below threshold', ranges, as well as bucketed categories, etc... Note: Only fill in this variable when the available data is anything EXCEPT a single numeric value, and include the entire available data as a string, including units if applicable",
-                "(pre_v1.0-approved) ConsortiumNote: Note: String result can include anything that is not a single numeric result, i.e. 'Positive', 'Negative', 'Present', 'Absent', 'Yes', 'No', 'Elevated,' 'Depressed', 'Above threshold', 'Below threshold', ranges, as well as bucketed categories, etc... Note: Only fill in this variable when the available data is anything EXCEPT a single numeric value, and include the entire available data as a string, including units if applicable",
-                "(cns_v1.2-approved) ConsortiumNote: Note: String result can include anything that is not a single numeric result, i.e. 'Positive', 'Negative', 'Present', 'Absent', 'Yes', 'No', 'Elevated,' 'Depressed', 'Above threshold', 'Below threshold', ranges, as well as bucketed categories, etc... Note: Only fill in this variable when the available data is anything EXCEPT a single numeric value, and include the entire available data as a string, including units if applicable",
-                "(ews_v2.0-approved) ConsortiumNote: Note: String result can include anything that is not a single numeric result, i.e. 'Positive', 'Negative', 'Present', 'Absent', 'Yes', 'No', 'Elevated,' 'Depressed', 'Above threshold', 'Below threshold', ranges, as well as bucketed categories, etc... Note: Only fill in this variable when the available data is anything EXCEPT a single numeric value, and include the entire available data as a string, including units if applicable",
-                "(gct_v2.0-live) ConsortiumNote: Note: String result can include anything that is not a single numeric result, i.e. 'Positive', 'Negative', 'Present', 'Absent', 'Yes', 'No', 'Elevated,' 'Depressed', 'Above threshold', 'Below threshold', ranges, as well as bucketed categories, etc.",
-                "(hl_v2.0-live) ConsortiumNote: Note: String result can include anything that is not a single numeric result, i.e. 'Positive', 'Negative', 'Present', 'Absent', 'Yes', 'No', 'Elevated,' 'Depressed', 'Above threshold', 'Below threshold', ranges, as well as bucketed categories, etc... Note: Only fill in this variable when the available data is anything EXCEPT a single numeric value, and include the entire available data as a string, including units if applicable",
+                "D4CGNote: Note: String result can include anything that is not a single numeric result, i.e. 'Positive', 'Negative', 'Present', 'Absent', 'Yes', 'No', 'Elevated,' 'Depressed', 'Above threshold', 'Below threshold', ranges, as well as bucketed categories, etc... Note: Only fill in this variable when the available data is anything EXCEPT a single numeric value, and include the entire available data as a string, including units if applicable",
                 "D4CGNote: modifier note",
                 "(nps_v1.0-approved) ConsortiumNote: ConditionalStatement: If 'RESULT_MODIFIER' and 'RESULT_NUMERIC' are null.",
-                "(ews_v2.0-approved) skos:exactMatch [EWS].[v1.0].[Lab].[LAB_RESULT]",
                 "(rb_v1.2-approved) ConsortiumNote: For Visual Acuity tests, report specifically these results: 'Blinks to Light', 'Fix and Follow', 'Central Steady Maintained', 'Counting Fingers', 'Hand Motion', 'Light Perception', 'No Light Perception'"
             ],
             "in_subset": [
@@ -2920,14 +2914,11 @@
             "range": "ResultUnitEnum",
             "comments": [
                 "D4CGNote: <mandatory_if>'RESULT_NUMERIC' not null</mandatory_if>",
-                "(aml_v2.0-live) ConsortiumNote: Note: Only fill in this variable if a numeric result is provided in MRD_RESULT_NUMERIC.",
-                "(pre_v1.0-approved) ConsortiumNote: Note: Only fill in this variable if a numeric result is provided in MEASUREMENT_NUMERIC.",
-                "(cns_v1.2-approved) ConsortiumNote: Note: Only fill in this variable if a numeric result is provided in MEASUREMENT_NUMERIC.",
-                "(ews_v2.0-approved) ConsortiumNote: Note: Only fill in this variable if a numeric result is provided in MEASUREMENT_NUMERIC.",
+                "(aml_v2.0-live) ConsortiumNote: Note: Only fill in this variable if a numeric result is provided in RESULT_NUMERIC.",
+                "(pre_v1.0-approved) ConsortiumNote: Note: Only fill in this variable if a numeric result is provided in RESULT_NUMERIC.",
+                "(cns_v1.2-approved) ConsortiumNote: Note: Only fill in this variable if a numeric result is provided in RESULT_NUMERIC.",
                 "(ews_v2.0-approved) ConsortiumNote: Note: Only fill in this variable if a numeric result is provided in RESULT_NUMERIC.",
-                "(hl_v2.0-live) ConsortiumNote: Note: Only fill in this variable if a numeric result is provided in VITALS_RESULT_NUMERIC.",
-                "(hl_v2.0-live) ConsortiumNote: Note: Only fill in this variable if a numeric result is provided in ECHO_RESULT_NUMERIC.",
-                "(hl_v2.0-live) ConsortiumNote: Note: Only fill in this variable if a numeric result is provided in LAB_RESULT_NUMERIC."
+                "(hl_v2.0-live) ConsortiumNote: Note: Only fill in this variable if a numeric result is provided in RESULT_NUMERIC."
             ],
             "in_subset": [
                 "aml_v2.0-live",
@@ -3406,8 +3397,7 @@
                 "cns_v1.2-approved",
                 "ews_v2.0-approved",
                 "fa_v1.0-draft",
-                "rb_v1.2-approved",
-                "aml_v2.0-live"
+                "rb_v1.2-approved"
             ],
             "annotations": {
                 "tier_priority": "rb_v1.2-approved"
@@ -3423,7 +3413,6 @@
                 "ews_v2.0-approved",
                 "fa_v1.0-draft",
                 "rb_v1.2-approved",
-                "aml_v2.0-live",
                 "nbl_v2.0-live"
             ],
             "annotations": {
@@ -8900,6 +8889,15 @@
                     ],
                     "in_subset": [
                         "gct_v2.0-live"
+                    ]
+                },
+                "CCHE 57357": {
+                    "meaning": "",
+                    "comments": [
+                        "(aml_v2.0-live) ConsortiumNote:  Children's Cancer Hospital Egpyt 57357"
+                    ],
+                    "in_subset": [
+                        "aml_v2.0-live"
                     ]
                 },
                 "COG": {
@@ -24314,7 +24312,7 @@
                     "meaning": "ncit:C36484",
                     "comments": [],
                     "in_subset": [
-                        "aml_v2.0"
+                        "aml_v2.0-live"
                     ]
                 },
                 "1q Gain": {
@@ -24343,21 +24341,21 @@
                     "meaning": "ncit:C120197",
                     "comments": [],
                     "in_subset": [
-                        "aml_v2.0"
+                        "aml_v2.0-live"
                     ]
                 },
                 "46XY": {
                     "meaning": "ncit:C120198",
                     "comments": [],
                     "in_subset": [
-                        "aml_v2.0"
+                        "aml_v2.0-live"
                     ]
                 },
                 "47XXX": {
                     "meaning": "ncit:C129718",
                     "comments": [],
                     "in_subset": [
-                        "aml_v2.0"
+                        "aml_v2.0-live"
                     ]
                 },
                 "47XXY": {
@@ -24544,14 +24542,14 @@
                     "meaning": "ncit:C157569",
                     "comments": [],
                     "in_subset": [
-                        "aml_v2.0"
+                        "aml_v2.0-live"
                     ]
                 },
                 "CEBPA Mutation - Monoallelic": {
                     "meaning": "ncit:C168774",
                     "comments": [],
                     "in_subset": [
-                        "aml_v2.0"
+                        "aml_v2.0-live"
                     ]
                 },
                 "Chromosome 11 Loss": {
@@ -24628,21 +24626,21 @@
                     "meaning": "ncit:C116396",
                     "comments": [],
                     "in_subset": [
-                        "aml_v2.0"
+                        "aml_v2.0-live"
                     ]
                 },
                 "CKIT Mutation - Ex8": {
                     "meaning": "ncit:C128660",
                     "comments": [],
                     "in_subset": [
-                        "aml_v2.0"
+                        "aml_v2.0-live"
                     ]
                 },
                 "CKIT Mutation - Unspecified": {
                     "meaning": "ncit:C39712",
                     "comments": [],
                     "in_subset": [
-                        "aml_v2.0"
+                        "aml_v2.0-live"
                     ]
                 },
                 "Complex Karyotype": {
@@ -24666,28 +24664,28 @@
                     "meaning": "ncit:C36497",
                     "comments": [],
                     "in_subset": [
-                        "aml_v2.0"
+                        "aml_v2.0-live"
                     ]
                 },
                 "del(13q)(13q 14 - 21)": {
                     "meaning": "ncit:C168770",
                     "comments": [],
                     "in_subset": [
-                        "aml_v2.0"
+                        "aml_v2.0-live"
                     ]
                 },
                 "del(17p)": {
                     "meaning": "ncit:C36499",
                     "comments": [],
                     "in_subset": [
-                        "aml_v2.0"
+                        "aml_v2.0-live"
                     ]
                 },
                 "del(5q)(5q31-q32)": {
                     "meaning": "ncit:C168769",
                     "comments": [],
                     "in_subset": [
-                        "aml_v2.0"
+                        "aml_v2.0-live"
                     ]
                 },
                 "Deletion of 1p.8p": {
@@ -24699,7 +24697,7 @@
                     "meaning": "ncit:C173542",
                     "comments": [],
                     "in_subset": [
-                        "aml_v2.0"
+                        "aml_v2.0-live"
                     ]
                 },
                 "DICER1 Variant": {
@@ -24719,7 +24717,7 @@
                     "meaning": "ncit:C155992",
                     "comments": [],
                     "in_subset": [
-                        "aml_v2.0"
+                        "aml_v2.0-live"
                     ]
                 },
                 "ETV6-RUNX1 t(12;21)(p13;q22)(formerly TEL-AML1)": {
@@ -24731,7 +24729,7 @@
                     "meaning": "ncit:C99678",
                     "comments": [],
                     "in_subset": [
-                        "aml_v2.0"
+                        "aml_v2.0-live"
                     ]
                 },
                 "EWSR1 Rearranged": {
@@ -24855,21 +24853,21 @@
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
-                        "aml_v2.0"
+                        "aml_v2.0-live"
                     ]
                 },
                 "FLT3 Internal Tandem Duplication (ITD)": {
                     "meaning": "ncit:C67494",
                     "comments": [],
                     "in_subset": [
-                        "aml_v2.0"
+                        "aml_v2.0-live"
                     ]
                 },
                 "FLT3 Tyrosine Kinase Domain (TKD)": {
                     "meaning": "ncit:C67495",
                     "comments": [],
                     "in_subset": [
-                        "aml_v2.0"
+                        "aml_v2.0-live"
                     ]
                 },
                 "FOXO1 rearranged": {
@@ -24933,7 +24931,7 @@
                     "meaning": "ncit:C82340",
                     "comments": [],
                     "in_subset": [
-                        "aml_v2.0"
+                        "aml_v2.0-live"
                     ]
                 },
                 "GLI2 Amplification": {
@@ -24954,7 +24952,7 @@
                     "meaning": "ncit:C124874",
                     "comments": [],
                     "in_subset": [
-                        "aml_v2.0"
+                        "aml_v2.0-live"
                     ]
                 },
                 "IGF1R Variant": {
@@ -24966,21 +24964,21 @@
                     "meaning": "ncit:C167195",
                     "comments": [],
                     "in_subset": [
-                        "aml_v2.0"
+                        "aml_v2.0-live"
                     ]
                 },
                 "inv(16)(p13q22)": {
                     "meaning": "ncit:C36373",
                     "comments": [],
                     "in_subset": [
-                        "aml_v2.0"
+                        "aml_v2.0-live"
                     ]
                 },
                 "inv(3)(q21.3;q26.2)": {
                     "meaning": "ncit:C36407",
                     "comments": [],
                     "in_subset": [
-                        "aml_v2.0"
+                        "aml_v2.0-live"
                     ]
                 },
                 "Inv(X)(p11.4 p11.22)": {
@@ -25006,7 +25004,7 @@
                     "meaning": "ncit:C41361",
                     "comments": [],
                     "in_subset": [
-                        "aml_v2.0"
+                        "aml_v2.0-live"
                     ]
                 },
                 "KBTBD4 Variant": {
@@ -25025,7 +25023,7 @@
                     "meaning": "ncit:C37312",
                     "comments": [],
                     "in_subset": [
-                        "aml_v2.0"
+                        "aml_v2.0-live"
                     ]
                 },
                 "Loss of Chromosome 1p": {
@@ -25050,21 +25048,21 @@
                     "meaning": "ncit:C36517",
                     "comments": [],
                     "in_subset": [
-                        "aml_v2.0"
+                        "aml_v2.0-live"
                     ]
                 },
                 "MLL Rearrangement (Translocation)": {
                     "meaning": "ncit:C167144",
                     "comments": [],
                     "in_subset": [
-                        "aml_v2.0"
+                        "aml_v2.0-live"
                     ]
                 },
                 "Monosomy 5": {
                     "meaning": "ncit:C36523",
                     "comments": [],
                     "in_subset": [
-                        "aml_v2.0"
+                        "aml_v2.0-live"
                     ]
                 },
                 "Monosomy 7": {
@@ -25114,7 +25112,7 @@
                     "meaning": "ncit:C41381",
                     "comments": [],
                     "in_subset": [
-                        "aml_v2.0"
+                        "aml_v2.0-live"
                     ]
                 },
                 "NF1 Variant": {
@@ -25128,14 +25126,14 @@
                     "meaning": "ncit:C168771",
                     "comments": [],
                     "in_subset": [
-                        "aml_v2.0"
+                        "aml_v2.0-live"
                     ]
                 },
                 "NPM1 Mutation": {
                     "meaning": "ncit:C168774",
                     "comments": [],
                     "in_subset": [
-                        "aml_v2.0"
+                        "aml_v2.0-live"
                     ]
                 },
                 "NRAS Variant": {
@@ -25211,7 +25209,7 @@
                     "meaning": "ncit:C82612",
                     "comments": [],
                     "in_subset": [
-                        "aml_v2.0"
+                        "aml_v2.0-live"
                     ]
                 },
                 "RB Mutation": {
@@ -25263,14 +25261,14 @@
                     "meaning": "ncit:C38362",
                     "comments": [],
                     "in_subset": [
-                        "aml_v2.0"
+                        "aml_v2.0-live"
                     ]
                 },
                 "RUNX1-RUNX1T1 Fusion": {
                     "meaning": "ncit:C99294",
                     "comments": [],
                     "in_subset": [
-                        "aml_v2.0"
+                        "aml_v2.0-live"
                     ]
                 },
                 "SMARCA4 Variant": {
@@ -25505,7 +25503,7 @@
                     "meaning": "ncit:C168759",
                     "comments": [],
                     "in_subset": [
-                        "aml_v2.0"
+                        "aml_v2.0-live"
                     ]
                 },
                 "t(1;16)(p34;p11)": {
@@ -25533,7 +25531,7 @@
                     "meaning": "ncit:C36417",
                     "comments": [],
                     "in_subset": [
-                        "aml_v2.0"
+                        "aml_v2.0-live"
                     ]
                 },
                 "t(21;22)(q22;q12)": {
@@ -25583,7 +25581,7 @@
                     "meaning": "ncit:C36406",
                     "comments": [],
                     "in_subset": [
-                        "aml_v2.0"
+                        "aml_v2.0-live"
                     ]
                 },
                 "t(3;3)(q21;q26.2), RPN1-EVI1": {
@@ -25595,14 +25593,14 @@
                     "meaning": "ncit:C36415",
                     "comments": [],
                     "in_subset": [
-                        "aml_v2.0"
+                        "aml_v2.0-live"
                     ]
                 },
                 "t(4;11)(q21;q23) / MLL-MLLT2(AF4)": {
                     "meaning": "ncit:C36365",
                     "comments": [],
                     "in_subset": [
-                        "aml_v2.0"
+                        "aml_v2.0-live"
                     ]
                 },
                 "t(4;19)(q25;q13)": {
@@ -25623,7 +25621,7 @@
                     "meaning": "ncit:C131503",
                     "comments": [],
                     "in_subset": [
-                        "aml_v2.0"
+                        "aml_v2.0-live"
                     ]
                 },
                 "t(5;18)(q35;q11)": {
@@ -25635,7 +25633,7 @@
                     "meaning": "ncit:C36610",
                     "comments": [],
                     "in_subset": [
-                        "aml_v2.0"
+                        "aml_v2.0-live"
                     ]
                 },
                 "t(6;22)(p21;q12)": {
@@ -25649,14 +25647,14 @@
                     "meaning": "ncit:C36532",
                     "comments": [],
                     "in_subset": [
-                        "aml_v2.0"
+                        "aml_v2.0-live"
                     ]
                 },
                 "t(7;12)(q36;p13) / HLXB9(MNX1)/ETV6(TEL)": {
                     "meaning": "ncit:C122689",
                     "comments": [],
                     "in_subset": [
-                        "aml_v2.0"
+                        "aml_v2.0-live"
                     ]
                 },
                 "t(7;16)(q33;p11)": {
@@ -25680,7 +25678,7 @@
                     "meaning": "ncit:C167194",
                     "comments": [],
                     "in_subset": [
-                        "aml_v2.0"
+                        "aml_v2.0-live"
                     ]
                 },
                 "t(8;8)(q21;q13)": {
@@ -25692,7 +25690,7 @@
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
-                        "aml_v2.0"
+                        "aml_v2.0-live"
                     ]
                 },
                 "t(9;11)(p22;q23) / MLL-MLLT3(AF9)": {
@@ -25733,7 +25731,7 @@
                     "meaning": "ncit:C13271",
                     "comments": [],
                     "in_subset": [
-                        "aml_v2.0"
+                        "aml_v2.0-live"
                     ]
                 },
                 "t(9;22)(q34;q11.2) ABL/BCR": {
@@ -25745,7 +25743,7 @@
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
-                        "aml_v2.0"
+                        "aml_v2.0-live"
                     ]
                 },
                 "t(X;17)(p11.2;q25)": {
@@ -25824,7 +25822,7 @@
                     "meaning": "ncit:C81729",
                     "comments": [],
                     "in_subset": [
-                        "aml_v2.0"
+                        "aml_v2.0-live"
                     ]
                 },
                 "Trisomy 17": {
@@ -25838,21 +25836,21 @@
                     "meaning": "ncit:C36425",
                     "comments": [],
                     "in_subset": [
-                        "aml_v2.0"
+                        "aml_v2.0-live"
                     ]
                 },
                 "Trisomy 4": {
                     "meaning": "ncit:C36530",
                     "comments": [],
                     "in_subset": [
-                        "aml_v2.0"
+                        "aml_v2.0-live"
                     ]
                 },
                 "Trisomy 8": {
                     "meaning": "ncit:C36396",
                     "comments": [],
                     "in_subset": [
-                        "aml_v2.0"
+                        "aml_v2.0-live"
                     ]
                 },
                 "VGLL2 Rearranged": {
@@ -25864,14 +25862,14 @@
                     "meaning": "ncit:C62195",
                     "comments": [],
                     "in_subset": [
-                        "aml_v2.0"
+                        "aml_v2.0-live"
                     ]
                 },
                 "WT1 Mutation": {
                     "meaning": "ncit:C146726",
                     "comments": [],
                     "in_subset": [
-                        "aml_v2.0"
+                        "aml_v2.0-live"
                     ]
                 },
                 "X Chromosome Inversion": {
@@ -27012,14 +27010,14 @@
                     "meaning": "ncit:C17998",
                     "comments": [],
                     "in_subset": [
-                        "aml_v2.0"
+                        "aml_v2.0-live"
                     ]
                 },
                 "Not Reported": {
                     "meaning": "ncit:C43234",
                     "comments": [],
                     "in_subset": [
-                        "aml_v2.0"
+                        "aml_v2.0-live"
                     ]
                 }
             }
@@ -28069,7 +28067,8 @@
                         "cns_v1.2-approved",
                         "ews_v2.0-approved",
                         "fa_v1.0-draft",
-                        "rb_v1.2-approved"
+                        "rb_v1.2-approved",
+                        "nbl_v2.0-live"
                     ]
                 },
                 "Copy Neutral LOH": {
@@ -28077,13 +28076,6 @@
                     "comments": [],
                     "in_subset": [
                         "fa_v1.0-draft"
-                    ]
-                },
-                "No gain/loss/amplification": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "nbl_v2.0-live"
                     ]
                 },
                 "Unknown": {
@@ -29639,27 +29631,6 @@
                         "nrsts_v2.0-live"
                     ]
                 },
-                "CNS1": {
-                    "meaning": "ncit:C116833",
-                    "comments": [],
-                    "in_subset": [
-                        "aml_v2.0-live"
-                    ]
-                },
-                "CNS2": {
-                    "meaning": "ncit:C116834",
-                    "comments": [],
-                    "in_subset": [
-                        "aml_v2.0-live"
-                    ]
-                },
-                "CNS3": {
-                    "meaning": "ncit:C116835",
-                    "comments": [],
-                    "in_subset": [
-                        "aml_v2.0-live"
-                    ]
-                },
                 "Composite Hemangioendothelioma": {
                     "meaning": "ncit:C45475",
                     "comments": [],
@@ -30643,48 +30614,6 @@
                     "comments": [],
                     "in_subset": [
                         "gct_v2.0-live"
-                    ]
-                },
-                "CNS2a": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "aml_v2.0-live"
-                    ]
-                },
-                "CNS2b": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "aml_v2.0-live"
-                    ]
-                },
-                "CNS2c": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "aml_v2.0-live"
-                    ]
-                },
-                "CNS3a": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "aml_v2.0-live"
-                    ]
-                },
-                "CNS3b": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "aml_v2.0-live"
-                    ]
-                },
-                "CNS3c": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "aml_v2.0-live"
                     ]
                 },
                 "Supratentorial Ependymoma": {
@@ -38456,7 +38385,7 @@
                     "meaning": "ncit:C43224",
                     "comments": [],
                     "in_subset": [
-                        "npc_v1.0-approved",
+                        "nps_v1.0-approved",
                         "aml_v2.0-live"
                     ]
                 },
@@ -38570,6 +38499,27 @@
                     "comments": [],
                     "in_subset": [
                         "rb_v1.2-approved"
+                    ]
+                },
+                 "CNS1": {
+                    "meaning": "ncit:C116833",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v2.0-live"
+                    ]
+                },
+                "CNS2": {
+                    "meaning": "ncit:C116834",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v2.0-live"
+                    ]
+                },
+                "CNS3": {
+                    "meaning": "ncit:C116835",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v2.0-live"
                     ]
                 },
                 "Other": {
