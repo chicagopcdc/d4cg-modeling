@@ -38,6 +38,7 @@
     "classes": {
         "Person": {
             "slots": [
+                "submitter_id",
                 "subjects_submitter_id",
                 "sex",
                 "race",
@@ -65,6 +66,7 @@
         },
         "Subject": {
             "slots": [
+                "consortium",
                 "submitter_id",
                 "honest_broker_subject_id",
                 "data_contributor_id",
@@ -1379,6 +1381,20 @@
             "annotations": {
                 "tier_optional": "rms_v2.0-live"
             }
+        },
+        "consortium": {
+            "slot_uri": "ncit:C61538",
+            "range": "ConsortiumEnum",
+            "comments": [],
+            "in_subset": [
+                "aml_v1.8-live",
+                "gct_v1.2-live",
+                "hl_v1.0-live",
+                "nbl_v1.1-live",
+                "nrsts_v1.0-live",
+                "rms_v2.0-live"
+            ],
+            "annotations": {}
         },
         "honest_broker_subject_id": {
             "slot_uri": "ncit:C168949",
@@ -5223,6 +5239,54 @@
         }
     },
     "enums": {
+        "ConsortiumEnum": {
+            "in_subset": [
+                "aml_v1.8-live",
+                "hl_v1.0-live",
+                "gct_v1.2-live",
+                "nbl_v1.1-live",
+                "nrsts_v1.0-live",
+                "rms_v2.0-live"
+            ],
+            "permissible_values": {
+                "INRG": {
+                    "meaning": "ncit:C192760",
+                    "comments": [],
+                    "in_subset": [
+                        "nbl_v1.1-live"
+                    ]
+                },
+                "INSTRuCT": {
+                    "meaning": "ncit:C192758",
+                    "comments": [],
+                    "in_subset": [
+                        "nrsts_v1.0-live",
+                        "rms_v2.0-live"
+                    ]
+                },
+                "INTERACT": {
+                    "meaning": "ncit:C192762",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v1.8-live"
+                    ]
+                },
+                "MaGIC": {
+                    "meaning": "ncit:C192759",
+                    "comments": [],
+                    "in_subset": [
+                        "gct_v1.2-live"
+                    ]
+                },
+                "NODAL": {
+                    "meaning": "ncit:C192761",
+                    "comments": [],
+                    "in_subset": [
+                        "hl_v1.0-live"
+                    ]
+                }
+            }
+        },
         "YesNoEnum": {
             "in_subset": [
                 "aml_v1.8-live",
