@@ -2989,44 +2989,17 @@
                 },
                 "result_text": {
                     "in_subset": [
-                        "aml_v2.0-live",
-                        "pre_v1.0-approved",
-                        "cns_v1.2-approved",
-                        "ews_v2.0-approved",
-                        "fa_v1.0-draft",
-                        "gct_v2.0-live",
-                        "hl_v2.0-live",
-                        "npc_v1.0-approved",
-                        "rb_v1.2-approved"
+                        "gct_v2.0-live"
                     ]
                 },
                 "result_numeric": {
                     "in_subset": [
-                        "aml_v2.0-live",
-                        "pre_v1.0-approved",
-                        "cns_v1.2-approved",
-                        "ews_v2.0-approved",
-                        "fa_v1.0-draft",
-                        "gct_v2.0-live",
-                        "hl_v2.0-live",
-                        "lt_v1.0-approved",
-                        "npc_v1.0-approved",
-                        "nbl_v2.0-live",
-                        "rb_v1.2-approved"
+                        "gct_v2.0-live"
                     ]
                 },
                 "result_unit": {
                     "in_subset": [
-                        "aml_v2.0-live",
-                        "pre_v1.0-approved",
-                        "cns_v1.2-approved",
-                        "ews_v2.0-approved",
-                        "fa_v1.0-draft",
-                        "gct_v2.0-live",
-                        "hl_v2.0-live",
-                        "lt_v1.0-approved",
-                        "npc_v1.0-approved",
-                        "rb_v1.2-approved"
+                        "gct_v2.0-live"
                     ]
                 },
                 "path_morph_reporting": {
@@ -25441,6 +25414,20 @@
                 },
                 "Bone Marrow": {
                     "meaning": "ncit:C12431",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v2.0-live"
+                    ]
+                },
+                "Unknown": {
+                    "meaning": "ncit:C17998",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v2.0-live"
+                    ]
+                },
+                "Not Reported": {
+                    "meaning": "ncit:C43234",
                     "comments": [],
                     "in_subset": [
                         "aml_v2.0-live"
@@ -62456,7 +62443,7 @@
                         "aml_v2.0-live"
                     ]
                 },
-                "Grade 3": {
+                "System NOS >> Grade 3": {
                     "meaning": "ncit:C41340",
                     "comments": [],
                     "in_subset": [
