@@ -6720,7 +6720,9 @@
             "slot_uri": "",
             "range": "Person",
             "description": "Foreign-key reference to a Person record",
-            "comments": "D4CGNote: The person_submitter_id will be provided by D4CG. Data contributors do not need to supply this value.",
+            "comments": [
+                "D4CGNote: The person_submitter_id will be provided by D4CG. Data contributors do not need to supply this value."
+            ],    
             "inlined": false,
             "multivalued": false,
             "annotations": {}
