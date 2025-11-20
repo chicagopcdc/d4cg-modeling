@@ -263,9 +263,6 @@ def assemble(definitions, commons, disease_group, parent, schema, target):
                         definition = fetch_definition(slot['slot_uri'])
                     else:
                         definition = ""
-                    #Custom fields with no semantic code binding and a description field instead
-                    if s in ["submitter_id", "subjects_submitter_id", "timings_submitter_id", "urls"]:
-                        definition = slot["description"]
                     rows.append(['var', s, parse_type(slot), parse_tier(target, slot), definition, slot['slot_uri'], '', '', '', parse_notes(slot['comments'], target), parse_mappings(slot, target)])
                     if 'Enum' in slot['range']:
                         for value in schema['enums'][slot['range']]['permissible_values']:
