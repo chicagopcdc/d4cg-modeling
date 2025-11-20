@@ -6711,18 +6711,20 @@
     "slots": {
         "submitter_id": {
             "slot_uri": "",
+            "identifier": true,
             "range": "string",
-            "description": "Submitter-provided identifer",
-            "comments": [],
+            "comments": [
+                "D4CGNote: Submitter-provided identifer"
+            ],
             "annotations": {}
         },
         "person_submitter_id": {
             "slot_uri": "",
             "range": "Person",
-            "description": "Foreign-key reference to a Person record",
             "comments": [
+                "D4CGNote: Foreign-key reference to a Person record",
                 "D4CGNote: The person_submitter_id will be provided by D4CG. Data contributors do not need to supply this value."
-            ],    
+            ],
             "inlined": false,
             "multivalued": false,
             "annotations": {}
@@ -6730,8 +6732,9 @@
         "data_contributor_person_record_submitter_id": {
             "slot_uri": "",
             "range": "DataContributorPersonRecord",
-            "description": "Foreign-key reference to a DataContributorPersonRecord record (by submitter_id)",
-            "comments": [],
+            "comments": [
+                "Foreign-key reference to a DataContributorPersonRecord record (by submitter_id)"
+            ],
             "inlined": false,
             "multivalued": false,
             "annotations": {}
@@ -6739,8 +6742,9 @@
         "subjects_submitter_id": {
             "slot_uri": "",
             "range": "Subject",
-            "description": "Foreign-key reference to a Subject record (by submitter_id)",
-            "comments": [],
+            "comments": [
+                "D4CGNote: Foreign-key reference to a Subject record (by submitter_id)"
+            ],
             "inlined": false,
             "multivalued": true,
             "annotations": {}
@@ -6748,25 +6752,28 @@
         "parent_submitter_id": {
             "slot_uri": "",
             "range": "Timing",
-            "description": "The SUBMITTER_ID of the time period in whose context a subsequent time period takes place. For example, multiple treatment courses occuring the 'Initial Diagnosis' period would each reference the SUBMITTER_ID of the 'Initial Diagnosis' period as their PARENT_SUBMITTER_ID.",
-            "comments": [],
+            "comments": [
+                "The SUBMITTER_ID of the time period in whose context a subsequent time period takes place. For example, multiple treatment courses occuring the 'Initial Diagnosis' period would each reference the SUBMITTER_ID of the 'Initial Diagnosis' period as their PARENT_SUBMITTER_ID."
+            ],
             "multivalued": true,
             "annotations": {}
         },
         "timings_submitter_id": {
             "slot_uri": "",
             "range": "Timing",
-            "description": "Foreign-key reference to a Timing record (by submitter_id)",
-            "comments": [],
+            "comments": [
+                "D4CGNote: Foreign-key reference to a Timing record (by submitter_id)"
+            ],
             "inlined": false,
             "multivalued": true,
             "annotations": {}
         },
         "urls": {
             "slot_uri": "",
-            "description": "Mapping from a URL label (key) to a URL string",
             "range": "string",
-            "comments": [],
+            "comments": [
+                "D4CGNote: Mapping from a URL label (key) to a URL string"
+            ],
             "multivalued": true,
             "inlined_as_list": false,
             "annotations": {}
@@ -6924,8 +6931,9 @@
         "time_period_type": {
             "slot_uri": "",
             "range": "TimePeriodTypeEnum",
-            "description": "The type of time period being reported.",
-            "comments": [],
+            "comments": [
+                "D4CGNote: The type of time period being reported."
+            ],
             "annotations": {
                 "tier_mandatory": "fa_v1.0-draft,npc_v1.0-approved",
                 "tier_priority": "lt_v1.0-approved,rb_v1.2-approved"
@@ -6960,8 +6968,8 @@
         "time_period_number": {
             "slot_uri": "",
             "range": "integer",
-            "description": "This variable indicates the ordinal numbering of time periods of the same TIME_PERIOD_TYPE within its various subgroups (e.g., Relapse 1, Relapse 2, Relapse 3, etc.). The observations across domains can therefore be organized longitudinally without the need for specific dates.",
             "comments": [
+                "D4CGNote: This variable indicates the ordinal numbering of time periods of the same TIME_PERIOD_TYPE within its various subgroups (e.g., Relapse 1, Relapse 2, Relapse 3, etc.). The observations across domains can therefore be organized longitudinally without the need for specific dates.",
                 "(rb_v1.2-approved) ConsortiumNote: The order of this exam in relation to others (EUA 1, EUA 2, etc.)"
             ],
             "annotations": {

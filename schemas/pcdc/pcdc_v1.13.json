@@ -3676,9 +3676,11 @@
     "slots": {
         "submitter_id": {
             "slot_uri": "",
+            "identifier": true,
             "range": "string",
-            "description": "Submitter-provided identifer",
-            "comments": [],
+            "comments": [
+                "D4CGNote: Submitter-provided identifer"
+            ],
             "annotations": {
                 "tier_optional": "rms_v2.0-live"
             }
@@ -3686,8 +3688,9 @@
         "subjects_submitter_id": {
             "slot_uri": "",
             "range": "Subject",
-            "description": "Foreign-key reference to a Subject record (by submitter_id)",
-            "comments": [],
+            "comments": [
+                "D4CGNote: Foreign-key reference to a Subject record (by submitter_id)"
+            ],
             "inlined": false,
             "multivalued": true,
             "annotations": {
@@ -3697,8 +3700,9 @@
         "timings_submitter_id": {
             "slot_uri": "",
             "range": "Timing",
-            "description": "Foreign-key reference to a Timing record (by submitter_id)",
-            "comments": [],
+            "comments": [
+                "D4CGNote: Foreign-key reference to a Timing record (by submitter_id)"
+            ],
             "inlined": false,
             "multivalued": true,
             "annotations": {
