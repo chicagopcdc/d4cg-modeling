@@ -256,7 +256,7 @@ def assemble(definitions, commons, disease_group, parent, schema, target):
             rows.append(['table', c, '', '', '', '', '', '', '', '\n'.join(sclass['comments'])])
             for s in sclass['slots']:
                 slot = schema['slots'][s]
-                if target in sclass['in_subset'] or disease_group == "pcdc":
+                if target in sclass['slot_usage'][s] or disease_group == "pcdc":
                     variable_count += 1
                     print(c + " " + s)
                     if definitions == "retrieve":

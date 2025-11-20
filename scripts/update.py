@@ -64,8 +64,7 @@ def newClass(schema, level, target, value):
             "comments":[],
             "in_subset":[],
             "annotations": {
-                "domain": "",
-                "sequence_group": ""
+                "domain": ""
             }
         }
     
@@ -87,6 +86,11 @@ def setSubset(schema, level, target, value):
         pv = target.split("|")[1]
         schema["enums"][enum]["permissible_values"][pv]["in_subset"].append(value)
     
+def slotSubset(schema, level, target, value):
+    source = value.split("|")[0]
+    slot = value.split("|")[1]
+    if source not in schema[target]["slot_usage"][slot]:
+        schema[target]["slot_usage"][slot].append(source)
 
 def setDomain(schema, level, target, value):
     schema["classes"][target]["annotations"]["domain"] = value
@@ -206,18 +210,7 @@ def setMeaning(schema, level, target, value):
 
 def changeDomain(schema, level, target, value):
     schema["classes"][target]["annotations"]["domain"] = value
-    
-
-def changeSequenceGroup(schema, level, target, value):
-    if level == "class":
-        schema["classes"][target]["annotations"]["sequence_group"] = value
-    if level == "slot":
-        schema["slots"][target]["annotations"]["sequence_group"] = value
-    if level == "value":
-        enum = target.split("|")[0]
-        pv = target.split("|")[1]
-        schema["enums"][enum]["permissible_values"][pv]["annotations"]["sequence_group"] = value
-    
+       
 
 def changeSlotUri(schema, level, target, value):
     schema["slots"][target]["slot_uri"] = value
@@ -241,6 +234,7 @@ ACTIONS = {
     "newClass()": newClass,
     "setSlotAttribute()": setSlotAttribute,
     "setSubset()": setSubset,
+    "slotSubset()": slotSubset,
     "setDomain()": setDomain,
     "newSlot()": newSlot,
     "setSlotUri()": setSlotUri,
@@ -253,7 +247,6 @@ ACTIONS = {
     "setTier()": setTier,
     "setMeaning()": setMeaning,
     "changeDomain()": changeDomain,
-    "changeSequenceGroup()": changeSequenceGroup,
     "changeSlotUri()": changeSlotUri,
     "changeRange()": changeRange,
     "changeMeaning()": changeMeaning,

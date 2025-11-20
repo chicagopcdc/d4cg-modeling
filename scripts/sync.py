@@ -62,7 +62,6 @@ def sync(commons, dictionary):
                                 if any(v["value"] in ("Yes", "No") for v in variable["permissible_values"]):
                                     enum_name = "YesNoEnum"
                                 if enum_name in schema["enums"]:
-                                    checkEnum(task_manager, dictionary["info"]['name'], enum_name, schema["enums"][enum_name])
                                     for permissible_value in variable["permissible_values"]:
                                         pv_name = permissible_value['value']
                                         if pv_name in schema["enums"][enum_name]["permissible_values"]:
@@ -88,10 +87,12 @@ def format_note(note, source):
     return note
 
 def checkClass(task_manager, source, table, schema_class):
-    #Check slot attributes
+    #Check slot attributes (declaration + slot_usage)
     for variable in table['variables']:
-        if variable['name'] not in schema_class["slots"]:
-            task_manager.add(f"{source}\tclass\tsetSlotAttribute()\t{table['name']}\t{variable['name']}\n")
+        if variable['name'] not in schema_class['slots']:
+            task_manager.add(f"{source}\tclass\tslotDeclaration()\t{table['name']}\t{variable['name']}\n")
+        if variable['name'] not in schema_class['slot_usage']:
+            task_manager.add(f"{source}\tclass\tslotSubset()\t{table['name']}\t{source}|{variable['name']}\n")
     #Check mappings
     for mapping in table['mappings']:
         if mapping and 'mappings' in schema_class:
@@ -109,15 +110,14 @@ def checkClass(task_manager, source, table, schema_class):
     #Check domain
     if table['domain'] != schema_class['annotations']['domain']:
         task_manager.add(f"{source}\tclass\tchangeDomain()\t{table['name']}\t{table['domain']}\n")
-    #Check sequence_group
-    if table['sequence_group'] and table['sequence_group'].isdigit() and table['sequence_group'] != schema_class['annotations']['sequence_group']:
-        task_manager.add(f"{source}\tclass\tchangeSequenceGroup()\t{table['name']}\t{table['sequence_group'].strip()}\n")
+    
 
 def proposeClass(task_manager, source, table):
     task_manager.add(f"{source}\tclass\tnewClass()\t-\t{table['name']}\n")
-    #slot attributes
+    #slots
     for variable in table["variables"]:
-        task_manager.add(f"{source}\tclass\tsetSlotAttribute()\t{table['name']}\t{variable['name']}\n")
+        task_manager.add(f"{source}\tclass\tslotDeclaration()\t{table['name']}\t{variable['name']}\n")
+        task_manager.add(f"{source}\tclass\tslotSubset()\t{table['name']}\t{source}|{variable['name']}\n")
         proposeSlot(task_manager, source, variable)
     #comments
     for note in table['implementation_notes']:
@@ -127,13 +127,6 @@ def proposeClass(task_manager, source, table):
     task_manager.add(f"{source}\tclass\tsetSubset()\t{table['name']}\t{source}\n")
     #domain
     task_manager.add(f"{source}\tclass\tsetDomain()\t{table['name']}\t{table['domain']}\n")
-    #sequence_group
-    #TODO function to initialize missing sequence_groups 
-    if table['sequence_group'] and table['sequence_group'].isdigit():
-        task_manager.add(f"{source}\tclass\tsetSequenceGroup()\t{table['name']}\t{table['sequence_group'].strip()}\n")
-    #slot objects
-    for variable in table["variables"]:
-        proposeSlot(task_manager, source, variable)
 
 
 legacy_types = {
@@ -188,12 +181,9 @@ def checkSlot(task_manager, source, variable, schema_slot):
             note = format_note(note, source).strip()
             if note not in schema_slot['comments']:
                     task_manager.add(f"{source}\tslot\tsetComment()\t{variable['name']}\t{note}\n")
-    #Check in_subset
-    if source not in schema_slot["in_subset"]:
-        task_manager.add(f"{source}\tslot\tsetSubset()\t{variable['name']}\t{source}\n")
     
 
-def proposeSlot(task_manager, source, variable):
+def proposeSlot(task_manager, source, table, variable):
     task_manager.add(f"{source}\tslot\tnewSlot()\t-\t{variable['name']}\n")
     #slot_uri
     if variable['code']:
@@ -215,8 +205,6 @@ def proposeSlot(task_manager, source, variable):
         if note:
             note = format_note(note, source).strip()
             task_manager.add(f"{source}\tslot\tsetComment()\t{variable['name']}\t{note}\n")
-    #in_subset
-    task_manager.add(f"{source}\tslot\tsetSubset()\t{variable['name']}\t{source}\n")
     #tier
     if variable['tier'] == 'mandatory':
         task_manager.add(f"{source}\tslot\tsetTier()\t{variable['name']}\t{variable['tier']}|{source}\n")
@@ -232,14 +220,9 @@ def proposeSlot(task_manager, source, variable):
             if key in m:
                 task_manager.add(f"{source}\tslot\tsetMapping()\t{variable['name']}\t{mt}|{m}\n")
 
-def checkEnum(task_manager, source, enum_name, schema_enum):
-    #Check in_subset
-    if source not in schema_enum["in_subset"]:
-        task_manager.add(f"{source}\tenum\tsetSubset()\t{enum_name}\t{source}\n")
 
 def proposeEnum(task_manager, source, enum_name, variable):
     task_manager.add(f"{source}\tenum\tnewEnum()\t-\t{enum_name}\n")
-    task_manager.add(f"{source}\tenum\tsetSubset()\t{enum_name}\t{source}\n")
     for value in variable["permissible_values"]:
         proposeValue(task_manager, source, enum_name, value)
 
@@ -256,9 +239,7 @@ def checkValue(task_manager, source, enum_name, value, schema_value):
     #Check in_subset
     if source not in schema_value["in_subset"]:
         task_manager.add(f"{source}\tvalue\tsetSubset()\t{enum_name}|{value['value']}\t{source}\n")
-    #Check sequence_group
-    if value['sequence_group'] and value['sequence_group'].isdigit() and value['sequence_group'] != schema_value['annotations']['sequence_group']:
-        task_manager.add(f"{source}\tvalue\tchangeSequenceGroup()\t{enum_name}|{value['value']}\t{value['sequence_group'].strip()}\n")
+    
 
 def proposeValue(task_manager, source, enum_name, value):
     task_manager.add(f"{source}\tvalue\tnewValue()\t{enum_name}\t{value['value']}\n")
@@ -272,9 +253,6 @@ def proposeValue(task_manager, source, enum_name, value):
             task_manager.add(f"{source}\tvalue\tsetComment()\t{enum_name}|{value['value']}\t{note}\n")
     #in_subset
     task_manager.add(f"{source}\tvalue\tsetSubset()\t{enum_name}|{value['value']}\t{source}\n")
-    #sequence_group
-    if value['sequence_group'] and value['sequence_group'].isdigit():
-        task_manager.add(f"{source}\tvalue\tsetSequenceGroup()\t{enum_name}|{value['value']}\t{value['sequence_group'].strip()}\n")
     #Check mappings
     mapping_types = ["exact", "close", "narrow", "broad"]
     for m in value['mappings']:
