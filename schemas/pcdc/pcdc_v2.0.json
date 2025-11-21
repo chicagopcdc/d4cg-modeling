@@ -4413,7 +4413,8 @@
                         "rms_v3.0-live",
                         "cns_v1.2-approved",
                         "lt_v1.0-approved",
-                        "fa_v1.0-draft"
+                        "fa_v1.0-draft",
+                        "npc_v1.0-approved"
                     ]
                 },
                 "procedure_other": {
@@ -48777,7 +48778,8 @@
                         "ews_v2.0-approved",
                         "cns_v1.2-approved",
                         "lt_v1.0-approved",
-                        "fa_v1.0-draft"
+                        "fa_v1.0-draft",
+                        "npc_v1.0-approved"
                     ]
                 },
                 "Fine Needle Aspiration": {
@@ -48787,7 +48789,8 @@
                         "hl_v2.0-live",
                         "ews_v2.0-approved",
                         "cns_v1.2-approved",
-                        "fa_v1.0-draft"
+                        "fa_v1.0-draft",
+                        "npc_v1.0-approved"
                     ]
                 },
                 "Surgery": {
@@ -48801,7 +48804,8 @@
                         "cns_v1.2-approved",
                         "os_v2.0-approved",
                         "lt_v1.0-approved",
-                        "fa_v1.0-draft"
+                        "fa_v1.0-draft",
+                        "npc_v1.0-approved"
                     ]
                 },
                 "Amputation": {
@@ -48829,7 +48833,8 @@
                         "os_v2.0-approved",
                         "ews_v2.0-approved",
                         "lt_v1.0-approved",
-                        "fa_v1.0-draft"
+                        "fa_v1.0-draft",
+                        "npc_v1.0-approved"
                     ]
                 },
                 "Reconstruction": {
@@ -48839,7 +48844,8 @@
                         "os_v2.0-approved",
                         "ews_v2.0-approved",
                         "lt_v1.0-approved",
-                        "fa_v1.0-draft"
+                        "fa_v1.0-draft",
+                        "npc_v1.0-approved"
                     ]
                 },
                 "Other": {
@@ -48849,7 +48855,8 @@
                         "hl_v2.0-live",
                         "ews_v2.0-approved",
                         "lt_v1.0-approved",
-                        "fa_v1.0-draft"
+                        "fa_v1.0-draft",
+                        "npc_v1.0-approved"
                     ]
                 },
                 "Unknown": {
@@ -58569,14 +58576,9 @@
                     "comments": [],
                     "in_subset": [
                         "ews_v2.0-approved",
-                        "os_v2.0-approved"
-                    ]
-                },
-                "Core Needle Biopsy, NOS": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "lt_v1.0-approved"
+                        "os_v2.0-approved",
+                        "lt_v1.0-approved",
+                        "npc_v1.0-approved"
                     ]
                 },
                 "Core Needle, Laparscopic Biopsy": {
@@ -58598,7 +58600,8 @@
                     "comments": [],
                     "in_subset": [
                         "ews_v2.0-approved",
-                        "os_v2.0-approved"
+                        "os_v2.0-approved",
+                        "npc_v1.0-approved"
                     ]
                 },
                 "Disarticulation": {
@@ -58645,7 +58648,8 @@
                     "in_subset": [
                         "ews_v2.0-approved",
                         "os_v2.0-approved",
-                        "lt_v1.0-approved"
+                        "lt_v1.0-approved",
+                        "npc_v1.0-approved"
                     ]
                 },
                 "External Hemipelvectomy": {
@@ -58704,7 +58708,8 @@
                     "comments": [],
                     "in_subset": [
                         "ews_v2.0-approved",
-                        "os_v2.0-approved"
+                        "os_v2.0-approved",
+                        "npc_v1.0-approved"
                     ]
                 },
                 "Intercalary Allograft": {
@@ -58794,6 +58799,20 @@
                     "comments": [],
                     "in_subset": [
                         "fa_v1.0-draft"
+                    ]
+                },
+                "Lung Resection, NOS": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "npc_v1.0-approved"
+                    ]
+                },
+                "Lymph Node Dissection, NOS": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "npc_v1.0-approved"
                     ]
                 },
                 "Maxillectomy": {
