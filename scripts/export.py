@@ -1,4 +1,5 @@
 import sys, os, json, requests, urllib.parse, datetime, time, re, argparse, subprocess
+from google.auth.transport.requests import Request
 
 subset_info = {
      "pcdc": {
@@ -135,10 +136,10 @@ def parse_type(slot):
 def parse_tier(target, slot):
     tier = "optional" #default
     if 'tier_mandatory' in slot['annotations']:
-        #if target in slot['annotations']['tier_mandatory']:
+        if target in slot['annotations']['tier_mandatory'] or "all_groups" in slot['annotations']['tier_mandatory']:
             tier = 'mandatory'
     if 'tier_priority' in slot['annotations']:
-        #if target in slot['annotations']['tier_priority']:
+        if target in slot['annotations']['tier_priority'] or "all_groups" in slot['annotations']['tier_priority']:
             tier = 'priority'
     return tier
 
@@ -200,27 +201,79 @@ def get_so_definition(code):
         return ""
 
 
+def copy_formatting(format_id, new_id, new_name, token_path):
+    import pickle
+    from googleapiclient.discovery import build
+    # --- Auth with same sheets token you already have ---
+    with open(token_path, "rb") as f:
+        creds = pickle.load(f)
+    service = build("sheets", "v4", credentials=creds)
+    # --- 1. Find the template sheetId in the SOURCE spreadsheet ---
+    src_meta = service.spreadsheets().get(spreadsheetId=format_id).execute()
+    template_sheet_id = None
+    for sh in src_meta["sheets"]:
+        if sh["properties"]["title"] == "FORMATTING":
+            template_sheet_id = sh["properties"]["sheetId"]
+            break
+    # --- 2. Copy that sheet into the TARGET spreadsheet ---
+    copy_resp = service.spreadsheets().sheets().copyTo(
+        spreadsheetId=format_id,
+        sheetId=template_sheet_id,
+        body={"destinationSpreadsheetId": new_id}
+    ).execute()
+    new_sheet_id = copy_resp["sheetId"]     # numeric ID in the target spreadsheet
+    new_sheet_title = copy_resp["title"]    # Google will name it "Copy of …"
+    # --- 3. Rename the copied sheet to `new_name` in the TARGET spreadsheet ---
+    service.spreadsheets().batchUpdate(
+        spreadsheetId=new_id,
+        body={
+            "requests": [
+                {
+                    "updateSheetProperties": {
+                        "properties": {
+                            "sheetId": new_sheet_id,
+                            "title": new_name
+                        },
+                        "fields": "title"
+                    }
+                }
+            ]
+        }
+    ).execute()
+    # --- 4. Clear values only (keep formatting) ---
+    service.spreadsheets().values().clear(
+        spreadsheetId=new_id,
+        range=new_name,
+        body={}
+    ).execute()
+    return new_sheet_id
+    
+
+
 def create_sheet(subset, id):
-    # ----- IGNORE BLOCK, CUSTOM CODE TO ENABLE AN AUTH FOLDER ---- #
-    orig_dir = os.getcwd()
-    # Change to auth folder where pickle files are
-    os.chdir('scripts/auth')
     import ezsheets 
-    try:
-        ss = ezsheets.Spreadsheet(id)
-        ss.IGNORE_QUOTA = True
-    except ezsheets.EZSheetsException as e:
-        print("Ezsheets error: " + str(e))
-        os.chdir(orig_dir)
-        return
-    os.chdir(orig_dir)
-    # -------------------------------------------------------- #
+    # ----- GO INTO AUTH FOLDER SO EZSHEETS CAN SEE CREDS ---- #
+    orig_dir = os.getcwd()
+    os.chdir('scripts/auth')
+     # ----- -------------------------------------------- ---- #
     name = datetime.datetime.now().strftime("%Y%m%d") + " " + subset
+    ss = ezsheets.Spreadsheet(id)
+    ss.IGNORE_QUOTA = True
     existing_sheet = next((s for s in ss.sheets if s.title == name), None)
     if existing_sheet:
         print("...deleting existing sheet with same name (from an earlier run today)")
         existing_sheet.delete()
-    return ss.createSheet(name)
+    copy_formatting(
+        format_id="1UDTMiw0LnLwqUBNc4O2_FAAX5UylCy-VXXRxEojK4IA",
+        new_id=id,
+        new_name=name,
+        token_path="token-sheets.pickle",
+    )
+    ss = ezsheets.Spreadsheet(id)
+    ss.IGNORE_QUOTA = True
+    sheet = ss[name]
+    os.chdir(orig_dir)
+    return sheet
 
 
 def init_rows(commons, disease_group, parent, schema, target):

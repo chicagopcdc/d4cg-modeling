@@ -297,6 +297,8 @@
                 "disease_group": {
                     "in_subset": [
                         "aml_v2.0-live",
+                        "ews_v2.0-approved",
+                        "rb_v1.2-approved",
                         "fa_v1.0-draft",
                         "gct_v2.0-live",
                         "hl_v2.0-live",
@@ -641,6 +643,7 @@
                 "subgroup_name": {
                     "in_subset": [
                         "aml_v2.0-live",
+                        "rb_v1.2-approved",
                         "cns_v1.2-approved",
                         "ews_v2.0-approved",
                         "gct_v2.0-live",
@@ -655,6 +658,7 @@
                 "subgroup_assignment_order": {
                     "in_subset": [
                         "aml_v2.0-live",
+                        "rb_v1.2-approved",
                         "cns_v1.2-approved",
                         "ews_v2.0-approved",
                         "gct_v2.0-live",
@@ -1362,7 +1366,6 @@
                 "condition_status",
                 "medical_history_condition",
                 "condition_other",
-                "condition_category",
                 "assisted_conception"
             ],
             "comments": [
@@ -1439,14 +1442,6 @@
                     "in_subset": [
                         "pre_v1.0-approved",
                         "lt_v1.0-approved",
-                        "rb_v1.2-approved"
-                    ]
-                },
-                "condition_category": {
-                    "in_subset": [
-                        "pre_v1.0-approved",
-                        "ews_v2.0-approved",
-                        "hl_v2.0-live",
                         "rb_v1.2-approved"
                     ]
                 },
@@ -1913,7 +1908,6 @@
                 "alteration_type",
                 "alteration_effect",
                 "alteration_region",
-                "copy_number_status",
                 "chromosome",
                 "chromosomal_translocation_partner",
                 "cytoband",
@@ -2178,6 +2172,8 @@
                 },
                 "alteration_effect": {
                     "in_subset": [
+                        "aml_v2.0-live",
+                        "nbl_v2.0-live",
                         "pre_v1.0-approved",
                         "cns_v1.2-approved",
                         "ews_v2.0-approved",
@@ -2258,6 +2254,7 @@
                 },
                 "hgvs_genomic": {
                     "in_subset": [
+                        "aml_v2.0-live",
                         "fa_v1.0-draft"
                     ]
                 },
@@ -2268,6 +2265,7 @@
                 },
                 "hgvs_coding": {
                     "in_subset": [
+                        "aml_v2.0-live",
                         "pre_v1.0-approved",
                         "cns_v1.2-approved",
                         "ews_v2.0-approved",
@@ -2448,14 +2446,22 @@
         "Biospecimen": {
             "slots": [
                 "subjects_submitter_id",
-                "container_type",
-                "media"
+                "biospecimen_container_type",
+                "biospecimen_media",
+                "biospecimen_type",
+                "current_qty_unit",
+                "current_qty_value"
             ],
             "comments": [
                 "D4CGNote: One observation/row per biospecimen when instantiated"
             ],
             "in_subset": [
-                "nbl_v2.0-live"
+                "aml_v2.0-live",
+                "gct_v2.0-live",
+                "hl_v2.0-live",
+                "nrsts_v2.0-live",
+                "nbl_v2.0-live",
+                "rms_v3.0-live"
             ],
             "annotations": {
                 "domain": "testing"
@@ -2464,26 +2470,62 @@
                 "subjects_submitter_id": {
                     "in_subset": [
                         "aml_v2.0-live",
-                        "pre_v1.0-approved",
-                        "cns_v1.2-approved",
-                        "ews_v2.0-approved",
-                        "fa_v1.0-draft",
                         "gct_v2.0-live",
                         "hl_v2.0-live",
-                        "lt_v1.0-approved",
-                        "npc_v1.0-approved",
                         "nbl_v2.0-live",
                         "nrsts_v2.0-live",
-                        "os_v2.0-approved",
-                        "rb_v1.2-approved",
                         "rms_v3.0-live"
                     ]
                 },
-                "container_type": {
-                    "in_subset": []
+                "biospecimen_container_type": {
+                    "in_subset": [
+                        "aml_v2.0-live",
+                        "gct_v2.0-live",
+                        "hl_v2.0-live",
+                        "nrsts_v2.0-live",
+                        "nbl_v2.0-live",
+                        "rms_v3.0-live"
+                    ]
                 },
-                "media": {
-                    "in_subset": []
+                "biospecimen_media": {
+                    "in_subset": [
+                        "aml_v2.0-live",
+                        "gct_v2.0-live",
+                        "hl_v2.0-live",
+                        "nrsts_v2.0-live",
+                        "nbl_v2.0-live",
+                        "rms_v3.0-live"
+                    ]
+                },
+                "biospecimen_type": {
+                    "in_subset": [
+                        "aml_v2.0-live",
+                        "gct_v2.0-live",
+                        "hl_v2.0-live",
+                        "nrsts_v2.0-live",
+                        "nbl_v2.0-live",
+                        "rms_v3.0-live"
+                    ]
+                },
+                "current_qty_unit": {
+                    "in_subset": [
+                        "aml_v2.0-live",
+                        "gct_v2.0-live",
+                        "hl_v2.0-live",
+                        "nrsts_v2.0-live",
+                        "nbl_v2.0-live",
+                        "rms_v3.0-live"
+                    ]
+                },
+                "current_qty_value": {
+                    "in_subset": [
+                        "aml_v2.0-live",
+                        "gct_v2.0-live",
+                        "hl_v2.0-live",
+                        "nrsts_v2.0-live",
+                        "nbl_v2.0-live",
+                        "rms_v3.0-live"
+                    ]
                 }
             }
         },
@@ -4232,7 +4274,7 @@
                 }
             }
         },
-        "BiopsyAndSurgicalProcedures": {
+        "SurgicalProcedures": {
             "slots": [
                 "subjects_submitter_id",
                 "timings_submitter_id",
@@ -4241,8 +4283,8 @@
                 "non_protocol_timing",
                 "status",
                 "tumor_classification",
-                "procedure",
                 "procedure_class",
+                "procedure",
                 "procedure_other",
                 "procedure_site",
                 "site_other",
@@ -4410,6 +4452,7 @@
                         "hl_v2.0-live",
                         "nrsts_v2.0-live",
                         "os_v2.0-approved",
+                        "ews_v2.0-approved",
                         "rms_v3.0-live"
                     ]
                 },
@@ -5818,7 +5861,7 @@
         "CellularImmunotherapy": {
             "slots": [
                 "age_at_cimt_start",
-                "time_period_submitter_id",
+                "timings_submitter_id",
                 "cimt_type"
             ],
             "comments": [
@@ -5836,7 +5879,7 @@
                         "aml_v2.0-live"
                     ]
                 },
-                "time_period_submitter_id": {
+                "timings_submitter_id": {
                     "in_subset": [
                         "aml_v2.0-live",
                         "pre_v1.0-approved",
@@ -5865,12 +5908,15 @@
                 "subjects_submitter_id",
                 "timings_submitter_id",
                 "age_at_response",
+                "cycle_number",
                 "tx_prior_response",
                 "response_category",
                 "response",
                 "response_method",
                 "response_system",
                 "response_system_version",
+                "mibg_score_type",
+                "mibg_score",
                 "bm_pct_blasts_at_response",
                 "bm_analysis_method_at_response",
                 "anc_at_response",
@@ -5959,6 +6005,11 @@
                         "rms_v3.0-live"
                     ]
                 },
+                "cycle_number": {
+                    "in_subset": [
+                        "nbl_v2.0-live"
+                    ]
+                },
                 "tx_prior_response": {
                     "in_subset": [
                         "nrsts_v2.0-live",
@@ -5968,6 +6019,7 @@
                 "response_category": {
                     "in_subset": [
                         "aml_v2.0-live",
+                        "nbl_v2.0-live",
                         "cns_v1.2-approved",
                         "gct_v2.0-live",
                         "hl_v2.0-live",
@@ -6010,6 +6062,16 @@
                         "ews_v2.0-approved",
                         "gct_v2.0-live",
                         "npc_v1.0-approved"
+                    ]
+                },
+                "mibg_score_type": {
+                    "in_subset": [
+                        "nbl_v2.0-live"
+                    ]
+                },
+                "mibg_score": {
+                    "in_subset": [
+                        "nbl_v2.0-live"
                     ]
                 },
                 "bm_pct_blasts_at_response": {
@@ -6540,7 +6602,8 @@
             "comments": [],
             "in_subset": [
                 "gct_v2.0-live",
-                "hl_v2.0-live"
+                "hl_v2.0-live",
+                "os_v2.0-approved"
             ],
             "annotations": {
                 "domain": "monitoring"
@@ -6548,43 +6611,22 @@
             "slot_usage": {
                 "subjects_submitter_id": {
                     "in_subset": [
-                        "aml_v2.0-live",
-                        "pre_v1.0-approved",
-                        "cns_v1.2-approved",
-                        "ews_v2.0-approved",
-                        "fa_v1.0-draft",
                         "gct_v2.0-live",
                         "hl_v2.0-live",
-                        "lt_v1.0-approved",
-                        "npc_v1.0-approved",
-                        "nbl_v2.0-live",
-                        "nrsts_v2.0-live",
-                        "os_v2.0-approved",
-                        "rb_v1.2-approved",
-                        "rms_v3.0-live"
+                        "os_v2.0-approved"
                     ]
                 },
                 "timings_submitter_id": {
                     "in_subset": [
-                        "aml_v2.0-live",
-                        "pre_v1.0-approved",
-                        "cns_v1.2-approved",
-                        "ews_v2.0-approved",
-                        "fa_v1.0-draft",
                         "gct_v2.0-live",
                         "hl_v2.0-live",
-                        "lt_v1.0-approved",
-                        "npc_v1.0-approved",
-                        "nbl_v2.0-live",
-                        "nrsts_v2.0-live",
-                        "os_v2.0-approved",
-                        "rb_v1.2-approved",
-                        "rms_v3.0-live"
+                        "os_v2.0-approved"
                     ]
                 },
                 "age_at_smn": {
                     "in_subset": [
                         "gct_v2.0-live",
+                        "os_v2.0-approved",
                         "hl_v2.0-live"
                     ]
                 },
@@ -6598,14 +6640,16 @@
                     "in_subset": [
                         "pre_v1.0-approved",
                         "gct_v2.0-live",
-                        "hl_v2.0-live"
+                        "hl_v2.0-live",
+                        "os_v2.0-approved"
                     ]
                 },
                 "morph_code_system": {
                     "in_subset": [
                         "pre_v1.0-approved",
                         "gct_v2.0-live",
-                        "hl_v2.0-live"
+                        "hl_v2.0-live",
+                        "os_v2.0-approved"
                     ]
                 },
                 "morph_code_system_version": {
@@ -6617,14 +6661,16 @@
                     "in_subset": [
                         "pre_v1.0-approved",
                         "gct_v2.0-live",
-                        "hl_v2.0-live"
+                        "hl_v2.0-live",
+                        "os_v2.0-approved"
                     ]
                 },
                 "top_code_system": {
                     "in_subset": [
                         "pre_v1.0-approved",
                         "gct_v2.0-live",
-                        "hl_v2.0-live"
+                        "hl_v2.0-live",
+                        "os_v2.0-approved"
                     ]
                 },
                 "top_code_system_version": {
@@ -6716,7 +6762,9 @@
             "comments": [
                 "D4CGNote: Submitter-provided identifer"
             ],
-            "annotations": {}
+            "annotations": {
+                "tier_mandatory": "all_groups"
+            }
         },
         "person_submitter_id": {
             "slot_uri": "",
@@ -6727,17 +6775,21 @@
             ],
             "inlined": false,
             "multivalued": false,
-            "annotations": {}
+            "annotations": {
+                "tier_mandatory": "all_groups"
+            }
         },
         "data_contributor_person_record_submitter_id": {
             "slot_uri": "",
             "range": "DataContributorPersonRecord",
             "comments": [
-                "Foreign-key reference to a DataContributorPersonRecord record (by submitter_id)"
+                "D4CGNote: Foreign-key reference to a DataContributorPersonRecord record (by submitter_id)"
             ],
             "inlined": false,
             "multivalued": false,
-            "annotations": {}
+            "annotations": {
+                "tier_mandatory": "all_groups"
+            }
         },
         "subjects_submitter_id": {
             "slot_uri": "",
@@ -6747,16 +6799,21 @@
             ],
             "inlined": false,
             "multivalued": true,
-            "annotations": {}
+            "annotations": {
+                "tier_mandatory": "all_groups"
+            }
         },
         "parent_submitter_id": {
             "slot_uri": "",
             "range": "Timing",
             "comments": [
-                "The SUBMITTER_ID of the time period in whose context a subsequent time period takes place. For example, multiple treatment courses occuring the 'Initial Diagnosis' period would each reference the SUBMITTER_ID of the 'Initial Diagnosis' period as their PARENT_SUBMITTER_ID."
+                "D4CGNote: <mandatory_if>'time_period_type' == 'Course'</mandatory_if>.",
+                "D4CGNote: The SUBMITTER_ID of the time period in whose context a subsequent time period takes place. For example, multiple treatment courses occuring the 'Initial Diagnosis' period would each reference the SUBMITTER_ID of the 'Initial Diagnosis' period as their PARENT_SUBMITTER_ID."
             ],
             "multivalued": true,
-            "annotations": {}
+            "annotations": {
+                "tier_mandatory": "all_groups"
+            }
         },
         "timings_submitter_id": {
             "slot_uri": "",
@@ -6766,7 +6823,9 @@
             ],
             "inlined": false,
             "multivalued": true,
-            "annotations": {}
+            "annotations": {
+                "tier_mandatory": "all_groups"
+            }
         },
         "urls": {
             "slot_uri": "",
@@ -6783,7 +6842,7 @@
             "range": "string",
             "comments": [],
             "annotations": {
-                "tier_mandatory": "fa_v1.0-draft,hl_v2.0-live,lt_v1.0-approved,npc_v1.0-approved,os_v2.0-approved,rb_v1.2-approved"
+                "tier_mandatory": "all_groups"
             }
         },
         "data_contributor_id": {
@@ -6791,7 +6850,7 @@
             "range": "DataContributorIdEnum",
             "comments": [],
             "annotations": {
-                "tier_mandatory": "fa_v1.0-draft,hl_v2.0-live,lt_v1.0-approved,npc_v1.0-approved,os_v2.0-approved,rb_v1.2-approved"
+                "tier_mandatory": "all_groups"
             }
         },
         "consortium": {
@@ -6799,7 +6858,7 @@
             "range": "ConsortiumEnum",
             "comments": [],
             "annotations": {
-                "tier_mandatory": "fa_v1.0-draft,lt_v1.0-approved,npc_v1.0-approved,os_v2.0-approved,rb_v1.2-approved"
+                "tier_mandatory": "all_groups"
             }
         },
         "disease_group": {
@@ -6807,7 +6866,7 @@
             "range": "DiseaseGroupEnum",
             "comments": [],
             "annotations": {
-                "tier_mandatory": "fa_v1.0-draft,npc_v1.0-approved,os_v2.0-approved"
+                "tier_mandatory": "all_groups"
             }
         },
         "age_at_enrollment": {
@@ -6838,15 +6897,18 @@
             "range": "StudyIdEnum",
             "comments": [],
             "annotations": {
-                "tier_mandatory": "fa_v1.0-draft,hl_v2.0-live,lt_v1.0-approved,npc_v1.0-approved,os_v2.0-approved",
-                "tier_priority": "rb_v1.2-approved"
+                "tier_mandatory": "all_groups"
             }
         },
         "subgroup_type": {
             "slot_uri": "",
             "range": "SubgroupTypeEnum",
-            "comments": [],
-            "annotations": {}
+            "comments": [
+                "D4CGNote: <mandatory_if>subgroup_name not null</mandatory_if>"
+            ],
+            "annotations": {
+                "tier_mandatory": "all_groups"
+            }
         },
         "subgroup_name": {
             "slot_uri": "ncit:C15538",
@@ -6863,8 +6925,12 @@
         "subgroup_assignment_order": {
             "slot_uri": "",
             "range": "integer",
-            "comments": [],
-            "annotations": {}
+            "comments": [
+                "D4CGNote: <mandatory_if>subgroup_name not null</mandatory_if>"
+            ],
+            "annotations": {
+                "tier_mandatory": "all_groups"
+            }
         },
         "year_at_enrollment": {
             "slot_uri": "ncit:C177353",
@@ -6932,11 +6998,11 @@
             "slot_uri": "",
             "range": "TimePeriodTypeEnum",
             "comments": [
-                "D4CGNote: The type of time period being reported."
+                "D4CGNote: The type of time period being reported.",
+                "D4CGNote: <mandatory_if>disease_phase or course not null</mandatory_if>"
             ],
             "annotations": {
-                "tier_mandatory": "fa_v1.0-draft,npc_v1.0-approved",
-                "tier_priority": "lt_v1.0-approved,rb_v1.2-approved"
+                "tier_mandatory": "all_groups"
             }
         },
         "disease_phase": {
@@ -6970,11 +7036,11 @@
             "range": "integer",
             "comments": [
                 "D4CGNote: This variable indicates the ordinal numbering of time periods of the same TIME_PERIOD_TYPE within its various subgroups (e.g., Relapse 1, Relapse 2, Relapse 3, etc.). The observations across domains can therefore be organized longitudinally without the need for specific dates.",
+                "D4CGNote: <mandatory_if>disease_phase or course not null</mandatory_if>",
                 "(rb_v1.2-approved) ConsortiumNote: The order of this exam in relation to others (EUA 1, EUA 2, etc.)"
             ],
             "annotations": {
-                "tier_mandatory": "fa_v1.0-draft,npc_v1.0-approved",
-                "tier_priority": "lt_v1.0-approved,rb_v1.2-approved"
+                "tier_mandatory": "all_groups"
             }
         },
         "year_at_start": {
@@ -7022,17 +7088,6 @@
             "annotations": {
                 "tier_mandatory": "npc_v1.0-approved",
                 "tier_priority": "rb_v1.2-approved"
-            }
-        },
-        "time_period_submitter_id": {
-            "slot_uri": "",
-            "range": "string",
-            "comments": [
-                "(npc_v1.0-approved) ConsortiumNote: ConditionalStatement: Mandatory if age at observation is not known."
-            ],
-            "annotations": {
-                "tier_priority": "fa_v1.0-draft,lt_v1.0-approved,rb_v1.2-approved",
-                "tier_optional": "npc_v1.0-approved"
             }
         },
         "off_type": {
@@ -7234,7 +7289,7 @@
             "annotations": {}
         },
         "anthropometric_measurement_type": {
-            "slot_uri": "C219071",
+            "slot_uri": "ncit:C219071",
             "range": "AnthropometricMeasurementTypeEnum",
             "comments": [
                 "(cns_v1.2-approved) ConsortiumNote: Note: BMI should only be what is reported on CRF, not calculated from weight and height when submitting data to the PCDC",
@@ -7578,14 +7633,6 @@
                 "tier_optional": "rb_v1.2-approved"
             }
         },
-        "copy_number_status": {
-            "slot_uri": "",
-            "range": "CopyNumberStatusEnum",
-            "comments": [],
-            "annotations": {
-                "tier_optional": "rb_v1.2-approved"
-            }
-        },
         "copy_number": {
             "slot_uri": "ncit:C49142",
             "range": "decimal",
@@ -7785,17 +7832,45 @@
             "comments": [],
             "annotations": {}
         },
-        "container_type": {
+        "biospecimen_container_type": {
             "slot_uri": "",
-            "range": "ContainerTypeEnum",
+            "range": "string",
             "comments": [],
-            "annotations": {}
+            "annotations": {
+                "tier_optional": "rms_v2.0-live"
+            }
         },
-        "media": {
+        "biospecimen_media": {
             "slot_uri": "",
-            "range": "MediaEnum",
+            "range": "string",
             "comments": [],
-            "annotations": {}
+            "annotations": {
+                "tier_optional": "rms_v2.0-live"
+            }
+        },
+        "biospecimen_type": {
+            "slot_uri": "",
+            "range": "string",
+            "comments": [],
+            "annotations": {
+                "tier_optional": "rms_v2.0-live"
+            }
+        },
+        "current_qty_unit": {
+            "slot_uri": "",
+            "range": "string",
+            "comments": [],
+            "annotations": {
+                "tier_optional": "rms_v2.0-live"
+            }
+        },
+        "current_qty_value": {
+            "slot_uri": "",
+            "range": "string",
+            "comments": [],
+            "annotations": {
+                "tier_optional": "rms_v2.0-live"
+            }
         },
         "age_at_function_test": {
             "slot_uri": "ncit:C185624",
@@ -8870,6 +8945,18 @@
                 "tier_optional": "npc_v1.0-approved"
             }
         },
+        "mibg_score_type": {
+            "slot_uri": "",
+            "range": "MibgScoreTypeEnum",
+            "comments": [],
+            "annotations": {}
+        },
+        "mibg_score": {
+            "slot_uri": "",
+            "range": "integer",
+            "comments": [],
+            "annotations": {}
+        },
         "interim_response": {
             "slot_uri": "ncit:C185657",
             "range": "InterimResponseEnum",
@@ -9110,14 +9197,6 @@
             "comments": [],
             "annotations": {
                 "tier_optional": "lt_v1.0-approved,rb_v1.2-approved"
-            }
-        },
-        "condition_category": {
-            "slot_uri": "ncit:C83018",
-            "range": "ConditionCategoryEnum",
-            "comments": [],
-            "annotations": {
-                "tier_optional": "hl_v2.0-live,rb_v1.2-approved"
             }
         },
         "laboratory_test_specimen_other": {
@@ -10419,7 +10498,7 @@
             "slot_uri": "",
             "range": "StudyAgePrecisionEnum",
             "comments": [
-                "(os_v2.0-approved) ConsortiumNote: ConditionalStatement: this variable should only be used for ISG, to indicate that the AGE_AT variables througout are approximate. This is due to only having the birth year."
+                "(os_v2.0-approved) ConsortiumNote: this variable should only be used for ISG, to indicate that the AGE_AT variables througout are approximate. This is due to only having the birth year."
             ],
             "annotations": {
                 "tier_optional": "os_v2.0-approved"
@@ -11671,6 +11750,13 @@
                     "comments": [],
                     "in_subset": [
                         "aml_v2.0-live"
+                    ]
+                },
+                "EWS": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "ews_v2.0-approved"
                     ]
                 },
                 "GCT": {
@@ -16617,6 +16703,7 @@
                     "comments": [],
                     "in_subset": [
                         "aml_v2.0-live",
+                        "rb_v1.2-approved",
                         "cns_v1.2-approved",
                         "ews_v2.0-approved",
                         "gct_v2.0-live",
@@ -29584,339 +29671,268 @@
         },
         "AlterationTypeEnum": {
             "permissible_values": {
-                "Chromosomal Alteration, NOS": {
-                    "meaning": "ncit:C3420",
+                "Substitution": {
+                    "meaning": "SO:1000002",
                     "comments": [],
                     "in_subset": [
-                        "cns_v1.2-approved",
-                        "ews_v2.0-approved",
-                        "rb_v1.2-approved"
-                    ]
-                },
-                "Chromosomal Deletion": {
-                    "meaning": "ncit:C9484",
-                    "comments": [],
-                    "in_subset": [
-                        "cns_v1.2-approved",
-                        "ews_v2.0-approved",
-                        "rb_v1.2-approved"
-                    ]
-                },
-                "Chromosomal Duplication": {
-                    "meaning": "ncit:C6829",
-                    "comments": [],
-                    "in_subset": [
-                        "cns_v1.2-approved",
-                        "ews_v2.0-approved",
-                        "rb_v1.2-approved"
-                    ]
-                },
-                "Chromosomal Inversion": {
-                    "meaning": "ncit:C6827",
-                    "comments": [],
-                    "in_subset": [
-                        "cns_v1.2-approved",
-                        "ews_v2.0-approved",
-                        "rb_v1.2-approved"
-                    ]
-                },
-                "Chromosomal Translocation": {
-                    "meaning": "ncit:C3420",
-                    "comments": [],
-                    "in_subset": [
-                        "cns_v1.2-approved",
-                        "ews_v2.0-approved",
-                        "rb_v1.2-approved"
-                    ]
-                },
-                "Chromosome Arm Gain": {
-                    "meaning": "ncit:C36438",
-                    "comments": [],
-                    "in_subset": [
-                        "cns_v1.2-approved",
-                        "ews_v2.0-approved",
-                        "rb_v1.2-approved"
-                    ]
-                },
-                "Chromosome Arm Loss": {
-                    "meaning": "ncit:C36315",
-                    "comments": [],
-                    "in_subset": [
-                        "cns_v1.2-approved",
-                        "ews_v2.0-approved",
-                        "rb_v1.2-approved"
-                    ]
-                },
-                "Chromosome Sub-Aim-Level Gain": {
-                    "meaning": "",
-                    "comments": [
-                        "(rb_v1.2-approved) ConsortiumNote: Include genomic coordinates of gained or lost segment in 'CYTOGENETIC_LOCATION'"
-                    ],
-                    "in_subset": [
-                        "cns_v1.2-approved",
-                        "ews_v2.0-approved",
-                        "rb_v1.2-approved"
-                    ]
-                },
-                "Chromosome Sub-Aim-Level Loss": {
-                    "meaning": "",
-                    "comments": [
-                        "(rb_v1.2-approved) ConsortiumNote: Include genomic coordinates of gained or lost segment in 'CYTOGENETIC_LOCATION'"
-                    ],
-                    "in_subset": [
-                        "cns_v1.2-approved",
-                        "ews_v2.0-approved",
-                        "rb_v1.2-approved"
-                    ]
-                },
-                "Chromothripsis": {
-                    "meaning": "ncit:C129355",
-                    "comments": [],
-                    "in_subset": [
+                        "aml_v2.0-live",
                         "cns_v1.2-approved",
                         "ews_v2.0-approved",
                         "fa_v1.0-draft",
-                        "rb_v1.2-approved"
-                    ]
-                },
-                "Deletion": {
-                    "meaning": "ncit:C16606",
-                    "comments": [],
-                    "in_subset": [
-                        "cns_v1.2-approved",
-                        "ews_v2.0-approved",
-                        "fa_v1.0-draft",
-                        "rb_v1.2-approved"
-                    ]
-                },
-                "Gene Fusion": {
-                    "meaning": "ncit:C20195",
-                    "comments": [],
-                    "in_subset": [
-                        "cns_v1.2-approved",
-                        "ews_v2.0-approved",
-                        "rb_v1.2-approved"
-                    ]
-                },
-                "Gene Rearrangement": {
-                    "meaning": "ncit:C133155",
-                    "comments": [],
-                    "in_subset": [
-                        "cns_v1.2-approved",
-                        "ews_v2.0-approved",
-                        "rb_v1.2-approved"
+                        "rb_v1.2-approved",
+                        "gct_v2.0-live",
+                        "nbl_v2.0-live"
                     ]
                 },
                 "Insertion": {
                     "meaning": "SO:0000667",
                     "comments": [],
                     "in_subset": [
+                        "aml_v2.0-live",
                         "cns_v1.2-approved",
                         "ews_v2.0-approved",
                         "fa_v1.0-draft",
-                        "rb_v1.2-approved"
+                        "rb_v1.2-approved",
+                        "gct_v2.0-live",
+                        "nbl_v2.0-live"
                     ]
                 },
-                "Insertion, Duplication": {
-                    "meaning": "",
+                "Deletion": {
+                    "meaning": "ncit:C16606",
                     "comments": [],
                     "in_subset": [
-                        "cns_v1.2-approved",
-                        "ews_v2.0-approved",
-                        "rb_v1.2-approved"
-                    ]
-                },
-                "Isochromosome": {
-                    "meaning": "ncit:C3897",
-                    "comments": [],
-                    "in_subset": [
+                        "aml_v2.0-live",
                         "cns_v1.2-approved",
                         "ews_v2.0-approved",
                         "fa_v1.0-draft",
-                        "rb_v1.2-approved"
+                        "rb_v1.2-approved",
+                        "gct_v2.0-live",
+                        "nbl_v2.0-live"
                     ]
                 },
-                "SNV/Mutation, NOS": {
-                    "meaning": "ncit:C164674",
+                "Indel": {
+                    "meaning": "",
                     "comments": [],
                     "in_subset": [
-                        "pre_v1.0-approved",
-                        "cns_v1.2-approved",
-                        "ews_v2.0-approved",
-                        "rb_v1.2-approved"
-                    ]
-                },
-                "Substitution": {
-                    "meaning": "SO:1000002",
-                    "comments": [],
-                    "in_subset": [
+                        "aml_v2.0-live",
                         "cns_v1.2-approved",
                         "ews_v2.0-approved",
                         "fa_v1.0-draft",
-                        "rb_v1.2-approved"
-                    ]
-                },
-                "Whole Chromosome Gain": {
-                    "meaning": "ncit:C36438",
-                    "comments": [],
-                    "in_subset": [
-                        "cns_v1.2-approved",
-                        "ews_v2.0-approved",
-                        "rb_v1.2-approved"
-                    ]
-                },
-                "Whole Chromosome Loss": {
-                    "meaning": "ncit:C36315",
-                    "comments": [],
-                    "in_subset": [
-                        "cns_v1.2-approved",
-                        "ews_v2.0-approved",
-                        "rb_v1.2-approved"
-                    ]
-                },
-                "Chromosomal Gain": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0-approved",
-                        "fa_v1.0-draft"
-                    ]
-                },
-                "Chromosomal Amplification": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0-approved"
-                    ]
-                },
-                "Chromosomal Loss": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0-approved",
-                        "fa_v1.0-draft"
-                    ]
-                },
-                "Chromosomal Loss, Copy Neutral LOH": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0-approved"
-                    ]
-                },
-                "Chromosomal Loss, Homozygous Deletion": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0-approved"
-                    ]
-                },
-                "Translocation, Balanced": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0-approved"
-                    ]
-                },
-                "Translocation, Unbalanced": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0-approved"
-                    ]
-                },
-                "Translocation, NOS": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0-approved"
-                    ]
-                },
-                "Genic CNA, Gain": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0-approved"
-                    ]
-                },
-                "Genic CNA, Loss": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0-approved"
-                    ]
-                },
-                "Genic CNA, Amplification": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0-approved"
-                    ]
-                },
-                "Genic Rearrangement": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0-approved"
+                        "rb_v1.2-approved",
+                        "gct_v2.0-live",
+                        "nbl_v2.0-live"
                     ]
                 },
                 "Duplication": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
-                        "fa_v1.0-draft"
-                    ]
-                },
-                "Rearrangement": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "fa_v1.0-draft"
+                        "aml_v2.0-live",
+                        "fa_v1.0-draft",
+                        "gct_v2.0-live",
+                        "nbl_v2.0-live",
+                        "rb_v1.2-approved",
+                        "ews_v2.0-approved"
                     ]
                 },
                 "Inversion": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
-                        "fa_v1.0-draft"
+                        "aml_v2.0-live",
+                        "fa_v1.0-draft",
+                        "gct_v2.0-live",
+                        "nbl_v2.0-live",
+                        "rb_v1.2-approved",
+                        "ews_v2.0-approved"
                     ]
                 },
                 "Translocation": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
-                        "fa_v1.0-draft"
+                        "aml_v2.0-live",
+                        "fa_v1.0-draft",
+                        "gct_v2.0-live",
+                        "nbl_v2.0-live",
+                        "rb_v1.2-approved",
+                        "ews_v2.0-approved"
                     ]
                 },
-                "Mutation, NOS": {
+                "Rearrangement, NOS": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
-                        "fa_v1.0-draft"
-                    ]
-                },
-                "Other": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "fa_v1.0-draft"
+                        "aml_v2.0-live",
+                        "fa_v1.0-draft",
+                        "gct_v2.0-live",
+                        "nbl_v2.0-live",
+                        "rb_v1.2-approved",
+                        "ews_v2.0-approved"
                     ]
                 },
                 "Unknown": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
-                        "fa_v1.0-draft"
+                        "aml_v2.0-live",
+                        "fa_v1.0-draft",
+                        "gct_v2.0-live",
+                        "nbl_v2.0-live",
+                        "rb_v1.2-approved",
+                        "ews_v2.0-approved"
+                    ]
+                },
+                "Not Reported": {
+                    "meaning": "ncit:C43234",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v2.0-live",
+                        "gct_v2.0-live",
+                        "nbl_v2.0-live",
+                        "rb_v1.2-approved",
+                        "ews_v2.0-approved"
                     ]
                 }
             }
         },
-        "CopyNumberStatusEnum": {
+        "AlterationEffectEnum": {
             "permissible_values": {
+                "Frameshift": {
+                    "meaning": "ncit:C17354",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v2.0-live",
+                        "pre_v1.0-approved",
+                        "cns_v1.2-approved",
+                        "ews_v2.0-approved",
+                        "fa_v1.0-draft",
+                        "rb_v1.2-approved",
+                        "nbl_v2.0-live"
+                    ]
+                },
+                "Inframe": {
+                    "meaning": "ncit:C62199",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v2.0-live",
+                        "pre_v1.0-approved",
+                        "cns_v1.2-approved",
+                        "ews_v2.0-approved",
+                        "fa_v1.0-draft",
+                        "rb_v1.2-approved",
+                        "nbl_v2.0-live"
+                    ]
+                },
+                "Missense": {
+                    "meaning": "ncit:C18133",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v2.0-live",
+                        "pre_v1.0-approved",
+                        "cns_v1.2-approved",
+                        "ews_v2.0-approved",
+                        "fa_v1.0-draft",
+                        "rb_v1.2-approved",
+                        "nbl_v2.0-live"
+                    ]
+                },
+                "Nonsense": {
+                    "meaning": "ncit:C62198",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v2.0-live",
+                        "pre_v1.0-approved",
+                        "cns_v1.2-approved",
+                        "ews_v2.0-approved",
+                        "fa_v1.0-draft",
+                        "rb_v1.2-approved",
+                        "nbl_v2.0-live"
+                    ]
+                },
+                "Synonymous": {
+                    "meaning": "ncit:C20629",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v2.0-live",
+                        "pre_v1.0-approved",
+                        "cns_v1.2-approved",
+                        "ews_v2.0-approved",
+                        "fa_v1.0-draft",
+                        "rb_v1.2-approved",
+                        "nbl_v2.0-live"
+                    ]
+                },
+                "Splice Acceptor": {
+                    "meaning": "ncit:C45389",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v2.0-live",
+                        "pre_v1.0-approved",
+                        "cns_v1.2-approved",
+                        "ews_v2.0-approved",
+                        "fa_v1.0-draft",
+                        "rb_v1.2-approved",
+                        "nbl_v2.0-live"
+                    ]
+                },
+                "Splice Donor": {
+                    "meaning": "ncit:C45390",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v2.0-live",
+                        "pre_v1.0-approved",
+                        "cns_v1.2-approved",
+                        "ews_v2.0-approved",
+                        "fa_v1.0-draft",
+                        "rb_v1.2-approved",
+                        "nbl_v2.0-live"
+                    ]
+                },
+                "Start Lost": {
+                    "meaning": "ncit:C148649",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v2.0-live",
+                        "pre_v1.0-approved",
+                        "cns_v1.2-approved",
+                        "ews_v2.0-approved",
+                        "fa_v1.0-draft",
+                        "rb_v1.2-approved",
+                        "nbl_v2.0-live"
+                    ]
+                },
+                "Stop Gained": {
+                    "meaning": "ncit:C62198",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v2.0-live",
+                        "pre_v1.0-approved",
+                        "cns_v1.2-approved",
+                        "ews_v2.0-approved",
+                        "fa_v1.0-draft",
+                        "rb_v1.2-approved",
+                        "nbl_v2.0-live"
+                    ]
+                },
+                "Stop Lost": {
+                    "meaning": "ncit:C148650",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v2.0-live",
+                        "pre_v1.0-approved",
+                        "cns_v1.2-approved",
+                        "ews_v2.0-approved",
+                        "fa_v1.0-draft",
+                        "rb_v1.2-approved",
+                        "nbl_v2.0-live"
+                    ]
+                },
                 "Amplification": {
                     "meaning": "ncit:C16605",
                     "comments": [],
                     "in_subset": [
+                        "aml_v2.0-live",
                         "cns_v1.2-approved",
                         "ews_v2.0-approved",
                         "fa_v1.0-draft",
@@ -29924,19 +29940,11 @@
                         "rb_v1.2-approved"
                     ]
                 },
-                "Copy Neutral Loss of Heterozygosity": {
-                    "meaning": "ncit:C18016",
-                    "comments": [],
-                    "in_subset": [
-                        "cns_v1.2-approved",
-                        "ews_v2.0-approved",
-                        "rb_v1.2-approved"
-                    ]
-                },
                 "Gain": {
                     "meaning": "ncit:C189957",
                     "comments": [],
                     "in_subset": [
+                        "aml_v2.0-live",
                         "cns_v1.2-approved",
                         "ews_v2.0-approved",
                         "fa_v1.0-draft",
@@ -29948,6 +29956,7 @@
                     "meaning": "ncit:C189958",
                     "comments": [],
                     "in_subset": [
+                        "aml_v2.0-live",
                         "cns_v1.2-approved",
                         "ews_v2.0-approved",
                         "fa_v1.0-draft",
@@ -29955,10 +29964,11 @@
                         "rb_v1.2-approved"
                     ]
                 },
-                "No Gain/Loss/Amplification": {
-                    "meaning": "",
+                "Copy Neutral Loss of Heterozygosity": {
+                    "meaning": "ncit:C18016",
                     "comments": [],
                     "in_subset": [
+                        "aml_v2.0-live",
                         "cns_v1.2-approved",
                         "ews_v2.0-approved",
                         "fa_v1.0-draft",
@@ -29966,47 +29976,15 @@
                         "nbl_v2.0-live"
                     ]
                 },
-                "Copy Neutral LOH": {
-                    "meaning": "ncit:C18016",
+                "No Gain/Loss/Amplification": {
+                    "meaning": "",
                     "comments": [],
                     "in_subset": [
-                        "fa_v1.0-draft"
-                    ]
-                },
-                "Unknown": {
-                    "meaning": "ncit:C17998",
-                    "comments": [],
-                    "in_subset": [
+                        "aml_v2.0-live",
                         "cns_v1.2-approved",
                         "ews_v2.0-approved",
                         "fa_v1.0-draft",
                         "nbl_v2.0-live",
-                        "rb_v1.2-approved"
-                    ]
-                }
-            }
-        },
-        "AlterationEffectEnum": {
-            "permissible_values": {
-                "Frameshift": {
-                    "meaning": "ncit:C17354",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0-approved",
-                        "cns_v1.2-approved",
-                        "ews_v2.0-approved",
-                        "fa_v1.0-draft",
-                        "rb_v1.2-approved"
-                    ]
-                },
-                "Missense": {
-                    "meaning": "ncit:C18133",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0-approved",
-                        "cns_v1.2-approved",
-                        "ews_v2.0-approved",
-                        "fa_v1.0-draft",
                         "rb_v1.2-approved"
                     ]
                 },
@@ -30014,172 +29992,95 @@
                     "meaning": "ncit:C3239",
                     "comments": [],
                     "in_subset": [
-                        "cns_v1.2-approved",
-                        "ews_v2.0-approved",
-                        "fa_v1.0-draft",
-                        "rb_v1.2-approved"
-                    ]
-                },
-                "None (inframe)": {
-                    "meaning": "ncit:C62199",
-                    "comments": [],
-                    "in_subset": [
-                        "cns_v1.2-approved",
-                        "ews_v2.0-approved",
-                        "rb_v1.2-approved"
-                    ]
-                },
-                "Nonsense": {
-                    "meaning": "ncit:C62198",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0-approved",
-                        "cns_v1.2-approved",
-                        "ews_v2.0-approved",
-                        "fa_v1.0-draft"
-                    ]
-                },
-                "Nullisomy": {
-                    "meaning": "ncit:C198674",
-                    "comments": [],
-                    "in_subset": [
-                        "cns_v1.2-approved",
-                        "ews_v2.0-approved",
-                        "fa_v1.0-draft",
-                        "rb_v1.2-approved"
-                    ]
-                },
-                "Splice Acceptor": {
-                    "meaning": "ncit:C45389",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0-approved",
-                        "cns_v1.2-approved",
-                        "ews_v2.0-approved",
-                        "fa_v1.0-draft",
-                        "rb_v1.2-approved"
-                    ]
-                },
-                "Splice Donor": {
-                    "meaning": "ncit:C45390",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0-approved",
-                        "cns_v1.2-approved",
-                        "ews_v2.0-approved",
-                        "fa_v1.0-draft",
-                        "rb_v1.2-approved"
-                    ]
-                },
-                "Start Lost": {
-                    "meaning": "ncit:C148649",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0-approved",
-                        "cns_v1.2-approved",
-                        "ews_v2.0-approved",
-                        "fa_v1.0-draft",
-                        "rb_v1.2-approved"
-                    ]
-                },
-                "Stop Gained": {
-                    "meaning": "ncit:C62198",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0-approved",
-                        "cns_v1.2-approved",
-                        "ews_v2.0-approved",
-                        "fa_v1.0-draft",
-                        "rb_v1.2-approved"
-                    ]
-                },
-                "Stop Lost": {
-                    "meaning": "ncit:C148650",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0-approved",
+                        "aml_v2.0-live",
                         "cns_v1.2-approved",
                         "ews_v2.0-approved",
                         "fa_v1.0-draft",
                         "rb_v1.2-approved",
-                        "pre_v1.0-approved"
-                    ]
-                },
-                "Synonymous": {
-                    "meaning": "ncit:C20629",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0-approved",
-                        "cns_v1.2-approved",
-                        "ews_v2.0-approved",
-                        "fa_v1.0-draft",
-                        "rb_v1.2-approved"
+                        "nbl_v2.0-live"
                     ]
                 },
                 "Trisomy": {
                     "meaning": "ncit:C3421",
                     "comments": [],
                     "in_subset": [
+                        "aml_v2.0-live",
                         "cns_v1.2-approved",
                         "ews_v2.0-approved",
                         "fa_v1.0-draft",
-                        "rb_v1.2-approved"
+                        "rb_v1.2-approved",
+                        "nbl_v2.0-live"
                     ]
                 },
-                "Inframe": {
-                    "meaning": "ncit:C62199",
+                "Nullisomy": {
+                    "meaning": "ncit:C198674",
                     "comments": [],
                     "in_subset": [
-                        "pre_v1.0-approved"
-                    ]
-                },
-                "Intronic": {
-                    "meaning": "ncit:C63429",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0-approved"
-                    ]
-                },
-                "Splice-Site": {
-                    "meaning": "ncit:C19798",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0-approved"
-                    ]
-                },
-                "Splice Region": {
-                    "meaning": "ncit:C63428",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0-approved"
-                    ]
-                },
-                "5' UTR": {
-                    "meaning": "ncit:C63432",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0-approved"
+                        "aml_v2.0-live",
+                        "cns_v1.2-approved",
+                        "ews_v2.0-approved",
+                        "fa_v1.0-draft",
+                        "rb_v1.2-approved",
+                        "nbl_v2.0-live"
                     ]
                 },
                 "Chromothripsis": {
                     "meaning": "ncit:C129355",
                     "comments": [],
                     "in_subset": [
-                        "fa_v1.0-draft"
+                        "aml_v2.0-live",
+                        "fa_v1.0-draft",
+                        "nbl_v2.0-live",
+                        "rb_v1.2-approved",
+                        "ews_v2.0-approved"
                     ]
                 },
                 "Isochromosome": {
                     "meaning": "ncit:C3897",
                     "comments": [],
                     "in_subset": [
-                        "fa_v1.0-draft"
+                        "aml_v2.0-live",
+                        "fa_v1.0-draft",
+                        "nbl_v2.0-live",
+                        "rb_v1.2-approved",
+                        "ews_v2.0-approved"
                     ]
                 },
                 "Gene Fusion": {
                     "meaning": "ncit:C20195",
                     "comments": [],
                     "in_subset": [
-                        "fa_v1.0-draft"
+                        "aml_v2.0-live",
+                        "fa_v1.0-draft",
+                        "nbl_v2.0-live",
+                        "rb_v1.2-approved",
+                        "ews_v2.0-approved"
+                    ]
+                },
+                "Unknown": {
+                    "meaning": "ncit:C17998",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v2.0-live",
+                        "pre_v1.0-approved",
+                        "cns_v1.2-approved",
+                        "ews_v2.0-approved",
+                        "fa_v1.0-draft",
+                        "nbl_v2.0-live",
+                        "rb_v1.2-approved"
+                    ]
+                },
+                "Not Reported": {
+                    "meaning": "ncit:C43234",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v2.0-live",
+                        "pre_v1.0-approved",
+                        "cns_v1.2-approved",
+                        "ews_v2.0-approved",
+                        "fa_v1.0-draft",
+                        "nbl_v2.0-live",
+                        "rb_v1.2-approved"
                     ]
                 }
             }
@@ -40335,7 +40236,8 @@
                     "in_subset": [
                         "pre_v1.0-approved",
                         "gct_v2.0-live",
-                        "hl_v2.0-live"
+                        "hl_v2.0-live",
+                        "os_v2.0-approved"
                     ]
                 }
             }
@@ -48804,14 +48706,16 @@
                         "hl_v2.0-live",
                         "nrsts_v2.0-live",
                         "os_v2.0-approved",
-                        "rms_v3.0-live"
+                        "rms_v3.0-live",
+                        "ews_v2.0-approved"
                     ]
                 },
                 "Fine Needle Aspiration": {
                     "meaning": "ncit:C15361",
                     "comments": [],
                     "in_subset": [
-                        "hl_v2.0-live"
+                        "hl_v2.0-live",
+                        "ews_v2.0-approved"
                     ]
                 },
                 "Surgery": {
@@ -48820,63 +48724,72 @@
                     "in_subset": [
                         "gct_v2.0-live",
                         "nrsts_v2.0-live",
-                        "rms_v3.0-live"
+                        "rms_v3.0-live",
+                        "ews_v2.0-approved"
                     ]
                 },
                 "Amputation": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
-                        "os_v2.0-approved"
+                        "os_v2.0-approved",
+                        "ews_v2.0-approved"
                     ]
                 },
                 "Limb Salvage": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
-                        "os_v2.0-approved"
+                        "os_v2.0-approved",
+                        "ews_v2.0-approved"
                     ]
                 },
                 "Resection": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
-                        "os_v2.0-approved"
+                        "os_v2.0-approved",
+                        "ews_v2.0-approved"
                     ]
                 },
                 "Reconstruction": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
-                        "os_v2.0-approved"
+                        "os_v2.0-approved",
+                        "ews_v2.0-approved"
                     ]
                 },
                 "Surgery, NOS": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
-                        "os_v2.0-approved"
+                        "os_v2.0-approved",
+                        "ews_v2.0-approved"
                     ]
                 },
                 "Other": {
                     "meaning": "ncit:C17649",
                     "comments": [],
                     "in_subset": [
-                        "hl_v2.0-live"
+                        "hl_v2.0-live",
+                        "ews_v2.0-approved"
                     ]
                 },
                 "Unknown": {
                     "meaning": "ncit:C17998",
                     "comments": [],
                     "in_subset": [
-                        "gct_v2.0-live"
+                        "gct_v2.0-live",
+                        "ews_v2.0-approved"
                     ]
                 },
                 "Not Reported": {
                     "meaning": "ncit:C43234",
                     "comments": [],
                     "in_subset": [
-                        "gct_v2.0-live"
+                        "gct_v2.0-live",
+                        "ews_v2.0-approved"
                     ]
                 }
             }
@@ -53286,7 +53199,8 @@
                     "meaning": "ncit:C173307",
                     "comments": [],
                     "in_subset": [
-                        "aml_v2.0-live"
+                        "aml_v2.0-live",
+                        "nbl_v2.0-live"
                     ]
                 },
                 "Central Nervous System Response": {
@@ -53320,7 +53234,8 @@
                         "gct_v2.0-live",
                         "hl_v2.0-live",
                         "npc_v1.0-approved",
-                        "rb_v1.2-approved"
+                        "rb_v1.2-approved",
+                        "nbl_v2.0-live"
                     ]
                 },
                 "Target Lesions": {
@@ -53335,7 +53250,8 @@
                     "meaning": "ncit:C200253",
                     "comments": [],
                     "in_subset": [
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "nbl_v2.0-live"
                     ]
                 },
                 "Lymph Node Response": {
@@ -53349,7 +53265,8 @@
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "nbl_v2.0-live"
                     ]
                 },
                 "Retinal Response": {
@@ -54285,6 +54202,24 @@
                     "in_subset": [
                         "ews_v2.0-approved",
                         "gct_v2.0-live"
+                    ]
+                }
+            }
+        },
+        "MibgScoreTypeEnum": {
+            "permissible_values": {
+                "MIBG Curie Score": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "nbl_v2.0-live"
+                    ]
+                },
+                "MIBG SIOPEN Score": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "nbl_v2.0-live"
                     ]
                 }
             }
@@ -56903,80 +56838,6 @@
                 }
             }
         },
-        "ConditionCategoryEnum": {
-            "permissible_values": {
-                "Cancer Predisposition": {
-                    "meaning": "ncit:C171210",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0-approved"
-                    ]
-                },
-                "Genetic Syndrome": {
-                    "meaning": "ncit:C3101",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0-approved",
-                        "ews_v2.0-approved",
-                        "hl_v2.0-live",
-                        "rb_v1.2-approved"
-                    ]
-                },
-                "Autoimmune Disease": {
-                    "meaning": "ncit:C2889",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0-approved",
-                        "ews_v2.0-approved",
-                        "hl_v2.0-live",
-                        "rb_v1.2-approved"
-                    ]
-                },
-                "Congenital Anomaly": {
-                    "meaning": "ncit:C2849",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0-approved",
-                        "ews_v2.0-approved",
-                        "hl_v2.0-live",
-                        "rb_v1.2-approved"
-                    ]
-                },
-                "Cancer": {
-                    "meaning": "ncit:C9305",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0-approved",
-                        "ews_v2.0-approved",
-                        "rb_v1.2-approved"
-                    ]
-                },
-                "Developmental Delay": {
-                    "meaning": "ncit:C116942",
-                    "comments": [],
-                    "in_subset": [
-                        "rb_v1.2-approved"
-                    ]
-                },
-                "Unknown": {
-                    "meaning": "ncit:C17998",
-                    "comments": [],
-                    "in_subset": [
-                        "hl_v2.0-live",
-                        "rb_v1.2-approved"
-                    ]
-                },
-                "Not Reported": {
-                    "meaning": "ncit:C43234",
-                    "comments": [],
-                    "in_subset": [
-                        "pre_v1.0-approved",
-                        "hl_v2.0-live",
-                        "rb_v1.2-approved"
-                    ]
-                }
-            }
-        },
         "AssociatedConditionEnum": {
             "permissible_values": {
                 "Acute Lymphoblastic Leukemia Susceptibility - PAX5": {
@@ -57599,7 +57460,8 @@
                     "in_subset": [
                         "pre_v1.0-approved",
                         "gct_v2.0-live",
-                        "hl_v2.0-live"
+                        "hl_v2.0-live",
+                        "os_v2.0-approved"
                     ]
                 }
             }
