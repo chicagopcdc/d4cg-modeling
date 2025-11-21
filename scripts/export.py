@@ -232,9 +232,10 @@ def copy_formatting(format_id, new_id, new_name, token_path):
                     "updateSheetProperties": {
                         "properties": {
                             "sheetId": new_sheet_id,
-                            "title": new_name
+                            "title": new_name,
+                            "index": 0
                         },
-                        "fields": "title"
+                        "fields": "title,index"
                     }
                 }
             ]
@@ -306,7 +307,7 @@ def assemble(definitions, commons, disease_group, parent, schema, target):
             table_count += 1
             if 'domain' in sclass['annotations']:
                 rows.append(['domain', sclass['annotations']['domain']])
-            rows.append(['table', c, '', '', '', '', '', '', '', '\n'.join(sclass['comments'])])
+            rows.append(['table', c, '', '', '', '', '', '', '', parse_notes(sclass['comments'], target)])
             for s in sclass['slots']:
                 slot = schema['slots'][s]
                 if target in sclass['slot_usage'][s]["in_subset"] or disease_group == "pcdc":
