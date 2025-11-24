@@ -33,7 +33,6 @@ if __name__ == "__main__":
             #Alphabetize PVs with "tail values" at the end
             for enum in schema["enums"].values():
                 enum["permissible_values"] = sort_dict_with_exceptions(enum["permissible_values"])
-            schema["subsets"] = dict(sorted(schema["subsets"].items()))
             #Alphabetize class subsets
             for sclass in schema["classes"].values():
                 sclass["in_subset"] = sorted(sclass["in_subset"])
