@@ -2271,7 +2271,8 @@
                         "fa_v1.0-draft",
                         "nbl_v2.0-live",
                         "pre_v1.0-approved",
-                        "rb_v1.2-approved"
+                        "rb_v1.2-approved",
+                        "aml_v2.0-live"
                     ]
                 },
                 "reference_genome": {
@@ -4762,7 +4763,6 @@
                 },
                 "medication_category": {
                     "in_subset": [
-                        "aml_v2.0-live",
                         "gct_v2.0-live",
                         "hl_v2.0-live"
                     ]
@@ -4774,7 +4774,6 @@
                 },
                 "administration_status": {
                     "in_subset": [
-                        "aml_v2.0-live",
                         "ews_v2.0-approved",
                         "fa_v1.0-draft",
                         "npc_v1.0-approved",
@@ -6544,7 +6543,8 @@
             "in_subset": [
                 "gct_v2.0-live",
                 "hl_v2.0-live",
-                "os_v2.0-approved"
+                "os_v2.0-approved",
+                "aml_v2.0-live"
             ],
             "annotations": {
                 "domain": "monitoring"
@@ -6554,21 +6554,24 @@
                     "in_subset": [
                         "gct_v2.0-live",
                         "hl_v2.0-live",
-                        "os_v2.0-approved"
+                        "os_v2.0-approved",
+                        "aml_v2.0-live"
                     ]
                 },
                 "timings_submitter_id": {
                     "in_subset": [
                         "gct_v2.0-live",
                         "hl_v2.0-live",
-                        "os_v2.0-approved"
+                        "os_v2.0-approved",
+                        "aml_v2.0-live"
                     ]
                 },
                 "age_at_smn": {
                     "in_subset": [
                         "gct_v2.0-live",
                         "hl_v2.0-live",
-                        "os_v2.0-approved"
+                        "os_v2.0-approved",
+                        "aml_v2.0-live"
                     ]
                 },
                 "smn_site": {
@@ -6582,7 +6585,8 @@
                         "gct_v2.0-live",
                         "hl_v2.0-live",
                         "os_v2.0-approved",
-                        "pre_v1.0-approved"
+                        "pre_v1.0-approved",
+                        "aml_v2.0-live"
                     ]
                 },
                 "morph_code_system": {
@@ -6590,12 +6594,14 @@
                         "gct_v2.0-live",
                         "hl_v2.0-live",
                         "os_v2.0-approved",
-                        "pre_v1.0-approved"
+                        "pre_v1.0-approved",
+                        "aml_v2.0-live"
                     ]
                 },
                 "morph_code_system_version": {
                     "in_subset": [
-                        "pre_v1.0-approved"
+                        "pre_v1.0-approved",
+                        "aml_v2.0-live"
                     ]
                 },
                 "top_code": {
@@ -6603,7 +6609,8 @@
                         "gct_v2.0-live",
                         "hl_v2.0-live",
                         "os_v2.0-approved",
-                        "pre_v1.0-approved"
+                        "pre_v1.0-approved",
+                        "aml_v2.0-live"
                     ]
                 },
                 "top_code_system": {
@@ -6611,12 +6618,14 @@
                         "gct_v2.0-live",
                         "hl_v2.0-live",
                         "os_v2.0-approved",
-                        "pre_v1.0-approved"
+                        "pre_v1.0-approved",
+                        "aml_v2.0-live"
                     ]
                 },
                 "top_code_system_version": {
                     "in_subset": [
-                        "pre_v1.0-approved"
+                        "pre_v1.0-approved",
+                        "aml_v2.0-live"
                     ]
                 },
                 "smn_field": {
@@ -14522,6 +14531,13 @@
                     ],
                     "in_subset": [
                         "ews_v2.0-approved"
+                    ]
+                },
+                "Egypt57357-AML": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v2.0-live"
                     ]
                 },
                 "EICESS92": {
@@ -24686,14 +24702,6 @@
                         "hl_v2.0-live"
                     ]
                 },
-                "Echocardiogram": {
-                    "meaning": "ncit:C16525",
-                    "comments": [],
-                    "in_subset": [
-                        "aml_v2.0-live",
-                        "hl_v2.0-live"
-                    ]
-                },
                 "Eosinophils": {
                     "meaning": "ncit:C64550",
                     "comments": [
@@ -28179,6 +28187,13 @@
                         "ews_v2.0-approved"
                     ]
                 },
+                "TCF3-PBX1 Fusion": {
+                    "meaning": "ncit:C99291",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v2.0-live"
+                    ]
+                },
                 "TERC Variant": {
                     "meaning": "",
                     "comments": [],
@@ -28242,6 +28257,13 @@
                     "comments": [],
                     "in_subset": [
                         "pre_v1.0-approved"
+                    ]
+                },
+                "Trisomy 21": {
+                    "meaning": "ncit:43224",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v2.0-live"
                     ]
                 },
                 "TSC1 Variant": {
@@ -39816,7 +39838,6 @@
                     "meaning": "ncit:C43224",
                     "comments": [],
                     "in_subset": [
-                        "aml_v2.0-live",
                         "npc_v1.0-approved"
                     ]
                 },
@@ -42969,7 +42990,6 @@
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
-                        "aml_v2.0-live",
                         "ews_v2.0-approved",
                         "gct_v2.0-live",
                         "os_v2.0-approved",
@@ -53707,13 +53727,6 @@
                         "npc_v1.0-approved"
                     ]
                 },
-                "System NOS >> Complete Remission": {
-                    "meaning": "ncit:C4870",
-                    "comments": [],
-                    "in_subset": [
-                        "aml_v2.0-live"
-                    ]
-                },
                 "System NOS >> Complete Response": {
                     "meaning": "ncit:C4870",
                     "comments": [
@@ -53724,7 +53737,8 @@
                         "gct_v2.0-live",
                         "hl_v2.0-live",
                         "nrsts_v2.0-live",
-                        "rms_v3.0-live"
+                        "rms_v3.0-live",
+                        "aml_v2.0-live"
                     ]
                 },
                 "System NOS >> Complete Response/Remission": {
@@ -54503,6 +54517,13 @@
                 },
                 "RUNX1 mutation": {
                     "meaning": "ncit:C38362",
+                    "comments": [],
+                    "in_subset": [
+                        "aml_v2.0-live"
+                    ]
+                },
+                "RUNX1-RUNX1T1 Fusion": {
+                    "meaning": "ncit:C99294",
                     "comments": [],
                     "in_subset": [
                         "aml_v2.0-live"
