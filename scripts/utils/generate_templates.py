@@ -392,14 +392,14 @@ example_bank = {
       "timings_submitter_id": ["p1_timing_phase1_dx"],
       "age_at_diag_assessment": "1460",
       "diagnosis_basis": "Integrated",
-      "diagnosis": "Acute myelomonocytic leukemia (FAB M4)"
+      "diagnosis": "WHO >> Version 4 >> Acute Myelomonocytic Leukemia"
     },
     {
       "subjects_submitter_id": ["patient2"],
       "timings_submitter_id": ["p2_timing_phase1_dx"],
       "age_at_diag_assessment": "1825",
       "diagnosis_basis": "Integrated",
-      "diagnosis": "Acute monoblastic/monocytic leukemia (FAB M5)"
+      "diagnosis": "WHO >> Version 4 >> Acute Monoblastic/Monocytic Leukemia"
     }
   ],
 
@@ -557,40 +557,40 @@ example_bank = {
   ],
 
   "StemCellTransplant": [
-    {
-      "subjects_submitter_id": ["patient2"],
-      "timings_submitter_id": ["p2_timing_phase1_dx"],
-      "age_at_sct": "1950",
-      "sct_type": "Allogeneic",
-      "stem_cell_source": "Bone marrow",
-      "donor_relationship": "Unrelated",
-      "hla_match": "Matched",
-      "number_hla": "10",
-      "number_matches": "10",
-      "hla_a_result": "A*02:01/A*24:02",
-      "hla_b_result": "B*07:02/B*35:01",
-      "hla_c_result": "C*04:01/C*07:02",
-      "hla_drb1_result": "DRB1*04:01/DRB1*15:01",
-      "hla_dq_result": "DQB1*03:01/DQB1*06:02",
-      "conditioning_type": "Myeloablative",
-      "prior_tbi": "No"
-    }
-  ],
+        {
+            "subjects_submitter_id": ["patient2"],
+            "timings_submitter_id": ["p2_timing_phase1_dx"],
+            "age_at_sct": "1950",
+            "sct_type": "Allogeneic",
+            "stem_cell_source": "Bone marrow",
+            "donor_relationship": "Biologically Unrelated",
+            "hla_match": "Match",
+            "number_hla": "10",
+            "number_matches": "10",
+            "hla_a_result": "Both Alleles Matched",
+            "hla_b_result": "Both Alleles Matched",
+            "hla_c_result": "Both Alleles Matched",
+            "hla_drb1_result": "Both Alleles Matched",
+            "hla_dq_result": "Both Alleles Matched",
+            "conditioning_type": "Myeloablative",
+            "prior_tbi": "No"
+        }
+    ],
 
   "TransfusionMedicineProcedure": [
     {
       "subjects_submitter_id": ["patient1"],
       "timings_submitter_id": ["p1_timing_phase1_dx"],
       "age_at_tmp_start": "1461",
-      "tmp_type": "Red Blood Cells Transfusion",
-      "product": "Not Reported"
+      "tmp_type": "Simple Transfusion",
+      "product": "RBC"
     },
     {
       "subjects_submitter_id": ["patient2"],
       "timings_submitter_id": ["p2_timing_phase1_dx"],
       "age_at_tmp_start": "1826",
-      "tmp_type": "Platelets Transfusion",
-      "product": "Not Reported"
+      "tmp_type": "Simple Transfusion",
+      "product": "Platelets"
     }
   ],
 
@@ -607,27 +607,27 @@ example_bank = {
       "subjects_submitter_id": ["patient1"],
       "timings_submitter_id": ["p1_timing_course1_induction"],
       "age_at_response": "1502",
-      "response_category": "End of Induction",
-      "response": "Complete Remission with MRD positivity",
+      "response_category": "Overall Response",
+      "response": "System NOS >> Complete Response",
       "bm_pct_blasts_at_response": "2",
       "bm_analysis_method_at_response": "Morphology",
       "anc_at_response": "600",
-      "anc_threshold_at_response": "500",
+      "anc_threshold_at_response": "Yes",
       "platelet_count_at_response": "60000",
-      "platelet_threshold_at_response": "50000"
+      "platelet_threshold_at_response": "No"
     },
     {
       "subjects_submitter_id": ["patient2"],
       "timings_submitter_id": ["p2_timing_course1_induction"],
       "age_at_response": "1840",
-      "response_category": "Induction Response",
-      "response": "Induction Failure / Off Protocol Due to Toxicity",
+      "response_category": "Overall Response",
+      "response": "System NOS >> Non-Response",
       "bm_pct_blasts_at_response": "15",
       "bm_analysis_method_at_response": "Morphology",
       "anc_at_response": "300",
-      "anc_threshold_at_response": "500",
+      "anc_threshold_at_response": "No",
       "platelet_count_at_response": "40000",
-      "platelet_threshold_at_response": "50000"
+      "platelet_threshold_at_response": "Yes"
     }
   ],
 
@@ -637,10 +637,9 @@ example_bank = {
       "timings_submitter_id": ["p1_timing_course1_induction"],
       "age_at_mrd_assessment": "1480",
       "mrd_method": "Flow Cytometry, Different-From-Normal",
-      "result_text": "",
       "result_numeric": "2.0",
-      "result_unit": "% leukemic cells",
-      "sensitivity": "0.1%",
+      "result_unit": "%",
+      "sensitivity": "0.1",
       "mrd_specimen": "Bone marrow aspirate",
       "molecular_markers": ""
     },
@@ -651,8 +650,8 @@ example_bank = {
       "mrd_method": "Flow Cytometry, Different-From-Normal",
       "result_text": "",
       "result_numeric": "0.05",
-      "result_unit": "% leukemic cells",
-      "sensitivity": "0.01%",
+      "result_unit": "%",
+      "sensitivity": "0.01",
       "mrd_specimen": "Bone marrow aspirate",
       "molecular_markers": ""
     },
@@ -663,8 +662,8 @@ example_bank = {
       "mrd_method": "Flow Cytometry, Different-From-Normal",
       "result_text": "",
       "result_numeric": "25.0",
-      "result_unit": "% leukemic cells",
-      "sensitivity": "0.1%",
+      "result_unit": "%",
+      "sensitivity": "0.1",
       "mrd_specimen": "Bone marrow aspirate",
       "molecular_markers": ""
     },
@@ -675,8 +674,8 @@ example_bank = {
       "mrd_method": "Flow Cytometry, Leukemia-Associated Immunophenotypes",
       "result_text": "",
       "result_numeric": "0.5",
-      "result_unit": "% leukemic cells",
-      "sensitivity": "0.1%",
+      "result_unit": "%",
+      "sensitivity": "0.1",
       "mrd_specimen": "Bone marrow aspirate",
       "molecular_markers": "KMT2A-rearranged clone"
     }
@@ -691,9 +690,7 @@ example_bank = {
       "adverse_event": "Sepsis",
       "ae_code": "10039906",
       "ae_code_system": "MedDRA",
-      "ae_system_version": "25.1",
       "ae_grade": "5",
-      "attribution": "Possibly related",
       "outcome": "Death",
       "icu": "Yes",
       "supportive_medication": "Other",
@@ -712,9 +709,7 @@ example_bank = {
       "adverse_event": "Hepatic veno-occlusive disease",
       "ae_code": "10019939",
       "ae_code_system": "MedDRA",
-      "ae_system_version": "25.1",
       "ae_grade": "4",
-      "attribution": "Probable, related to GO",
       "outcome": "Resolved with sequelae",
       "icu": "Yes",
       "supportive_medication": "Other",
