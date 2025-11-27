@@ -6238,7 +6238,6 @@
         "adverse_event",
         "ae_code",
         "ae_code_system",
-        "ae_system",
         "ae_system_version",
         "ae_grade",
         "attribution",
