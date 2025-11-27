@@ -3567,7 +3567,8 @@
                         "os_v2.0-approved",
                         "pre_v1.0-approved",
                         "rb_v1.2-approved",
-                        "rms_v3.0-live"
+                        "rms_v3.0-live",
+                        "npc_v1.0-approved"
                     ]
                 },
                 "site_other": {
@@ -4419,7 +4420,8 @@
                         "nrsts_v2.0-live",
                         "os_v2.0-approved",
                         "pre_v1.0-approved",
-                        "rms_v3.0-live"
+                        "rms_v3.0-live",
+                        "npc_v1.0-approved"
                     ]
                 },
                 "site_other": {
@@ -5218,7 +5220,8 @@
                         "hl_v2.0-live",
                         "nrsts_v2.0-live",
                         "rb_v1.2-approved",
-                        "rms_v3.0-live"
+                        "rms_v3.0-live",
+                        "npc_v1.0-approved"
                     ]
                 },
                 "laterality": {
@@ -6283,7 +6286,8 @@
                 "gct_v2.0-live",
                 "hl_v2.0-live",
                 "lt_v1.0-approved",
-                "rb_v1.2-approved"
+                "rb_v1.2-approved",
+                "npc_v1.0-approved"
             ],
             "annotations": {
                 "domain": "monitoring"
@@ -6332,7 +6336,8 @@
                         "gct_v2.0-live",
                         "hl_v2.0-live",
                         "lt_v1.0-approved",
-                        "rb_v1.2-approved"
+                        "rb_v1.2-approved",
+                        "npc_v1.0-approved"
                     ]
                 },
                 "age_at_ae_resolved": {
@@ -6340,7 +6345,8 @@
                         "aml_v2.0-live",
                         "ews_v2.0-approved",
                         "hl_v2.0-live",
-                        "rb_v1.2-approved"
+                        "rb_v1.2-approved",
+                        "npc_v1.0-approved"
                     ]
                 },
                 "adverse_event": {
@@ -6349,30 +6355,31 @@
                         "gct_v2.0-live",
                         "hl_v2.0-live",
                         "lt_v1.0-approved",
-                        "rb_v1.2-approved"
+                        "rb_v1.2-approved",
+                        "npc_v1.0-approved"
                     ]
                 },
                 "ae_code": {
                     "in_subset": [
                         "aml_v2.0-live",
                         "ews_v2.0-approved",
-                        "hl_v2.0-live"
+                        "hl_v2.0-live",
+                        "npc_v1.0-approved"
                     ]
                 },
                 "ae_code_system": {
                     "in_subset": [
-                        "aml_v2.0-live"
-                    ]
-                },
-                "ae_system": {
-                    "in_subset": [
+                        "aml_v2.0-live",
+                        "ews_v2.0-approved",
+                        "npc_v1.0-approved",
                         "hl_v2.0-live"
                     ]
                 },
                 "ae_system_version": {
                     "in_subset": [
                         "aml_v2.0-live",
-                        "hl_v2.0-live"
+                        "hl_v2.0-live",
+                        "npc_v1.0-approved"
                     ]
                 },
                 "ae_grade": {
@@ -6389,7 +6396,8 @@
                     "in_subset": [
                         "aml_v2.0-live",
                         "ews_v2.0-approved",
-                        "gct_v2.0-live"
+                        "gct_v2.0-live",
+                        "npc_v1.0-approved"
                     ]
                 },
                 "outcome": {
@@ -6544,7 +6552,8 @@
                 "gct_v2.0-live",
                 "hl_v2.0-live",
                 "os_v2.0-approved",
-                "aml_v2.0-live"
+                "aml_v2.0-live",
+                "npc_v1.0-approved"
             ],
             "annotations": {
                 "domain": "monitoring"
@@ -6555,7 +6564,8 @@
                         "gct_v2.0-live",
                         "hl_v2.0-live",
                         "os_v2.0-approved",
-                        "aml_v2.0-live"
+                        "aml_v2.0-live",
+                        "npc_v1.0-approved"
                     ]
                 },
                 "timings_submitter_id": {
@@ -6563,7 +6573,8 @@
                         "gct_v2.0-live",
                         "hl_v2.0-live",
                         "os_v2.0-approved",
-                        "aml_v2.0-live"
+                        "aml_v2.0-live",
+                        "npc_v1.0-approved"
                     ]
                 },
                 "age_at_smn": {
@@ -6571,13 +6582,15 @@
                         "gct_v2.0-live",
                         "hl_v2.0-live",
                         "os_v2.0-approved",
-                        "aml_v2.0-live"
+                        "aml_v2.0-live",
+                        "npc_v1.0-approved"
                     ]
                 },
                 "smn_site": {
                     "in_subset": [
                         "nrsts_v2.0-live",
-                        "rb_v1.2-approved"
+                        "rb_v1.2-approved",
+                        "npc_v1.0-approved"
                     ]
                 },
                 "morph_code": {
@@ -6586,7 +6599,8 @@
                         "hl_v2.0-live",
                         "os_v2.0-approved",
                         "pre_v1.0-approved",
-                        "aml_v2.0-live"
+                        "aml_v2.0-live",
+                        "npc_v1.0-approved"
                     ]
                 },
                 "morph_code_system": {
@@ -6595,13 +6609,15 @@
                         "hl_v2.0-live",
                         "os_v2.0-approved",
                         "pre_v1.0-approved",
-                        "aml_v2.0-live"
+                        "aml_v2.0-live",
+                        "npc_v1.0-approved"
                     ]
                 },
                 "morph_code_system_version": {
                     "in_subset": [
                         "pre_v1.0-approved",
-                        "aml_v2.0-live"
+                        "aml_v2.0-live",
+                        "npc_v1.0-approved"
                     ]
                 },
                 "top_code": {
@@ -6610,7 +6626,8 @@
                         "hl_v2.0-live",
                         "os_v2.0-approved",
                         "pre_v1.0-approved",
-                        "aml_v2.0-live"
+                        "aml_v2.0-live",
+                        "npc_v1.0-approved"
                     ]
                 },
                 "top_code_system": {
@@ -6619,13 +6636,15 @@
                         "hl_v2.0-live",
                         "os_v2.0-approved",
                         "pre_v1.0-approved",
-                        "aml_v2.0-live"
+                        "aml_v2.0-live",
+                        "npc_v1.0-approved"
                     ]
                 },
                 "top_code_system_version": {
                     "in_subset": [
                         "pre_v1.0-approved",
-                        "aml_v2.0-live"
+                        "aml_v2.0-live",
+                        "npc_v1.0-approved"
                     ]
                 },
                 "smn_field": {
@@ -8902,7 +8921,7 @@
         },
         "symptoms": {
             "slot_uri": "ncit:C25269",
-            "range": "YesNoEnum",
+            "range": "SymptomsEnum",
             "comments": [],
             "annotations": {
                 "tier_mandatory": "hl_v2.0-live",
@@ -9025,7 +9044,9 @@
             "slot_uri": "ncit:C168872",
             "range": "AeCodeSystemEnum",
             "comments": [],
-            "annotations": {}
+            "annotations": {
+                "tier_mandatory": "hl_v2.0-live"
+            }
         },
         "ae_system_version": {
             "slot_uri": "ncit:C173314",
@@ -10061,14 +10082,6 @@
             "comments": [],
             "annotations": {
                 "tier_optional": "hl_v2.0-live"
-            }
-        },
-        "ae_system": {
-            "slot_uri": "ncit:C168872",
-            "range": "AeSystemEnum",
-            "comments": [],
-            "annotations": {
-                "tier_mandatory": "hl_v2.0-live"
             }
         },
         "ae_grade": {
@@ -40273,7 +40286,8 @@
                         "gct_v2.0-live",
                         "hl_v2.0-live",
                         "os_v2.0-approved",
-                        "pre_v1.0-approved"
+                        "pre_v1.0-approved",
+                        "npc_v1.0-approved"
                     ]
                 }
             }
@@ -42279,7 +42293,8 @@
                         "nrsts_v2.0-live",
                         "os_v2.0-approved",
                         "pre_v1.0-approved",
-                        "rms_v3.0-live"
+                        "rms_v3.0-live",
+                        "npc_v1.0-approved"
                     ]
                 },
                 "Bone Face": {
@@ -42308,7 +42323,8 @@
                         "nbl_v2.0-live",
                         "nrsts_v2.0-live",
                         "pre_v1.0-approved",
-                        "rms_v3.0-live"
+                        "rms_v3.0-live",
+                        "npc_v1.0-approved"
                     ]
                 },
                 "Bone Shoulder Girdle": {
@@ -42335,7 +42351,8 @@
                         "gct_v2.0-live",
                         "os_v2.0-approved",
                         "pre_v1.0-approved",
-                        "rms_v3.0-live"
+                        "rms_v3.0-live",
+                        "npc_v1.0-approved"
                     ]
                 },
                 "Brain/Leptomeninges": {
@@ -42993,7 +43010,8 @@
                         "ews_v2.0-approved",
                         "gct_v2.0-live",
                         "os_v2.0-approved",
-                        "pre_v1.0-approved"
+                        "pre_v1.0-approved",
+                        "npc_v1.0-approved"
                     ]
                 },
                 "Heart": {
@@ -43285,7 +43303,8 @@
                         "nbl_v2.0-live",
                         "nrsts_v2.0-live",
                         "os_v2.0-approved",
-                        "pre_v1.0-approved"
+                        "pre_v1.0-approved",
+                        "npc_v1.0-approved"
                     ]
                 },
                 "Liver/Biliary Tract": {
@@ -43374,7 +43393,8 @@
                         "nrsts_v2.0-live",
                         "os_v2.0-approved",
                         "pre_v1.0-approved",
-                        "rms_v3.0-live"
+                        "rms_v3.0-live",
+                        "npc_v1.0-approved"
                     ]
                 },
                 "Lung/Pleura": {
@@ -43389,7 +43409,8 @@
                     "comments": [],
                     "in_subset": [
                         "ews_v2.0-approved",
-                        "gct_v2.0-live"
+                        "gct_v2.0-live",
+                        "npc_v1.0-approved"
                     ]
                 },
                 "Lymph Nodes": {
@@ -43558,7 +43579,8 @@
                         "fa_v1.0-draft",
                         "os_v2.0-approved",
                         "pre_v1.0-approved",
-                        "rms_v3.0-live"
+                        "rms_v3.0-live",
+                        "npc_v1.0-approved"
                     ]
                 },
                 "Neck": {
@@ -44184,7 +44206,8 @@
                     "in_subset": [
                         "lt_v1.0-approved",
                         "pre_v1.0-approved",
-                        "rms_v3.0-live"
+                        "rms_v3.0-live",
+                        "npc_v1.0-approved"
                     ]
                 },
                 "Spheniod Bone": {
@@ -44679,7 +44702,8 @@
                         "hl_v2.0-live",
                         "hl_v2.0-live",
                         "rb_v1.2-approved",
-                        "rms_v3.0-live"
+                        "rms_v3.0-live",
+                        "npc_v1.0-approved"
                     ]
                 },
                 "Abdominal Wall": {
@@ -44731,7 +44755,8 @@
                     "in_subset": [
                         "hl_v2.0-live",
                         "nrsts_v2.0-live",
-                        "rms_v3.0-live"
+                        "rms_v3.0-live",
+                        "npc_v1.0-approved"
                     ]
                 },
                 "Bone Marrow": {
@@ -44754,7 +44779,8 @@
                     "comments": [],
                     "in_subset": [
                         "rb_v1.2-approved",
-                        "rms_v3.0-live"
+                        "rms_v3.0-live",
+                        "npc_v1.0-approved"
                     ]
                 },
                 "Brain/Leptomeninges": {
@@ -45033,13 +45059,49 @@
                         "rms_v3.0-live"
                     ]
                 },
+                "Level I Nodes": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "npc_v1.0-approved"
+                    ]
+                },
+                "Level II Nodes": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "npc_v1.0-approved"
+                    ]
+                },
+                "Level III Nodes": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "npc_v1.0-approved"
+                    ]
+                },
+                "Level IV Nodes": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "npc_v1.0-approved"
+                    ]
+                },
+                "Level V Nodes": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "npc_v1.0-approved"
+                    ]
+                },
                 "Liver": {
                     "meaning": "ncit:C12392",
                     "comments": [],
                     "in_subset": [
                         "gct_v2.0-live",
                         "hl_v2.0-live",
-                        "nrsts_v2.0-live"
+                        "nrsts_v2.0-live",
+                        "npc_v1.0-approved"
                     ]
                 },
                 "Liver/Biliary Tract": {
@@ -45079,7 +45141,8 @@
                         "hl_v2.0-live",
                         "nrsts_v2.0-live",
                         "rb_v1.2-approved",
-                        "rms_v3.0-live"
+                        "rms_v3.0-live",
+                        "npc_v1.0-approved"
                     ]
                 },
                 "Lymph Nodes": {
@@ -45129,7 +45192,8 @@
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
-                        "rms_v3.0-live"
+                        "rms_v3.0-live",
+                        "npc_v1.0-approved"
                     ]
                 },
                 "Neck": {
@@ -45310,6 +45374,20 @@
                         "gct_v2.0-live",
                         "rb_v1.2-approved",
                         "rms_v3.0-live"
+                    ]
+                },
+                "Retropharyngeal Nodes": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "npc_v1.0-approved"
+                    ]
+                },
+                "Regional Lymph Nodes, NOS": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "npc_v1.0-approved"
                     ]
                 },
                 "Sacrococcygeal": {
@@ -45702,7 +45780,8 @@
                     "in_subset": [
                         "hl_v2.0-live",
                         "nrsts_v2.0-live",
-                        "rms_v3.0-live"
+                        "rms_v3.0-live",
+                        "npc_v1.0-approved"
                     ]
                 },
                 "Bone / Skeletal": {
@@ -45757,7 +45836,8 @@
                         "ews_v2.0-approved",
                         "fa_v1.0-draft",
                         "os_v2.0-approved",
-                        "rms_v3.0-live"
+                        "rms_v3.0-live",
+                        "npc_v1.0-approved"
                     ]
                 },
                 "Brain/Leptomeninges": {
@@ -45845,7 +45925,8 @@
                     "meaning": "ncit:C32298",
                     "comments": [],
                     "in_subset": [
-                        "hl_v2.0-live"
+                        "hl_v2.0-live",
+                        "npc_v1.0-approved"
                     ]
                 },
                 "Cervical Spine": {
@@ -46481,7 +46562,8 @@
                         "hl_v2.0-live",
                         "lt_v1.0-approved",
                         "nrsts_v2.0-live",
-                        "os_v2.0-approved"
+                        "os_v2.0-approved",
+                        "npc_v1.0-approved"
                     ]
                 },
                 "Liver, Segment 1 (Caudate)": {
@@ -46606,7 +46688,8 @@
                         "lt_v1.0-approved",
                         "nrsts_v2.0-live",
                         "os_v2.0-approved",
-                        "rms_v3.0-live"
+                        "rms_v3.0-live",
+                        "npc_v1.0-approved"
                     ]
                 },
                 "Lymph Node": {
@@ -46765,7 +46848,8 @@
                     "in_subset": [
                         "fa_v1.0-draft",
                         "os_v2.0-approved",
-                        "rms_v3.0-live"
+                        "rms_v3.0-live",
+                        "npc_v1.0-approved"
                     ]
                 },
                 "Neck": {
@@ -56160,7 +56244,8 @@
                     "meaning": "ncit:C2869",
                     "comments": [],
                     "in_subset": [
-                        "rb_v1.2-approved"
+                        "rb_v1.2-approved",
+                        "npc_v1.0-approved"
                     ]
                 },
                 "Bone Marrow Hypocellular": {
@@ -56168,6 +56253,13 @@
                     "comments": [],
                     "in_subset": [
                         "rb_v1.2-approved"
+                    ]
+                },
+                "Cataract": {
+                    "meaning": "ncit:C26713",
+                    "comments": [],
+                    "in_subset": [
+                       "npc_v1.0-approved"
                     ]
                 },
                 "Cardiac Toxicity": {
@@ -56184,11 +56276,46 @@
                         "rb_v1.2-approved"
                     ]
                 },
+                "CNS Necrosis": {
+                    "meaning": "ncit:C55367",
+                    "comments": [],
+                    "in_subset": [
+                        "npc_v1.0-approved"
+                    ]
+                },
+                "Cranial Nerve Palsy": {
+                    "meaning": "ncit:C26941",
+                    "comments": [],
+                    "in_subset": [
+                        "npc_v1.0-approved"
+                    ]
+                },
+                "Dental Developmental Abnormality": {
+                    "meaning": "ncit:C35596",
+                    "comments": [],
+                    "in_subset": [
+                        "npc_v1.0-approved"
+                    ]
+                },
+                "Dermatitis": {
+                    "meaning": "ncit:C2983",
+                    "comments": [],
+                    "in_subset": [
+                        "npc_v1.0-approved"
+                    ]
+                },
                 "Disseminated Intravascular Coagulation": {
                     "meaning": "ncit:C2992",
                     "comments": [],
                     "in_subset": [
                         "rb_v1.2-approved"
+                    ]
+                },
+                "Dysphagia": {
+                    "meaning": "ncit:C57795",
+                    "comments": [],
+                    "in_subset": [
+                        "npc_v1.0-approved"
                     ]
                 },
                 "Embolic CVA": {
@@ -56216,7 +56343,8 @@
                     "meaning": "ncit:C35665",
                     "comments": [],
                     "in_subset": [
-                        "rb_v1.2-approved"
+                        "rb_v1.2-approved",
+                        "npc_v1.0-approved"
                     ]
                 },
                 "GI Toxicity": {
@@ -56231,6 +56359,27 @@
                     "comments": [],
                     "in_subset": [
                         "aml_v2.0-live"
+                    ]
+                },
+                "Growth Hormone Deficiency": {
+                    "meaning": "ncit:C112835",
+                    "comments": [],
+                    "in_subset": [
+                        "npc_v1.0-approved"
+                    ]
+                },
+                "Hearing Impaired": {
+                    "meaning": "ncit:C143528",
+                    "comments": [],
+                    "in_subset": [
+                        "npc_v1.0-approved"
+                    ]
+                },
+                "Hematuria": {
+                    "meaning": "ncit:C3090",
+                    "comments": [],
+                    "in_subset": [
+                        "npc_v1.0-approved"
                     ]
                 },
                 "Hemolysis": {
@@ -56261,11 +56410,32 @@
                         "hl_v2.0-live"
                     ]
                 },
+                "Hoarseness": {
+                    "meaning": "ncit:C47813",
+                    "comments": [],
+                    "in_subset": [
+                        "npc_v1.0-approved"
+                    ]
+                },
                 "Hyperbilirubinemia": {
                     "meaning": "ncit:C27088",
                     "comments": [],
                     "in_subset": [
                         "aml_v2.0-live"
+                    ]
+                },
+                "Hypopituitarism": {
+                    "meaning": "ncit:C143194",
+                    "comments": [],
+                    "in_subset": [
+                        "npc_v1.0-approved"
+                    ]
+                },
+                "Hypothyroidism": {
+                    "meaning": "ncit:C143576",
+                    "comments": [],
+                    "in_subset": [
+                        "npc_v1.0-approved"
                     ]
                 },
                 "Infection": {
@@ -56301,7 +56471,8 @@
                     "meaning": "ncit:C115965",
                     "comments": [],
                     "in_subset": [
-                        "hl_v2.0-live"
+                        "hl_v2.0-live",
+                        "npc_v1.0-approved"
                     ]
                 },
                 "Multi Organ Failure": {
@@ -56316,6 +56487,13 @@
                     "comments": [],
                     "in_subset": [
                         "hl_v2.0-live"
+                    ]
+                },
+                "Neck Fibrosis": {
+                    "meaning": "ncit:C55368",
+                    "comments": [],
+                    "in_subset": [
+                        "npc_v1.0-approved"
                     ]
                 },
                 "Neuropathy": {
@@ -56337,7 +56515,22 @@
                     "meaning": "ncit:C80520",
                     "comments": [],
                     "in_subset": [
-                        "hl_v2.0-live"
+                        "hl_v2.0-live",
+                        "npc_v1.0-approved"
+                    ]
+                },
+                "Optic Nerve Disorder": {
+                    "meaning": "ncit:C143714",
+                    "comments": [],
+                    "in_subset": [
+                        "npc_v1.0-approved"
+                    ]
+                },
+                "Osteoradionecrosis": {
+                    "meaning": "ncit:C115459",
+                    "comments": [],
+                    "in_subset": [
+                        "npc_v1.0-approved"
                     ]
                 },
                 "Ototoxicity": {
@@ -56345,14 +56538,30 @@
                     "comments": [],
                     "in_subset": [
                         "gct_v2.0-live",
-                        "lt_v1.0-approved"
+                        "lt_v1.0-approved",
+                        "npc_v1.0-approved"
+                    ]
+                },
+                "Parasthesia": {
+                    "meaning": "ncit:C143736",
+                    "comments": [],
+                    "in_subset": [
+                        "npc_v1.0-approved"
                     ]
                 },
                 "Psychiatric Toxicity": {
                     "meaning": "ncit:C185648",
                     "comments": [],
                     "in_subset": [
-                        "hl_v2.0-live"
+                        "hl_v2.0-live",
+                        "npc_v1.0-approved"
+                    ]
+                },
+                "Proteinuria": {
+                    "meaning": "ncit:C38012",
+                    "comments": [],
+                    "in_subset": [
+                        "npc_v1.0-approved"
                     ]
                 },
                 "Pulmonary Toxicity": {
@@ -56360,7 +56569,15 @@
                     "comments": [],
                     "in_subset": [
                         "gct_v2.0-live",
-                        "hl_v2.0-live"
+                        "hl_v2.0-live",
+                        "npc_v1.0-approved"
+                    ]
+                },
+                "Radiation Caries": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "npc_v1.0-approved"
                     ]
                 },
                 "Rashes": {
@@ -56375,7 +56592,15 @@
                     "comments": [],
                     "in_subset": [
                         "gct_v2.0-live",
-                        "hl_v2.0-live"
+                        "hl_v2.0-live",
+                        "npc_v1.0-approved"
+                    ]
+                },
+                "Retinopathy": {
+                    "meaning": "ncit:C55891",
+                    "comments": [],
+                    "in_subset": [
+                        "npc_v1.0-approved"
                     ]
                 },
                 "Sinusoidal Obstruction Syndrome": {
@@ -56385,11 +56610,25 @@
                         "aml_v2.0-live"
                     ]
                 },
+                "Spinal Cord Toxicity": {
+                    "meaning": "ncit:C55369",
+                    "comments": [],
+                    "in_subset": [
+                        "npc_v1.0-approved"
+                    ]
+                },
                 "Spleen Disorder": {
                     "meaning": "ncit:C35823",
                     "comments": [],
                     "in_subset": [
                         "rb_v1.2-approved"
+                    ]
+                },
+                "Stroke": {
+                    "meaning": "ncit:C143862",
+                    "comments": [],
+                    "in_subset": [
+                        "npc_v1.0-approved"
                     ]
                 },
                 "Surgical Complications, NOS": {
@@ -56410,7 +56649,8 @@
                     "meaning": "ncit:C3408",
                     "comments": [],
                     "in_subset": [
-                        "hl_v2.0-live"
+                        "hl_v2.0-live",
+                        "npc_v1.0-approved"
                     ]
                 },
                 "Thrombosis of Femoral Artery": {
@@ -56434,11 +56674,53 @@
                         "rb_v1.2-approved"
                     ]
                 },
+                "Tinnitus": {
+                    "meaning": "ncit:C146690",
+                    "comments": [],
+                    "in_subset": [
+                        "npc_v1.0-approved"
+                    ]
+                },
+                "Trismus": {
+                    "meaning": "ncit:C58404",
+                    "comments": [],
+                    "in_subset": [
+                        "npc_v1.0-approved"
+                    ]
+                },
                 "Typhlitis": {
                     "meaning": "ncit:C38043",
                     "comments": [],
                     "in_subset": [
                         "aml_v2.0-live"
+                    ]
+                },
+                "Vertigo": {
+                    "meaning": "ncit:C143935",
+                    "comments": [],
+                    "in_subset": [
+                        "npc_v1.0-approved"
+                    ]
+                },
+                "Vision Decreased": {
+                    "meaning": "ncit:C143196",
+                    "comments": [],
+                    "in_subset": [
+                        "npc_v1.0-approved"
+                    ]
+                },
+                "Weight Loss": {
+                    "meaning": "ncit:C55339",
+                    "comments": [],
+                    "in_subset": [
+                        "npc_v1.0-approved"
+                    ]
+                },
+                "Xerostomia": {
+                    "meaning": "ncit:C26917",
+                    "comments": [],
+                    "in_subset": [
+                        "npc_v1.0-approved"
                     ]
                 },
                 "Other": {
@@ -56498,6 +56780,13 @@
                     "comments": [],
                     "in_subset": [
                         "aml_v2.0-live"
+                    ]
+                },
+                "RTOG": {
+                    "meaning": "ncit:C19778",
+                    "comments": [],
+                    "in_subset": [
+                        "npc_v1.0-approved"
                     ]
                 },
                 "Unknown": {
@@ -57539,7 +57828,8 @@
                         "gct_v2.0-live",
                         "hl_v2.0-live",
                         "os_v2.0-approved",
-                        "pre_v1.0-approved"
+                        "pre_v1.0-approved",
+                        "npc_v1.0-approved"
                     ]
                 }
             }
@@ -62910,6 +63200,20 @@
                         "hl_v2.0-live"
                     ]
                 },
+                "RTOG >> Grade1/Grade2": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "npc_v1.0-approved"
+                    ]
+                },
+                "RTOG >> Grade 3/Grade 4": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "npc_v1.0-approved"
+                    ]
+                },
                 "Unknown": {
                     "meaning": "ncit:C17998",
                     "comments": [],
@@ -62938,35 +63242,40 @@
                     "meaning": "ncit:C53260",
                     "comments": [],
                     "in_subset": [
-                        "hl_v2.0-live"
+                        "hl_v2.0-live",
+                        "npc_v1.0-approved"
                     ]
                 },
                 "Possible": {
                     "meaning": "ncit:C53258",
                     "comments": [],
                     "in_subset": [
-                        "hl_v2.0-live"
+                        "hl_v2.0-live",
+                        "npc_v1.0-approved"
                     ]
                 },
                 "Probable": {
                     "meaning": "ncit:C41357",
                     "comments": [],
                     "in_subset": [
-                        "hl_v2.0-live"
+                        "hl_v2.0-live",
+                        "npc_v1.0-approved"
                     ]
                 },
                 "Unlikely": {
                     "meaning": "ncit:C53257",
                     "comments": [],
                     "in_subset": [
-                        "hl_v2.0-live"
+                        "hl_v2.0-live",
+                        "npc_v1.0-approved"
                     ]
                 },
                 "Unrelated": {
                     "meaning": "ncit:C53256",
                     "comments": [],
                     "in_subset": [
-                        "hl_v2.0-live"
+                        "hl_v2.0-live",
+                        "npc_v1.0-approved"
                     ]
                 },
                 "Unknown": {
@@ -64725,6 +65034,80 @@
                     "comments": [],
                     "in_subset": [
                         "rb_v1.2-approved"
+                    ]
+                }
+            }
+        },
+        "SymptomsEnum": {
+            "permissible_values": {
+                "Fever": {
+                    "meaning": "ncit:C3038",
+                    "comments": [],
+                    "in_subset": [
+                        "npc_v1.0-approved"
+                    ]
+                },
+                "Night Sweats": {
+                    "meaning": "ncit:C3279",
+                    "comments": [],
+                    "in_subset": [
+                        "npc_v1.0-approved"
+                    ]
+                },
+                "Weight Loss": {
+                    "meaning": "ncit:C55339",
+                    "comments": [],
+                    "in_subset": [
+                        "npc_v1.0-approved"
+                    ]
+                },
+                "Headache": {
+                    "meaning": "ncit:C34661",
+                    "comments": [],
+                    "in_subset": [
+                        "npc_v1.0-approved"
+                    ]
+                },
+                "Bleeding": {
+                    "meaning": "ncit:C26791",
+                    "comments": [],
+                    "in_subset": [
+                        "npc_v1.0-approved"
+                    ]
+                },
+                "Hearing Loss": {
+                    "meaning": "ncit:C35731",
+                    "comments": [],
+                    "in_subset": [
+                        "npc_v1.0-approved"
+                    ]
+                },
+                "Adenopathy": {
+                    "meaning": "ncit:C17108",
+                    "comments": [],
+                    "in_subset": [
+                        "npc_v1.0-approved"
+                    ]
+                },
+                "Nasal Congestion": {
+                    "meaning": "ncit:C78500",
+                    "comments": [],
+                    "in_subset": [
+                        "npc_v1.0-approved"
+                    ]
+                },
+                "Unknown": {
+                    "meaning": "ncit:C17998",
+                    "comments": [],
+                    "in_subset": [
+                        "npc_v1.0-approved"
+                    ]
+                },
+                "Not Reported": {
+                    "meaning": "ncit:C43234",
+                    "comments": [],
+                    "in_subset": [
+                        "npc_v1.0-approved"
                     ]
                 }
             }
