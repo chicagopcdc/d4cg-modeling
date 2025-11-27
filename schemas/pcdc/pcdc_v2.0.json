@@ -4524,7 +4524,6 @@
         "tissue_type": {
           "in_subset": [
             "ews_v2.0-approved",
-            "npc_v1.0-approved",
             "os_v2.0-approved"
           ]
         },
@@ -5066,7 +5065,6 @@
         "margins",
         "tissue_type",
         "transposition_organ",
-        "treatment_volume",
         "indication",
         "rt_completed",
         "plaque_size",
@@ -5374,7 +5372,6 @@
             "fa_v1.0-draft",
             "gct_v2.0-live",
             "lt_v1.0-approved",
-            "npc_v1.0-approved",
             "nrsts_v2.0-live",
             "os_v2.0-approved",
             "pre_v1.0-approved",
@@ -5384,7 +5381,6 @@
         "tissue_type": {
           "in_subset": [
             "ews_v2.0-approved",
-            "npc_v1.0-approved",
             "os_v2.0-approved"
           ]
         },
@@ -6053,8 +6049,7 @@
         },
         "symptoms": {
           "in_subset": [
-            "hl_v2.0-live",
-            "npc_v1.0-approved"
+            "hl_v2.0-live"
           ]
         },
         "palpable_nodes": {
@@ -59210,7 +59205,6 @@
           "comments": [],
           "in_subset": [
             "ews_v2.0-approved",
-            "npc_v1.0-approved",
             "os_v2.0-approved"
           ]
         },
@@ -59219,7 +59213,6 @@
           "comments": [],
           "in_subset": [
             "ews_v2.0-approved",
-            "npc_v1.0-approved",
             "os_v2.0-approved"
           ]
         },
@@ -59235,7 +59228,6 @@
           "comments": [],
           "in_subset": [
             "ews_v2.0-approved",
-            "npc_v1.0-approved",
             "os_v2.0-approved"
           ]
         }
