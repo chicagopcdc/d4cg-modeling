@@ -16,23 +16,26 @@
         "linkml:types"
     ],
     "subsets": {
+        "pcdc_v1.13-live": {
+            "description": "A tabular data dictionary for the full pcdc_v1.13-live model can be viewed online at: https://docs.google.com/spreadsheets/d/1k2m4oAX3JdfYN2lIbpBiWFUNKZwXnQCiuns0e3Wid9o"
+        },
         "aml_v1.8-live": {
-            "description": "The AML data dictionary is a consensus data schema built by an international group of pediatric acute myeloid leukemia experts and maintained by Data for the Common Good (D4CG) at the University of Chicago in collaboration with the International Acute Myeloid Leukemia Consortium (INTERACT). It is based on the collective requirements of its contributors."
+            "description": "A tabular data dictionary for aml_v1.8-live can be viewed online at: https://docs.google.com/spreadsheets/d/1_KyfeZNsepIxSU0Nzw5Mi8mk1PiKCWlSBjatw0AECQ0"
         },
         "gct_v1.2-live": {
-            "description": "The GCT data dictionary is a consensus data schema built by an international group of pediatric germ cell tumor experts and maintained by Data for the Common Good (D4CG) at the University of Chicago in collaboration with the Malignant Germ Cell International Consortium (MaGIC). It is based on the collective requirements of its contributors."
+            "description": "A tabular data dictionary for gct_v1.2-live can be viewed online at: https://docs.google.com/spreadsheets/d/1ePkD-21wWCokR1MClnMrSl0dpj-Dvgid0knn5jfYHCY"
         },
         "hl_v1.0-live": {
-            "description": "The HL data dictionary is a consensus data schema built by an international group of pediatric Hodgkin lymphoma experts and maintained by Data for the Common Good (D4CG) at the University of Chicago in collaboration with the Hodgkin Lymphoma Data Collaboration (NODAL). It is based on the collective requirements of its contributors."
+            "description": "A tabular data dictionary for hl_v1.0-live can be viewed online at: https://docs.google.com/spreadsheets/d/1H0DqYqYHKqH1KNK13cs14LKW6vpwKvDxzPMlW1tkm4U"
         },
         "nbl_v1.1-live": {
-            "description": "The NBL data dictionary is a consensus data schema built by an international group of pediatric neuroblastoma experts and maintained by Data for the Common Good (D4CG) at the University of Chicago in collaboration with the International Neuroblastoma Risk Group (INRG). It is based on the collective requirements of its contributors."
+            "description": "A tabular data dictionary for nbl_v1.1-live can be viewed online at: https://docs.google.com/spreadsheets/d/1tdXKN6Al4xtEH2eoIdRM6vEMra1A3bdCQHQIv-IZy6k"
         },
         "nrsts_v1.0-live": {
-            "description": "The NRSTS data dictionary is a consensus data schema built by an international group of pediatric non-rhabdomyosarcoma soft tissue sarcoma experts and maintained by Data for the Common Good (D4CG) at the University of Chicago in collaboration with the International Soft Tissue Sarcoma Consortium (INSTRuCT). It is based on the collective requirements of its contributors."
+            "description": "A tabular data dictionary for nrsts_v1.0-live can be viewed online at: https://docs.google.com/spreadsheets/d/1gDTwDYylH0UakFcNoGBp6etUKKkLVCkZGr-P6NoyN5Y"
         },
         "rms_v2.0-live": {
-            "description": "The RMS data dictionary is a consensus data schema built by an international group of pediatric rhabdomyosarcoma experts and maintained by Data for the Common Good (D4CG) at the University of Chicago in collaboration with the International Soft Tissue Sarcoma Consortium (INSTRuCT). It is based on the collective requirements of its contributors."
+            "description": "A tabular data dictionary for rms_v2.0-live can be viewed online at: https://docs.google.com/spreadsheets/d/1hDLvT3O_VfsMuWNR2sWWlIWTyzY8sopYY4e7z5Z1wmQ"
         }
     },
     "classes": {
