@@ -5081,7 +5081,8 @@
         "nrsts_v2.0-approved",
         "pre_v1.0-approved",
         "rb_v1.2-approved",
-        "rms_v3.0-approved"
+        "rms_v3.0-approved",
+        "os_v2.0-approved"
       ],
       "annotations": {
         "domain": "intervention"
@@ -5095,8 +5096,6 @@
             "fa_v1.0-draft",
             "gct_v2.0-approved",
             "hl_v2.0-approved",
-            "lt_v1.0-approved",
-            "nbl_v2.0-approved",
             "npc_v1.0-approved",
             "nrsts_v2.0-approved",
             "os_v2.0-approved",
@@ -5113,14 +5112,12 @@
             "fa_v1.0-draft",
             "gct_v2.0-approved",
             "hl_v2.0-approved",
-            "lt_v1.0-approved",
-            "nbl_v2.0-approved",
             "npc_v1.0-approved",
             "nrsts_v2.0-approved",
-            "os_v2.0-approved",
             "pre_v1.0-approved",
             "rb_v1.2-approved",
-            "rms_v3.0-approved"
+            "rms_v3.0-approved",
+            "os_v2.0-approved"
           ]
         },
         "age_at_rt_start": {
@@ -5133,6 +5130,7 @@
             "hl_v2.0-approved",
             "npc_v1.0-approved",
             "nrsts_v2.0-approved",
+            "os_v2.0-approved",
             "pre_v1.0-approved",
             "rb_v1.2-approved",
             "rms_v3.0-approved"
@@ -5201,22 +5199,28 @@
             "fa_v1.0-draft",
             "gct_v2.0-approved",
             "hl_v2.0-approved",
+            "npc_v1.0-approved",
             "nrsts_v2.0-approved",
+            "os_v2.0-approved",
+            "pre_v1.0-approved",
             "rb_v1.2-approved",
-            "rms_v3.0-approved",
-            "npc_v1.0-approved"
+            "rms_v3.0-approved"
           ]
         },
         "laterality": {
           "in_subset": [
+            "aml_v2.0-approved",
+            "cns_v1.2-approved",
             "ews_v2.0-approved",
             "fa_v1.0-draft",
             "gct_v2.0-approved",
             "hl_v2.0-approved",
-            "lt_v1.0-approved",
             "npc_v1.0-approved",
+            "nrsts_v2.0-approved",
             "os_v2.0-approved",
-            "rb_v1.2-approved"
+            "pre_v1.0-approved",
+            "rb_v1.2-approved",
+            "rms_v3.0-approved"
           ]
         },
         "energy_type": {
@@ -5239,11 +5243,18 @@
         },
         "technique": {
           "in_subset": [
+            "aml_v2.0-approved",
             "cns_v1.2-approved",
             "ews_v2.0-approved",
             "fa_v1.0-draft",
+            "gct_v2.0-approved",
+            "hl_v2.0-approved",
             "npc_v1.0-approved",
-            "rb_v1.2-approved"
+            "nrsts_v2.0-approved",
+            "os_v2.0-approved",
+            "pre_v1.0-approved",
+            "rb_v1.2-approved",
+            "rms_v3.0-approved"
           ]
         },
         "rt_dose": {
@@ -5256,6 +5267,8 @@
             "hl_v2.0-approved",
             "npc_v1.0-approved",
             "nrsts_v2.0-approved",
+            "os_v2.0-approved",
+            "pre_v1.0-approved",
             "rb_v1.2-approved",
             "rms_v3.0-approved"
           ]
@@ -5270,6 +5283,8 @@
             "hl_v2.0-approved",
             "npc_v1.0-approved",
             "nrsts_v2.0-approved",
+            "os_v2.0-approved",
+            "pre_v1.0-approved",
             "rb_v1.2-approved",
             "rms_v3.0-approved"
           ]
@@ -5284,35 +5299,66 @@
         },
         "boost_dose": {
           "in_subset": [
-            "hl_v2.0-approved"
-          ]
-        },
-        "num_fraction": {
-          "in_subset": [
+            "aml_v2.0-approved",
             "cns_v1.2-approved",
             "ews_v2.0-approved",
             "fa_v1.0-draft",
             "gct_v2.0-approved",
+            "hl_v2.0-approved",
             "npc_v1.0-approved",
-            "rb_v1.2-approved"
+            "nrsts_v2.0-approved",
+            "os_v2.0-approved",
+            "pre_v1.0-approved",
+            "rb_v1.2-approved",
+            "rms_v3.0-approved"
+          ]
+        },
+        "num_fraction": {
+          "in_subset": [
+            "aml_v2.0-approved",
+            "cns_v1.2-approved",
+            "ews_v2.0-approved",
+            "fa_v1.0-draft",
+            "gct_v2.0-approved",
+            "hl_v2.0-approved",
+            "npc_v1.0-approved",
+            "nrsts_v2.0-approved",
+            "os_v2.0-approved",
+            "pre_v1.0-approved",
+            "rb_v1.2-approved",
+            "rms_v3.0-approved"
           ]
         },
         "fraction_dose": {
           "in_subset": [
+            "aml_v2.0-approved",
             "cns_v1.2-approved",
             "ews_v2.0-approved",
             "fa_v1.0-draft",
+            "gct_v2.0-approved",
+            "hl_v2.0-approved",
             "npc_v1.0-approved",
-            "rb_v1.2-approved"
+            "nrsts_v2.0-approved",
+            "os_v2.0-approved",
+            "pre_v1.0-approved",
+            "rb_v1.2-approved",
+            "rms_v3.0-approved"
           ]
         },
         "fraction_dose_unit": {
           "in_subset": [
+            "aml_v2.0-approved",
             "cns_v1.2-approved",
             "ews_v2.0-approved",
             "fa_v1.0-draft",
+            "gct_v2.0-approved",
+            "hl_v2.0-approved",
             "npc_v1.0-approved",
-            "rb_v1.2-approved"
+            "nrsts_v2.0-approved",
+            "os_v2.0-approved",
+            "pre_v1.0-approved",
+            "rb_v1.2-approved",
+            "rms_v3.0-approved"
           ]
         },
         "apex_dose": {
@@ -46885,53 +46931,72 @@
           "meaning": "ncit:C13332",
           "comments": [],
           "in_subset": [
+            "aml_v2.0-approved",
+            "cns_v1.2-approved",
             "ews_v2.0-approved",
             "fa_v1.0-draft",
             "gct_v2.0-approved",
             "hl_v2.0-approved",
             "npc_v1.0-approved",
+            "nrsts_v2.0-approved",
             "os_v2.0-approved",
-            "rb_v1.2-approved"
+            "pre_v1.0-approved",
+            "rb_v1.2-approved",
+            "rms_v3.0-approved"
           ]
         },
         "Left": {
           "meaning": "ncit:C160200",
           "comments": [],
           "in_subset": [
+            "aml_v2.0-approved",
+            "cns_v1.2-approved",
             "ews_v2.0-approved",
             "fa_v1.0-draft",
             "gct_v2.0-approved",
             "hl_v2.0-approved",
-            "lt_v1.0-approved",
             "npc_v1.0-approved",
+            "nrsts_v2.0-approved",
             "os_v2.0-approved",
-            "rb_v1.2-approved"
+            "pre_v1.0-approved",
+            "rb_v1.2-approved",
+            "rms_v3.0-approved"
           ]
         },
         "Midline": {
           "meaning": "ncit:C81170",
           "comments": [],
           "in_subset": [
+            "aml_v2.0-approved",
+            "cns_v1.2-approved",
             "ews_v2.0-approved",
             "fa_v1.0-draft",
             "gct_v2.0-approved",
             "hl_v2.0-approved",
             "npc_v1.0-approved",
-            "os_v2.0-approved"
+            "nrsts_v2.0-approved",
+            "os_v2.0-approved",
+            "pre_v1.0-approved",
+            "rb_v1.2-approved",
+            "rms_v3.0-approved"
           ]
         },
         "Right": {
           "meaning": "ncit:C160199",
           "comments": [],
           "in_subset": [
+            "aml_v2.0-approved",
+            "cns_v1.2-approved",
             "ews_v2.0-approved",
             "fa_v1.0-draft",
             "gct_v2.0-approved",
             "hl_v2.0-approved",
-            "lt_v1.0-approved",
             "npc_v1.0-approved",
+            "nrsts_v2.0-approved",
             "os_v2.0-approved",
-            "rb_v1.2-approved"
+            "pre_v1.0-approved",
+            "rb_v1.2-approved",
+            "rms_v3.0-approved"
           ]
         },
         "Unilateral": {
@@ -46945,27 +47010,36 @@
           "meaning": "ncit:C17998",
           "comments": [],
           "in_subset": [
+            "aml_v2.0-approved",
+            "cns_v1.2-approved",
             "ews_v2.0-approved",
             "fa_v1.0-draft",
             "gct_v2.0-approved",
             "hl_v2.0-approved",
-            "lt_v1.0-approved",
             "npc_v1.0-approved",
-            "rb_v1.2-approved"
+            "nrsts_v2.0-approved",
+            "os_v2.0-approved",
+            "pre_v1.0-approved",
+            "rb_v1.2-approved",
+            "rms_v3.0-approved"
           ]
         },
         "Not Reported": {
           "meaning": "ncit:C43234",
           "comments": [],
           "in_subset": [
+            "aml_v2.0-approved",
+            "cns_v1.2-approved",
             "ews_v2.0-approved",
             "fa_v1.0-draft",
             "gct_v2.0-approved",
             "hl_v2.0-approved",
-            "lt_v1.0-approved",
             "npc_v1.0-approved",
+            "nrsts_v2.0-approved",
             "os_v2.0-approved",
-            "rb_v1.2-approved"
+            "pre_v1.0-approved",
+            "rb_v1.2-approved",
+            "rms_v3.0-approved"
           ]
         }
       }
@@ -51604,7 +51678,10 @@
             "fa_v1.0-draft",
             "gct_v2.0-approved",
             "hl_v2.0-approved",
+            "npc_v1.0-approved",
             "nrsts_v2.0-approved",
+            "os_v2.0-approved",
+            "pre_v1.0-approved",
             "rb_v1.2-approved",
             "rms_v3.0-approved"
           ]
@@ -51629,7 +51706,12 @@
             "fa_v1.0-draft",
             "gct_v2.0-approved",
             "hl_v2.0-approved",
-            "rb_v1.2-approved"
+            "npc_v1.0-approved",
+            "nrsts_v2.0-approved",
+            "os_v2.0-approved",
+            "pre_v1.0-approved",
+            "rb_v1.2-approved",
+            "rms_v3.0-approved"
           ]
         },
         "Not Reported": {
@@ -51643,7 +51725,11 @@
             "gct_v2.0-approved",
             "hl_v2.0-approved",
             "npc_v1.0-approved",
-            "rb_v1.2-approved"
+            "nrsts_v2.0-approved",
+            "os_v2.0-approved",
+            "pre_v1.0-approved",
+            "rb_v1.2-approved",
+            "rms_v3.0-approved"
           ]
         }
       }
