@@ -3942,8 +3942,8 @@
         "qpet_score",
         "performance_score",
         "fever",
-        "night_sweats",
         "weight_loss",
+        "night_sweats",
         "initial_treatment_category",
         "mki",
         "vacterlh_association",
@@ -3954,7 +3954,6 @@
         "clinical_finding_other",
         "modified_rankin_scale",
         "fans_symptom_acuity",
-        "symptoms",
         "cranial_nerve_involvement",
         "skip_lesion",
         "skip_met_involvement",
@@ -4134,12 +4133,6 @@
             "fa_v1.0-draft"
           ]
         },
-        "symptoms": {
-          "in_subset": [
-            "hl_v2.0-approved",
-            "npc_v1.0-approved"
-          ]
-        },
         "cranial_nerve_involvement": {
           "in_subset": [
             "npc_v1.0-approved"
@@ -4168,7 +4161,9 @@
         },
         "presentation_symptoms": {
           "in_subset": [
-            "rb_v1.2-approved"
+            "rb_v1.2-approved",
+            "hl_v2.0-approved",
+            "npc_v1.0-approved"
           ]
         },
         "clinical_signs": {
@@ -5048,21 +5043,17 @@
         "energy_type",
         "proton_delivery_mode",
         "technique",
-        "reporting_level",
         "rt_dose",
         "rt_dose_unit",
-        "boost",
         "boost_type",
         "boost_dose",
         "num_fraction",
         "fraction_dose",
         "fraction_dose_unit",
-        "cumulative_target_dose",
-        "cumulative_target_dose_unit",
         "apex_dose",
         "dose_rate_at_apex",
         "treatment_volume",
-        "margins",
+        "rt_margins",
         "tissue_type",
         "transposition_organ",
         "indication",
@@ -5255,13 +5246,6 @@
             "rb_v1.2-approved"
           ]
         },
-        "reporting_level": {
-          "in_subset": [
-            "cns_v1.2-approved",
-            "ews_v2.0-approved",
-            "rb_v1.2-approved"
-          ]
-        },
         "rt_dose": {
           "in_subset": [
             "aml_v2.0-approved",
@@ -5288,11 +5272,6 @@
             "nrsts_v2.0-approved",
             "rb_v1.2-approved",
             "rms_v3.0-approved"
-          ]
-        },
-        "boost": {
-          "in_subset": [
-            "gct_v2.0-approved"
           ]
         },
         "boost_type": {
@@ -5336,20 +5315,6 @@
             "rb_v1.2-approved"
           ]
         },
-        "cumulative_target_dose": {
-          "in_subset": [
-            "cns_v1.2-approved",
-            "ews_v2.0-approved",
-            "rb_v1.2-approved"
-          ]
-        },
-        "cumulative_target_dose_unit": {
-          "in_subset": [
-            "cns_v1.2-approved",
-            "ews_v2.0-approved",
-            "rb_v1.2-approved"
-          ]
-        },
         "apex_dose": {
           "in_subset": [
             "rb_v1.2-approved"
@@ -5365,17 +5330,9 @@
             "npc_v1.0-approved"
           ]
         },
-        "margins": {
+        "rt_margins": {
           "in_subset": [
-            "cns_v1.2-approved",
-            "ews_v2.0-approved",
-            "fa_v1.0-draft",
-            "gct_v2.0-approved",
-            "lt_v1.0-approved",
-            "nrsts_v2.0-approved",
-            "os_v2.0-approved",
-            "pre_v1.0-approved",
-            "rms_v3.0-approved"
+            "cns_v1.2-approved"
           ]
         },
         "tissue_type": {
@@ -8342,6 +8299,12 @@
         "tier_optional": "npc_v1.0-approved"
       }
     },
+    "rt_margins": {
+      "slot_uri": "ncit:C41227",
+      "range": "RtMarginsEnum",
+      "comments": [],
+      "annotations": {}
+    },
     "number_nodes": {
       "slot_uri": "ncit:C185516",
       "range": "NumberNodesEnum",
@@ -8600,12 +8563,6 @@
         "tier_priority": "npc_v1.0-approved",
         "tier_optional": "rb_v1.2-approved"
       }
-    },
-    "boost": {
-      "slot_uri": "ncit:C137812",
-      "range": "YesNoEnum",
-      "comments": [],
-      "annotations": {}
     },
     "num_fraction": {
       "slot_uri": "ncit:C175034",
@@ -8906,15 +8863,6 @@
       "range": "decimal",
       "comments": [],
       "annotations": {}
-    },
-    "symptoms": {
-      "slot_uri": "ncit:C25269",
-      "range": "SymptomsEnum",
-      "comments": [],
-      "annotations": {
-        "tier_mandatory": "hl_v2.0-approved",
-        "tier_optional": "npc_v1.0-approved"
-      }
     },
     "palpable_nodes": {
       "slot_uri": "ncit:C185660",
@@ -9444,14 +9392,6 @@
         "tier_optional": "npc_v1.0-approved,rb_v1.2-approved"
       }
     },
-    "reporting_level": {
-      "slot_uri": "",
-      "range": "ReportingLevelEnum",
-      "comments": [],
-      "annotations": {
-        "tier_optional": "rb_v1.2-approved"
-      }
-    },
     "fraction_dose": {
       "slot_uri": "",
       "range": "decimal",
@@ -9466,22 +9406,6 @@
       "comments": [],
       "annotations": {
         "tier_optional": "npc_v1.0-approved,rb_v1.2-approved"
-      }
-    },
-    "cumulative_target_dose": {
-      "slot_uri": "ncit:C173282",
-      "range": "decimal",
-      "comments": [],
-      "annotations": {
-        "tier_optional": "rb_v1.2-approved"
-      }
-    },
-    "cumulative_target_dose_unit": {
-      "slot_uri": "ncit:C18068",
-      "range": "CumulativeTargetDoseUnitEnum",
-      "comments": [],
-      "annotations": {
-        "tier_optional": "rb_v1.2-approved"
       }
     },
     "procedure": {
@@ -10589,7 +10513,8 @@
       "range": "PresentationSymptomsEnum",
       "comments": [],
       "annotations": {
-        "tier_optional": "rb_v1.2-approved"
+        "tier_mandatory": "hl_v2.0-approved",
+        "tier_optional": "npc_v1.0-approved,rb_v1.2-approved"
       }
     },
     "clinical_signs": {
@@ -48171,7 +48096,7 @@
         }
       }
     },
-    "MarginsEnum": {
+    "RtMarginsEnum": {
       "permissible_values": {
         "0.5 cm": {
           "meaning": "",
@@ -48193,7 +48118,11 @@
           "in_subset": [
             "cns_v1.2-approved"
           ]
-        },
+        }
+      }
+    },
+    "MarginsEnum": {
+      "permissible_values": {
         "Biopsy Only": {
           "meaning": "ncit:C15189",
           "comments": [],
@@ -48243,14 +48172,6 @@
             "lt_v1.0-approved"
           ]
         },
-        "R0 - Complete Resection, Negative": {
-          "meaning": "ncit:C139578",
-          "comments": [],
-          "in_subset": [
-            "nrsts_v2.0-approved",
-            "rms_v3.0-approved"
-          ]
-        },
         "R0 - Complete Resection, Negative Margins": {
           "meaning": "ncit:C139578",
           "comments": [
@@ -48263,13 +48184,7 @@
             "lt_v1.0-approved",
             "npc_v1.0-approved",
             "os_v2.0-approved",
-            "pre_v1.0-approved"
-          ]
-        },
-        "R1 - Complete Resection, Positive": {
-          "meaning": "ncit:C139579",
-          "comments": [],
-          "in_subset": [
+            "pre_v1.0-approved",
             "nrsts_v2.0-approved",
             "rms_v3.0-approved"
           ]
@@ -48284,7 +48199,9 @@
             "lt_v1.0-approved",
             "npc_v1.0-approved",
             "os_v2.0-approved",
-            "pre_v1.0-approved"
+            "pre_v1.0-approved",
+            "nrsts_v2.0-approved",
+            "rms_v3.0-approved"
           ]
         },
         "R2 - Gross Residual Disease": {
@@ -51593,21 +51510,6 @@
     },
     "EnergyTypeEnum": {
       "permissible_values": {
-        "3D Conformal": {
-          "meaning": "ncit:C16035",
-          "comments": [],
-          "in_subset": [
-            "hl_v2.0-approved"
-          ]
-        },
-        "Brachytherapy": {
-          "meaning": "ncit:C15195",
-          "comments": [],
-          "in_subset": [
-            "nrsts_v2.0-approved",
-            "rms_v3.0-approved"
-          ]
-        },
         "Electron": {
           "meaning": "ncit:C40428",
           "comments": [],
@@ -51615,21 +51517,7 @@
             "ews_v2.0-approved",
             "fa_v1.0-draft",
             "npc_v1.0-approved",
-            "rb_v1.2-approved"
-          ]
-        },
-        "Electrons": {
-          "meaning": "",
-          "comments": [],
-          "in_subset": [
             "rms_v3.0-approved"
-          ]
-        },
-        "Intensity-Modulated Radiation Therapy": {
-          "meaning": "ncit:C16135",
-          "comments": [],
-          "in_subset": [
-            "hl_v2.0-approved"
           ]
         },
         "Photon": {
@@ -51642,13 +51530,7 @@
             "npc_v1.0-approved",
             "nrsts_v2.0-approved",
             "rb_v1.2-approved",
-            "rms_v3.0-approved"
-          ]
-        },
-        "Photon/X-Ray": {
-          "meaning": "ncit:C88112",
-          "comments": [],
-          "in_subset": [
+            "rms_v3.0-approved",
             "fa_v1.0-draft"
           ]
         },
@@ -51662,13 +51544,7 @@
             "gct_v2.0-approved",
             "hl_v2.0-approved",
             "npc_v1.0-approved",
-            "rb_v1.2-approved"
-          ]
-        },
-        "Protons": {
-          "meaning": "ncit:C66897",
-          "comments": [],
-          "in_subset": [
+            "rb_v1.2-approved",
             "nrsts_v2.0-approved",
             "rms_v3.0-approved"
           ]
@@ -58055,7 +57931,9 @@
           "in_subset": [
             "fa_v1.0-draft",
             "npc_v1.0-approved",
-            "rb_v1.2-approved"
+            "rb_v1.2-approved",
+            "nrsts_v2.0-approved",
+            "rms_v3.0-approved"
           ]
         },
         "EBRT, 3D Conformal": {
@@ -58065,7 +57943,8 @@
             "cns_v1.2-approved",
             "ews_v2.0-approved",
             "fa_v1.0-draft",
-            "npc_v1.0-approved"
+            "npc_v1.0-approved",
+            "hl_v2.0-approved"
           ]
         },
         "EBRT, Double Scattering": {
@@ -58077,20 +57956,15 @@
             "npc_v1.0-approved"
           ]
         },
-        "EBRT, Intensity-Modulated": {
-          "meaning": "ncit:C16135",
-          "comments": [],
-          "in_subset": [
-            "ews_v2.0-approved",
-            "npc_v1.0-approved"
-          ]
-        },
         "EBRT, Intensity-modulated": {
           "meaning": "",
           "comments": [],
           "in_subset": [
             "cns_v1.2-approved",
-            "fa_v1.0-draft"
+            "fa_v1.0-draft",
+            "hl_v2.0-approved",
+            "ews_v2.0-approved",
+            "npc_v1.0-approved"
           ]
         },
         "EBRT, NOS": {
@@ -58108,7 +57982,8 @@
           "meaning": "",
           "comments": [],
           "in_subset": [
-            "fa_v1.0-draft"
+            "fa_v1.0-draft",
+            "rb_v1.2-approved"
           ]
         },
         "EBRT, Pencil Beam Scanning": {
@@ -58118,7 +57993,8 @@
           ],
           "in_subset": [
             "fa_v1.0-draft",
-            "npc_v1.0-approved"
+            "npc_v1.0-approved",
+            "rb_v1.2-approved"
           ]
         },
         "EBRT, Stereotactic Body": {
@@ -58220,26 +58096,44 @@
             "npc_v1.0-approved",
             "rb_v1.2-approved"
           ]
-        }
-      }
-    },
-    "ReportingLevelEnum": {
-      "permissible_values": {
-        "Cumulative": {
+        },
+        "Boost, NOS": {
           "meaning": "",
           "comments": [],
           "in_subset": [
             "cns_v1.2-approved",
             "ews_v2.0-approved",
+            "npc_v1.0-approved",
             "rb_v1.2-approved"
           ]
         },
-        "Fraction": {
+         "None": {
           "meaning": "",
           "comments": [],
           "in_subset": [
             "cns_v1.2-approved",
             "ews_v2.0-approved",
+            "npc_v1.0-approved",
+            "rb_v1.2-approved"
+          ]
+        },
+        "Unknown": {
+          "meaning": "ncit:C17998",
+          "comments": [],
+          "in_subset": [
+            "cns_v1.2-approved",
+            "ews_v2.0-approved",
+            "npc_v1.0-approved",
+            "rb_v1.2-approved"
+          ]
+        },
+        "Not Reported": {
+          "meaning": "ncit:C43234",
+          "comments": [],
+          "in_subset": [
+            "cns_v1.2-approved",
+            "ews_v2.0-approved",
+            "npc_v1.0-approved",
             "rb_v1.2-approved"
           ]
         }
@@ -58268,13 +58162,6 @@
             "npc_v1.0-approved"
           ]
         },
-        "cGY": {
-          "meaning": "ncit:C64693",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
         "cGy": {
           "meaning": "ncit:C64693",
           "comments": [],
@@ -58282,7 +58169,8 @@
             "cns_v1.2-approved",
             "ews_v2.0-approved",
             "fa_v1.0-draft",
-            "npc_v1.0-approved"
+            "npc_v1.0-approved",
+            "rb_v1.2-approved"
           ]
         },
         "Unknown": {
@@ -58301,46 +58189,6 @@
             "cns_v1.2-approved",
             "ews_v2.0-approved",
             "npc_v1.0-approved",
-            "rb_v1.2-approved"
-          ]
-        }
-      }
-    },
-    "CumulativeTargetDoseUnitEnum": {
-      "permissible_values": {
-        "CGE": {
-          "meaning": "ncit:C128269",
-          "comments": [],
-          "in_subset": [
-            "cns_v1.2-approved",
-            "ews_v2.0-approved",
-            "rb_v1.2-approved"
-          ]
-        },
-        "cGY": {
-          "meaning": "ncit:C64693",
-          "comments": [],
-          "in_subset": [
-            "cns_v1.2-approved",
-            "ews_v2.0-approved",
-            "rb_v1.2-approved"
-          ]
-        },
-        "Unknown": {
-          "meaning": "ncit:C17998",
-          "comments": [],
-          "in_subset": [
-            "cns_v1.2-approved",
-            "ews_v2.0-approved",
-            "rb_v1.2-approved"
-          ]
-        },
-        "Not Reported": {
-          "meaning": "ncit:C43234",
-          "comments": [],
-          "in_subset": [
-            "cns_v1.2-approved",
-            "ews_v2.0-approved",
             "rb_v1.2-approved"
           ]
         }
@@ -64550,73 +64398,6 @@
     },
     "PresentationSymptomsEnum": {
       "permissible_values": {
-        "Amblyopia (Lazy Eye)": {
-          "meaning": "ncit:C118764",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Conjunctivitis (Pink Eye)": {
-          "meaning": "ncit:C34504",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Heterochromia (Different Colored Eyes)": {
-          "meaning": "",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Leukocoria (Abnormal Glow)": {
-          "meaning": "",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "None": {
-          "meaning": "ncit:C41132",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Periorbital Edema (Swelling Around The Eye)": {
-          "meaning": "ncit:C78530",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Strabismus (Crossed Eyes)": {
-          "meaning": "ncit:C35040",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Unknown": {
-          "meaning": "ncit:C17998",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Not Reported": {
-          "meaning": "ncit:C43234",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        }
-      }
-    },
-    "SymptomsEnum": {
-      "permissible_values": {
         "Fever": {
           "meaning": "ncit:C3038",
           "comments": [],
@@ -64673,10 +64454,60 @@
             "npc_v1.0-approved"
           ]
         },
+        "Amblyopia (Lazy Eye)": {
+          "meaning": "ncit:C118764",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "Conjunctivitis (Pink Eye)": {
+          "meaning": "ncit:C34504",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "Heterochromia (Different Colored Eyes)": {
+          "meaning": "",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "Leukocoria (Abnormal Glow)": {
+          "meaning": "",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "None": {
+          "meaning": "ncit:C41132",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "Periorbital Edema (Swelling Around The Eye)": {
+          "meaning": "ncit:C78530",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "Strabismus (Crossed Eyes)": {
+          "meaning": "ncit:C35040",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
         "Unknown": {
           "meaning": "ncit:C17998",
           "comments": [],
           "in_subset": [
+            "rb_v1.2-approved",
             "npc_v1.0-approved"
           ]
         },
@@ -64684,6 +64515,7 @@
           "meaning": "ncit:C43234",
           "comments": [],
           "in_subset": [
+            "rb_v1.2-approved",
             "npc_v1.0-approved"
           ]
         }
