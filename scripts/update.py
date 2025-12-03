@@ -1,5 +1,5 @@
-import sys, json, subprocess, argparse
-
+import sys, json, argparse
+from utils import sheets_helper
 
 subset_info = {
     "all": "The ALL data dictionary is a consensus data schema built by an international group of pediatric acute lymphoblastic leukemia experts and maintained by Data for the Common Good (D4CG) at the University of Chicago in collaboration with the Children's Oncology Group (COG). It is based on the collective requirements of its contributors.",
@@ -252,27 +252,10 @@ ACTIONS = {
     "changeMeaning()": changeMeaning,
 }
 
-def enforce_repo_root():
-    try:
-        # Get the top-level directory of the current Git repo
-        repo_root = subprocess.check_output(
-            ["git", "rev-parse", "--show-toplevel"],
-            stderr=subprocess.DEVNULL
-        ).decode().strip()
-    except subprocess.CalledProcessError:
-        print("Error: Not inside a Git repository.")
-        sys.exit(1)
-
-    # Compare to current working directory
-    cwd = os.getcwd()
-    if os.path.abspath(cwd) != os.path.abspath(repo_root):
-        print(f"\nPlease run this script from the repository root:\n   {repo_root}\n")
-        print(f"   You are currently in:\n   {cwd}\n")
-        sys.exit(1)
 
 #Code starts here
 if __name__ == '__main__':
-    enforce_repo_root()
+    sheets_helper.enforce_repo_root()
     print(
     """
     ▛▀▖▞▀▖▙▗▌   ▌ ▌▛▀▖▛▀▖▞▀▖▀▛▘▛▀▘

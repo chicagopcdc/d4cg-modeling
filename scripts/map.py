@@ -1,6 +1,6 @@
-import sys, os, json, time, subprocess, argparse, signal
+import sys, json, argparse, signal
 from datetime import datetime
-
+from utils import sheets_helper
 
 narrow_scraps = {}
 def enum_check(target_slot_name, target_schema, source_slot_name, source_schema):
@@ -212,24 +212,6 @@ def main(target_schema, source_schema):
                             add_mapping(target_slot, narrow_map(target_slot, target_schema, source_schema))
     return mappings
 
-#CHAT-GPT generated function
-def enforce_repo_root():
-    try:
-        # Get the top-level directory of the current Git repo
-        repo_root = subprocess.check_output(
-            ["git", "rev-parse", "--show-toplevel"],
-            stderr=subprocess.DEVNULL
-        ).decode().strip()
-    except subprocess.CalledProcessError:
-        print("Error: Not inside a Git repository.")
-        sys.exit(1)
-
-    # Compare to current working directory
-    cwd = os.getcwd()
-    if os.path.abspath(cwd) != os.path.abspath(repo_root):
-        print(f"\nPlease run this script from the repository root:\n   {repo_root}\n")
-        print(f"   You are currently in:\n   {cwd}\n")
-        sys.exit(1)
 
 #CHAT-GPT generated function
 def handle_interrupt(sig, frame):
@@ -249,6 +231,7 @@ mappings = {
 
 #Code starts here
 if __name__ == '__main__':
+    sheets_helper.enforce_repo_root()
     print(
         """
         ▛▀▖▞▀▖▙▗▌   ▙▗▌▞▀▖▛▀▖
@@ -265,8 +248,7 @@ if __name__ == '__main__':
             - python map.py schemas/pcdc/pcdc_v2.0 schemas/pcdc/pcdc_v1.13
         ______________________________________________
         """
-        )
-    enforce_repo_root()
+        ) 
     parser = argparse.ArgumentParser(description="Create a mapping file to pull data into the target format from the source format.")
     parser.add_argument("target_schema_path", help="Path to the target schema JSON file.")
     parser.add_argument("source_schema_path", help="Path to the source schema JSON file.")

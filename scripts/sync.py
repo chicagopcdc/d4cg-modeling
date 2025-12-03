@@ -1,6 +1,6 @@
-import sys, os, json, time, subprocess, argparse
+import os, json, time, argparse
 from datetime import datetime
-from utils import load_sheet
+from utils import load_sheet, sheets_helper
 
 
 class TaskManager:
@@ -24,23 +24,6 @@ class TaskManager:
     def __iter__(self):
         return iter(self.tasks)
 
-def enforce_repo_root():
-    try:
-        # Get the top-level directory of the current Git repo
-        repo_root = subprocess.check_output(
-            ["git", "rev-parse", "--show-toplevel"],
-            stderr=subprocess.DEVNULL
-        ).decode().strip()
-    except subprocess.CalledProcessError:
-        print("Error: Not inside a Git repository.")
-        sys.exit(1)
-
-    # Compare to current working directory
-    cwd = os.getcwd()
-    if os.path.abspath(cwd) != os.path.abspath(repo_root):
-        print(f"\nPlease run this script from the repository root:\n   {repo_root}\n")
-        print(f"   You are currently in:\n   {cwd}\n")
-        sys.exit(1)
 
 def sync(commons, dictionary):
     task_manager = TaskManager()
@@ -284,14 +267,10 @@ gsheets_ids = {
     }
 }
 
-def elapsed_time(start):
-    seconds = time.time() - start
-    m, s = divmod(seconds, 60)
-    return f"{int(m)}m {s:.2f}s"
 
 #Code starts here
 if __name__ == '__main__':
-    enforce_repo_root()
+    sheets_helper.enforce_repo_root()
     print(
     """
     ▛▀▖▞▀▖▙▗▌   ▞▀▖▌ ▌▙ ▌▞▀▖
@@ -321,17 +300,17 @@ if __name__ == '__main__':
         start = time.time()
         print("...loading sheet")
         sheet = load_sheet.load(gsheets_ids[commons][disease_group], args.subset)
-        print(elapsed_time(start))   
+        print(sheets_helper.elapsed_time(start))   
         if sheet != None:
             start = time.time()
             print("...parsing sheet")
             dictionary = load_sheet.parse(sheet)
-            print(elapsed_time(start))   
+            print(sheets_helper.elapsed_time(start))   
             if dictionary:
                 start = time.time()
                 print("...syncing sheet to schema")
                 task_manager = sync(commons, dictionary)
-                print(elapsed_time(start))
+                print(sheets_helper.elapsed_time(start))
                 task_manager.write("tasks/" + disease_group + "-taskfile-" + datetime.today().strftime("%Y%m%d") + ".tsv")
         else:
             print("\nERROR: The target was not found in this spreadsheet\n") 

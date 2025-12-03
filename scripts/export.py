@@ -1,7 +1,14 @@
-import sys, os, json, requests, urllib.parse, datetime, time, re, argparse, subprocess
-from google.auth.transport.requests import Request
+import sys, os, json, requests, urllib.parse, time, re, argparse
+from utils import sheets_helper, script_helper
 
 subset_info = {
+     "agcc": {
+         "agcc": {
+             "title": "AGCC Data Dictionary",
+             "id": "1bDkZIXCEZjT3YCgk2B2gNsqp9dhA6j9VlWVhmIP-0EM",
+             "description": ""
+         }
+     },
      "pcdc": {
         "pcdc": {
             "title": "PCDC Data Dictionary",
@@ -201,82 +208,6 @@ def get_so_definition(code):
         return ""
 
 
-def copy_formatting(format_id, new_id, new_name, token_path):
-    import pickle
-    from googleapiclient.discovery import build
-    # --- Auth with same sheets token you already have ---
-    with open(token_path, "rb") as f:
-        creds = pickle.load(f)
-    service = build("sheets", "v4", credentials=creds)
-    # --- 1. Find the template sheetId in the SOURCE spreadsheet ---
-    src_meta = service.spreadsheets().get(spreadsheetId=format_id).execute()
-    template_sheet_id = None
-    for sh in src_meta["sheets"]:
-        if sh["properties"]["title"] == "FORMATTING":
-            template_sheet_id = sh["properties"]["sheetId"]
-            break
-    # --- 2. Copy that sheet into the TARGET spreadsheet ---
-    copy_resp = service.spreadsheets().sheets().copyTo(
-        spreadsheetId=format_id,
-        sheetId=template_sheet_id,
-        body={"destinationSpreadsheetId": new_id}
-    ).execute()
-    new_sheet_id = copy_resp["sheetId"]     # numeric ID in the target spreadsheet
-    new_sheet_title = copy_resp["title"]    # Google will name it "Copy of …"
-    # --- 3. Rename the copied sheet to `new_name` in the TARGET spreadsheet ---
-    service.spreadsheets().batchUpdate(
-        spreadsheetId=new_id,
-        body={
-            "requests": [
-                {
-                    "updateSheetProperties": {
-                        "properties": {
-                            "sheetId": new_sheet_id,
-                            "title": new_name,
-                            "index": 0
-                        },
-                        "fields": "title,index"
-                    }
-                }
-            ]
-        }
-    ).execute()
-    # --- 4. Clear values only (keep formatting) ---
-    service.spreadsheets().values().clear(
-        spreadsheetId=new_id,
-        range=new_name,
-        body={}
-    ).execute()
-    return new_sheet_id
-    
-
-
-def create_sheet(subset, id):
-    import ezsheets 
-    # ----- GO INTO AUTH FOLDER SO EZSHEETS CAN SEE CREDS ---- #
-    orig_dir = os.getcwd()
-    os.chdir('scripts/auth')
-     # ----- -------------------------------------------- ---- #
-    name = datetime.datetime.now().strftime("%Y%m%d") + " " + subset
-    ss = ezsheets.Spreadsheet(id)
-    ss.IGNORE_QUOTA = True
-    existing_sheet = next((s for s in ss.sheets if s.title == name), None)
-    if existing_sheet:
-        print("...deleting existing sheet with same name (from an earlier run today)")
-        existing_sheet.delete()
-    copy_formatting(
-        format_id="1UDTMiw0LnLwqUBNc4O2_FAAX5UylCy-VXXRxEojK4IA",
-        new_id=id,
-        new_name=name,
-        token_path="token-sheets.pickle",
-    )
-    ss = ezsheets.Spreadsheet(id)
-    ss.IGNORE_QUOTA = True
-    sheet = ss[name]
-    os.chdir(orig_dir)
-    return sheet
-
-
 def init_rows(commons, disease_group, parent, schema, target):
     rows = []
     rows.append(['info', 'Title', subset_info[commons][disease_group]['title']])
@@ -303,14 +234,26 @@ def assemble(definitions, commons, disease_group, parent, schema, target):
     rows = init_rows(commons, disease_group, parent, schema, target)
     for c in schema['classes']:
         sclass = schema['classes'][c]
-        if target in sclass['in_subset'] or disease_group == "pcdc":
+        class_check = False
+        if commons == "pcdc":
+            if target in sclass['in_subset'] or disease_group == "pcdc":
+                class_check = True
+        else:
+            class_check = True
+        if class_check:
             table_count += 1
             if 'domain' in sclass['annotations']:
                 rows.append(['domain', sclass['annotations']['domain']])
             rows.append(['table', c, '', '', '', '', '', '', '', parse_notes(sclass['comments'], target)])
             for s in sclass['slots']:
                 slot = schema['slots'][s]
-                if target in sclass['slot_usage'][s]["in_subset"] or disease_group == "pcdc":
+                slot_check = False
+                if commons == "pcdc":
+                    if target in sclass['slot_usage'][s]["in_subset"] or disease_group == "pcdc":
+                        slot_check = True
+                else:
+                    slot_check = True
+                if slot_check:
                     variable_count += 1
                     print(c + " " + s)
                     if definitions == "retrieve":
@@ -325,13 +268,20 @@ def assemble(definitions, commons, disease_group, parent, schema, target):
                                 definition = fetch_definition(pv['meaning'])
                             else:
                                 definition = ""
-                            if target in pv['in_subset'] or disease_group == "pcdc":
+
+                            pv_check = False
+                            if commons == "pcdc":
+                                if target in pv['in_subset'] or disease_group == "pcdc":
+                                    pv_check = True
+                            else:
+                                pv_check = True
+                            if pv_check:
                                 rows.append(['pv', '', '', '', '','', value, definition, pv['meaning'], parse_notes(pv['comments'], target), parse_mappings(pv,target)])
             rows.append([]) 
             rows.append([])
     rows.append(['','Tables: ' + str(table_count)])
     rows.append(['','Variables: ' + str(variable_count)])
-    print(elapsed_time(start))
+    print(script_helper.elapsed_time(start))
     return rows
     
 
@@ -339,41 +289,37 @@ def export(subset, rows, id):
     #Create a new sheet object
     start = time.time()
     print('\n...creating sheet')
-    new_sheet = create_sheet(subset, id)
-    print(elapsed_time(start)) 
+    new_sheet = sheets_helper.create_formatted_sheet(subset, id)
+    print(script_helper.elapsed_time(start)) 
     #Add rows to the new sheet
     start = time.time() 
     print('\n...exporting tabular format to new sheet')
     new_sheet.updateRows(rows)
-    print(elapsed_time(start))
+    print(script_helper.elapsed_time(start))
 
 
-def elapsed_time(start):
-    seconds = time.time() - start
-    m, s = divmod(seconds, 60)
-    return f"{int(m)}m {s:.2f}s"
+def init(commons, disease_group, sheet_id, schema_path, subset, fast):
+    if os.path.exists(schema_path):
+        with open(schema_path, "r") as file_in:
+            schema = json.load(file_in)
+            if subset in schema["subsets"]:
+                print("Exporting: " + subset + "\n")
+                if fast:
+                    definitions = "skip"
+                else:
+                    definitions = "retrieve"
+                parent = schema_path.split("/")[2]
+                rows = assemble(definitions, commons, disease_group, parent, schema, subset)
+                export(subset, rows, sheet_id)
+            else:
+                print("\nERROR: Schema does not include this subset: " + subset + "\n")
+    else:
+        print("\nERROR: Schema not found locally: " + schema_path + "\n")
 
-def enforce_repo_root():
-    try:
-        # Get the top-level directory of the current Git repo
-        repo_root = subprocess.check_output(
-            ["git", "rev-parse", "--show-toplevel"],
-            stderr=subprocess.DEVNULL
-        ).decode().strip()
-    except subprocess.CalledProcessError:
-        print("Error: Not inside a Git repository.")
-        sys.exit(1)
 
-    # Compare to current working directory
-    cwd = os.getcwd()
-    if os.path.abspath(cwd) != os.path.abspath(repo_root):
-        print(f"\nPlease run this script from the repository root:\n   {repo_root}\n")
-        print(f"   You are currently in:\n   {cwd}\n")
-        sys.exit(1)
-
-#Code starts here d
+#Code starts here
 if __name__ == '__main__':
-    enforce_repo_root()
+    script_helper.enforce_repo_root()
     print(
     """
     ▛▀▖▞▀▖▙▗▌   ▛▀▘▌ ▌▛▀▖▞▀▖▛▀▖▀▛▘
@@ -396,26 +342,18 @@ if __name__ == '__main__':
     parser.add_argument("subset", help="Subset of the schema that should be exported.")
     parser.add_argument("--fast", action="store_true", help="Skip the definition fetching.")
     args = parser.parse_args()
-    if os.path.exists(args.schema):
-        with open(args.schema, "r") as file_in:
-            schema = json.load(file_in)
-            if args.subset in schema["subsets"]:
-                print("Exporting: " + args.subset + "\n")
-                schema_path = args.schema.replace(".json","")
-                parent = schema_path.split("/")[2]
-                commons = schema_path.split("/")[1]
-                disease_group = args.subset.split("_")[0].split("-")[0]
-                if args.fast:
-                    definitions = "skip"
-                else:
-                    definitions = "retrieve"
-                if disease_group in subset_info[commons]:
-                    rows = assemble(definitions, commons, disease_group, parent, schema, args.subset)
-                    export(args.subset, rows, subset_info[commons][disease_group]["id"])
-                else:
-                        print("\nERROR: Subset metadata is not present in export.py for target: " + args.subset + "\n")
-            else:
-                print("\nERROR: Schema does not include this subset: " + args.subset + "\n")
+
+    disease_group = args.subset.split("_")[0].split("-")[0]
+    schema = args.schema_path.replace(".json","")
+    commons = schema.split("/")[1]
+
+    if disease_group in subset_info[commons]:
+        sheet_id = subset_info[commons][disease_group]["id"]  
+        init(commons, disease_group, sheet_id, schema, args.subset, args.fast)         
     else:
-        print("\nERROR: Schema not found locally: " + args.schema + "\n")
+        print("\nERROR: Subset metadata is not present in export.py for target: " + args.subset + "\n")
+
+
+
+    
     
