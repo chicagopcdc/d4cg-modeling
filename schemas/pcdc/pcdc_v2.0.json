@@ -3941,9 +3941,6 @@
         "deauville_score",
         "qpet_score",
         "performance_score",
-        "fever",
-        "weight_loss",
-        "night_sweats",
         "initial_treatment_category",
         "mki",
         "vacterlh_association",
@@ -3960,6 +3957,7 @@
         "trilateral_retinoblastoma",
         "evaluator",
         "presentation_symptoms",
+        "presentation_symptoms_status",
         "clinical_signs",
         "suspected_referring_diagnosis",
         "anterior_segment_exam",
@@ -4068,21 +4066,6 @@
             "npc_v1.0-approved"
           ]
         },
-        "fever": {
-          "in_subset": [
-            "hl_v2.0-approved"
-          ]
-        },
-        "night_sweats": {
-          "in_subset": [
-            "hl_v2.0-approved"
-          ]
-        },
-        "weight_loss": {
-          "in_subset": [
-            "hl_v2.0-approved"
-          ]
-        },
         "initial_treatment_category": {
           "in_subset": [
             "nbl_v2.0-approved"
@@ -4164,6 +4147,11 @@
             "rb_v1.2-approved",
             "hl_v2.0-approved",
             "npc_v1.0-approved"
+          ]
+        },
+        "presentation_symptoms_status": {
+          "in_subset": [
+            "hl_v2.0-approved"
           ]
         },
         "clinical_signs": {
@@ -8265,24 +8253,6 @@
         "tier_optional": "npc_v1.0-approved"
       }
     },
-    "fever": {
-      "slot_uri": "ncit:C3038",
-      "range": "YesNoEnum",
-      "comments": [],
-      "annotations": {}
-    },
-    "night_sweats": {
-      "slot_uri": "ncit:C3279",
-      "range": "YesNoEnum",
-      "comments": [],
-      "annotations": {}
-    },
-    "weight_loss": {
-      "slot_uri": "ncit:C55339",
-      "range": "YesNoEnum",
-      "comments": [],
-      "annotations": {}
-    },
     "initial_treatment_category": {
       "slot_uri": "",
       "range": "InitialTreatmentCategoryEnum",
@@ -10559,8 +10529,16 @@
       "range": "PresentationSymptomsEnum",
       "comments": [],
       "annotations": {
-        "tier_mandatory": "hl_v2.0-approved",
+        "tier_priority": "hl_v2.0-approved",
         "tier_optional": "npc_v1.0-approved,rb_v1.2-approved"
+      }
+    },
+    "presentation_symptoms_status": {
+      "slot_uri": "",
+      "range": "YesNoEnum",
+      "comments": [],
+      "annotations": {
+        "tier_priority": "hl_v2.0-approved"
       }
     },
     "clinical_signs": {
@@ -64488,21 +64466,24 @@
           "meaning": "ncit:C3038",
           "comments": [],
           "in_subset": [
-            "npc_v1.0-approved"
+            "npc_v1.0-approved",
+            "hl_v2.0-approved"
           ]
         },
         "Night Sweats": {
           "meaning": "ncit:C3279",
           "comments": [],
           "in_subset": [
-            "npc_v1.0-approved"
+            "npc_v1.0-approved",
+            "hl_v2.0-approved"
           ]
         },
         "Weight Loss": {
           "meaning": "ncit:C55339",
           "comments": [],
           "in_subset": [
-            "npc_v1.0-approved"
+            "npc_v1.0-approved",
+            "hl_v2.0-approved"
           ]
         },
         "Headache": {
