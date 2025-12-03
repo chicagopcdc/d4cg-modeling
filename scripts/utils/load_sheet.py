@@ -1,42 +1,35 @@
-import os, re
+# scripts/utils/load_sheet.py
+
+import re
+from utils.sheets_helper import get_spreadsheet
 
 
 def load(gsheet_id, subset):
+    """
+    Find and return the sheet in gsheet_id whose info/Name == subset.
+    """
+    ss = get_spreadsheet(gsheet_id)
+    if ss is None:
+        print("Could not load sheet for subset: " + subset)
+        return None
 
-    # ----- IGNORE BLOCK, CUSTOM CODE TO ENABLE AN AUTH FOLDER ---- #
-    orig_dir = os.getcwd()
-    # Change to auth folder where pickle files are
-    os.chdir('scripts/auth')
-    import ezsheets 
-    try:
-        ss = ezsheets.Spreadsheet(gsheet_id)
-        ss.IGNORE_QUOTA = True
-    except ezsheets.EZSheetsException as e:
-        print("Ezsheets error: " + str(e))
-        os.chdir(orig_dir)
-        return
-    os.chdir(orig_dir)
-    # -------------------------------------------------------- #
-   
     # Look through all sheets in the dictionary
     for sheet in ss.sheets:
-        # Get all rows of the sheet
         rows = sheet.getRows()
         for i in range(len(rows)):
             line = rows[i]
             if line[0] in ["info", "INFO"]:
                 # Only load the target version sheet (single)
-                if line[1] == "Name":
-                    if line[2] == subset:
-                        return sheet
-                # Only load sheets for the target parent model (all)
-                #if scope == "full":
-                #    if line[1] == "Parent Data Model":
-                #        if line[2] == version:
-                #            return sheet
-            if line[0] in ["domain","DD"]:
+                if line[1] == "Name" and line[2] == subset:
+                    return sheet
+
+            if line[0] in ["domain", "DD"]:
+                # Once we hit the first domain/table rows, we can stop scanning this sheet
                 break
-   
+
+    # If nothing matched:
+    return None
+
 
 def parse(sheet):
     dictionary = {"info": {}, "tables": []}
@@ -73,7 +66,6 @@ def parse(sheet):
                 "name": table_name,
                 "domain": current_domain,
                 "implementation_notes": re.split(r'[|\n]', check_field(dictionary["info"]["name"], line, 9, "ImplementationNotes", i)),
-                "sequence_group": "",#check_field(dictionary["info"]["name"], line, 10, "SequenceGroup", i),
                 "mappings": [m.strip() for m in check_field(dictionary["info"]["name"], line, 10, "Mappings", i).split("|") if m.strip()],
                 "variables": []
             }
@@ -89,7 +81,6 @@ def parse(sheet):
                 "tier": check_field(dictionary["info"]["name"], line, 3, "Tier", i).lower(),
                 "code": check_field(dictionary["info"]["name"], line, 5, "VariableCode", i).split("|")[0].strip(),
                 "implementation_notes": re.split(r'[|\n]', check_field(dictionary["info"]["name"], line, 9, "ImplementationNotes", i)),
-                "sequence_group": "",#check_field(dictionary["info"]["name"], line, 10, "SequenceGroup", i),
                 "mappings": [m.strip() for m in check_field(dictionary["info"]["name"], line, 10, "Mappings", i).split("|") if m.strip()],
                 "permissible_values": []
             }
@@ -98,7 +89,6 @@ def parse(sheet):
                 "value": check_field(dictionary["info"]["name"], line, 6, "PermissibleValue", i),
                 "code": check_field(dictionary["info"]["name"], line, 8, "ValueCode", i).split("|")[0].strip(),
                 "implementation_notes": re.split(r'[|\n]', check_field(dictionary["info"]["name"], line, 9, "ImplementationNotes", i)),
-                "sequence_group": "",#check_field(dictionary["info"]["name"], line, 10, "SequenceGroup", i),
                 "mappings": [m.strip() for m in check_field(dictionary["info"]["name"], line, 10, "Mappings", i).split("|") if m.strip()]
             })
 
