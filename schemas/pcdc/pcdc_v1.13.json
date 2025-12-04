@@ -3130,14 +3130,12 @@
                 "response_criteria": {
                     "in_subset": [
                         "gct_v1.2-live",
-                        "aml_v1.8-live",
                         "hl_v1.0-live"
                     ]
                 },
                 "response_criteria_version": {
                     "in_subset": [
                         "gct_v1.2-live",
-                        "aml_v1.8-live",
                         "hl_v1.0-live"
                     ]
                 },

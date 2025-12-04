@@ -231,6 +231,7 @@ def assemble(definitions, commons, disease_group, parent, schema, target):
     variable_count = 0
     start = time.time()
     print('...preparing tabular format')
+    definition_cache = {}
     rows = init_rows(commons, disease_group, parent, schema, target)
     for c in schema['classes']:
         sclass = schema['classes'][c]
@@ -257,18 +258,17 @@ def assemble(definitions, commons, disease_group, parent, schema, target):
                     variable_count += 1
                     print(c + " " + s)
                     if definitions == "retrieve":
-                        definition = fetch_definition(slot['slot_uri'])
+                        if slot['slot_uri'] in definition_cache:
+                            definition = definition_cache[slot['slot_uri']]
+                        else:
+                            definition = fetch_definition(slot['slot_uri'])
+                            definition_cache[slot['slot_uri']] = definition
                     else:
                         definition = ""
                     rows.append(['var', s, parse_type(slot), parse_tier(target, slot), definition, slot['slot_uri'], '', '', '', parse_notes(slot['comments'], target), parse_mappings(slot, target)])
                     if 'Enum' in slot['range']:
                         for value in schema['enums'][slot['range']]['permissible_values']:
                             pv = schema['enums'][slot['range']]['permissible_values'][value]
-                            if definitions == "retrieve":
-                                definition = fetch_definition(pv['meaning'])
-                            else:
-                                definition = ""
-
                             pv_check = False
                             if commons == "pcdc":
                                 if target in pv['in_subset'] or disease_group == "pcdc":
@@ -276,6 +276,14 @@ def assemble(definitions, commons, disease_group, parent, schema, target):
                             else:
                                 pv_check = True
                             if pv_check:
+                                if definitions == "retrieve":
+                                    if pv['meaning'] in definition_cache:
+                                        definition = definition_cache[pv['meaning']]
+                                    else:
+                                        definition = fetch_definition(pv['meaning'])
+                                        definition_cache[pv['meaning']] = definition
+                                else:
+                                    definition = ""
                                 rows.append(['pv', '', '', '', '','', value, definition, pv['meaning'], parse_notes(pv['comments'], target), parse_mappings(pv,target)])
             rows.append([]) 
             rows.append([])
@@ -344,12 +352,12 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     disease_group = args.subset.split("_")[0].split("-")[0]
-    schema = args.schema_path.replace(".json","")
-    commons = schema.split("/")[1]
+    schema_path = args.schema.replace(".json","")
+    commons = schema_path.split("/")[1]
 
     if disease_group in subset_info[commons]:
         sheet_id = subset_info[commons][disease_group]["id"]  
-        init(commons, disease_group, sheet_id, schema, args.subset, args.fast)         
+        init(commons, disease_group, sheet_id, args.schema, args.subset, args.fast)         
     else:
         print("\nERROR: Subset metadata is not present in export.py for target: " + args.subset + "\n")
 
