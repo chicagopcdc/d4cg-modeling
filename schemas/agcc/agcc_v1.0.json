@@ -20,6 +20,8 @@
             "description": "A tabular data dictionary for the full agcc_v1.0 model can be viewed online at: https://docs.google.com/spreadsheets/d/1bDkZIXCEZjT3YCgk2B2gNsqp9dhA6j9VlWVhmIP-0EM"
         }
     },
+    #Lines of therapy vs relapse
+    #Transfusion as a complication of treatment
     "classes": {
         "Person": {
             "slots": [
