@@ -4216,6 +4216,9 @@
         "site_other",
         "laterality",
         "extent",
+        "mass_present",
+        "viable_tumor_specimen",
+        "viable_tumor_margin",
         "margins",
         "number_nodes",
         "number_nodes_numeric",
@@ -4435,6 +4438,21 @@
             "hl_v2.0-approved",
             "os_v2.0-approved"
           ]
+        },
+        "mass_present": {
+            "in_subset": [
+                "rms_v3.0-approved"
+            ]
+        },
+        "viable_tumor_specimen": {
+            "in_subset": [
+                "rms_v3.0-approved"
+            ]
+        },
+        "viable_tumor_margin": {
+            "in_subset": [
+                "rms_v3.0-approved"
+            ]
         },
         "margins": {
           "in_subset": [
@@ -8307,6 +8325,30 @@
       "annotations": {
         "tier_optional": "hl_v2.0-approved"
       }
+    },
+    "mass_present": {
+        "slot_uri": "",
+        "range": "YesNoEnum",
+        "comments": [],
+        "annotations": {
+            "tier_optional": "rms_v3.0-approved"
+        }
+    },
+    "viable_tumor_specimen": {
+        "slot_uri": "",
+        "range": "YesNoEnum",
+        "comments": [],
+        "annotations": {
+            "tier_optional": "rms_v3.0-approved"
+        }
+    },
+    "viable_tumor_margin": {
+        "slot_uri": "",
+        "range": "YesNoEnum",
+        "comments": [],
+        "annotations": {
+            "tier_optional": "rms_v3.0-approved"
+        }
     },
     "margins": {
       "slot_uri": "ncit:C41227",
