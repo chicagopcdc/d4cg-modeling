@@ -6547,9 +6547,11 @@
         "age_at_smn",
         "smn_site",
         "morph_code",
+        "morph_code_text",
         "morph_code_system",
         "morph_code_system_version",
         "top_code",
+        "top_code_text",
         "top_code_system",
         "top_code_system_version",
         "smn_field"
@@ -6616,6 +6618,17 @@
 
           ]
         },
+        "morph_code_text": {
+          "in_subset": [
+            "gct_v2.0-approved",
+            "hl_v2.0-approved",
+            "os_v2.0-approved",
+            "pre_v1.0-approved",
+            "npc_v1.0-approved",
+            "cns_v1.2-approved"
+
+          ]
+        },
         "morph_code_system": {
           "in_subset": [
             "gct_v2.0-approved",
@@ -6642,6 +6655,16 @@
             "os_v2.0-approved",
             "pre_v1.0-approved",
             "aml_v2.0-approved",
+            "npc_v1.0-approved",
+            "cns_v1.2-approved"
+          ]
+        },
+         "top_code_text": {
+          "in_subset": [
+            "gct_v2.0-approved",
+            "hl_v2.0-approved",
+            "os_v2.0-approved",
+            "pre_v1.0-approved",
             "npc_v1.0-approved",
             "cns_v1.2-approved"
           ]
