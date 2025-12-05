@@ -4153,7 +4153,9 @@
         },
         "presentation_symptoms_status": {
           "in_subset": [
-            "hl_v2.0-approved"
+            "rb_v1.2-approved",
+            "hl_v2.0-approved",
+            "npc_v1.0-approved"
           ]
         },
         "clinical_signs": {
@@ -10529,6 +10531,15 @@
     "presentation_symptoms": {
       "slot_uri": "",
       "range": "PresentationSymptomsEnum",
+      "comments": [],
+      "annotations": {
+        "tier_priority": "hl_v2.0-approved",
+        "tier_optional": "npc_v1.0-approved,rb_v1.2-approved"
+      }
+    },
+    "presentation_symptoms_status": {
+      "slot_uri": "",
+      "range": "YesNoEnum",
       "comments": [],
       "annotations": {
         "tier_priority": "hl_v2.0-approved",
