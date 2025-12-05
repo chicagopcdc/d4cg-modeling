@@ -1274,7 +1274,8 @@
           "in_subset": [
             "fa_v1.0-draft",
             "lt_v1.0-approved",
-            "pre_v1.0-approved"
+            "pre_v1.0-approved",
+            "rb_v1.2-approved"
           ]
         },
         "condition_status": {
@@ -1871,6 +1872,8 @@
         "timings_submitter_id",
         "age_at_genetic_analysis",
         "year_at_genetic_analysis",
+        "review_source",
+        "determination_source",
         "source_lab",
         "test_name",
         "test_version",
@@ -1885,8 +1888,6 @@
         "genomic_source_class",
         "mosaicism",
         "mosaicism_percent",
-        "review_source",
-        "determination_source",
         "genetic_analysis_status",
         "alteration",
         "alteration_type",
@@ -2057,7 +2058,6 @@
         },
         "tumor_classification": {
           "in_subset": [
-            "cns_v1.2-approved",
             "ews_v2.0-approved",
             "fa_v1.0-draft",
             "gct_v2.0-approved",
@@ -2106,7 +2106,6 @@
         },
         "review_source": {
           "in_subset": [
-            "cns_v1.2-approved",
             "ews_v2.0-approved",
             "fa_v1.0-draft",
             "gct_v2.0-approved",
@@ -2117,7 +2116,6 @@
         },
         "determination_source": {
           "in_subset": [
-            "cns_v1.2-approved",
             "fa_v1.0-draft"
           ]
         },
@@ -2538,8 +2536,7 @@
         "aml_v2.0-approved",
         "fa_v1.0-draft",
         "hl_v2.0-approved",
-        "npc_v1.0-approved",
-        "rb_v1.2-approved"
+        "npc_v1.0-approved"
       ],
       "annotations": {
         "domain": "testing"
@@ -2586,8 +2583,7 @@
             "aml_v2.0-approved",
             "fa_v1.0-draft",
             "hl_v2.0-approved",
-            "npc_v1.0-approved",
-            "rb_v1.2-approved"
+            "npc_v1.0-approved"
           ]
         },
         "function_test": {
@@ -2596,7 +2592,6 @@
             "fa_v1.0-draft",
             "hl_v2.0-approved",
             "npc_v1.0-approved",
-            "rb_v1.2-approved",
             "rb_v1.2-approved"
           ]
         },
@@ -2934,7 +2929,6 @@
         },
         "review_source": {
           "in_subset": [
-            "cns_v1.2-approved",
             "ews_v2.0-approved",
             "fa_v1.0-draft",
             "gct_v2.0-approved",
@@ -3208,7 +3202,6 @@
         },
         "review_source": {
           "in_subset": [
-            "cns_v1.2-approved",
             "ews_v2.0-approved",
             "fa_v1.0-draft",
             "gct_v2.0-approved",
@@ -3357,6 +3350,7 @@
         "review_source",
         "tumor_state",
         "detection_method",
+        "mri_sequence",
         "tumor_classification",
         "classification_status",
         "disease_site",
@@ -3389,7 +3383,6 @@
         "top_code_system",
         "top_code_system_version",
         "tumor_number",
-        "mri_sequence",
         "tumor_presentation",
         "tissue_type",
         "multiplicity",
@@ -3943,6 +3936,9 @@
         "deauville_score",
         "qpet_score",
         "performance_score",
+        "fever",
+        "weight_loss",
+        "night_sweats",
         "initial_treatment_category",
         "mki",
         "vacterlh_association",
@@ -3959,7 +3955,6 @@
         "trilateral_retinoblastoma",
         "evaluator",
         "presentation_symptoms",
-        "presentation_symptoms_status",
         "clinical_signs",
         "suspected_referring_diagnosis",
         "anterior_segment_exam",
@@ -4068,6 +4063,21 @@
             "npc_v1.0-approved"
           ]
         },
+        "fever": {
+          "in_subset": [
+            "hl_v2.0-approved"
+          ]
+        },
+        "night_sweats": {
+          "in_subset": [
+            "hl_v2.0-approved"
+          ]
+        },
+        "weight_loss": {
+          "in_subset": [
+            "hl_v2.0-approved"
+          ]
+        },
         "initial_treatment_category": {
           "in_subset": [
             "nbl_v2.0-approved"
@@ -4149,11 +4159,6 @@
             "rb_v1.2-approved",
             "hl_v2.0-approved",
             "npc_v1.0-approved"
-          ]
-        },
-        "presentation_symptoms_status": {
-          "in_subset": [
-            "hl_v2.0-approved"
           ]
         },
         "clinical_signs": {
@@ -4333,7 +4338,6 @@
         },
         "status": {
           "in_subset": [
-            "cns_v1.2-approved",
             "ews_v2.0-approved",
             "fa_v1.0-draft",
             "nbl_v2.0-approved",
@@ -4436,7 +4440,6 @@
         },
         "margins": {
           "in_subset": [
-            "cns_v1.2-approved",
             "ews_v2.0-approved",
             "fa_v1.0-draft",
             "gct_v2.0-approved",
@@ -5154,7 +5157,6 @@
         },
         "non_protocol_timing": {
           "in_subset": [
-            "cns_v1.2-approved",
             "ews_v2.0-approved",
             "hl_v2.0-approved"
           ]
@@ -5200,7 +5202,6 @@
         "laterality": {
           "in_subset": [
             "aml_v2.0-approved",
-            "cns_v1.2-approved",
             "ews_v2.0-approved",
             "fa_v1.0-draft",
             "gct_v2.0-approved",
@@ -5851,7 +5852,7 @@
         "platelet_threshold_at_response",
         "interim_response",
         "pct_change",
-        "symptoms_at_response",
+        "symptoms",
         "palpable_nodes",
         "nodular_splenic",
         "necrosis",
@@ -6040,7 +6041,7 @@
             "hl_v2.0-approved"
           ]
         },
-        "symptoms_at_response": {
+        "symptoms": {
           "in_subset": [
             "hl_v2.0-approved"
           ]
@@ -6534,7 +6535,8 @@
         "hl_v2.0-approved",
         "os_v2.0-approved",
         "aml_v2.0-approved",
-        "npc_v1.0-approved"
+        "npc_v1.0-approved",
+        "cns_v1.2-approved"
       ],
       "annotations": {
         "domain": "monitoring"
@@ -6546,7 +6548,8 @@
             "hl_v2.0-approved",
             "os_v2.0-approved",
             "aml_v2.0-approved",
-            "npc_v1.0-approved"
+            "npc_v1.0-approved",
+            "cns_v1.2-approved"
           ]
         },
         "timings_submitter_id": {
@@ -6555,7 +6558,8 @@
             "hl_v2.0-approved",
             "os_v2.0-approved",
             "aml_v2.0-approved",
-            "npc_v1.0-approved"
+            "npc_v1.0-approved",
+            "cns_v1.2-approved"
           ]
         },
         "age_at_smn": {
@@ -6564,7 +6568,8 @@
             "hl_v2.0-approved",
             "os_v2.0-approved",
             "aml_v2.0-approved",
-            "npc_v1.0-approved"
+            "npc_v1.0-approved",
+            "cns_v1.2-approved"
           ]
         },
         "smn_site": {
@@ -6581,7 +6586,9 @@
             "os_v2.0-approved",
             "pre_v1.0-approved",
             "aml_v2.0-approved",
-            "npc_v1.0-approved"
+            "npc_v1.0-approved",
+            "cns_v1.2-approved"
+
           ]
         },
         "morph_code_system": {
@@ -6591,14 +6598,16 @@
             "os_v2.0-approved",
             "pre_v1.0-approved",
             "aml_v2.0-approved",
-            "npc_v1.0-approved"
+            "npc_v1.0-approved",
+            "cns_v1.2-approved"
           ]
         },
         "morph_code_system_version": {
           "in_subset": [
             "pre_v1.0-approved",
             "aml_v2.0-approved",
-            "npc_v1.0-approved"
+            "npc_v1.0-approved",
+            "cns_v1.2-approved"
           ]
         },
         "top_code": {
@@ -6608,7 +6617,8 @@
             "os_v2.0-approved",
             "pre_v1.0-approved",
             "aml_v2.0-approved",
-            "npc_v1.0-approved"
+            "npc_v1.0-approved",
+            "cns_v1.2-approved"
           ]
         },
         "top_code_system": {
@@ -6618,14 +6628,16 @@
             "os_v2.0-approved",
             "pre_v1.0-approved",
             "aml_v2.0-approved",
-            "npc_v1.0-approved"
+            "npc_v1.0-approved",
+            "cns_v1.2-approved"
           ]
         },
         "top_code_system_version": {
           "in_subset": [
             "pre_v1.0-approved",
             "aml_v2.0-approved",
-            "npc_v1.0-approved"
+            "npc_v1.0-approved",
+            "cns_v1.2-approved"
           ]
         },
         "smn_field": {
@@ -8255,6 +8267,24 @@
         "tier_optional": "npc_v1.0-approved"
       }
     },
+    "fever": {
+      "slot_uri": "ncit:C3038",
+      "range": "YesNoEnum",
+      "comments": [],
+      "annotations": {}
+    },
+    "night_sweats": {
+      "slot_uri": "ncit:C3279",
+      "range": "YesNoEnum",
+      "comments": [],
+      "annotations": {}
+    },
+    "weight_loss": {
+      "slot_uri": "ncit:C55339",
+      "range": "YesNoEnum",
+      "comments": [],
+      "annotations": {}
+    },
     "initial_treatment_category": {
       "slot_uri": "",
       "range": "InitialTreatmentCategoryEnum",
@@ -8562,7 +8592,7 @@
     },
     "rt_dose": {
       "slot_uri": "ncit:C173282",
-      "range": "integer",
+      "range": "decimal",
       "comments": [
         "(aml_v2.0-approved) ConsortiumNote: Note: Total dose of radiation over the period encompassed by AGE_AT_RT_START to _AGE_AT_RT_END"
       ],
@@ -8584,7 +8614,7 @@
     },
     "num_fraction": {
       "slot_uri": "ncit:C175034",
-      "range": "decimal",
+      "range": "integer",
       "comments": [
         "(rb_v1.2-approved) ConsortiumNote: Only applies to external beam"
       ],
@@ -8594,7 +8624,7 @@
     },
     "boost_dose": {
       "slot_uri": "ncit:C185679",
-      "range": "integer",
+      "range": "decimal",
       "comments": [],
       "annotations": {
         "tier_mandatory": "hl_v2.0-approved"
@@ -10531,16 +10561,8 @@
       "range": "PresentationSymptomsEnum",
       "comments": [],
       "annotations": {
-        "tier_priority": "hl_v2.0-approved",
+        "tier_mandatory": "hl_v2.0-approved",
         "tier_optional": "npc_v1.0-approved,rb_v1.2-approved"
-      }
-    },
-    "symptoms_at_response": {
-      "slot_uri": "ncit:C25269",
-      "range": "YesNoEnum",
-      "comments": [],
-      "annotations": {
-        "tier_priority": "hl_v2.0-approved"
       }
     },
     "clinical_signs": {
@@ -10923,8 +10945,8 @@
     },
     "YesNoEnum": {
       "permissible_values": {
-        "Yes": {
-          "meaning": "ncit:C49488",
+        "No": {
+          "meaning": "ncit:C49487",
           "comments": [],
           "in_subset": [
             "aml_v2.0-approved",
@@ -10943,8 +10965,8 @@
             "rms_v3.0-approved"
           ]
         },
-        "No": {
-          "meaning": "ncit:C49487",
+        "Yes": {
+          "meaning": "ncit:C49488",
           "comments": [],
           "in_subset": [
             "aml_v2.0-approved",
@@ -23416,8 +23438,8 @@
     },
     "CauseOfDeathRankingEnum": {
       "permissible_values": {
-        "Primary": {
-          "meaning": "ncit:C99531",
+        "Contributory": {
+          "meaning": "ncit:C168948",
           "comments": [],
           "in_subset": [
             "aml_v2.0-approved",
@@ -23430,8 +23452,8 @@
             "rb_v1.2-approved"
           ]
         },
-        "Contributory": {
-          "meaning": "ncit:C168948",
+        "Primary": {
+          "meaning": "ncit:C99531",
           "comments": [
             "(os_v2.0-approved) ConsortiumNote: Note: There may be multiple contributory causes of death, but only one primary cause of death. Note: Only fill in this variable if LKSS is 'Dead'."
           ],
@@ -23516,12 +23538,18 @@
             "rb_v1.2-approved"
           ]
         },
+        "First degree relative, NOS": {
+          "meaning": "",
+          "comments": [],
+          "in_subset": [
+            "fa_v1.0-draft"
+          ]
+        },
         "First-Degree Relative, NOS": {
           "meaning": "ncit:C21481",
           "comments": [],
           "in_subset": [
-            "npc_v1.0-approved",
-            "fa_v1.0-draft"
+            "npc_v1.0-approved"
           ]
         },
         "Mother": {
@@ -23534,12 +23562,11 @@
             "rb_v1.2-approved"
           ]
         },
-        "Second Degree Relative, NOS": {
+        "Second degree relative, NOS": {
           "meaning": "",
           "comments": [],
           "in_subset": [
-            "fa_v1.0-draft",
-            "rb_v1.2-approved"
+            "fa_v1.0-draft"
           ]
         },
         "Sister": {
@@ -30581,23 +30608,11 @@
     },
     "TumorClassificationEnum": {
       "permissible_values": {
-        "Primary": {
-          "meaning": "ncit:C8509",
+        "Benign": {
+          "meaning": "ncit:C14172",
           "comments": [],
           "in_subset": [
-            "cns_v1.2-approved",
-            "ews_v2.0-approved",
-            "fa_v1.0-draft",
-            "gct_v2.0-approved",
-            "hl_v2.0-approved",
-            "lt_v1.0-approved",
-            "nbl_v2.0-approved",
-            "npc_v1.0-approved",
-            "nrsts_v2.0-approved",
-            "os_v2.0-approved",
-            "pre_v1.0-approved",
-            "rb_v1.2-approved",
-            "rms_v3.0-approved"
+            "fa_v1.0-draft"
           ]
         },
         "Local Extension": {
@@ -30609,22 +30624,6 @@
             "os_v2.0-approved",
             "pre_v1.0-approved",
             "rb_v1.2-approved"
-          ]
-        },
-        "Regional Nodes": {
-          "meaning": "",
-          "comments": [
-            "(npc_v1.0-approved) ConsortiumNote: Includes 'PTV2' and 'PTV3'"
-          ],
-          "in_subset": [
-            "ews_v2.0-approved",
-            "fa_v1.0-draft",
-            "gct_v2.0-approved",
-            "lt_v1.0-approved",
-            "npc_v1.0-approved",
-            "os_v2.0-approved",
-            "pre_v1.0-approved",
-            "rms_v3.0-approved"
           ]
         },
         "Metastatic": {
@@ -30646,6 +30645,13 @@
             "rms_v3.0-approved"
           ]
         },
+        "Not Applicable": {
+          "meaning": "",
+          "comments": [],
+          "in_subset": [
+            "fa_v1.0-draft"
+          ]
+        },
         "Premalignant": {
           "meaning": "ncit:C25624",
           "comments": [],
@@ -30653,18 +30659,39 @@
             "fa_v1.0-draft"
           ]
         },
-         "Benign": {
-          "meaning": "ncit:C14172",
+        "Primary": {
+          "meaning": "ncit:C8509",
           "comments": [],
           "in_subset": [
-            "fa_v1.0-draft"
+            "cns_v1.2-approved",
+            "ews_v2.0-approved",
+            "fa_v1.0-draft",
+            "gct_v2.0-approved",
+            "hl_v2.0-approved",
+            "lt_v1.0-approved",
+            "nbl_v2.0-approved",
+            "npc_v1.0-approved",
+            "nrsts_v2.0-approved",
+            "os_v2.0-approved",
+            "pre_v1.0-approved",
+            "rb_v1.2-approved",
+            "rms_v3.0-approved"
           ]
         },
-         "Not Applicable": {
+        "Regional Nodes": {
           "meaning": "",
-          "comments": [],
+          "comments": [
+            "(npc_v1.0-approved) ConsortiumNote: Includes 'PTV2' and 'PTV3'"
+          ],
           "in_subset": [
-            "fa_v1.0-draft"
+            "ews_v2.0-approved",
+            "fa_v1.0-draft",
+            "gct_v2.0-approved",
+            "lt_v1.0-approved",
+            "npc_v1.0-approved",
+            "os_v2.0-approved",
+            "pre_v1.0-approved",
+            "rms_v3.0-approved"
           ]
         },
         "Unknown": {
@@ -34140,6 +34167,16 @@
             "fa_v1.0-draft"
           ]
         },
+        "Hemangioblastoma": {
+          "meaning": "icdo:9161/1",
+          "comments": [
+            "(cns_v1.2-approved) ConsortiumNote: DIAGNOSIS_CATEGORY = 'Other'"
+          ],
+          "in_subset": [
+            "cns_v1.2-approved",
+            "fa_v1.0-draft"
+          ]
+        },
         "Hemangioma, NOS": {
           "meaning": "icdo:9120/0",
           "comments": [],
@@ -35443,10 +35480,15 @@
             "fa_v1.0-draft"
           ]
         },
-        "Malignant peripheral nerve sheath tumor": {
-          "meaning": "icdo:9540/3",
-          "comments": [],
+        "Malignant Peripheral Nerve Sheath Tumor": {
+          "meaning": "ncit:C3798",
+          "comments": [
+            "(cns_v1.2-approved) ConsortiumNote: DIAGNOSIS_CATEGORY = 'Other'"
+          ],
           "in_subset": [
+            "cns_v1.2-approved",
+            "npc_v1.0-approved",
+            "nrsts_v2.0-approved",
             "fa_v1.0-draft"
           ]
         },
@@ -35765,6 +35807,15 @@
           "comments": [],
           "in_subset": [
             "fa_v1.0-draft"
+          ]
+        },
+        "Meningioma": {
+          "meaning": "ncit:C3230",
+          "comments": [
+            "(cns_v1.2-approved) ConsortiumNote: DIAGNOSIS_CATEGORY = 'Other'"
+          ],
+          "in_subset": [
+            "cns_v1.2-approved"
           ]
         },
         "Meningioma, NOS": {
@@ -37886,8 +37937,7 @@
           "meaning": "icdo:9510/3",
           "comments": [],
           "in_subset": [
-            "fa_v1.0-draft",
-            "rb_v1.2-approved"
+            "fa_v1.0-draft"
           ]
         },
         "Retinoblastoma, differentiated": {
@@ -38020,6 +38070,15 @@
           "comments": [],
           "in_subset": [
             "fa_v1.0-draft"
+          ]
+        },
+        "Schwannoma": {
+          "meaning": "ncit:C3269",
+          "comments": [
+            "(cns_v1.2-approved) ConsortiumNote: DIAGNOSIS_CATEGORY = 'Other'"
+          ],
+          "in_subset": [
+            "cns_v1.2-approved"
           ]
         },
         "Schneiderian carcinoma": {
@@ -38604,6 +38663,15 @@
           "in_subset": [
             "cns_v1.2-approved",
             "fa_v1.0-draft"
+          ]
+        },
+        "Subependymal Giant Cell Astrocytoma": {
+          "meaning": "ncit:C3696",
+          "comments": [
+            "(cns_v1.2-approved) ConsortiumNote: DIAGNOSIS_CATEGORY = 'Low-Grade Glioma'"
+          ],
+          "in_subset": [
+            "cns_v1.2-approved"
           ]
         },
         "Supependymal giant cell astrocytoma": {
@@ -39354,7 +39422,8 @@
             "hl_v2.0-approved",
             "os_v2.0-approved",
             "pre_v1.0-approved",
-            "npc_v1.0-approved"
+            "npc_v1.0-approved",
+            "cns_v1.2-approved"
           ]
         }
       }
@@ -52711,24 +52780,6 @@
             "cns_v1.2-approved"
           ]
         },
-        "Not Applicable": {
-          "meaning": "ncit:C48660",
-          "comments": [],
-          "in_subset": [
-            "npc_v1.0-approved"
-          ]
-        },
-        "Not Evaluable": {
-          "meaning": "ncit:C62222",
-          "comments": [],
-          "in_subset": [
-            "cns_v1.2-approved",
-            "ews_v2.0-approved",
-            "npc_v1.0-approved",
-            "nrsts_v2.0-approved",
-            "rms_v3.0-approved"
-          ]
-        },
         "PERCIST >> Complete Metabolic Response": {
           "meaning": "",
           "comments": [],
@@ -52788,6 +52839,15 @@
         "RAPNO >> Complete Response": {
           "meaning": "",
           "comments": [],
+          "in_subset": [
+            "cns_v1.2-approved"
+          ]
+        },
+        "RAPNO >> Major Response": {
+          "meaning": "",
+          "comments": [
+            "(cns_v1.2approved) ConsortiumNote: Only use for RAPNO low-grade gliomas"
+          ],
           "in_subset": [
             "cns_v1.2-approved"
           ]
@@ -52968,28 +53028,32 @@
           "meaning": "",
           "comments": [],
           "in_subset": [
-            "npc_v1.0-approved"
+            "npc_v1.0-approved",
+            "cns_v1.2-approved"
           ]
         },
         "WHO >> Partial Response": {
           "meaning": "",
           "comments": [],
           "in_subset": [
-            "npc_v1.0-approved"
+            "npc_v1.0-approved",
+            "cns_v1.2-approved"
           ]
         },
         "WHO >> Progressive Disease": {
           "meaning": "",
           "comments": [],
           "in_subset": [
-            "npc_v1.0-approved"
+            "npc_v1.0-approved",
+            "cns_v1.2-approved"
           ]
         },
         "WHO >> Stable Disease": {
           "meaning": "",
           "comments": [],
           "in_subset": [
-            "npc_v1.0-approved"
+            "npc_v1.0-approved",
+            "cns_v1.2-approved"
           ]
         },
         "iRANO >> Complete Response": {
@@ -53062,6 +53126,24 @@
           "comments": [],
           "in_subset": [
             "gct_v2.0-approved"
+          ]
+        },
+        "Not Applicable": {
+          "meaning": "ncit:C48660",
+          "comments": [],
+          "in_subset": [
+            "npc_v1.0-approved"
+          ]
+        },
+        "Not Evaluable": {
+          "meaning": "ncit:C62222",
+          "comments": [],
+          "in_subset": [
+            "cns_v1.2-approved",
+            "ews_v2.0-approved",
+            "npc_v1.0-approved",
+            "nrsts_v2.0-approved",
+            "rms_v3.0-approved"
           ]
         },
         "Unknown": {
@@ -55364,12 +55446,8 @@
         },
         "Hemangioblastoma": {
           "meaning": "icdo:9161/1",
-          "comments": [
-            "(cns_v1.2-approved) ConsortiumNote: DIAGNOSIS_CATEGORY = 'Other'"
-          ],
+          "comments": [],
           "in_subset": [
-            "cns_v1.2-approved",
-            "fa_v1.0-draft",
             "npc_v1.0-approved"
           ]
         },
@@ -55438,11 +55516,8 @@
         },
         "Malignant Peripheral Nerve Sheath Tumor": {
           "meaning": "ncit:C3798",
-          "comments": [
-            "(cns_v1.2-approved) ConsortiumNote: DIAGNOSIS_CATEGORY = 'Other'"
-          ],
+          "comments": [],
           "in_subset": [
-            "cns_v1.2-approved",
             "npc_v1.0-approved",
             "nrsts_v2.0-approved"
           ]
@@ -55484,11 +55559,8 @@
         },
         "Meningioma": {
           "meaning": "ncit:C3230",
-          "comments": [
-            "(cns_v1.2-approved) ConsortiumNote: DIAGNOSIS_CATEGORY = 'Other'"
-          ],
+          "comments": [],
           "in_subset": [
-            "cns_v1.2-approved",
             "npc_v1.0-approved"
           ]
         },
@@ -55600,11 +55672,8 @@
         },
         "Schwannoma": {
           "meaning": "ncit:C3269",
-          "comments": [
-            "(cns_v1.2-approved) ConsortiumNote: DIAGNOSIS_CATEGORY = 'Other'"
-          ],
+          "comments": [],
           "in_subset": [
-            "cns_v1.2-approved",
             "npc_v1.0-approved"
           ]
         },
@@ -55638,11 +55707,8 @@
         },
         "Subependymal Giant Cell Astrocytoma": {
           "meaning": "ncit:C3696",
-          "comments": [
-            "(cns_v1.2-approved) ConsortiumNote: DIAGNOSIS_CATEGORY = 'Low-Grade Glioma'"
-          ],
+          "comments": [],
           "in_subset": [
-            "cns_v1.2-approved",
             "npc_v1.0-approved"
           ]
         },
@@ -57347,7 +57413,8 @@
             "hl_v2.0-approved",
             "os_v2.0-approved",
             "pre_v1.0-approved",
-            "npc_v1.0-approved"
+            "npc_v1.0-approved",
+            "cns_v1.2-approved"
           ]
         }
       }
@@ -59957,22 +60024,6 @@
     },
     "TnmTumorTEnum": {
       "permissible_values": {
-        "TX": {
-          "meaning": "ncit:C48737",
-          "comments": [],
-          "in_subset": [
-            "fa_v1.0-draft",
-            "rb_v1.2-approved"
-          ]
-        },
-        "Tis": {
-          "meaning": "ncit:C48738",
-          "comments": [],
-          "in_subset": [
-            "fa_v1.0-draft",
-            "rb_v1.2-approved"
-          ]
-        },
         "T0": {
           "meaning": "ncit:C48719",
           "comments": [],
@@ -60129,19 +60180,27 @@
             "fa_v1.0-draft",
             "rb_v1.2-approved"
           ]
-        }
-      }
-    },
-    "TnmNodeNEnum": {
-      "permissible_values": {
-        "NX": {
-          "meaning": "ncit:C48718",
+        },
+        "TX": {
+          "meaning": "ncit:C48737",
           "comments": [],
           "in_subset": [
             "fa_v1.0-draft",
             "rb_v1.2-approved"
           ]
         },
+        "Tis": {
+          "meaning": "ncit:C48738",
+          "comments": [],
+          "in_subset": [
+            "fa_v1.0-draft",
+            "rb_v1.2-approved"
+          ]
+        }
+      }
+    },
+    "TnmNodeNEnum": {
+      "permissible_values": {
         "N0": {
           "meaning": "ncit:C48705",
           "comments": [],
@@ -60191,19 +60250,19 @@
           "in_subset": [
             "npc_v1.0-approved"
           ]
-        }
-      }
-    },
-    "TnmMetastasisMEnum": {
-      "permissible_values": {
-        "MX": {
-          "meaning": "ncit:C48704",
+        },
+        "NX": {
+          "meaning": "ncit:C48718",
           "comments": [],
           "in_subset": [
             "fa_v1.0-draft",
             "rb_v1.2-approved"
           ]
-        },
+        }
+      }
+    },
+    "TnmMetastasisMEnum": {
+      "permissible_values": {
         "M0": {
           "meaning": "ncit:C48699",
           "comments": [],
@@ -60256,6 +60315,14 @@
           "meaning": "",
           "comments": [],
           "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "MX": {
+          "meaning": "ncit:C48704",
+          "comments": [],
+          "in_subset": [
+            "fa_v1.0-draft",
             "rb_v1.2-approved"
           ]
         }
@@ -64314,13 +64381,6 @@
     },
     "HStageEnum": {
       "permissible_values": {
-         "HX": {
-          "meaning": "",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
         "H0": {
           "meaning": "",
           "comments": [],
@@ -64336,6 +64396,13 @@
           ]
         },
         "H1": {
+          "meaning": "",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "HX": {
           "meaning": "",
           "comments": [],
           "in_subset": [
@@ -64464,24 +64531,21 @@
           "meaning": "ncit:C3038",
           "comments": [],
           "in_subset": [
-            "npc_v1.0-approved",
-            "hl_v2.0-approved"
+            "npc_v1.0-approved"
           ]
         },
         "Night Sweats": {
           "meaning": "ncit:C3279",
           "comments": [],
           "in_subset": [
-            "npc_v1.0-approved",
-            "hl_v2.0-approved"
+            "npc_v1.0-approved"
           ]
         },
         "Weight Loss": {
           "meaning": "ncit:C55339",
           "comments": [],
           "in_subset": [
-            "npc_v1.0-approved",
-            "hl_v2.0-approved"
+            "npc_v1.0-approved"
           ]
         },
         "Headache": {
