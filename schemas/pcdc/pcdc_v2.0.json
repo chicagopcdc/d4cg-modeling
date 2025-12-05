@@ -5877,7 +5877,7 @@
         "platelet_threshold_at_response",
         "interim_response",
         "pct_change",
-        "symptoms",
+        "symptoms_at_response",
         "palpable_nodes",
         "nodular_splenic",
         "necrosis",
@@ -6066,7 +6066,7 @@
             "hl_v2.0-approved"
           ]
         },
-        "symptoms": {
+        "symptoms_at_response": {
           "in_subset": [
             "hl_v2.0-approved"
           ]
