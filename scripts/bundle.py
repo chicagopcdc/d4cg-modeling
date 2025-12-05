@@ -15,6 +15,18 @@ example_bank = {
       "person_submitter_id": "<to be added by D4CG>",
       "honest_broker_subject_id": "HB002",
       "data_contributor_id": "COG"
+    },
+    {
+      "submitter_id": "dcpr3",
+      "person_submitter_id": "<to be added by D4CG>",
+      "honest_broker_subject_id": "HB003",
+      "data_contributor_id": "COG"
+    },
+    {
+      "submitter_id": "dcpr4",
+      "person_submitter_id": "<to be added by D4CG>",
+      "honest_broker_subject_id": "HB004",
+      "data_contributor_id": "COG"
     }
   ],
 
@@ -36,6 +48,22 @@ example_bank = {
       "sex": "Male",
       "enrolled_status": "Yes",
       "age_at_enrollment": "1825"
+    },
+    {
+      "submitter_id": "patient3",
+      "data_contributor_person_record_submitter_id": "dcpr3",
+      "consortium": "HIBiSCus",
+      "disease_group": "EWS",
+      "sex": "Male",
+      "age_at_enrollment": "4380"
+    },
+    {
+      "submitter_id": "patient4",
+      "data_contributor_person_record_submitter_id": "dcpr4",
+      "consortium": "HIBiSCus",
+      "disease_group": "EWS",
+      "sex": "Female",
+      "age_at_enrollment": "5840"
     }
   ],
 
@@ -44,6 +72,16 @@ example_bank = {
       "submitter_id": "study1",
       "subjects_submitter_id": ["patient1", "patient2"],
       "study_id": "AAML0531"
+    },
+    {
+      "submitter_id": "study2",
+      "subjects_submitter_id": ["patient3"],
+      "study_id": "AEWS0031"
+    },
+    {
+      "submitter_id": "study3",
+      "subjects_submitter_id": ["patient4"],
+      "study_id": "AEWS1031"
     }
   ],
 
@@ -59,6 +97,20 @@ example_bank = {
       "subgroup_type": "Treatment Arm",
       "subgroup_name": "AAML0531:Arm B HR",
       "subgroup_assignment_order": "1"
+    },
+    {
+      "subjects_submitter_id": ["patient3"],
+      "subgroup_type": "Treatment Arm",
+      "subgroup_name": "AEWS0031:Regimen B 2W-VDC-MESNA+IFO-GCSF for metastatic or unresectable disease",
+      "subgroup_assignment_order": "1",
+      "age_at_subgroup_assignment": "4380"
+    },
+    {
+      "subjects_submitter_id": ["patient4"],
+      "subgroup_type": "Treatment Arm",
+      "subgroup_name": "AEWS1031:Arm A >> HD-IFO/etoposide (IE) >> Interval compressed VDC-IE",
+      "subgroup_assignment_order": "1",
+      "age_at_subgroup_assignment": "5840"
     }
   ],
 
@@ -150,6 +202,116 @@ example_bank = {
       "time_period_number": "1",
       "age_at_start": "1827",
       "year_at_start": "2014"
+    },
+    {
+      "submitter_id": "p3_timing_phase1_dx",
+      "subjects_submitter_id": ["patient3"],
+      "parent_submitter_id": "",
+      "time_period_type": "Disease Phase",
+      "disease_phase": "Initial Diagnosis",
+      "course": "",
+      "time_period_number": "1",
+      "age_at_start": "4380",
+      "year_at_start": "2016"
+    },
+    {
+      "submitter_id": "p3_timing_course1_induction",
+      "subjects_submitter_id": ["patient3"],
+      "parent_submitter_id": "p3_timing_phase1_dx",
+      "time_period_type": "Course",
+      "disease_phase": "",
+      "course": "Induction",
+      "time_period_number": "1",
+      "age_at_start": "4385",
+      "year_at_start": "2016"
+    },
+    {
+      "submitter_id": "p3_timing_course2_consolidation",
+      "subjects_submitter_id": ["patient3"],
+      "parent_submitter_id": "p3_timing_phase1_dx",
+      "time_period_type": "Course",
+      "disease_phase": "",
+      "course": "Consolidation",
+      "time_period_number": "1",
+      "age_at_start": "4460",
+      "year_at_start": "2016"
+    },
+    {
+      "submitter_id": "p3_timing_course3_maintenance",
+      "subjects_submitter_id": ["patient3"],
+      "parent_submitter_id": "p3_timing_phase1_dx",
+      "time_period_type": "Course",
+      "disease_phase": "",
+      "course": "Maintenance",
+      "time_period_number": "1",
+      "age_at_start": "4750",
+      "year_at_start": "2017"
+    },
+    {
+      "submitter_id": "p4_timing_phase1_dx",
+      "subjects_submitter_id": ["patient4"],
+      "parent_submitter_id": "",
+      "time_period_type": "Disease Phase",
+      "disease_phase": "Initial Diagnosis",
+      "course": "",
+      "time_period_number": "1",
+      "age_at_start": "5840",
+      "year_at_start": "2016"
+    },
+    {
+      "submitter_id": "p4_timing_course1_induction",
+      "subjects_submitter_id": ["patient4"],
+      "parent_submitter_id": "p4_timing_phase1_dx",
+      "time_period_type": "Course",
+      "disease_phase": "",
+      "course": "Induction",
+      "time_period_number": "1",
+      "age_at_start": "5845",
+      "year_at_start": "2016"
+    },
+    {
+      "submitter_id": "p4_timing_course2_consolidation",
+      "subjects_submitter_id": ["patient4"],
+      "parent_submitter_id": "p4_timing_phase1_dx",
+      "time_period_type": "Course",
+      "disease_phase": "",
+      "course": "Consolidation",
+      "time_period_number": "1",
+      "age_at_start": "5920",
+      "year_at_start": "2016"
+    },
+    {
+      "submitter_id": "p4_timing_course3_maintenance",
+      "subjects_submitter_id": ["patient4"],
+      "parent_submitter_id": "p4_timing_phase1_dx",
+      "time_period_type": "Course",
+      "disease_phase": "",
+      "course": "Maintenance",
+      "time_period_number": "1",
+      "age_at_start": "6200",
+      "year_at_start": "2017"
+    },
+    {
+      "submitter_id": "p4_timing_phase2_relapse",
+      "subjects_submitter_id": ["patient4"],
+      "parent_submitter_id": "",
+      "time_period_type": "Disease Phase",
+      "disease_phase": "Relapse",
+      "course": "",
+      "time_period_number": "1",
+      "age_at_start": "6500",
+      "year_at_start": "2018"
+    },
+    {
+      "submitter_id": "p4_timing_course4_relapse_induction",
+      "subjects_submitter_id": ["patient4"],
+      "parent_submitter_id": "p4_timing_phase2_relapse",
+      "time_period_type": "Course",
+      "disease_phase": "",
+      "course": "Induction",
+      "time_period_number": "2",
+      "age_at_start": "6505",
+      "year_at_start": "2018"
     }
   ],
 
@@ -167,6 +329,20 @@ example_bank = {
       "age_off": "1840",
       "off_type": "Study",
       "reason_off": "Adverse Event"
+    },
+    {
+      "subjects_submitter_id": ["patient3"],
+      "timings_submitter_id": ["p3_timing_course3_maintenance"],
+      "age_off": "5020",
+      "off_type": "Protocol Therapy",
+      "reason_off": "Completion of Planned Therapy"
+    },
+    {
+      "subjects_submitter_id": ["patient4"],
+      "timings_submitter_id": ["p4_timing_course3_maintenance"],
+      "age_off": "6300",
+      "off_type": "Protocol Therapy",
+      "reason_off": "Completion of Planned Therapy"
     }
   ],
 
@@ -184,6 +360,22 @@ example_bank = {
       "age_at_lkss": "2000",
       "lkss": "Alive",
       "cause_of_death": ""
+    },
+    {
+      "subjects_submitter_id": ["patient3"],
+      "timings_submitter_id": ["p3_timing_course3_maintenance"],
+      "age_at_lkss": "5200",
+      "lkss": "Alive",
+      "cause_of_death": "",
+      "cause_of_death_detail": ""
+    },
+    {
+      "subjects_submitter_id": ["patient4"],
+      "timings_submitter_id": ["p4_timing_phase2_relapse"],
+      "age_at_lkss": "7000",
+      "lkss": "Alive",
+      "cause_of_death": "",
+      "cause_of_death_detail": ""
     }
   ],
 
@@ -233,6 +425,42 @@ example_bank = {
       "anthropometric_measurement_type": "Height",
       "result_text": "",
       "result_numeric": "116.8",
+      "result_unit": "cm"
+    },
+    {
+      "subjects_submitter_id": ["patient3"],
+      "timings_submitter_id": ["p3_timing_phase1_dx"],
+      "age_at_measurement": "4380",
+      "anthropometric_measurement_type": "Weight",
+      "result_text": "",
+      "result_numeric": "40.2",
+      "result_unit": "kg"
+    },
+    {
+      "subjects_submitter_id": ["patient3"],
+      "timings_submitter_id": ["p3_timing_phase1_dx"],
+      "age_at_measurement": "4380",
+      "anthropometric_measurement_type": "Height",
+      "result_text": "",
+      "result_numeric": "145.0",
+      "result_unit": "cm"
+    },
+    {
+      "subjects_submitter_id": ["patient4"],
+      "timings_submitter_id": ["p4_timing_phase1_dx"],
+      "age_at_measurement": "5840",
+      "anthropometric_measurement_type": "Weight",
+      "result_text": "",
+      "result_numeric": "55.5",
+      "result_unit": "kg"
+    },
+    {
+      "subjects_submitter_id": ["patient4"],
+      "timings_submitter_id": ["p4_timing_phase1_dx"],
+      "age_at_measurement": "5840",
+      "anthropometric_measurement_type": "Height",
+      "result_text": "",
+      "result_numeric": "165.0",
       "result_unit": "cm"
     }
   ],
@@ -303,6 +531,50 @@ example_bank = {
       "result_text": "",
       "result_numeric": "25000",
       "result_unit": "/uL"
+    },
+    {
+      "subjects_submitter_id": ["patient3"],
+      "timings_submitter_id": ["p3_timing_phase1_dx"],
+      "age_at_lab": "4380",
+      "laboratory_test": "Alkaline Phophatase",
+      "laboratory_test_method": "Other",
+      "laboratory_test_specimen": "Peripheral blood",
+      "result_text": "",
+      "result_numeric": "280",
+      "result_unit": "U/L"
+    },
+    {
+      "subjects_submitter_id": ["patient3"],
+      "timings_submitter_id": ["p3_timing_phase1_dx"],
+      "age_at_lab": "4380",
+      "laboratory_test": "LDH",
+      "laboratory_test_method": "Other",
+      "laboratory_test_specimen": "Peripheral blood",
+      "result_text": "",
+      "result_numeric": "450",
+      "result_unit": "U/L"
+    },
+    {
+      "subjects_submitter_id": ["patient4"],
+      "timings_submitter_id": ["p4_timing_phase1_dx"],
+      "age_at_lab": "5840",
+      "laboratory_test": "ESR",
+      "laboratory_test_method": "Other",
+      "laboratory_test_specimen": "Peripheral blood",
+      "result_text": "",
+      "result_numeric": "35",
+      "result_unit": "mm/h"
+    },
+    {
+      "subjects_submitter_id": ["patient4"],
+      "timings_submitter_id": ["p4_timing_phase1_dx"],
+      "age_at_lab": "5840",
+      "laboratory_test": "LDH",
+      "laboratory_test_method": "Other",
+      "laboratory_test_specimen": "Peripheral blood",
+      "result_text": "",
+      "result_numeric": "480",
+      "result_unit": "U/L"
     }
   ],
 
@@ -314,38 +586,64 @@ example_bank = {
       "genetic_analysis_method": "Sequencing, NGS, NOS",
       "genetic_analysis_status": "Present",
       "alteration": "NM_002520.6(NPM1):c.860_863dupTCTG",
-      "alteration_type": "Duplication",      
+      "alteration_type": "Duplication",
       "gene": "NPM1",
       "hgvs_coding": "NM_001355006.1:c.860_863dup",
-      "allelic_ratio": "0.45",
+      "allelic_ratio": "0.45"
     },
     {
-    "subjects_submitter_id": ["patient2"],
-    "timings_submitter_id": ["p2_timing_phase1_dx"],
-    "age_at_genetic_analysis": "1825",
-    "genetic_analysis_method": "Cytogenetics, Karyotyping",
-    "genetic_analysis_status": "Present",
-    "alteration": "t(9;11)(p22;q23)",
-    "alteration_type": "Translocation",
-    "chromosome": "11",
-    "iscn": "46,XY,t(9;11)(p22;q23)",
-    "independent_aberrations": "No",
-    "cells_in_metaphase": "20"
+      "subjects_submitter_id": ["patient2"],
+      "timings_submitter_id": ["p2_timing_phase1_dx"],
+      "age_at_genetic_analysis": "1825",
+      "genetic_analysis_method": "Cytogenetics, Karyotyping",
+      "genetic_analysis_status": "Present",
+      "alteration": "t(9;11)(p22;q23)",
+      "alteration_type": "Translocation",
+      "chromosome": "11",
+      "iscn": "46,XY,t(9;11)(p22;q23)",
+      "independent_aberrations": "No",
+      "cells_in_metaphase": "20"
     },
     {
-    "subjects_submitter_id": ["patient2"],
-    "timings_submitter_id": ["p2_timing_phase1_dx"],
-    "age_at_genetic_analysis": "1825",
-    "genetic_analysis_method": "FISH",
-    "genetic_analysis_status": "Present",
-    "alteration": "KMT2A-MLLT3 fusion",
-    "alteration_type": "Rearrangement",
-    "alteration_effect": "Gene Fusion",
-    "chromosome": "11",
-    "gene": "KMT2A",
-    "gene_fusion_partner": "MLLT3"
+      "subjects_submitter_id": ["patient2"],
+      "timings_submitter_id": ["p2_timing_phase1_dx"],
+      "age_at_genetic_analysis": "1825",
+      "genetic_analysis_method": "FISH",
+      "genetic_analysis_status": "Present",
+      "alteration": "KMT2A-MLLT3 fusion",
+      "alteration_type": "Rearrangement",
+      "alteration_effect": "Gene Fusion",
+      "chromosome": "11",
+      "gene": "KMT2A",
+      "gene_fusion_partner": "MLLT3"
+    },
+    {
+      "subjects_submitter_id": ["patient3"],
+      "timings_submitter_id": ["p3_timing_phase1_dx"],
+      "age_at_genetic_analysis": "4385",
+      "genetic_analysis_method": "FISH",
+      "genetic_analysis_status": "Present",
+      "alteration": "EWSR1-FLI1",
+      "alteration_type": "Rearrangement",
+      "alteration_effect": "Gene Fusion",
+      "chromosome": "22",
+      "gene": "EWSR1",
+      "gene_fusion_partner": "FLI1"
+    },
+    {
+      "subjects_submitter_id": ["patient4"],
+      "timings_submitter_id": ["p4_timing_phase1_dx"],
+      "age_at_genetic_analysis": "5845",
+      "genetic_analysis_method": "FISH",
+      "genetic_analysis_status": "Present",
+      "alteration": "12q Gain",
+      "alteration_type": "Unknown",
+      "alteration_effect": "Gain",
+      "chromosome": "12",
+      "gene": "",
+      "gene_fusion_partner": ""
     }
-    ],
+  ],
 
   "Biospecimen": [
     {
@@ -363,6 +661,22 @@ example_bank = {
       "biospecimen_type": "Peripheral blood",
       "current_qty_unit": "vial",
       "current_qty_value": "1"
+    },
+    {
+      "subjects_submitter_id": ["patient3"],
+      "biospecimen_container_type": "Cryovial",
+      "biospecimen_media": "Not Reported",
+      "biospecimen_type": "Tumor tissue",
+      "current_qty_unit": "vial",
+      "current_qty_value": "3"
+    },
+    {
+      "subjects_submitter_id": ["patient4"],
+      "biospecimen_container_type": "Cryovial",
+      "biospecimen_media": "Not Reported",
+      "biospecimen_type": "Tumor tissue",
+      "current_qty_unit": "vial",
+      "current_qty_value": "2"
     }
   ],
 
@@ -401,6 +715,27 @@ example_bank = {
       "age_at_diag_assessment": "1825",
       "diagnosis_basis": "Integrated",
       "diagnosis": "WHO >> Version 4 >> Acute Monoblastic/Monocytic Leukemia"
+    },
+    {
+      "subjects_submitter_id": ["patient3"],
+      "timings_submitter_id": ["p3_timing_phase1_dx"],
+      "age_at_diag_assessment": "4380",
+      "diagnosis_basis": "Integrated",
+      "diagnosis": "Ewing Sarcoma"
+    },
+    {
+      "subjects_submitter_id": ["patient4"],
+      "timings_submitter_id": ["p4_timing_phase1_dx"],
+      "age_at_diag_assessment": "5840",
+      "diagnosis_basis": "Integrated",
+      "diagnosis": "Ewing Sarcoma"
+    },
+    {
+      "subjects_submitter_id": ["patient4"],
+      "timings_submitter_id": ["p4_timing_phase2_relapse"],
+      "age_at_diag_assessment": "6500",
+      "diagnosis_basis": "Integrated",
+      "diagnosis": "Ewing Sarcoma"
     }
   ],
 
@@ -418,6 +753,113 @@ example_bank = {
       "age_at_disease_site_assessment": "1825",
       "detection_method": "Bone marrow aspirate",
       "disease_site": "Bone marrow"
+    },
+    {
+      "subjects_submitter_id": ["patient3"],
+      "timings_submitter_id": ["p3_timing_phase1_dx"],
+      "age_at_disease_site_assessment": "4380",
+      "detection_method": "Radiographic imaging",
+      "disease_site": "Pelvic bone",
+      "tumor_state": "Primary",
+      "laterality": "Unilateral",
+      "diameter1": "100",
+      "diameter1_unit": "mm",
+      "diameter1_axis": "base",
+      "diameter2": "80",
+      "diameter2_unit": "mm",
+      "diameter2_axis": "height",
+      "diameter3": "70",
+      "diameter3_unit": "mm",
+      "diameter3_axis": "height",
+      "skip_lesions": "No",
+      "fracture_at_site": "No",
+      "joint_involvement": "No"
+    },
+    {
+      "subjects_submitter_id": ["patient3"],
+      "timings_submitter_id": ["p3_timing_phase1_dx"],
+      "age_at_disease_site_assessment": "4380",
+      "detection_method": "Radiographic imaging",
+      "disease_site": "Lung",
+      "tumor_state": "Metastatic",
+      "laterality": "Bilateral",
+      "diameter1": "15",
+      "diameter1_unit": "mm",
+      "diameter1_axis": "base",
+      "diameter2": "12",
+      "diameter2_unit": "mm",
+      "diameter2_axis": "height",
+      "diameter3": "10",
+      "diameter3_unit": "mm",
+      "diameter3_axis": "height",
+      "skip_lesions": "No",
+      "fracture_at_site": "No",
+      "joint_involvement": "No"
+    },
+    {
+      "subjects_submitter_id": ["patient4"],
+      "timings_submitter_id": ["p4_timing_phase1_dx"],
+      "age_at_disease_site_assessment": "5840",
+      "detection_method": "Radiographic imaging",
+      "disease_site": "Femur",
+      "tumor_state": "Primary",
+      "laterality": "Unilateral",
+      "diameter1": "80",
+      "diameter1_unit": "mm",
+      "diameter1_axis": "base",
+      "diameter2": "60",
+      "diameter2_unit": "mm",
+      "diameter2_axis": "height",
+      "diameter3": "50",
+      "diameter3_unit": "mm",
+      "diameter3_axis": "height",
+      "skip_lesions": "No",
+      "fracture_at_site": "Yes",
+      "joint_involvement": "Yes"
+    },
+    {
+      "subjects_submitter_id": ["patient4"],
+      "timings_submitter_id": ["p4_timing_phase2_relapse"],
+      "age_at_disease_site_assessment": "6500",
+      "detection_method": "Radiographic imaging",
+      "disease_site": "Femur",
+      "tumor_state": "Relapsed",
+      "laterality": "Unilateral",
+      "diameter1": "35",
+      "diameter1_unit": "mm",
+      "diameter1_axis": "base",
+      "diameter2": "25",
+      "diameter2_unit": "mm",
+      "diameter2_axis": "height",
+      "diameter3": "20",
+      "diameter3_unit": "mm",
+      "diameter3_axis": "height",
+      "skip_lesions": "Yes",
+      "fracture_at_site": "Yes",
+      "joint_involvement": "Yes"
+    }
+  ],
+
+  "SurgicalProcedures": [
+    {
+      "subjects_submitter_id": ["patient3"],
+      "timings_submitter_id": ["p3_timing_phase1_dx"],
+      "procedure_class": "Surgery",
+      "procedure": "Internal Hemipelvectomy",
+      "procedure_site": "Pelvis",
+      "laterality": "Unilateral",
+      "margins": "R0 - Complete Resection, Negative Margins",
+      "procedure_extent": "Complete Resection"
+    },
+    {
+      "subjects_submitter_id": ["patient4"],
+      "timings_submitter_id": ["p4_timing_phase1_dx"],
+      "procedure_class": "Limb Salvage",
+      "procedure": "Rotationplasty",
+      "procedure_site": "Femur",
+      "laterality": "Unilateral",
+      "margins": "R0 - Complete Resection, Negative Margins",
+      "procedure_extent": "Gross Total"
     }
   ],
 
@@ -482,18 +924,18 @@ example_bank = {
       "medication_dose_intended": "1000",
       "medication_dose_unit": "mg/m2"
     },
-   {
-    "subjects_submitter_id": ["patient1"],
-    "timings_submitter_id": ["p1_timing_course4_relapse_induction"],
-    "age_at_medication_start": "1822",
-    "age_at_medication_end": "1840",
-    "medication_category": "Chemotherapy",
-    "route": "Systemic",
-    "medication": "FLAG-IDA regimen",
-    "number_doses": "6",
-    "medication_dose_intended": "900",
-    "medication_dose_administered": "450",
-    "medication_dose_unit": "mg/m2"
+    {
+      "subjects_submitter_id": ["patient1"],
+      "timings_submitter_id": ["p1_timing_course4_relapse_induction"],
+      "age_at_medication_start": "1822",
+      "age_at_medication_end": "1840",
+      "medication_category": "Chemotherapy",
+      "route": "Systemic",
+      "medication": "FLAG-IDA regimen",
+      "number_doses": "6",
+      "medication_dose_intended": "900",
+      "medication_dose_administered": "450",
+      "medication_dose_unit": "mg/m2"
     },
     {
       "subjects_submitter_id": ["patient2"],
@@ -542,6 +984,126 @@ example_bank = {
       "medication_dose_administered": "3",
       "medication_dose_intended": "3",
       "medication_dose_unit": "mg/m2"
+    },
+    {
+      "subjects_submitter_id": ["patient3"],
+      "timings_submitter_id": ["p3_timing_course1_induction"],
+      "age_at_medication_start": "4385",
+      "age_at_medication_end": "4420",
+      "route": "Systemic",
+      "medication": "Vincristine",
+      "number_doses": "8",
+      "medication_dose_administered": "1.5",
+      "medication_dose_intended": "1.5",
+      "medication_dose_unit": "mg/m2"
+    },
+    {
+      "subjects_submitter_id": ["patient3"],
+      "timings_submitter_id": ["p3_timing_course1_induction"],
+      "age_at_medication_start": "4385",
+      "age_at_medication_end": "4420",
+      "route": "Systemic",
+      "medication": "Doxorubicin",
+      "number_doses": "4",
+      "medication_dose_administered": "75",
+      "medication_dose_intended": "75",
+      "medication_dose_unit": "mg/m2"
+    },
+    {
+      "subjects_submitter_id": ["patient3"],
+      "timings_submitter_id": ["p3_timing_course1_induction"],
+      "age_at_medication_start": "4385",
+      "age_at_medication_end": "4420",
+      "route": "Systemic",
+      "medication": "Cyclophosphamide",
+      "number_doses": "4",
+      "medication_dose_administered": "1200",
+      "medication_dose_intended": "1200",
+      "medication_dose_unit": "mg/m2"
+    },
+    {
+      "subjects_submitter_id": ["patient3"],
+      "timings_submitter_id": ["p3_timing_course2_consolidation"],
+      "age_at_medication_start": "4460",
+      "age_at_medication_end": "4520",
+      "route": "Systemic",
+      "medication": "Ifosfamide",
+      "number_doses": "5",
+      "medication_dose_administered": "1800",
+      "medication_dose_intended": "1800",
+      "medication_dose_unit": "mg/m2"
+    },
+    {
+      "subjects_submitter_id": ["patient3"],
+      "timings_submitter_id": ["p3_timing_course2_consolidation"],
+      "age_at_medication_start": "4460",
+      "age_at_medication_end": "4520",
+      "route": "Systemic",
+      "medication": "Etoposide",
+      "number_doses": "5",
+      "medication_dose_administered": "100",
+      "medication_dose_intended": "100",
+      "medication_dose_unit": "mg/m2"
+    },
+    {
+      "subjects_submitter_id": ["patient4"],
+      "timings_submitter_id": ["p4_timing_course1_induction"],
+      "age_at_medication_start": "5845",
+      "age_at_medication_end": "5880",
+      "route": "Systemic",
+      "medication": "Vincristine",
+      "number_doses": "8",
+      "medication_dose_administered": "1.5",
+      "medication_dose_intended": "1.5",
+      "medication_dose_unit": "mg/m2"
+    },
+    {
+      "subjects_submitter_id": ["patient4"],
+      "timings_submitter_id": ["p4_timing_course1_induction"],
+      "age_at_medication_start": "5845",
+      "age_at_medication_end": "5880",
+      "route": "Systemic",
+      "medication": "Doxorubicin",
+      "number_doses": "4",
+      "medication_dose_administered": "75",
+      "medication_dose_intended": "75",
+      "medication_dose_unit": "mg/m2"
+    },
+    {
+      "subjects_submitter_id": ["patient4"],
+      "timings_submitter_id": ["p4_timing_course1_induction"],
+      "age_at_medication_start": "5845",
+      "age_at_medication_end": "5880",
+      "route": "Systemic",
+      "medication": "Cyclophosphamide",
+      "number_doses": "4",
+      "medication_dose_administered": "1200",
+      "medication_dose_intended": "1200",
+      "medication_dose_unit": "mg/m2"
+    },
+    {
+      "subjects_submitter_id": ["patient4"],
+      "timings_submitter_id": ["p4_timing_course2_consolidation"],
+      "age_at_medication_start": "5920",
+      "age_at_medication_end": "5980",
+      "route": "Systemic",
+      "medication": "Ifosfamide",
+      "number_doses": "5",
+      "medication_dose_administered": "1800",
+      "medication_dose_intended": "1800",
+      "medication_dose_unit": "mg/m2"
+    },
+    {
+      "subjects_submitter_id": ["patient4"],
+      "timings_submitter_id": ["p4_timing_course2_consolidation"],
+      "age_at_medication_start": "5920",
+      "age_at_medication_end": "5980",
+      "route": "Systemic",
+      "medication": "Etoposide",
+      "number_doses": "5",
+      "medication_dose_administered": "100",
+      "medication_dose_intended": "100",
+      "medication_dose_unit": "mg/m2"
     }
   ],
 
@@ -554,6 +1116,26 @@ example_bank = {
       "rt_site": "Cranium",
       "rt_dose": "1800",
       "rt_dose_unit": "cGy"
+    },
+    {
+      "subjects_submitter_id": ["patient3"],
+      "timings_submitter_id": ["p3_timing_course2_consolidation"],
+      "age_at_rt_start": "4465",
+      "age_at_rt_end": "4500",
+      "rt_site": "Primary tumor site",
+      "rt_dose": "5580",
+      "rt_dose_unit": "cGy",
+      "rt_data_source": "Protocol form"
+    },
+    {
+      "subjects_submitter_id": ["patient4"],
+      "timings_submitter_id": ["p4_timing_course2_consolidation"],
+      "age_at_rt_start": "5925",
+      "age_at_rt_end": "5960",
+      "rt_site": "Primary tumor site",
+      "rt_dose": "4500",
+      "rt_dose_unit": "cGy",
+      "rt_data_source": "Protocol form"
     }
   ],
 
@@ -629,6 +1211,24 @@ example_bank = {
       "anc_threshold_at_response": "No",
       "platelet_count_at_response": "40000",
       "platelet_threshold_at_response": "Yes"
+    },
+    {
+      "subjects_submitter_id": ["patient3"],
+      "timings_submitter_id": ["p3_timing_course1_induction"],
+      "age_at_response": "4420",
+      "response_category": "Overall Response",
+      "response": "System NOS >> Complete Response",
+      "response_system": "RECIST",
+      "response_system_version": "1.1"
+    },
+    {
+      "subjects_submitter_id": ["patient4"],
+      "timings_submitter_id": ["p4_timing_course1_induction"],
+      "age_at_response": "5880",
+      "response_category": "Overall Response",
+      "response": "System NOS >> Partial Response",
+      "response_system": "RECIST",
+      "response_system_version": "1.1"
     }
   ],
 
@@ -721,9 +1321,50 @@ example_bank = {
       "gvhd_acuity": "",
       "gvhd_organ": ""
     }
+  ],
+
+  "SecondMalignantNeoplasm": [
+    {
+      "subjects_submitter_id": ["patient3"],
+      "age_at_smn_diagnosis": "4900",
+      "smn_type": "Secondary Malignancy, NOS",
+      "smn_site": "Bone marrow",
+      "smn_basis_dx": "Integrated"
+    }
+  ],
+
+  "Immunohistochemistry": [
+    {
+      "subjects_submitter_id": ["patient3"],
+      "timings_submitter_id": ["p3_timing_phase1_dx"],
+      "markers": "CD99/Cell Surface Antigen O13/Cell Surface Antigen HBA-71",
+      "result_numeric": "90",
+      "result_unit": ""
+    },
+    {
+      "subjects_submitter_id": ["patient4"],
+      "timings_submitter_id": ["p4_timing_phase1_dx"],
+      "markers": "FLI-1",
+      "result_numeric": "85",
+      "result_unit": ""
+    }
+  ],
+
+  "DiseaseCharacteristics": [
+    {
+      "subjects_submitter_id": ["patient3"],
+      "timings_submitter_id": ["p3_timing_phase1_dx"],
+      "age_at_assessment": "4380",
+      "performance_score": "Lansky >> 80"
+    },
+    {
+      "subjects_submitter_id": ["patient4"],
+      "timings_submitter_id": ["p4_timing_phase1_dx"],
+      "age_at_assessment": "5840",
+      "performance_score": "Karnofsky >> 90"
+    }
   ]
 }
-
 
 def get_class_slots_for_subset(schema, class_name, subset):
     sclass = schema["classes"][class_name]

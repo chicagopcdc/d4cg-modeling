@@ -2325,6 +2325,9 @@
                 "procedure_laterality",
                 "procedure_type",
                 "procedure_extent",
+                "mass_present",
+                "viable_tumor_specimen",
+                "viable_tumor_margin",
                 "margins",
                 "tumor_classification"
             ],
@@ -2398,6 +2401,21 @@
                     "in_subset": [
                         "gct_v1.2-live",
                         "hl_v1.0-live"
+                    ]
+                },
+                "mass_present": {
+                    "in_subset": [
+                        "rms_v2.0-live"
+                    ]
+                },
+                "viable_tumor_specimen": {
+                    "in_subset": [
+                        "rms_v2.0-live"
+                    ]
+                },
+                "viable_tumor_margin": {
+                    "in_subset": [
+                        "rms_v2.0-live"
                     ]
                 },
                 "margins": {
@@ -5297,6 +5315,30 @@
             "comments": [],
             "annotations": {
                 "tier_optional": "hl_v1.0-live"
+            }
+        },
+        "mass_present": {
+            "slot_uri": "",
+            "range": "YesNoEnum",
+            "comments": [],
+            "annotations": {
+                "tier_optional": "rms_v2.0-live"
+            }
+        },
+        "viable_tumor_specimen": {
+            "slot_uri": "",
+            "range": "YesNoEnum",
+            "comments": [],
+            "annotations": {
+                "tier_optional": "rms_v2.0-live"
+            }
+        },
+        "viable_tumor_margin": {
+            "slot_uri": "",
+            "range": "YesNoEnum",
+            "comments": [],
+            "annotations": {
+                "tier_optional": "rms_v2.0-live"
             }
         },
         "margins": {

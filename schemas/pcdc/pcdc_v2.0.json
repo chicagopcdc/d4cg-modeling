@@ -4161,6 +4161,13 @@
             "npc_v1.0-approved"
           ]
         },
+        "presentation_symptoms_status": {
+          "in_subset": [
+            "rb_v1.2-approved",
+            "hl_v2.0-approved",
+            "npc_v1.0-approved"
+          ]
+        },
         "clinical_signs": {
           "in_subset": [
             "rb_v1.2-approved"
@@ -4219,6 +4226,9 @@
         "site_other",
         "laterality",
         "extent",
+        "mass_present",
+        "viable_tumor_specimen",
+        "viable_tumor_margin",
         "margins",
         "number_nodes",
         "number_nodes_numeric",
@@ -4437,6 +4447,21 @@
             "hl_v2.0-approved",
             "os_v2.0-approved"
           ]
+        },
+        "mass_present": {
+            "in_subset": [
+                "rms_v3.0-approved"
+            ]
+        },
+        "viable_tumor_specimen": {
+            "in_subset": [
+                "rms_v3.0-approved"
+            ]
+        },
+        "viable_tumor_margin": {
+            "in_subset": [
+                "rms_v3.0-approved"
+            ]
         },
         "margins": {
           "in_subset": [
@@ -8336,6 +8361,30 @@
         "tier_optional": "hl_v2.0-approved"
       }
     },
+    "mass_present": {
+        "slot_uri": "",
+        "range": "YesNoEnum",
+        "comments": [],
+        "annotations": {
+            "tier_optional": "rms_v3.0-approved"
+        }
+    },
+    "viable_tumor_specimen": {
+        "slot_uri": "",
+        "range": "YesNoEnum",
+        "comments": [],
+        "annotations": {
+            "tier_optional": "rms_v3.0-approved"
+        }
+    },
+    "viable_tumor_margin": {
+        "slot_uri": "",
+        "range": "YesNoEnum",
+        "comments": [],
+        "annotations": {
+            "tier_optional": "rms_v3.0-approved"
+        }
+    },
     "margins": {
       "slot_uri": "ncit:C41227",
       "range": "MarginsEnum",
@@ -10563,6 +10612,23 @@
       "annotations": {
         "tier_mandatory": "hl_v2.0-approved",
         "tier_optional": "npc_v1.0-approved,rb_v1.2-approved"
+      }
+    },
+    "presentation_symptoms_status": {
+      "slot_uri": "",
+      "range": "YesNoEnum",
+      "comments": [],
+      "annotations": {
+        "tier_priority": "hl_v2.0-approved",
+        "tier_optional": "npc_v1.0-approved,rb_v1.2-approved"
+      }
+    },
+    "symptoms_at_response": {
+      "slot_uri": "ncit:C25269",
+      "range": "YesNoEnum",
+      "comments": [],
+      "annotations": {
+        "tier_priority": "hl_v2.0-approved"
       }
     },
     "clinical_signs": {
