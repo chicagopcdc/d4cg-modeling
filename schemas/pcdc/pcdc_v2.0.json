@@ -1871,6 +1871,9 @@
         "timings_submitter_id",
         "age_at_genetic_analysis",
         "year_at_genetic_analysis",
+        "review_source",
+        "determination_source",
+        "tumor_classification",
         "source_lab",
         "test_name",
         "test_version",
@@ -1878,15 +1881,12 @@
         "cascade_testing",
         "genetic_analysis_method",
         "genetic_analysis_specimen",
-        "tumor_classification",
         "biological_analyte",
         "source_pct",
         "source_pct_numeric",
         "genomic_source_class",
         "mosaicism",
         "mosaicism_percent",
-        "review_source",
-        "determination_source",
         "genetic_analysis_status",
         "alteration",
         "alteration_type",
@@ -2106,7 +2106,6 @@
         },
         "review_source": {
           "in_subset": [
-            "cns_v1.2-approved",
             "ews_v2.0-approved",
             "fa_v1.0-draft",
             "gct_v2.0-approved",
@@ -2117,7 +2116,6 @@
         },
         "determination_source": {
           "in_subset": [
-            "cns_v1.2-approved",
             "fa_v1.0-draft"
           ]
         },
@@ -2934,7 +2932,6 @@
         },
         "review_source": {
           "in_subset": [
-            "cns_v1.2-approved",
             "ews_v2.0-approved",
             "fa_v1.0-draft",
             "gct_v2.0-approved",
@@ -3208,7 +3205,6 @@
         },
         "review_source": {
           "in_subset": [
-            "cns_v1.2-approved",
             "ews_v2.0-approved",
             "fa_v1.0-draft",
             "gct_v2.0-approved",
@@ -4338,7 +4334,6 @@
         },
         "status": {
           "in_subset": [
-            "cns_v1.2-approved",
             "ews_v2.0-approved",
             "fa_v1.0-draft",
             "nbl_v2.0-approved",
@@ -4456,7 +4451,6 @@
         },
         "margins": {
           "in_subset": [
-            "cns_v1.2-approved",
             "ews_v2.0-approved",
             "fa_v1.0-draft",
             "gct_v2.0-approved",
@@ -5174,7 +5168,6 @@
         },
         "non_protocol_timing": {
           "in_subset": [
-            "cns_v1.2-approved",
             "ews_v2.0-approved",
             "hl_v2.0-approved"
           ]
@@ -5220,7 +5213,6 @@
         "laterality": {
           "in_subset": [
             "aml_v2.0-approved",
-            "cns_v1.2-approved",
             "ews_v2.0-approved",
             "fa_v1.0-draft",
             "gct_v2.0-approved",
