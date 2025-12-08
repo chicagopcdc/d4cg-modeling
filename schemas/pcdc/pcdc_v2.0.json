@@ -30662,57 +30662,6 @@
     },
     "TumorClassificationEnum": {
       "permissible_values": {
-        "Benign": {
-          "meaning": "ncit:C14172",
-          "comments": [],
-          "in_subset": [
-            "fa_v1.0-draft"
-          ]
-        },
-        "Local Extension": {
-          "meaning": "",
-          "comments": [],
-          "in_subset": [
-            "ews_v2.0-approved",
-            "npc_v1.0-approved",
-            "os_v2.0-approved",
-            "pre_v1.0-approved",
-            "rb_v1.2-approved"
-          ]
-        },
-        "Metastatic": {
-          "meaning": "ncit:C3261",
-          "comments": [],
-          "in_subset": [
-            "cns_v1.2-approved",
-            "ews_v2.0-approved",
-            "fa_v1.0-draft",
-            "gct_v2.0-approved",
-            "hl_v2.0-approved",
-            "lt_v1.0-approved",
-            "nbl_v2.0-approved",
-            "npc_v1.0-approved",
-            "nrsts_v2.0-approved",
-            "os_v2.0-approved",
-            "pre_v1.0-approved",
-            "rb_v1.2-approved",
-            "rms_v3.0-approved"
-          ]
-        },
-        "Not Applicable": {
-          "meaning": "",
-          "comments": [],
-          "in_subset": [
-            "fa_v1.0-draft"
-          ]
-        },
-        "Premalignant": {
-          "meaning": "ncit:C25624",
-          "comments": [],
-          "in_subset": [
-            "fa_v1.0-draft"
-          ]
-        },
         "Primary": {
           "meaning": "ncit:C8509",
           "comments": [],
@@ -30746,6 +30695,57 @@
             "os_v2.0-approved",
             "pre_v1.0-approved",
             "rms_v3.0-approved"
+          ]
+        },
+        "Local Extension": {
+          "meaning": "",
+          "comments": [],
+          "in_subset": [
+            "ews_v2.0-approved",
+            "npc_v1.0-approved",
+            "os_v2.0-approved",
+            "pre_v1.0-approved",
+            "rb_v1.2-approved"
+          ]
+        },
+        "Metastatic": {
+          "meaning": "ncit:C3261",
+          "comments": [],
+          "in_subset": [
+            "cns_v1.2-approved",
+            "ews_v2.0-approved",
+            "fa_v1.0-draft",
+            "gct_v2.0-approved",
+            "hl_v2.0-approved",
+            "lt_v1.0-approved",
+            "nbl_v2.0-approved",
+            "npc_v1.0-approved",
+            "nrsts_v2.0-approved",
+            "os_v2.0-approved",
+            "pre_v1.0-approved",
+            "rb_v1.2-approved",
+            "rms_v3.0-approved"
+          ]
+        },
+        "Premalignant": {
+          "meaning": "ncit:C25624",
+          "comments": [],
+          "in_subset": [
+            "fa_v1.0-draft"
+          ]
+        },
+        "Benign": {
+          "meaning": "ncit:C14172",
+          "comments": [],
+          "in_subset": [
+            "fa_v1.0-draft"
+          ]
+        },
+         "Not Applicable": {
+          "meaning": "",
+          "comments": [],
+          "in_subset": [
+            "fa_v1.0-draft"
           ]
         },
         "Unknown": {
