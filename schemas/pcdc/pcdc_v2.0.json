@@ -39234,189 +39234,189 @@
             "fa_v1.0-draft"
           ]
         },
-        "WHO >> Version 4 >> AML (megakaryoblastic) with t(1;22)(p13.3;q13.3); RBM15-MKL1": {
+        "WHO, Version 4 >> AML (megakaryoblastic) with t(1;22)(p13.3;q13.3); RBM15-MKL1": {
           "meaning": "ncit:C82427",
           "comments": [],
           "in_subset": [
             "aml_v2.0-approved"
           ]
         },
-        "WHO >> Version 4 >> AML with Biallelic Mutations of CEBPA": {
+        "WHO, Version 4 >> AML with Biallelic Mutations of CEBPA": {
           "meaning": "ncit:C129782",
           "comments": [],
           "in_subset": [
             "aml_v2.0-approved"
           ]
         },
-        "WHO >> Version 4 >> AML with Maturation": {
+        "WHO, Version 4 >> AML with Maturation": {
           "meaning": "ncit:C3250",
           "comments": [],
           "in_subset": [
             "aml_v2.0-approved"
           ]
         },
-        "WHO >> Version 4 >> AML with Minimal Differentiation": {
+        "WHO, Version 4 >> AML with Minimal Differentiation": {
           "meaning": "ncit:C8460",
           "comments": [],
           "in_subset": [
             "aml_v2.0-approved"
           ]
         },
-        "WHO >> Version 4 >> AML with Mutated NPM1": {
+        "WHO, Version 4 >> AML with Mutated NPM1": {
           "meaning": "ncit:C82431",
           "comments": [],
           "in_subset": [
             "aml_v2.0-approved"
           ]
         },
-        "WHO >> Version 4 >> AML with Myelodysplasia-related Changes": {
+        "WHO, Version 4 >> AML with Myelodysplasia-related Changes": {
           "meaning": "ncit:C7600",
           "comments": [],
           "in_subset": [
             "aml_v2.0-approved"
           ]
         },
-        "WHO >> Version 4 >> AML with inv(16)(p13.1q22) or t(16;16)(p13.1;q22); CBFB-MYH11": {
+        "WHO, Version 4 >> AML with inv(16)(p13.1q22) or t(16;16)(p13.1;q22); CBFB-MYH11": {
           "meaning": "ncit:C9287",
           "comments": [],
           "in_subset": [
             "aml_v2.0-approved"
           ]
         },
-        "WHO >> Version 4 >> AML with inv(3)(q21.3q26.2) or t(3;3)(q21.3;q26.2); GATA2, MECOM": {
+        "WHO, Version 4 >> AML with inv(3)(q21.3q26.2) or t(3;3)(q21.3;q26.2); GATA2, MECOM": {
           "meaning": "ncit:C82426",
           "comments": [],
           "in_subset": [
             "aml_v2.0-approved"
           ]
         },
-        "WHO >> Version 4 >> AML with t(6;9)(p23;q34.1);DEK-NUP214": {
+        "WHO, Version 4 >> AML with t(6;9)(p23;q34.1);DEK-NUP214": {
           "meaning": "ncit:C82423",
           "comments": [],
           "in_subset": [
             "aml_v2.0-approved"
           ]
         },
-        "WHO >> Version 4 >> AML with t(8;21)(q22;q22.1); RUNX1-RUNX1T1": {
+        "WHO, Version 4 >> AML with t(8;21)(q22;q22.1); RUNX1-RUNX1T1": {
           "meaning": "ncit:C9288",
           "comments": [],
           "in_subset": [
             "aml_v2.0-approved"
           ]
         },
-        "WHO >> Version 4 >> AML with t(9;11)(p21.3;q23.3); KMT2A-MLLT3": {
+        "WHO, Version 4 >> AML with t(9;11)(p21.3;q23.3); KMT2A-MLLT3": {
           "meaning": "ncit:C82403",
           "comments": [],
           "in_subset": [
             "aml_v2.0-approved"
           ]
         },
-        "WHO >> Version 4 >> AML without Maturation": {
+        "WHO, Version 4 >> AML without Maturation": {
           "meaning": "ncit:C3249",
           "comments": [],
           "in_subset": [
             "aml_v2.0-approved"
           ]
         },
-        "WHO >> Version 4 >> APL with PML-RARA": {
+        "WHO, Version 4 >> APL with PML-RARA": {
           "meaning": "ncit:C7968",
           "comments": [],
           "in_subset": [
             "aml_v2.0-approved"
           ]
         },
-        "WHO >> Version 4 >> Acute Basophilic Leukemia": {
+        "WHO, Version 4 >> Acute Basophilic Leukemia": {
           "meaning": "ncit:C3164",
           "comments": [],
           "in_subset": [
             "aml_v2.0-approved"
           ]
         },
-        "WHO >> Version 4 >> Acute Megakaryoblastic Leukemia": {
+        "WHO, Version 4 >> Acute Megakaryoblastic Leukemia": {
           "meaning": "ncit:C3170",
           "comments": [],
           "in_subset": [
             "aml_v2.0-approved"
           ]
         },
-        "WHO >> Version 4 >> Acute Monoblastic/Monocytic Leukemia": {
+        "WHO, Version 4 >> Acute Monoblastic/Monocytic Leukemia": {
           "meaning": "ncit:C7318",
           "comments": [],
           "in_subset": [
             "aml_v2.0-approved"
           ]
         },
-        "WHO >> Version 4 >> Acute Myelomonocytic Leukemia": {
+        "WHO, Version 4 >> Acute Myelomonocytic Leukemia": {
           "meaning": "ncit:C7463",
           "comments": [],
           "in_subset": [
             "aml_v2.0-approved"
           ]
         },
-        "WHO >> Version 4 >> Acute Panmyelosis with Myelofibrosis": {
+        "WHO, Version 4 >> Acute Panmyelosis with Myelofibrosis": {
           "meaning": "ncit:C4344",
           "comments": [],
           "in_subset": [
             "aml_v2.0-approved"
           ]
         },
-        "WHO >> Version 4 >> Myeloid Leukemia Associated with Down Syndrome": {
+        "WHO, Version 4 >> Myeloid Leukemia Associated with Down Syndrome": {
           "meaning": "ncit:C43223",
           "comments": [],
           "in_subset": [
             "aml_v2.0-approved"
           ]
         },
-        "WHO >> Version 4 >> Myeloid Proliferations Related to Down Syndrome": {
+        "WHO, Version 4 >> Myeloid Proliferations Related to Down Syndrome": {
           "meaning": "ncit:C82338",
           "comments": [],
           "in_subset": [
             "aml_v2.0-approved"
           ]
         },
-        "WHO >> Version 4 >> Myeloid Sarcoma": {
+        "WHO, Version 4 >> Myeloid Sarcoma": {
           "meaning": "ncit:C3520",
           "comments": [],
           "in_subset": [
             "aml_v2.0-approved"
           ]
         },
-        "WHO >> Version 4 >> Provisional Entity: AML with BCR-ABL1": {
+        "WHO, Version 4 >> Provisional Entity: AML with BCR-ABL1": {
           "meaning": "ncit:C129785",
           "comments": [],
           "in_subset": [
             "aml_v2.0-approved"
           ]
         },
-        "WHO >> Version 4 >> Provisional Entity: AML with Mutated RUNX1": {
+        "WHO, Version 4 >> Provisional Entity: AML with Mutated RUNX1": {
           "meaning": "ncit:C129786",
           "comments": [],
           "in_subset": [
             "aml_v2.0-approved"
           ]
         },
-        "WHO >> Version 4 >> Pure Erythroid Leukemia": {
+        "WHO, Version 4 >> Pure Erythroid Leukemia": {
           "meaning": "ncit:C7467",
           "comments": [],
           "in_subset": [
             "aml_v2.0-approved"
           ]
         },
-        "WHO >> Version 4 >> Therapy-Related Myeloid Neoplasms": {
+        "WHO, Version 4 >> Therapy-Related Myeloid Neoplasms": {
           "meaning": "ncit:C27912",
           "comments": [],
           "in_subset": [
             "aml_v2.0-approved"
           ]
         },
-        "WHO >> Version 4 >> Transient Abnormal Myelopoiesis (TAM)": {
+        "WHO, Version 4 >> Transient Abnormal Myelopoiesis (TAM)": {
           "meaning": "ncit:C82339",
           "comments": [],
           "in_subset": [
             "aml_v2.0-approved"
           ]
         },
-        "WHO >> Version 5 >> AML with KMT2A Rearrangement": {
+        "WHO, Version 5 >> AML with KMT2A Rearrangement": {
           "meaning": "",
           "comments": [],
           "in_subset": [
@@ -52764,77 +52764,77 @@
             "npc_v1.0-approved"
           ]
         },
-        "INRC Brodeur 1993 >> Complete Response": {
+        "INRC, Brodeur 1993 >> Complete Response": {
           "meaning": "",
           "comments": [],
           "in_subset": [
             "nbl_v2.0-approved"
           ]
         },
-        "INRC Brodeur 1993 >> Mixed Response": {
+        "INRC, Brodeur 1993 >> Mixed Response": {
           "meaning": "",
           "comments": [],
           "in_subset": [
             "nbl_v2.0-approved"
           ]
         },
-        "INRC Brodeur 1993 >> No Response": {
+        "INRC, Brodeur 1993 >> No Response": {
           "meaning": "",
           "comments": [],
           "in_subset": [
             "nbl_v2.0-approved"
           ]
         },
-        "INRC Brodeur 1993 >> Partial Response": {
+        "INRC, Brodeur 1993 >> Partial Response": {
           "meaning": "",
           "comments": [],
           "in_subset": [
             "nbl_v2.0-approved"
           ]
         },
-        "INRC Brodeur 1993 >> Progressive Disease": {
+        "INRC, Brodeur 1993 >> Progressive Disease": {
           "meaning": "",
           "comments": [],
           "in_subset": [
             "nbl_v2.0-approved"
           ]
         },
-        "INRC Brodeur 1993 >> Very Good Partial Response": {
+        "INRC, Brodeur 1993 >> Very Good Partial Response": {
           "meaning": "",
           "comments": [],
           "in_subset": [
             "nbl_v2.0-approved"
           ]
         },
-        "INRC Park 2017 >> Minimal Disease": {
+        "INRC, Park 2017 >> Minimal Disease": {
           "meaning": "",
           "comments": [],
           "in_subset": [
             "nbl_v2.0-approved"
           ]
         },
-        "INRC Park 2017 >> Minor Response": {
+        "INRC, Park 2017 >> Minor Response": {
           "meaning": "",
           "comments": [],
           "in_subset": [
             "nbl_v2.0-approved"
           ]
         },
-        "INRC Park 2017 >> Partial Response": {
+        "INRC, Park 2017 >> Partial Response": {
           "meaning": "",
           "comments": [],
           "in_subset": [
             "nbl_v2.0-approved"
           ]
         },
-        "INRC Park 2017 >> Progressive Disease": {
+        "INRC, Park 2017 >> Progressive Disease": {
           "meaning": "",
           "comments": [],
           "in_subset": [
             "nbl_v2.0-approved"
           ]
         },
-        "INRC Park 2017 >> Stable Disease": {
+        "INRC, Park 2017 >> Stable Disease": {
           "meaning": "",
           "comments": [],
           "in_subset": [
