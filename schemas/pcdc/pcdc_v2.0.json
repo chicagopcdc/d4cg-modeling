@@ -3407,7 +3407,8 @@
         "seeds_present",
         "seeds_pattern",
         "seeds_type",
-        "seeds_classification"
+        "seeds_classification",
+        "finding"
       ],
       "comments": [
         "D4CGNote: One observation/row per tumor or lesion when instantiated. Multiple tumors or lesions can be reported in a single obvservation/row if no individual characteristics (e.g. different sites, individual classifications or measurements, etc.) need to be included.",
@@ -3921,6 +3922,11 @@
           "in_subset": [
             "rb_v1.2-approved"
           ]
+        },
+        "finding": {
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
         }
       }
     },
@@ -3953,14 +3959,9 @@
         "evaluator",
         "presentation_symptoms",
         "presentation_symptoms_status",
-        "clinical_signs",
         "suspected_referring_diagnosis",
         "anterior_segment_exam",
-        "anterior_segment_details",
-        "intraocular_pressure",
-        "intraocular_pressure_unit",
-        "retinal_detachment",
-        "advanced_disease_signs"
+        "retinal_detachment"
       ],
       "comments": [
         "D4CGNote: One observation/row per characteristic when instantiated."
@@ -4151,11 +4152,6 @@
             "npc_v1.0-approved"
           ]
         },
-        "clinical_signs": {
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
         "suspected_referring_diagnosis": {
           "in_subset": [
             "rb_v1.2-approved"
@@ -4166,27 +4162,7 @@
             "rb_v1.2-approved"
           ]
         },
-        "anterior_segment_details": {
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "intraocular_pressure": {
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "intraocular_pressure_unit": {
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
         "retinal_detachment": {
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "advanced_disease_signs": {
           "in_subset": [
             "rb_v1.2-approved"
           ]
@@ -10561,6 +10537,14 @@
         "tier_priority": "rb_v1.2-approved"
       }
     },
+    "finding": {
+      "slot_uri": "",
+      "range": "FindingEnum",
+      "comments": [],
+      "annotations": {
+        "tier_priority": "rb_v1.2-approved"
+      }
+    },
     "h_stage": {
       "slot_uri": "",
       "range": "HStageEnum",
@@ -10619,14 +10603,6 @@
         "tier_priority": "hl_v2.0-approved"
       }
     },
-    "clinical_signs": {
-      "slot_uri": "",
-      "range": "ClinicalSignsEnum",
-      "comments": [],
-      "annotations": {
-        "tier_priority": "rb_v1.2-approved"
-      }
-    },
     "suspected_referring_diagnosis": {
       "slot_uri": "",
       "range": "SuspectedReferringDiagnosisEnum",
@@ -10643,41 +10619,9 @@
         "tier_priority": "rb_v1.2-approved"
       }
     },
-    "anterior_segment_details": {
-      "slot_uri": "",
-      "range": "AnteriorSegmentDetailsEnum",
-      "comments": [],
-      "annotations": {
-        "tier_priority": "rb_v1.2-approved"
-      }
-    },
-    "intraocular_pressure": {
-      "slot_uri": "",
-      "range": "decimal",
-      "comments": [],
-      "annotations": {
-        "tier_priority": "rb_v1.2-approved"
-      }
-    },
-    "intraocular_pressure_unit": {
-      "slot_uri": "",
-      "range": "IntraocularPressureUnitEnum",
-      "comments": [],
-      "annotations": {
-        "tier_priority": "rb_v1.2-approved"
-      }
-    },
     "retinal_detachment": {
       "slot_uri": "",
       "range": "RetinalDetachmentEnum",
-      "comments": [],
-      "annotations": {
-        "tier_priority": "rb_v1.2-approved"
-      }
-    },
-    "advanced_disease_signs": {
-      "slot_uri": "",
-      "range": "AdvancedDiseaseSignsEnum",
       "comments": [],
       "annotations": {
         "tier_priority": "rb_v1.2-approved"
@@ -24162,6 +24106,13 @@
             "hl_v2.0-approved"
           ]
         },
+        "mmHg": {
+          "meaning": "ncit:C49670",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
         "mmol/L": {
           "meaning": "ncit:C64387",
           "comments": [],
@@ -24304,6 +24255,13 @@
             "aml_v2.0-approved",
             "hl_v2.0-approved"
           ]
+        },
+        "Intraocular Pressure": {
+          "meaning": "",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ] 
         },
         "Pulmonary Function Test": {
           "meaning": "ncit:C38081",
@@ -64593,6 +64551,171 @@
         }
       }
     },
+    "FindingEnum": {
+      "permissible_values": {
+         "Cataract": {
+          "meaning": "ncit:C26713",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "Rubeosis": {
+          "meaning": "",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "Tumor in Anterior Chamber": {
+          "meaning": "",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "Uveitis": {
+          "meaning": "ncit:C26909",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "Buphthalmia": {
+          "meaning": "",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "Decreased Vision": {
+          "meaning": "",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "Glaucoma": {
+          "meaning": "ncit:C26782",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "Heterochromia": {
+          "meaning": "",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "Hyphema": {
+          "meaning": "ncit:C50592",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "Hypopyon": {
+          "meaning": "ncit:C50593",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "Leukocoria": {
+          "meaning": "",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "None": {
+          "meaning": "ncit:C41132",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "Orbital Cellulitis": {
+          "meaning": "ncit:C99000",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "Photoleukocoria": {
+          "meaning": "",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "Proptosis": {
+          "meaning": "ncit:C87114",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "Strabismus": {
+          "meaning": "ncit:C35040",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "Anterior Segment Tumor": {
+          "meaning": "",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "Aseptic Orbital Cellulitis": {
+          "meaning": "",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "Invasion of Ciliary Body": {
+          "meaning": "",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "Opaque Media": {
+          "meaning": "",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "Vitreous Hemorrhage": {
+          "meaning": "ncit:C50469",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "Unknown": {
+          "meaning": "ncit:C17998",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "Not Reported": {
+          "meaning": "ncit:C43234",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        }
+      }
+    },
     "HStageEnum": {
       "permissible_values": {
         "H0": {
@@ -64867,108 +64990,6 @@
         }
       }
     },
-    "ClinicalSignsEnum": {
-      "permissible_values": {
-        "Buphthalmia": {
-          "meaning": "",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Decreased Vision": {
-          "meaning": "",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Glaucoma": {
-          "meaning": "ncit:C26782",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Heterochromia": {
-          "meaning": "",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Hyphema": {
-          "meaning": "ncit:C50592",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Hypopyon": {
-          "meaning": "ncit:C50593",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Leukocoria": {
-          "meaning": "",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "None": {
-          "meaning": "ncit:C41132",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Orbital Cellulitis": {
-          "meaning": "ncit:C99000",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Photoleukocoria": {
-          "meaning": "",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Proptosis": {
-          "meaning": "ncit:C87114",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Strabismus": {
-          "meaning": "ncit:C35040",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Unknown": {
-          "meaning": "ncit:C17998",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Not Reported": {
-          "meaning": "ncit:C43234",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        }
-      }
-    },
     "SuspectedReferringDiagnosisEnum": {
       "permissible_values": {
         "Cataract": {
@@ -65082,77 +65103,6 @@
         }
       }
     },
-    "AnteriorSegmentDetailsEnum": {
-      "permissible_values": {
-        "Cataract": {
-          "meaning": "ncit:C26713",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Heterochromia": {
-          "meaning": "",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Hyphema": {
-          "meaning": "ncit:C50592",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Rubeosis": {
-          "meaning": "",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Tumor in Anterior Chamber": {
-          "meaning": "",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Uveitis": {
-          "meaning": "ncit:C26909",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Unknown": {
-          "meaning": "ncit:C17998",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Not Reported": {
-          "meaning": "ncit:C43234",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        }
-      }
-    },
-    "IntraocularPressureUnitEnum": {
-      "permissible_values": {
-        "mmHg": {
-          "meaning": "ncit:C49670",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        }
-      }
-    },
     "RetinalDetachmentEnum": {
       "permissible_values": {
         "No": {
@@ -65192,73 +65142,6 @@
         },
         "Yes, NOS": {
           "meaning": "ncit:C49488",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Unknown": {
-          "meaning": "ncit:C17998",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Not Reported": {
-          "meaning": "ncit:C43234",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        }
-      }
-    },
-    "AdvancedDiseaseSignsEnum": {
-      "permissible_values": {
-        "Anterior Segment Tumor": {
-          "meaning": "",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Aseptic Orbital Cellulitis": {
-          "meaning": "",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Bupthalmos": {
-          "meaning": "",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Invasion of Ciliary Body": {
-          "meaning": "",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Opaque Media": {
-          "meaning": "",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Proptosis": {
-          "meaning": "ncit:C87114",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Vitreous Hemorrhage": {
-          "meaning": "ncit:C50469",
           "comments": [],
           "in_subset": [
             "rb_v1.2-approved"
