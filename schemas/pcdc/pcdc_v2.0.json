@@ -40381,7 +40381,7 @@
             "fa_v1.0-draft"
           ]
         },
-        "PRETEXT >> Group I": {
+        "PRETEXT, NOS >> Group I": {
           "meaning": "",
           "comments": [
             "(lt_v1.0-approved) ConsortiumNote: STAGE_SYSTEM = 'PRETEXT Staging System'"
@@ -40391,7 +40391,7 @@
             "pre_v1.0-approved"
           ]
         },
-        "PRETEXT >> Group II": {
+        "PRETEXT, NOS >> Group II": {
           "meaning": "",
           "comments": [
             "(lt_v1.0-approved) ConsortiumNote: STAGE_SYSTEM = 'PRETEXT Staging System'"
@@ -40401,7 +40401,7 @@
             "pre_v1.0-approved"
           ]
         },
-        "PRETEXT >> Group III": {
+        "PRETEXT, NOS >> Group III": {
           "meaning": "",
           "comments": [
             "(lt_v1.0-approved) ConsortiumNote: STAGE_SYSTEM = 'PRETEXT Staging System'"
@@ -40411,7 +40411,167 @@
             "pre_v1.0-approved"
           ]
         },
-        "PRETEXT >> Group IV": {
+        "PRETEXT, NOS >> Group IV": {
+          "meaning": "",
+          "comments": [
+            "(lt_v1.0-approved) ConsortiumNote: STAGE_SYSTEM = 'PRETEXT Staging System'"
+          ],
+          "in_subset": [
+            "lt_v1.0-approved",
+            "pre_v1.0-approved"
+          ]
+        },
+         "PRETEXT, 1992 >> Group I": {
+          "meaning": "",
+          "comments": [
+            "(lt_v1.0-approved) ConsortiumNote: STAGE_SYSTEM = 'PRETEXT Staging System'"
+          ],
+          "in_subset": [
+            "lt_v1.0-approved",
+            "pre_v1.0-approved"
+          ]
+        },
+        "PRETEXT, 1992 >> Group II": {
+          "meaning": "",
+          "comments": [
+            "(lt_v1.0-approved) ConsortiumNote: STAGE_SYSTEM = 'PRETEXT Staging System'"
+          ],
+          "in_subset": [
+            "lt_v1.0-approved",
+            "pre_v1.0-approved"
+          ]
+        },
+        "PRETEXT, 1992 >> Group III": {
+          "meaning": "",
+          "comments": [
+            "(lt_v1.0-approved) ConsortiumNote: STAGE_SYSTEM = 'PRETEXT Staging System'"
+          ],
+          "in_subset": [
+            "lt_v1.0-approved",
+            "pre_v1.0-approved"
+          ]
+        },
+        "PRETEXT, 1992 >> Group IV": {
+          "meaning": "",
+          "comments": [
+            "(lt_v1.0-approved) ConsortiumNote: STAGE_SYSTEM = 'PRETEXT Staging System'"
+          ],
+          "in_subset": [
+            "lt_v1.0-approved",
+            "pre_v1.0-approved"
+          ]
+        },
+         "PRETEXT, 2005 >> Group I": {
+          "meaning": "",
+          "comments": [
+            "(lt_v1.0-approved) ConsortiumNote: STAGE_SYSTEM = 'PRETEXT Staging System'"
+          ],
+          "in_subset": [
+            "lt_v1.0-approved",
+            "pre_v1.0-approved"
+          ]
+        },
+        "PRETEXT, 2005 >> Group II": {
+          "meaning": "",
+          "comments": [
+            "(lt_v1.0-approved) ConsortiumNote: STAGE_SYSTEM = 'PRETEXT Staging System'"
+          ],
+          "in_subset": [
+            "lt_v1.0-approved",
+            "pre_v1.0-approved"
+          ]
+        },
+        "PRETEXT, 2005 >> Group III": {
+          "meaning": "",
+          "comments": [
+            "(lt_v1.0-approved) ConsortiumNote: STAGE_SYSTEM = 'PRETEXT Staging System'"
+          ],
+          "in_subset": [
+            "lt_v1.0-approved",
+            "pre_v1.0-approved"
+          ]
+        },
+        "PRETEXT, 2005 >> Group IV": {
+          "meaning": "",
+          "comments": [
+            "(lt_v1.0-approved) ConsortiumNote: STAGE_SYSTEM = 'PRETEXT Staging System'"
+          ],
+          "in_subset": [
+            "lt_v1.0-approved",
+            "pre_v1.0-approved"
+          ]
+        },
+         "PRETEXT, 2005-COG >> Group I": {
+          "meaning": "",
+          "comments": [
+            "(lt_v1.0-approved) ConsortiumNote: STAGE_SYSTEM = 'PRETEXT Staging System'"
+          ],
+          "in_subset": [
+            "lt_v1.0-approved",
+            "pre_v1.0-approved"
+          ]
+        },
+        "PRETEXT, 2005-COG >> Group II": {
+          "meaning": "",
+          "comments": [
+            "(lt_v1.0-approved) ConsortiumNote: STAGE_SYSTEM = 'PRETEXT Staging System'"
+          ],
+          "in_subset": [
+            "lt_v1.0-approved",
+            "pre_v1.0-approved"
+          ]
+        },
+        "PRETEXT, 2005-COG >> Group III": {
+          "meaning": "",
+          "comments": [
+            "(lt_v1.0-approved) ConsortiumNote: STAGE_SYSTEM = 'PRETEXT Staging System'"
+          ],
+          "in_subset": [
+            "lt_v1.0-approved",
+            "pre_v1.0-approved"
+          ]
+        },
+        "PRETEXT, 2005-COG >> Group IV": {
+          "meaning": "",
+          "comments": [
+            "(lt_v1.0-approved) ConsortiumNote: STAGE_SYSTEM = 'PRETEXT Staging System'"
+          ],
+          "in_subset": [
+            "lt_v1.0-approved",
+            "pre_v1.0-approved"
+          ]
+        },
+         "PRETEXT, 2017 >> Group I": {
+          "meaning": "",
+          "comments": [
+            "(lt_v1.0-approved) ConsortiumNote: STAGE_SYSTEM = 'PRETEXT Staging System'"
+          ],
+          "in_subset": [
+            "lt_v1.0-approved",
+            "pre_v1.0-approved"
+          ]
+        },
+        "PRETEXT, 2017 >> Group II": {
+          "meaning": "",
+          "comments": [
+            "(lt_v1.0-approved) ConsortiumNote: STAGE_SYSTEM = 'PRETEXT Staging System'"
+          ],
+          "in_subset": [
+            "lt_v1.0-approved",
+            "pre_v1.0-approved"
+          ]
+        },
+        "PRETEXT, 2017 >> Group III": {
+          "meaning": "",
+          "comments": [
+            "(lt_v1.0-approved) ConsortiumNote: STAGE_SYSTEM = 'PRETEXT Staging System'"
+          ],
+          "in_subset": [
+            "lt_v1.0-approved",
+            "pre_v1.0-approved"
+          ]
+        },
+        "PRETEXT, 2017 >> Group IV": {
           "meaning": "",
           "comments": [
             "(lt_v1.0-approved) ConsortiumNote: STAGE_SYSTEM = 'PRETEXT Staging System'"
