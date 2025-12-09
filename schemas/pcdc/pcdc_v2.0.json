@@ -2814,6 +2814,8 @@
         "review_source",
         "determination_source",
         "evaluator",
+        "site",
+        "lateralilty",
         "diagnosis_category",
         "diagnosis_basis",
         "suspected_referring_diagnosis",
@@ -2944,6 +2946,16 @@
           ]
         },
         "evaluator": {
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "site": {
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "laterality": {
           "in_subset": [
             "rb_v1.2-approved"
           ]
@@ -3118,6 +3130,8 @@
         "timings_submitter_id",
         "age_at_staging",
         "review_source",
+        "site",
+        "laterality",
         "stage_category",
         "tnm_finding",
         "tnm_tumor_t",
@@ -3217,6 +3231,16 @@
             "hl_v2.0-approved",
             "lt_v1.0-approved",
             "npc_v1.0-approved"
+          ]
+        },
+        "site": {
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "laterality": {
+          "in_subset": [
+            "rb_v1.2-approved"
           ]
         },
         "stage_category": {
@@ -3944,6 +3968,8 @@
         "subjects_submitter_id",
         "timings_submitter_id",
         "age_at_disease_characteristic",
+        "site",
+        "laterality",
         "detection_method",
         "risk_group",
         "gts_treatment",
@@ -3956,7 +3982,6 @@
         "vacterlh_association",
         "phenos_association",
         "association_status",
-        "laterality",
         "clinical_finding",
         "clinical_finding_other",
         "modified_rankin_scale",
@@ -4028,6 +4053,11 @@
             "ews_v2.0-approved",
             "fa_v1.0-draft",
             "npc_v1.0-approved",
+            "rb_v1.2-approved"
+          ]
+        },
+        "site": {
+          "in_subset": [
             "rb_v1.2-approved"
           ]
         },
@@ -4582,6 +4612,8 @@
         "protocol_medication",
         "non_protocol_timing",
         "non_protocol_reason",
+        "site",
+        "laterality",
         "medication_category",
         "supportive_care_detail",
         "administration_status",
@@ -4723,6 +4755,16 @@
         "non_protocol_reason": {
           "in_subset": [
             "cns_v1.2-approved"
+          ]
+        },
+        "site": {
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "laterality": {
+          "in_subset": [
+            "rb_v1.2-approved"
           ]
         },
         "medication_category": {
@@ -5810,6 +5852,8 @@
         "subjects_submitter_id",
         "timings_submitter_id",
         "age_at_response",
+        "site",
+        "laterality",
         "cycle_number",
         "tx_prior_response",
         "response_method",
@@ -5905,6 +5949,16 @@
             "nrsts_v2.0-approved",
             "rb_v1.2-approved",
             "rms_v3.0-approved"
+          ]
+        },
+        "site": {
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "laterality": {
+          "in_subset": [
+            "rb_v1.2-approved"
           ]
         },
         "cycle_number": {
@@ -7132,13 +7186,7 @@
       "slot_uri": "ncit:C81239",
       "range": "CauseOfDeathEnum",
       "comments": [
-        "D4CGNote: If multiple causes of death, include one observation per cause of death. However, only one cause of death can have the varaiable CAUSE_OF_DEATH_RANKING=Primary.\nD4CGNote: Only fill in this variable if LKSS is \"Dead\".",
-        "(aml_v2.0-approved) ConsortiumNote: If multiple causes of death, include one observation per cause of death. However, only one cause of death can have the varaiable CAUSE_OF_DEATH_RANKING=Primary.",
-        "(aml_v2.0-approved) ConsortiumNote:  Only fill in this variable if LKSS is 'Dead'",
-        "(pre_v1.0-approved) ConsortiumNote: Note: If multiple causes of death, include one observation per cause of death. However, only one cause of death can have the varaiable CAUSE_OF_DEATH_RANKING=Primary. Note: Only fill in this variable if LKSS is 'Dead'.",
-        "(cns_v1.2-approved) ConsortiumNote: Note: If multiple causes of death, include one observation per cause of death. However, only one cause of death can have the varaiable CAUSE_OF_DEATH_RANKING=Primary. Note: Only fill in this variable if LKSS is 'Dead'.",
-        "(ews_v2.0-approved) ConsortiumNote: Note: If multiple causes of death, include one observation per cause of death. However, only one cause of death can have the varaiable CAUSE_OF_DEATH_RANKING=Primary. Note: Only fill in this variable if LKSS is 'Dead'.",
-        "D4CGNote: If multiple causes of death, include one observation per cause of death. However, only one cause of death can have the varaiable CAUSE_OF_DEATH_RANKING=Primary. \\n D4CGNote: Only fill in this variable if LKSS is 'Dead'."
+        "D4CGNote: If multiple causes of death, include one observation per cause of death. However, only one cause of death can have the varaiable CAUSE_OF_DEATH_RANKING=Primary.\nD4CGNote: Only fill in this variable if LKSS is \"Dead\"."
       ],
       "annotations": {
         "tier_mandatory": "hl_v2.0-approved",
@@ -10594,6 +10642,14 @@
       "comments": [],
       "annotations": {
         "tier_optional": "rb_v1.2-approved"
+      }
+    },
+    "site": {
+      "slot_uri": "ncit:C157120",
+      "range": "SiteEnum",
+      "comments": [],
+      "annotations": {
+        "tier_priority": "rb_v1.2-approved"
       }
     },
     "presentation_symptoms": {
@@ -22324,6 +22380,26 @@
     },
     "TimePeriodTypeEnum": {
       "permissible_values": {
+        "Disease Phase": {
+          "meaning": "ncit:C168878",
+          "comments": [],
+          "in_subset": [
+            "aml_v2.0-approved",
+            "cns_v1.2-approved",
+            "ews_v2.0-approved",
+            "fa_v1.0-draft",
+            "gct_v2.0-approved",
+            "hl_v2.0-approved",
+            "lt_v1.0-approved",
+            "nbl_v2.0-approved",
+            "npc_v1.0-approved",
+            "nrsts_v2.0-approved",
+            "os_v2.0-approved",
+            "pre_v1.0-approved",
+            "rb_v1.2-approved",
+            "rms_v3.0-approved"
+          ]
+        },
         "Course": {
           "meaning": "ncit:C187095",
           "comments": [],
@@ -22346,26 +22422,6 @@
           "in_subset": [
             "cns_v1.2-approved",
             "hl_v2.0-approved"
-          ]
-        },
-        "Disease Phase": {
-          "meaning": "ncit:C168878",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved",
-            "cns_v1.2-approved",
-            "ews_v2.0-approved",
-            "fa_v1.0-draft",
-            "gct_v2.0-approved",
-            "hl_v2.0-approved",
-            "lt_v1.0-approved",
-            "nbl_v2.0-approved",
-            "npc_v1.0-approved",
-            "nrsts_v2.0-approved",
-            "os_v2.0-approved",
-            "pre_v1.0-approved",
-            "rb_v1.2-approved",
-            "rms_v3.0-approved"
           ]
         },
         "Exam": {
@@ -23060,12 +23116,7 @@
         "Treatment-Related Mortality": {
           "meaning": "ncit:C166165",
           "comments": [
-            "D4CGNote: Use the Adverse Events table for any additional details. Do not use CAUSE_OF_DEATH_DETAIL",
-            "(cns_v1.2-approved) ConsortiumNote: Note: Use the Adverse Events table for any additional details. Do not use CAUSE_OF_DEATH_DETAIL.",
-            "(ews_v2.0-approved) ConsortiumNote: Note: Use the Adverse Events table for any additional details. Do not use CAUSE_OF_DEATH_DETAIL",
-            "(lt_v1.0-approved) ConsortiumNote: Note: Use the Adverse Events table for any additional details.",
-            "D4CGNote: Use the Adverse Events table for any additional details. Do not use CAUSE_OF_DEATH_DETAIL.",
-            "(rb_v1.2-approved) ConsortiumNote: Note: Use the Adverse Events table for any additional details. Do not use CAUSE_OF_DEATH_DETAIL"
+            "D4CGNote: Use the Adverse Events table for any additional details. Do not use CAUSE_OF_DEATH_DETAIL"
           ],
           "in_subset": [
             "aml_v2.0-approved",
@@ -30623,6 +30674,17 @@
             "gct_v2.0-approved",
             "lt_v1.0-approved",
             "npc_v1.0-approved"
+          ]
+        }
+      }
+    },
+    "SiteEnum": {
+      "permissible_values": {
+        "Eye": {
+          "meaning": "ncit:C12401",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
           ]
         }
       }
@@ -54853,7 +54915,8 @@
           "meaning": "ncit:C88541",
           "comments": [],
           "in_subset": [
-            "npc_v1.0-approved"
+            "npc_v1.0-approved",
+            "rb_v1.2-approved"
           ]
         },
         "Hepatolenticular Degeneration": {
