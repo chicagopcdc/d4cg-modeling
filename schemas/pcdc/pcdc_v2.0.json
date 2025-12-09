@@ -2814,7 +2814,7 @@
         "review_source",
         "determination_source",
         "evaluator",
-        "site",
+        "diagnosis_site",
         "lateralilty",
         "diagnosis_category",
         "diagnosis_basis",
@@ -2950,7 +2950,7 @@
             "rb_v1.2-approved"
           ]
         },
-        "site": {
+        "diagnosis_site": {
           "in_subset": [
             "rb_v1.2-approved"
           ]
@@ -3130,7 +3130,7 @@
         "timings_submitter_id",
         "age_at_staging",
         "review_source",
-        "site",
+        "staging_site",
         "laterality",
         "stage_category",
         "tnm_finding",
@@ -3233,7 +3233,7 @@
             "npc_v1.0-approved"
           ]
         },
-        "site": {
+        "staging_site": {
           "in_subset": [
             "rb_v1.2-approved"
           ]
@@ -3968,7 +3968,7 @@
         "subjects_submitter_id",
         "timings_submitter_id",
         "age_at_disease_characteristic",
-        "site",
+        "disease_characteristics_site",
         "laterality",
         "detection_method",
         "risk_group",
@@ -4056,7 +4056,7 @@
             "rb_v1.2-approved"
           ]
         },
-        "site": {
+        "disease_characteristics_site": {
           "in_subset": [
             "rb_v1.2-approved"
           ]
@@ -4400,7 +4400,8 @@
             "os_v2.0-approved",
             "pre_v1.0-approved",
             "rms_v3.0-approved",
-            "npc_v1.0-approved"
+            "npc_v1.0-approved",
+            "rb_v1.2-approved"
           ]
         },
         "site_other": {
@@ -4612,8 +4613,6 @@
         "protocol_medication",
         "non_protocol_timing",
         "non_protocol_reason",
-        "site",
-        "laterality",
         "medication_category",
         "supportive_care_detail",
         "administration_status",
@@ -4622,6 +4621,7 @@
         "medication_other",
         "normalization_basis",
         "administration_site",
+        "laterality",
         "number_doses",
         "medication_dose_administered",
         "medication_dose_intended",
@@ -4755,11 +4755,6 @@
         "non_protocol_reason": {
           "in_subset": [
             "cns_v1.2-approved"
-          ]
-        },
-        "site": {
-          "in_subset": [
-            "rb_v1.2-approved"
           ]
         },
         "laterality": {
@@ -5852,7 +5847,7 @@
         "subjects_submitter_id",
         "timings_submitter_id",
         "age_at_response",
-        "site",
+        "response_site",
         "laterality",
         "cycle_number",
         "tx_prior_response",
@@ -5951,7 +5946,7 @@
             "rms_v3.0-approved"
           ]
         },
-        "site": {
+        "response_site": {
           "in_subset": [
             "rb_v1.2-approved"
           ]
@@ -6259,6 +6254,8 @@
         "age_at_ae",
         "age_at_ae_resolved",
         "adverse_event",
+        "ae_site",
+        "laterality",
         "ae_code",
         "ae_code_system",
         "ae_system_version",
@@ -6368,6 +6365,16 @@
             "lt_v1.0-approved",
             "rb_v1.2-approved",
             "npc_v1.0-approved"
+          ]
+        },
+        "ae_site": {
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "laterality": {
+          "in_subset": [
+            "rb_v1.2-approved"
           ]
         },
         "ae_code": {
@@ -10644,9 +10651,41 @@
         "tier_optional": "rb_v1.2-approved"
       }
     },
-    "site": {
+    "staging_site": {
       "slot_uri": "ncit:C157120",
-      "range": "SiteEnum",
+      "range": "StagingSiteEnum",
+      "comments": [],
+      "annotations": {
+        "tier_priority": "rb_v1.2-approved"
+      }
+    },
+    "diagnosis_site": {
+      "slot_uri": "ncit:C157120",
+      "range": "DiagnosisSiteEnum",
+      "comments": [],
+      "annotations": {
+        "tier_priority": "rb_v1.2-approved"
+      }
+    },
+    "disease_characteristics_site": {
+      "slot_uri": "ncit:C157120",
+      "range": "DiseaseCharacteristicsSiteEnum",
+      "comments": [],
+      "annotations": {
+        "tier_priority": "rb_v1.2-approved"
+      }
+    },
+    "response_site": {
+      "slot_uri": "ncit:C157120",
+      "range": "ResponseSiteEnum",
+      "comments": [],
+      "annotations": {
+        "tier_priority": "rb_v1.2-approved"
+      }
+    },
+    "ae_site": {
+      "slot_uri": "ncit:C157120",
+      "range": "AeSiteEnum",
       "comments": [],
       "annotations": {
         "tier_priority": "rb_v1.2-approved"
@@ -30678,7 +30717,51 @@
         }
       }
     },
-    "SiteEnum": {
+    "StagingSiteEnum": {
+      "permissible_values": {
+        "Eye": {
+          "meaning": "ncit:C12401",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        }
+      }
+    },
+    "DiagnosisSiteEnum": {
+      "permissible_values": {
+        "Eye": {
+          "meaning": "ncit:C12401",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        }
+      }
+    },
+    "DiseaseCharacteristicsSiteEnum": {
+      "permissible_values": {
+        "Eye": {
+          "meaning": "ncit:C12401",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        }
+      }
+    },
+    "ResponseSiteEnum": {
+      "permissible_values": {
+        "Eye": {
+          "meaning": "ncit:C12401",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        }
+      }
+    },
+    "AeSiteEnum": {
       "permissible_values": {
         "Eye": {
           "meaning": "ncit:C12401",
@@ -45472,6 +45555,13 @@
           "comments": [],
           "in_subset": [
             "cns_v1.2-approved"
+          ]
+        },
+        "Eye": {
+          "meaning": "ncit:C12401",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
           ]
         },
         "Eyelid": {
@@ -65304,15 +65394,15 @@
     },
     "AdministrationSiteEnum": {
       "permissible_values": {
-        "Left Femoral Artery": {
+        "Femoral Artery": {
           "meaning": "",
           "comments": [],
           "in_subset": [
             "rb_v1.2-approved"
           ]
         },
-        "Right Femoral Artery": {
-          "meaning": "",
+        "Eye": {
+          "meaning": "C12401",
           "comments": [],
           "in_subset": [
             "rb_v1.2-approved"
