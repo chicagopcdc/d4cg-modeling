@@ -6496,6 +6496,7 @@
         "timings_submitter_id",
         "age_at_smn",
         "smn_site",
+        "smn_type",
         "morph_code",
         "morph_code_text",
         "morph_code_system",
@@ -6513,7 +6514,8 @@
         "os_v2.0-approved",
         "aml_v2.0-approved",
         "npc_v1.0-approved",
-        "cns_v1.2-approved"
+        "cns_v1.2-approved",
+        "rb_v1.2-approved"
       ],
       "annotations": {
         "domain": "monitoring"
@@ -6526,7 +6528,8 @@
             "os_v2.0-approved",
             "aml_v2.0-approved",
             "npc_v1.0-approved",
-            "cns_v1.2-approved"
+            "cns_v1.2-approved",
+            "rb_v1.2-approved"
           ]
         },
         "timings_submitter_id": {
@@ -6536,7 +6539,8 @@
             "os_v2.0-approved",
             "aml_v2.0-approved",
             "npc_v1.0-approved",
-            "cns_v1.2-approved"
+            "cns_v1.2-approved",
+            "rb_v1.2-approved"
           ]
         },
         "age_at_smn": {
@@ -6546,7 +6550,8 @@
             "os_v2.0-approved",
             "aml_v2.0-approved",
             "npc_v1.0-approved",
-            "cns_v1.2-approved"
+            "cns_v1.2-approved",
+            "rb_v1.2-approved"
           ]
         },
         "smn_site": {
@@ -6556,6 +6561,11 @@
             "npc_v1.0-approved"
           ]
         },
+        "smn_type": {
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        }
         "morph_code": {
           "in_subset": [
             "gct_v2.0-approved",
@@ -6564,8 +6574,8 @@
             "pre_v1.0-approved",
             "aml_v2.0-approved",
             "npc_v1.0-approved",
-            "cns_v1.2-approved"
-
+            "cns_v1.2-approved",
+            "rb_v1.2-approved"
           ]
         },
         "morph_code_text": {
@@ -6575,8 +6585,8 @@
             "os_v2.0-approved",
             "pre_v1.0-approved",
             "npc_v1.0-approved",
-            "cns_v1.2-approved"
-
+            "cns_v1.2-approved",
+            "rb_v1.2-approved"
           ]
         },
         "morph_code_system": {
@@ -6587,7 +6597,8 @@
             "pre_v1.0-approved",
             "aml_v2.0-approved",
             "npc_v1.0-approved",
-            "cns_v1.2-approved"
+            "cns_v1.2-approved",
+            "rb_v1.2-approved"
           ]
         },
         "morph_code_system_version": {
@@ -6595,7 +6606,8 @@
             "pre_v1.0-approved",
             "aml_v2.0-approved",
             "npc_v1.0-approved",
-            "cns_v1.2-approved"
+            "cns_v1.2-approved",
+            "rb_v1.2-approved"
           ]
         },
         "top_code": {
@@ -6606,7 +6618,8 @@
             "pre_v1.0-approved",
             "aml_v2.0-approved",
             "npc_v1.0-approved",
-            "cns_v1.2-approved"
+            "cns_v1.2-approved",
+            "rb_v1.2-approved"
           ]
         },
          "top_code_text": {
@@ -6616,7 +6629,8 @@
             "os_v2.0-approved",
             "pre_v1.0-approved",
             "npc_v1.0-approved",
-            "cns_v1.2-approved"
+            "cns_v1.2-approved",
+            "rb_v1.2-approved"
           ]
         },
         "top_code_system": {
@@ -6627,7 +6641,8 @@
             "pre_v1.0-approved",
             "aml_v2.0-approved",
             "npc_v1.0-approved",
-            "cns_v1.2-approved"
+            "cns_v1.2-approved",
+            "rb_v1.2-approved"
           ]
         },
         "top_code_system_version": {
@@ -6635,12 +6650,19 @@
             "pre_v1.0-approved",
             "aml_v2.0-approved",
             "npc_v1.0-approved",
-            "cns_v1.2-approved"
+            "cns_v1.2-approved",
+            "rb_v1.2-approved"
           ]
         },
         "smn_field": {
           "in_subset": [
-            "hl_v2.0-approved"
+            "hl_v2.0-approved",
+            "rb_v1.2-approved"
+          ]
+        },
+        "estimated_rt_dose_to_smn": {
+          "in_subset": [
+            "rb_v1.2-approved"
           ]
         }
       }
@@ -8040,6 +8062,12 @@
     "smn_site": {
       "slot_uri": "",
       "range": "SmnSiteEnum",
+      "comments": [],
+      "annotations": {}
+    },
+    "smn_type": {
+      "slot_uri": "",
+      "range": "SmnTypeEnum",
       "comments": [],
       "annotations": {}
     },
@@ -39417,7 +39445,8 @@
             "os_v2.0-approved",
             "pre_v1.0-approved",
             "npc_v1.0-approved",
-            "cns_v1.2-approved"
+            "cns_v1.2-approved",
+            "rb_v1.2-approved"
           ]
         }
       }
@@ -47043,13 +47072,7 @@
           "meaning": "ncit:C12418",
           "comments": [],
           "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Head/Neck": {
-          "meaning": "",
-          "comments": [],
-          "in_subset": [
+            "rb_v1.2-approved",
             "nrsts_v2.0-approved"
           ]
         },
@@ -47085,7 +47108,7 @@
           ]
         },
         "Other": {
-          "meaning": "",
+          "meaning": "ncit:C17649",
           "comments": [],
           "in_subset": [
             "nrsts_v2.0-approved"
@@ -47099,10 +47122,84 @@
           ]
         },
         "Not Reported": {
-          "meaning": "",
+          "meaning": "ncit:C43234",
           "comments": [],
           "in_subset": [
             "nrsts_v2.0-approved",
+            "rb_v1.2-approved"
+          ]
+        }
+      }
+    },
+    "SmnTypeEnum": {
+      "permissible_values": {
+        "Leukemia": {
+          "meaning": "ncit:C3161",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "Glioblastoma": {
+          "meaning": "ncit:C3058",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "Low Grade Glioma": {
+          "meaning": "ncit:C132067",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "Osteosarcoma": {
+          "meaning": "ncit:C9145",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "Soft Tissue Sarcoma": {
+          "meaning": "ncit:C9306",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "Melanoma": {
+          "meaning": "ncit:C3224",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "Carcinoma": {
+          "meaning": "ncit:C2916",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "Other": {
+          "meaning": "ncit:C17649",
+          "comments": [],
+          "in_subset": [
+            "nrsts_v2.0-approved"
+          ]
+        },
+        "Unknown": {
+          "meaning": "ncit:C17998",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "Not Reported": {
+          "meaning": "ncit:C43234",
+          "comments": [],
+          "in_subset": [
             "rb_v1.2-approved"
           ]
         }
@@ -53078,15 +53175,8 @@
             "hl_v2.0-approved",
             "nrsts_v2.0-approved",
             "rms_v3.0-approved",
-            "aml_v2.0-approved"
-          ]
-        },
-        "System NOS >> Complete Response/Remission": {
-          "meaning": "ncit:C4870",
-          "comments": [],
-          "in_subset": [
-            "cns_v1.2-approved",
-            "rb_v1.2-approved"
+            "aml_v2.0-approved",
+            "cns_v1.2-approved"
           ]
         },
         "System NOS >> Major Response": {
@@ -53122,7 +53212,6 @@
             "hl_v2.0-approved",
             "npc_v1.0-approved",
             "nrsts_v2.0-approved",
-            "rb_v1.2-approved",
             "rms_v3.0-approved"
           ]
         },
@@ -53136,7 +53225,6 @@
             "hl_v2.0-approved",
             "npc_v1.0-approved",
             "nrsts_v2.0-approved",
-            "rb_v1.2-approved",
             "rms_v3.0-approved"
           ]
         },
@@ -53150,7 +53238,6 @@
             "hl_v2.0-approved",
             "npc_v1.0-approved",
             "nrsts_v2.0-approved",
-            "rb_v1.2-approved",
             "rms_v3.0-approved"
           ]
         },
@@ -57554,7 +57641,8 @@
             "os_v2.0-approved",
             "pre_v1.0-approved",
             "npc_v1.0-approved",
-            "cns_v1.2-approved"
+            "cns_v1.2-approved",
+            "rb_v1.2-approved"
           ]
         }
       }
