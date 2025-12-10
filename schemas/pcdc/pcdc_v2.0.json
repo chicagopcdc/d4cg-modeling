@@ -6574,7 +6574,8 @@
         "aml_v2.0-approved",
         "npc_v1.0-approved",
         "cns_v1.2-approved",
-        "rb_v1.2-approved"
+        "rb_v1.2-approved",
+        "lt_v1.0-approved"
       ],
       "annotations": {
         "domain": "monitoring"
@@ -6588,7 +6589,8 @@
             "aml_v2.0-approved",
             "npc_v1.0-approved",
             "cns_v1.2-approved",
-            "rb_v1.2-approved"
+            "rb_v1.2-approved",
+            "lt_v1.0-approved"
           ]
         },
         "timings_submitter_id": {
@@ -6599,7 +6601,8 @@
             "aml_v2.0-approved",
             "npc_v1.0-approved",
             "cns_v1.2-approved",
-            "rb_v1.2-approved"
+            "rb_v1.2-approved",
+            "lt_v1.0-approved"
           ]
         },
         "age_at_smn": {
@@ -6610,7 +6613,8 @@
             "aml_v2.0-approved",
             "npc_v1.0-approved",
             "cns_v1.2-approved",
-            "rb_v1.2-approved"
+            "rb_v1.2-approved",
+            "lt_v1.0-approved"
           ]
         },
         "smn_site": {
@@ -6622,7 +6626,8 @@
         },
         "smn_type": {
           "in_subset": [
-            "rb_v1.2-approved"
+            "rb_v1.2-approved",
+            "lt_v1.0-approved"
           ]
         },
         "morph_code": {
@@ -6634,7 +6639,8 @@
             "aml_v2.0-approved",
             "npc_v1.0-approved",
             "cns_v1.2-approved",
-            "rb_v1.2-approved"
+            "rb_v1.2-approved",
+            "lt_v1.0-approved"
           ]
         },
         "morph_code_text": {
@@ -6645,7 +6651,8 @@
             "pre_v1.0-approved",
             "npc_v1.0-approved",
             "cns_v1.2-approved",
-            "rb_v1.2-approved"
+            "rb_v1.2-approved",
+            "lt_v1.0-approved"
           ]
         },
         "morph_code_system": {
@@ -6657,7 +6664,8 @@
             "aml_v2.0-approved",
             "npc_v1.0-approved",
             "cns_v1.2-approved",
-            "rb_v1.2-approved"
+            "rb_v1.2-approved",
+            "lt_v1.0-approved"
           ]
         },
         "morph_code_system_version": {
@@ -6666,7 +6674,8 @@
             "aml_v2.0-approved",
             "npc_v1.0-approved",
             "cns_v1.2-approved",
-            "rb_v1.2-approved"
+            "rb_v1.2-approved",
+            "lt_v1.0-approved"
           ]
         },
         "top_code": {
@@ -6678,7 +6687,8 @@
             "aml_v2.0-approved",
             "npc_v1.0-approved",
             "cns_v1.2-approved",
-            "rb_v1.2-approved"
+            "rb_v1.2-approved",
+            "lt_v1.0-approved"
           ]
         },
          "top_code_text": {
@@ -6689,7 +6699,8 @@
             "pre_v1.0-approved",
             "npc_v1.0-approved",
             "cns_v1.2-approved",
-            "rb_v1.2-approved"
+            "rb_v1.2-approved",
+            "lt_v1.0-approved"
           ]
         },
         "top_code_system": {
@@ -6701,7 +6712,8 @@
             "aml_v2.0-approved",
             "npc_v1.0-approved",
             "cns_v1.2-approved",
-            "rb_v1.2-approved"
+            "rb_v1.2-approved",
+            "lt_v1.0-approved"
           ]
         },
         "top_code_system_version": {
@@ -6710,7 +6722,8 @@
             "aml_v2.0-approved",
             "npc_v1.0-approved",
             "cns_v1.2-approved",
-            "rb_v1.2-approved"
+            "rb_v1.2-approved",
+            "lt_v1.0-approved"
           ]
         },
         "smn_field": {
@@ -39589,7 +39602,8 @@
             "npc_v1.0-approved",
             "cns_v1.2-approved",
             "rb_v1.2-approved",
-            "aml_v2.0-approved"
+            "aml_v2.0-approved",
+            "lt_v1.0-approved"
           ]
         }
       }
@@ -47288,6 +47302,20 @@
           "comments": [],
           "in_subset": [
             "rb_v1.2-approved"
+          ]
+        },
+        "ALL": {
+          "meaning": "ncit:C3167",
+          "comments": [],
+          "in_subset": [
+            "lt_v1.0-approved"
+          ]
+        },
+        "AML": {
+          "meaning": "ncit:C3171",
+          "comments": [],
+          "in_subset": [
+            "lt_v1.0-approved"
           ]
         },
         "Glioblastoma": {
@@ -57799,7 +57827,8 @@
             "npc_v1.0-approved",
             "cns_v1.2-approved",
             "rb_v1.2-approved",
-            "aml_v2.0-approved"
+            "aml_v2.0-approved",
+            "lt_v1.0-approved"
           ]
         }
       }
