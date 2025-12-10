@@ -2815,7 +2815,7 @@
         "determination_source",
         "evaluator",
         "diagnosis_site",
-        "lateralilty",
+        "laterality",
         "diagnosis_category",
         "diagnosis_basis",
         "suspected_referring_diagnosis",
@@ -3529,7 +3529,6 @@
             "fa_v1.0-draft",
             "gct_v2.0-approved",
             "hl_v2.0-approved",
-            "lt_v1.0-approved",
             "npc_v1.0-approved"
           ]
         },
@@ -3611,7 +3610,6 @@
             "fa_v1.0-draft",
             "gct_v2.0-approved",
             "hl_v2.0-approved",
-            "lt_v1.0-approved",
             "npc_v1.0-approved",
             "os_v2.0-approved",
             "rb_v1.2-approved"
@@ -30802,7 +30800,6 @@
             "ews_v2.0-approved",
             "fa_v1.0-draft",
             "gct_v2.0-approved",
-            "lt_v1.0-approved",
             "npc_v1.0-approved",
             "os_v2.0-approved",
             "pre_v1.0-approved",
@@ -39591,7 +39588,8 @@
             "pre_v1.0-approved",
             "npc_v1.0-approved",
             "cns_v1.2-approved",
-            "rb_v1.2-approved"
+            "rb_v1.2-approved",
+            "aml_v2.0-approved"
           ]
         }
       }
@@ -47392,7 +47390,8 @@
             "os_v2.0-approved",
             "pre_v1.0-approved",
             "rb_v1.2-approved",
-            "rms_v3.0-approved"
+            "rms_v3.0-approved",
+            "lt_v1.0-approved"
           ]
         },
         "Midline": {
@@ -47428,7 +47427,8 @@
             "os_v2.0-approved",
             "pre_v1.0-approved",
             "rb_v1.2-approved",
-            "rms_v3.0-approved"
+            "rms_v3.0-approved",
+            "lt_v1.0-approved"
           ]
         },
         "Unilateral": {
@@ -47453,7 +47453,8 @@
             "os_v2.0-approved",
             "pre_v1.0-approved",
             "rb_v1.2-approved",
-            "rms_v3.0-approved"
+            "rms_v3.0-approved",
+            "lt_v1.0-approved"
           ]
         },
         "Not Reported": {
@@ -47471,7 +47472,8 @@
             "os_v2.0-approved",
             "pre_v1.0-approved",
             "rb_v1.2-approved",
-            "rms_v3.0-approved"
+            "rms_v3.0-approved",
+            "lt_v1.0-approved"
           ]
         }
       }
@@ -48442,7 +48444,6 @@
           "in_subset": [
             "ews_v2.0-approved",
             "fa_v1.0-draft",
-            "lt_v1.0-approved",
             "npc_v1.0-approved",
             "os_v2.0-approved"
           ]
@@ -55604,14 +55605,16 @@
           "meaning": "ncit:C43224",
           "comments": [],
           "in_subset": [
-            "npc_v1.0-approved"
+            "npc_v1.0-approved",
+            "aml_v2.0-approved"
           ]
         },
         "Trisomy 21 Mosaicism": {
           "meaning": "ncit:C142099",
           "comments": [],
           "in_subset": [
-            "npc_v1.0-approved"
+            "npc_v1.0-approved",
+            "aml_v2.0-approved"
           ]
         },
         "Tuberous Sclerosis": {
@@ -57795,7 +57798,8 @@
             "pre_v1.0-approved",
             "npc_v1.0-approved",
             "cns_v1.2-approved",
-            "rb_v1.2-approved"
+            "rb_v1.2-approved",
+            "aml_v2.0-approved"
           ]
         }
       }
@@ -58672,7 +58676,8 @@
             "ews_v2.0-approved",
             "fa_v1.0-draft",
             "npc_v1.0-approved",
-            "rb_v1.2-approved"
+            "rb_v1.2-approved",
+            "aml_v2.0-approved"
           ]
         },
         "Unknown": {
@@ -63084,7 +63089,8 @@
           "comments": [],
           "in_subset": [
             "ews_v2.0-approved",
-            "rb_v1.2-approved"
+            "rb_v1.2-approved",
+            "aml_v2.0-approved"
           ]
         },
         "CTCAE >> Grade 2": {
@@ -63092,7 +63098,8 @@
           "comments": [],
           "in_subset": [
             "ews_v2.0-approved",
-            "rb_v1.2-approved"
+            "rb_v1.2-approved",
+            "aml_v2.0-approved"
           ]
         },
         "CTCAE >> Grade 3": {
@@ -63100,7 +63107,8 @@
           "comments": [],
           "in_subset": [
             "ews_v2.0-approved",
-            "rb_v1.2-approved"
+            "rb_v1.2-approved",
+            "aml_v2.0-approved"
           ]
         },
         "CTCAE >> Grade 4": {
@@ -63108,7 +63116,8 @@
           "comments": [],
           "in_subset": [
             "ews_v2.0-approved",
-            "rb_v1.2-approved"
+            "rb_v1.2-approved",
+            "aml_v2.0-approved"
           ]
         },
         "CTCAE >> Grade 5": {
@@ -63116,7 +63125,8 @@
           "comments": [],
           "in_subset": [
             "ews_v2.0-approved",
-            "rb_v1.2-approved"
+            "rb_v1.2-approved",
+            "aml_v2.0-approved"
           ]
         },
         "System NOS >> Grade 1": {
