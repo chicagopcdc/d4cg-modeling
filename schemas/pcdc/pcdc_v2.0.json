@@ -1802,8 +1802,7 @@
             "lt_v1.0-approved",
             "nbl_v2.0-approved",
             "npc_v1.0-approved",
-            "pre_v1.0-approved",
-            "rb_v1.2-approved"
+            "pre_v1.0-approved"
           ]
         },
         "result_unit": {
@@ -1816,8 +1815,7 @@
             "hl_v2.0-approved",
             "lt_v1.0-approved",
             "npc_v1.0-approved",
-            "pre_v1.0-approved",
-            "rb_v1.2-approved"
+            "pre_v1.0-approved"
           ]
         },
         "traumatic_tap": {
@@ -2815,8 +2813,12 @@
         "age_at_diag_resolved",
         "review_source",
         "determination_source",
+        "evaluator",
+        "diagnosis_site",
+        "laterality",
         "diagnosis_category",
         "diagnosis_basis",
+        "suspected_referring_diagnosis",
         "diagnosis",
         "mpal",
         "mlds",
@@ -2943,12 +2945,26 @@
             "fa_v1.0-draft"
           ]
         },
+        "evaluator": {
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "diagnosis_site": {
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "laterality": {
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
         "diagnosis_category": {
           "in_subset": [
             "cns_v1.2-approved",
             "ews_v2.0-approved",
-            "lt_v1.0-approved",
-            "rb_v1.2-approved"
+            "lt_v1.0-approved"
           ]
         },
         "diagnosis_basis": {
@@ -2967,6 +2983,11 @@
             "pre_v1.0-approved",
             "rb_v1.2-approved",
             "rms_v3.0-approved"
+          ]
+        },
+        "suspected_referring_diagnosis": {
+          "in_subset": [
+            "rb_v1.2-approved"
           ]
         },
         "diagnosis": {
@@ -3109,6 +3130,8 @@
         "timings_submitter_id",
         "age_at_staging",
         "review_source",
+        "staging_site",
+        "laterality",
         "stage_category",
         "tnm_finding",
         "tnm_tumor_t",
@@ -3208,6 +3231,16 @@
             "hl_v2.0-approved",
             "lt_v1.0-approved",
             "npc_v1.0-approved"
+          ]
+        },
+        "staging_site": {
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "laterality": {
+          "in_subset": [
+            "rb_v1.2-approved"
           ]
         },
         "stage_category": {
@@ -3407,7 +3440,8 @@
         "seeds_present",
         "seeds_pattern",
         "seeds_type",
-        "seeds_classification"
+        "seeds_classification",
+        "finding"
       ],
       "comments": [
         "D4CGNote: One observation/row per tumor or lesion when instantiated. Multiple tumors or lesions can be reported in a single obvservation/row if no individual characteristics (e.g. different sites, individual classifications or measurements, etc.) need to be included.",
@@ -3495,7 +3529,6 @@
             "fa_v1.0-draft",
             "gct_v2.0-approved",
             "hl_v2.0-approved",
-            "lt_v1.0-approved",
             "npc_v1.0-approved"
           ]
         },
@@ -3577,7 +3610,6 @@
             "fa_v1.0-draft",
             "gct_v2.0-approved",
             "hl_v2.0-approved",
-            "lt_v1.0-approved",
             "npc_v1.0-approved",
             "os_v2.0-approved",
             "rb_v1.2-approved"
@@ -3921,6 +3953,11 @@
           "in_subset": [
             "rb_v1.2-approved"
           ]
+        },
+        "finding": {
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
         }
       }
     },
@@ -3929,6 +3966,8 @@
         "subjects_submitter_id",
         "timings_submitter_id",
         "age_at_disease_characteristic",
+        "disease_characteristics_site",
+        "laterality",
         "detection_method",
         "risk_group",
         "gts_treatment",
@@ -3941,7 +3980,6 @@
         "vacterlh_association",
         "phenos_association",
         "association_status",
-        "laterality",
         "clinical_finding",
         "clinical_finding_other",
         "modified_rankin_scale",
@@ -3950,17 +3988,10 @@
         "skip_lesion",
         "skip_met_involvement",
         "trilateral_retinoblastoma",
-        "evaluator",
         "presentation_symptoms",
         "presentation_symptoms_status",
-        "clinical_signs",
-        "suspected_referring_diagnosis",
         "anterior_segment_exam",
-        "anterior_segment_details",
-        "intraocular_pressure",
-        "intraocular_pressure_unit",
-        "retinal_detachment",
-        "advanced_disease_signs"
+        "retinal_detachment"
       ],
       "comments": [
         "D4CGNote: One observation/row per characteristic when instantiated."
@@ -4020,6 +4051,11 @@
             "ews_v2.0-approved",
             "fa_v1.0-draft",
             "npc_v1.0-approved",
+            "rb_v1.2-approved"
+          ]
+        },
+        "disease_characteristics_site": {
+          "in_subset": [
             "rb_v1.2-approved"
           ]
         },
@@ -4132,11 +4168,6 @@
             "rb_v1.2-approved"
           ]
         },
-        "evaluator": {
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
         "presentation_symptoms": {
           "in_subset": [
             "rb_v1.2-approved",
@@ -4151,42 +4182,12 @@
             "npc_v1.0-approved"
           ]
         },
-        "clinical_signs": {
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "suspected_referring_diagnosis": {
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
         "anterior_segment_exam": {
           "in_subset": [
             "rb_v1.2-approved"
           ]
         },
-        "anterior_segment_details": {
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "intraocular_pressure": {
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "intraocular_pressure_unit": {
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
         "retinal_detachment": {
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "advanced_disease_signs": {
           "in_subset": [
             "rb_v1.2-approved"
           ]
@@ -4397,7 +4398,8 @@
             "os_v2.0-approved",
             "pre_v1.0-approved",
             "rms_v3.0-approved",
-            "npc_v1.0-approved"
+            "npc_v1.0-approved",
+            "rb_v1.2-approved"
           ]
         },
         "site_other": {
@@ -4617,6 +4619,7 @@
         "medication_other",
         "normalization_basis",
         "administration_site",
+        "laterality",
         "number_doses",
         "medication_dose_administered",
         "medication_dose_intended",
@@ -4750,6 +4753,11 @@
         "non_protocol_reason": {
           "in_subset": [
             "cns_v1.2-approved"
+          ]
+        },
+        "laterality": {
+          "in_subset": [
+            "rb_v1.2-approved"
           ]
         },
         "medication_category": {
@@ -5035,6 +5043,7 @@
         "age_at_rt_start",
         "year_at_rt_start",
         "age_at_rt_end",
+        "indication",
         "protocol_radiation_therapy",
         "non_protocol_timing",
         "rt_data_source",
@@ -5042,7 +5051,6 @@
         "rt_site",
         "laterality",
         "energy_type",
-        "proton_delivery_mode",
         "technique",
         "rt_dose",
         "rt_dose_unit",
@@ -5057,7 +5065,6 @@
         "rt_margins",
         "tissue_type",
         "transposition_organ",
-        "indication",
         "rt_completed",
         "plaque_size",
         "rad_seeds_type",
@@ -5233,11 +5240,6 @@
             "nrsts_v2.0-approved",
             "rb_v1.2-approved",
             "rms_v3.0-approved"
-          ]
-        },
-        "proton_delivery_mode": {
-          "in_subset": [
-            "rb_v1.2-approved"
           ]
         },
         "technique": {
@@ -5843,6 +5845,8 @@
         "subjects_submitter_id",
         "timings_submitter_id",
         "age_at_response",
+        "response_site",
+        "laterality",
         "cycle_number",
         "tx_prior_response",
         "response_method",
@@ -5938,6 +5942,16 @@
             "nrsts_v2.0-approved",
             "rb_v1.2-approved",
             "rms_v3.0-approved"
+          ]
+        },
+        "response_site": {
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "laterality": {
+          "in_subset": [
+            "rb_v1.2-approved"
           ]
         },
         "cycle_number": {
@@ -6238,6 +6252,8 @@
         "age_at_ae",
         "age_at_ae_resolved",
         "adverse_event",
+        "ae_site",
+        "laterality",
         "ae_code",
         "ae_code_system",
         "ae_system_version",
@@ -6347,6 +6363,16 @@
             "lt_v1.0-approved",
             "rb_v1.2-approved",
             "npc_v1.0-approved"
+          ]
+        },
+        "ae_site": {
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "laterality": {
+          "in_subset": [
+            "rb_v1.2-approved"
           ]
         },
         "ae_code": {
@@ -6529,6 +6555,7 @@
         "timings_submitter_id",
         "age_at_smn",
         "smn_site",
+        "smn_type",
         "morph_code",
         "morph_code_text",
         "morph_code_system",
@@ -6546,7 +6573,9 @@
         "os_v2.0-approved",
         "aml_v2.0-approved",
         "npc_v1.0-approved",
-        "cns_v1.2-approved"
+        "cns_v1.2-approved",
+        "rb_v1.2-approved",
+        "lt_v1.0-approved"
       ],
       "annotations": {
         "domain": "monitoring"
@@ -6559,7 +6588,9 @@
             "os_v2.0-approved",
             "aml_v2.0-approved",
             "npc_v1.0-approved",
-            "cns_v1.2-approved"
+            "cns_v1.2-approved",
+            "rb_v1.2-approved",
+            "lt_v1.0-approved"
           ]
         },
         "timings_submitter_id": {
@@ -6569,7 +6600,9 @@
             "os_v2.0-approved",
             "aml_v2.0-approved",
             "npc_v1.0-approved",
-            "cns_v1.2-approved"
+            "cns_v1.2-approved",
+            "rb_v1.2-approved",
+            "lt_v1.0-approved"
           ]
         },
         "age_at_smn": {
@@ -6579,7 +6612,9 @@
             "os_v2.0-approved",
             "aml_v2.0-approved",
             "npc_v1.0-approved",
-            "cns_v1.2-approved"
+            "cns_v1.2-approved",
+            "rb_v1.2-approved",
+            "lt_v1.0-approved"
           ]
         },
         "smn_site": {
@@ -6587,6 +6622,12 @@
             "nrsts_v2.0-approved",
             "rb_v1.2-approved",
             "npc_v1.0-approved"
+          ]
+        },
+        "smn_type": {
+          "in_subset": [
+            "rb_v1.2-approved",
+            "lt_v1.0-approved"
           ]
         },
         "morph_code": {
@@ -6597,8 +6638,9 @@
             "pre_v1.0-approved",
             "aml_v2.0-approved",
             "npc_v1.0-approved",
-            "cns_v1.2-approved"
-
+            "cns_v1.2-approved",
+            "rb_v1.2-approved",
+            "lt_v1.0-approved"
           ]
         },
         "morph_code_text": {
@@ -6608,8 +6650,9 @@
             "os_v2.0-approved",
             "pre_v1.0-approved",
             "npc_v1.0-approved",
-            "cns_v1.2-approved"
-
+            "cns_v1.2-approved",
+            "rb_v1.2-approved",
+            "lt_v1.0-approved"
           ]
         },
         "morph_code_system": {
@@ -6620,7 +6663,9 @@
             "pre_v1.0-approved",
             "aml_v2.0-approved",
             "npc_v1.0-approved",
-            "cns_v1.2-approved"
+            "cns_v1.2-approved",
+            "rb_v1.2-approved",
+            "lt_v1.0-approved"
           ]
         },
         "morph_code_system_version": {
@@ -6628,7 +6673,9 @@
             "pre_v1.0-approved",
             "aml_v2.0-approved",
             "npc_v1.0-approved",
-            "cns_v1.2-approved"
+            "cns_v1.2-approved",
+            "rb_v1.2-approved",
+            "lt_v1.0-approved"
           ]
         },
         "top_code": {
@@ -6639,7 +6686,9 @@
             "pre_v1.0-approved",
             "aml_v2.0-approved",
             "npc_v1.0-approved",
-            "cns_v1.2-approved"
+            "cns_v1.2-approved",
+            "rb_v1.2-approved",
+            "lt_v1.0-approved"
           ]
         },
          "top_code_text": {
@@ -6649,7 +6698,9 @@
             "os_v2.0-approved",
             "pre_v1.0-approved",
             "npc_v1.0-approved",
-            "cns_v1.2-approved"
+            "cns_v1.2-approved",
+            "rb_v1.2-approved",
+            "lt_v1.0-approved"
           ]
         },
         "top_code_system": {
@@ -6660,7 +6711,9 @@
             "pre_v1.0-approved",
             "aml_v2.0-approved",
             "npc_v1.0-approved",
-            "cns_v1.2-approved"
+            "cns_v1.2-approved",
+            "rb_v1.2-approved",
+            "lt_v1.0-approved"
           ]
         },
         "top_code_system_version": {
@@ -6668,12 +6721,20 @@
             "pre_v1.0-approved",
             "aml_v2.0-approved",
             "npc_v1.0-approved",
-            "cns_v1.2-approved"
+            "cns_v1.2-approved",
+            "rb_v1.2-approved",
+            "lt_v1.0-approved"
           ]
         },
         "smn_field": {
           "in_subset": [
-            "hl_v2.0-approved"
+            "hl_v2.0-approved",
+            "rb_v1.2-approved"
+          ]
+        },
+        "estimated_rt_dose_to_smn": {
+          "in_subset": [
+            "rb_v1.2-approved"
           ]
         }
       }
@@ -7143,13 +7204,7 @@
       "slot_uri": "ncit:C81239",
       "range": "CauseOfDeathEnum",
       "comments": [
-        "D4CGNote: If multiple causes of death, include one observation per cause of death. However, only one cause of death can have the varaiable CAUSE_OF_DEATH_RANKING=Primary.\nD4CGNote: Only fill in this variable if LKSS is \"Dead\".",
-        "(aml_v2.0-approved) ConsortiumNote: If multiple causes of death, include one observation per cause of death. However, only one cause of death can have the varaiable CAUSE_OF_DEATH_RANKING=Primary.",
-        "(aml_v2.0-approved) ConsortiumNote:  Only fill in this variable if LKSS is 'Dead'",
-        "(pre_v1.0-approved) ConsortiumNote: Note: If multiple causes of death, include one observation per cause of death. However, only one cause of death can have the varaiable CAUSE_OF_DEATH_RANKING=Primary. Note: Only fill in this variable if LKSS is 'Dead'.",
-        "(cns_v1.2-approved) ConsortiumNote: Note: If multiple causes of death, include one observation per cause of death. However, only one cause of death can have the varaiable CAUSE_OF_DEATH_RANKING=Primary. Note: Only fill in this variable if LKSS is 'Dead'.",
-        "(ews_v2.0-approved) ConsortiumNote: Note: If multiple causes of death, include one observation per cause of death. However, only one cause of death can have the varaiable CAUSE_OF_DEATH_RANKING=Primary. Note: Only fill in this variable if LKSS is 'Dead'.",
-        "D4CGNote: If multiple causes of death, include one observation per cause of death. However, only one cause of death can have the varaiable CAUSE_OF_DEATH_RANKING=Primary. \\n D4CGNote: Only fill in this variable if LKSS is 'Dead'."
+        "D4CGNote: If multiple causes of death, include one observation per cause of death. However, only one cause of death can have the varaiable CAUSE_OF_DEATH_RANKING=Primary.\nD4CGNote: Only fill in this variable if LKSS is \"Dead\"."
       ],
       "annotations": {
         "tier_mandatory": "hl_v2.0-approved",
@@ -8073,6 +8128,12 @@
     "smn_site": {
       "slot_uri": "",
       "range": "SmnSiteEnum",
+      "comments": [],
+      "annotations": {}
+    },
+    "smn_type": {
+      "slot_uri": "",
+      "range": "SmnTypeEnum",
       "comments": [],
       "annotations": {}
     },
@@ -10561,6 +10622,14 @@
         "tier_priority": "rb_v1.2-approved"
       }
     },
+    "finding": {
+      "slot_uri": "",
+      "range": "FindingEnum",
+      "comments": [],
+      "annotations": {
+        "tier_priority": "rb_v1.2-approved"
+      }
+    },
     "h_stage": {
       "slot_uri": "",
       "range": "HStageEnum",
@@ -10593,6 +10662,46 @@
         "tier_optional": "rb_v1.2-approved"
       }
     },
+    "staging_site": {
+      "slot_uri": "ncit:C157120",
+      "range": "StagingSiteEnum",
+      "comments": [],
+      "annotations": {
+        "tier_priority": "rb_v1.2-approved"
+      }
+    },
+    "diagnosis_site": {
+      "slot_uri": "ncit:C157120",
+      "range": "DiagnosisSiteEnum",
+      "comments": [],
+      "annotations": {
+        "tier_priority": "rb_v1.2-approved"
+      }
+    },
+    "disease_characteristics_site": {
+      "slot_uri": "ncit:C157120",
+      "range": "DiseaseCharacteristicsSiteEnum",
+      "comments": [],
+      "annotations": {
+        "tier_priority": "rb_v1.2-approved"
+      }
+    },
+    "response_site": {
+      "slot_uri": "ncit:C157120",
+      "range": "ResponseSiteEnum",
+      "comments": [],
+      "annotations": {
+        "tier_priority": "rb_v1.2-approved"
+      }
+    },
+    "ae_site": {
+      "slot_uri": "ncit:C157120",
+      "range": "AeSiteEnum",
+      "comments": [],
+      "annotations": {
+        "tier_priority": "rb_v1.2-approved"
+      }
+    },
     "presentation_symptoms": {
       "slot_uri": "",
       "range": "PresentationSymptomsEnum",
@@ -10619,14 +10728,6 @@
         "tier_priority": "hl_v2.0-approved"
       }
     },
-    "clinical_signs": {
-      "slot_uri": "",
-      "range": "ClinicalSignsEnum",
-      "comments": [],
-      "annotations": {
-        "tier_priority": "rb_v1.2-approved"
-      }
-    },
     "suspected_referring_diagnosis": {
       "slot_uri": "",
       "range": "SuspectedReferringDiagnosisEnum",
@@ -10643,41 +10744,9 @@
         "tier_priority": "rb_v1.2-approved"
       }
     },
-    "anterior_segment_details": {
-      "slot_uri": "",
-      "range": "AnteriorSegmentDetailsEnum",
-      "comments": [],
-      "annotations": {
-        "tier_priority": "rb_v1.2-approved"
-      }
-    },
-    "intraocular_pressure": {
-      "slot_uri": "",
-      "range": "decimal",
-      "comments": [],
-      "annotations": {
-        "tier_priority": "rb_v1.2-approved"
-      }
-    },
-    "intraocular_pressure_unit": {
-      "slot_uri": "",
-      "range": "IntraocularPressureUnitEnum",
-      "comments": [],
-      "annotations": {
-        "tier_priority": "rb_v1.2-approved"
-      }
-    },
     "retinal_detachment": {
       "slot_uri": "",
       "range": "RetinalDetachmentEnum",
-      "comments": [],
-      "annotations": {
-        "tier_priority": "rb_v1.2-approved"
-      }
-    },
-    "advanced_disease_signs": {
-      "slot_uri": "",
-      "range": "AdvancedDiseaseSignsEnum",
       "comments": [],
       "annotations": {
         "tier_priority": "rb_v1.2-approved"
@@ -10723,16 +10792,6 @@
       "comments": [],
       "annotations": {
         "tier_priority": "rb_v1.2-approved"
-      }
-    },
-    "proton_delivery_mode": {
-      "slot_uri": "",
-      "range": "ProtonDeliveryModeEnum",
-      "comments": [
-        "(rb_v1.2-approved) ConsortiumNote: Use if ENERGY_TYPE == 'Proton'"
-      ],
-      "annotations": {
-        "tier_optional": "rb_v1.2-approved"
       }
     },
     "rt_completed": {
@@ -10999,8 +11058,8 @@
     },
     "YesNoEnum": {
       "permissible_values": {
-        "No": {
-          "meaning": "ncit:C49487",
+        "Yes": {
+          "meaning": "ncit:C49488",
           "comments": [],
           "in_subset": [
             "aml_v2.0-approved",
@@ -11019,8 +11078,8 @@
             "rms_v3.0-approved"
           ]
         },
-        "Yes": {
-          "meaning": "ncit:C49488",
+        "No": {
+          "meaning": "ncit:C49487",
           "comments": [],
           "in_subset": [
             "aml_v2.0-approved",
@@ -22371,6 +22430,26 @@
     },
     "TimePeriodTypeEnum": {
       "permissible_values": {
+        "Disease Phase": {
+          "meaning": "ncit:C168878",
+          "comments": [],
+          "in_subset": [
+            "aml_v2.0-approved",
+            "cns_v1.2-approved",
+            "ews_v2.0-approved",
+            "fa_v1.0-draft",
+            "gct_v2.0-approved",
+            "hl_v2.0-approved",
+            "lt_v1.0-approved",
+            "nbl_v2.0-approved",
+            "npc_v1.0-approved",
+            "nrsts_v2.0-approved",
+            "os_v2.0-approved",
+            "pre_v1.0-approved",
+            "rb_v1.2-approved",
+            "rms_v3.0-approved"
+          ]
+        },
         "Course": {
           "meaning": "ncit:C187095",
           "comments": [],
@@ -22393,26 +22472,6 @@
           "in_subset": [
             "cns_v1.2-approved",
             "hl_v2.0-approved"
-          ]
-        },
-        "Disease Phase": {
-          "meaning": "ncit:C168878",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved",
-            "cns_v1.2-approved",
-            "ews_v2.0-approved",
-            "fa_v1.0-draft",
-            "gct_v2.0-approved",
-            "hl_v2.0-approved",
-            "lt_v1.0-approved",
-            "nbl_v2.0-approved",
-            "npc_v1.0-approved",
-            "nrsts_v2.0-approved",
-            "os_v2.0-approved",
-            "pre_v1.0-approved",
-            "rb_v1.2-approved",
-            "rms_v3.0-approved"
           ]
         },
         "Exam": {
@@ -23107,12 +23166,7 @@
         "Treatment-Related Mortality": {
           "meaning": "ncit:C166165",
           "comments": [
-            "D4CGNote: Use the Adverse Events table for any additional details. Do not use CAUSE_OF_DEATH_DETAIL",
-            "(cns_v1.2-approved) ConsortiumNote: Note: Use the Adverse Events table for any additional details. Do not use CAUSE_OF_DEATH_DETAIL.",
-            "(ews_v2.0-approved) ConsortiumNote: Note: Use the Adverse Events table for any additional details. Do not use CAUSE_OF_DEATH_DETAIL",
-            "(lt_v1.0-approved) ConsortiumNote: Note: Use the Adverse Events table for any additional details.",
-            "D4CGNote: Use the Adverse Events table for any additional details. Do not use CAUSE_OF_DEATH_DETAIL.",
-            "(rb_v1.2-approved) ConsortiumNote: Note: Use the Adverse Events table for any additional details. Do not use CAUSE_OF_DEATH_DETAIL"
+            "D4CGNote: Use the Adverse Events table for any additional details. Do not use CAUSE_OF_DEATH_DETAIL"
           ],
           "in_subset": [
             "aml_v2.0-approved",
@@ -23492,9 +23546,11 @@
     },
     "CauseOfDeathRankingEnum": {
       "permissible_values": {
-        "Contributory": {
-          "meaning": "ncit:C168948",
-          "comments": [],
+         "Primary": {
+          "meaning": "ncit:C99531",
+          "comments": [
+            "(os_v2.0-approved) ConsortiumNote: Note: There may be multiple contributory causes of death, but only one primary cause of death. Note: Only fill in this variable if LKSS is 'Dead'."
+          ],
           "in_subset": [
             "aml_v2.0-approved",
             "cns_v1.2-approved",
@@ -23506,11 +23562,9 @@
             "rb_v1.2-approved"
           ]
         },
-        "Primary": {
-          "meaning": "ncit:C99531",
-          "comments": [
-            "(os_v2.0-approved) ConsortiumNote: Note: There may be multiple contributory causes of death, but only one primary cause of death. Note: Only fill in this variable if LKSS is 'Dead'."
-          ],
+        "Contributory": {
+          "meaning": "ncit:C168948",
+          "comments": [],
           "in_subset": [
             "aml_v2.0-approved",
             "cns_v1.2-approved",
@@ -24162,6 +24216,13 @@
             "hl_v2.0-approved"
           ]
         },
+        "mmHg": {
+          "meaning": "ncit:C49670",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
         "mmol/L": {
           "meaning": "ncit:C64387",
           "comments": [],
@@ -24304,6 +24365,13 @@
             "aml_v2.0-approved",
             "hl_v2.0-approved"
           ]
+        },
+        "Intraocular Pressure": {
+          "meaning": "",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ] 
         },
         "Pulmonary Function Test": {
           "meaning": "ncit:C38081",
@@ -30660,6 +30728,61 @@
         }
       }
     },
+    "StagingSiteEnum": {
+      "permissible_values": {
+        "Eye": {
+          "meaning": "ncit:C12401",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        }
+      }
+    },
+    "DiagnosisSiteEnum": {
+      "permissible_values": {
+        "Eye": {
+          "meaning": "ncit:C12401",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        }
+      }
+    },
+    "DiseaseCharacteristicsSiteEnum": {
+      "permissible_values": {
+        "Eye": {
+          "meaning": "ncit:C12401",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        }
+      }
+    },
+    "ResponseSiteEnum": {
+      "permissible_values": {
+        "Eye": {
+          "meaning": "ncit:C12401",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        }
+      }
+    },
+    "AeSiteEnum": {
+      "permissible_values": {
+        "Eye": {
+          "meaning": "ncit:C12401",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        }
+      }
+    },
     "TumorClassificationEnum": {
       "permissible_values": {
         "Primary": {
@@ -30690,7 +30813,6 @@
             "ews_v2.0-approved",
             "fa_v1.0-draft",
             "gct_v2.0-approved",
-            "lt_v1.0-approved",
             "npc_v1.0-approved",
             "os_v2.0-approved",
             "pre_v1.0-approved",
@@ -37991,7 +38113,8 @@
           "meaning": "icdo:9510/3",
           "comments": [],
           "in_subset": [
-            "fa_v1.0-draft"
+            "fa_v1.0-draft",
+            "rb_v1.2-approved"
           ]
         },
         "Retinoblastoma, differentiated": {
@@ -39477,7 +39600,10 @@
             "os_v2.0-approved",
             "pre_v1.0-approved",
             "npc_v1.0-approved",
-            "cns_v1.2-approved"
+            "cns_v1.2-approved",
+            "rb_v1.2-approved",
+            "aml_v2.0-approved",
+            "lt_v1.0-approved"
           ]
         }
       }
@@ -40226,7 +40352,7 @@
             "rb_v1.2-approved"
           ]
         },
-        "IRSS >> Stage 1a": {
+        "IRSS >> Stage 1": {
           "meaning": "",
           "comments": [],
           "in_subset": [
@@ -40234,23 +40360,7 @@
             "rb_v1.2-approved"
           ]
         },
-        "IRSS >> Stage 1b": {
-          "meaning": "",
-          "comments": [],
-          "in_subset": [
-            "fa_v1.0-draft",
-            "rb_v1.2-approved"
-          ]
-        },
-        "IRSS >> Stage 2a": {
-          "meaning": "",
-          "comments": [],
-          "in_subset": [
-            "fa_v1.0-draft",
-            "rb_v1.2-approved"
-          ]
-        },
-        "IRSS >> Stage 2b": {
+        "IRSS >> Stage 2": {
           "meaning": "",
           "comments": [],
           "in_subset": [
@@ -45459,6 +45569,13 @@
             "cns_v1.2-approved"
           ]
         },
+        "Eye": {
+          "meaning": "ncit:C12401",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
         "Eyelid": {
           "meaning": "",
           "comments": [],
@@ -47119,13 +47236,7 @@
           "meaning": "ncit:C12418",
           "comments": [],
           "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Head/Neck": {
-          "meaning": "",
-          "comments": [],
-          "in_subset": [
+            "rb_v1.2-approved",
             "nrsts_v2.0-approved"
           ]
         },
@@ -47161,7 +47272,7 @@
           ]
         },
         "Other": {
-          "meaning": "",
+          "meaning": "ncit:C17649",
           "comments": [],
           "in_subset": [
             "nrsts_v2.0-approved"
@@ -47175,10 +47286,98 @@
           ]
         },
         "Not Reported": {
-          "meaning": "",
+          "meaning": "ncit:C43234",
           "comments": [],
           "in_subset": [
             "nrsts_v2.0-approved",
+            "rb_v1.2-approved"
+          ]
+        }
+      }
+    },
+    "SmnTypeEnum": {
+      "permissible_values": {
+        "Leukemia": {
+          "meaning": "ncit:C3161",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "ALL": {
+          "meaning": "ncit:C3167",
+          "comments": [],
+          "in_subset": [
+            "lt_v1.0-approved"
+          ]
+        },
+        "AML": {
+          "meaning": "ncit:C3171",
+          "comments": [],
+          "in_subset": [
+            "lt_v1.0-approved"
+          ]
+        },
+        "Glioblastoma": {
+          "meaning": "ncit:C3058",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "Low Grade Glioma": {
+          "meaning": "ncit:C132067",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "Osteosarcoma": {
+          "meaning": "ncit:C9145",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "Soft Tissue Sarcoma": {
+          "meaning": "ncit:C9306",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "Melanoma": {
+          "meaning": "ncit:C3224",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "Carcinoma": {
+          "meaning": "ncit:C2916",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "Other": {
+          "meaning": "ncit:C17649",
+          "comments": [],
+          "in_subset": [
+            "nrsts_v2.0-approved"
+          ]
+        },
+        "Unknown": {
+          "meaning": "ncit:C17998",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "Not Reported": {
+          "meaning": "ncit:C43234",
+          "comments": [],
+          "in_subset": [
             "rb_v1.2-approved"
           ]
         }
@@ -47219,7 +47418,8 @@
             "os_v2.0-approved",
             "pre_v1.0-approved",
             "rb_v1.2-approved",
-            "rms_v3.0-approved"
+            "rms_v3.0-approved",
+            "lt_v1.0-approved"
           ]
         },
         "Midline": {
@@ -47255,7 +47455,8 @@
             "os_v2.0-approved",
             "pre_v1.0-approved",
             "rb_v1.2-approved",
-            "rms_v3.0-approved"
+            "rms_v3.0-approved",
+            "lt_v1.0-approved"
           ]
         },
         "Unilateral": {
@@ -47280,7 +47481,8 @@
             "os_v2.0-approved",
             "pre_v1.0-approved",
             "rb_v1.2-approved",
-            "rms_v3.0-approved"
+            "rms_v3.0-approved",
+            "lt_v1.0-approved"
           ]
         },
         "Not Reported": {
@@ -47298,7 +47500,8 @@
             "os_v2.0-approved",
             "pre_v1.0-approved",
             "rb_v1.2-approved",
-            "rms_v3.0-approved"
+            "rms_v3.0-approved",
+            "lt_v1.0-approved"
           ]
         }
       }
@@ -48269,7 +48472,6 @@
           "in_subset": [
             "ews_v2.0-approved",
             "fa_v1.0-draft",
-            "lt_v1.0-approved",
             "npc_v1.0-approved",
             "os_v2.0-approved"
           ]
@@ -53154,15 +53356,8 @@
             "hl_v2.0-approved",
             "nrsts_v2.0-approved",
             "rms_v3.0-approved",
-            "aml_v2.0-approved"
-          ]
-        },
-        "System NOS >> Complete Response/Remission": {
-          "meaning": "ncit:C4870",
-          "comments": [],
-          "in_subset": [
-            "cns_v1.2-approved",
-            "rb_v1.2-approved"
+            "aml_v2.0-approved",
+            "cns_v1.2-approved"
           ]
         },
         "System NOS >> Major Response": {
@@ -53198,7 +53393,6 @@
             "hl_v2.0-approved",
             "npc_v1.0-approved",
             "nrsts_v2.0-approved",
-            "rb_v1.2-approved",
             "rms_v3.0-approved"
           ]
         },
@@ -53212,7 +53406,6 @@
             "hl_v2.0-approved",
             "npc_v1.0-approved",
             "nrsts_v2.0-approved",
-            "rb_v1.2-approved",
             "rms_v3.0-approved"
           ]
         },
@@ -53226,7 +53419,6 @@
             "hl_v2.0-approved",
             "npc_v1.0-approved",
             "nrsts_v2.0-approved",
-            "rb_v1.2-approved",
             "rms_v3.0-approved"
           ]
         },
@@ -54664,7 +54856,8 @@
           "meaning": "ncit:C2993",
           "comments": [],
           "in_subset": [
-            "npc_v1.0-approved"
+            "npc_v1.0-approved",
+            "rb_v1.2-approved"
           ]
         },
         "Dyskeratosis Congenita": {
@@ -54841,7 +55034,8 @@
           "meaning": "ncit:C88541",
           "comments": [],
           "in_subset": [
-            "npc_v1.0-approved"
+            "npc_v1.0-approved",
+            "rb_v1.2-approved"
           ]
         },
         "Hepatolenticular Degeneration": {
@@ -55017,7 +55211,8 @@
           "meaning": "ncit:C3224",
           "comments": [],
           "in_subset": [
-            "npc_v1.0-approved"
+            "npc_v1.0-approved",
+            "rb_v1.2-approved"
           ]
         },
         "Mixed Connective Tissue Disease": {
@@ -55438,14 +55633,16 @@
           "meaning": "ncit:C43224",
           "comments": [],
           "in_subset": [
-            "npc_v1.0-approved"
+            "npc_v1.0-approved",
+            "aml_v2.0-approved"
           ]
         },
         "Trisomy 21 Mosaicism": {
           "meaning": "ncit:C142099",
           "comments": [],
           "in_subset": [
-            "npc_v1.0-approved"
+            "npc_v1.0-approved",
+            "aml_v2.0-approved"
           ]
         },
         "Tuberous Sclerosis": {
@@ -57628,7 +57825,10 @@
             "os_v2.0-approved",
             "pre_v1.0-approved",
             "npc_v1.0-approved",
-            "cns_v1.2-approved"
+            "cns_v1.2-approved",
+            "rb_v1.2-approved",
+            "aml_v2.0-approved",
+            "lt_v1.0-approved"
           ]
         }
       }
@@ -58115,7 +58315,6 @@
           "meaning": "ncit:C6906",
           "comments": [],
           "in_subset": [
-            "cns_v1.2-approved",
             "cns_v1.2-approved"
           ]
         },
@@ -58223,13 +58422,6 @@
           ],
           "in_subset": [
             "cns_v1.2-approved"
-          ]
-        },
-        "Retinoblastoma": {
-          "meaning": "ncit:C7541",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
           ]
         },
         "Other": {
@@ -58513,7 +58705,8 @@
             "ews_v2.0-approved",
             "fa_v1.0-draft",
             "npc_v1.0-approved",
-            "rb_v1.2-approved"
+            "rb_v1.2-approved",
+            "aml_v2.0-approved"
           ]
         },
         "Unknown": {
@@ -58656,6 +58849,13 @@
             "os_v2.0-approved"
           ]
         },
+        "Cryotherapy": {
+          "meaning": "",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
         "Disarticulation": {
           "meaning": "",
           "comments": [],
@@ -58670,6 +58870,13 @@
           "in_subset": [
             "ews_v2.0-approved",
             "os_v2.0-approved"
+          ]
+        },
+         "Enucleation of Eye": {
+          "meaning": "",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
           ]
         },
         "Esophageal Repair": {
@@ -58732,6 +58939,13 @@
           "comments": [],
           "in_subset": [
             "lt_v1.0-approved"
+          ]
+        },
+        "Experimental Procedure": {
+          "meaning": "",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
           ]
         },
         "Hemiglossectomy": {
@@ -59256,6 +59470,27 @@
           "in_subset": [
             "ews_v2.0-approved",
             "os_v2.0-approved"
+          ]
+        },
+        "Other": {
+          "meaning": "ncit:C17649",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "Unknown": {
+          "meaning": "ncit:C17998",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "Not Reported": {
+          "meaning": "ncit:C43234",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
           ]
         }
       }
@@ -60238,6 +60473,22 @@
     },
     "TnmTumorTEnum": {
       "permissible_values": {
+        "TX": {
+          "meaning": "ncit:C48737",
+          "comments": [],
+          "in_subset": [
+            "fa_v1.0-draft",
+            "rb_v1.2-approved"
+          ]
+        },
+        "Tis": {
+          "meaning": "ncit:C48738",
+          "comments": [],
+          "in_subset": [
+            "fa_v1.0-draft",
+            "rb_v1.2-approved"
+          ]
+        },
         "T0": {
           "meaning": "ncit:C48719",
           "comments": [],
@@ -60394,27 +60645,19 @@
             "fa_v1.0-draft",
             "rb_v1.2-approved"
           ]
-        },
-        "TX": {
-          "meaning": "ncit:C48737",
-          "comments": [],
-          "in_subset": [
-            "fa_v1.0-draft",
-            "rb_v1.2-approved"
-          ]
-        },
-        "Tis": {
-          "meaning": "ncit:C48738",
-          "comments": [],
-          "in_subset": [
-            "fa_v1.0-draft",
-            "rb_v1.2-approved"
-          ]
         }
       }
     },
     "TnmNodeNEnum": {
       "permissible_values": {
+        "NX": {
+          "meaning": "ncit:C48718",
+          "comments": [],
+          "in_subset": [
+            "fa_v1.0-draft",
+            "rb_v1.2-approved"
+          ]
+        },
         "N0": {
           "meaning": "ncit:C48705",
           "comments": [],
@@ -60464,19 +60707,19 @@
           "in_subset": [
             "npc_v1.0-approved"
           ]
-        },
-        "NX": {
-          "meaning": "ncit:C48718",
-          "comments": [],
-          "in_subset": [
-            "fa_v1.0-draft",
-            "rb_v1.2-approved"
-          ]
         }
       }
     },
     "TnmMetastasisMEnum": {
       "permissible_values": {
+         "MX": {
+          "meaning": "ncit:C48704",
+          "comments": [],
+          "in_subset": [
+            "fa_v1.0-draft",
+            "rb_v1.2-approved"
+          ]
+        },
         "M0": {
           "meaning": "ncit:C48699",
           "comments": [],
@@ -60529,14 +60772,6 @@
           "meaning": "",
           "comments": [],
           "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "MX": {
-          "meaning": "ncit:C48704",
-          "comments": [],
-          "in_subset": [
-            "fa_v1.0-draft",
             "rb_v1.2-approved"
           ]
         }
@@ -62883,7 +63118,8 @@
           "comments": [],
           "in_subset": [
             "ews_v2.0-approved",
-            "rb_v1.2-approved"
+            "rb_v1.2-approved",
+            "aml_v2.0-approved"
           ]
         },
         "CTCAE >> Grade 2": {
@@ -62891,7 +63127,8 @@
           "comments": [],
           "in_subset": [
             "ews_v2.0-approved",
-            "rb_v1.2-approved"
+            "rb_v1.2-approved",
+            "aml_v2.0-approved"
           ]
         },
         "CTCAE >> Grade 3": {
@@ -62899,7 +63136,8 @@
           "comments": [],
           "in_subset": [
             "ews_v2.0-approved",
-            "rb_v1.2-approved"
+            "rb_v1.2-approved",
+            "aml_v2.0-approved"
           ]
         },
         "CTCAE >> Grade 4": {
@@ -62907,7 +63145,8 @@
           "comments": [],
           "in_subset": [
             "ews_v2.0-approved",
-            "rb_v1.2-approved"
+            "rb_v1.2-approved",
+            "aml_v2.0-approved"
           ]
         },
         "CTCAE >> Grade 5": {
@@ -62915,7 +63154,8 @@
           "comments": [],
           "in_subset": [
             "ews_v2.0-approved",
-            "rb_v1.2-approved"
+            "rb_v1.2-approved",
+            "aml_v2.0-approved"
           ]
         },
         "System NOS >> Grade 1": {
@@ -64593,8 +64833,180 @@
         }
       }
     },
+    "FindingEnum": {
+      "permissible_values": {
+         "Cataract": {
+          "meaning": "ncit:C26713",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "Rubeosis": {
+          "meaning": "",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "Tumor in Anterior Chamber": {
+          "meaning": "",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "Uveitis": {
+          "meaning": "ncit:C26909",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "Buphthalmia": {
+          "meaning": "",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "Decreased Vision": {
+          "meaning": "",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "Glaucoma": {
+          "meaning": "ncit:C26782",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "Heterochromia": {
+          "meaning": "",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "Hyphema": {
+          "meaning": "ncit:C50592",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "Hypopyon": {
+          "meaning": "ncit:C50593",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "Leukocoria": {
+          "meaning": "",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "None": {
+          "meaning": "ncit:C41132",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "Orbital Cellulitis": {
+          "meaning": "ncit:C99000",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "Photoleukocoria": {
+          "meaning": "",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "Proptosis": {
+          "meaning": "ncit:C87114",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "Strabismus": {
+          "meaning": "ncit:C35040",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "Anterior Segment Tumor": {
+          "meaning": "",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "Aseptic Orbital Cellulitis": {
+          "meaning": "",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "Invasion of Ciliary Body": {
+          "meaning": "",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "Opaque Media": {
+          "meaning": "",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "Vitreous Hemorrhage": {
+          "meaning": "ncit:C50469",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "Unknown": {
+          "meaning": "ncit:C17998",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
+        "Not Reported": {
+          "meaning": "ncit:C43234",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        }
+      }
+    },
     "HStageEnum": {
       "permissible_values": {
+        "HX": {
+          "meaning": "",
+          "comments": [],
+          "in_subset": [
+            "rb_v1.2-approved"
+          ]
+        },
         "H0": {
           "meaning": "",
           "comments": [],
@@ -64610,13 +65022,6 @@
           ]
         },
         "H1": {
-          "meaning": "",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "HX": {
           "meaning": "",
           "comments": [],
           "in_subset": [
@@ -64697,20 +65102,6 @@
         },
         "Ophthalmologist": {
           "meaning": "ncit:C17822",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Other Family Member": {
-          "meaning": "ncit:C41256",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Parent": {
-          "meaning": "ncit:C42709",
           "comments": [],
           "in_subset": [
             "rb_v1.2-approved"
@@ -64867,108 +65258,6 @@
         }
       }
     },
-    "ClinicalSignsEnum": {
-      "permissible_values": {
-        "Buphthalmia": {
-          "meaning": "",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Decreased Vision": {
-          "meaning": "",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Glaucoma": {
-          "meaning": "ncit:C26782",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Heterochromia": {
-          "meaning": "",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Hyphema": {
-          "meaning": "ncit:C50592",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Hypopyon": {
-          "meaning": "ncit:C50593",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Leukocoria": {
-          "meaning": "",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "None": {
-          "meaning": "ncit:C41132",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Orbital Cellulitis": {
-          "meaning": "ncit:C99000",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Photoleukocoria": {
-          "meaning": "",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Proptosis": {
-          "meaning": "ncit:C87114",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Strabismus": {
-          "meaning": "ncit:C35040",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Unknown": {
-          "meaning": "ncit:C17998",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Not Reported": {
-          "meaning": "ncit:C43234",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        }
-      }
-    },
     "SuspectedReferringDiagnosisEnum": {
       "permissible_values": {
         "Cataract": {
@@ -65082,77 +65371,6 @@
         }
       }
     },
-    "AnteriorSegmentDetailsEnum": {
-      "permissible_values": {
-        "Cataract": {
-          "meaning": "ncit:C26713",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Heterochromia": {
-          "meaning": "",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Hyphema": {
-          "meaning": "ncit:C50592",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Rubeosis": {
-          "meaning": "",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Tumor in Anterior Chamber": {
-          "meaning": "",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Uveitis": {
-          "meaning": "ncit:C26909",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Unknown": {
-          "meaning": "ncit:C17998",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Not Reported": {
-          "meaning": "ncit:C43234",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        }
-      }
-    },
-    "IntraocularPressureUnitEnum": {
-      "permissible_values": {
-        "mmHg": {
-          "meaning": "ncit:C49670",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        }
-      }
-    },
     "RetinalDetachmentEnum": {
       "permissible_values": {
         "No": {
@@ -65213,84 +65431,17 @@
         }
       }
     },
-    "AdvancedDiseaseSignsEnum": {
-      "permissible_values": {
-        "Anterior Segment Tumor": {
-          "meaning": "",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Aseptic Orbital Cellulitis": {
-          "meaning": "",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Bupthalmos": {
-          "meaning": "",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Invasion of Ciliary Body": {
-          "meaning": "",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Opaque Media": {
-          "meaning": "",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Proptosis": {
-          "meaning": "ncit:C87114",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Vitreous Hemorrhage": {
-          "meaning": "ncit:C50469",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Unknown": {
-          "meaning": "ncit:C17998",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Not Reported": {
-          "meaning": "ncit:C43234",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        }
-      }
-    },
     "AdministrationSiteEnum": {
       "permissible_values": {
-        "Left Femoral Artery": {
+        "Femoral Artery": {
           "meaning": "",
           "comments": [],
           "in_subset": [
             "rb_v1.2-approved"
           ]
         },
-        "Right Femoral Artery": {
-          "meaning": "",
+        "Eye": {
+          "meaning": "C12401",
           "comments": [],
           "in_subset": [
             "rb_v1.2-approved"
@@ -65359,38 +65510,6 @@
           ]
         },
         "Salvage": {
-          "meaning": "",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Unknown": {
-          "meaning": "ncit:C17998",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Not Reported": {
-          "meaning": "ncit:C43234",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        }
-      }
-    },
-    "ProtonDeliveryModeEnum": {
-      "permissible_values": {
-        "Passive Scattering": {
-          "meaning": "",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Pencil Beam Scanning (PBS)": {
           "meaning": "",
           "comments": [],
           "in_subset": [
