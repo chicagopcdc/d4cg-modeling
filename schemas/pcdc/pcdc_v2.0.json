@@ -2478,7 +2478,7 @@
                 "functional_measurement_type",
                 "result_text",
                 "result_numeric",
-                "function_test_result_unit",
+                "functional_measurement_result_unit",
                 "laterality",
                 "hz_frequency",
                 "average_loss_low",
@@ -2544,7 +2544,7 @@
                         "npc_v1.0-approved"
                     ]
                 },
-                "function_test_result_unit": {
+                "functional_measurement_result_unit": {
                     "in_subset": [
                         "fa_v1.0-draft",
                         "hl_v2.0-approved",
@@ -7836,7 +7836,7 @@
         },
         "measurement1_axis": {
             "slot_uri": "",
-            "range": ":LesionMeasurementAxisEnum",
+            "range": "LesionMeasurementAxisEnum",
             "comments": [],
             "annotations": {
                 "tier_optional": "rb_v1.2-approved"
