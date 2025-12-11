@@ -3341,6 +3341,7 @@
             ],
             "comments": [],
             "in_subset": [
+                "aml_v1.8-live",
                 "gct_v1.2-live",
                 "hl_v1.0-live"
             ],
@@ -3370,6 +3371,7 @@
                 },
                 "age_at_smn": {
                     "in_subset": [
+                        "aml_v1.8-live",
                         "gct_v1.2-live",
                         "hl_v1.0-live"
                     ]
@@ -3414,11 +3416,13 @@
                 },
                 "smn_morph_icdo": {
                     "in_subset": [
+                        "aml_v1.8-live",
                         "gct_v1.2-live"
                     ]
                 },
                 "smn_top_icdo": {
                     "in_subset": [
+                        "aml_v1.8-live",
                         "gct_v1.2-live"
                     ]
                 },

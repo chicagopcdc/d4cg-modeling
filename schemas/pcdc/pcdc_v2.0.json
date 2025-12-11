@@ -457,6 +457,78 @@
         }
       }
     },
+    "ExternalReference": {
+        "slots": [
+            "subjects_submitter_id",
+            "external_links",
+            "external_resource_icon_path",
+            "external_resource_id",
+            "external_resource_name",
+            "external_subject_id",
+            "external_subject_submitter_id",
+            "external_subject_url"
+        ],
+        "comments": [
+            "D4CGNote: One observation/row per ___ when instantiated"
+        ],
+        "in_subset": [
+            "aml_v2.0-approved",
+            "nbl_v2.0-approved"
+        ],
+        "annotations": {
+            "domain": "demographics"
+        },
+        "slot_usage": {
+            "subjects_submitter_id": {
+                "in_subset": [
+                    "aml_v2.0-approved",
+                    "nbl_v2.0-approved"
+                ]
+            },
+            "external_links": {
+                "in_subset": [
+                   "aml_v2.0-approved",
+                    "nbl_v2.0-approved"
+                ]
+            },
+            "external_resource_icon_path": {
+                "in_subset": [
+                    "aml_v2.0-approved",
+                    "nbl_v2.0-approved"
+                ]
+            },
+            "external_resource_id": {
+                "in_subset": [
+                    "aml_v2.0-approved",
+                    "nbl_v2.0-approved"
+                ]
+            },
+            "external_resource_name": {
+                "in_subset": [
+                    "aml_v2.0-approved",
+                    "nbl_v2.0-approved"
+                ]
+            },
+            "external_subject_id": {
+                "in_subset": [
+                    "aml_v2.0-approved",
+                    "nbl_v2.0-approved"
+                ]
+            },
+            "external_subject_submitter_id": {
+                "in_subset": [
+                    "aml_v2.0-approved",
+                    "nbl_v2.0-approved"
+                ]
+            },
+            "external_subject_url": {
+                "in_subset": [
+                    "aml_v2.0-approved",
+                    "nbl_v2.0-approved"
+                ]
+            }
+        }
+    },
     "StudyMetadata": {
       "slots": [
         "submitter_id",
@@ -1513,7 +1585,8 @@
         "anthropometric_measurement_type",
         "result_text",
         "result_numeric",
-        "result_unit",
+        "vital_measurement_result_unit",
+        "anthropometric_measurement_result_unit",
         "gestational_age_at_birth_weeks"
       ],
       "comments": [
@@ -1627,18 +1700,22 @@
             "rb_v1.2-approved"
           ]
         },
-        "result_unit": {
+         "vital_measurement_result_unit": {
           "in_subset": [
-            "aml_v2.0-approved",
+            "fa_v1.0-draft",
+            "os_v2.0-approved"
+          ]
+        },
+        "anthropometric_measurement_result_unit": {
+          "in_subset": [
+             "aml_v2.0-approved",
             "cns_v1.2-approved",
             "ews_v2.0-approved",
             "fa_v1.0-draft",
             "gct_v2.0-approved",
             "hl_v2.0-approved",
-            "lt_v1.0-approved",
             "npc_v1.0-approved",
-            "pre_v1.0-approved",
-            "rb_v1.2-approved"
+            "os_v2.0-approved"
           ]
         },
         "gestational_age_at_birth_weeks": {
@@ -1659,7 +1736,7 @@
         "laboratory_test_specimen_other",
         "result_text",
         "result_numeric",
-        "result_unit",
+        "laboratory_test_result_unit",
         "traumatic_tap",
         "quantification_type",
         "threshold_level",
@@ -1805,7 +1882,7 @@
             "pre_v1.0-approved"
           ]
         },
-        "result_unit": {
+        "laboratory_test_result_unit": {
           "in_subset": [
             "aml_v2.0-approved",
             "cns_v1.2-approved",
@@ -1879,7 +1956,7 @@
         "cascade_testing",
         "genetic_analysis_method",
         "genetic_analysis_specimen",
-        "tumor_classification",
+        "specimen_classification",
         "biological_analyte",
         "source_pct",
         "source_pct_numeric",
@@ -2054,7 +2131,7 @@
             "rms_v3.0-approved"
           ]
         },
-        "tumor_classification": {
+        "specimen_classification": {
           "in_subset": [
             "ews_v2.0-approved",
             "fa_v1.0-draft",
@@ -2520,7 +2597,7 @@
         "functional_measurement_type",
         "result_text",
         "result_numeric",
-        "result_unit",
+        "function_test_result_unit",
         "laterality",
         "hz_frequency",
         "average_loss_low",
@@ -2531,7 +2608,6 @@
         "D4CGNote: One observation/row per result when instantiated"
       ],
       "in_subset": [
-        "aml_v2.0-approved",
         "fa_v1.0-draft",
         "hl_v2.0-approved",
         "npc_v1.0-approved"
@@ -2542,43 +2618,22 @@
       "slot_usage": {
         "subjects_submitter_id": {
           "in_subset": [
-            "aml_v2.0-approved",
-            "cns_v1.2-approved",
-            "ews_v2.0-approved",
             "fa_v1.0-draft",
-            "gct_v2.0-approved",
             "hl_v2.0-approved",
-            "lt_v1.0-approved",
-            "nbl_v2.0-approved",
             "npc_v1.0-approved",
-            "nrsts_v2.0-approved",
-            "os_v2.0-approved",
-            "pre_v1.0-approved",
-            "rb_v1.2-approved",
-            "rms_v3.0-approved"
+            "rb_v1.2-approved"
           ]
         },
         "timings_submitter_id": {
           "in_subset": [
-            "aml_v2.0-approved",
-            "cns_v1.2-approved",
-            "ews_v2.0-approved",
             "fa_v1.0-draft",
-            "gct_v2.0-approved",
             "hl_v2.0-approved",
-            "lt_v1.0-approved",
-            "nbl_v2.0-approved",
             "npc_v1.0-approved",
-            "nrsts_v2.0-approved",
-            "os_v2.0-approved",
-            "pre_v1.0-approved",
-            "rb_v1.2-approved",
-            "rms_v3.0-approved"
+            "rb_v1.2-approved"
           ]
         },
         "age_at_function_test": {
           "in_subset": [
-            "aml_v2.0-approved",
             "fa_v1.0-draft",
             "hl_v2.0-approved",
             "npc_v1.0-approved"
@@ -2586,7 +2641,6 @@
         },
         "function_test": {
           "in_subset": [
-            "aml_v2.0-approved",
             "fa_v1.0-draft",
             "hl_v2.0-approved",
             "npc_v1.0-approved",
@@ -2595,14 +2649,12 @@
         },
         "functional_measurement_type": {
           "in_subset": [
-            "aml_v2.0-approved",
             "hl_v2.0-approved",
             "rb_v1.2-approved"
           ]
         },
         "result_text": {
           "in_subset": [
-            "aml_v2.0-approved",
             "cns_v1.2-approved",
             "ews_v2.0-approved",
             "fa_v1.0-draft",
@@ -2615,7 +2667,6 @@
         },
         "result_numeric": {
           "in_subset": [
-            "aml_v2.0-approved",
             "cns_v1.2-approved",
             "ews_v2.0-approved",
             "fa_v1.0-draft",
@@ -2628,9 +2679,8 @@
             "rb_v1.2-approved"
           ]
         },
-        "result_unit": {
+        "function_test_result_unit": {
           "in_subset": [
-            "aml_v2.0-approved",
             "cns_v1.2-approved",
             "ews_v2.0-approved",
             "fa_v1.0-draft",
@@ -3384,20 +3434,19 @@
         "tumor_state",
         "detection_method",
         "mri_sequence",
-        "tumor_classification",
+        "site_classification",
         "classification_status",
         "disease_site",
         "site_other",
         "laterality",
-        "diameter1",
-        "diameter1_unit",
-        "diameter1_axis",
-        "diameter2",
-        "diameter2_unit",
-        "diameter2_axis",
-        "diameter3",
-        "diameter3_unit",
-        "diameter3_axis",
+        "measurement1",
+        "measurement1_axis",
+        "measurement2",
+        "measurement2_axis",
+        "measurement3",
+        "measurement3_axis",
+        "measurement_unit",
+        "myeloid_sarcoma_involvement",
         "bulky_disease",
         "pleural_effusion",
         "pericardial_effusion",
@@ -3552,7 +3601,7 @@
             "rb_v1.2-approved"
           ]
         },
-        "tumor_classification": {
+        "site_classification": {
           "in_subset": [
             "cns_v1.2-approved",
             "ews_v2.0-approved",
@@ -3615,7 +3664,7 @@
             "rb_v1.2-approved"
           ]
         },
-        "diameter1": {
+        "measurement1": {
           "in_subset": [
             "ews_v2.0-approved",
             "fa_v1.0-draft",
@@ -3628,27 +3677,14 @@
             "rms_v3.0-approved"
           ]
         },
-        "diameter1_unit": {
-          "in_subset": [
-            "ews_v2.0-approved",
-            "fa_v1.0-draft",
-            "hl_v2.0-approved",
-            "npc_v1.0-approved",
-            "nrsts_v2.0-approved",
-            "os_v2.0-approved",
-            "pre_v1.0-approved",
-            "rb_v1.2-approved",
-            "rms_v3.0-approved"
-          ]
-        },
-        "diameter1_axis": {
+        "measurement1_axis": {
           "in_subset": [
             "ews_v2.0-approved",
             "hl_v2.0-approved",
             "rb_v1.2-approved"
           ]
         },
-        "diameter2": {
+        "measurement2": {
           "in_subset": [
             "ews_v2.0-approved",
             "fa_v1.0-draft",
@@ -3661,27 +3697,14 @@
             "rms_v3.0-approved"
           ]
         },
-        "diameter2_unit": {
-          "in_subset": [
-            "ews_v2.0-approved",
-            "fa_v1.0-draft",
-            "hl_v2.0-approved",
-            "npc_v1.0-approved",
-            "nrsts_v2.0-approved",
-            "os_v2.0-approved",
-            "pre_v1.0-approved",
-            "rb_v1.2-approved",
-            "rms_v3.0-approved"
-          ]
-        },
-        "diameter2_axis": {
+        "measurement2_axis": {
           "in_subset": [
             "ews_v2.0-approved",
             "hl_v2.0-approved",
             "rb_v1.2-approved"
           ]
         },
-        "diameter3": {
+        "measurement3": {
           "in_subset": [
             "ews_v2.0-approved",
             "fa_v1.0-draft",
@@ -3694,25 +3717,30 @@
             "rms_v3.0-approved"
           ]
         },
-        "diameter3_unit": {
-          "in_subset": [
-            "ews_v2.0-approved",
-            "fa_v1.0-draft",
-            "hl_v2.0-approved",
-            "npc_v1.0-approved",
-            "nrsts_v2.0-approved",
-            "os_v2.0-approved",
-            "pre_v1.0-approved",
-            "rb_v1.2-approved",
-            "rms_v3.0-approved"
-          ]
-        },
-        "diameter3_axis": {
+        "measurement3_axis": {
           "in_subset": [
             "ews_v2.0-approved",
             "hl_v2.0-approved",
             "rb_v1.2-approved"
           ]
+        },
+        "measurement_unit": {
+          "in_subset": [
+            "ews_v2.0-approved",
+            "fa_v1.0-draft",
+            "hl_v2.0-approved",
+            "npc_v1.0-approved",
+            "nrsts_v2.0-approved",
+            "os_v2.0-approved",
+            "pre_v1.0-approved",
+            "rb_v1.2-approved",
+            "rms_v3.0-approved"
+          ]
+        },
+        "myeloid_sarcoma_involvement": {
+            "in_subset": [
+                "aml_v2.0-approved"
+            ]
         },
         "bulky_disease": {
           "in_subset": [
@@ -4202,7 +4230,7 @@
         "protocol_procedure",
         "non_protocol_timing",
         "status",
-        "tumor_classification",
+        "site_classification",
         "procedure_class",
         "procedure",
         "procedure_other",
@@ -4340,7 +4368,7 @@
             "rb_v1.2-approved"
           ]
         },
-        "tumor_classification": {
+        "site_classification": {
           "in_subset": [
             "cns_v1.2-approved",
             "ews_v2.0-approved",
@@ -4634,7 +4662,6 @@
         "(lt_v1.0-approved) ConsortiumNote: If multiple, include only 5 most recent"
       ],
       "in_subset": [
-        "aml_v2.0-approved",
         "cns_v1.2-approved",
         "ews_v2.0-approved",
         "fa_v1.0-draft",
@@ -4651,7 +4678,6 @@
       "slot_usage": {
         "subjects_submitter_id": {
           "in_subset": [
-            "aml_v2.0-approved",
             "cns_v1.2-approved",
             "ews_v2.0-approved",
             "fa_v1.0-draft",
@@ -4669,7 +4695,6 @@
         },
         "timings_submitter_id": {
           "in_subset": [
-            "aml_v2.0-approved",
             "cns_v1.2-approved",
             "ews_v2.0-approved",
             "fa_v1.0-draft",
@@ -4687,7 +4712,6 @@
         },
         "age_at_medication_start": {
           "in_subset": [
-            "aml_v2.0-approved",
             "cns_v1.2-approved",
             "ews_v2.0-approved",
             "fa_v1.0-draft",
@@ -4701,7 +4725,6 @@
         },
         "age_at_medication_end": {
           "in_subset": [
-            "aml_v2.0-approved",
             "cns_v1.2-approved",
             "ews_v2.0-approved",
             "fa_v1.0-draft",
@@ -4781,7 +4804,6 @@
         },
         "route": {
           "in_subset": [
-            "aml_v2.0-approved",
             "cns_v1.2-approved",
             "fa_v1.0-draft",
             "hl_v2.0-approved",
@@ -4790,7 +4812,6 @@
         },
         "medication": {
           "in_subset": [
-            "aml_v2.0-approved",
             "cns_v1.2-approved",
             "ews_v2.0-approved",
             "fa_v1.0-draft",
@@ -4820,7 +4841,6 @@
         },
         "number_doses": {
           "in_subset": [
-            "aml_v2.0-approved",
             "ews_v2.0-approved",
             "fa_v1.0-draft",
             "hl_v2.0-approved",
@@ -4830,7 +4850,6 @@
         },
         "medication_dose_administered": {
           "in_subset": [
-            "aml_v2.0-approved",
             "ews_v2.0-approved",
             "fa_v1.0-draft",
             "gct_v2.0-approved",
@@ -4842,7 +4861,6 @@
         },
         "medication_dose_intended": {
           "in_subset": [
-            "aml_v2.0-approved",
             "ews_v2.0-approved",
             "hl_v2.0-approved",
             "npc_v1.0-approved",
@@ -4851,7 +4869,6 @@
         },
         "medication_dose_unit": {
           "in_subset": [
-            "aml_v2.0-approved",
             "ews_v2.0-approved",
             "fa_v1.0-draft",
             "gct_v2.0-approved",
@@ -5047,7 +5064,7 @@
         "protocol_radiation_therapy",
         "non_protocol_timing",
         "rt_data_source",
-        "tumor_classification",
+        "site_classification",
         "rt_site",
         "laterality",
         "energy_type",
@@ -5181,7 +5198,7 @@
             "cns_v1.2-approved"
           ]
         },
-        "tumor_classification": {
+        "site_classification": {
           "in_subset": [
             "cns_v1.2-approved",
             "ews_v2.0-approved",
@@ -5709,7 +5726,7 @@
         "timings_submitter_id",
         "age_at_tmp_start",
         "tmp_type",
-        "product",
+        "tmp_product",
         "product_type",
         "number_units"
       ],
@@ -5775,7 +5792,7 @@
             "hl_v2.0-approved"
           ]
         },
-        "product": {
+        "tmp_product": {
           "in_subset": [
             "aml_v2.0-approved",
             "fa_v1.0-draft",
@@ -6125,7 +6142,7 @@
         "mrd_method",
         "result_text",
         "result_numeric",
-        "result_unit",
+        "mrd_result_unit",
         "sensitivity",
         "mrd_specimen",
         "molecular_markers"
@@ -6214,7 +6231,7 @@
             "rb_v1.2-approved"
           ]
         },
-        "result_unit": {
+        "mrd_result_unit": {
           "in_subset": [
             "aml_v2.0-approved",
             "cns_v1.2-approved",
@@ -7330,6 +7347,29 @@
       "comments": [],
       "annotations": {}
     },
+    "vital_measurement_result_unit": {
+      "slot_uri": "",
+      "range": "VitalMeasurementResultUnitEnum",
+      "comments": [],
+      "annotations": {}
+    },
+     "anthropometric_measurement_result_unit": {
+      "slot_uri": "",
+      "range": "AnthropometricMeasurementResultUnitEnum",
+      "comments": [],
+      "annotations": {}
+    },
+    "functional_measurement_result_unit": {
+      "slot_uri": "",
+      "range": "FunctionalMeasurementResultUnitEnum",
+      "comments": [],
+      "annotations": {
+        "tier_priority": "rb_v1.2-approved"
+      }
+    },
+    
+
+
     "anthropometric_measurement_type": {
       "slot_uri": "ncit:C219071",
       "range": "AnthropometricMeasurementTypeEnum",
@@ -7376,22 +7416,6 @@
       "annotations": {
         "tier_mandatory": "npc_v1.0-approved",
         "tier_priority": "lt_v1.0-approved,npc_v1.0-approved,rb_v1.2-approved"
-      }
-    },
-    "result_unit": {
-      "slot_uri": "ncit:C49675",
-      "range": "ResultUnitEnum",
-      "comments": [
-        "D4CGNote: <mandatory_if>'RESULT_NUMERIC' not null</mandatory_if>",
-        "(aml_v2.0-approved) ConsortiumNote: Note: Only fill in this variable if a numeric result is provided in RESULT_NUMERIC.",
-        "(pre_v1.0-approved) ConsortiumNote: Note: Only fill in this variable if a numeric result is provided in RESULT_NUMERIC.",
-        "(cns_v1.2-approved) ConsortiumNote: Note: Only fill in this variable if a numeric result is provided in RESULT_NUMERIC.",
-        "(ews_v2.0-approved) ConsortiumNote: Note: Only fill in this variable if a numeric result is provided in RESULT_NUMERIC.",
-        "(hl_v2.0-approved) ConsortiumNote: Note: Only fill in this variable if a numeric result is provided in RESULT_NUMERIC."
-      ],
-      "annotations": {
-        "tier_priority": "lt_v1.0-approved,npc_v1.0-approved,rb_v1.2-approved",
-        "tier_optional": "npc_v1.0-approved"
       }
     },
     "age_at_lab": {
@@ -7463,6 +7487,12 @@
     "mrd_method": {
       "slot_uri": "ncit:C168933",
       "range": "MrdMethodEnum",
+      "comments": [],
+      "annotations": {}
+    },
+    "laboratory_test_result_unit": {
+      "slot_uri": "",
+      "range": "LaboratoryTestResultUnitEnum",
       "comments": [],
       "annotations": {}
     },
@@ -7691,7 +7721,7 @@
     },
     "exon_number": {
       "slot_uri": "",
-      "range": "integer",
+      "range": "decimal",
       "comments": [],
       "annotations": {}
     },
@@ -7761,7 +7791,7 @@
     },
     "dna_index_numeric": {
       "slot_uri": "ncit:C86972",
-      "range": "integer",
+      "range": "decimal",
       "comments": [],
       "annotations": {}
     },
@@ -7810,9 +7840,9 @@
         "tier_optional": "npc_v1.0-approved"
       }
     },
-    "tumor_classification": {
+    "site_classification": {
       "slot_uri": "ncit:C174459",
-      "range": "TumorClassificationEnum",
+      "range": "SiteClassificationEnum",
       "comments": [],
       "annotations": {
         "tier_mandatory": "npc_v1.0-approved",
@@ -8155,7 +8185,7 @@
         "tier_optional": "npc_v1.0-approved,rb_v1.2-approved"
       }
     },
-    "diameter1": {
+    "measurement1": {
       "slot_uri": "ncit:C96684",
       "range": "decimal",
       "comments": [],
@@ -8164,24 +8194,15 @@
         "tier_optional": "npc_v1.0-approved"
       }
     },
-    "diameter1_unit": {
+    "measurement1_axis": {
       "slot_uri": "",
-      "range": "LongestDiamUnitEnum",
-      "comments": [],
-      "annotations": {
-        "tier_priority": "rb_v1.2-approved",
-        "tier_optional": "npc_v1.0-approved"
-      }
-    },
-    "diameter1_axis": {
-      "slot_uri": "",
-      "range": "Diameter1AxisEnum",
+      "range": ":LesionMeasurementAxisEnum",
       "comments": [],
       "annotations": {
         "tier_optional": "rb_v1.2-approved"
       }
     },
-    "diameter2": {
+    "measurement2": {
       "slot_uri": "ncit:C96684",
       "range": "decimal",
       "comments": [],
@@ -8190,24 +8211,15 @@
         "tier_optional": "npc_v1.0-approved"
       }
     },
-    "diameter2_unit": {
+    "measurement2_axis": {
       "slot_uri": "",
-      "range": "LongestDiamUnitEnum",
-      "comments": [],
-      "annotations": {
-        "tier_priority": "rb_v1.2-approved",
-        "tier_optional": "npc_v1.0-approved"
-      }
-    },
-    "diameter2_axis": {
-      "slot_uri": "",
-      "range": "Diameter2AxisEnum",
+      "range": "LesionMeasurementAxisEnum",
       "comments": [],
       "annotations": {
         "tier_optional": "rb_v1.2-approved"
       }
     },
-    "diameter3": {
+    "measurement3": {
       "slot_uri": "ncit:C16809",
       "range": "decimal",
       "comments": [],
@@ -8216,22 +8228,28 @@
         "tier_optional": "npc_v1.0-approved"
       }
     },
-    "diameter3_unit": {
+    "measurement3_axis": {
       "slot_uri": "",
-      "range": "LongestDiamUnitEnum",
+      "range": "LesionMeasurementAxisEnum",
+      "comments": [],
+      "annotations": {
+        "tier_optional": "rb_v1.2-approved"
+      }
+    },
+    "measurement_unit": {
+      "slot_uri": "",
+      "range": "LesionMeasurementUnitEnum",
       "comments": [],
       "annotations": {
         "tier_priority": "rb_v1.2-approved",
         "tier_optional": "npc_v1.0-approved"
       }
     },
-    "diameter3_axis": {
+    "myeloid_sarcoma_involvement": {
       "slot_uri": "",
-      "range": "Diameter3AxisEnum",
+      "range": "YesNoEnum",
       "comments": [],
-      "annotations": {
-        "tier_optional": "rb_v1.2-approved"
-      }
+      "annotations": {}
     },
     "bulky_disease": {
       "slot_uri": "ncit:C38655",
@@ -8345,7 +8363,7 @@
     },
     "qpet_score": {
       "slot_uri": "ncit:C185623",
-      "range": "integer",
+      "range": "decimal",
       "comments": [],
       "annotations": {
         "tier_mandatory": "hl_v2.0-approved"
@@ -8461,7 +8479,7 @@
     },
     "number_nodes_numeric": {
       "slot_uri": "ncit:C124446",
-      "range": "integer",
+      "range": "decimal",
       "comments": [],
       "annotations": {
         "tier_optional": "hl_v2.0-approved"
@@ -8777,13 +8795,13 @@
     },
     "number_hla": {
       "slot_uri": "ncit:C173301",
-      "range": "integer",
+      "range": "decimal",
       "comments": [],
       "annotations": {}
     },
     "number_matches": {
       "slot_uri": "ncit:C173302",
-      "range": "integer",
+      "range": "decimal",
       "comments": [],
       "annotations": {}
     },
@@ -8836,7 +8854,7 @@
     },
     "total_cycles": {
       "slot_uri": "ncit:C177373",
-      "range": "integer",
+      "range": "decimal",
       "comments": [],
       "annotations": {}
     },
@@ -8862,9 +8880,9 @@
       "comments": [],
       "annotations": {}
     },
-    "product": {
+    "tmp_product": {
       "slot_uri": "ncit:C173287",
-      "range": "ProductEnum",
+      "range": "TmpProductEnum",
       "comments": [],
       "annotations": {
         "tier_optional": "hl_v2.0-approved"
@@ -8880,7 +8898,7 @@
     },
     "number_units": {
       "slot_uri": "ncit:C185656",
-      "range": "integer",
+      "range": "decimal",
       "comments": [],
       "annotations": {
         "tier_optional": "hl_v2.0-approved"
@@ -8923,7 +8941,7 @@
     },
     "bm_pct_blasts_at_response": {
       "slot_uri": "ncit:C168959",
-      "range": "integer",
+      "range": "decimal",
       "comments": [],
       "annotations": {}
     },
@@ -8937,7 +8955,7 @@
     },
     "anc_at_response": {
       "slot_uri": "ncit:C168961",
-      "range": "integer",
+      "range": "decimal",
       "comments": [],
       "annotations": {}
     },
@@ -8949,7 +8967,7 @@
     },
     "platelet_count_at_response": {
       "slot_uri": "ncit:C168963",
-      "range": "integer",
+      "range": "decimal",
       "comments": [],
       "annotations": {}
     },
@@ -8992,7 +9010,7 @@
     },
     "mibg_score": {
       "slot_uri": "",
-      "range": "integer",
+      "range": "decimal",
       "comments": [],
       "annotations": {}
     },
@@ -9046,6 +9064,12 @@
         "tier_priority": "all_groups"
       }
     },
+    "mrd_result_unit": {
+      "slot_uri": "",
+      "range": "MrdResultUnitEnum",
+      "comments": [],
+      "annotations": {}
+    },
     "sensitivity": {
       "slot_uri": "ncit:C168957",
       "range": "decimal",
@@ -9076,7 +9100,7 @@
     },
     "allelic_ratio": {
       "slot_uri": "ncit:C173545",
-      "range": "integer",
+      "range": "decimal",
       "comments": [
         "(aml_v2.0-approved) ConsortiumNote: Only fill in this variable if the information is available.",
         "(nbl_v2.0-approved) ConsortiumNote: Only fill in this variable if the information is available."
@@ -10374,7 +10398,7 @@
     },
     "cycles_planned": {
       "slot_uri": "",
-      "range": "integer",
+      "range": "decimal",
       "comments": [
         "(rb_v1.2-approved) ConsortiumNote: Note: For RB, this field should be used to designate the anticipated number of cycles of systemic chemotherapy that will be administered to the patient,"
       ],
@@ -10449,7 +10473,7 @@
     },
     "cycle_number": {
       "slot_uri": "ncit:C166208",
-      "range": "integer",
+      "range": "decimal",
       "comments": [
         "(rb_v1.2-approved) ConsortiumNote: Note: For RB, this field should be used to designate the cycle of systemic chemotherapy being described in the observation"
       ],
@@ -23335,6 +23359,7 @@
           "meaning": "ncit:C3353",
           "comments": [],
           "in_subset": [
+            "aml_v2.0-approved",
             "fa_v1.0-draft",
             "rb_v1.2-approved"
           ]
@@ -23450,6 +23475,7 @@
           "meaning": "ncit:C75568",
           "comments": [],
           "in_subset": [
+            "aml_v2.0-approved",
             "fa_v1.0-draft",
             "npc_v1.0-approved",
             "rb_v1.2-approved"
@@ -23468,6 +23494,7 @@
           "meaning": "ncit:C3198",
           "comments": [],
           "in_subset": [
+            "aml_v2.0-approved",
             "fa_v1.0-draft",
             "hl_v2.0-approved",
             "npc_v1.0-approved",
@@ -23838,221 +23865,8 @@
         }
       }
     },
-    "FunctionalMeasurementTypeEnum": {
+    "AnthropometricMeasurementResultUnitEnum": {
       "permissible_values": {
-        "Allen Picture Card": {
-          "meaning": "",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Cardiff Acuity Card": {
-          "meaning": "",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "DLCO": {
-          "meaning": "ncit:C38083",
-          "comments": [],
-          "in_subset": [
-            "hl_v2.0-approved"
-          ]
-        },
-        "Ejection Fraction": {
-          "meaning": "ncit:C99524",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved",
-            "hl_v2.0-approved"
-          ]
-        },
-        "FEF at 25-75%": {
-          "meaning": "ncit:C119546",
-          "comments": [],
-          "in_subset": [
-            "hl_v2.0-approved"
-          ]
-        },
-        "FEV1": {
-          "meaning": "ncit:C38084",
-          "comments": [],
-          "in_subset": [
-            "hl_v2.0-approved"
-          ]
-        },
-        "FVC": {
-          "meaning": "ncit:C111361",
-          "comments": [],
-          "in_subset": [
-            "hl_v2.0-approved"
-          ]
-        },
-        "HOTV Test": {
-          "meaning": "",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Landolt C": {
-          "meaning": "",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Lea Numbers": {
-          "meaning": "",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Lea Symbols": {
-          "meaning": "",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "LogMAR Chart": {
-          "meaning": "",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "QTc": {
-          "meaning": "ncit:C100391",
-          "comments": [],
-          "in_subset": [
-            "hl_v2.0-approved"
-          ]
-        },
-        "Shortening Fraction": {
-          "meaning": "ncit:C38020",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved",
-            "hl_v2.0-approved"
-          ]
-        },
-        "Snellen Chart": {
-          "meaning": "",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Teller Acuity Card": {
-          "meaning": "",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Total Lung Capacity": {
-          "meaning": "ncit:C111325",
-          "comments": [],
-          "in_subset": [
-            "hl_v2.0-approved"
-          ]
-        },
-        "Tumbling E": {
-          "meaning": "",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Visual Evoked Potentials (VEP)": {
-          "meaning": "",
-          "comments": [],
-          "in_subset": [
-            "fa_v1.0-draft",
-            "rb_v1.2-approved"
-          ]
-        }
-      }
-    },
-    "ResultUnitEnum": {
-      "permissible_values": {
-        "%": {
-          "meaning": "ncit:C48570",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved",
-            "fa_v1.0-draft",
-            "gct_v2.0-approved",
-            "hl_v2.0-approved",
-            "npc_v1.0-approved"
-          ]
-        },
-        "Decimal": {
-          "meaning": "",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "IU/L": {
-          "meaning": "ncit:C67376",
-          "comments": [],
-          "in_subset": [
-            "fa_v1.0-draft",
-            "gct_v2.0-approved",
-            "npc_v1.0-approved"
-          ]
-        },
-        "Intensity": {
-          "meaning": "ncit:C25539",
-          "comments": [],
-          "in_subset": [
-            "hl_v2.0-approved"
-          ]
-        },
-        "LogMAR": {
-          "meaning": "",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Number of events": {
-          "meaning": "ncit:C130057",
-          "comments": [],
-          "in_subset": [
-            "hl_v2.0-approved"
-          ]
-        },
-        "Snellen in Feet": {
-          "meaning": "",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "Snellen in Meters": {
-          "meaning": "",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "U/L": {
-          "meaning": "ncit:C67456",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved",
-            "ews_v2.0-approved",
-            "fa_v1.0-draft",
-            "gct_v2.0-approved",
-            "hl_v2.0-approved"
-          ]
-        },
         "cm": {
           "meaning": "ncit:C49668",
           "comments": [],
@@ -24065,60 +23879,6 @@
             "hl_v2.0-approved",
             "npc_v1.0-approved",
             "pre_v1.0-approved"
-          ]
-        },
-        "count/mm3": {
-          "meaning": "ncit:C173275",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved",
-            "fa_v1.0-draft",
-            "hl_v2.0-approved",
-            "lt_v1.0-approved"
-          ]
-        },
-        "cp/mL": {
-          "meaning": "",
-          "comments": [],
-          "in_subset": [
-            "npc_v1.0-approved"
-          ]
-        },
-        "dB": {
-          "meaning": "",
-          "comments": [],
-          "in_subset": [
-            "npc_v1.0-approved"
-          ]
-        },
-        "g": {
-          "meaning": "ncit:C48155",
-          "comments": [],
-          "in_subset": [
-            "npc_v1.0-approved"
-          ]
-        },
-        "g/L": {
-          "meaning": "ncit:C42576",
-          "comments": [],
-          "in_subset": [
-            "fa_v1.0-draft"
-          ]
-        },
-        "g/dL": {
-          "meaning": "ncit:C64783",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved",
-            "fa_v1.0-draft",
-            "hl_v2.0-approved"
-          ]
-        },
-        "gm": {
-          "meaning": "ncit:C48155",
-          "comments": [],
-          "in_subset": [
-            "fa_v1.0-draft"
           ]
         },
         "kg": {
@@ -24141,7 +23901,8 @@
           "in_subset": [
             "aml_v2.0-approved",
             "cns_v1.2-approved",
-            "ews_v2.0-approved"
+            "ews_v2.0-approved",
+            "fa_v1.0-draft"
           ]
         },
         "m2": {
@@ -24150,70 +23911,419 @@
           "in_subset": [
             "cns_v1.2-approved",
             "ews_v2.0-approved",
+            "fa_v1.0-draft",
+            "hl_v2.0-approved",
+            "npc_v1.0-approved",
+            "os_v2.0-approved"
+          ]
+        }
+      }
+    },
+    "VitalMeasurementResultUnitEnum": {
+      "permissible_values": {
+        "mmHg": {
+          "meaning": "",
+          "comments": [],
+          "in_subset": [
+            "fa_v1.0-draft",
+            "os_v2.0-approved"
+          ]
+        },
+        "beat/min": {
+          "meaning": "",
+          "comments": [],
+          "in_subset": [
+            "fa_v1.0-draft",
+            "os_v2.0-approved"
+          ]
+        },
+        "breaths/min": {
+          "meaning": "",
+          "comments": [],
+          "in_subset": [
+            "fa_v1.0-draft",
+            "os_v2.0-approved"
+          ]
+        },
+        "C": {
+          "meaning": "",
+          "comments": [],
+          "in_subset": [
+            "fa_v1.0-draft",
+            "os_v2.0-approved"
+          ]
+        }
+      }
+    },
+    "FunctionalMeasurementResultUnitEnum": {
+      "permissible_values": {
+            "%": {
+                "meaning": "",
+                "comments": [],
+                "in_subset": [
+                    "hl_v2.0-approved",
+                    "npc_v1.0-approved"
+                ]
+            },
+            "mL": {
+                "meaning": "",
+                "comments": [],
+                "in_subset": [
+                    "hl_v2.0-approved"
+                ]
+            },
+            "dB": {
+                "meaning": "",
+                "comments": [],
+                "in_subset": [
+                    "npc_v1.0-approved"
+                ]
+            },
+            "bpm": {
+                "meaning": "",
+                "comments": [],
+                "in_subset": [
+                    "hl_v2.0-approved"
+                ]
+            },
+            "ms": {
+                "meaning": "",
+                "comments": [],
+                "in_subset": [
+                    "hl_v2.0-approved"
+                ]
+            },
+            "cm": {
+                "meaning": "",
+                "comments": [],
+                "in_subset": [
+                    "hl_v2.0-approved"
+                ]
+            },
+            "mL/m2": {
+                "meaning": "",
+                "comments": [],
+                "in_subset": [
+                    "hl_v2.0-approved"
+                ]
+            },
+            "L": {
+                "meaning": "",
+                "comments": [],
+                "in_subset": [
+                    "hl_v2.0-approved"
+                ]
+            },
+            "L/min": {
+                "meaning": "",
+                "comments": [],
+                "in_subset": [
+                    "hl_v2.0-approved"
+                ]
+            },
+            "Snellen in Feet": {
+                "meaning": "",
+                "comments": [],
+                "in_subset": [
+                    "fa_v1.0-draft",
+                    "rb_v1.2-approved"
+                ]
+            },
+            "Snellen in Meters": {
+                "meaning": "",
+                "comments": [],
+                "in_subset": [
+                    "fa_v1.0-draft",
+                    "rb_v1.2-approved"
+                ]
+            },
+            "LogMAR": {
+                "meaning": "",
+                "comments": [],
+                "in_subset": [
+                    "fa_v1.0-draft",
+                    "rb_v1.2-approved"
+                ]
+            }
+        }
+    },
+    "LesionMeasurementUnitEnum": {
+      "permissible_values": {
+        "cm": {
+          "meaning": "",
+          "comments": [],
+          "in_subset": [
+            "ews_v2.0-approved",
+            "fa_v1.0-draft",
+            "hl_v2.0-approved",
+            "npc_v1.0-approved",
+            "nrsts_v2.0-approved",
+            "os_v2.0-approved",
+            "pre_v1.0-approved",
+            "rb_v1.2-approved",
+            "rms_v3.0-approved"
+          ]
+        },
+        "mm": {
+          "meaning": "",
+          "comments": [],
+          "in_subset": [
+            "ews_v2.0-approved",
+            "fa_v1.0-draft",
+            "hl_v2.0-approved",
+            "npc_v1.0-approved",
+            "nrsts_v2.0-approved",
+            "os_v2.0-approved",
+            "pre_v1.0-approved",
+            "rb_v1.2-approved",
+            "rms_v3.0-approved"
+          ]
+        }
+      }
+    },
+    "MedicationDoseUnitEnum": {
+      "permissible_values": {
+        "AUC": {
+          "meaning": "ncit:C64774",
+          "comments": [],
+          "in_subset": [
+            "ews_v2.0-approved",
+            "rb_v1.2-approved"
+          ]
+        },
+        "IU": {
+          "meaning": "ncit:C48579",
+          "comments": [],
+          "in_subset": [
+            "ews_v2.0-approved",
+            "gct_v2.0-approved",
+            "hl_v2.0-approved",
+            "npc_v1.0-approved",
+            "rb_v1.2-approved"
+          ]
+        },
+        "IU/m2": {
+          "meaning": "ncit:C67378",
+          "comments": [],
+          "in_subset": [
+            "ews_v2.0-approved",
             "hl_v2.0-approved",
             "npc_v1.0-approved"
           ]
         },
-        "mIU/L": {
-          "meaning": "ncit:C67405",
+        "mcg": {
+          "meaning": "ncit:C48152",
           "comments": [],
           "in_subset": [
-            "fa_v1.0-draft"
+            "ews_v2.0-approved",
+            "rb_v1.2-approved"
           ]
         },
-        "mL": {
-          "meaning": "ncit:C28254",
+        "mg": {
+          "meaning": "ncit:C28253",
           "comments": [],
           "in_subset": [
-            "hl_v2.0-approved"
+            "ews_v2.0-approved",
+            "gct_v2.0-approved",
+            "hl_v2.0-approved",
+            "npc_v1.0-approved",
+            "os_v2.0-approved",
+            "rb_v1.2-approved"
           ]
         },
-        "mL/min": {
-          "meaning": "ncit:C64777",
+        "mg/kg": {
+          "meaning": "ncit:C105468",
           "comments": [],
           "in_subset": [
-            "fa_v1.0-draft"
+            "ews_v2.0-approved",
+            "gct_v2.0-approved",
+            "hl_v2.0-approved",
+            "npc_v1.0-approved",
+            "rb_v1.2-approved"
           ]
         },
-        "mcg/mL": {
-          "meaning": "ncit:C64572",
+        "mg/m2": {
+          "meaning": "ncit:C67402",
           "comments": [],
           "in_subset": [
+            "ews_v2.0-approved",
+            "gct_v2.0-approved",
+            "hl_v2.0-approved",
+            "npc_v1.0-approved",
+            "rb_v1.2-approved"
+          ]
+        },
+        "MBq": {
+          "meaning": "",
+          "comments": [],
+          "in_subset": [
+            "cns_v1.2-approved",
+            "ews_v2.0-approved",
+            "gct_v2.0-approved",
+            "hl_v2.0-approved",
+            "npc_v1.0-approved",
+            "os_v2.0-approved",
+            "rb_v1.2-approved"
+          ]
+        },
+        "Unknown": {
+          "meaning": "ncit:C17998",
+          "comments": [],
+          "in_subset": [
+            "gct_v2.0-approved"
+          ]
+        },
+        "Not Reported": {
+          "meaning": "ncit:C43234",
+          "comments": [],
+          "in_subset": [
+            "gct_v2.0-approved"
+          ]
+        }
+      }
+    },  
+    "RtDoseUnitEnum": {
+      "permissible_values": {
+        "cGy": {
+          "meaning": "ncit:C64693",
+          "comments": [],
+          "in_subset": [
+            "aml_v2.0-approved",
+            "cns_v1.2-approved",
+            "ews_v2.0-approved",
             "fa_v1.0-draft",
-            "hl_v2.0-approved"
+            "gct_v2.0-approved",
+            "hl_v2.0-approved",
+            "npc_v1.0-approved",
+            "nrsts_v2.0-approved",
+            "os_v2.0-approved",
+            "pre_v1.0-approved",
+            "rb_v1.2-approved",
+            "rms_v3.0-approved"
           ]
         },
-        "mg/L": {
-          "meaning": "ncit:C64572",
+        "CGE": {
+          "meaning": "ncit:C128269",
+          "comments": [],
+          "in_subset": [
+            "aml_v2.0-approved",
+            "cns_v1.2-approved",
+            "ews_v2.0-approved",
+            "fa_v1.0-draft",
+            "npc_v1.0-approved",
+            "rb_v1.2-approved",
+            "rms_v3.0-approved"
+          ]
+        },
+        "Unknown": {
+          "meaning": "ncit:C17998",
+          "comments": [],
+          "in_subset": [
+            "aml_v2.0-approved",
+            "cns_v1.2-approved",
+            "ews_v2.0-approved",
+            "fa_v1.0-draft",
+            "gct_v2.0-approved",
+            "hl_v2.0-approved",
+            "npc_v1.0-approved",
+            "nrsts_v2.0-approved",
+            "os_v2.0-approved",
+            "pre_v1.0-approved",
+            "rb_v1.2-approved",
+            "rms_v3.0-approved"
+          ]
+        },
+        "Not Reported": {
+          "meaning": "ncit:C43234",
+          "comments": [],
+          "in_subset": [
+            "aml_v2.0-approved",
+            "cns_v1.2-approved",
+            "ews_v2.0-approved",
+            "fa_v1.0-draft",
+            "gct_v2.0-approved",
+            "hl_v2.0-approved",
+            "npc_v1.0-approved",
+            "nrsts_v2.0-approved",
+            "os_v2.0-approved",
+            "pre_v1.0-approved",
+            "rb_v1.2-approved",
+            "rms_v3.0-approved"
+          ]
+        }
+      }
+    },
+    "MrdResultUnitEnum": {
+      "permissible_values": {
+        "%": {
+          "meaning": "",
+          "comments": [],
+          "in_subset": [
+            "aml_v2.0-approved"
+          ]
+        },
+        "NCN": {
+          "meaning": "",
+          "comments": [],
+          "in_subset": [
+            "aml_v2.0-approved"
+          ]
+        },
+        "copies per uL": {
+          "meaning": "",
+          "comments": [],
+          "in_subset": [
+            "aml_v2.0-approved"
+          ]
+        },
+        "copies per ngDNA": {
+          "meaning": "",
+          "comments": [],
+          "in_subset": [
+            "aml_v2.0-approved"
+          ]
+        }
+      }
+    },
+    "LaboratoryTestResultUnitEnum": {
+      "permissible_values": {
+        "count/mm3": {
+          "meaning": "ncit:C173275",
           "comments": [],
           "in_subset": [
             "aml_v2.0-approved",
             "fa_v1.0-draft",
-            "hl_v2.0-approved"
+            "hl_v2.0-approved",
+            "lt_v1.0-approved",
+            "npc_v1.0-approved"
+          ]
+        },
+        "%": {
+          "meaning": "ncit:C48570",
+          "comments": [],
+          "in_subset": [
+            "aml_v2.0-approved",
+            "fa_v1.0-draft",
+            "hl_v2.0-approved",
+            "npc_v1.0-approved"
+          ]
+        },
+        "g/dL": {
+          "meaning": "ncit:C64783",
+          "comments": [],
+          "in_subset": [
+            "aml_v2.0-approved",
+            "fa_v1.0-draft",
+            "hl_v2.0-approved",
+            "npc_v1.0-approved"
           ]
         },
         "mg/dL": {
           "meaning": "ncit:C67015",
           "comments": [],
           "in_subset": [
-            "fa_v1.0-draft"
-          ]
-        },
-        "micrometer": {
-          "meaning": "",
-          "comments": [],
-          "in_subset": [
-            "fa_v1.0-draft"
-          ]
-        },
-        "mm/h": {
-          "meaning": "ncit:C67419",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved",
-            "ews_v2.0-approved",
             "fa_v1.0-draft",
-            "hl_v2.0-approved"
+            "npc_v1.0-approved"
           ]
         },
         "mmHg": {
@@ -24227,29 +24337,37 @@
           "meaning": "ncit:C64387",
           "comments": [],
           "in_subset": [
-            "fa_v1.0-draft"
+            "fa_v1.0-draft",
+            "npc_v1.0-approved"
           ]
         },
-        "ms": {
-          "meaning": "ncit:C41140",
+        "U/L": {
+          "meaning": "ncit:C67456",
           "comments": [],
           "in_subset": [
-            "fa_v1.0-draft"
+            "ews_v2.0-approved",
+            "fa_v1.0-draft",
+            "gct_v2.0-approved",
+            "hl_v2.0-approved",
+            "nbl_v2.0-approved",
+            "npc_v1.0-approved"
+          ]
+        },
+        "mg/L": {
+          "meaning": "ncit:C64572",
+          "comments": [],
+          "in_subset": [
+            "fa_v1.0-draft",
+            "hl_v2.0-approved"
           ]
         },
         "ng/mL": {
           "meaning": "ncit:C67306",
           "comments": [],
           "in_subset": [
-            "fa_v1.0-draft",
             "gct_v2.0-approved",
-            "lt_v1.0-approved"
-          ]
-        },
-        "seconds": {
-          "meaning": "ncit:C42535",
-          "comments": [],
-          "in_subset": [
+            "lt_v1.0-approved",
+            "nbl_v2.0-approved",
             "fa_v1.0-draft"
           ]
         },
@@ -24257,39 +24375,33 @@
           "meaning": "ncit:C67405",
           "comments": [],
           "in_subset": [
+            "hl_v2.0-approved",
+            "npc_v1.0-approved"
+          ]
+        },
+        "IU/mL": {
+          "meaning": "ncit:C67378",
+          "comments": [],
+          "in_subset": [
+            "fa_v1.0-draft",
+            "npc_v1.0-approved"
+          ]
+        },
+        "mm/h": {
+          "meaning": "ncit:C67419",
+          "comments": [],
+          "in_subset": [
+            "ews_v2.0-approved",
             "fa_v1.0-draft",
             "hl_v2.0-approved"
           ]
         },
-        "umol/L": {
-          "meaning": "ncit:C48508",
+        "cp/mL": {
+          "meaning": "",
           "comments": [],
           "in_subset": [
-            "fa_v1.0-draft"
-          ]
-        },
-        "Unknown": {
-          "meaning": "ncit:C17998",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved",
-            "ews_v2.0-approved",
-            "fa_v1.0-draft",
             "gct_v2.0-approved",
-            "lt_v1.0-approved"
-          ]
-        },
-        "Not Reported": {
-          "meaning": "ncit:C43234",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved",
-            "ews_v2.0-approved",
-            "fa_v1.0-draft",
-            "gct_v2.0-approved",
-            "lt_v1.0-approved",
-            "npc_v1.0-approved",
-            "pre_v1.0-approved"
+            "npc_v1.0-approved"
           ]
         }
       }
@@ -24362,7 +24474,6 @@
           "meaning": "ncit:C16525",
           "comments": [],
           "in_subset": [
-            "aml_v2.0-approved",
             "hl_v2.0-approved"
           ]
         },
@@ -30783,7 +30894,7 @@
         }
       }
     },
-    "TumorClassificationEnum": {
+    "SiteClassificationEnum": {
       "permissible_values": {
         "Primary": {
           "meaning": "ncit:C8509",
@@ -35397,70 +35508,70 @@
             "fa_v1.0-draft"
           ]
         },
-        "M0": {
+        "FAB >> Version NOS >> M0": {
           "meaning": "ncit:C8460",
           "comments": [],
           "in_subset": [
             "aml_v2.0-approved"
           ]
         },
-        "M1": {
+        "FAB >> Version NOS >> M1": {
           "meaning": "ncit:C3249",
           "comments": [],
           "in_subset": [
             "aml_v2.0-approved"
           ]
         },
-        "M2": {
+        "FAB >> Version NOS >> M2": {
           "meaning": "ncit:C3250",
           "comments": [],
           "in_subset": [
             "aml_v2.0-approved"
           ]
         },
-        "M3": {
+        "FAB >> Version NOS >> M3": {
           "meaning": "ncit:C3182",
           "comments": [],
           "in_subset": [
             "aml_v2.0-approved"
           ]
         },
-        "M3 Variant": {
+        "FAB >> Version NOS >> M3 Variant": {
           "meaning": "ncit:C27757",
           "comments": [],
           "in_subset": [
             "aml_v2.0-approved"
           ]
         },
-        "M4": {
+        "FAB >> Version NOS >> M4": {
           "meaning": "ncit:C7463",
           "comments": [],
           "in_subset": [
             "aml_v2.0-approved"
           ]
         },
-        "M4eo": {
+        "FAB >> Version NOS >> M4eo": {
           "meaning": "ncit:C9020",
           "comments": [],
           "in_subset": [
             "aml_v2.0-approved"
           ]
         },
-        "M5": {
+        "FAB >> Version NOS >> M5": {
           "meaning": "ncit:C4861",
           "comments": [],
           "in_subset": [
             "aml_v2.0-approved"
           ]
         },
-        "M6": {
+        "FAB >> Version NOS >> M6": {
           "meaning": "ncit:C8923",
           "comments": [],
           "in_subset": [
             "aml_v2.0-approved"
           ]
         },
-        "M7": {
+        "FAB >> Version NOS >> M7": {
           "meaning": "ncit:C3170",
           "comments": [],
           "in_subset": [
@@ -47506,36 +47617,13 @@
         }
       }
     },
-    "Diameter1AxisEnum": {
+    "LesionMeasurementAxisEnum": {
       "permissible_values": {
         "Anteroposterior": {
           "meaning": "",
           "comments": [],
           "in_subset": [
             "hl_v2.0-approved"
-          ]
-        },
-        "Base": {
-          "meaning": "ncit:C92955",
-          "comments": [],
-          "in_subset": [
-            "ews_v2.0-approved",
-            "rb_v1.2-approved"
-          ]
-        },
-        "Cranial-Caudal": {
-          "meaning": "ncit:C182395",
-          "comments": [],
-          "in_subset": [
-            "hl_v2.0-approved"
-          ]
-        },
-        "Height": {
-          "meaning": "ncit:C164634",
-          "comments": [],
-          "in_subset": [
-            "ews_v2.0-approved",
-            "rb_v1.2-approved"
           ]
         },
         "Transverse": {
@@ -47545,102 +47633,25 @@
             "hl_v2.0-approved"
           ]
         },
-        "Unknown": {
-          "meaning": "ncit:C17998",
-          "comments": [],
+        "Cranial-Caudal": {
+          "meaning": "ncit:C182395",
+          "comments": [
+            "D4CGNote: This value is synonymous with 'Height'."
+          ],
           "in_subset": [
+            "ews_v2.0-approved",
             "hl_v2.0-approved",
             "rb_v1.2-approved"
           ]
-        }
-      }
-    },
-    "Diameter2AxisEnum": {
-      "permissible_values": {
-        "Anteroposterior": {
-          "meaning": "",
-          "comments": [],
-          "in_subset": [
-            "hl_v2.0-approved"
-          ]
         },
         "Base": {
           "meaning": "ncit:C92955",
-          "comments": [],
+          "comments": [
+            "D4CGNote: Disease-specific, not a universal axis."
+          ],
           "in_subset": [
             "ews_v2.0-approved",
             "rb_v1.2-approved"
-          ]
-        },
-        "Cranial-Caudal": {
-          "meaning": "ncit:C182395",
-          "comments": [],
-          "in_subset": [
-            "hl_v2.0-approved"
-          ]
-        },
-        "Height": {
-          "meaning": "ncit:C164634",
-          "comments": [],
-          "in_subset": [
-            "ews_v2.0-approved",
-            "rb_v1.2-approved"
-          ]
-        },
-        "Transverse": {
-          "meaning": "ncit:C182199",
-          "comments": [],
-          "in_subset": [
-            "hl_v2.0-approved"
-          ]
-        },
-        "Unknown": {
-          "meaning": "ncit:C17998",
-          "comments": [],
-          "in_subset": [
-            "hl_v2.0-approved",
-            "rb_v1.2-approved"
-          ]
-        }
-      }
-    },
-    "Diameter3AxisEnum": {
-      "permissible_values": {
-        "Anteroposterior": {
-          "meaning": "",
-          "comments": [],
-          "in_subset": [
-            "hl_v2.0-approved"
-          ]
-        },
-        "Base": {
-          "meaning": "ncit:C92955",
-          "comments": [],
-          "in_subset": [
-            "ews_v2.0-approved",
-            "rb_v1.2-approved"
-          ]
-        },
-        "Cranial-Caudal": {
-          "meaning": "ncit:C182395",
-          "comments": [],
-          "in_subset": [
-            "hl_v2.0-approved"
-          ]
-        },
-        "Height": {
-          "meaning": "ncit:C164634",
-          "comments": [],
-          "in_subset": [
-            "ews_v2.0-approved",
-            "rb_v1.2-approved"
-          ]
-        },
-        "Transverse": {
-          "meaning": "ncit:C182199",
-          "comments": [],
-          "in_subset": [
-            "hl_v2.0-approved"
           ]
         },
         "Unknown": {
@@ -48938,7 +48949,6 @@
           "meaning": "ncit:C173292",
           "comments": [],
           "in_subset": [
-            "aml_v2.0-approved",
             "cns_v1.2-approved",
             "fa_v1.0-draft",
             "hl_v2.0-approved",
@@ -48986,7 +48996,6 @@
           "meaning": "ncit:C173291",
           "comments": [],
           "in_subset": [
-            "aml_v2.0-approved",
             "cns_v1.2-approved",
             "fa_v1.0-draft",
             "hl_v2.0-approved",
@@ -49004,7 +49013,6 @@
           "meaning": "ncit:C17998",
           "comments": [],
           "in_subset": [
-            "aml_v2.0-approved",
             "fa_v1.0-draft",
             "rb_v1.2-approved"
           ]
@@ -49013,7 +49021,6 @@
           "meaning": "ncit:C43234",
           "comments": [],
           "in_subset": [
-            "aml_v2.0-approved",
             "fa_v1.0-draft",
             "rb_v1.2-approved"
           ]
@@ -49084,7 +49091,6 @@
           "meaning": "ncit:C240",
           "comments": [],
           "in_subset": [
-            "aml_v2.0-approved",
             "fa_v1.0-draft"
           ]
         },
@@ -49141,7 +49147,6 @@
           "meaning": "ncit:C1005",
           "comments": [],
           "in_subset": [
-            "aml_v2.0-approved",
             "cns_v1.2-approved"
           ]
         },
@@ -49233,7 +49238,6 @@
           "meaning": "ncit:C1851",
           "comments": [],
           "in_subset": [
-            "aml_v2.0-approved",
             "cns_v1.2-approved",
             "lt_v1.0-approved"
           ]
@@ -49257,7 +49261,6 @@
           "meaning": "ncit:C321",
           "comments": [],
           "in_subset": [
-            "aml_v2.0-approved",
             "cns_v1.2-approved",
             "ews_v2.0-approved",
             "fa_v1.0-draft",
@@ -49383,7 +49386,6 @@
           "meaning": "ncit:C1336",
           "comments": [],
           "in_subset": [
-            "aml_v2.0-approved",
             "fa_v1.0-draft"
           ]
         },
@@ -49391,7 +49393,6 @@
           "meaning": "ncit:C26638",
           "comments": [],
           "in_subset": [
-            "aml_v2.0-approved",
             "fa_v1.0-draft"
           ]
         },
@@ -49427,7 +49428,6 @@
           "meaning": "ncit:C405",
           "comments": [],
           "in_subset": [
-            "aml_v2.0-approved",
             "cns_v1.2-approved",
             "ews_v2.0-approved",
             "fa_v1.0-draft",
@@ -49452,7 +49452,6 @@
           "meaning": "ncit:C408",
           "comments": [],
           "in_subset": [
-            "aml_v2.0-approved",
             "fa_v1.0-draft",
             "hl_v2.0-approved"
           ]
@@ -49518,7 +49517,6 @@
           "meaning": "ncit:C62091",
           "comments": [],
           "in_subset": [
-            "aml_v2.0-approved",
             "fa_v1.0-draft"
           ]
         },
@@ -49526,7 +49524,6 @@
           "meaning": "ncit:C2213",
           "comments": [],
           "in_subset": [
-            "aml_v2.0-approved",
             "fa_v1.0-draft"
           ]
         },
@@ -49534,7 +49531,6 @@
           "meaning": "ncit:C67504",
           "comments": [],
           "in_subset": [
-            "aml_v2.0-approved",
             "fa_v1.0-draft"
           ]
         },
@@ -49566,7 +49562,6 @@
             "(lt_v1.0-approved) ConsortiumNote: Supportive Care Agent, Toxicity Prevention"
           ],
           "in_subset": [
-            "aml_v2.0-approved",
             "fa_v1.0-draft",
             "hl_v2.0-approved",
             "lt_v1.0-approved"
@@ -49601,7 +49596,6 @@
           "meaning": "ncit:C456",
           "comments": [],
           "in_subset": [
-            "aml_v2.0-approved",
             "ews_v2.0-approved",
             "fa_v1.0-draft",
             "hl_v2.0-approved",
@@ -49672,7 +49666,6 @@
           "meaning": "ncit:C491",
           "comments": [],
           "in_subset": [
-            "aml_v2.0-approved",
             "cns_v1.2-approved",
             "ews_v2.0-approved",
             "fa_v1.0-draft",
@@ -49732,7 +49725,6 @@
           "meaning": "ncit:C1094",
           "comments": [],
           "in_subset": [
-            "aml_v2.0-approved",
             "fa_v1.0-draft",
             "hl_v2.0-approved"
           ]
@@ -49813,7 +49805,6 @@
           "meaning": "ncit:C1806",
           "comments": [],
           "in_subset": [
-            "aml_v2.0-approved",
             "fa_v1.0-draft"
           ]
         },
@@ -49821,7 +49812,6 @@
           "meaning": "ncit:C116722",
           "comments": [],
           "in_subset": [
-            "aml_v2.0-approved",
             "fa_v1.0-draft"
           ]
         },
@@ -49878,7 +49868,6 @@
           "meaning": "ncit:C1819",
           "comments": [],
           "in_subset": [
-            "aml_v2.0-approved",
             "fa_v1.0-draft"
           ]
         },
@@ -49893,7 +49882,6 @@
           "meaning": "ncit:C562",
           "comments": [],
           "in_subset": [
-            "aml_v2.0-approved",
             "fa_v1.0-draft",
             "rb_v1.2-approved"
           ]
@@ -50134,7 +50122,6 @@
           "meaning": "ncit:C633",
           "comments": [],
           "in_subset": [
-            "aml_v2.0-approved",
             "cns_v1.2-approved",
             "ews_v2.0-approved",
             "fa_v1.0-draft",
@@ -50156,7 +50143,6 @@
           "meaning": "ncit:C642",
           "comments": [],
           "in_subset": [
-            "aml_v2.0-approved",
             "cns_v1.2-approved",
             "fa_v1.0-draft",
             "hl_v2.0-approved",
@@ -50187,7 +50173,6 @@
           "meaning": "ncit:C1872",
           "comments": [],
           "in_subset": [
-            "aml_v2.0-approved",
             "fa_v1.0-draft"
           ]
         },
@@ -50465,13 +50450,6 @@
             "lt_v1.0-approved"
           ]
         },
-        "Quizartinib": {
-          "meaning": "ncit:C68936",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved"
-          ]
-        },
         "RV (Rotavirus)": {
           "meaning": "ncit:C96394",
           "comments": [],
@@ -50605,7 +50583,6 @@
           "meaning": "ncit:C61948",
           "comments": [],
           "in_subset": [
-            "aml_v2.0-approved",
             "cns_v1.2-approved",
             "fa_v1.0-draft",
             "lt_v1.0-approved"
@@ -50720,7 +50697,6 @@
           "meaning": "ncit:C875",
           "comments": [],
           "in_subset": [
-            "aml_v2.0-approved",
             "cns_v1.2-approved",
             "fa_v1.0-draft",
             "hl_v2.0-approved"
@@ -50842,7 +50818,6 @@
           "meaning": "ncit:C900",
           "comments": [],
           "in_subset": [
-            "aml_v2.0-approved",
             "cns_v1.2-approved",
             "fa_v1.0-draft"
           ]
@@ -50954,7 +50929,6 @@
           "meaning": "ncit:C17649",
           "comments": [],
           "in_subset": [
-            "aml_v2.0-approved",
             "cns_v1.2-approved",
             "fa_v1.0-draft",
             "hl_v2.0-approved",
@@ -50979,111 +50953,6 @@
             "lt_v1.0-approved",
             "npc_v1.0-approved",
             "rb_v1.2-approved"
-          ]
-        }
-      }
-    },
-    "MedicationDoseUnitEnum": {
-      "permissible_values": {
-        "AUC": {
-          "meaning": "ncit:C64774",
-          "comments": [],
-          "in_subset": [
-            "ews_v2.0-approved",
-            "rb_v1.2-approved"
-          ]
-        },
-        "IU": {
-          "meaning": "ncit:C48579",
-          "comments": [],
-          "in_subset": [
-            "ews_v2.0-approved",
-            "gct_v2.0-approved",
-            "hl_v2.0-approved",
-            "npc_v1.0-approved",
-            "rb_v1.2-approved"
-          ]
-        },
-        "IU/m2": {
-          "meaning": "ncit:C67378",
-          "comments": [],
-          "in_subset": [
-            "ews_v2.0-approved",
-            "hl_v2.0-approved",
-            "npc_v1.0-approved"
-          ]
-        },
-        "mcg": {
-          "meaning": "ncit:C48152",
-          "comments": [],
-          "in_subset": [
-            "ews_v2.0-approved",
-            "rb_v1.2-approved"
-          ]
-        },
-        "mg": {
-          "meaning": "ncit:C28253",
-          "comments": [],
-          "in_subset": [
-            "ews_v2.0-approved",
-            "gct_v2.0-approved",
-            "hl_v2.0-approved",
-            "npc_v1.0-approved",
-            "os_v2.0-approved",
-            "rb_v1.2-approved"
-          ]
-        },
-        "mg/kg": {
-          "meaning": "ncit:C105468",
-          "comments": [],
-          "in_subset": [
-            "rb_v1.2-approved"
-          ]
-        },
-        "mg/kilo": {
-          "meaning": "ncit:C67401",
-          "comments": [],
-          "in_subset": [
-            "ews_v2.0-approved",
-            "gct_v2.0-approved",
-            "hl_v2.0-approved",
-            "npc_v1.0-approved"
-          ]
-        },
-        "mg/m2": {
-          "meaning": "ncit:C67402",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved",
-            "ews_v2.0-approved",
-            "gct_v2.0-approved",
-            "hl_v2.0-approved",
-            "npc_v1.0-approved",
-            "rb_v1.2-approved"
-          ]
-        },
-        "mm/mg2": {
-          "meaning": "",
-          "comments": [],
-          "in_subset": [
-            "ews_v2.0-approved",
-            "rb_v1.2-approved"
-          ]
-        },
-        "Unknown": {
-          "meaning": "ncit:C17998",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved",
-            "gct_v2.0-approved"
-          ]
-        },
-        "Not Reported": {
-          "meaning": "ncit:C43234",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved",
-            "gct_v2.0-approved"
           ]
         }
       }
@@ -52117,84 +51986,6 @@
         }
       }
     },
-    "RtDoseUnitEnum": {
-      "permissible_values": {
-        "CGE": {
-          "meaning": "ncit:C128269",
-          "comments": [],
-          "in_subset": [
-            "cns_v1.2-approved",
-            "fa_v1.0-draft",
-            "npc_v1.0-approved",
-            "rb_v1.2-approved"
-          ]
-        },
-        "Gy": {
-          "meaning": "ncit:C18063",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved",
-            "cns_v1.2-approved",
-            "ews_v2.0-approved",
-            "fa_v1.0-draft",
-            "gct_v2.0-approved",
-            "hl_v2.0-approved",
-            "npc_v1.0-approved",
-            "nrsts_v2.0-approved",
-            "os_v2.0-approved",
-            "pre_v1.0-approved",
-            "rb_v1.2-approved",
-            "rms_v3.0-approved"
-          ]
-        },
-        "cGy": {
-          "meaning": "ncit:C64693",
-          "comments": [],
-          "in_subset": [
-            "cns_v1.2-approved",
-            "fa_v1.0-draft",
-            "npc_v1.0-approved",
-            "rb_v1.2-approved"
-          ]
-        },
-        "Unknown": {
-          "meaning": "ncit:C17998",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved",
-            "cns_v1.2-approved",
-            "ews_v2.0-approved",
-            "fa_v1.0-draft",
-            "gct_v2.0-approved",
-            "hl_v2.0-approved",
-            "npc_v1.0-approved",
-            "nrsts_v2.0-approved",
-            "os_v2.0-approved",
-            "pre_v1.0-approved",
-            "rb_v1.2-approved",
-            "rms_v3.0-approved"
-          ]
-        },
-        "Not Reported": {
-          "meaning": "ncit:C43234",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved",
-            "cns_v1.2-approved",
-            "ews_v2.0-approved",
-            "fa_v1.0-draft",
-            "gct_v2.0-approved",
-            "hl_v2.0-approved",
-            "npc_v1.0-approved",
-            "nrsts_v2.0-approved",
-            "os_v2.0-approved",
-            "pre_v1.0-approved",
-            "rb_v1.2-approved",
-            "rms_v3.0-approved"
-          ]
-        }
-      }
-    },
     "SctTypeEnum": {
       "permissible_values": {
         "Allogeneic": {
@@ -52804,7 +52595,7 @@
         }
       }
     },
-    "ProductEnum": {
+    "TmpProductEnum": {
       "permissible_values": {
         "Plasma": {
           "meaning": "ncit:C13356",
@@ -52850,6 +52641,7 @@
           "meaning": "ncit:C17649",
           "comments": [],
           "in_subset": [
+            "aml_v2.0-approved",
             "fa_v1.0-draft",
             "hl_v2.0-approved"
           ]
@@ -54025,435 +53817,435 @@
       }
     },
     "MolecularMarkersEnum": {
-      "permissible_values": {
-        "Any MLL rearrangement": {
-          "meaning": "ncit:C122623",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved"
-          ]
-        },
-        "CEBPA Variant": {
-          "meaning": "ncit:C38372",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved"
-          ]
-        },
-        "CEBPA mutation - biallelic": {
-          "meaning": "ncit:C157569",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved"
-          ]
-        },
-        "CEBPA mutation - monoallelic": {
-          "meaning": "ncit:C168774",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved"
-          ]
-        },
-        "CKIT mutation - ex17": {
-          "meaning": "ncit:C116396",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved"
-          ]
-        },
-        "CKIT mutation - ex8": {
-          "meaning": "ncit:C128660",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved"
-          ]
-        },
-        "CKIT mutation - unspecified": {
-          "meaning": "ncit:C39712",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved"
-          ]
-        },
-        "FLT3 internal tandem duplication": {
-          "meaning": "ncit:C67494",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved"
-          ]
-        },
-        "FLT3-TKD": {
-          "meaning": "ncit:C67495",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved"
-          ]
-        },
-        "GATA1 mutation": {
-          "meaning": "ncit:C82340",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved"
-          ]
-        },
-        "K-RAS mutation": {
-          "meaning": "ncit:C41361",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved"
-          ]
-        },
-        "MLL Other partner": {
-          "meaning": "ncit:C36517",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved"
-          ]
-        },
-        "Monosomy 5": {
-          "meaning": "ncit:C36523",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved"
-          ]
-        },
-        "Monosomy 7": {
-          "meaning": "ncit:C36411",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved"
-          ]
-        },
-        "N-RAS mutation": {
-          "meaning": "ncit:C41381",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved"
-          ]
-        },
-        "NPM1 mutation": {
-          "meaning": "ncit:C82429",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved"
-          ]
-        },
-        "PTPN11 mutation": {
-          "meaning": "ncit:C82612",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved"
-          ]
-        },
-        "RUNX1 mutation": {
-          "meaning": "ncit:C38362",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved"
-          ]
-        },
-        "RUNX1-RUNX1T1 Fusion": {
-          "meaning": "ncit:C99294",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved"
-          ]
-        },
-        "Trisomy 8": {
-          "meaning": "ncit:C36396",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved"
-          ]
-        },
-        "WT1 mutation": {
-          "meaning": "ncit:C146726",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved"
-          ]
-        },
-        "del(13q)": {
-          "meaning": "ncit:C36497",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved"
-          ]
-        },
-        "del(13q)(13q 14 - 21)": {
-          "meaning": "ncit:C168770",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved"
-          ]
-        },
-        "del(17p)": {
-          "meaning": "ncit:C36499",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved"
-          ]
-        },
-        "del(5q)(5q31-q32)": {
-          "meaning": "ncit:C168769",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved"
-          ]
-        },
-        "der.12p": {
-          "meaning": "ncit:C173542",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved"
-          ]
-        },
-        "inv(16)(p13.3q24.3)/CBFA2T3-GLIS2": {
-          "meaning": "ncit:C167195",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved"
-          ]
-        },
-        "inv(16)(p13q22)": {
-          "meaning": "ncit:C36373",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved"
-          ]
-        },
-        "inv(3)(q21;q21.2)": {
-          "meaning": "ncit:C36407",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved"
-          ]
-        },
-        "non-KMT2A MLLT10": {
-          "meaning": "ncit:C168771",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved"
-          ]
-        },
-        "t(10;11)(p11.2;q23)": {
-          "meaning": "ncit:C168758",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved"
-          ]
-        },
-        "t(10;11)(p12;q23) / MLL-MLLT10(AF10)": {
-          "meaning": "ncit:C132102",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved"
-          ]
-        },
-        "t(11;15)(p15;q35)/NUP98/JARID1A": {
-          "meaning": "ncit:C131505",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved"
-          ]
-        },
-        "t(11;17)(AF17)": {
-          "meaning": "ncit:C168760",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved"
-          ]
-        },
-        "t(11;19)(q23;p13)(MLL-ENL)/(MLL-ELL)": {
-          "meaning": "ncit:C168764",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved"
-          ]
-        },
-        "t(11;19)(q23;p13.1)(MLL-ELL)": {
-          "meaning": "ncit:C36371",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved"
-          ]
-        },
-        "t(11;19)(q23;p13.3)(MLL-ENL)": {
-          "meaning": "ncit:C36372",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved"
-          ]
-        },
-        "t(15;17)(q24;q21)": {
-          "meaning": "ncit:C27758",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved"
-          ]
-        },
-        "t(16;16)(p13.1;q22)": {
-          "meaning": "ncit:C27759",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved"
-          ]
-        },
-        "t(16;21)(p11;q22)FUS/ERG": {
-          "meaning": "ncit:C36616",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved"
-          ]
-        },
-        "t(16;21)(q24;q22)RUNX1-CBFA2T3": {
-          "meaning": "ncit:C168773",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved"
-          ]
-        },
-        "t(1;11)(q21;q23) / MLL-MLLT11(AF1Q)": {
-          "meaning": "ncit:C168759",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved"
-          ]
-        },
-        "t(1;22)(RBM15-MKL1)": {
-          "meaning": "ncit:C36417",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved"
-          ]
-        },
-        "t(2;12)": {
-          "meaning": "ncit:C173543",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved"
-          ]
-        },
-        "t(3;12)(q23;p12.3)(ETV6/EVI1)": {
-          "meaning": "ncit:C168766",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved"
-          ]
-        },
-        "t(3;3)(q21;q26.2)": {
-          "meaning": "ncit:C36406",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved"
-          ]
-        },
-        "t(3;5)(q25;q34)NPM1/MLF1": {
-          "meaning": "ncit:C36415",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved"
-          ]
-        },
-        "t(3;5)(q25;q34)NPM1/MLF2": {
-          "meaning": "",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved"
-          ]
-        },
-        "t(3;5)(q25;q34)NPM1/MLF3": {
-          "meaning": "",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved"
-          ]
-        },
-        "t(4;11)(q21;q23) / MLL-MLLT2(AF4)": {
-          "meaning": "ncit:C36365",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved"
-          ]
-        },
-        "t(5;11)(q35;p15) NSD1/NUP98": {
-          "meaning": "ncit:C131503",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved"
-          ]
-        },
-        "t(6;11)(q27;q23) / MLL-MLLT4(AF6)": {
-          "meaning": "ncit:C36610",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved"
-          ]
-        },
-        "t(6;9)(p23;q34) DEK/NUP214": {
-          "meaning": "ncit:C36532",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved"
-          ]
-        },
-        "t(7;12)(q36;p13) HLXB9(MNX1)/ETV6(TEL)": {
-          "meaning": "ncit:C122689",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved"
-          ]
-        },
-        "t(8;16)MOZ/CBP": {
-          "meaning": "ncit:C167194",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved"
-          ]
-        },
-        "t(8;21)": {
-          "meaning": "ncit:C119608",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved"
-          ]
-        },
-        "t(9;11)(p22;q23) / MLL-MLLT3(AF9)": {
-          "meaning": "ncit:C36370",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved"
-          ]
-        },
-        "t(9;22)(q34;q11.2) ABL/BCR": {
-          "meaning": "ncit:C13271",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved"
-          ]
-        },
-        "Other": {
-          "meaning": "ncit:C17649",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved"
-          ]
-        },
-        "Unknown": {
-          "meaning": "ncit:C17998",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved"
-          ]
-        },
-        "Not Reported": {
-          "meaning": "ncit:C43234",
-          "comments": [],
-          "in_subset": [
-            "aml_v2.0-approved"
-          ]
+        "permissible_values": {
+            "MLL Rearrangement (Translocation)": {
+                "meaning": "ncit:C122623",
+                "comments": [],
+                "in_subset": [
+                    "aml_v2.0-approved"
+                ]
+            },
+            "CEBPA Variant": {
+                "meaning": "ncit:C38372",
+                "comments": [],
+                "in_subset": [
+                    "aml_v2.0-approved"
+                ]
+            },
+            "CEBPA Mutation - Biallelic": {
+                "meaning": "ncit:C157569",
+                "comments": [],
+                "in_subset": [
+                    "aml_v2.0-approved"
+                ]
+            },
+            "CEBPA Mutation - Monoallelic": {
+                "meaning": "ncit:C168774",
+                "comments": [],
+                "in_subset": [
+                    "aml_v2.0-approved"
+                ]
+            },
+            "CKIT Mutation - Ex17": {
+                "meaning": "ncit:C116396",
+                "comments": [],
+                "in_subset": [
+                    "aml_v2.0-approved"
+                ]
+            },
+            "CKIT Mutation - Ex8": {
+                "meaning": "ncit:C128660",
+                "comments": [],
+                "in_subset": [
+                    "aml_v2.0-approved"
+                ]
+            },
+            "CKIT Mutation - Unspecified": {
+                "meaning": "ncit:C39712",
+                "comments": [],
+                "in_subset": [
+                    "aml_v2.0-approved"
+                ]
+            },
+            "FLT3 Internal Tandem Duplication (ITD)": {
+                "meaning": "ncit:C67494",
+                "comments": [],
+                "in_subset": [
+                    "aml_v2.0-approved"
+                ]
+            },
+            "FLT3 Tyrosine Kinase Domain (TKD)": {
+                "meaning": "ncit:C67495",
+                "comments": [],
+                "in_subset": [
+                    "aml_v2.0-approved"
+                ]
+            },
+            "GATA1 Mutation": {
+                "meaning": "ncit:C82340",
+                "comments": [],
+                "in_subset": [
+                    "aml_v2.0-approved"
+                ]
+            },
+            "K-RAS Mutation": {
+                "meaning": "ncit:C41361",
+                "comments": [],
+                "in_subset": [
+                    "aml_v2.0-approved"
+                ]
+            },
+            "MLL Other Partner": {
+                "meaning": "ncit:C36517",
+                "comments": [],
+                "in_subset": [
+                    "aml_v2.0-approved"
+                ]
+            },
+            "Monosomy 5": {
+                "meaning": "ncit:C36523",
+                "comments": [],
+                "in_subset": [
+                    "aml_v2.0-approved"
+                ]
+            },
+            "Monosomy 7": {
+                "meaning": "ncit:C36411",
+                "comments": [],
+                "in_subset": [
+                    "aml_v2.0-approved"
+                ]
+            },
+            "N-RAS Mutation": {
+                "meaning": "ncit:C41381",
+                "comments": [],
+                "in_subset": [
+                    "aml_v2.0-approved"
+                ]
+            },
+            "NPM1 Mutation": {
+                "meaning": "ncit:C82429",
+                "comments": [],
+                "in_subset": [
+                    "aml_v2.0-approved"
+                ]
+            },
+            "PTPN11 Mutation": {
+                "meaning": "ncit:C82612",
+                "comments": [],
+                "in_subset": [
+                    "aml_v2.0-approved"
+                ]
+            },
+            "RUNX1 Mutation": {
+                "meaning": "ncit:C38362",
+                "comments": [],
+                "in_subset": [
+                    "aml_v2.0-approved"
+                ]
+            },
+            "RUNX1-RUNX1T1 Fusion": {
+                "meaning": "ncit:C99294",
+                "comments": [],
+                "in_subset": [
+                    "aml_v2.0-approved"
+                ]
+            },
+            "Trisomy 8": {
+                "meaning": "ncit:C36396",
+                "comments": [],
+                "in_subset": [
+                    "aml_v2.0-approved"
+                ]
+            },
+            "WT1 Mutation": {
+                "meaning": "ncit:C146726",
+                "comments": [],
+                "in_subset": [
+                    "aml_v2.0-approved"
+                ]
+            },
+            "del(13q)": {
+                "meaning": "ncit:C36497",
+                "comments": [],
+                "in_subset": [
+                    "aml_v2.0-approved"
+                ]
+            },
+            "del(13q)(13q 14 - 21)": {
+                "meaning": "ncit:C168770",
+                "comments": [],
+                "in_subset": [
+                    "aml_v2.0-approved"
+                ]
+            },
+            "del(17p)": {
+                "meaning": "ncit:C36499",
+                "comments": [],
+                "in_subset": [
+                    "aml_v2.0-approved"
+                ]
+            },
+            "del(5q)(5q31-q32)": {
+                "meaning": "ncit:C168769",
+                "comments": [],
+                "in_subset": [
+                    "aml_v2.0-approved"
+                ]
+            },
+            "der.12p": {
+                "meaning": "ncit:C173542",
+                "comments": [],
+                "in_subset": [
+                    "aml_v2.0-approved"
+                ]
+            },
+            "inv(16)(p13.3q24.3) / CBFA2T3-GLIS2": {
+                "meaning": "ncit:C167195",
+                "comments": [],
+                "in_subset": [
+                    "aml_v2.0-approved"
+                ]
+            },
+            "inv(16)(p13q22)": {
+                "meaning": "ncit:C36373",
+                "comments": [],
+                "in_subset": [
+                    "aml_v2.0-approved"
+                ]
+            },
+            "inv(3)(q21;q21.2)": {
+                "meaning": "ncit:C36407",
+                "comments": [],
+                "in_subset": [
+                    "aml_v2.0-approved"
+                ]
+            },
+            "Non-KMT2A MLLT10": {
+                "meaning": "ncit:C168771",
+                "comments": [],
+                "in_subset": [
+                    "aml_v2.0-approved"
+                ]
+            },
+            "t(10;11)(p11.2;q23)": {
+                "meaning": "ncit:C168758",
+                "comments": [],
+                "in_subset": [
+                    "aml_v2.0-approved"
+                ]
+            },
+            "t(10;11)(p12;q23) / MLL-MLLT10(AF10)": {
+                "meaning": "ncit:C132102",
+                "comments": [],
+                "in_subset": [
+                    "aml_v2.0-approved"
+                ]
+            },
+            "t(11;15)(p15;q35) / NUP98/JARID1A": {
+                "meaning": "ncit:C131505",
+                "comments": [],
+                "in_subset": [
+                    "aml_v2.0-approved"
+                ]
+            },
+            "t(11;17)(AF17)": {
+                "meaning": "ncit:C168760",
+                "comments": [],
+                "in_subset": [
+                    "aml_v2.0-approved"
+                ]
+            },
+            "t(11;19)(q23;p13) / (MLL-ENL)/(MLL-ELL)": {
+                "meaning": "ncit:C168764",
+                "comments": [],
+                "in_subset": [
+                    "aml_v2.0-approved"
+                ]
+            },
+            "t(11;19)(q23;p13.1)(MLL-ELL)": {
+                "meaning": "ncit:C36371",
+                "comments": [],
+                "in_subset": [
+                    "aml_v2.0-approved"
+                ]
+            },
+            "t(11;19)(q23;p13.3)(MLL-ENL)": {
+                "meaning": "ncit:C36372",
+                "comments": [],
+                "in_subset": [
+                    "aml_v2.0-approved"
+                ]
+            },
+            "t(15;17)(q24;q21)": {
+                "meaning": "ncit:C27758",
+                "comments": [],
+                "in_subset": [
+                    "aml_v2.0-approved"
+                ]
+            },
+            "t(16;16)(p13.1;q22)": {
+                "meaning": "ncit:C27759",
+                "comments": [],
+                "in_subset": [
+                    "aml_v2.0-approved"
+                ]
+            },
+            "t(16;21)(p11;q22) / FUS/ERG": {
+                "meaning": "ncit:C36616",
+                "comments": [],
+                "in_subset": [
+                    "aml_v2.0-approved"
+                ]
+            },
+            "t(16;21)(q24;q22) / RUNX1-CBFA2T3": {
+                "meaning": "ncit:C168773",
+                "comments": [],
+                "in_subset": [
+                    "aml_v2.0-approved"
+                ]
+            },
+            "t(1;11)(q21;q23) / MLL-MLLT11(AF1Q)": {
+                "meaning": "ncit:C168759",
+                "comments": [],
+                "in_subset": [
+                    "aml_v2.0-approved"
+                ]
+            },
+            "t(1;22)(RBM15-MKL1)": {
+                "meaning": "ncit:C36417",
+                "comments": [],
+                "in_subset": [
+                    "aml_v2.0-approved"
+                ]
+            },
+            "t(2;12)": {
+                "meaning": "ncit:C173543",
+                "comments": [],
+                "in_subset": [
+                    "aml_v2.0-approved"
+                ]
+            },
+            "t(3;12)(q23;p12.3)(ETV6/EVI1)": {
+                "meaning": "ncit:C168766",
+                "comments": [],
+                "in_subset": [
+                    "aml_v2.0-approved"
+                ]
+            },
+            "t(3;3)(q21;q26.2)": {
+                "meaning": "ncit:C36406",
+                "comments": [],
+                "in_subset": [
+                    "aml_v2.0-approved"
+                ]
+            },
+            "t(3;5)(q25;q34) / NPM1/MLF1": {
+                "meaning": "ncit:C36415",
+                "comments": [],
+                "in_subset": [
+                    "aml_v2.0-approved"
+                ]
+            },
+            "t(3;5)(q25;q34)NPM1/MLF2": {
+                "meaning": "",
+                "comments": [],
+                "in_subset": [
+                    "aml_v2.0-approved"
+                ]
+            },
+            "t(3;5)(q25;q34)NPM1/MLF3": {
+                "meaning": "",
+                "comments": [],
+                "in_subset": [
+                    "aml_v2.0-approved"
+                ]
+            },
+            "t(4;11)(q21;q23) / MLL-MLLT2(AF4)": {
+                "meaning": "ncit:C36365",
+                "comments": [],
+                "in_subset": [
+                    "aml_v2.0-approved"
+                ]
+            },
+            "t(5;11)(q35;p15) / NSD1/NUP98": {
+                "meaning": "ncit:C131503",
+                "comments": [],
+                "in_subset": [
+                    "aml_v2.0-approved"
+                ]
+            },
+            "t(6;11)(q27;q23) / MLL-MLLT4(AF6)": {
+                "meaning": "ncit:C36610",
+                "comments": [],
+                "in_subset": [
+                    "aml_v2.0-approved"
+                ]
+            },
+            "t(6;9)(p23;q34) DEK/NUP214": {
+                "meaning": "ncit:C36532",
+                "comments": [],
+                "in_subset": [
+                    "aml_v2.0-approved"
+                ]
+            },
+            "t(7;12)(q36;p13) / HLXB9(MNX1)/ETV6(TEL)": {
+                "meaning": "ncit:C122689",
+                "comments": [],
+                "in_subset": [
+                    "aml_v2.0-approved"
+                ]
+            },
+            "t(8;16)MOZ/CBP": {
+                "meaning": "ncit:C167194",
+                "comments": [],
+                "in_subset": [
+                    "aml_v2.0-approved"
+                ]
+            },
+            "t(8;21)": {
+                "meaning": "ncit:C119608",
+                "comments": [],
+                "in_subset": [
+                    "aml_v2.0-approved"
+                ]
+            },
+            "t(9;11)(p22;q23) / MLL-MLLT3(AF9)": {
+                "meaning": "ncit:C36370",
+                "comments": [],
+                "in_subset": [
+                    "aml_v2.0-approved"
+                ]
+            },
+            "t(9;22)(q34;q11.2) ABL/BCR": {
+                "meaning": "ncit:C13271",
+                "comments": [],
+                "in_subset": [
+                    "aml_v2.0-approved"
+                ]
+            },
+            "Other": {
+                "meaning": "ncit:C17649",
+                "comments": [],
+                "in_subset": [
+                    "aml_v2.0-approved"
+                ]
+            },
+            "Unknown": {
+                "meaning": "ncit:C17998",
+                "comments": [],
+                "in_subset": [
+                    "aml_v2.0-approved"
+                ]
+            },
+            "Not Reported": {
+                "meaning": "ncit:C43234",
+                "comments": [],
+                "in_subset": [
+                    "aml_v2.0-approved"
+                ]
+            }
         }
-      }
     },
     "MedicalHistoryConditionEnum": {
       "permissible_values": {
@@ -55633,16 +55425,16 @@
           "meaning": "ncit:C43224",
           "comments": [],
           "in_subset": [
-            "npc_v1.0-approved",
-            "aml_v2.0-approved"
+            "aml_v2.0-approved",
+            "npc_v1.0-approved"
           ]
         },
         "Trisomy 21 Mosaicism": {
           "meaning": "ncit:C142099",
           "comments": [],
           "in_subset": [
-            "npc_v1.0-approved",
-            "aml_v2.0-approved"
+            "aml_v2.0-approved",
+            "npc_v1.0-approved"
           ]
         },
         "Tuberous Sclerosis": {
@@ -57833,17 +57625,6 @@
         }
       }
     },
-    "LongestDiamUnitEnum": {
-      "permissible_values": {
-        "cm": {
-          "meaning": "ncit:C49668",
-          "comments": [],
-          "in_subset": [
-            "pre_v1.0-approved"
-          ]
-        }
-      }
-    },
     "StageSystemEnum": {
       "permissible_values": {
         "AIDS-Related Kaposi Sarcoma Stage": {
@@ -58506,6 +58287,7 @@
           "meaning": "",
           "comments": [],
           "in_subset": [
+            "aml_v2.0-approved",
             "cns_v1.2-approved",
             "ews_v2.0-approved",
             "fa_v1.0-draft",
