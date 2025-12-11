@@ -23595,6 +23595,181 @@
                 }
             }
         },
+        "FunctionalMeasurementTypeEnum": {
+          "permissible_values": {
+            "DLCO": {
+              "meaning": "ncit:C38083",
+              "comments": [],
+              "in_subset": [
+                "fa_v1.0-draft",
+                "hl_v2.0-approved",
+                "npc_v1.0-approved"
+              ]
+            },
+            "Ejection Fraction": {
+              "meaning": "ncit:C99524",
+              "comments": [],
+              "in_subset": [
+                "fa_v1.0-draft",
+                "hl_v2.0-approved",
+                "npc_v1.0-approved"
+              ]
+            },
+            "FEF at 25-75%": {
+              "meaning": "ncit:C119546",
+              "comments": [],
+              "in_subset": [
+                "fa_v1.0-draft",
+                "hl_v2.0-approved",
+                "npc_v1.0-approved"
+              ]
+            },
+            "FEV1": {
+              "meaning": "ncit:C38084",
+              "comments": [],
+              "in_subset": [
+                "fa_v1.0-draft",
+                "hl_v2.0-approved",
+                "npc_v1.0-approved"
+              ]
+            },
+            "FVC": {
+              "meaning": "ncit:C111361",
+              "comments": [],
+              "in_subset": [
+                "fa_v1.0-draft",
+                "hl_v2.0-approved",
+                "npc_v1.0-approved"
+              ]
+            },
+            "QTc": {
+              "meaning": "ncit:C100391",
+              "comments": [],
+              "in_subset": [
+                "fa_v1.0-draft",
+                "hl_v2.0-approved",
+                "npc_v1.0-approved"
+              ]
+            },
+            "Shortening Fraction": {
+              "meaning": "ncit:C38020",
+              "comments": [],
+              "in_subset": [
+                "fa_v1.0-draft",
+                "hl_v2.0-approved",
+                "npc_v1.0-approved"
+              ]
+            },
+            "Total Lung Capacity": {
+              "meaning": "ncit:C111325",
+              "comments": [],
+              "in_subset": [
+                "fa_v1.0-draft",
+                "hl_v2.0-approved",
+                "npc_v1.0-approved"
+              ]
+            },
+            "Allen Picture Card": {
+              "meaning": "",
+              "comments": [],
+              "in_subset": [
+                "fa_v1.0-draft",
+                "hl_v2.0-approved",
+                "npc_v1.0-approved"
+              ]
+            },
+            "Cardiff Acuity Card": {
+              "meaning": "",
+              "comments": [],
+              "in_subset": [
+                "fa_v1.0-draft",
+                "hl_v2.0-approved",
+                "npc_v1.0-approved"
+              ]
+            },
+            "HOTV Test": {
+              "meaning": "",
+              "comments": [],
+              "in_subset": [
+                "fa_v1.0-draft",
+                "hl_v2.0-approved",
+                "npc_v1.0-approved"
+              ]
+            },
+            "Landolt C": {
+              "meaning": "",
+              "comments": [],
+              "in_subset": [
+                "fa_v1.0-draft",
+                "hl_v2.0-approved",
+                "npc_v1.0-approved"
+              ]
+            },
+            "Lea Numbers": {
+              "meaning": "",
+              "comments": [],
+              "in_subset": [
+                "fa_v1.0-draft",
+                "hl_v2.0-approved",
+                "npc_v1.0-approved"
+              ]
+            },
+            "Lea Symbols": {
+              "meaning": "",
+              "comments": [],
+              "in_subset": [
+                "fa_v1.0-draft",
+                "hl_v2.0-approved",
+                "npc_v1.0-approved"
+              ]
+            },
+            "LogMAR Chart": {
+              "meaning": "",
+              "comments": [],
+              "in_subset": [
+                "fa_v1.0-draft",
+                "hl_v2.0-approved",
+                "npc_v1.0-approved"
+              ]
+            },
+            "Snellen Chart": {
+              "meaning": "",
+              "comments": [],
+              "in_subset": [
+                "fa_v1.0-draft",
+                "hl_v2.0-approved",
+                "npc_v1.0-approved"
+              ]
+            },
+            "Teller Acuity Card": {
+              "meaning": "",
+              "comments": [],
+              "in_subset": [
+                "fa_v1.0-draft",
+                "hl_v2.0-approved",
+                "npc_v1.0-approved"
+              ]
+            },
+            "Tumbling E": {
+              "meaning": "",
+              "comments": [],
+              "in_subset": [
+                "fa_v1.0-draft",
+                "hl_v2.0-approved",
+                "npc_v1.0-approved"
+              ]
+            },
+            "Visual Evoked Potentials (VEP)": {
+              "meaning": "",
+              "comments": [],
+              "in_subset": [
+                "fa_v1.0-draft",
+                "hl_v2.0-approved",
+                "npc_v1.0-approved"
+              ]
+            }
+          }
+        },
         "FunctionalMeasurementResultUnitEnum": {
             "permissible_values": {
                 "%": {
