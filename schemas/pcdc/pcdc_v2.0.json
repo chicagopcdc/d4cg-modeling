@@ -2589,7 +2589,7 @@
                 "markers",
                 "result_text",
                 "result_numeric",
-                "result_unit"
+                "ihc_result_unit"
             ],
             "comments": [
                 "D4CGNote: One observation/row per result when instantiated."
@@ -2652,7 +2652,7 @@
                         "hl_v2.0-approved"
                     ]
                 },
-                "result_unit": {
+                "ihc_result_unit": {
                     "in_subset": [
                         "ews_v2.0-approved",
                         "gct_v2.0-approved",
@@ -2683,7 +2683,6 @@
                 "secondary_aml",
                 "result_text",
                 "result_numeric",
-                "result_unit",
                 "path_morph_reporting",
                 "morph_code_text",
                 "morph_code",
@@ -2890,11 +2889,6 @@
                     ]
                 },
                 "result_numeric": {
-                    "in_subset": [
-                        "gct_v2.0-approved"
-                    ]
-                },
-                "result_unit": {
                     "in_subset": [
                         "gct_v2.0-approved"
                     ]
@@ -6555,6 +6549,48 @@
                 "tier_optional": "npc_v1.0-approved"
             }
         },
+        "external_links": {
+            "slot_uri": "",
+            "range": "string",
+            "comments": [],
+            "annotations": {}
+        },
+        "external_resource_icon_path": {
+            "slot_uri": "",
+            "range": "string",
+            "comments": [],
+            "annotations": {}
+        },
+        "external_resource_id": {
+            "slot_uri": "",
+            "range": "string",
+            "comments": [],
+            "annotations": {}
+        },
+        "external_resource_name": {
+            "slot_uri": "",
+            "range": "string",
+            "comments": [],
+            "annotations": {}
+        },
+        "external_subject_id": {
+            "slot_uri": "",
+            "range": "string",
+            "comments": [],
+            "annotations": {}
+        },
+        "external_subject_submitter_id": {
+            "slot_uri": "",
+            "range": "string",
+            "comments": [],
+            "annotations": {}
+        },
+        "external_subject_url": {
+            "slot_uri": "",
+            "range": "string",
+            "comments": [],
+            "annotations": {}
+        },
         "study_id": {
             "slot_uri": "ncit:C83082",
             "range": "StudyIdEnum",
@@ -7082,6 +7118,12 @@
             "comments": [],
             "annotations": {}
         },
+        "ihc_result_unit": {
+          "slot_uri": "",
+            "range": "IhcResultUnitEnum",
+            "comments": [],
+            "annotations": {}
+        },
         "laboratory_test_result_unit": {
             "slot_uri": "",
             "range": "LaboratoryTestResultUnitEnum",
@@ -7431,6 +7473,12 @@
                 "tier_priority": "lt_v1.0-approved",
                 "tier_optional": "npc_v1.0-approved"
             }
+        },
+        "specimen_classification": {
+            "slot_uri": "",
+            "range": "SiteClassificationEnum",
+            "comments": [],
+            "annotations": {}
         },
         "site_classification": {
             "slot_uri": "ncit:C174459",
@@ -23876,6 +23924,28 @@
                     ]
                 }
             }
+        },
+        "IhcResultUnitEnum": {
+          "permissible_values": {
+            "%": { 
+              "meaning": "ncit:C48570",
+              "comments": [],
+              "in_subset": [
+                  "ews_v2.0-approved",
+                  "gct_v2.0-approved",
+                  "hl_v2.0-approved"
+              ]
+            },
+            "Intensity": { 
+              "meaning": "ncit:C25539",
+              "comments": [],
+              "in_subset": [
+                  "ews_v2.0-approved",
+                  "gct_v2.0-approved",
+                  "hl_v2.0-approved"
+              ]
+            }
+          }
         },
         "LaboratoryTestResultUnitEnum": {
             "permissible_values": {
