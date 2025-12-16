@@ -1585,7 +1585,8 @@
                         "fa_v1.0-draft",
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "pre_v1.0-approved"
                     ]
                 },
                 "result_text": {
@@ -1625,7 +1626,8 @@
                         "fa_v1.0-draft",
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "pre_v1.0-approved"
                     ]
                 },
                 "gestational_age_at_birth_weeks": {
@@ -1764,7 +1766,6 @@
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
                         "npc_v1.0-approved",
-                        "pre_v1.0-approved",
                         "rb_v1.2-approved"
                     ]
                 },
@@ -1777,8 +1778,7 @@
                         "hl_v2.0-approved",
                         "lt_v1.0-approved",
                         "nbl_v2.0-approved",
-                        "npc_v1.0-approved",
-                        "pre_v1.0-approved"
+                        "npc_v1.0-approved"
                     ]
                 },
                 "laboratory_test_result_unit": {
@@ -1789,8 +1789,7 @@
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
                         "lt_v1.0-approved",
-                        "npc_v1.0-approved",
-                        "pre_v1.0-approved"
+                        "npc_v1.0-approved"
                     ]
                 },
                 "traumatic_tap": {
@@ -2079,7 +2078,8 @@
                     "in_subset": [
                         "aml_v2.0-approved",
                         "nbl_v2.0-approved",
-                        "rms_v3.0-approved"
+                        "rms_v3.0-approved",
+                        "pre_v1.0-approved"
                     ]
                 },
                 "alteration": {
@@ -2836,7 +2836,6 @@
                         "npc_v1.0-approved",
                         "nrsts_v2.0-approved",
                         "os_v2.0-approved",
-                        "pre_v1.0-approved",
                         "rb_v1.2-approved",
                         "rms_v3.0-approved"
                     ]
@@ -3003,7 +3002,10 @@
                 "pretext_mod_e",
                 "pretext_mod_m",
                 "pretext_mod_f",
-                "pretext_mod_r"
+                "pretext_mod_r",
+                "kaposi_sarcoma_t",
+                "kaposi_sarcoma_i",
+                "kaposi_sarcoma_s"
             ],
             "comments": [
                 "D4CGNote: One observation/row per STAGE when instantiated."
@@ -3213,6 +3215,21 @@
                 "pretext_mod_r": {
                     "in_subset": [
                         "lt_v1.0-approved"
+                    ]
+                },
+                "kaposi_sarcoma_t": {
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "kaposi_sarcoma_i": {
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "kaposi_sarcoma_s": {
+                    "in_subset": [
+                        "pre_v1.0-approved"
                     ]
                 }
             }
@@ -10035,6 +10052,24 @@
             "annotations": {
                 "tier_priority": "lt_v1.0-approved"
             }
+        },
+        "kaposi_sarcoma_t": {
+            "slot_uri": "C134970",
+            "range": "KaposiSarcomaTEnum",
+            "comments": [],
+            "annotations": {}
+        },
+        "kaposi_sarcoma_i": {
+            "slot_uri": "C134978",
+            "range": "KaposiSarcomaIEnum",
+            "comments": [],
+            "annotations": {}
+        },
+        "kaposi_sarcoma_s": {
+            "slot_uri": "C134981",
+            "range": "KaposiSarcomaSEnum",
+            "comments": [],
+            "annotations": {}
         },
         "cycles_planned": {
             "slot_uri": "",
@@ -22243,7 +22278,7 @@
                         "rb_v1.2-approved"
                     ]
                 },
-                "Tumor Surveillance": {
+                "Predisposed Disease Surveillance": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
@@ -22867,7 +22902,8 @@
                         "ews_v2.0-approved",
                         "fa_v1.0-draft",
                         "npc_v1.0-approved",
-                        "rb_v1.2-approved"
+                        "rb_v1.2-approved",
+                        "pre_v1.0-approved"
                     ]
                 },
                 "Other": {
@@ -54160,7 +54196,8 @@
                     "meaning": "ncit:C2903",
                     "comments": [],
                     "in_subset": [
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "pre_v1.0-approved"
                     ]
                 },
                 "Botryoid Rhabdomyosarcoma Of The Urogenital Tract (Fusion-Negative)": {
@@ -54422,7 +54459,8 @@
                     "meaning": "ncit:C84652",
                     "comments": [],
                     "in_subset": [
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "pre_v1.0-approved"
                     ]
                 },
                 "Cowden Syndrome": {
@@ -54457,7 +54495,8 @@
                     "meaning": "ncit:C123317",
                     "comments": [],
                     "in_subset": [
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "pre_v1.0-approved"
                     ]
                 },
                 "Denys-Drash Syndrome": {
@@ -54478,7 +54517,8 @@
                     "meaning": "ncit:C61236",
                     "comments": [],
                     "in_subset": [
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "pre_v1.0-approved"
                     ]
                 },
                 "Down Syndrome": {
@@ -54543,8 +54583,8 @@
                     "meaning": "ncit:C62505",
                     "comments": [],
                     "in_subset": [
-                        "fa_v1.0-draft",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "pre_v1.0-approved"
                     ]
                 },
                 "Frasier Syndrome": {
@@ -54692,7 +54732,8 @@
                     "meaning": "ncit:C8495",
                     "comments": [],
                     "in_subset": [
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "pre_v1.0-approved"
                     ]
                 },
                 "Hirschsprung Disease": {
@@ -54758,19 +54799,14 @@
                         "fa_v1.0-draft"
                     ]
                 },
-                "Li-Fraumeni": {
-                    "meaning": "ncit:C3476",
-                    "comments": [],
-                    "in_subset": [
-                        "nrsts_v2.0-approved",
-                        "os_v2.0-approved"
-                    ]
-                },
                 "Li-Fraumeni Syndrome": {
                     "meaning": "ncit:C3476",
                     "comments": [],
                     "in_subset": [
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "pre_v1.0-approved",
+                        "nrsts_v2.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Liposarcoma": {
@@ -54805,7 +54841,8 @@
                     "meaning": "ncit:C8494",
                     "comments": [],
                     "in_subset": [
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "pre_v1.0-approved"
                     ]
                 },
                 "MIRAGE Syndrome": {
@@ -54932,14 +54969,16 @@
                     "meaning": "ncit:C3273",
                     "comments": [],
                     "in_subset": [
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "pre_v1.0-approved"
                     ]
                 },
                 "Neurofibromatosis Type 2": {
                     "meaning": "ncit:C3274",
                     "comments": [],
                     "in_subset": [
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "pre_v1.0-approved"
                     ]
                 },
                 "Neurofibromatosis Type I": {
@@ -54967,7 +55006,8 @@
                     "meaning": "ncit:C34854",
                     "comments": [],
                     "in_subset": [
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "pre_v1.0-approved"
                     ]
                 },
                 "Noonan Syndrome-Like Disorder with Loose Anagen Hair": {
@@ -55157,7 +55197,8 @@
                     "meaning": "ncit:C6557",
                     "comments": [],
                     "in_subset": [
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "pre_v1.0-approved"
                     ]
                 },
                 "Scleroderma": {
@@ -55788,7 +55829,6 @@
                         "gct_v2.0-approved",
                         "nbl_v2.0-approved",
                         "nrsts_v2.0-approved",
-                        "pre_v1.0-approved",
                         "rb_v1.2-approved",
                         "rms_v3.0-approved"
                     ]
@@ -55804,7 +55844,6 @@
                         "gct_v2.0-approved",
                         "nbl_v2.0-approved",
                         "nrsts_v2.0-approved",
-                        "pre_v1.0-approved",
                         "rb_v1.2-approved",
                         "rms_v3.0-approved"
                     ]
@@ -55836,7 +55875,6 @@
                         "gct_v2.0-approved",
                         "nbl_v2.0-approved",
                         "nrsts_v2.0-approved",
-                        "pre_v1.0-approved",
                         "rb_v1.2-approved",
                         "rms_v3.0-approved"
                     ]
@@ -55849,7 +55887,6 @@
                         "cns_v1.2-approved",
                         "ews_v2.0-approved",
                         "fa_v1.0-draft",
-                        "pre_v1.0-approved",
                         "rb_v1.2-approved"
                     ]
                 }
@@ -63869,6 +63906,60 @@
                     "comments": [],
                     "in_subset": [
                         "rb_v1.2-approved"
+                    ]
+                }
+            }
+        },
+        "KaposiSarcomaTEnum": {
+            "permissible_values": {
+                "T0": {
+                    "meaning": "ncit:C169110",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "T1": {
+                    "meaning": "ncit:C134976",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                }
+            }
+        },
+        "KaposiSarcomaIEnum": {
+            "permissible_values": {
+                "I0": {
+                    "meaning": "ncit:C134979",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "I1": {
+                    "meaning": "ncit:C134980",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                }
+            }
+        },
+        "KaposiSarcomaSEnum": {
+            "permissible_values": {
+                "S0": {
+                    "meaning": "ncit:C134982",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "S1": {
+                    "meaning": "ncit:C134983",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
                     ]
                 }
             }
