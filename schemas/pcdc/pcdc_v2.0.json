@@ -1267,7 +1267,6 @@
         "FamilyMedicalHistory": {
             "slots": [
                 "subjects_submitter_id",
-                "age_at_condition",
                 "condition_status",
                 "family_medical_history_condition",
                 "relation",
@@ -1298,12 +1297,6 @@
                         "fa_v1.0-draft",
                         "hl_v2.0-approved",
                         "npc_v1.0-approved",
-                        "rb_v1.2-approved"
-                    ]
-                },
-                "age_at_condition": {
-                    "in_subset": [
-                        "fa_v1.0-draft",
                         "rb_v1.2-approved"
                     ]
                 },
@@ -7022,9 +7015,7 @@
             "slot_uri": "ncit:C36292",
             "range": "string",
             "comments": [
-                "D4CGNote: Note: String result can include anything that is not a single numeric result, i.e. 'Positive', 'Negative', 'Present', 'Absent', 'Yes', 'No', 'Elevated,' 'Depressed', 'Above threshold', 'Below threshold', ranges, as well as bucketed categories, etc... Note: Only fill in this variable when the available data is anything EXCEPT a single numeric value, and include the entire available data as a string, including units if applicable",
-                "D4CGNote: modifier note",
-                "(npc_v1.0-approved) ConsortiumNote: ConditionalStatement: If 'RESULT_MODIFIER' and 'RESULT_NUMERIC' are null.",
+                "D4CGNote: Note: String result should include anything that is not a purely numeric result, i.e. 'Positive', 'Negative', 'Present', 'Absent', 'Yes', 'No', 'Elevated,' 'Depressed', 'Above threshold', 'Below threshold', '>30', 'Greater than 30', etc.",
                 "(rb_v1.2-approved) ConsortiumNote: For Visual Acuity tests, report specifically these results: 'Blinks to Light', 'Fix and Follow', 'Central Steady Maintained', 'Counting Fingers', 'Hand Motion', 'Light Perception', 'No Light Perception'"
             ],
             "annotations": {
@@ -22809,11 +22800,7 @@
                 "Secondary Malignancy": {
                     "meaning": "ncit:C4968",
                     "comments": [
-                        "D4CGNote: Use the Subsequent Malignant Neoplasm table for any additional details. Do not use CAUSE_OF_DEATH_DETAIL",
-                        "(cns_v1.2-approved) ConsortiumNote: Note: Use the Subsequent Malignant Neoplasm table for any additional details. Do not use CAUSE_OF_DEATH_DETAIL",
-                        "(ews_v2.0-approved) ConsortiumNote: Note: Use the Subsequent Malignant Neoplasm table for any additional details. Do not use CAUSE_OF_DEATH_DETAIL",
-                        "D4CGNote: Use the Subsequent Malignant Neoplasm table for any additional details. Do not use CAUSE_OF_DEATH_DETAIL.",
-                        "(rb_v1.2-approved) ConsortiumNote: Note: Use the Subsequent Malignant Neoplasm table for any additional details. Do not use CAUSE_OF_DEATH_DETAIL"
+                        "D4CGNote: Use the Subsequent Malignant Neoplasm table for any additional details. Do not use CAUSE_OF_DEATH_DETAIL."
                     ],
                     "in_subset": [
                         "cns_v1.2-approved",
@@ -22838,6 +22825,7 @@
                         "ews_v2.0-approved",
                         "fa_v1.0-draft",
                         "gct_v2.0-approved",
+                        "hl_v2.0-approved",
                         "lt_v1.0-approved",
                         "nbl_v2.0-approved",
                         "npc_v1.0-approved",
@@ -22846,13 +22834,6 @@
                         "pre_v1.0-approved",
                         "rb_v1.2-approved",
                         "rms_v3.0-approved"
-                    ]
-                },
-                "Treatment-Related mortality": {
-                    "meaning": "ncit:C166165",
-                    "comments": [],
-                    "in_subset": [
-                        "hl_v2.0-approved"
                     ]
                 },
                 "Unrelated to Disease or Treatment": {
@@ -41568,7 +41549,7 @@
                     ]
                 },
                 "Anal/Perianal": {
-                    "meaning": "ncit:C43362|ncit:C99148",
+                    "meaning": "ncit:C99148",
                     "comments": [],
                     "in_subset": [
                         "fa_v1.0-draft",
@@ -41744,7 +41725,7 @@
                     ]
                 },
                 "Bone or Bone Marrow": {
-                    "meaning": "ncit:C12366|ncit:C12431",
+                    "meaning": "ncit:C12431",
                     "comments": [],
                     "in_subset": [
                         "pre_v1.0-approved"
@@ -41764,7 +41745,7 @@
                     ]
                 },
                 "Brain/Leptomeninges": {
-                    "meaning": "ncit:C12439|ncit:C32979",
+                    "meaning": "ncit:C32979",
                     "comments": [],
                     "in_subset": [
                         "nrsts_v2.0-approved",
@@ -42431,7 +42412,7 @@
                     ]
                 },
                 "Hilar Nodes": {
-                    "meaning": "ncit:C33600|ncit:C134731",
+                    "meaning": "ncit:C134731",
                     "comments": [],
                     "in_subset": [
                         "hl_v2.0-approved",
@@ -42447,7 +42428,7 @@
                     ]
                 },
                 "Hip/Inguinal Region": {
-                    "meaning": "ncit:C64193|ncit:C12726",
+                    "meaning": "ncit:C12726",
                     "comments": [],
                     "in_subset": [
                         "ews_v2.0-approved",
@@ -42716,7 +42697,7 @@
                     ]
                 },
                 "Liver/Biliary Tract": {
-                    "meaning": "ncit:C12392|ncit:C12678",
+                    "meaning": "ncit:C12678",
                     "comments": [],
                     "in_subset": [
                         "pre_v1.0-approved",
@@ -42806,7 +42787,7 @@
                     ]
                 },
                 "Lung/Pleura": {
-                    "meaning": "ncit:C12468|ncit:C12469",
+                    "meaning": "ncit:C12469",
                     "comments": [],
                     "in_subset": [
                         "ews_v2.0-approved"
@@ -42862,7 +42843,7 @@
                     ]
                 },
                 "Mediastinum": {
-                    "meaning": "ncit:C12748|ncit:C6634",
+                    "meaning": "ncit:C6634",
                     "comments": [],
                     "in_subset": [
                         "ews_v2.0-approved",
@@ -42966,7 +42947,7 @@
                     ]
                 },
                 "Nasal Cavity and Paranasal Sinuses": {
-                    "meaning": "ncit:C12424|ncit:C12763",
+                    "meaning": "ncit:C12763",
                     "comments": [],
                     "in_subset": [
                         "pre_v1.0-approved"
@@ -45095,7 +45076,7 @@
                     ]
                 },
                 "Anal/Perianal": {
-                    "meaning": "ncit:C43362|ncit:C99148",
+                    "meaning": "ncit:C99148",
                     "comments": [],
                     "in_subset": [
                         "fa_v1.0-draft",
@@ -45249,7 +45230,7 @@
                     ]
                 },
                 "Brain/Leptomeninges": {
-                    "meaning": "ncit:C12439|ncit:C32979",
+                    "meaning": "ncit:C32979",
                     "comments": [],
                     "in_subset": [
                         "lt_v1.0-approved",
@@ -45780,7 +45761,7 @@
                     ]
                 },
                 "Hip/Inguinal Region": {
-                    "meaning": "ncit:C64193|ncit:C12726",
+                    "meaning": "ncit:C12726",
                     "comments": [],
                     "in_subset": [
                         "ews_v2.0-approved"

@@ -32,7 +32,7 @@ subset_info = {
         "pre": {
             "title": "Cancer Predisposition (pre) Data Dictionary",
             "id": "1Y3oi63WVqH3iRllJI3F7lWvFmKinO3_hrbipnotto4I",
-            "description": "The Cancer Predisposition data dictionary is a consensus data schema built by an international group of pediatric cancer predisposition experts and maintained by Data for the Common Good (D4CG) at the University of Chicago in collaboration with the Consortium for Childhood Cancer Predisposition (C3P). It is based on the collective requirements of its contributors."
+            "description": "The Cancer Predisposition data dictionary is a consensus data schema built by an international group of cancer predisposition experts and maintained by Data for the Common Good (D4CG) at the University of Chicago in collaboration with the Consortium for Childhood Cancer Predisposition (C3P). It is based on the collective requirements of its contributors."
         },
         "ews": {
             "title": "Ewing Sarcoma (ews) Data Dictionary",
@@ -42,7 +42,7 @@ subset_info = {
         "fa": {
             "title": "Fanconi Anemia (fa) Data Dictionary",
             "id": "1v_RHahzeArrN_EYRt9b8eXfHoBOJkAOestaU1GCf5BY",
-            "description": "The FA data dictionary is a consensus data schema built by an international group of pediatric Fanconi Anemia experts and maintained by Data for the Common Good (D4CG) at the University of Chicago in collaboration with the Fanconi Research Initiative for Education, Networking, and Data Sharing Consortium (FRIENDS). It is based on the collective requirements of its contributors."
+            "description": "The FA data dictionary is a consensus data schema built by an international group of Fanconi Anemia experts and maintained by Data for the Common Good (D4CG) at the University of Chicago in collaboration with the Fanconi Research Initiative for Education, Networking, and Data Sharing Consortium (FRIENDS). It is based on the collective requirements of its contributors."
         },
         "fprh": {
             "title": "Fertility Preservation and Reproductive Health (fprh) Data Dictionary",
@@ -58,6 +58,11 @@ subset_info = {
             "id": "1H0DqYqYHKqH1KNK13cs14LKW6vpwKvDxzPMlW1tkm4U",
             "description": "The HL data dictionary is a consensus data schema built by an international group of pediatric Hodgkin lymphoma experts and maintained by Data for the Common Good (D4CG) at the University of Chicago in collaboration with the Hodgkin Lymphoma Data Collaboration (NODAL). It is based on the collective requirements of its contributors."
         },
+         "ls": {
+            "title": "Lynch Syndrome (ls) Data Dictionary",
+            "id": "1Y41AxQ-Roh2QSYg7e4ZQC31-ddnbkczzyq4c5hSdX8o",
+            "description": "The LS data dictionary is a consensus data schema built by an international group of Lynch Syndrome experts and maintained by Data for the Common Good (D4CG) at the University of Chicago in collaboration with the Lynch Syndrome Integrative Epidemiology and Genetics Consortium (LINEAGE). It is based on the collective requirements of its contributors."
+        },
         "lt": {
             "title": "Liver Tumors (lt) Data Dictionary",
             "id": "1pDNGV4RJpdJBATFhjCyzHfk_ONI2V9CKpkXU24EmpTY",
@@ -71,7 +76,7 @@ subset_info = {
         "npc": {
             "title": "Nasopharyngeal Carcinoma (npc) Data Dictionary",
             "id": "1wCkkkUyZOisXaeUba9gJF9oYt4cr-MMHkSP0PGkO7q8",
-            "description": "The NPC data dictionary is a consensus data schema built by an international group of pediatric neuroblastoma experts and maintained by Data for the Common Good (D4CG) at the University of Chicago in collaboration with the Nasopharyngeal Carcinoma Global Partnership (NOBLE). It is based on the collective requirements of its contributors."
+            "description": "The NPC data dictionary is a consensus data schema built by an international group of pediatric nasopharyngeal carcinoma experts and maintained by Data for the Common Good (D4CG) at the University of Chicago in collaboration with the Nasopharyngeal Carcinoma Global Partnership (NOBLE). It is based on the collective requirements of its contributors."
         },
         "nrsts": {
             "title": "Non-rhabdomyosarcoma Soft Tissue Sarcomas (nrsts) Data Dictionary",
