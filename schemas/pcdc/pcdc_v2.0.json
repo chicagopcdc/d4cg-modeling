@@ -40078,6 +40078,76 @@
                         "pre_v1.0-approved"
                     ]
                 },
+                "AJCC, v6 >> Stage 0": {
+                    "meaning": "C90529",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "AJCC, v6 >> Stage 1": {
+                    "meaning": "C90529",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "AJCC, v6 >> Stage 2": {
+                    "meaning": "C90529",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "AJCC, v6 >> Stage 3": {
+                    "meaning": "C90529",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "AJCC, v6 >> Stage 4": {
+                    "meaning": "C90529",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "AJCC, v7 >> Stage 0": {
+                    "meaning": "ncit:C90530",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "AJCC, v7 >> Stage 1": {
+                    "meaning": "ncit:C90530",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "AJCC, v7 >> Stage 2": {
+                    "meaning": "ncit:C90530",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "AJCC, v7 >> Stage 3": {
+                    "meaning": "ncit:C90530",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "AJCC, v7 >> Stage 4": {
+                    "meaning": "ncit:C90530",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
                 "Ann Arbor >> Stage 1": {
                     "meaning": "ncit:C8071",
                     "comments": [],
@@ -40111,6 +40181,41 @@
                     "in_subset": [
                         "fa_v1.0-draft",
                         "hl_v2.0-approved",
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "Children's Oncology Group Liver Tumor Staging System >> Stage 1": {
+                    "meaning": "ncit:C177630",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "Children's Oncology Group Liver Tumor Staging System >> Stage 2": {
+                    "meaning": "ncit:C177630",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "Children's Oncology Group Liver Tumor Staging System >> Stage 3": {
+                    "meaning": "ncit:C177630",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "Children's Oncology Group Liver Tumor Staging System >> Stage 4": {
+                    "meaning": "ncit:C177630",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "Children's Oncology Group Neuroblastoma Risk Group Staging System >> Stage L1": {
+                    "meaning": "ncit:C177631",
+                    "comments": [],
+                    "in_subset": [
                         "pre_v1.0-approved"
                     ]
                 },
