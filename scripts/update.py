@@ -1,5 +1,5 @@
 import sys, json, argparse
-from utils import sheets_helper
+from utils import sheets_helper, script_helper
 
 subset_info = {
     "all": "The ALL data dictionary is a consensus data schema built by an international group of pediatric acute lymphoblastic leukemia experts and maintained by Data for the Common Good (D4CG) at the University of Chicago in collaboration with the Children's Oncology Group (COG). It is based on the collective requirements of its contributors.",
@@ -7,10 +7,11 @@ subset_info = {
     "cns": "The CNS data dictionary is a consensus data schema built by an international group of pediatric central nervous system tumor experts and maintained by Data for the Common Good (D4CG) at the University of Chicago in collaboration with the International Central Nervous System Pediatric Research Consortium (INSPiRE). It is based on the collective requirements of its contributors.",
     "pre": "The Cancer Predisposition data dictionary is a consensus data schema built by an international group of pediatric cancer predisposition experts and maintained by Data for the Common Good (D4CG) at the University of Chicago in collaboration with the Consortium for Childhood Cancer Predisposition (C3P). It is based on the collective requirements of its contributors.",
     "ews": "The EWS data dictionary is a consensus data schema built by an international group of pediatric Ewing sarcoma experts and maintained by Data for the Common Good (D4CG) at the University of Chicago in collaboration with the Harmonization International Bone Sarcoma Consortium (HIBiSCus). It is based on the collective requirements of its contributors.",
-    "fa": "The FA data dictionary is a consensus data schema built by an international group of pediatric Fanconi Anemia experts and maintained by Data for the Common Good (D4CG) at the University of Chicago in collaboration with the Fanconi Research Initiative for Education, Networking, and Data Sharing Consortium (FRIENDS). It is based on the collective requirements of its contributors.",
+    "fa": "The FA data dictionary is a consensus data schema built by an international group of Fanconi Anemia experts and maintained by Data for the Common Good (D4CG) at the University of Chicago in collaboration with the Fanconi Research Initiative for Education, Networking, and Data Sharing Consortium (FRIENDS). It is based on the collective requirements of its contributors.",
     "fprh": "The FPRH data dictionary is a consensus data schema built by an international group of pediatric fertility preservation and reproductive health experts and maintained by Data for the Common Good (D4CG) at the University of Chicago in collaboration with the Reproductive Health Outcomes and Preservation Evaluation Collaborative (Reproductive HOPE). It is based on the collective requirements of its contributors.",
     "gct":"The GCT data dictionary is a consensus data schema built by an international group of pediatric germ cell tumor experts and maintained by Data for the Common Good (D4CG) at the University of Chicago in collaboration with the Malignant Germ Cell International Consortium (MaGIC). It is based on the collective requirements of its contributors.",
     "hl": "The HL data dictionary is a consensus data schema built by an international group of pediatric Hodgkin lymphoma experts and maintained by Data for the Common Good (D4CG) at the University of Chicago in collaboration with the Hodgkin Lymphoma Data Collaboration (NODAL). It is based on the collective requirements of its contributors.",
+    "ls": "The LS data dictionary is a consensus data schema built by an international group of Lynch Syndrome experts and maintained by Data for the Common Good (D4CG) at the University of Chicago in collaboration with the Lynch Syndrome Integrative Epidemiology and Genetics Consortium (LINEAGE). It is based on the collective requirements of its contributors.",
     "lt": "The LT data dictionary is a consensus data schema built by an international group of pediatric liver tumor experts and maintained by Data for the Common Good (D4CG) at the University of Chicago in collaboration with the Children's Hepatic tumors International Collaboration (CHIC). It is based on the collective requirements of its contributors.",
     "nbl": "The NBL data dictionary is a consensus data schema built by an international group of pediatric neuroblastoma experts and maintained by Data for the Common Good (D4CG) at the University of Chicago in collaboration with the International Neuroblastoma Risk Group (INRG). It is based on the collective requirements of its contributors.",
     "npc": "The NPC data dictionary is a consensus data schema built by an international group of pediatric neuroblastoma experts and maintained by Data for the Common Good (D4CG) at the University of Chicago in collaboration with the Nasopharyngeal Carcinoma Global Partnership (NOBLE). It is based on the collective requirements of its contributors.",
@@ -41,6 +42,7 @@ def openTasks(schema_file, task_file):
                     value = ll[4].strip()
                     func = ACTIONS.get(action)
                     if func:
+                        print(task)
                         func(schema, level, target, value)
                     else:
                         print(f"Unknown action: {action}")
@@ -89,8 +91,14 @@ def setSubset(schema, level, target, value):
 def slotSubset(schema, level, target, value):
     source = value.split("|")[0]
     slot = value.split("|")[1]
-    if source not in schema[target]["slot_usage"][slot]:
-        schema[target]["slot_usage"][slot].append(source)
+    if slot not in schema["classes"][target]["slot_usage"]:
+        print("Slot not found: " + slot + " ...skipping")
+    else:
+        if source not in schema["classes"][target]["slot_usage"][slot]:
+            schema["classes"][target]["slot_usage"][slot].append(source)
+    
+        
+
 
 def setDomain(schema, level, target, value):
     schema["classes"][target]["annotations"]["domain"] = value
@@ -114,7 +122,10 @@ def setSlotUri(schema, level, target, value):
     
 
 def setRange(schema, level, target, value):
-    schema["slots"][target]["range"] = value
+    if target not in schema["slots"]:
+        print("Slot not found: " + target + " ...skipping")
+    else:
+        schema["slots"][target]["range"] = value
     
 
 def newEnum(schema, level, target, value):
@@ -163,17 +174,6 @@ def setComment(schema, level, target, value):
         schema["enums"][enum]["permissible_values"][pv]["comments"].append(value)
     else:
         print("setComment, invalid level")
-    
-
-def setSequenceGroup(schema, level, target, value):
-    if level == "class":
-        schema["classes"][target]["annotations"]["sequence_group"] = value
-    if level == "slot":
-        schema["slots"][target]["annotations"]["sequence_group"] = value
-    if level == "value":
-        enum = target.split("|")[0]
-        pv = target.split("|")[1]
-        schema["enums"][enum]["permissible_values"][pv]["annotations"]["sequence_group"] = value
     
 
 def setTier(schema, level, target, value):
@@ -243,7 +243,6 @@ ACTIONS = {
     "newValue()": newValue,
     "setMapping()": setMapping,
     "setComment()": setComment,
-    "setSequenceGroup()": setSequenceGroup,
     "setTier()": setTier,
     "setMeaning()": setMeaning,
     "changeDomain()": changeDomain,
@@ -255,7 +254,7 @@ ACTIONS = {
 
 #Code starts here
 if __name__ == '__main__':
-    sheets_helper.enforce_repo_root()
+    script_helper.enforce_repo_root()
     print(
     """
     ▛▀▖▞▀▖▙▗▌   ▌ ▌▛▀▖▛▀▖▞▀▖▀▛▘▛▀▘

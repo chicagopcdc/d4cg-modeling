@@ -1,6 +1,6 @@
 import os, json, time, argparse
 from datetime import datetime
-from utils import load_sheet, sheets_helper
+from utils import load_sheet, sheets_helper, script_helper
 
 
 class TaskManager:
@@ -166,7 +166,7 @@ def checkSlot(task_manager, source, variable, schema_slot):
                     task_manager.add(f"{source}\tslot\tsetComment()\t{variable['name']}\t{note}\n")
     
 
-def proposeSlot(task_manager, source, table, variable):
+def proposeSlot(task_manager, source, variable):
     task_manager.add(f"{source}\tslot\tnewSlot()\t-\t{variable['name']}\n")
     #slot_uri
     if variable['code']:
@@ -255,6 +255,7 @@ gsheets_ids = {
         "gct": "1ePkD-21wWCokR1MClnMrSl0dpj-Dvgid0knn5jfYHCY",
         "hl": "1H0DqYqYHKqH1KNK13cs14LKW6vpwKvDxzPMlW1tkm4U",
         "lt": "1pDNGV4RJpdJBATFhjCyzHfk_ONI2V9CKpkXU24EmpTY",
+        "ls": "1Y41AxQ-Roh2QSYg7e4ZQC31-ddnbkczzyq4c5hSdX8o",
         "nbl": "1tdXKN6Al4xtEH2eoIdRM6vEMra1A3bdCQHQIv-IZy6k",
         "npc": "1wCkkkUyZOisXaeUba9gJF9oYt4cr-MMHkSP0PGkO7q8",
         "nrsts": "1gDTwDYylH0UakFcNoGBp6etUKKkLVCkZGr-P6NoyN5Y",
@@ -270,7 +271,7 @@ gsheets_ids = {
 
 #Code starts here
 if __name__ == '__main__':
-    sheets_helper.enforce_repo_root()
+    script_helper.enforce_repo_root()
     print(
     """
     ▛▀▖▞▀▖▙▗▌   ▞▀▖▌ ▌▙ ▌▞▀▖
@@ -300,17 +301,17 @@ if __name__ == '__main__':
         start = time.time()
         print("...loading sheet")
         sheet = load_sheet.load(gsheets_ids[commons][disease_group], args.subset)
-        print(sheets_helper.elapsed_time(start))   
+        print(script_helper.elapsed_time(start))   
         if sheet != None:
             start = time.time()
             print("...parsing sheet")
             dictionary = load_sheet.parse(sheet)
-            print(sheets_helper.elapsed_time(start))   
+            print(script_helper.elapsed_time(start))   
             if dictionary:
                 start = time.time()
                 print("...syncing sheet to schema")
                 task_manager = sync(commons, dictionary)
-                print(sheets_helper.elapsed_time(start))
+                print(script_helper.elapsed_time(start))
                 task_manager.write("tasks/" + disease_group + "-taskfile-" + datetime.today().strftime("%Y%m%d") + ".tsv")
         else:
             print("\nERROR: The target was not found in this spreadsheet\n") 
