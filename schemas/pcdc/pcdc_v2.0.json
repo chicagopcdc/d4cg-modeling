@@ -1666,8 +1666,9 @@
                         "fa_v1.0-draft",
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
-                        "ls_v1.0-draft",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "pre_v1.0-approved",
+                        "ls_v1.0-draft"
                     ]
                 },
                 "result_text": {
@@ -1709,8 +1710,9 @@
                         "fa_v1.0-draft",
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
-                        "ls_v1.0-draft",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "pre_v1.0-approved",
+                        "ls_v1.0-draft"
                     ]
                 },
                 "gestational_age_at_birth_weeks": {
@@ -1856,7 +1858,6 @@
                         "hl_v2.0-approved",
                         "ls_v1.0-draft",
                         "npc_v1.0-approved",
-                        "pre_v1.0-approved",
                         "rb_v1.2-approved"
                     ]
                 },
@@ -1870,8 +1871,7 @@
                         "ls_v1.0-draft",
                         "lt_v1.0-approved",
                         "nbl_v2.0-approved",
-                        "npc_v1.0-approved",
-                        "pre_v1.0-approved"
+                        "npc_v1.0-approved"
                     ]
                 },
                 "laboratory_test_result_unit": {
@@ -1883,8 +1883,7 @@
                         "hl_v2.0-approved",
                         "ls_v1.0-draft",
                         "lt_v1.0-approved",
-                        "npc_v1.0-approved",
-                        "pre_v1.0-approved"
+                        "npc_v1.0-approved"
                     ]
                 },
                 "traumatic_tap": {
@@ -2179,7 +2178,8 @@
                         "aml_v2.0-approved",
                         "ls_v1.0-draft",
                         "nbl_v2.0-approved",
-                        "rms_v3.0-approved"
+                        "rms_v3.0-approved",
+                        "pre_v1.0-approved"
                     ]
                 },
                 "alteration": {
@@ -2981,7 +2981,6 @@
                         "npc_v1.0-approved",
                         "nrsts_v2.0-approved",
                         "os_v2.0-approved",
-                        "pre_v1.0-approved",
                         "rb_v1.2-approved",
                         "rms_v3.0-approved"
                     ]
@@ -3150,7 +3149,10 @@
                 "pretext_mod_e",
                 "pretext_mod_m",
                 "pretext_mod_f",
-                "pretext_mod_r"
+                "pretext_mod_r",
+                "kaposi_sarcoma_t",
+                "kaposi_sarcoma_i",
+                "kaposi_sarcoma_s"
             ],
             "comments": [
                 "D4CGNote: One observation/row per STAGE when instantiated."
@@ -3370,6 +3372,21 @@
                     "in_subset": [
                         "lt_v1.0-approved"
                     ]
+                },
+                "kaposi_sarcoma_t": {
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "kaposi_sarcoma_i": {
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "kaposi_sarcoma_s": {
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
                 }
             }
         },
@@ -3384,6 +3401,7 @@
                 "mri_sequence",
                 "site_classification",
                 "classification_status",
+                "assessment_reason",
                 "disease_site",
                 "site_other",
                 "laterality",
@@ -3402,17 +3420,16 @@
                 "med_ratio",
                 "nodular_splenic",
                 "tumor_size",
+                "tumor_number",
                 "invasiveness",
                 "depth",
                 "nodal_pathology",
                 "nodal_clinical",
                 "parameningeal_extension",
-                "assessment_reason",
                 "top_code",
                 "top_code_text",
                 "top_code_system",
                 "top_code_system_version",
-                "tumor_number",
                 "tumor_presentation",
                 "tissue_type",
                 "multiplicity",
@@ -3587,7 +3604,8 @@
                 "classification_status": {
                     "in_subset": [
                         "ews_v2.0-approved",
-                        "rb_v1.2-approved"
+                        "rb_v1.2-approved",
+                        "pre_v1.0-approved"
                     ]
                 },
                 "disease_site": {
@@ -4391,7 +4409,6 @@
                         "ews_v2.0-approved",
                         "fa_v1.0-draft",
                         "os_v2.0-approved",
-                        "pre_v1.0-approved",
                         "rb_v1.2-approved"
                     ]
                 },
@@ -4407,7 +4424,6 @@
                         "npc_v1.0-approved",
                         "nrsts_v2.0-approved",
                         "os_v2.0-approved",
-                        "pre_v1.0-approved",
                         "rb_v1.2-approved",
                         "rms_v3.0-approved"
                     ]
@@ -5212,7 +5228,6 @@
                         "npc_v1.0-approved",
                         "nrsts_v2.0-approved",
                         "os_v2.0-approved",
-                        "pre_v1.0-approved",
                         "rb_v1.2-approved",
                         "rms_v3.0-approved"
                     ]
@@ -5228,7 +5243,6 @@
                         "npc_v1.0-approved",
                         "nrsts_v2.0-approved",
                         "os_v2.0-approved",
-                        "pre_v1.0-approved",
                         "rb_v1.2-approved",
                         "rms_v3.0-approved"
                     ]
@@ -5243,7 +5257,6 @@
                         "npc_v1.0-approved",
                         "nrsts_v2.0-approved",
                         "os_v2.0-approved",
-                        "pre_v1.0-approved",
                         "rb_v1.2-approved",
                         "rms_v3.0-approved"
                     ]
@@ -5272,7 +5285,6 @@
                         "npc_v1.0-approved",
                         "nrsts_v2.0-approved",
                         "os_v2.0-approved",
-                        "pre_v1.0-approved",
                         "rb_v1.2-approved",
                         "rms_v3.0-approved"
                     ]
@@ -5288,7 +5300,6 @@
                         "npc_v1.0-approved",
                         "nrsts_v2.0-approved",
                         "os_v2.0-approved",
-                        "pre_v1.0-approved",
                         "rb_v1.2-approved",
                         "rms_v3.0-approved"
                     ]
@@ -5304,7 +5315,6 @@
                         "npc_v1.0-approved",
                         "nrsts_v2.0-approved",
                         "os_v2.0-approved",
-                        "pre_v1.0-approved",
                         "rb_v1.2-approved",
                         "rms_v3.0-approved"
                     ]
@@ -5328,7 +5338,6 @@
                         "npc_v1.0-approved",
                         "nrsts_v2.0-approved",
                         "os_v2.0-approved",
-                        "pre_v1.0-approved",
                         "rb_v1.2-approved",
                         "rms_v3.0-approved"
                     ]
@@ -5344,7 +5353,6 @@
                         "npc_v1.0-approved",
                         "nrsts_v2.0-approved",
                         "os_v2.0-approved",
-                        "pre_v1.0-approved",
                         "rb_v1.2-approved",
                         "rms_v3.0-approved"
                     ]
@@ -5360,7 +5368,6 @@
                         "npc_v1.0-approved",
                         "nrsts_v2.0-approved",
                         "os_v2.0-approved",
-                        "pre_v1.0-approved",
                         "rb_v1.2-approved",
                         "rms_v3.0-approved"
                     ]
@@ -5376,7 +5383,6 @@
                         "npc_v1.0-approved",
                         "nrsts_v2.0-approved",
                         "os_v2.0-approved",
-                        "pre_v1.0-approved",
                         "rb_v1.2-approved",
                         "rms_v3.0-approved"
                     ]
@@ -10399,6 +10405,24 @@
             "annotations": {
                 "tier_priority": "lt_v1.0-approved"
             }
+        },
+        "kaposi_sarcoma_t": {
+            "slot_uri": "C134970",
+            "range": "KaposiSarcomaTEnum",
+            "comments": [],
+            "annotations": {}
+        },
+        "kaposi_sarcoma_i": {
+            "slot_uri": "C134978",
+            "range": "KaposiSarcomaIEnum",
+            "comments": [],
+            "annotations": {}
+        },
+        "kaposi_sarcoma_s": {
+            "slot_uri": "C134981",
+            "range": "KaposiSarcomaSEnum",
+            "comments": [],
+            "annotations": {}
         },
         "cycles_planned": {
             "slot_uri": "",
@@ -22979,7 +23003,7 @@
                         "rb_v1.2-approved"
                     ]
                 },
-                "Tumor Surveillance": {
+                "Predisposed Disease Surveillance": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
@@ -23624,7 +23648,8 @@
                         "fa_v1.0-draft",
                         "ls_v1.0-draft",
                         "npc_v1.0-approved",
-                        "rb_v1.2-approved"
+                        "rb_v1.2-approved",
+                        "pre_v1.0-approved"
                     ]
                 },
                 "Other": {
@@ -41512,6 +41537,111 @@
                         "pre_v1.0-approved"
                     ]
                 },
+                "AJCC, v6 >> Stage 0": {
+                    "meaning": "C90529",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "AJCC, v6 >> Stage 1": {
+                    "meaning": "C90529",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "AJCC, v6 >> Stage 2": {
+                    "meaning": "C90529",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "AJCC, v6 >> Stage 3": {
+                    "meaning": "C90529",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "AJCC, v6 >> Stage 4": {
+                    "meaning": "C90529",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "AJCC, v7 >> Stage 0": {
+                    "meaning": "ncit:C90530",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "AJCC, v7 >> Stage 1": {
+                    "meaning": "ncit:C90530",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "AJCC, v7 >> Stage 2": {
+                    "meaning": "ncit:C90530",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "AJCC, v7 >> Stage 3": {
+                    "meaning": "ncit:C90530",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "AJCC, v7 >> Stage 4": {
+                    "meaning": "ncit:C90530",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "AJCC, v8 >> Stage 0": {
+                    "meaning": "ncit:C132248",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "AJCC, v8 >> Stage 1": {
+                    "meaning": "ncit:C132248",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "AJCC, v8 >> Stage 2": {
+                    "meaning": "ncit:C132248",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "AJCC, v8 >> Stage 3": {
+                    "meaning": "ncit:C132248",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "AJCC, v8 >> Stage 4": {
+                    "meaning": "ncit:C132248",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
                 "Ann Arbor >> Stage 1": {
                     "meaning": "ncit:C8071",
                     "comments": [],
@@ -41545,6 +41675,153 @@
                     "in_subset": [
                         "fa_v1.0-draft",
                         "hl_v2.0-approved",
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "Children's Oncology Group Liver Tumor Staging System >> Stage 1": {
+                    "meaning": "ncit:C177630",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "Children's Oncology Group Liver Tumor Staging System >> Stage 2": {
+                    "meaning": "ncit:C177630",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "Children's Oncology Group Liver Tumor Staging System >> Stage 3": {
+                    "meaning": "ncit:C177630",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "Children's Oncology Group Liver Tumor Staging System >> Stage 4": {
+                    "meaning": "ncit:C177630",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "Children's Oncology Group Neuroblastoma Risk Group Staging System >> Stage L1": {
+                    "meaning": "ncit:C177631",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "Children's Oncology Group Neuroblastoma Risk Group Staging System >> Stage L2": {
+                    "meaning": "ncit:C177632",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "Children's Oncology Group Neuroblastoma Risk Group Staging System >> Stage M": {
+                    "meaning": "ncit:C177632",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "Children's Oncology Group Neuroblastoma Risk Group Staging System >> Stage MS": {
+                    "meaning": "ncit:C177632",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "Children's Oncology Group Renal Cancer Staging System >> Stage 1": {
+                    "meaning": "ncit:C177632",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "Children's Oncology Group Renal Cancer Staging System >> Stage 2": {
+                    "meaning": "ncit:C177632",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "Children's Oncology Group Renal Cancer Staging System >> Stage 3": {
+                    "meaning": "ncit:C177632",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "Children's Oncology Group Renal Cancer Staging System >> Stage 4": {
+                    "meaning": "ncit:C177632",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "Children's Oncology Group Renal Cancer Staging System >> Stage 5": {
+                    "meaning": "ncit:C177632",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "Children's Oncology Group Retinoblastoma Risk Group Staging System >> High Risk": {
+                    "meaning": "ncit:C102401",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "Children's Oncology Group Retinoblastoma Risk Group Staging System >> Intermediate Risk": {
+                    "meaning": "ncit:C102402",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "Children's Oncology Group Retinoblastoma Risk Group Staging System >> Low Risk": {
+                    "meaning": "ncit:C102403",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                }, 
+                "Childrens Oncology Group/National Wilms Tumor Study Group Staging System >> Stage 1": {
+                    "meaning": "ncit:C198025",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "Childrens Oncology Group/National Wilms Tumor Study Group Staging System >> Stage 2": {
+                    "meaning": "ncit:C198025",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "Childrens Oncology Group/National Wilms Tumor Study Group Staging System >> Stage 3": {
+                    "meaning": "ncit:C198025",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "Childrens Oncology Group/National Wilms Tumor Study Group Staging System >> Stage 4": {
+                    "meaning": "ncit:C198025",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "Childrens Oncology Group/National Wilms Tumor Study Group Staging System >> Stage 5": {
+                    "meaning": "ncit:C198025",
+                    "comments": [],
+                    "in_subset": [
                         "pre_v1.0-approved"
                     ]
                 },
@@ -41589,6 +41866,41 @@
                     "comments": [],
                     "in_subset": [
                         "fa_v1.0-draft",
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "Enneking Staging System >> Stage 1a": {
+                    "meaning": "ncit:C146701",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "Enneking Staging System >> Stage 1b": {
+                    "meaning": "ncit:C146702",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "Enneking Staging System >> Stage 2a": {
+                    "meaning": "ncit:C146703",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "Enneking Staging System >> Stage 2b": {
+                    "meaning": "ncit:C146704",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "Enneking Staging System >> Stage 3": {
+                    "meaning": "ncit:C146705",
+                    "comments": [],
+                    "in_subset": [
                         "pre_v1.0-approved"
                     ]
                 },
@@ -41818,6 +42130,115 @@
                         "rb_v1.2-approved"
                     ]
                 },
+                "Intergroup Rhabdomyosarcoma Study Group Clinical Staging and Grouping System >> Group 1": {
+                    "meaning": "C148012",
+                    "comments": [],
+                    "in_subset": [
+                        "fa_v1.0-draft",
+                        "rb_v1.2-approved"
+                    ]
+                },
+                "Intergroup Rhabdomyosarcoma Study Group Clinical Staging and Grouping System >> Group 2": {
+                    "meaning": "C148015",
+                    "comments": [],
+                    "in_subset": [
+                        "fa_v1.0-draft",
+                        "rb_v1.2-approved"
+                    ]
+                },
+                "Intergroup Rhabdomyosarcoma Study Group Clinical Staging and Grouping System >> Stage 3": {
+                    "meaning": "C148019",
+                    "comments": [],
+                    "in_subset": [
+                        "fa_v1.0-draft",
+                        "rb_v1.2-approved"
+                    ]
+                },
+                "Intergroup Rhabdomyosarcoma Study Group Clinical Staging and Grouping System >> Stage 4": {
+                    "meaning": "C148022",
+                    "comments": [],
+                    "in_subset": [
+                        "fa_v1.0-draft",
+                        "rb_v1.2-approved"
+                    ]
+                },
+                "International Society of Pediatric Oncology Staging System >> Stage 1": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "International Society of Pediatric Oncology Staging System >> Stage 2": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "International Society of Pediatric Oncology Staging System >> Stage 3": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "International Society of Pediatric Oncology Staging System >> Stage 4": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "International Society of Pediatric Oncology Staging System >> Stage 5": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "Lugano Stage >> Stage 1": {
+                    "meaning": "ncit:C141180",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "Lugano Stage >> Stage 1E": {
+                    "meaning": "ncit:C141181",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "Lugano Stage >> Stage 2": {
+                    "meaning": "ncit:C141182",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "Lugano Stage >> Stage 2E": {
+                    "meaning": "ncit:C141183",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "Lugano Stage >> Stage 3": {
+                    "meaning": "ncit:C141186",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "Lugano Stage >> Stage 4": {
+                    "meaning": "ncit:C141187",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
                 "Modified Chang Staging >> M+": {
                     "meaning": "",
                     "comments": [],
@@ -41872,6 +42293,34 @@
                     "in_subset": [
                         "cns_v1.2-approved",
                         "fa_v1.0-draft"
+                    ]
+                },
+                "Pediatric Oncology Group Neuroblastoma Staging System >> Stage A": {
+                    "meaning": "ncit:C85424",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "Pediatric Oncology Group Neuroblastoma Staging System >> Stage B": {
+                    "meaning": "ncit:C85425",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "Pediatric Oncology Group Neuroblastoma Staging System >> Stage C": {
+                    "meaning": "ncit:C85426",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "Pediatric Oncology Group Neuroblastoma Staging System >> Stage D": {
+                    "meaning": "ncit:C85427",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
                     ]
                 },
                 "PRETEXT, 1992 >> Group I": {
@@ -42071,6 +42520,34 @@
                     ],
                     "in_subset": [
                         "lt_v1.0-approved",
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "St. Jude Stage >> Stage 1": {
+                    "meaning": "C141218",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "St. Jude Stage >> Stage 2": {
+                    "meaning": "C141219",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "St. Jude Stage >> Stage 3": {
+                    "meaning": "C141220",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "St. Jude Stage >> Stage 4": {
+                    "meaning": "C141221",
+                    "comments": [],
+                    "in_subset": [
                         "pre_v1.0-approved"
                     ]
                 },
@@ -49593,6 +50070,15 @@
         },
         "TumorSizeEnum": {
             "permissible_values": {
+                "<0.5 cm": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "ews_v2.0-approved",
+                        "fa_v1.0-draft",
+                        "pre_v1.0-approved"
+                    ]
+                },
                 "0.5-1 cm": {
                     "meaning": "",
                     "comments": [],
@@ -49611,24 +50097,6 @@
                         "pre_v1.0-approved"
                     ]
                 },
-                "<0.5 cm": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "ews_v2.0-approved",
-                        "fa_v1.0-draft",
-                        "pre_v1.0-approved"
-                    ]
-                },
-                "<=3mm": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "fa_v1.0-draft",
-                        "pre_v1.0-approved",
-                        "rb_v1.2-approved"
-                    ]
-                },
                 "<=5 cm": {
                     "meaning": "",
                     "comments": [],
@@ -49637,15 +50105,6 @@
                         "nrsts_v2.0-approved",
                         "pre_v1.0-approved",
                         "rms_v3.0-approved"
-                    ]
-                },
-                ">3mm": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "fa_v1.0-draft",
-                        "pre_v1.0-approved",
-                        "rb_v1.2-approved"
                     ]
                 },
                 ">5 cm": {
@@ -49657,6 +50116,24 @@
                         "nrsts_v2.0-approved",
                         "pre_v1.0-approved",
                         "rms_v3.0-approved"
+                    ]
+                },
+                "<=3mm": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "fa_v1.0-draft",
+                        "pre_v1.0-approved",
+                        "rb_v1.2-approved"
+                    ]
+                },
+                ">3mm": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "fa_v1.0-draft",
+                        "pre_v1.0-approved",
+                        "rb_v1.2-approved"
                     ]
                 },
                 "Unknown": {
@@ -56290,7 +56767,8 @@
                     "meaning": "ncit:C17687",
                     "comments": [],
                     "in_subset": [
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "pre_v1.0-approved"
                     ]
                 },
                 "Adrenocortical Carcinoma / Adenoma": {
@@ -56383,7 +56861,8 @@
                     "meaning": "ncit:C2903",
                     "comments": [],
                     "in_subset": [
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "pre_v1.0-approved"
                     ]
                 },
                 "Bohring-Opitz Syndrome": {
@@ -56566,7 +57045,8 @@
                     "meaning": "ncit:C84652",
                     "comments": [],
                     "in_subset": [
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "pre_v1.0-approved"
                     ]
                 },
                 "Cowden Syndrome": {
@@ -56622,7 +57102,8 @@
                     "meaning": "ncit:C123317",
                     "comments": [],
                     "in_subset": [
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "pre_v1.0-approved"
                     ]
                 },
                 "Denys-Drash Syndrome": {
@@ -56643,7 +57124,8 @@
                     "meaning": "ncit:C61236",
                     "comments": [],
                     "in_subset": [
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "pre_v1.0-approved"
                     ]
                 },
                 "Down Syndrome": {
@@ -56722,8 +57204,8 @@
                     "meaning": "ncit:C62505",
                     "comments": [],
                     "in_subset": [
-                        "fa_v1.0-draft",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "pre_v1.0-approved"
                     ]
                 },
                 "Fetal Rhabdomyoma": {
@@ -56935,20 +57417,15 @@
                     "meaning": "ncit:C8495",
                     "comments": [],
                     "in_subset": [
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "pre_v1.0-approved"
                     ]
                 },
                 "Hirschprung Disease": {
                     "meaning": "ncit:C34700",
                     "comments": [],
                     "in_subset": [
-                        "npc_v1.0-approved"
-                    ]
-                },
-                "Hirschsprung Disease": {
-                    "meaning": "ncit:C34700",
-                    "comments": [],
-                    "in_subset": [
+                        "npc_v1.0-approved",
                         "hl_v2.0-approved"
                     ]
                 },
@@ -57043,19 +57520,14 @@
                         "fa_v1.0-draft"
                     ]
                 },
-                "Li-Fraumeni": {
-                    "meaning": "ncit:C3476",
-                    "comments": [],
-                    "in_subset": [
-                        "nrsts_v2.0-approved",
-                        "os_v2.0-approved"
-                    ]
-                },
                 "Li-Fraumeni Syndrome": {
                     "meaning": "ncit:C3476",
                     "comments": [],
                     "in_subset": [
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "pre_v1.0-approved",
+                        "nrsts_v2.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Liposarcoma": {
@@ -57097,7 +57569,8 @@
                     "meaning": "ncit:C8494",
                     "comments": [],
                     "in_subset": [
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "pre_v1.0-approved"
                     ]
                 },
                 "MIRAGE Syndrome": {
@@ -57309,14 +57782,16 @@
                     "meaning": "ncit:C3273",
                     "comments": [],
                     "in_subset": [
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "pre_v1.0-approved"
                     ]
                 },
                 "Neurofibromatosis Type 2": {
                     "meaning": "ncit:C3274",
                     "comments": [],
                     "in_subset": [
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "pre_v1.0-approved"
                     ]
                 },
                 "Neurofibromatosis Type I": {
@@ -57344,7 +57819,8 @@
                     "meaning": "ncit:C34854",
                     "comments": [],
                     "in_subset": [
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "pre_v1.0-approved"
                     ]
                 },
                 "Noonan Syndrome-Like Disorder with Loose Anagen Hair": {
@@ -57612,7 +58088,8 @@
                     "meaning": "ncit:C6557",
                     "comments": [],
                     "in_subset": [
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "pre_v1.0-approved"
                     ]
                 },
                 "Scleroderma": {
@@ -57926,7 +58403,6 @@
                         "ls_v1.0-draft",
                         "nbl_v2.0-approved",
                         "nrsts_v2.0-approved",
-                        "pre_v1.0-approved",
                         "rb_v1.2-approved",
                         "rms_v3.0-approved"
                     ]
@@ -57943,7 +58419,6 @@
                         "ls_v1.0-draft",
                         "nbl_v2.0-approved",
                         "nrsts_v2.0-approved",
-                        "pre_v1.0-approved",
                         "rb_v1.2-approved",
                         "rms_v3.0-approved"
                     ]
@@ -57977,7 +58452,6 @@
                         "ls_v1.0-draft",
                         "nbl_v2.0-approved",
                         "nrsts_v2.0-approved",
-                        "pre_v1.0-approved",
                         "rb_v1.2-approved",
                         "rms_v3.0-approved"
                     ]
@@ -61803,7 +62277,8 @@
                     "comments": [],
                     "in_subset": [
                         "ews_v2.0-approved",
-                        "rb_v1.2-approved"
+                        "rb_v1.2-approved",
+                        "pre_v1.0-approved"
                     ]
                 },
                 "Not Evaluated": {
@@ -61811,7 +62286,8 @@
                     "comments": [],
                     "in_subset": [
                         "ews_v2.0-approved",
-                        "rb_v1.2-approved"
+                        "rb_v1.2-approved",
+                        "pre_v1.0-approved"
                     ]
                 },
                 "Present": {
@@ -61819,7 +62295,8 @@
                     "comments": [],
                     "in_subset": [
                         "ews_v2.0-approved",
-                        "rb_v1.2-approved"
+                        "rb_v1.2-approved",
+                        "pre_v1.0-approved"
                     ]
                 },
                 "Unknown": {
@@ -66485,6 +66962,60 @@
                     "comments": [],
                     "in_subset": [
                         "rb_v1.2-approved"
+                    ]
+                }
+            }
+        },
+        "KaposiSarcomaTEnum": {
+            "permissible_values": {
+                "T0": {
+                    "meaning": "ncit:C169110",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "T1": {
+                    "meaning": "ncit:C134976",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                }
+            }
+        },
+        "KaposiSarcomaIEnum": {
+            "permissible_values": {
+                "I0": {
+                    "meaning": "ncit:C134979",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "I1": {
+                    "meaning": "ncit:C134980",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                }
+            }
+        },
+        "KaposiSarcomaSEnum": {
+            "permissible_values": {
+                "S0": {
+                    "meaning": "ncit:C134982",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "S1": {
+                    "meaning": "ncit:C134983",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
                     ]
                 }
             }
