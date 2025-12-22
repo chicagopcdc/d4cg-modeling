@@ -41618,6 +41618,41 @@
                         "pre_v1.0-approved"
                     ]
                 },
+                "AJCC, v8 >> Stage 0": {
+                    "meaning": "ncit:C132248",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "AJCC, v8 >> Stage 1": {
+                    "meaning": "ncit:C132248",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "AJCC, v8 >> Stage 2": {
+                    "meaning": "ncit:C132248",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "AJCC, v8 >> Stage 3": {
+                    "meaning": "ncit:C132248",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "AJCC, v8 >> Stage 4": {
+                    "meaning": "ncit:C132248",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
                 "Ann Arbor >> Stage 1": {
                     "meaning": "ncit:C8071",
                     "comments": [],
@@ -41689,6 +41724,118 @@
                         "pre_v1.0-approved"
                     ]
                 },
+                "Children's Oncology Group Neuroblastoma Risk Group Staging System >> Stage L2": {
+                    "meaning": "ncit:C177632",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "Children's Oncology Group Neuroblastoma Risk Group Staging System >> Stage M": {
+                    "meaning": "ncit:C177632",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "Children's Oncology Group Neuroblastoma Risk Group Staging System >> Stage MS": {
+                    "meaning": "ncit:C177632",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "Children's Oncology Group Renal Cancer Staging System >> Stage 1": {
+                    "meaning": "ncit:C177632",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "Children's Oncology Group Renal Cancer Staging System >> Stage 2": {
+                    "meaning": "ncit:C177632",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "Children's Oncology Group Renal Cancer Staging System >> Stage 3": {
+                    "meaning": "ncit:C177632",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "Children's Oncology Group Renal Cancer Staging System >> Stage 4": {
+                    "meaning": "ncit:C177632",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "Children's Oncology Group Renal Cancer Staging System >> Stage 5": {
+                    "meaning": "ncit:C177632",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "Children's Oncology Group Retinoblastoma Risk Group Staging System >> High Risk": {
+                    "meaning": "ncit:C102401",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "Children's Oncology Group Retinoblastoma Risk Group Staging System >> Intermediate Risk": {
+                    "meaning": "ncit:C102402",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "Children's Oncology Group Retinoblastoma Risk Group Staging System >> Low Risk": {
+                    "meaning": "ncit:C102403",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                }, 
+                "Childrens Oncology Group/National Wilms Tumor Study Group Staging System >> Stage 1": {
+                    "meaning": "ncit:C198025",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "Childrens Oncology Group/National Wilms Tumor Study Group Staging System >> Stage 2": {
+                    "meaning": "ncit:C198025",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "Childrens Oncology Group/National Wilms Tumor Study Group Staging System >> Stage 3": {
+                    "meaning": "ncit:C198025",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "Childrens Oncology Group/National Wilms Tumor Study Group Staging System >> Stage 4": {
+                    "meaning": "ncit:C198025",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "Childrens Oncology Group/National Wilms Tumor Study Group Staging System >> Stage 5": {
+                    "meaning": "ncit:C198025",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
                 "COG >> Stage 1": {
                     "meaning": "ncit:C27966",
                     "comments": [],
@@ -41730,6 +41877,41 @@
                     "comments": [],
                     "in_subset": [
                         "fa_v1.0-draft",
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "Enneking Staging System >> Stage 1a": {
+                    "meaning": "ncit:C146701",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "Enneking Staging System >> Stage 1b": {
+                    "meaning": "ncit:C146702",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "Enneking Staging System >> Stage 2a": {
+                    "meaning": "ncit:C146703",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "Enneking Staging System >> Stage 2b": {
+                    "meaning": "ncit:C146704",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "Enneking Staging System >> Stage 3": {
+                    "meaning": "ncit:C146705",
+                    "comments": [],
+                    "in_subset": [
                         "pre_v1.0-approved"
                     ]
                 },
@@ -41959,6 +42141,115 @@
                         "rb_v1.2-approved"
                     ]
                 },
+                "Intergroup Rhabdomyosarcoma Study Group Clinical Staging and Grouping System >> Group 1": {
+                    "meaning": "C148012",
+                    "comments": [],
+                    "in_subset": [
+                        "fa_v1.0-draft",
+                        "rb_v1.2-approved"
+                    ]
+                },
+                "Intergroup Rhabdomyosarcoma Study Group Clinical Staging and Grouping System >> Group 2": {
+                    "meaning": "C148015",
+                    "comments": [],
+                    "in_subset": [
+                        "fa_v1.0-draft",
+                        "rb_v1.2-approved"
+                    ]
+                },
+                "Intergroup Rhabdomyosarcoma Study Group Clinical Staging and Grouping System >> Stage 3": {
+                    "meaning": "C148019",
+                    "comments": [],
+                    "in_subset": [
+                        "fa_v1.0-draft",
+                        "rb_v1.2-approved"
+                    ]
+                },
+                "Intergroup Rhabdomyosarcoma Study Group Clinical Staging and Grouping System >> Stage 4": {
+                    "meaning": "C148022",
+                    "comments": [],
+                    "in_subset": [
+                        "fa_v1.0-draft",
+                        "rb_v1.2-approved"
+                    ]
+                },
+                "International Society of Pediatric Oncology Staging System >> Stage 1": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "International Society of Pediatric Oncology Staging System >> Stage 2": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "International Society of Pediatric Oncology Staging System >> Stage 3": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "International Society of Pediatric Oncology Staging System >> Stage 4": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "International Society of Pediatric Oncology Staging System >> Stage 5": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "Lugano Stage >> Stage 1": {
+                    "meaning": "ncit:C141180",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "Lugano Stage >> Stage 1E": {
+                    "meaning": "ncit:C141181",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "Lugano Stage >> Stage 2": {
+                    "meaning": "ncit:C141182",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "Lugano Stage >> Stage 2E": {
+                    "meaning": "ncit:C141183",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "Lugano Stage >> Stage 3": {
+                    "meaning": "ncit:C141186",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "Lugano Stage >> Stage 4": {
+                    "meaning": "ncit:C141187",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
                 "Modified Chang Staging >> M+": {
                     "meaning": "",
                     "comments": [],
@@ -42013,6 +42304,34 @@
                     "in_subset": [
                         "cns_v1.2-approved",
                         "fa_v1.0-draft"
+                    ]
+                },
+                "Pediatric Oncology Group Neuroblastoma Staging System >> Stage A": {
+                    "meaning": "ncit:C85424",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "Pediatric Oncology Group Neuroblastoma Staging System >> Stage B": {
+                    "meaning": "ncit:C85425",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "Pediatric Oncology Group Neuroblastoma Staging System >> Stage C": {
+                    "meaning": "ncit:C85426",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "Pediatric Oncology Group Neuroblastoma Staging System >> Stage D": {
+                    "meaning": "ncit:C85427",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
                     ]
                 },
                 "PRETEXT, 1992 >> Group I": {
@@ -42212,6 +42531,34 @@
                     ],
                     "in_subset": [
                         "lt_v1.0-approved",
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "St. Jude Stage >> Stage 1": {
+                    "meaning": "C141218",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "St. Jude Stage >> Stage 2": {
+                    "meaning": "C141219",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "St. Jude Stage >> Stage 3": {
+                    "meaning": "C141220",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "St. Jude Stage >> Stage 4": {
+                    "meaning": "C141221",
+                    "comments": [],
+                    "in_subset": [
                         "pre_v1.0-approved"
                     ]
                 },
@@ -56525,7 +56872,8 @@
                     "meaning": "ncit:C2903",
                     "comments": [],
                     "in_subset": [
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "pre_v1.0-approved"
                     ]
                 },
                 "Bohring-Opitz Syndrome": {
