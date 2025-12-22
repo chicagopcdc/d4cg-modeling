@@ -3401,6 +3401,7 @@
                 "mri_sequence",
                 "site_classification",
                 "classification_status",
+                "assessment_reason",
                 "disease_site",
                 "site_other",
                 "laterality",
@@ -3419,17 +3420,16 @@
                 "med_ratio",
                 "nodular_splenic",
                 "tumor_size",
+                "tumor_number",
                 "invasiveness",
                 "depth",
                 "nodal_pathology",
                 "nodal_clinical",
                 "parameningeal_extension",
-                "assessment_reason",
                 "top_code",
                 "top_code_text",
                 "top_code_system",
                 "top_code_system_version",
-                "tumor_number",
                 "tumor_presentation",
                 "tissue_type",
                 "multiplicity",
@@ -3604,7 +3604,8 @@
                 "classification_status": {
                     "in_subset": [
                         "ews_v2.0-approved",
-                        "rb_v1.2-approved"
+                        "rb_v1.2-approved",
+                        "pre_v1.0-approved"
                     ]
                 },
                 "disease_site": {
@@ -4408,7 +4409,6 @@
                         "ews_v2.0-approved",
                         "fa_v1.0-draft",
                         "os_v2.0-approved",
-                        "pre_v1.0-approved",
                         "rb_v1.2-approved"
                     ]
                 },
@@ -4424,7 +4424,6 @@
                         "npc_v1.0-approved",
                         "nrsts_v2.0-approved",
                         "os_v2.0-approved",
-                        "pre_v1.0-approved",
                         "rb_v1.2-approved",
                         "rms_v3.0-approved"
                     ]
@@ -5229,7 +5228,6 @@
                         "npc_v1.0-approved",
                         "nrsts_v2.0-approved",
                         "os_v2.0-approved",
-                        "pre_v1.0-approved",
                         "rb_v1.2-approved",
                         "rms_v3.0-approved"
                     ]
@@ -5245,7 +5243,6 @@
                         "npc_v1.0-approved",
                         "nrsts_v2.0-approved",
                         "os_v2.0-approved",
-                        "pre_v1.0-approved",
                         "rb_v1.2-approved",
                         "rms_v3.0-approved"
                     ]
@@ -5260,7 +5257,6 @@
                         "npc_v1.0-approved",
                         "nrsts_v2.0-approved",
                         "os_v2.0-approved",
-                        "pre_v1.0-approved",
                         "rb_v1.2-approved",
                         "rms_v3.0-approved"
                     ]
@@ -5289,7 +5285,6 @@
                         "npc_v1.0-approved",
                         "nrsts_v2.0-approved",
                         "os_v2.0-approved",
-                        "pre_v1.0-approved",
                         "rb_v1.2-approved",
                         "rms_v3.0-approved"
                     ]
@@ -5305,7 +5300,6 @@
                         "npc_v1.0-approved",
                         "nrsts_v2.0-approved",
                         "os_v2.0-approved",
-                        "pre_v1.0-approved",
                         "rb_v1.2-approved",
                         "rms_v3.0-approved"
                     ]
@@ -5321,7 +5315,6 @@
                         "npc_v1.0-approved",
                         "nrsts_v2.0-approved",
                         "os_v2.0-approved",
-                        "pre_v1.0-approved",
                         "rb_v1.2-approved",
                         "rms_v3.0-approved"
                     ]
@@ -5345,7 +5338,6 @@
                         "npc_v1.0-approved",
                         "nrsts_v2.0-approved",
                         "os_v2.0-approved",
-                        "pre_v1.0-approved",
                         "rb_v1.2-approved",
                         "rms_v3.0-approved"
                     ]
@@ -5361,7 +5353,6 @@
                         "npc_v1.0-approved",
                         "nrsts_v2.0-approved",
                         "os_v2.0-approved",
-                        "pre_v1.0-approved",
                         "rb_v1.2-approved",
                         "rms_v3.0-approved"
                     ]
@@ -5377,7 +5368,6 @@
                         "npc_v1.0-approved",
                         "nrsts_v2.0-approved",
                         "os_v2.0-approved",
-                        "pre_v1.0-approved",
                         "rb_v1.2-approved",
                         "rms_v3.0-approved"
                     ]
@@ -5393,7 +5383,6 @@
                         "npc_v1.0-approved",
                         "nrsts_v2.0-approved",
                         "os_v2.0-approved",
-                        "pre_v1.0-approved",
                         "rb_v1.2-approved",
                         "rms_v3.0-approved"
                     ]
@@ -50081,6 +50070,15 @@
         },
         "TumorSizeEnum": {
             "permissible_values": {
+                "<0.5 cm": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "ews_v2.0-approved",
+                        "fa_v1.0-draft",
+                        "pre_v1.0-approved"
+                    ]
+                },
                 "0.5-1 cm": {
                     "meaning": "",
                     "comments": [],
@@ -50099,24 +50097,6 @@
                         "pre_v1.0-approved"
                     ]
                 },
-                "<0.5 cm": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "ews_v2.0-approved",
-                        "fa_v1.0-draft",
-                        "pre_v1.0-approved"
-                    ]
-                },
-                "<=3mm": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "fa_v1.0-draft",
-                        "pre_v1.0-approved",
-                        "rb_v1.2-approved"
-                    ]
-                },
                 "<=5 cm": {
                     "meaning": "",
                     "comments": [],
@@ -50125,15 +50105,6 @@
                         "nrsts_v2.0-approved",
                         "pre_v1.0-approved",
                         "rms_v3.0-approved"
-                    ]
-                },
-                ">3mm": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "fa_v1.0-draft",
-                        "pre_v1.0-approved",
-                        "rb_v1.2-approved"
                     ]
                 },
                 ">5 cm": {
@@ -50145,6 +50116,24 @@
                         "nrsts_v2.0-approved",
                         "pre_v1.0-approved",
                         "rms_v3.0-approved"
+                    ]
+                },
+                "<=3mm": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "fa_v1.0-draft",
+                        "pre_v1.0-approved",
+                        "rb_v1.2-approved"
+                    ]
+                },
+                ">3mm": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "fa_v1.0-draft",
+                        "pre_v1.0-approved",
+                        "rb_v1.2-approved"
                     ]
                 },
                 "Unknown": {
@@ -62288,7 +62277,8 @@
                     "comments": [],
                     "in_subset": [
                         "ews_v2.0-approved",
-                        "rb_v1.2-approved"
+                        "rb_v1.2-approved",
+                        "pre_v1.0-approved"
                     ]
                 },
                 "Not Evaluated": {
@@ -62296,7 +62286,8 @@
                     "comments": [],
                     "in_subset": [
                         "ews_v2.0-approved",
-                        "rb_v1.2-approved"
+                        "rb_v1.2-approved",
+                        "pre_v1.0-approved"
                     ]
                 },
                 "Present": {
@@ -62304,7 +62295,8 @@
                     "comments": [],
                     "in_subset": [
                         "ews_v2.0-approved",
-                        "rb_v1.2-approved"
+                        "rb_v1.2-approved",
+                        "pre_v1.0-approved"
                     ]
                 },
                 "Unknown": {
