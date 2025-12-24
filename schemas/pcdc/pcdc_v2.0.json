@@ -24743,6 +24743,13 @@
                         "hl_v2.0-approved"
                     ]
                 },
+                "mL/min": {
+                    "meaning": "ncit:C64777",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
                 "mL/m2": {
                     "meaning": "",
                     "comments": [],
@@ -25029,7 +25036,8 @@
                         "fa_v1.0-draft",
                         "hl_v2.0-approved",
                         "ls_v1.0-draft",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "IU/mL": {
@@ -25051,7 +25059,8 @@
                         "hl_v2.0-approved",
                         "ls_v1.0-draft",
                         "nbl_v2.0-approved",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "count/mm3": {
@@ -25083,7 +25092,15 @@
                         "fa_v1.0-draft",
                         "hl_v2.0-approved",
                         "ls_v1.0-draft",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
+                    ]
+                },
+                "g/L": {
+                    "meaning": "ncit:C42576",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
                     ]
                 },
                 "mg/L": {
@@ -25111,7 +25128,8 @@
                         "ews_v2.0-approved",
                         "fa_v1.0-draft",
                         "hl_v2.0-approved",
-                        "ls_v1.0-draft"
+                        "ls_v1.0-draft",
+                        "os_v2.0-approved"
                     ]
                 },
                 "mmHg": {
@@ -25128,7 +25146,15 @@
                     "in_subset": [
                         "fa_v1.0-draft",
                         "ls_v1.0-draft",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
+                    ]
+                },
+                "umol/L": {
+                    "meaning": "ncit:C48508",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
                     ]
                 },
                 "ng/mL": {
@@ -25142,16 +25168,30 @@
                         "nbl_v2.0-approved"
                     ]
                 },
+                "seconds": {
+                    "meaning": "ncit:C42535",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "IU/L": {
+                    "meaning": "ncit:C67376",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
                 "uIU/mL": {
                     "meaning": "ncit:C67405",
                     "comments": [],
                     "in_subset": [
                         "hl_v2.0-approved",
                         "ls_v1.0-draft",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 }
-            }
         },
         "MedicationCategoryEnum": {
             "permissible_values": {
