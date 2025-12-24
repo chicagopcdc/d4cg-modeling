@@ -359,7 +359,8 @@
                         "nrsts_v2.0-approved",
                         "pre_v1.0-approved",
                         "rb_v1.2-approved",
-                        "rms_v3.0-approved"
+                        "rms_v3.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "race_identification_source": {
@@ -1608,7 +1609,8 @@
                 "hl_v2.0-approved",
                 "ls_v1.0-draft",
                 "npc_v1.0-approved",
-                "pre_v1.0-approved"
+                "pre_v1.0-approved",
+                "os_v2.0-approved"
             ],
             "annotations": {
                 "domain": "testing"
@@ -1624,7 +1626,8 @@
                         "hl_v2.0-approved",
                         "ls_v1.0-draft",
                         "npc_v1.0-approved",
-                        "pre_v1.0-approved"
+                        "pre_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "timings_submitter_id": {
@@ -1637,7 +1640,8 @@
                         "hl_v2.0-approved",
                         "ls_v1.0-draft",
                         "npc_v1.0-approved",
-                        "pre_v1.0-approved"
+                        "pre_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "age_at_measurement": {
@@ -1650,12 +1654,14 @@
                         "hl_v2.0-approved",
                         "ls_v1.0-draft",
                         "npc_v1.0-approved",
-                        "pre_v1.0-approved"
+                        "pre_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "vital_measurement_type": {
                     "in_subset": [
-                        "fa_v1.0-draft"
+                        "fa_v1.0-draft",
+                        "os_v2.0-approved"
                     ]
                 },
                 "anthropometric_measurement_type": {
@@ -1668,7 +1674,8 @@
                         "hl_v2.0-approved",
                         "npc_v1.0-approved",
                         "pre_v1.0-approved",
-                        "ls_v1.0-draft"
+                        "ls_v1.0-draft",
+                        "os_v2.0-approved"
                     ]
                 },
                 "result_text": {
@@ -1681,7 +1688,8 @@
                         "hl_v2.0-approved",
                         "ls_v1.0-draft",
                         "npc_v1.0-approved",
-                        "pre_v1.0-approved"
+                        "pre_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "result_numeric": {
@@ -1694,12 +1702,14 @@
                         "hl_v2.0-approved",
                         "ls_v1.0-draft",
                         "npc_v1.0-approved",
-                        "pre_v1.0-approved"
+                        "pre_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "vital_measurement_result_unit": {
                     "in_subset": [
-                        "fa_v1.0-draft"
+                        "fa_v1.0-draft",
+                        "os_v2.0-approved"
                     ]
                 },
                 "anthropometric_measurement_result_unit": {
@@ -1712,7 +1722,8 @@
                         "hl_v2.0-approved",
                         "npc_v1.0-approved",
                         "pre_v1.0-approved",
-                        "ls_v1.0-draft"
+                        "ls_v1.0-draft",
+                        "os_v2.0-approved"
                     ]
                 },
                 "gestational_age_at_birth_weeks": {
@@ -1757,7 +1768,8 @@
                 "nbl_v2.0-approved",
                 "npc_v1.0-approved",
                 "pre_v1.0-approved",
-                "rb_v1.2-approved"
+                "rb_v1.2-approved",
+                "os_v2.0-approved"
             ],
             "annotations": {
                 "domain": "testing"
@@ -1775,7 +1787,8 @@
                         "nbl_v2.0-approved",
                         "npc_v1.0-approved",
                         "pre_v1.0-approved",
-                        "rb_v1.2-approved"
+                        "rb_v1.2-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "timings_submitter_id": {
@@ -1790,7 +1803,8 @@
                         "nbl_v2.0-approved",
                         "npc_v1.0-approved",
                         "pre_v1.0-approved",
-                        "rb_v1.2-approved"
+                        "rb_v1.2-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "age_at_lab": {
@@ -1805,7 +1819,8 @@
                         "nbl_v2.0-approved",
                         "npc_v1.0-approved",
                         "pre_v1.0-approved",
-                        "rb_v1.2-approved"
+                        "rb_v1.2-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "laboratory_test": {
@@ -1819,7 +1834,8 @@
                         "lt_v1.0-approved",
                         "nbl_v2.0-approved",
                         "npc_v1.0-approved",
-                        "rb_v1.2-approved"
+                        "rb_v1.2-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "laboratory_test_method": {
@@ -1840,7 +1856,8 @@
                         "ls_v1.0-draft",
                         "npc_v1.0-approved",
                         "pre_v1.0-approved",
-                        "rb_v1.2-approved"
+                        "rb_v1.2-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "laboratory_test_specimen_other": {
@@ -1858,7 +1875,8 @@
                         "hl_v2.0-approved",
                         "ls_v1.0-draft",
                         "npc_v1.0-approved",
-                        "rb_v1.2-approved"
+                        "rb_v1.2-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "result_numeric": {
@@ -1871,7 +1889,8 @@
                         "ls_v1.0-draft",
                         "lt_v1.0-approved",
                         "nbl_v2.0-approved",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "laboratory_test_result_unit": {
@@ -1883,7 +1902,8 @@
                         "hl_v2.0-approved",
                         "ls_v1.0-draft",
                         "lt_v1.0-approved",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "traumatic_tap": {
@@ -1905,7 +1925,8 @@
                     "in_subset": [
                         "ews_v2.0-approved",
                         "gct_v2.0-approved",
-                        "hl_v2.0-approved"
+                        "hl_v2.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "threshold_low": {
@@ -7216,7 +7237,7 @@
             }
         },
         "condition_status": {
-            "slot_uri": "ncit:C17726",
+            "slot_uri": "ncit:C213836",
             "range": "YesNoEnum",
             "comments": [],
             "annotations": {
@@ -11306,6 +11327,13 @@
                         "aml_v2.0-approved"
                     ]
                 },
+                "BOCG": {
+                    "meaning": "ncit:C180373",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
                 "CBTN": {
                     "meaning": "ncit:C192778",
                     "comments": [],
@@ -11374,7 +11402,8 @@
                     "meaning": "ncit:C174966",
                     "comments": [],
                     "in_subset": [
-                        "ews_v2.0-approved"
+                        "ews_v2.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "CWS": {
@@ -11425,6 +11454,13 @@
                     "comments": [],
                     "in_subset": [
                         "ls_v1.0-draft"
+                    ]
+                },
+                "COSS-GPOH": {
+                    "meaning": "ncit:C186743",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
                     ]
                 },
                 "DCOG": {
@@ -11532,7 +11568,15 @@
                     "meaning": "ncit:C192786",
                     "comments": [],
                     "in_subset": [
-                        "rb_v1.2-approved"
+                        "rb_v1.2-approved",
+                        "os_v2.0-approved"
+                    ]
+                },
+                "GEIS": {
+                    "meaning": "ncit:C180341",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
                     ]
                 },
                 "GPOH": {
@@ -11542,7 +11586,8 @@
                         "ews_v2.0-approved",
                         "lt_v1.0-approved",
                         "nbl_v2.0-approved",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "IDIPGR": {
@@ -11657,7 +11702,8 @@
                     "comments": [],
                     "in_subset": [
                         "aml_v2.0-approved",
-                        "gct_v2.0-approved"
+                        "gct_v2.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Massachusetts General Hospital": {
@@ -11825,7 +11871,8 @@
                     "meaning": "ncit:C174961",
                     "comments": [],
                     "in_subset": [
-                        "ews_v2.0-approved"
+                        "ews_v2.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "STSC": {
@@ -11889,7 +11936,8 @@
                     "meaning": "ncit:C174967",
                     "comments": [],
                     "in_subset": [
-                        "ews_v2.0-approved"
+                        "ews_v2.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "UK": {
@@ -22620,7 +22668,8 @@
                         "nrsts_v2.0-approved",
                         "pre_v1.0-approved",
                         "rb_v1.2-approved",
-                        "rms_v3.0-approved"
+                        "rms_v3.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Asian": {
@@ -22639,7 +22688,8 @@
                         "nrsts_v2.0-approved",
                         "pre_v1.0-approved",
                         "rb_v1.2-approved",
-                        "rms_v3.0-approved"
+                        "rms_v3.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Black or African American": {
@@ -22658,7 +22708,8 @@
                         "nrsts_v2.0-approved",
                         "pre_v1.0-approved",
                         "rb_v1.2-approved",
-                        "rms_v3.0-approved"
+                        "rms_v3.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Multiracial": {
@@ -22677,7 +22728,8 @@
                         "nrsts_v2.0-approved",
                         "pre_v1.0-approved",
                         "rb_v1.2-approved",
-                        "rms_v3.0-approved"
+                        "rms_v3.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Native Hawaiian or Other Pacific Islander": {
@@ -22696,7 +22748,8 @@
                         "nrsts_v2.0-approved",
                         "pre_v1.0-approved",
                         "rb_v1.2-approved",
-                        "rms_v3.0-approved"
+                        "rms_v3.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "White": {
@@ -22715,7 +22768,8 @@
                         "nrsts_v2.0-approved",
                         "pre_v1.0-approved",
                         "rb_v1.2-approved",
-                        "rms_v3.0-approved"
+                        "rms_v3.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Other": {
@@ -22748,7 +22802,8 @@
                         "npc_v1.0-approved",
                         "nrsts_v2.0-approved",
                         "rb_v1.2-approved",
-                        "rms_v3.0-approved"
+                        "rms_v3.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Not Reported": {
@@ -22765,7 +22820,8 @@
                         "nrsts_v2.0-approved",
                         "pre_v1.0-approved",
                         "rb_v1.2-approved",
-                        "rms_v3.0-approved"
+                        "rms_v3.0-approved",
+                        "os_v2.0-approved"
                     ]
                 }
             }
@@ -22788,7 +22844,8 @@
                         "nrsts_v2.0-approved",
                         "pre_v1.0-approved",
                         "rb_v1.2-approved",
-                        "rms_v3.0-approved"
+                        "rms_v3.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Not Hispanic or Latino": {
@@ -22807,7 +22864,8 @@
                         "nrsts_v2.0-approved",
                         "pre_v1.0-approved",
                         "rb_v1.2-approved",
-                        "rms_v3.0-approved"
+                        "rms_v3.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Unknown": {
@@ -22824,7 +22882,8 @@
                         "npc_v1.0-approved",
                         "nrsts_v2.0-approved",
                         "rb_v1.2-approved",
-                        "rms_v3.0-approved"
+                        "rms_v3.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Not Reported": {
@@ -22841,7 +22900,8 @@
                         "nrsts_v2.0-approved",
                         "pre_v1.0-approved",
                         "rb_v1.2-approved",
-                        "rms_v3.0-approved"
+                        "rms_v3.0-approved",
+                        "os_v2.0-approved"
                     ]
                 }
             }
@@ -23015,6 +23075,13 @@
         },
         "CourseEnum": {
             "permissible_values": {
+                "Adjuvant": {
+                    "meaning": "ncit:C15679",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
                 "Chemoimmunotherapy": {
                     "meaning": "ncit:C94251",
                     "comments": [],
@@ -23029,6 +23096,13 @@
                     ],
                     "in_subset": [
                         "cns_v1.2-approved"
+                    ]
+                },
+                "Chemotherapy Alone": {
+                    "meaning": "ncit:C15632",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
                     ]
                 },
                 "Chemotherapy Window": {
@@ -23069,7 +23143,6 @@
                         "ews_v2.0-approved",
                         "npc_v1.0-approved",
                         "nrsts_v2.0-approved",
-                        "os_v2.0-approved",
                         "rb_v1.2-approved",
                         "rms_v3.0-approved"
                     ]
@@ -23093,7 +23166,6 @@
                         "ews_v2.0-approved",
                         "npc_v1.0-approved",
                         "nrsts_v2.0-approved",
-                        "os_v2.0-approved",
                         "rb_v1.2-approved",
                         "rms_v3.0-approved"
                     ]
@@ -23130,6 +23202,13 @@
                         "nrsts_v2.0-approved",
                         "os_v2.0-approved",
                         "rms_v3.0-approved"
+                    ]
+                },
+                "Neo-Adjuvant": {
+                    "meaning": "ncit:C158708",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
                     ]
                 },
                 "Palliative Treatment": {
@@ -23649,7 +23728,8 @@
                         "ls_v1.0-draft",
                         "npc_v1.0-approved",
                         "rb_v1.2-approved",
-                        "pre_v1.0-approved"
+                        "pre_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Other": {
@@ -24332,7 +24412,8 @@
                         "hl_v2.0-approved",
                         "ls_v1.0-draft",
                         "npc_v1.0-approved",
-                        "pre_v1.0-approved"
+                        "pre_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "kg": {
@@ -24347,7 +24428,8 @@
                         "hl_v2.0-approved",
                         "ls_v1.0-draft",
                         "npc_v1.0-approved",
-                        "pre_v1.0-approved"
+                        "pre_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "kg/m2": {
@@ -24398,8 +24480,7 @@
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
-                        "fa_v1.0-draft",
-                        "os_v2.0-approved"
+                        "fa_v1.0-draft"
                     ]
                 },
                 "mmHg": {
@@ -25204,7 +25285,8 @@
                     "comments": [],
                     "in_subset": [
                         "ls_v1.0-draft",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "ALT": {
@@ -25215,7 +25297,8 @@
                     "in_subset": [
                         "fa_v1.0-draft",
                         "ls_v1.0-draft",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "ANA": {
@@ -25229,7 +25312,8 @@
                     "meaning": "ncit:C63321",
                     "comments": [],
                     "in_subset": [
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "AQP4 Ab": {
@@ -25247,7 +25331,8 @@
                     "in_subset": [
                         "fa_v1.0-draft",
                         "ls_v1.0-draft",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Absolute B Lymphocyte Count": {
@@ -25308,7 +25393,8 @@
                     "in_subset": [
                         "hl_v2.0-approved",
                         "ls_v1.0-draft",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Alkaline Phophatase": {
@@ -25351,6 +25437,13 @@
                     ],
                     "in_subset": [
                         "fa_v1.0-draft"
+                    ]
+                },
+                "beta-hCG": {
+                    "meaning": "ncit:C64851",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
                     ]
                 },
                 "Blast Count": {
@@ -25418,7 +25511,8 @@
                     "comments": [],
                     "in_subset": [
                         "fa_v1.0-draft",
-                        "hl_v2.0-approved"
+                        "hl_v2.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "CSF Luekocyte Count": {
@@ -25444,7 +25538,8 @@
                     "comments": [],
                     "in_subset": [
                         "ls_v1.0-draft",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Cellularity": {
@@ -25459,7 +25554,8 @@
                     "comments": [],
                     "in_subset": [
                         "ls_v1.0-draft",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Chromosome Breakage, DEB": {
@@ -25505,7 +25601,8 @@
                     "in_subset": [
                         "fa_v1.0-draft",
                         "ls_v1.0-draft",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Creatinine Clearance": {
@@ -25513,7 +25610,8 @@
                     "comments": [],
                     "in_subset": [
                         "ls_v1.0-draft",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Cytology Malignant Cells": {
@@ -25528,7 +25626,8 @@
                     "comments": [],
                     "in_subset": [
                         "ls_v1.0-draft",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Dysplasia": {
@@ -25581,7 +25680,8 @@
                     "in_subset": [
                         "ews_v2.0-approved",
                         "fa_v1.0-draft",
-                        "hl_v2.0-approved"
+                        "hl_v2.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Eosinophils": {
@@ -25622,7 +25722,8 @@
                     "meaning": "ncit:C74787",
                     "comments": [],
                     "in_subset": [
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Free T4": {
@@ -25630,14 +25731,16 @@
                     "comments": [],
                     "in_subset": [
                         "hl_v2.0-approved",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "GGT": {
                     "meaning": "ncit:C64847",
                     "comments": [],
                     "in_subset": [
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Glucose": {
@@ -25648,7 +25751,8 @@
                     "in_subset": [
                         "fa_v1.0-draft",
                         "ls_v1.0-draft",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Granulomas": {
@@ -25662,7 +25766,8 @@
                     "meaning": "ncit:C64796",
                     "comments": [],
                     "in_subset": [
-                        "ls_v1.0-draft"
+                        "ls_v1.0-draft",
+                        "os_v2.0-approved"
                     ]
                 },
                 "HIV-1 Ab": {
@@ -25691,7 +25796,8 @@
                         "fa_v1.0-draft",
                         "hl_v2.0-approved",
                         "ls_v1.0-draft",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Hemoglobin A1C Measurement": {
@@ -25794,6 +25900,13 @@
                         "fa_v1.0-draft"
                     ]
                 },
+                "INR": {
+                    "meaning": "ncit:C64805",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
                 "JCV": {
                     "meaning": "ncit:C199960",
                     "comments": [],
@@ -25817,7 +25930,8 @@
                         "ews_v2.0-approved",
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
-                        "nbl_v2.0-approved"
+                        "nbl_v2.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "LDL": {
@@ -25845,12 +25959,20 @@
                         "fa_v1.0-draft"
                     ]
                 },
+                "Lipase": {
+                    "meaning": "ncit:C117748",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
                 "Lymphocytes": {
                     "meaning": "ncit:C12535",
                     "comments": [],
                     "in_subset": [
                         "hl_v2.0-approved",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Lymphoid Aggregates": {
@@ -25997,21 +26119,14 @@
                         "fa_v1.0-draft"
                     ]
                 },
-                "Neutrophil Count": {
-                    "meaning": "ncit:C51950",
-                    "comments": [
-                        "(fa_v1.0-draft) ConsortiumNote: CBC"
-                    ],
-                    "in_subset": [
-                        "fa_v1.0-draft"
-                    ]
-                },
                 "Neutrophils": {
                     "meaning": "ncit:C51950",
                     "comments": [],
                     "in_subset": [
                         "hl_v2.0-approved",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved",
+                        "fa_v1.0-draft"
                     ]
                 },
                 "Oligoclonal Bands": {
@@ -26066,7 +26181,8 @@
                         "hl_v2.0-approved",
                         "ls_v1.0-draft",
                         "lt_v1.0-approved",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Potassium": {
@@ -26074,7 +26190,8 @@
                     "comments": [],
                     "in_subset": [
                         "ls_v1.0-draft",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Progesterone Receptor Test": {
@@ -26098,7 +26215,23 @@
                     "comments": [],
                     "in_subset": [
                         "hl_v2.0-approved",
-                        "ls_v1.0-draft"
+                        "ls_v1.0-draft",
+                        "os_v2.0-approved",
+                        "fa_v1.0-draft"
+                    ]
+                },
+                "Prothrombin Time": {
+                    "meaning": "ncit:C62656",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "Partial Thromboplastin Time": {
+                    "meaning": "ncit:C178140",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
                     ]
                 },
                 "RBC": {
@@ -26172,7 +26305,8 @@
                     "in_subset": [
                         "fa_v1.0-draft",
                         "ls_v1.0-draft",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "TSH": {
@@ -26180,7 +26314,8 @@
                     "comments": [],
                     "in_subset": [
                         "hl_v2.0-approved",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Total Bilirubin": {
@@ -26191,22 +26326,14 @@
                     "in_subset": [
                         "fa_v1.0-draft",
                         "ls_v1.0-draft",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Total Cholesterol": {
                     "meaning": "ncit:C61032",
                     "comments": [
                         "(fa_v1.0-draft) ConsortiumNote: Lipid Testing"
-                    ],
-                    "in_subset": [
-                        "fa_v1.0-draft"
-                    ]
-                },
-                "Total Protein": {
-                    "meaning": "ncit:C64858",
-                    "comments": [
-                        "(fa_v1.0-draft) ConsortiumNote: CSF Studies"
                     ],
                     "in_subset": [
                         "fa_v1.0-draft"
@@ -26232,7 +26359,8 @@
                     "meaning": "ncit:C62652",
                     "comments": [],
                     "in_subset": [
-                        "hl_v2.0-approved"
+                        "hl_v2.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Urine Cytology": {
@@ -26256,7 +26384,8 @@
                         "aml_v2.0-approved",
                         "hl_v2.0-approved",
                         "ls_v1.0-draft",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "cfDNA": {
@@ -58374,7 +58503,8 @@
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
                         "lt_v1.0-approved",
-                        "rb_v1.2-approved"
+                        "rb_v1.2-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Not Reported": {
@@ -58384,7 +58514,8 @@
                         "aml_v2.0-approved",
                         "hl_v2.0-approved",
                         "lt_v1.0-approved",
-                        "rb_v1.2-approved"
+                        "rb_v1.2-approved",
+                        "os_v2.0-approved"
                     ]
                 }
             }
@@ -67165,6 +67296,13 @@
                 },
                 "Randomized": {
                     "meaning": "ncit:C25196",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "Unknown": {
+                    "meaning": "ncit:C17998",
                     "comments": [],
                     "in_subset": [
                         "os_v2.0-approved"
