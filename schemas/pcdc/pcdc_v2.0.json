@@ -2037,7 +2037,8 @@
                 "nrsts_v2.0-approved",
                 "pre_v1.0-approved",
                 "rb_v1.2-approved",
-                "rms_v3.0-approved"
+                "rms_v3.0-approved",
+                "os_v2.0-approved"
             ],
             "annotations": {
                 "domain": "testing"
@@ -2055,7 +2056,8 @@
                         "nrsts_v2.0-approved",
                         "pre_v1.0-approved",
                         "rb_v1.2-approved",
-                        "rms_v3.0-approved"
+                        "rms_v3.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "timings_submitter_id": {
@@ -2070,7 +2072,8 @@
                         "nrsts_v2.0-approved",
                         "pre_v1.0-approved",
                         "rb_v1.2-approved",
-                        "rms_v3.0-approved"
+                        "rms_v3.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "age_at_genetic_analysis": {
@@ -2085,7 +2088,8 @@
                         "nrsts_v2.0-approved",
                         "pre_v1.0-approved",
                         "rb_v1.2-approved",
-                        "rms_v3.0-approved"
+                        "rms_v3.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "year_at_genetic_analysis": {
@@ -2126,7 +2130,8 @@
                         "ews_v2.0-approved",
                         "fa_v1.0-draft",
                         "gct_v2.0-approved",
-                        "pre_v1.0-approved"
+                        "pre_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "genetic_analysis_specimen": {
@@ -2643,7 +2648,8 @@
             "in_subset": [
                 "fa_v1.0-draft",
                 "hl_v2.0-approved",
-                "npc_v1.0-approved"
+                "npc_v1.0-approved",
+                "os_v2.0-approved"
             ],
             "annotations": {
                 "domain": "testing"
@@ -2653,54 +2659,62 @@
                     "in_subset": [
                         "fa_v1.0-draft",
                         "hl_v2.0-approved",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "timings_submitter_id": {
                     "in_subset": [
                         "fa_v1.0-draft",
                         "hl_v2.0-approved",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "age_at_function_test": {
                     "in_subset": [
                         "fa_v1.0-draft",
                         "hl_v2.0-approved",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "function_test": {
                     "in_subset": [
                         "fa_v1.0-draft",
                         "hl_v2.0-approved",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "functional_measurement_type": {
                     "in_subset": [
-                        "hl_v2.0-approved"
+                        "hl_v2.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "result_text": {
                     "in_subset": [
                         "fa_v1.0-draft",
                         "hl_v2.0-approved",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "result_numeric": {
                     "in_subset": [
                         "fa_v1.0-draft",
                         "hl_v2.0-approved",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "functional_measurement_result_unit": {
                     "in_subset": [
                         "fa_v1.0-draft",
                         "hl_v2.0-approved",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "laterality": {
@@ -3585,7 +3599,8 @@
                     "in_subset": [
                         "gct_v2.0-approved",
                         "ls_v1.0-draft",
-                        "nbl_v2.0-approved"
+                        "nbl_v2.0-approved",
+                        "pre_v1.0-approved"
                     ]
                 },
                 "detection_method": {
@@ -3624,8 +3639,7 @@
                 "classification_status": {
                     "in_subset": [
                         "ews_v2.0-approved",
-                        "rb_v1.2-approved",
-                        "pre_v1.0-approved"
+                        "rb_v1.2-approved"
                     ]
                 },
                 "disease_site": {
@@ -4967,19 +4981,16 @@
                 "subjects_submitter_id",
                 "timings_submitter_id",
                 "age_at_modification",
+                "modification_required",
                 "modification",
-                "modification_other",
                 "modification_basis",
+                "modification_numeric",
                 "reason",
-                "reason_other",
                 "toxicity_detail",
-                "toxicity_detail_other",
                 "toxicity_immune",
                 "toxicity_infusion",
                 "original_agent",
-                "original_agent_other",
-                "sub_agent",
-                "sub_agent_other"
+                "sub_agent"
             ],
             "comments": [
                 "D4CGNote: One observation/row per MODIFICATION when instantiated."
@@ -5014,6 +5025,11 @@
                         "pre_v1.0-approved"
                     ]
                 },
+                "modification_required": {
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
                 "modification": {
                     "in_subset": [
                         "hl_v2.0-approved",
@@ -5021,15 +5037,14 @@
                         "pre_v1.0-approved"
                     ]
                 },
-                "modification_other": {
-                    "in_subset": [
-                        "pre_v1.0-approved"
-                    ]
-                },
                 "modification_basis": {
                     "in_subset": [
                         "hl_v2.0-approved",
-                        "npc_v1.0-approved",
+                        "npc_v1.0-approved"
+                    ]
+                },
+                "modification_numeric": {
+                    "in_subset": [
                         "pre_v1.0-approved"
                     ]
                 },
@@ -5040,55 +5055,30 @@
                         "pre_v1.0-approved"
                     ]
                 },
-                "reason_other": {
-                    "in_subset": [
-                        "pre_v1.0-approved"
-                    ]
-                },
                 "toxicity_detail": {
                     "in_subset": [
-                        "hl_v2.0-approved",
-                        "pre_v1.0-approved"
-                    ]
-                },
-                "toxicity_detail_other": {
-                    "in_subset": [
-                        "pre_v1.0-approved"
+                        "hl_v2.0-approved"
                     ]
                 },
                 "toxicity_immune": {
                     "in_subset": [
-                        "hl_v2.0-approved",
-                        "pre_v1.0-approved"
+                        "hl_v2.0-approved"
                     ]
                 },
                 "toxicity_infusion": {
                     "in_subset": [
-                        "hl_v2.0-approved",
-                        "pre_v1.0-approved"
+                        "hl_v2.0-approved"
                     ]
                 },
                 "original_agent": {
                     "in_subset": [
                         "hl_v2.0-approved",
-                        "npc_v1.0-approved",
-                        "pre_v1.0-approved"
-                    ]
-                },
-                "original_agent_other": {
-                    "in_subset": [
-                        "pre_v1.0-approved"
+                        "npc_v1.0-approved"
                     ]
                 },
                 "sub_agent": {
                     "in_subset": [
-                        "hl_v2.0-approved",
-                        "pre_v1.0-approved"
-                    ]
-                },
-                "sub_agent_other": {
-                    "in_subset": [
-                        "pre_v1.0-approved"
+                        "hl_v2.0-approved"
                     ]
                 }
             }
@@ -6216,7 +6206,8 @@
                 "ae_outcome",
                 "hospitalization",
                 "hospitalization_reason",
-                "hospitalization_reason_other"
+                "hospitalization_reason_other",
+                "tox_high_grade_events"
             ],
             "comments": [],
             "in_subset": [
@@ -6226,7 +6217,8 @@
                 "hl_v2.0-approved",
                 "lt_v1.0-approved",
                 "npc_v1.0-approved",
-                "rb_v1.2-approved"
+                "rb_v1.2-approved",
+                "pre_v1.0-approved"
             ],
             "annotations": {
                 "domain": "monitoring"
@@ -6240,7 +6232,8 @@
                         "hl_v2.0-approved",
                         "lt_v1.0-approved",
                         "npc_v1.0-approved",
-                        "rb_v1.2-approved"
+                        "rb_v1.2-approved",
+                        "pre_v1.0-approved"
                     ]
                 },
                 "timings_submitter_id": {
@@ -6251,7 +6244,8 @@
                         "hl_v2.0-approved",
                         "lt_v1.0-approved",
                         "npc_v1.0-approved",
-                        "rb_v1.2-approved"
+                        "rb_v1.2-approved",
+                        "pre_v1.0-approved"
                     ]
                 },
                 "age_at_ae": {
@@ -6262,7 +6256,8 @@
                         "hl_v2.0-approved",
                         "lt_v1.0-approved",
                         "npc_v1.0-approved",
-                        "rb_v1.2-approved"
+                        "rb_v1.2-approved",
+                        "pre_v1.0-approved"
                     ]
                 },
                 "age_at_ae_resolved": {
@@ -6271,7 +6266,8 @@
                         "ews_v2.0-approved",
                         "hl_v2.0-approved",
                         "npc_v1.0-approved",
-                        "rb_v1.2-approved"
+                        "rb_v1.2-approved",
+                        "pre_v1.0-approved"
                     ]
                 },
                 "adverse_event": {
@@ -6281,7 +6277,8 @@
                         "hl_v2.0-approved",
                         "lt_v1.0-approved",
                         "npc_v1.0-approved",
-                        "rb_v1.2-approved"
+                        "rb_v1.2-approved",
+                        "pre_v1.0-approved"
                     ]
                 },
                 "ae_site": {
@@ -6462,6 +6459,11 @@
                 "hospitalization_reason_other": {
                     "in_subset": [
                         "rb_v1.2-approved"
+                    ]
+                },
+                "tox_high_grade_events": {
+                    "in_subset": [
+                        "pre_v1.0-approved"
                     ]
                 }
             }
@@ -8609,6 +8611,12 @@
                 "tier_priority": "all_groups"
             }
         },
+        "modification_required": {
+            "slot_uri": "",
+            "range": "YesNoEnum",
+            "comments": [],
+            "annotations": {}
+        },
         "modification": {
             "slot_uri": "ncit:C185632",
             "range": "ModificationEnum",
@@ -8623,6 +8631,14 @@
             "comments": [],
             "annotations": {
                 "tier_optional": "npc_v1.0-approved"
+            }
+        },
+        "modification_numeric": {
+            "slot_uri": "",
+            "range": "integer",
+            "comments": [],
+            "annotations": {
+                "tier_optional": "pre_v1.0-approved"
             }
         },
         "reason": {
@@ -9407,36 +9423,6 @@
             "comments": [],
             "annotations": {}
         },
-        "modification_other": {
-            "slot_uri": "",
-            "range": "string",
-            "comments": [],
-            "annotations": {}
-        },
-        "reason_other": {
-            "slot_uri": "",
-            "range": "string",
-            "comments": [],
-            "annotations": {}
-        },
-        "toxicity_detail_other": {
-            "slot_uri": "",
-            "range": "string",
-            "comments": [],
-            "annotations": {}
-        },
-        "original_agent_other": {
-            "slot_uri": "",
-            "range": "string",
-            "comments": [],
-            "annotations": {}
-        },
-        "sub_agent_other": {
-            "slot_uri": "",
-            "range": "string",
-            "comments": [],
-            "annotations": {}
-        },
         "nephron_sparing_partial_nephrectomy": {
             "slot_uri": "",
             "range": "YesNoEnum",
@@ -9646,7 +9632,7 @@
         },
         "classification_status": {
             "slot_uri": "",
-            "range": "ClassificationStatusEnum",
+            "range": "AbsentPresentEnum",
             "comments": [],
             "annotations": {
                 "tier_priority": "rb_v1.2-approved"
@@ -11054,6 +11040,14 @@
                 "tier_priority": "rb_v1.2-approved"
             }
         },
+        "tox_high_grade_events": {
+            "slot_uri": "",
+            "range": "integer",
+            "comments": [],
+            "annotations": {
+                "tier_optional": "pre_v1.0-approved"
+            }
+        },
         "anaplasia": {
             "slot_uri": "",
             "range": "AbsentPresentEnum",
@@ -11170,7 +11164,10 @@
                         "lt_v1.0-approved",
                         "nbl_v2.0-approved",
                         "npc_v1.0-approved",
-                        "rms_v3.0-approved"
+                        "rms_v3.0-approved",
+                        "ews_v2.0-approved",
+                        "rb_v1.2-approved",
+                        "pre_v1.0-approved"
                     ]
                 },
                 "Not Evaluated": {
@@ -11178,7 +11175,10 @@
                     "comments": [],
                     "in_subset": [
                         "gct_v2.0-approved",
-                        "nbl_v2.0-approved"
+                        "nbl_v2.0-approved",
+                        "ews_v2.0-approved",
+                        "rb_v1.2-approved",
+                        "pre_v1.0-approved"
                     ]
                 },
                 "Present": {
@@ -11191,7 +11191,10 @@
                         "lt_v1.0-approved",
                         "nbl_v2.0-approved",
                         "npc_v1.0-approved",
-                        "rms_v3.0-approved"
+                        "rms_v3.0-approved",
+                        "ews_v2.0-approved",
+                        "rb_v1.2-approved",
+                        "pre_v1.0-approved"
                     ]
                 },
                 "Unknown": {
@@ -11200,14 +11203,20 @@
                     "in_subset": [
                         "fa_v1.0-draft",
                         "lt_v1.0-approved",
-                        "rms_v3.0-approved"
+                        "rms_v3.0-approved",
+                        "ews_v2.0-approved",
+                        "rb_v1.2-approved",
+                        "pre_v1.0-approved"
                     ]
                 },
                 "Not Reported": {
                     "meaning": "ncit:C43234",
                     "comments": [],
                     "in_subset": [
-                        "lt_v1.0-approved"
+                        "lt_v1.0-approved",
+                        "ews_v2.0-approved",
+                        "rb_v1.2-approved",
+                        "pre_v1.0-approved"
                     ]
                 }
             }
@@ -24527,7 +24536,8 @@
                     "in_subset": [
                         "fa_v1.0-draft",
                         "hl_v2.0-approved",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "FEF at 25-75%": {
@@ -24617,7 +24627,8 @@
                     "in_subset": [
                         "fa_v1.0-draft",
                         "hl_v2.0-approved",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Snellen Chart": {
@@ -24674,7 +24685,8 @@
                     "comments": [],
                     "in_subset": [
                         "hl_v2.0-approved",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "L": {
@@ -25261,7 +25273,8 @@
                     "meaning": "ncit:C16525",
                     "comments": [],
                     "in_subset": [
-                        "hl_v2.0-approved"
+                        "hl_v2.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Intraocular Pressure": {
@@ -25269,6 +25282,13 @@
                     "comments": [],
                     "in_subset": [
                         "rb_v1.2-approved"
+                    ]
+                },
+                "MUGA Scan": {
+                    "meaning": "ncit:C38073",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
                     ]
                 },
                 "Pulmonary Function Test": {
@@ -26953,7 +26973,8 @@
                         "cns_v1.2-approved",
                         "ews_v2.0-approved",
                         "fa_v1.0-draft",
-                        "pre_v1.0-approved"
+                        "pre_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Cytogenetics, Karyotyping": {
@@ -26990,7 +27011,8 @@
                     "in_subset": [
                         "ews_v2.0-approved",
                         "gct_v2.0-approved",
-                        "pre_v1.0-approved"
+                        "pre_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "DNA Methylation, Array": {
@@ -27022,7 +27044,8 @@
                     "comments": [],
                     "in_subset": [
                         "ews_v2.0-approved",
-                        "pre_v1.0-approved"
+                        "pre_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "PCR, MLPA": {
@@ -27036,7 +27059,8 @@
                     "meaning": "ncit:C17003",
                     "comments": [],
                     "in_subset": [
-                        "ews_v2.0-approved"
+                        "ews_v2.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "PCR, RT-PCR": {
@@ -27077,7 +27101,8 @@
                         "ews_v2.0-approved",
                         "fa_v1.0-draft",
                         "pre_v1.0-approved",
-                        "rb_v1.0"
+                        "rb_v1.0",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Sequencing, NGS, RNA-seq": {
@@ -31932,7 +31957,6 @@
                         "ews_v2.0-approved",
                         "ls_v1.0-draft",
                         "npc_v1.0-approved",
-                        "os_v2.0-approved",
                         "pre_v1.0-approved",
                         "rb_v1.2-approved"
                     ]
@@ -32004,7 +32028,6 @@
                         "gct_v2.0-approved",
                         "ls_v1.0-draft",
                         "npc_v1.0-approved",
-                        "os_v2.0-approved",
                         "pre_v1.0-approved",
                         "rms_v3.0-approved"
                     ]
@@ -41094,7 +41117,8 @@
                     "meaning": "ncit:C17649",
                     "comments": [],
                     "in_subset": [
-                        "gct_v2.0-approved"
+                        "gct_v2.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Unknown": {
@@ -41103,7 +41127,8 @@
                     "in_subset": [
                         "ews_v2.0-approved",
                         "gct_v2.0-approved",
-                        "rms_v3.0-approved"
+                        "rms_v3.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Not Reported": {
@@ -43222,14 +43247,6 @@
                         "rb_v1.2-approved"
                     ]
                 },
-                "CT": {
-                    "meaning": "ncit:C17204",
-                    "comments": [],
-                    "in_subset": [
-                        "hl_v2.0-approved",
-                        "ls_v1.0-draft"
-                    ]
-                },
                 "CT Scan": {
                     "meaning": "ncit:C17204",
                     "comments": [],
@@ -43240,7 +43257,9 @@
                         "npc_v1.0-approved",
                         "os_v2.0-approved",
                         "pre_v1.0-approved",
-                        "rb_v1.2-approved"
+                        "rb_v1.2-approved",
+                        "hl_v2.0-approved",
+                        "ls_v1.0-draft"
                     ]
                 },
                 "CTA": {
@@ -53624,8 +53643,7 @@
                     "comments": [],
                     "in_subset": [
                         "hl_v2.0-approved",
-                        "npc_v1.0-approved",
-                        "pre_v1.0-approved"
+                        "npc_v1.0-approved"
                     ]
                 },
                 "Dose Reduction": {
@@ -53642,8 +53660,7 @@
                     "comments": [],
                     "in_subset": [
                         "hl_v2.0-approved",
-                        "npc_v1.0-approved",
-                        "pre_v1.0-approved"
+                        "npc_v1.0-approved"
                     ]
                 },
                 "Not Given": {
@@ -53651,8 +53668,7 @@
                     "comments": [],
                     "in_subset": [
                         "hl_v2.0-approved",
-                        "npc_v1.0-approved",
-                        "pre_v1.0-approved"
+                        "npc_v1.0-approved"
                     ]
                 },
                 "Substitution": {
@@ -53660,8 +53676,7 @@
                     "comments": [],
                     "in_subset": [
                         "hl_v2.0-approved",
-                        "npc_v1.0-approved",
-                        "pre_v1.0-approved"
+                        "npc_v1.0-approved"
                     ]
                 },
                 "Other": {
@@ -53742,8 +53757,7 @@
                     "comments": [],
                     "in_subset": [
                         "hl_v2.0-approved",
-                        "npc_v1.0-approved",
-                        "pre_v1.0-approved"
+                        "npc_v1.0-approved"
                     ]
                 },
                 "Hematologic Toxicity": {
@@ -53751,8 +53765,7 @@
                     "comments": [],
                     "in_subset": [
                         "hl_v2.0-approved",
-                        "npc_v1.0-approved",
-                        "pre_v1.0-approved"
+                        "npc_v1.0-approved"
                     ]
                 },
                 "Non-Hematologic Toxicity": {
@@ -53760,8 +53773,7 @@
                     "comments": [],
                     "in_subset": [
                         "hl_v2.0-approved",
-                        "npc_v1.0-approved",
-                        "pre_v1.0-approved"
+                        "npc_v1.0-approved"
                     ]
                 },
                 "Pre-Existing Organ Dysfunction": {
@@ -53769,8 +53781,7 @@
                     "comments": [],
                     "in_subset": [
                         "hl_v2.0-approved",
-                        "npc_v1.0-approved",
-                        "pre_v1.0-approved"
+                        "npc_v1.0-approved"
                     ]
                 },
                 "Scheduling Issues": {
@@ -53778,8 +53789,7 @@
                     "comments": [],
                     "in_subset": [
                         "hl_v2.0-approved",
-                        "npc_v1.0-approved",
-                        "pre_v1.0-approved"
+                        "npc_v1.0-approved"
                     ]
                 },
                 "Subject Non-Compliance": {
@@ -53787,8 +53797,7 @@
                     "comments": [],
                     "in_subset": [
                         "hl_v2.0-approved",
-                        "npc_v1.0-approved",
-                        "pre_v1.0-approved"
+                        "npc_v1.0-approved"
                     ]
                 },
                 "Surgical Complications": {
@@ -53796,15 +53805,15 @@
                     "comments": [],
                     "in_subset": [
                         "hl_v2.0-approved",
-                        "npc_v1.0-approved",
-                        "pre_v1.0-approved"
+                        "npc_v1.0-approved"
                     ]
                 },
                 "Toxicity, NOS": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "pre_v1.0-approved"
                     ]
                 },
                 "Other": {
@@ -59091,6 +59100,13 @@
                         "npc_v1.0-approved"
                     ]
                 },
+                "Toxicity, NOS": {
+                    "meaning": "ncit:C27990",
+                    "comments": [],
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
                 "Trismus": {
                     "meaning": "ncit:C58404",
                     "comments": [],
@@ -59139,7 +59155,8 @@
                     "in_subset": [
                         "aml_v2.0-approved",
                         "gct_v2.0-approved",
-                        "hl_v2.0-approved"
+                        "hl_v2.0-approved",
+                        "pre_v1.0-approved"
                     ]
                 },
                 "Unknown": {
@@ -59148,7 +59165,8 @@
                     "in_subset": [
                         "aml_v2.0-approved",
                         "gct_v2.0-approved",
-                        "lt_v1.0-approved"
+                        "lt_v1.0-approved",
+                        "pre_v1.0-approved"
                     ]
                 },
                 "Not Reported": {
@@ -59157,7 +59175,8 @@
                     "in_subset": [
                         "aml_v2.0-approved",
                         "gct_v2.0-approved",
-                        "lt_v1.0-approved"
+                        "lt_v1.0-approved",
+                        "pre_v1.0-approved"
                     ]
                 }
             }
@@ -62436,51 +62455,6 @@
                     "in_subset": [
                         "ews_v2.0-approved",
                         "os_v2.0-approved"
-                    ]
-                }
-            }
-        },
-        "ClassificationStatusEnum": {
-            "permissible_values": {
-                "Absent": {
-                    "meaning": "ncit:C48190",
-                    "comments": [],
-                    "in_subset": [
-                        "ews_v2.0-approved",
-                        "rb_v1.2-approved",
-                        "pre_v1.0-approved"
-                    ]
-                },
-                "Not Evaluated": {
-                    "meaning": "ncit:C103424",
-                    "comments": [],
-                    "in_subset": [
-                        "ews_v2.0-approved",
-                        "rb_v1.2-approved",
-                        "pre_v1.0-approved"
-                    ]
-                },
-                "Present": {
-                    "meaning": "ncit:C25626",
-                    "comments": [],
-                    "in_subset": [
-                        "ews_v2.0-approved",
-                        "rb_v1.2-approved",
-                        "pre_v1.0-approved"
-                    ]
-                },
-                "Unknown": {
-                    "meaning": "ncit:C17998",
-                    "comments": [],
-                    "in_subset": [
-                        "rb_v1.2-approved"
-                    ]
-                },
-                "Not Reported": {
-                    "meaning": "ncit:C43234",
-                    "comments": [],
-                    "in_subset": [
-                        "rb_v1.2-approved"
                     ]
                 }
             }
@@ -68977,45 +68951,6 @@
                 },
                 "Same Generation (including siblings and cousins)": {
                     "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "ls_v1.0-draft"
-                    ]
-                },
-                "Unknown": {
-                    "meaning": "ncit:C17998",
-                    "comments": [],
-                    "in_subset": [
-                        "ls_v1.0-draft"
-                    ]
-                },
-                "Not Reported": {
-                    "meaning": "ncit:C43234",
-                    "comments": [],
-                    "in_subset": [
-                        "ls_v1.0-draft"
-                    ]
-                }
-            }
-        },
-        "TumorStateEnum": {
-            "permissible_values": {
-                "Absent": {
-                    "meaning": "ncit:C25567",
-                    "comments": [],
-                    "in_subset": [
-                        "ls_v1.0-draft"
-                    ]
-                },
-                "Not Evaluated": {
-                    "meaning": "ncit:C103424",
-                    "comments": [],
-                    "in_subset": [
-                        "ls_v1.0-draft"
-                    ]
-                },
-                "Present": {
-                    "meaning": "ncit:C25566",
                     "comments": [],
                     "in_subset": [
                         "ls_v1.0-draft"
