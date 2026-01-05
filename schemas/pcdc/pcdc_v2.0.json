@@ -96,8 +96,8 @@
                 "fa_v1.0-draft",
                 "gct_v2.0-approved",
                 "hl_v2.0-approved",
-                "lt_v1.0-approved",
                 "ls_v1.0-draft",
+                "lt_v1.0-approved",
                 "nbl_v2.0-approved",
                 "npc_v1.0-approved",
                 "nrsts_v2.0-approved",
@@ -300,8 +300,8 @@
                         "fa_v1.0-draft",
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
-                        "lt_v1.0-approved",
                         "ls_v1.0-draft",
+                        "lt_v1.0-approved",
                         "nbl_v2.0-approved",
                         "npc_v1.0-approved",
                         "nrsts_v2.0-approved",
@@ -353,6 +353,7 @@
                         "fa_v1.0-draft",
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
+                        "ls_v1.0-draft",
                         "nbl_v2.0-approved",
                         "npc_v1.0-approved",
                         "nrsts_v2.0-approved",
@@ -374,6 +375,7 @@
                         "fa_v1.0-draft",
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
+                        "ls_v1.0-draft",
                         "nbl_v2.0-approved",
                         "npc_v1.0-approved",
                         "nrsts_v2.0-approved",
@@ -394,6 +396,7 @@
                         "aml_v2.0-approved",
                         "cns_v1.2-approved",
                         "fa_v1.0-draft",
+                        "ls_v1.0-draft",
                         "npc_v1.0-approved"
                     ]
                 },
@@ -405,6 +408,7 @@
                         "fa_v1.0-draft",
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
+                        "ls_v1.0-draft",
                         "lt_v1.0-approved",
                         "npc_v1.0-approved",
                         "os_v2.0-approved",
@@ -415,6 +419,7 @@
                     "in_subset": [
                         "fa_v1.0-draft",
                         "gct_v2.0-approved",
+                        "ls_v1.0-draft",
                         "lt_v1.0-approved",
                         "npc_v1.0-approved"
                     ]
@@ -463,6 +468,87 @@
                 }
             }
         },
+        "ExternalReference": {
+            "slots": [
+                "subjects_submitter_id",
+                "external_links",
+                "external_resource_icon_path",
+                "external_resource_id",
+                "external_resource_name",
+                "external_subject_id",
+                "external_subject_submitter_id",
+                "external_subject_url"
+            ],
+            "comments": [
+                "D4CGNote: One observation/row per ___ when instantiated"
+            ],
+            "in_subset": [
+                "aml_v2.0-approved",
+                "ls_v1.0-draft",
+                "nbl_v2.0-approved"
+            ],
+            "annotations": {
+                "domain": "demographics"
+            },
+            "slot_usage": {
+                "subjects_submitter_id": {
+                    "in_subset": [
+                        "aml_v2.0-approved",
+                        "ls_v1.0-draft",
+                        "nbl_v2.0-approved"
+                    ]
+                },
+                "external_links": {
+                    "in_subset": [
+                        "aml_v2.0-approved",
+                        "ls_v1.0-draft",
+                        "nbl_v2.0-approved"
+                    ]
+                },
+                "external_resource_icon_path": {
+                    "in_subset": [
+                        "aml_v2.0-approved",
+                        "ls_v1.0-draft",
+                        "nbl_v2.0-approved"
+                    ]
+                },
+                "external_resource_id": {
+                    "in_subset": [
+                        "aml_v2.0-approved",
+                        "ls_v1.0-draft",
+                        "nbl_v2.0-approved"
+                    ]
+                },
+                "external_resource_name": {
+                    "in_subset": [
+                        "aml_v2.0-approved",
+                        "ls_v1.0-draft",
+                        "nbl_v2.0-approved"
+                    ]
+                },
+                "external_subject_id": {
+                    "in_subset": [
+                        "aml_v2.0-approved",
+                        "ls_v1.0-draft",
+                        "nbl_v2.0-approved"
+                    ]
+                },
+                "external_subject_submitter_id": {
+                    "in_subset": [
+                        "aml_v2.0-approved",
+                        "ls_v1.0-draft",
+                        "nbl_v2.0-approved"
+                    ]
+                },
+                "external_subject_url": {
+                    "in_subset": [
+                        "aml_v2.0-approved",
+                        "ls_v1.0-draft",
+                        "nbl_v2.0-approved"
+                    ]
+                }
+            }
+        },
         "StudyMetadata": {
             "slots": [
                 "submitter_id",
@@ -482,6 +568,7 @@
                 "fa_v1.0-draft",
                 "gct_v2.0-approved",
                 "hl_v2.0-approved",
+                "ls_v1.0-draft",
                 "lt_v1.0-approved",
                 "nbl_v2.0-approved",
                 "npc_v1.0-approved",
@@ -503,6 +590,7 @@
                         "fa_v1.0-draft",
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
+                        "ls_v1.0-draft",
                         "lt_v1.0-approved",
                         "nbl_v2.0-approved",
                         "npc_v1.0-approved",
@@ -521,6 +609,7 @@
                         "fa_v1.0-draft",
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
+                        "ls_v1.0-draft",
                         "lt_v1.0-approved",
                         "nbl_v2.0-approved",
                         "npc_v1.0-approved",
@@ -539,6 +628,7 @@
                         "fa_v1.0-draft",
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
+                        "ls_v1.0-draft",
                         "lt_v1.0-approved",
                         "nbl_v2.0-approved",
                         "npc_v1.0-approved",
@@ -599,6 +689,7 @@
                 "ews_v2.0-approved",
                 "gct_v2.0-approved",
                 "hl_v2.0-approved",
+                "lt_v1.0-approved",
                 "nbl_v2.0-approved",
                 "npc_v1.0-approved",
                 "nrsts_v2.0-approved",
@@ -713,6 +804,7 @@
                 "fa_v1.0-draft",
                 "gct_v2.0-approved",
                 "hl_v2.0-approved",
+                "ls_v1.0-draft",
                 "lt_v1.0-approved",
                 "nbl_v2.0-approved",
                 "npc_v1.0-approved",
@@ -734,6 +826,7 @@
                         "fa_v1.0-draft",
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
+                        "ls_v1.0-draft",
                         "lt_v1.0-approved",
                         "nbl_v2.0-approved",
                         "npc_v1.0-approved",
@@ -752,6 +845,7 @@
                         "fa_v1.0-draft",
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
+                        "ls_v1.0-draft",
                         "lt_v1.0-approved",
                         "nbl_v2.0-approved",
                         "npc_v1.0-approved",
@@ -770,6 +864,7 @@
                         "fa_v1.0-draft",
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
+                        "ls_v1.0-draft",
                         "lt_v1.0-approved",
                         "nbl_v2.0-approved",
                         "npc_v1.0-approved",
@@ -788,6 +883,7 @@
                         "fa_v1.0-draft",
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
+                        "ls_v1.0-draft",
                         "lt_v1.0-approved",
                         "nbl_v2.0-approved",
                         "npc_v1.0-approved",
@@ -806,6 +902,7 @@
                         "fa_v1.0-draft",
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
+                        "ls_v1.0-draft",
                         "lt_v1.0-approved",
                         "nbl_v2.0-approved",
                         "npc_v1.0-approved",
@@ -822,6 +919,7 @@
                         "cns_v1.2-approved",
                         "ews_v2.0-approved",
                         "hl_v2.0-approved",
+                        "ls_v1.0-draft",
                         "lt_v1.0-approved",
                         "npc_v1.0-approved",
                         "nrsts_v2.0-approved",
@@ -843,6 +941,7 @@
                         "fa_v1.0-draft",
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
+                        "ls_v1.0-draft",
                         "lt_v1.0-approved",
                         "nbl_v2.0-approved",
                         "npc_v1.0-approved",
@@ -861,6 +960,7 @@
                         "fa_v1.0-draft",
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
+                        "ls_v1.0-draft",
                         "lt_v1.0-approved",
                         "nbl_v2.0-approved",
                         "npc_v1.0-approved",
@@ -879,6 +979,7 @@
                         "fa_v1.0-draft",
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
+                        "ls_v1.0-draft",
                         "lt_v1.0-approved",
                         "nbl_v2.0-approved",
                         "npc_v1.0-approved",
@@ -896,6 +997,7 @@
                         "ews_v2.0-approved",
                         "fa_v1.0-draft",
                         "hl_v2.0-approved",
+                        "ls_v1.0-draft",
                         "npc_v1.0-approved",
                         "nrsts_v2.0-approved",
                         "os_v2.0-approved",
@@ -932,6 +1034,7 @@
                 "cns_v1.2-approved",
                 "ews_v2.0-approved",
                 "hl_v2.0-approved",
+                "ls_v1.0-draft",
                 "npc_v1.0-approved",
                 "os_v2.0-approved",
                 "rb_v1.2-approved"
@@ -948,6 +1051,7 @@
                         "fa_v1.0-draft",
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
+                        "ls_v1.0-draft",
                         "lt_v1.0-approved",
                         "nbl_v2.0-approved",
                         "npc_v1.0-approved",
@@ -966,6 +1070,7 @@
                         "fa_v1.0-draft",
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
+                        "ls_v1.0-draft",
                         "lt_v1.0-approved",
                         "nbl_v2.0-approved",
                         "npc_v1.0-approved",
