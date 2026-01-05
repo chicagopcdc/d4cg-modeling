@@ -443,7 +443,7 @@
                 },
                 "proband_status": {
                     "in_subset": [
-                        "rb_v1.2-approved"
+                        "ls_v1.0-draft"
                     ]
                 }
             }
@@ -10911,6 +10911,14 @@
             "range": "decimal",
             "comments": [],
             "annotations": {}
+        },
+         "proband_status": {
+            "slot_uri": "",
+            "range": "YesNoEnum",
+            "comments": [],
+            "annotations": {
+                "tier_optional": "ls_v1.0-draft"
+            }
         }
     },
     "enums": {
