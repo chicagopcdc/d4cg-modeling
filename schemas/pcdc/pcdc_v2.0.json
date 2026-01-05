@@ -37,6 +37,9 @@
         "hl_v2.0-approved": {
             "description": "A tabular data dictionary for hl_v2.0-approved can be viewed online at: https://docs.google.com/spreadsheets/d/1H0DqYqYHKqH1KNK13cs14LKW6vpwKvDxzPMlW1tkm4U"
         },
+        "ls_v1.0-draft": {
+            "description": "The LS data dictionary is a consensus data schema built by an international group of Lynch Syndrome experts and maintained by Data for the Common Good (D4CG) at the University of Chicago in collaboration with the Lynch Syndrome Integrative Epidemiology and Genetics Consortium (LINEAGE). It is based on the collective requirements of its contributors."
+        },
         "lt_v1.0-approved": {
             "description": "A tabular data dictionary for lt_v1.0-approved can be viewed online at: https://docs.google.com/spreadsheets/d/1pDNGV4RJpdJBATFhjCyzHfk_ONI2V9CKpkXU24EmpTY"
         },
@@ -94,6 +97,7 @@
                 "gct_v2.0-approved",
                 "hl_v2.0-approved",
                 "lt_v1.0-approved",
+                "ls_v1.0-draft",
                 "nbl_v2.0-approved",
                 "npc_v1.0-approved",
                 "nrsts_v2.0-approved",
@@ -114,6 +118,7 @@
                         "fa_v1.0-draft",
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
+                        "ls_v1.0-draft",
                         "lt_v1.0-approved",
                         "nbl_v2.0-approved",
                         "npc_v1.0-approved",
@@ -132,6 +137,7 @@
                         "fa_v1.0-draft",
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
+                        "ls_v1.0-draft",
                         "lt_v1.0-approved",
                         "nbl_v2.0-approved",
                         "npc_v1.0-approved",
@@ -150,6 +156,7 @@
                         "fa_v1.0-draft",
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
+                        "ls_v1.0-draft",
                         "lt_v1.0-approved",
                         "nbl_v2.0-approved",
                         "npc_v1.0-approved",
@@ -168,6 +175,7 @@
                         "fa_v1.0-draft",
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
+                        "ls_v1.0-draft",
                         "lt_v1.0-approved",
                         "nbl_v2.0-approved",
                         "npc_v1.0-approved",
@@ -213,6 +221,7 @@
                 "fa_v1.0-draft",
                 "gct_v2.0-approved",
                 "hl_v2.0-approved",
+                "ls_v1.0-draft",
                 "lt_v1.0-approved",
                 "nbl_v2.0-approved",
                 "npc_v1.0-approved",
@@ -234,6 +243,7 @@
                         "fa_v1.0-draft",
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
+                        "ls_v1.0-draft",
                         "lt_v1.0-approved",
                         "nbl_v2.0-approved",
                         "npc_v1.0-approved",
@@ -252,6 +262,7 @@
                         "fa_v1.0-draft",
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
+                        "ls_v1.0-draft",
                         "lt_v1.0-approved",
                         "nbl_v2.0-approved",
                         "npc_v1.0-approved",
@@ -270,6 +281,7 @@
                         "fa_v1.0-draft",
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
+                        "ls_v1.0-draft",
                         "lt_v1.0-approved",
                         "nbl_v2.0-approved",
                         "npc_v1.0-approved",
@@ -289,6 +301,7 @@
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
                         "lt_v1.0-approved",
+                        "ls_v1.0-draft",
                         "nbl_v2.0-approved",
                         "npc_v1.0-approved",
                         "nrsts_v2.0-approved",
@@ -315,6 +328,7 @@
                         "fa_v1.0-draft",
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
+                        "ls_v1.0-draft",
                         "lt_v1.0-approved",
                         "nbl_v2.0-approved",
                         "npc_v1.0-approved",
@@ -327,7 +341,8 @@
                 },
                 "gender_identity": {
                     "in_subset": [
-                        "fa_v1.0-draft"
+                        "fa_v1.0-draft",
+                        "ls_v1.0-draft"
                     ]
                 },
                 "race": {
