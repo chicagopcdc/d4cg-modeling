@@ -72,22 +72,7 @@
             "annotations": {},
             "slot_usage": {
                 "submitter_id": {
-                    "in_subset": [
-                        "aml_v2.0-approved",
-                        "cns_v1.2-approved",
-                        "ews_v2.0-approved",
-                        "fa_v1.0-draft",
-                        "gct_v2.0-approved",
-                        "hl_v2.0-approved",
-                        "lt_v1.0-approved",
-                        "nbl_v2.0-approved",
-                        "npc_v1.0-approved",
-                        "nrsts_v2.0-approved",
-                        "os_v2.0-approved",
-                        "pre_v1.0-approved",
-                        "rb_v1.2-approved",
-                        "rms_v3.0-approved"
-                    ]
+                    "in_subset": []
                 }
             }
         },
@@ -215,7 +200,8 @@
                 "efs_censor_status",
                 "age_at_censor_status",
                 "ever_disease_free",
-                "age_at_disease_free"
+                "age_at_disease_free",
+                "proband_status"
             ],
             "comments": [
                 "D4CGNote: One observation/row per instance of a DataContributorPerson being enrolled on a study"
