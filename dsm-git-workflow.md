@@ -23,6 +23,45 @@ git status
 
 git pull --ff-only is safe: it will refuse to run if your local `main` has diverged.
 
+## 0.5) If you accidentally edited main before creating a feature branch
+
+#### Scenario A - `main` is dirty or ahead:
+**How do I know?**
+<pre>git status</pre>
+ 
+If the result includes, *"Changes not staged for commit..."*  and/or  *"Changes to be committed..."*, then you have made uncommitted changes to your local `main`.
+
+To **keep** these changes by moving them onto a new feature branch:
+<pre>
+git switch -c [new-feature-branch]
+git add -p [filename]
+git commit -m "Rescue: uncommitted work accidentally done on main"
+git push -u origin [new-feature-branch]
+</pre>
+
+Restore `main` back to remote:
+<pre>
+git switch main
+git fetch origin
+git reset --hard origin/main
+</pre>
+
+#### Scenario B - A commit was made on `main`
+**How do I know?**
+<pre>git log --oneline origin/main..main</pre>
+
+If this prints any commits then they exist locally on `main` but are not on `origin/main`, then rescue those commits onto a feature branch with:
+<pre>
+git switch -c [feature-branch]
+git push -u origin [feature-branch]
+</pre>
+
+Then restore local main back to remote:
+<pre>
+git switch main
+git fetch origin
+git reset --hard origin/main
+</pre>
 
 ## 1) Create a feature branch
 
