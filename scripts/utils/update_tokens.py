@@ -4,8 +4,8 @@ import pickle
 from google_auth_oauthlib.flow import InstalledAppFlow
 
 AUTH_DIR = "scripts/auth"
-CREDENTIALS_FILE = os.path.join(AUTH_DIR, "credentials-sheets.json")
-TOKEN_PATH = os.path.join(AUTH_DIR, "token-sheets.pickle")
+CREDENTIALS_FILE = os.path.join(AUTH_DIR, "credential.json")
+TOKEN_PATH = os.path.join(AUTH_DIR, "token.pickle")
 
 SCOPES = [
     "https://www.googleapis.com/auth/spreadsheets",
