@@ -79,26 +79,31 @@ def setSubset(schema, level, target, value):
     if level == "class":
         schema["classes"][target]["in_subset"].append(value)
     if level == "slot":
-        schema["slots"][target]["in_subset"].append(value)
-    if level == "enum":
-        enum = target.split("|")[0]
-        schema["enums"][enum]["in_subset"].append(value)
+        source = value.split("|")[0]
+        slot = value.split("|")[1]
+        schema["classes"][target]["slot_usage"][slot]["in_subset"].append(source)
     if level == "value":
         enum = target.split("|")[0]
         pv = target.split("|")[1]
         schema["enums"][enum]["permissible_values"][pv]["in_subset"].append(value)
     
+
+def slotDeclaration(schema, level, target, value):
+    if value not in schema["classes"][target]["slots"]:
+        schema["classes"][target]["slots"].append(value)
+
+
 def slotSubset(schema, level, target, value):
     source = value.split("|")[0]
     slot = value.split("|")[1]
     if slot not in schema["classes"][target]["slot_usage"]:
-        print("Slot not found: " + slot + " ...skipping")
+        schema["classes"][target]["slot_usage"][slot] = {
+            "in_subset": [source]
+        }
     else:
-        if source not in schema["classes"][target]["slot_usage"][slot]:
-            schema["classes"][target]["slot_usage"][slot].append(source)
+        if source not in schema["classes"][target]["slot_usage"][slot]["in_subset"]:
+            schema["classes"][target]["slot_usage"][slot]["in_subset"].append(source)
     
-        
-
 
 def setDomain(schema, level, target, value):
     schema["classes"][target]["annotations"]["domain"] = value
@@ -110,10 +115,7 @@ def newSlot(schema, level, target, value):
             "slot_uri": "",
             "range": "",
             "comments": [],
-            "in_subset": [],
-            "annotations": {
-                "sequence_group": ""
-            }
+            "annotations": {}
         }
     
 
@@ -131,7 +133,6 @@ def setRange(schema, level, target, value):
 def newEnum(schema, level, target, value):
     if value not in schema["enums"]:
         schema["enums"][value] = {
-            "in_subset": [],
             "permissible_values": {}
         }
     else:
@@ -143,10 +144,7 @@ def newValue(schema, level, target, value):
         schema["enums"][target]["permissible_values"][value] = {
             "meaning": "",
             "comments": [],
-            "in_subset": [],
-            "annotations": {
-                "sequence_group": ""
-            }
+            "in_subset": []
         }
 
 
@@ -234,6 +232,7 @@ ACTIONS = {
     "newClass()": newClass,
     "setSlotAttribute()": setSlotAttribute,
     "setSubset()": setSubset,
+    "slotDeclaration()": slotDeclaration,
     "slotSubset()": slotSubset,
     "setDomain()": setDomain,
     "newSlot()": newSlot,
@@ -279,3 +278,5 @@ if __name__ == '__main__':
     updated = openTasks(args.schema, args.task_file)
     with open(args.schema, "w") as file_out:
         file_out.write(json.dumps(updated, indent=4))
+
+

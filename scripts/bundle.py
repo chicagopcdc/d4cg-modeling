@@ -1386,6 +1386,7 @@ contributor_folders_ids = {
     "gct": "1CT1MPgXAAGnRb4zLXv04032rSKU2zHp2",
     "hl": "1ia51Bx5zfC2Ck1oOSSW2DbOLKp85YMHb",
     "lt": "1xr9SlpdQN_ySOEuxjIgNUoRYkbYmdx8i",
+    "ls": "13nBYBAMdZjvr02P6EnvXvtdKwU4XuqXI",
     "nbl": "1AD77bnMOA6_VQFiVqzSyA6oVL5U8zQ-v",
     "npc": "1ftN0k7T9kbTPQEt6zj1ewdmzNbQW6yy_",
     "nrsts": "1JTIdsB3ThHbNEAiHBTVL79a-GfH2hpjw",
