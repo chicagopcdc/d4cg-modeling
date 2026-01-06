@@ -2964,7 +2964,6 @@
                     "in_subset": [
                         "cns_v1.2-approved",
                         "ews_v2.0-approved",
-                        "ls_v1.0-draft",
                         "lt_v1.0-approved"
                     ]
                 },
