@@ -7883,7 +7883,7 @@
             "range": "string",
             "comments": [],
             "annotations": {
-                "tier_optional": "rms_v2.0-live"
+                "tier_optional": "rms_v3.0-approved"
             }
         },
         "biospecimen_media": {
@@ -7891,7 +7891,7 @@
             "range": "string",
             "comments": [],
             "annotations": {
-                "tier_optional": "rms_v2.0-live"
+                "tier_optional": "rms_v3.0-approved"
             }
         },
         "biospecimen_type": {
@@ -7899,7 +7899,7 @@
             "range": "string",
             "comments": [],
             "annotations": {
-                "tier_optional": "rms_v2.0-live"
+                "tier_optional": "rms_v3.0-approved"
             }
         },
         "current_qty_unit": {
@@ -7907,7 +7907,7 @@
             "range": "string",
             "comments": [],
             "annotations": {
-                "tier_optional": "rms_v2.0-live"
+                "tier_optional": "rms_v3.0-approved"
             }
         },
         "current_qty_value": {
@@ -7915,7 +7915,7 @@
             "range": "string",
             "comments": [],
             "annotations": {
-                "tier_optional": "rms_v2.0-live"
+                "tier_optional": "rms_v3.0-approved"
             }
         },
         "age_at_function_test": {
