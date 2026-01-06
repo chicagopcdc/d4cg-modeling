@@ -30,6 +30,7 @@ if __name__ == "__main__":
     if os.path.exists(args.schema):
         with open(args.schema, "r") as file_in:
             schema = json.load(file_in)
+            schema["subsets"] = dict(sorted(schema["subsets"].items()))
             #Alphabetize PVs with "tail values" at the end
             for enum in schema["enums"].values():
                 enum["permissible_values"] = sort_dict_with_exceptions(enum["permissible_values"])

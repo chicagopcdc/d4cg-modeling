@@ -221,7 +221,7 @@ def init_rows(commons, disease_group, parent, schema, target):
     if disease_group == "pcdc":
         rows.append(['info','Parent Model', 'n/a'])
     else:   
-        rows.append(['info','Parent Model', parent])
+        rows.append(['info','Parent Model', parent.split(".json")[0]])
     rows.append(['info','License','CC BY-NC 4.0'])
     rows.append(['info', 'Documentation', 'https://commons.cri.uchicago.edu/pcdc/'])
     rows.append([])

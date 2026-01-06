@@ -28,8 +28,8 @@ class TaskManager:
 def sync(commons, dictionary):
     task_manager = TaskManager()
     parent = dictionary["info"]["parent_model"]
-    if os.path.exists("schemas/" + commons + "/" + parent + ".json"):
-        with open("schemas/" + commons + "/" + parent + ".json", "r") as schema_file:
+    if os.path.exists("schemas/" + commons + "/" + parent):
+        with open("schemas/" + commons + "/" + parent, "r") as schema_file:
             schema = json.load(schema_file)
             for table in dictionary["tables"]:
                 t_name = table['name']
@@ -73,9 +73,14 @@ def checkClass(task_manager, source, table, schema_class):
     #Check slot attributes (declaration + slot_usage)
     for variable in table['variables']:
         if variable['name'] not in schema_class['slots']:
-            task_manager.add(f"{source}\tclass\tslotDeclaration()\t{table['name']}\t{variable['name']}\n")
+            task_manager.add(f"{source}\tslot\tslotDeclaration()\t{table['name']}\t{variable['name']}\n")
+        else:
+            if source not in schema_class['slot_usage'][variable['name']]["in_subset"]:
+                task_manager.add(f"{source}\tslot\tsetSubset()\t{table['name']}\t{source}|{variable['name']}\n")
         if variable['name'] not in schema_class['slot_usage']:
-            task_manager.add(f"{source}\tclass\tslotSubset()\t{table['name']}\t{source}|{variable['name']}\n")
+            task_manager.add(f"{source}\tslot\tslotSubset()\t{table['name']}\t{source}|{variable['name']}\n")
+        
+
     #Check mappings
     for mapping in table['mappings']:
         if mapping and 'mappings' in schema_class:
@@ -126,7 +131,7 @@ def checkSlot(task_manager, source, variable, schema_slot):
     range = variable["type"]
     if range and range not in ["enum", "string", "decimal", "integer"]:
         range = legacy_types[range]
-    if range != "enum" and range != schema_slot["range"] and schema_slot["range"] not in ["Subject", "Timing"]:
+    if range != "enum" and range != schema_slot["range"] and schema_slot["range"] not in ["Person", "DataContributorPersonRecord","Subject", "Timing"]:
         task_manager.add(f"{source}\tslot\tchangeRange()\t{variable['name']}\t{range}\n")
     #Check tier
     if variable['tier'] == 'mandatory':
@@ -168,6 +173,8 @@ def checkSlot(task_manager, source, variable, schema_slot):
 
 def proposeSlot(task_manager, source, variable):
     task_manager.add(f"{source}\tslot\tnewSlot()\t-\t{variable['name']}\n")
+    task_manager.add(f"{source}\tslot\tnewSlot()\t-\t{variable['name']}\n")
+
     #slot_uri
     if variable['code']:
         task_manager.add(f"{source}\tslot\tsetSlotUri()\t{variable['name']}\t{variable['code'].strip()}\n")
@@ -284,7 +291,7 @@ if __name__ == '__main__':
         python scripts/sync.py [schema_path] [subset]
 
     Examples: 
-        - python scripts/sync.py schemas/pcdc/pcdc_v1.13 aml_v1.8-live
+        - python scripts/sync.py schemas/pcdc/pcdc_v1.13.json aml_v1.8-live
     ______________________________________________
     """
     )
