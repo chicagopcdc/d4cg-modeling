@@ -56861,7 +56861,8 @@
                     "comments": [],
                     "in_subset": [
                         "npc_v1.0-approved",
-                        "pre_v1.0-approved"
+                        "pre_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Bohring-Opitz Syndrome": {
@@ -57124,7 +57125,8 @@
                     "comments": [],
                     "in_subset": [
                         "npc_v1.0-approved",
-                        "pre_v1.0-approved"
+                        "pre_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Down Syndrome": {
@@ -57204,7 +57206,8 @@
                     "comments": [],
                     "in_subset": [
                         "npc_v1.0-approved",
-                        "pre_v1.0-approved"
+                        "pre_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Fetal Rhabdomyoma": {
@@ -57232,7 +57235,8 @@
                     "meaning": "ncit:C6728",
                     "comments": [],
                     "in_subset": [
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Gastrointestinal Stromal Tumor": {
@@ -57569,7 +57573,8 @@
                     "comments": [],
                     "in_subset": [
                         "npc_v1.0-approved",
-                        "pre_v1.0-approved"
+                        "pre_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "MIRAGE Syndrome": {
@@ -57590,7 +57595,8 @@
                     "meaning": "ncit:C3213",
                     "comments": [],
                     "in_subset": [
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Malignant Peripheral Nerve Sheath Tumor": {
@@ -57605,7 +57611,8 @@
                     "meaning": "ncit:C48627",
                     "comments": [],
                     "in_subset": [
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Medullary Renal Cell Carcinoma": {
@@ -57704,7 +57711,8 @@
                     "meaning": "ncit:C53457",
                     "comments": [],
                     "in_subset": [
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Multiple Sclerosis": {
@@ -57840,7 +57848,8 @@
                     "meaning": "ncit:C3008",
                     "comments": [],
                     "in_subset": [
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Osteosarcoma": {
@@ -57882,7 +57891,8 @@
                     "meaning": "ncit:C7073",
                     "comments": [],
                     "in_subset": [
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Paraganglioma / Pheochromocytoma": {
@@ -57896,7 +57906,8 @@
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Perlman Syndrome": {
@@ -58052,7 +58063,8 @@
                     "meaning": "ncit:C3335",
                     "comments": [],
                     "in_subset": [
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Rubinstein-Taybi Syndrome": {
@@ -58335,7 +58347,8 @@
                     "meaning": "ncit:C3447",
                     "comments": [],
                     "in_subset": [
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "X-linked Lymphoproliferative Syndrome": {
