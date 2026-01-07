@@ -24731,7 +24731,6 @@
                         "hl_v2.0-approved",
                         "npc_v1.0-approved",
                         "nrsts_v2.0-approved",
-                        "os_v2.0-approved",
                         "pre_v1.0-approved",
                         "rb_v1.2-approved",
                         "rms_v3.0-approved"
@@ -31915,7 +31914,6 @@
                         "ews_v2.0-approved",
                         "ls_v1.0-draft",
                         "npc_v1.0-approved",
-                        "os_v2.0-approved",
                         "pre_v1.0-approved",
                         "rb_v1.2-approved"
                     ]
@@ -31987,7 +31985,6 @@
                         "gct_v2.0-approved",
                         "ls_v1.0-draft",
                         "npc_v1.0-approved",
-                        "os_v2.0-approved",
                         "pre_v1.0-approved",
                         "rms_v3.0-approved"
                     ]
@@ -46693,6 +46690,7 @@
                         "cns_v1.2-approved",
                         "lt_v1.0-approved",
                         "nrsts_v2.0-approved",
+                        "os_v2.0-approved",
                         "pre_v1.0-approved",
                         "rms_v3.0-approved"
                     ]
@@ -46706,6 +46704,7 @@
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
                         "nrsts_v2.0-approved",
+                        "os_v2.0-approved",
                         "pre_v1.0-approved",
                         "rb_v1.2-approved",
                         "rms_v3.0-approved"
