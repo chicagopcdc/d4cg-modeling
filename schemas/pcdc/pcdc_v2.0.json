@@ -1608,6 +1608,7 @@
                 "hl_v2.0-approved",
                 "ls_v1.0-draft",
                 "npc_v1.0-approved",
+                "os_v2.0-approved",
                 "pre_v1.0-approved"
             ],
             "annotations": {
@@ -1624,6 +1625,7 @@
                         "hl_v2.0-approved",
                         "ls_v1.0-draft",
                         "npc_v1.0-approved",
+                        "os_v2.0-approved",
                         "pre_v1.0-approved"
                     ]
                 },
@@ -1637,6 +1639,7 @@
                         "hl_v2.0-approved",
                         "ls_v1.0-draft",
                         "npc_v1.0-approved",
+                        "os_v2.0-approved",
                         "pre_v1.0-approved"
                     ]
                 },
@@ -1650,12 +1653,14 @@
                         "hl_v2.0-approved",
                         "ls_v1.0-draft",
                         "npc_v1.0-approved",
+                        "os_v2.0-approved",
                         "pre_v1.0-approved"
                     ]
                 },
                 "vital_measurement_type": {
                     "in_subset": [
-                        "fa_v1.0-draft"
+                        "fa_v1.0-draft",
+                        "os_v2.0-approved"
                     ]
                 },
                 "anthropometric_measurement_type": {
@@ -1667,6 +1672,7 @@
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
                         "npc_v1.0-approved",
+                        "os_v2.0-approved",
                         "pre_v1.0-approved",
                         "ls_v1.0-draft"
                     ]
@@ -1681,6 +1687,7 @@
                         "hl_v2.0-approved",
                         "ls_v1.0-draft",
                         "npc_v1.0-approved",
+                        "os_v2.0-approved",
                         "pre_v1.0-approved"
                     ]
                 },
@@ -1694,12 +1701,14 @@
                         "hl_v2.0-approved",
                         "ls_v1.0-draft",
                         "npc_v1.0-approved",
+                        "os_v2.0-approved",
                         "pre_v1.0-approved"
                     ]
                 },
                 "vital_measurement_result_unit": {
                     "in_subset": [
-                        "fa_v1.0-draft"
+                        "fa_v1.0-draft",
+                        "os_v2.0-approved"
                     ]
                 },
                 "anthropometric_measurement_result_unit": {
@@ -1711,6 +1720,7 @@
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
                         "npc_v1.0-approved",
+                        "os_v2.0-approved",
                         "pre_v1.0-approved",
                         "ls_v1.0-draft"
                     ]
@@ -24331,6 +24341,7 @@
                         "hl_v2.0-approved",
                         "ls_v1.0-draft",
                         "npc_v1.0-approved",
+                        "os_v2.0-approved",
                         "pre_v1.0-approved"
                     ]
                 },
@@ -24346,6 +24357,7 @@
                         "hl_v2.0-approved",
                         "ls_v1.0-draft",
                         "npc_v1.0-approved",
+                        "os_v2.0-approved",
                         "pre_v1.0-approved"
                     ]
                 },
