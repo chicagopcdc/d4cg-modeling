@@ -3441,7 +3441,7 @@
                 "review_source",
                 "tumor_state",
                 "detection_method",
-                "tumor_classification",
+                "site_classification",
                 "classification_status",
                 "disease_site",
                 "site_other",
@@ -3626,7 +3626,7 @@
                         "rb_v1.2-approved"
                     ]
                 },
-                "tumor_classification": {
+                "site_classification": {
                     "in_subset": [
                         "cns_v1.2-approved",
                         "ews_v2.0-approved",
@@ -3647,7 +3647,8 @@
                 "classification_status": {
                     "in_subset": [
                         "ews_v2.0-approved",
-                        "rb_v1.2-approved"
+                        "rb_v1.2-approved",
+                        "pre_v1.0-approved"
                     ]
                 },
                 "disease_site": {
@@ -4088,6 +4089,8 @@
                 "subjects_submitter_id",
                 "timings_submitter_id",
                 "age_at_disease_characteristic",
+                "disease_characteristic_site",
+                "laterality",
                 "detection_method",
                 "risk_group",
                 "gts_treatment",
@@ -4095,28 +4098,21 @@
                 "deauville_score",
                 "qpet_score",
                 "performance_score",
-                "fever",
-                "night_sweats",
-                "weight_loss",
                 "initial_treatment_category",
                 "mki",
                 "vacterlh_association",
                 "phenos_association",
                 "association_status",
-                "laterality",
                 "clinical_finding",
                 "clinical_finding_other",
                 "modified_rankin_scale",
                 "fans_symptom_acuity",
-                "symptoms",
                 "cranial_nerve_involvement",
                 "skip_lesion",
                 "skip_met_involvement",
                 "trilateral_retinoblastoma",
-                "evaluator",
                 "presentation_symptoms",
-                "clinical_signs",
-                "suspected_referring_diagnosis",
+                "presentation_symptoms_status",
                 "anterior_segment_exam",
                 "anterior_segment_details",
                 "intraocular_pressure",
@@ -4377,7 +4373,7 @@
                 "protocol_procedure",
                 "non_protocol_timing",
                 "status",
-                "tumor_classification",
+                "site_classification",
                 "procedure_class",
                 "procedure",
                 "procedure_other",
@@ -4518,7 +4514,7 @@
                         "rb_v1.2-approved"
                     ]
                 },
-                "tumor_classification": {
+                "site_classification": {
                     "in_subset": [
                         "cns_v1.2-approved",
                         "ews_v2.0-approved",
@@ -5215,7 +5211,7 @@
                 "protocol_radiation_therapy",
                 "non_protocol_timing",
                 "rt_data_source",
-                "tumor_classification",
+                "site_classification",
                 "rt_site",
                 "laterality",
                 "energy_type",
@@ -5360,7 +5356,7 @@
                         "cns_v1.2-approved"
                     ]
                 },
-                "tumor_classification": {
+                "site_classification": {
                     "in_subset": [
                         "cns_v1.2-approved",
                         "ews_v2.0-approved",
@@ -8064,9 +8060,9 @@
                 "tier_optional": "npc_v1.0-approved,ls_v1.0-draft"
             }
         },
-        "tumor_classification": {
+        "site_classification": {
             "slot_uri": "ncit:C174459",
-            "range": "TumorClassificationEnum",
+            "range": "SiteClassificationEnum",
             "comments": [],
             "annotations": {
                 "tier_mandatory": "npc_v1.0-approved",
@@ -31779,61 +31775,6 @@
                         "ls_v1.0-draft",
                         "lt_v1.0-approved",
                         "npc_v1.0-approved"
-                    ]
-                }
-            }
-        },
-        "TumorClassificationEnum": {
-            "permissible_values": {
-                "Benign": {
-                    "meaning": "ncit:C14172",
-                    "comments": [],
-                    "in_subset": [
-                        "fa_v1.0-draft"
-                    ]
-                },
-                "Local Extension": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "ews_v2.0-approved",
-                        "npc_v1.0-approved",
-                        "os_v2.0-approved",
-                        "pre_v1.0-approved",
-                        "rb_v1.2-approved"
-                    ]
-                },
-                "Metastatic": {
-                    "meaning": "ncit:C3261",
-                    "comments": [],
-                    "in_subset": [
-                        "cns_v1.2-approved",
-                        "ews_v2.0-approved",
-                        "fa_v1.0-draft",
-                        "gct_v2.0-approved",
-                        "hl_v2.0-approved",
-                        "lt_v1.0-approved",
-                        "nbl_v2.0-approved",
-                        "npc_v1.0-approved",
-                        "nrsts_v2.0-approved",
-                        "os_v2.0-approved",
-                        "pre_v1.0-approved",
-                        "rb_v1.2-approved",
-                        "rms_v3.0-approved"
-                    ]
-                },
-                "Not Applicable": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "fa_v1.0-draft"
-                    ]
-                },
-                "Premalignant": {
-                    "meaning": "ncit:C25624",
-                    "comments": [],
-                    "in_subset": [
-                        "fa_v1.0-draft"
                     ]
                 }
             }
