@@ -1766,6 +1766,7 @@
                 "lt_v1.0-approved",
                 "nbl_v2.0-approved",
                 "npc_v1.0-approved",
+                "os_v2.0-approved",
                 "pre_v1.0-approved",
                 "rb_v1.2-approved"
             ],
@@ -1784,6 +1785,7 @@
                         "lt_v1.0-approved",
                         "nbl_v2.0-approved",
                         "npc_v1.0-approved",
+                        "os_v2.0-approved",
                         "pre_v1.0-approved",
                         "rb_v1.2-approved"
                     ]
@@ -1799,6 +1801,7 @@
                         "lt_v1.0-approved",
                         "nbl_v2.0-approved",
                         "npc_v1.0-approved",
+                        "os_v2.0-approved",
                         "pre_v1.0-approved",
                         "rb_v1.2-approved"
                     ]
@@ -1814,6 +1817,7 @@
                         "lt_v1.0-approved",
                         "nbl_v2.0-approved",
                         "npc_v1.0-approved",
+                        "os_v2.0-approved",
                         "pre_v1.0-approved",
                         "rb_v1.2-approved"
                     ]
@@ -1829,6 +1833,7 @@
                         "lt_v1.0-approved",
                         "nbl_v2.0-approved",
                         "npc_v1.0-approved",
+                        "os_v2.0-approved",
                         "rb_v1.2-approved"
                     ]
                 },
@@ -1849,6 +1854,7 @@
                         "hl_v2.0-approved",
                         "ls_v1.0-draft",
                         "npc_v1.0-approved",
+                        "os_v2.0-approved",
                         "pre_v1.0-approved",
                         "rb_v1.2-approved"
                     ]
@@ -1868,6 +1874,7 @@
                         "hl_v2.0-approved",
                         "ls_v1.0-draft",
                         "npc_v1.0-approved",
+                        "os_v2.0-approved",
                         "rb_v1.2-approved"
                     ]
                 },
@@ -1881,7 +1888,8 @@
                         "ls_v1.0-draft",
                         "lt_v1.0-approved",
                         "nbl_v2.0-approved",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "laboratory_test_result_unit": {
@@ -1893,7 +1901,8 @@
                         "hl_v2.0-approved",
                         "ls_v1.0-draft",
                         "lt_v1.0-approved",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "traumatic_tap": {
@@ -1915,7 +1924,8 @@
                     "in_subset": [
                         "ews_v2.0-approved",
                         "gct_v2.0-approved",
-                        "hl_v2.0-approved"
+                        "hl_v2.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "threshold_low": {
@@ -24960,7 +24970,8 @@
                         "fa_v1.0-draft",
                         "hl_v2.0-approved",
                         "ls_v1.0-draft",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "IU/mL": {
@@ -24982,7 +24993,8 @@
                         "hl_v2.0-approved",
                         "ls_v1.0-draft",
                         "nbl_v2.0-approved",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "count/mm3": {
@@ -25014,7 +25026,22 @@
                         "fa_v1.0-draft",
                         "hl_v2.0-approved",
                         "ls_v1.0-draft",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
+                    ]
+                },
+                "g/L": {
+                    "meaning": "ncit:C42576",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "IU/L": {
+                    "meaning": "ncit:C67376",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
                     ]
                 },
                 "mg/L": {
@@ -25035,6 +25062,20 @@
                         "npc_v1.0-approved"
                     ]
                 },
+                "mIU/L": {
+                    "meaning": "ncit:C67405",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "mL/min": {
+                    "meaning": "ncit:C64777",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
                 "mm/h": {
                     "meaning": "ncit:C67419",
                     "comments": [],
@@ -25042,7 +25083,8 @@
                         "ews_v2.0-approved",
                         "fa_v1.0-draft",
                         "hl_v2.0-approved",
-                        "ls_v1.0-draft"
+                        "ls_v1.0-draft",
+                        "os_v2.0-approved"
                     ]
                 },
                 "mmHg": {
@@ -25059,7 +25101,8 @@
                     "in_subset": [
                         "fa_v1.0-draft",
                         "ls_v1.0-draft",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "ng/mL": {
@@ -25073,6 +25116,13 @@
                         "nbl_v2.0-approved"
                     ]
                 },
+                "seconds": {
+                    "meaning": "ncit:C42535",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
                 "uIU/mL": {
                     "meaning": "ncit:C67405",
                     "comments": [],
@@ -25080,6 +25130,27 @@
                         "hl_v2.0-approved",
                         "ls_v1.0-draft",
                         "npc_v1.0-approved"
+                    ]
+                },
+                "umol/L": {
+                    "meaning": "ncit:C48508",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "Unknown": {
+                    "meaning": "ncit:C17998",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "Not Reported": {
+                    "meaning": "ncit:C43234",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
                     ]
                 }
             }
