@@ -2845,9 +2845,12 @@
                 "age_at_diag_resolved",
                 "review_source",
                 "determination_source",
-                "diagnosis_status",
+                "evaluator",
+                "diagnosis_site",
+                "laterality",
                 "diagnosis_category",
                 "diagnosis_basis",
+                "suspected_referring_diagnosis",
                 "diagnosis",
                 "mpal",
                 "mlds",
@@ -2966,7 +2969,6 @@
                 },
                 "review_source": {
                     "in_subset": [
-                        "cns_v1.2-approved",
                         "ews_v2.0-approved",
                         "fa_v1.0-draft",
                         "gct_v2.0-approved",
@@ -2981,9 +2983,19 @@
                         "fa_v1.0-draft"
                     ]
                 },
-                "diagnosis_status": {
+                "evaluator": {
                     "in_subset": [
-                        "npc_v1.0-approved"
+                        "rb_v1.2-approved"
+                    ]
+                },
+                "diagnosis_site": {
+                    "in_subset": [
+                        "rb_v1.2-approved"
+                    ]
+                },
+                "laterality": {
+                    "in_subset": [
+                        "rb_v1.2-approved"
                     ]
                 },
                 "diagnosis_category": {
@@ -3007,9 +3019,13 @@
                         "npc_v1.0-approved",
                         "nrsts_v2.0-approved",
                         "os_v2.0-approved",
-                        "pre_v1.0-approved",
                         "rb_v1.2-approved",
                         "rms_v3.0-approved"
+                    ]
+                },
+                "suspected_referring_diagnosis": {
+                    "in_subset": [
+                        "rb_v1.2-approved"
                     ]
                 },
                 "diagnosis": {
@@ -3154,6 +3170,8 @@
                 "timings_submitter_id",
                 "age_at_staging",
                 "review_source",
+                "staging_site",
+                "laterality",
                 "stage_category",
                 "tnm_finding",
                 "tnm_tumor_t",
@@ -3174,7 +3192,10 @@
                 "pretext_mod_e",
                 "pretext_mod_m",
                 "pretext_mod_f",
-                "pretext_mod_r"
+                "pretext_mod_r",
+                "kaposi_sarcoma_t",
+                "kaposi_sarcoma_i",
+                "kaposi_sarcoma_s"
             ],
             "comments": [
                 "D4CGNote: One observation/row per STAGE when instantiated."
@@ -3198,9 +3219,7 @@
             "slot_usage": {
                 "subjects_submitter_id": {
                     "in_subset": [
-                        "aml_v2.0-approved",
                         "cns_v1.2-approved",
-                        "ews_v2.0-approved",
                         "fa_v1.0-draft",
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
@@ -3208,8 +3227,6 @@
                         "lt_v1.0-approved",
                         "nbl_v2.0-approved",
                         "npc_v1.0-approved",
-                        "nrsts_v2.0-approved",
-                        "os_v2.0-approved",
                         "pre_v1.0-approved",
                         "rb_v1.2-approved",
                         "rms_v3.0-approved"
@@ -3217,9 +3234,7 @@
                 },
                 "timings_submitter_id": {
                     "in_subset": [
-                        "aml_v2.0-approved",
                         "cns_v1.2-approved",
-                        "ews_v2.0-approved",
                         "fa_v1.0-draft",
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
@@ -3227,8 +3242,6 @@
                         "lt_v1.0-approved",
                         "nbl_v2.0-approved",
                         "npc_v1.0-approved",
-                        "nrsts_v2.0-approved",
-                        "os_v2.0-approved",
                         "pre_v1.0-approved",
                         "rb_v1.2-approved",
                         "rms_v3.0-approved"
@@ -3251,13 +3264,21 @@
                 },
                 "review_source": {
                     "in_subset": [
-                        "cns_v1.2-approved",
-                        "ews_v2.0-approved",
                         "fa_v1.0-draft",
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
                         "lt_v1.0-approved",
                         "npc_v1.0-approved"
+                    ]
+                },
+                "staging_site": {
+                    "in_subset": [
+                        "rb_v1.2-approved"
+                    ]
+                },
+                "laterality": {
+                    "in_subset": [
+                        "rb_v1.2-approved"
                     ]
                 },
                 "stage_category": {
@@ -3394,6 +3415,21 @@
                     "in_subset": [
                         "lt_v1.0-approved"
                     ]
+                },
+                "kaposi_sarcoma_t": {
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "kaposi_sarcoma_i": {
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
+                },
+                "kaposi_sarcoma_s": {
+                    "in_subset": [
+                        "pre_v1.0-approved"
+                    ]
                 }
             }
         },
@@ -3410,15 +3446,14 @@
                 "disease_site",
                 "site_other",
                 "laterality",
-                "diameter1",
-                "diameter1_unit",
-                "diameter1_axis",
-                "diameter2",
-                "diameter2_unit",
-                "diameter2_axis",
-                "diameter3",
-                "diameter3_unit",
-                "diameter3_axis",
+                "measurement1",
+                "measurement1_axis",
+                "measurement2",
+                "measurement2_axis",
+                "measurement3",
+                "measurement3_axis",
+                "measurement_unit",
+                "myeloid_sarcoma_involvement",
                 "bulky_disease",
                 "pleural_effusion",
                 "pericardial_effusion",
@@ -3566,7 +3601,6 @@
                         "fa_v1.0-draft",
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
-                        "lt_v1.0-approved",
                         "npc_v1.0-approved"
                     ]
                 },
