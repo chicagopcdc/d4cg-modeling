@@ -4115,8 +4115,6 @@
                 "presentation_symptoms_status",
                 "anterior_segment_exam",
                 "anterior_segment_details",
-                "intraocular_pressure",
-                "intraocular_pressure_unit",
                 "retinal_detachment",
                 "advanced_disease_signs"
             ],
@@ -25236,6 +25234,13 @@
                     "in_subset": [
                         "aml_v2.0-approved",
                         "hl_v2.0-approved"
+                    ]
+                },
+                "Intraocular Pressure": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "rb_v1.2-approved"
                     ]
                 },
                 "Pulmonary Function Test": {
