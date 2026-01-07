@@ -1617,6 +1617,7 @@
                 "hl_v2.0-approved",
                 "ls_v1.0-draft",
                 "npc_v1.0-approved",
+                "os_v2.0-approved",
                 "pre_v1.0-approved"
             ],
             "annotations": {
@@ -1646,13 +1647,9 @@
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
                         "ls_v1.0-draft",
-                        "lt_v1.0-approved",
                         "npc_v1.0-approved",
-                        "nrsts_v2.0-approved",
                         "os_v2.0-approved",
-                        "pre_v1.0-approved",
-                        "rb_v1.2-approved",
-                        "rms_v3.0-approved"
+                        "pre_v1.0-approved"
                     ]
                 },
                 "age_at_measurement": {
@@ -1684,7 +1681,8 @@
                         "hl_v2.0-approved",
                         "ls_v1.0-draft",
                         "npc_v1.0-approved",
-                        "os_v2.0-approved"
+                        "os_v2.0-approved",
+                        "pre_v1.0-approved"
                     ]
                 },
                 "result_text": {
@@ -1697,25 +1695,10 @@
                         "hl_v2.0-approved",
                         "ls_v1.0-draft",
                         "npc_v1.0-approved",
-                        "pre_v1.0-approved",
-                        "rb_v1.2-approved"
+                        "pre_v1.0-approved"
                     ]
                 },
                 "result_numeric": {
-                    "in_subset": [
-                        "aml_v2.0-approved",
-                        "cns_v1.2-approved",
-                        "ews_v2.0-approved",
-                        "fa_v1.0-draft",
-                        "gct_v2.0-approved",
-                        "hl_v2.0-approved",
-                        "ls_v1.0-draft",
-                        "npc_v1.0-approved",
-                        "pre_v1.0-approved",
-                        "rb_v1.2-approved"
-                    ]
-                },
-                "anthropometric_measurement_result_unit": {
                     "in_subset": [
                         "aml_v2.0-approved",
                         "cns_v1.2-approved",
@@ -1732,6 +1715,19 @@
                     "in_subset": [
                         "fa_v1.0-draft",
                         "os_v2.0-approved"
+                    ]
+                },
+                "anthropometric_measurement_result_unit": {
+                    "in_subset": [
+                        "aml_v2.0-approved",
+                        "cns_v1.2-approved",
+                        "ews_v2.0-approved",
+                        "fa_v1.0-draft",
+                        "gct_v2.0-approved",
+                        "hl_v2.0-approved",
+                        "ls_v1.0-draft",
+                        "npc_v1.0-approved",
+                        "pre_v1.0-approved"
                     ]
                 },
                 "gestational_age_at_birth_weeks": {
@@ -1752,7 +1748,7 @@
                 "laboratory_test_specimen_other",
                 "result_text",
                 "result_numeric",
-                "result_unit",
+                "laboratory_test_result_unit",
                 "traumatic_tap",
                 "quantification_type",
                 "threshold_level",
@@ -1775,6 +1771,7 @@
                 "lt_v1.0-approved",
                 "nbl_v2.0-approved",
                 "npc_v1.0-approved",
+                "os_v2.0-approved",
                 "pre_v1.0-approved",
                 "rb_v1.2-approved"
             ],
@@ -1785,7 +1782,6 @@
                 "subjects_submitter_id": {
                     "in_subset": [
                         "aml_v2.0-approved",
-                        "cns_v1.2-approved",
                         "ews_v2.0-approved",
                         "fa_v1.0-draft",
                         "gct_v2.0-approved",
@@ -1794,17 +1790,14 @@
                         "lt_v1.0-approved",
                         "nbl_v2.0-approved",
                         "npc_v1.0-approved",
-                        "nrsts_v2.0-approved",
                         "os_v2.0-approved",
                         "pre_v1.0-approved",
-                        "rb_v1.2-approved",
-                        "rms_v3.0-approved"
+                        "rb_v1.2-approved"
                     ]
                 },
                 "timings_submitter_id": {
                     "in_subset": [
                         "aml_v2.0-approved",
-                        "cns_v1.2-approved",
                         "ews_v2.0-approved",
                         "fa_v1.0-draft",
                         "gct_v2.0-approved",
@@ -1813,11 +1806,9 @@
                         "lt_v1.0-approved",
                         "nbl_v2.0-approved",
                         "npc_v1.0-approved",
-                        "nrsts_v2.0-approved",
                         "os_v2.0-approved",
                         "pre_v1.0-approved",
-                        "rb_v1.2-approved",
-                        "rms_v3.0-approved"
+                        "rb_v1.2-approved"
                     ]
                 },
                 "age_at_lab": {
@@ -1831,6 +1822,7 @@
                         "lt_v1.0-approved",
                         "nbl_v2.0-approved",
                         "npc_v1.0-approved",
+                        "os_v2.0-approved",
                         "pre_v1.0-approved",
                         "rb_v1.2-approved"
                     ]
@@ -1846,6 +1838,7 @@
                         "lt_v1.0-approved",
                         "nbl_v2.0-approved",
                         "npc_v1.0-approved",
+                        "os_v2.0-approved",
                         "rb_v1.2-approved"
                     ]
                 },
@@ -1865,8 +1858,8 @@
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
                         "ls_v1.0-draft",
-                        "npc_v1.0-approved",
                         "os_v2.0-approved",
+                        "npc_v1.0-approved",
                         "pre_v1.0-approved",
                         "rb_v1.2-approved"
                     ]
@@ -1880,21 +1873,18 @@
                 "result_text": {
                     "in_subset": [
                         "aml_v2.0-approved",
-                        "cns_v1.2-approved",
                         "ews_v2.0-approved",
                         "fa_v1.0-draft",
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
                         "ls_v1.0-draft",
                         "npc_v1.0-approved",
-                        "pre_v1.0-approved",
                         "rb_v1.2-approved"
                     ]
                 },
                 "result_numeric": {
                     "in_subset": [
                         "aml_v2.0-approved",
-                        "cns_v1.2-approved",
                         "ews_v2.0-approved",
                         "fa_v1.0-draft",
                         "gct_v2.0-approved",
@@ -1902,24 +1892,19 @@
                         "ls_v1.0-draft",
                         "lt_v1.0-approved",
                         "nbl_v2.0-approved",
-                        "npc_v1.0-approved",
-                        "pre_v1.0-approved",
-                        "rb_v1.2-approved"
+                        "npc_v1.0-approved"
                     ]
                 },
-                "result_unit": {
+                "laboratory_test_result_unit": {
                     "in_subset": [
                         "aml_v2.0-approved",
-                        "cns_v1.2-approved",
                         "ews_v2.0-approved",
                         "fa_v1.0-draft",
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
                         "ls_v1.0-draft",
                         "lt_v1.0-approved",
-                        "npc_v1.0-approved",
-                        "pre_v1.0-approved",
-                        "rb_v1.2-approved"
+                        "npc_v1.0-approved"
                     ]
                 },
                 "traumatic_tap": {
@@ -1981,15 +1966,15 @@
                 "cascade_testing",
                 "genetic_analysis_method",
                 "genetic_analysis_specimen",
-                "tumor_classification",
+                "review_source",
+                "determination_source",
+                "specimen_classification",
                 "biological_analyte",
                 "source_pct",
                 "source_pct_numeric",
                 "genomic_source_class",
                 "mosaicism",
                 "mosaicism_percent",
-                "review_source",
-                "determination_source",
                 "genetic_analysis_status",
                 "alteration",
                 "alteration_type",
@@ -2050,6 +2035,7 @@
                 "ls_v1.0-draft",
                 "nbl_v2.0-approved",
                 "nrsts_v2.0-approved",
+                "os_v2.0-approved",
                 "pre_v1.0-approved",
                 "rb_v1.2-approved",
                 "rms_v3.0-approved"
@@ -2067,7 +2053,6 @@
                         "gct_v2.0-approved",
                         "ls_v1.0-draft",
                         "nbl_v2.0-approved",
-                        "npc_v1.0-approved",
                         "nrsts_v2.0-approved",
                         "os_v2.0-approved",
                         "pre_v1.0-approved",
@@ -2102,6 +2087,7 @@
                         "ls_v1.0-draft",
                         "nbl_v2.0-approved",
                         "nrsts_v2.0-approved",
+                        "os_v2.0-approved",
                         "pre_v1.0-approved",
                         "rb_v1.2-approved",
                         "rms_v3.0-approved"
@@ -2145,6 +2131,7 @@
                         "ews_v2.0-approved",
                         "fa_v1.0-draft",
                         "gct_v2.0-approved",
+                        "os_v2.0-approved",
                         "pre_v1.0-approved",
                         "rb_v1.0"
                     ]
@@ -2153,21 +2140,16 @@
                     "in_subset": [
                         "fa_v1.0-draft",
                         "nbl_v2.0-approved",
-                        "npc_v1.0-approved",
                         "rb_v1.2-approved",
                         "rms_v3.0-approved"
                     ]
                 },
-                "tumor_classification": {
+                "specimen_classification": {
                     "in_subset": [
-                        "cns_v1.2-approved",
                         "ews_v2.0-approved",
                         "fa_v1.0-draft",
                         "gct_v2.0-approved",
-                        "hl_v2.0-approved",
-                        "lt_v1.0-approved",
                         "nbl_v2.0-approved",
-                        "npc_v1.0-approved",
                         "nrsts_v2.0-approved",
                         "os_v2.0-approved",
                         "pre_v1.0-approved",
@@ -2210,18 +2192,13 @@
                 },
                 "review_source": {
                     "in_subset": [
-                        "cns_v1.2-approved",
                         "ews_v2.0-approved",
                         "fa_v1.0-draft",
-                        "gct_v2.0-approved",
-                        "hl_v2.0-approved",
-                        "lt_v1.0-approved",
-                        "npc_v1.0-approved"
+                        "gct_v2.0-approved"
                     ]
                 },
                 "determination_source": {
                     "in_subset": [
-                        "cns_v1.2-approved",
                         "fa_v1.0-draft"
                     ]
                 },
@@ -2660,7 +2637,7 @@
                 "functional_measurement_type",
                 "result_text",
                 "result_numeric",
-                "result_unit",
+                "functional_measurement_result_unit",
                 "laterality",
                 "hz_frequency",
                 "average_loss_low",
@@ -2671,10 +2648,10 @@
                 "D4CGNote: One observation/row per result when instantiated"
             ],
             "in_subset": [
-                "aml_v2.0-approved",
                 "fa_v1.0-draft",
                 "hl_v2.0-approved",
-                "npc_v1.0-approved"
+                "npc_v1.0-approved",
+                "rb_v1.2-approved"
             ],
             "annotations": {
                 "domain": "testing"
@@ -2682,51 +2659,30 @@
             "slot_usage": {
                 "subjects_submitter_id": {
                     "in_subset": [
-                        "aml_v2.0-approved",
-                        "cns_v1.2-approved",
-                        "ews_v2.0-approved",
                         "fa_v1.0-draft",
-                        "gct_v2.0-approved",
                         "hl_v2.0-approved",
-                        "lt_v1.0-approved",
-                        "nbl_v2.0-approved",
                         "npc_v1.0-approved",
-                        "nrsts_v2.0-approved",
-                        "os_v2.0-approved",
-                        "pre_v1.0-approved",
-                        "rb_v1.2-approved",
-                        "rms_v3.0-approved"
+                        "rb_v1.2-approved"
                     ]
                 },
                 "timings_submitter_id": {
                     "in_subset": [
-                        "aml_v2.0-approved",
-                        "cns_v1.2-approved",
-                        "ews_v2.0-approved",
                         "fa_v1.0-draft",
-                        "gct_v2.0-approved",
                         "hl_v2.0-approved",
-                        "lt_v1.0-approved",
-                        "nbl_v2.0-approved",
                         "npc_v1.0-approved",
-                        "nrsts_v2.0-approved",
-                        "os_v2.0-approved",
-                        "pre_v1.0-approved",
-                        "rb_v1.2-approved",
-                        "rms_v3.0-approved"
+                        "rb_v1.2-approved"
                     ]
                 },
                 "age_at_function_test": {
                     "in_subset": [
-                        "aml_v2.0-approved",
                         "fa_v1.0-draft",
                         "hl_v2.0-approved",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "rb_v1.2-approved"
                     ]
                 },
                 "function_test": {
                     "in_subset": [
-                        "aml_v2.0-approved",
                         "fa_v1.0-draft",
                         "hl_v2.0-approved",
                         "npc_v1.0-approved",
@@ -2735,62 +2691,37 @@
                 },
                 "functional_measurement_type": {
                     "in_subset": [
-                        "aml_v2.0-approved",
-                        "hl_v2.0-approved",
-                        "rb_v1.2-approved"
+                        "hl_v2.0-approved"
                     ]
                 },
                 "result_text": {
                     "in_subset": [
-                        "aml_v2.0-approved",
-                        "cns_v1.2-approved",
-                        "ews_v2.0-approved",
                         "fa_v1.0-draft",
-                        "gct_v2.0-approved",
                         "hl_v2.0-approved",
-                        "npc_v1.0-approved",
-                        "pre_v1.0-approved",
-                        "rb_v1.2-approved"
+                        "npc_v1.0-approved"
                     ]
                 },
                 "result_numeric": {
                     "in_subset": [
-                        "aml_v2.0-approved",
-                        "cns_v1.2-approved",
-                        "ews_v2.0-approved",
                         "fa_v1.0-draft",
-                        "gct_v2.0-approved",
                         "hl_v2.0-approved",
-                        "lt_v1.0-approved",
-                        "nbl_v2.0-approved",
                         "npc_v1.0-approved",
-                        "pre_v1.0-approved",
                         "rb_v1.2-approved"
                     ]
                 },
-                "result_unit": {
+                "functional_measurement_result_unit": {
                     "in_subset": [
-                        "aml_v2.0-approved",
-                        "cns_v1.2-approved",
-                        "ews_v2.0-approved",
                         "fa_v1.0-draft",
-                        "gct_v2.0-approved",
                         "hl_v2.0-approved",
-                        "lt_v1.0-approved",
                         "npc_v1.0-approved",
-                        "pre_v1.0-approved",
                         "rb_v1.2-approved"
                     ]
                 },
                 "laterality": {
                     "in_subset": [
-                        "ews_v2.0-approved",
                         "fa_v1.0-draft",
-                        "gct_v2.0-approved",
                         "hl_v2.0-approved",
-                        "lt_v1.0-approved",
                         "npc_v1.0-approved",
-                        "os_v2.0-approved",
                         "rb_v1.2-approved"
                     ]
                 },
@@ -2825,7 +2756,7 @@
                 "markers",
                 "result_text",
                 "result_numeric",
-                "result_unit"
+                "ihc_result_unit"
             ],
             "comments": [
                 "D4CGNote: One observation/row per result when instantiated."
@@ -2842,10 +2773,7 @@
             "slot_usage": {
                 "subjects_submitter_id": {
                     "in_subset": [
-                        "aml_v2.0-approved",
-                        "cns_v1.2-approved",
                         "ews_v2.0-approved",
-                        "fa_v1.0-draft",
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
                         "ls_v1.0-draft"
@@ -2853,10 +2781,7 @@
                 },
                 "timings_submitter_id": {
                     "in_subset": [
-                        "aml_v2.0-approved",
-                        "cns_v1.2-approved",
                         "ews_v2.0-approved",
-                        "fa_v1.0-draft",
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
                         "ls_v1.0-draft"
@@ -2872,9 +2797,7 @@
                 },
                 "review_source": {
                     "in_subset": [
-                        "cns_v1.2-approved",
                         "ews_v2.0-approved",
-                        "fa_v1.0-draft",
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
                         "ls_v1.0-draft"
@@ -2890,10 +2813,7 @@
                 },
                 "result_text": {
                     "in_subset": [
-                        "aml_v2.0-approved",
-                        "cns_v1.2-approved",
                         "ews_v2.0-approved",
-                        "fa_v1.0-draft",
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
                         "ls_v1.0-draft"
@@ -2901,31 +2821,17 @@
                 },
                 "result_numeric": {
                     "in_subset": [
-                        "aml_v2.0-approved",
-                        "cns_v1.2-approved",
                         "ews_v2.0-approved",
-                        "fa_v1.0-draft",
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
-                        "lt_v1.0-approved",
-                        "nbl_v2.0-approved",
-                        "npc_v1.0-approved",
-                        "pre_v1.0-approved",
-                        "rb_v1.2-approved"
+                        "ls_v1.0-draft"
                     ]
                 },
-                "result_unit": {
+                "ihc_result_unit": {
                     "in_subset": [
-                        "aml_v2.0-approved",
-                        "cns_v1.2-approved",
                         "ews_v2.0-approved",
-                        "fa_v1.0-draft",
                         "gct_v2.0-approved",
-                        "hl_v2.0-approved",
-                        "lt_v1.0-approved",
-                        "npc_v1.0-approved",
-                        "pre_v1.0-approved",
-                        "rb_v1.2-approved"
+                        "hl_v2.0-approved"
                     ]
                 }
             }
