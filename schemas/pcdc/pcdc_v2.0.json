@@ -41077,7 +41077,8 @@
                     "meaning": "ncit:C17649",
                     "comments": [],
                     "in_subset": [
-                        "gct_v2.0-approved"
+                        "gct_v2.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Unknown": {
@@ -41086,6 +41087,7 @@
                     "in_subset": [
                         "ews_v2.0-approved",
                         "gct_v2.0-approved",
+                        "os_v2.0-approved",
                         "rms_v3.0-approved"
                     ]
                 },
