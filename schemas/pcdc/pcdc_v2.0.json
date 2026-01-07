@@ -3460,7 +3460,6 @@
                 "tumor_volume",
                 "estimated_volume",
                 "fracture",
-                "skip_lesion",
                 "ipsilateral_nodules",
                 "joint_involvement",
                 "site_within_bone",
@@ -3901,12 +3900,6 @@
                     ]
                 },
                 "fracture": {
-                    "in_subset": [
-                        "ews_v2.0-approved",
-                        "os_v2.0-approved"
-                    ]
-                },
-                "skip_lesion": {
                     "in_subset": [
                         "ews_v2.0-approved",
                         "os_v2.0-approved"
