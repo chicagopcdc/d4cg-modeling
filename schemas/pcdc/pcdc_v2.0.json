@@ -1371,21 +1371,15 @@
                 },
                 "age_at_condition": {
                     "in_subset": [
-                        "fa_v1.0-draft",
-                        "lt_v1.0-approved",
-                        "pre_v1.0-approved",
-                        "rb_v1.2-approved"
+                        "fa_v1.0-draft"
                     ]
                 },
                 "condition_status": {
                     "in_subset": [
-                        "ews_v2.0-approved",
                         "fa_v1.0-draft",
-                        "gct_v2.0-approved",
                         "hl_v2.0-approved",
                         "ls_v1.0-draft",
                         "npc_v1.0-approved",
-                        "os_v2.0-approved",
                         "rb_v1.2-approved"
                     ]
                 },
@@ -1442,13 +1436,8 @@
                 },
                 "laterality": {
                     "in_subset": [
-                        "ews_v2.0-approved",
                         "fa_v1.0-draft",
-                        "gct_v2.0-approved",
                         "hl_v2.0-approved",
-                        "lt_v1.0-approved",
-                        "npc_v1.0-approved",
-                        "os_v2.0-approved",
                         "rb_v1.2-approved"
                     ]
                 },
@@ -1496,25 +1485,20 @@
                 "subjects_submitter_id": {
                     "in_subset": [
                         "aml_v2.0-approved",
-                        "cns_v1.2-approved",
                         "ews_v2.0-approved",
-                        "fa_v1.0-draft",
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
                         "ls_v1.0-draft",
                         "lt_v1.0-approved",
-                        "nbl_v2.0-approved",
                         "npc_v1.0-approved",
                         "nrsts_v2.0-approved",
                         "os_v2.0-approved",
                         "pre_v1.0-approved",
-                        "rb_v1.2-approved",
-                        "rms_v3.0-approved"
+                        "rb_v1.2-approved"
                     ]
                 },
                 "age_at_condition": {
                     "in_subset": [
-                        "fa_v1.0-draft",
                         "ls_v1.0-draft",
                         "lt_v1.0-approved",
                         "pre_v1.0-approved",
@@ -1524,7 +1508,6 @@
                 "condition_status": {
                     "in_subset": [
                         "ews_v2.0-approved",
-                        "fa_v1.0-draft",
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
                         "ls_v1.0-draft",
@@ -1537,7 +1520,6 @@
                     "in_subset": [
                         "aml_v2.0-approved",
                         "ews_v2.0-approved",
-                        "fa_v1.0-draft",
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
                         "ls_v1.0-draft",
@@ -1619,7 +1601,8 @@
                 "anthropometric_measurement_type",
                 "result_text",
                 "result_numeric",
-                "result_unit",
+                "vital_measurement_result_unit",
+                "anthropometric_measurement_result_unit",
                 "gestational_age_at_birth_weeks"
             ],
             "comments": [
@@ -1743,6 +1726,12 @@
                         "ls_v1.0-draft",
                         "npc_v1.0-approved",
                         "pre_v1.0-approved"
+                    ]
+                },
+                "vital_measurement_result_unit": {
+                    "in_subset": [
+                        "fa_v1.0-draft",
+                        "os_v2.0-approved"
                     ]
                 },
                 "gestational_age_at_birth_weeks": {
