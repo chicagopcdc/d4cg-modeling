@@ -2034,6 +2034,7 @@
                 "ls_v1.0-draft",
                 "nbl_v2.0-approved",
                 "nrsts_v2.0-approved",
+                "os_v2.0-approved",
                 "pre_v1.0-approved",
                 "rb_v1.2-approved",
                 "rms_v3.0-approved"
@@ -2052,6 +2053,7 @@
                         "ls_v1.0-draft",
                         "nbl_v2.0-approved",
                         "nrsts_v2.0-approved",
+                        "os_v2.0-approved",
                         "pre_v1.0-approved",
                         "rb_v1.2-approved",
                         "rms_v3.0-approved"
@@ -2067,6 +2069,7 @@
                         "ls_v1.0-draft",
                         "nbl_v2.0-approved",
                         "nrsts_v2.0-approved",
+                        "os_v2.0-approved",
                         "pre_v1.0-approved",
                         "rb_v1.2-approved",
                         "rms_v3.0-approved"
@@ -2082,6 +2085,7 @@
                         "ls_v1.0-draft",
                         "nbl_v2.0-approved",
                         "nrsts_v2.0-approved",
+                        "os_v2.0-approved",
                         "pre_v1.0-approved",
                         "rb_v1.2-approved",
                         "rms_v3.0-approved"
@@ -2125,6 +2129,7 @@
                         "ews_v2.0-approved",
                         "fa_v1.0-draft",
                         "gct_v2.0-approved",
+                        "os_v2.0-approved",
                         "pre_v1.0-approved"
                     ]
                 },
@@ -26924,6 +26929,7 @@
                         "cns_v1.2-approved",
                         "ews_v2.0-approved",
                         "fa_v1.0-draft",
+                        "os_v2.0-approved",
                         "pre_v1.0-approved"
                     ]
                 },
@@ -26961,6 +26967,7 @@
                     "in_subset": [
                         "ews_v2.0-approved",
                         "gct_v2.0-approved",
+                        "os_v2.0-approved",
                         "pre_v1.0-approved"
                     ]
                 },
@@ -26993,6 +27000,7 @@
                     "comments": [],
                     "in_subset": [
                         "ews_v2.0-approved",
+                        "os_v2.0-approved",
                         "pre_v1.0-approved"
                     ]
                 },
@@ -27007,7 +27015,8 @@
                     "meaning": "ncit:C17003",
                     "comments": [],
                     "in_subset": [
-                        "ews_v2.0-approved"
+                        "ews_v2.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "PCR, RT-PCR": {
@@ -27047,6 +27056,7 @@
                         "cns_v1.2-approved",
                         "ews_v2.0-approved",
                         "fa_v1.0-draft",
+                        "os_v2.0-approved",
                         "pre_v1.0-approved",
                         "rb_v1.0"
                     ]
@@ -27165,7 +27175,8 @@
                         "aml_v2.0-approved",
                         "ews_v2.0-approved",
                         "fa_v1.0-draft",
-                        "gct_v2.0-approved"
+                        "gct_v2.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Not Reported": {
@@ -27175,7 +27186,8 @@
                         "aml_v2.0-approved",
                         "ews_v2.0-approved",
                         "fa_v1.0-draft",
-                        "gct_v2.0-approved"
+                        "gct_v2.0-approved",
+                        "os_v2.0-approved"
                     ]
                 }
             }
