@@ -25266,6 +25266,13 @@
         },
         "LaboratoryTestEnum": {
             "permissible_values": {
+                "5 Prime Nucleotidase": {
+                    "meaning": "ncit:C79437",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
                 "AFP": {
                     "meaning": "ncit:C21577",
                     "comments": [],
@@ -25286,7 +25293,8 @@
                     "comments": [],
                     "in_subset": [
                         "ls_v1.0-draft",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "ALT": {
@@ -25297,7 +25305,8 @@
                     "in_subset": [
                         "fa_v1.0-draft",
                         "ls_v1.0-draft",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "ANA": {
@@ -25311,7 +25320,8 @@
                     "meaning": "ncit:C63321",
                     "comments": [],
                     "in_subset": [
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "AQP4 Ab": {
@@ -25329,7 +25339,8 @@
                     "in_subset": [
                         "fa_v1.0-draft",
                         "ls_v1.0-draft",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Absolute B Lymphocyte Count": {
@@ -25390,7 +25401,8 @@
                     "in_subset": [
                         "hl_v2.0-approved",
                         "ls_v1.0-draft",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Alkaline Phophatase": {
@@ -25433,6 +25445,13 @@
                     ],
                     "in_subset": [
                         "fa_v1.0-draft"
+                    ]
+                },
+                "βHCG": {
+                    "meaning": "ncit:C64851",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
                     ]
                 },
                 "Blast Count": {
@@ -25500,7 +25519,8 @@
                     "comments": [],
                     "in_subset": [
                         "fa_v1.0-draft",
-                        "hl_v2.0-approved"
+                        "hl_v2.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "CSF Luekocyte Count": {
@@ -25526,7 +25546,8 @@
                     "comments": [],
                     "in_subset": [
                         "ls_v1.0-draft",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Cellularity": {
@@ -25541,7 +25562,8 @@
                     "comments": [],
                     "in_subset": [
                         "ls_v1.0-draft",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Chromosome Breakage, DEB": {
@@ -25587,7 +25609,8 @@
                     "in_subset": [
                         "fa_v1.0-draft",
                         "ls_v1.0-draft",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Creatinine Clearance": {
@@ -25595,7 +25618,8 @@
                     "comments": [],
                     "in_subset": [
                         "ls_v1.0-draft",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Cytology Malignant Cells": {
@@ -25610,7 +25634,8 @@
                     "comments": [],
                     "in_subset": [
                         "ls_v1.0-draft",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Dysplasia": {
@@ -25663,7 +25688,8 @@
                     "in_subset": [
                         "ews_v2.0-approved",
                         "fa_v1.0-draft",
-                        "hl_v2.0-approved"
+                        "hl_v2.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Eosinophils": {
@@ -25704,7 +25730,8 @@
                     "meaning": "ncit:C74787",
                     "comments": [],
                     "in_subset": [
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Free T4": {
@@ -25712,14 +25739,16 @@
                     "comments": [],
                     "in_subset": [
                         "hl_v2.0-approved",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "GGT": {
                     "meaning": "ncit:C64847",
                     "comments": [],
                     "in_subset": [
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Glucose": {
@@ -25730,7 +25759,8 @@
                     "in_subset": [
                         "fa_v1.0-draft",
                         "ls_v1.0-draft",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Granulomas": {
@@ -25760,7 +25790,8 @@
                         "(fa_v1.0-draft) ConsortiumNote: CBC"
                     ],
                     "in_subset": [
-                        "fa_v1.0-draft"
+                        "fa_v1.0-draft",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Hemoglobin": {
@@ -25773,7 +25804,8 @@
                         "fa_v1.0-draft",
                         "hl_v2.0-approved",
                         "ls_v1.0-draft",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Hemoglobin A1C Measurement": {
@@ -25876,6 +25908,13 @@
                         "fa_v1.0-draft"
                     ]
                 },
+                "INR": {
+                    "meaning": "ncit:C64805",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
                 "JCV": {
                     "meaning": "ncit:C199960",
                     "comments": [],
@@ -25899,7 +25938,8 @@
                         "ews_v2.0-approved",
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
-                        "nbl_v2.0-approved"
+                        "nbl_v2.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "LDL": {
@@ -25924,7 +25964,15 @@
                         "(fa_v1.0-draft) ConsortiumNote: CBC"
                     ],
                     "in_subset": [
-                        "fa_v1.0-draft"
+                        "fa_v1.0-draft",
+                        "os_v2.0-approved"
+                    ]
+                },
+                "Lipase": {
+                    "meaning": "ncit:C117748",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
                     ]
                 },
                 "Lymphocytes": {
@@ -25932,7 +25980,8 @@
                     "comments": [],
                     "in_subset": [
                         "hl_v2.0-approved",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Lymphoid Aggregates": {
@@ -26085,13 +26134,8 @@
                         "(fa_v1.0-draft) ConsortiumNote: CBC"
                     ],
                     "in_subset": [
-                        "fa_v1.0-draft"
-                    ]
-                },
-                "Neutrophils": {
-                    "meaning": "ncit:C51950",
-                    "comments": [],
-                    "in_subset": [
+                        "fa_v1.0-draft",
+                        "os_v2.0-approved",
                         "hl_v2.0-approved",
                         "npc_v1.0-approved"
                     ]
@@ -26121,6 +26165,13 @@
                         "npc_v1.0-approved"
                     ]
                 },
+                "Partial Thromboplastin Time": {
+                    "meaning": "ncit:C178140",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
                 "Phosphorus": {
                     "meaning": "ncit:C47934",
                     "comments": [],
@@ -26148,7 +26199,8 @@
                         "hl_v2.0-approved",
                         "ls_v1.0-draft",
                         "lt_v1.0-approved",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Potassium": {
@@ -26156,7 +26208,8 @@
                     "comments": [],
                     "in_subset": [
                         "ls_v1.0-draft",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Progesterone Receptor Test": {
@@ -26179,8 +26232,17 @@
                     "meaning": "ncit:C64858",
                     "comments": [],
                     "in_subset": [
+                        "fa_v1.0-draft",
                         "hl_v2.0-approved",
-                        "ls_v1.0-draft"
+                        "ls_v1.0-draft",
+                        "os_v2.0-approved"
+                    ]
+                },
+                "Prothrombin Time": {
+                    "meaning": "ncit:C62656",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
                     ]
                 },
                 "RBC": {
@@ -26254,7 +26316,8 @@
                     "in_subset": [
                         "fa_v1.0-draft",
                         "ls_v1.0-draft",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "TSH": {
@@ -26262,7 +26325,8 @@
                     "comments": [],
                     "in_subset": [
                         "hl_v2.0-approved",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Total Bilirubin": {
@@ -26273,22 +26337,14 @@
                     "in_subset": [
                         "fa_v1.0-draft",
                         "ls_v1.0-draft",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Total Cholesterol": {
                     "meaning": "ncit:C61032",
                     "comments": [
                         "(fa_v1.0-draft) ConsortiumNote: Lipid Testing"
-                    ],
-                    "in_subset": [
-                        "fa_v1.0-draft"
-                    ]
-                },
-                "Total Protein": {
-                    "meaning": "ncit:C64858",
-                    "comments": [
-                        "(fa_v1.0-draft) ConsortiumNote: CSF Studies"
                     ],
                     "in_subset": [
                         "fa_v1.0-draft"
@@ -26314,7 +26370,8 @@
                     "meaning": "ncit:C62652",
                     "comments": [],
                     "in_subset": [
-                        "hl_v2.0-approved"
+                        "hl_v2.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Urine Cytology": {
