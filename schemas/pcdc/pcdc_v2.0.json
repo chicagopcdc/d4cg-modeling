@@ -46738,7 +46738,15 @@
                     "comments": [],
                     "in_subset": [
                         "nrsts_v2.0-approved",
-                        "rb_v1.2-approved"
+                        "rb_v1.2-approved",
+                        "os_v2.0-approved"
+                    ]
+                },
+                 "Adrenal Gland": {
+                    "meaning": "ncit:C12666",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
                     ]
                 },
                 "Anal/Perianal": {
@@ -46748,11 +46756,47 @@
                         "rms_v3.0-approved"
                     ]
                 },
+                "Ankle": {
+                    "meaning": "ncit:C32078",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "Ankle Joint": {
+                    "meaning": "ncit:C32078",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "Anterior Skull Base": {
+                    "meaning": "ncit:C180372",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "Anus": {
+                    "meaning": "ncit:C43362",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "Appendix": {
+                    "meaning": "ncit:C12380",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
                 "Axilla": {
                     "meaning": "ncit:C12674",
                     "comments": [],
                     "in_subset": [
-                        "hl_v2.0-approved"
+                        "hl_v2.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Axilla or Pectoral": {
@@ -46762,11 +46806,19 @@
                         "hl_v2.0-approved"
                     ]
                 },
+                "Basin": {
+                    "meaning": "ncit:C94547",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
                 "Bladder": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
-                        "rms_v3.0-approved"
+                        "rms_v3.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Bladder/Prostate": {
@@ -46786,6 +46838,20 @@
                         "rms_v3.0-approved"
                     ]
                 },
+                "Bone Face": {
+                    "meaning": "ncit:C63706",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "Bone Foot": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
                 "Bone Marrow": {
                     "meaning": "",
                     "comments": [],
@@ -46801,13 +46867,21 @@
                         "rms_v3.0-approved"
                     ]
                 },
+                "Bone Shoulder Girdle": {
+                    "meaning": "ncit:C33547",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
                 "Brain": {
                     "meaning": "ncit:C12439",
                     "comments": [],
                     "in_subset": [
                         "npc_v1.0-approved",
                         "rb_v1.2-approved",
-                        "rms_v3.0-approved"
+                        "rms_v3.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Brain/Leptomeninges": {
@@ -46821,7 +46895,36 @@
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
-                        "nrsts_v2.0-approved"
+                        "nrsts_v2.0-approved",
+                        "os_v2.0-approved"
+                    ]
+                },
+                "Bronchus": {
+                    "meaning": "ncit:C12683",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "Buttock": {
+                    "meaning": "ncit:C89806",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "Carpal": {
+                    "meaning": "ncit:C33894",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "Cervical Spine": {
+                    "meaning": "ncit:C69313",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
                     ]
                 },
                 "Cervix": {
@@ -46851,7 +46954,15 @@
                     "comments": [],
                     "in_subset": [
                         "nrsts_v2.0-approved",
-                        "rb_v1.2-approved"
+                        "rb_v1.2-approved",
+                        "os_v2.0-approved"
+                    ]
+                },
+                "Clavicle": {
+                    "meaning": "ncit:C12695",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
                     ]
                 },
                 "Craniospinal": {
@@ -46867,6 +46978,13 @@
                     "comments": [],
                     "in_subset": [
                         "aml_v2.0-approved"
+                    ]
+                },
+                "Coccyx": {
+                    "meaning": "ncit:C12696",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
                     ]
                 },
                 "Distant Lymph Nodes": {
@@ -47699,18 +47817,12 @@
                         "ews_v2.0-approved"
                     ]
                 },
-                "Adrenal": {
-                    "meaning": "ncit:C12666",
-                    "comments": [],
-                    "in_subset": [
-                        "os_v2.0-approved"
-                    ]
-                },
                 "Adrenal Gland": {
                     "meaning": "ncit:C12666",
                     "comments": [],
                     "in_subset": [
-                        "lt_v1.0-approved"
+                        "lt_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Anal/Perianal": {
