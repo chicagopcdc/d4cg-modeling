@@ -41146,6 +41146,7 @@
                     "in_subset": [
                         "aml_v2.0-approved",
                         "cns_v1.2-approved",
+                        "ews_v2.0-approved",
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
                         "lt_v1.0-approved",
@@ -60296,6 +60297,7 @@
                     "in_subset": [
                         "aml_v2.0-approved",
                         "cns_v1.2-approved",
+                        "ews_v2.0-approved",
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
                         "ls_v1.0-draft",
@@ -66272,6 +66274,7 @@
                     "meaning": "ncit:C175045",
                     "comments": [],
                     "in_subset": [
+                        "ews_v2.0-approved",
                         "hl_v2.0-approved"
                     ]
                 },
@@ -66279,6 +66282,7 @@
                     "meaning": "ncit:C185695",
                     "comments": [],
                     "in_subset": [
+                        "ews_v2.0-approved",
                         "hl_v2.0-approved"
                     ]
                 },
@@ -66286,6 +66290,7 @@
                     "meaning": "ncit:C175046",
                     "comments": [],
                     "in_subset": [
+                        "ews_v2.0-approved",
                         "hl_v2.0-approved"
                     ]
                 },
@@ -66293,6 +66298,7 @@
                     "meaning": "ncit:C17998",
                     "comments": [],
                     "in_subset": [
+                        "ews_v2.0-approved",
                         "hl_v2.0-approved"
                     ]
                 }
