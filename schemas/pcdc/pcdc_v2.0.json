@@ -3416,6 +3416,7 @@
                 "review_source",
                 "tumor_state",
                 "detection_method",
+                "sedation_type",
                 "mri_sequence",
                 "site_classification",
                 "disease_presence",
@@ -3599,6 +3600,11 @@
                         "os_v2.0-approved",
                         "pre_v1.0-approved",
                         "rb_v1.2-approved"
+                    ]
+                },
+                "sedation_type": {
+                    "in_subset": [
+                        "ls_v1.0-draft"
                     ]
                 },
                 "site_classification": {
@@ -9520,6 +9526,13 @@
                 "tier_optional": "fa_v1.0-draft",
                 "tier_priority": "rb_v1.2-approved"
             }
+        },
+        "sedation_type": {
+            "slot_uri": "",
+            "range": "SedationTypeEnum",
+            "comments": [
+            ],
+            "annotations": {}
         },
         "mri_sequence": {
             "slot_uri": "",
@@ -23151,6 +23164,13 @@
                         "rb_v1.2-approved",
                         "rms_v3.0-approved"
                     ]
+                },
+                "Curative Intent, No Surgery Planned": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "ls_v1.0-draft"
+                  ]
                 },
                 "Immunotherapy": {
                     "meaning": "ncit:C15262",
@@ -60714,6 +60734,38 @@
                     "comments": [],
                     "in_subset": [
                         "cns_v1.2-approved"
+                    ]
+                }
+            }
+        },
+        "SedationTypeEnum": {
+            "permissible_values": {
+                "Moderate Sedation (Fentanyl, Midazolam, Diphenhydramine, Meperidine)": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "ls_v1.0-draft"
+                    ]
+                },
+                "Monitored Anesthesia Care (Propofol)": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "ls_v1.0-draft"
+                    ]
+                },
+                "No Sedation": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "ls_v1.0-draft"
+                    ]
+                },
+                "Not Reported": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "ls_v1.0-draft"
                     ]
                 }
             }
