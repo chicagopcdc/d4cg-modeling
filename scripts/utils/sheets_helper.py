@@ -4,7 +4,7 @@ import os, pickle, datetime, ezsheets
 from googleapiclient.discovery import build
 
 AUTH_DIR = "scripts/auth"
-TOKEN_PATH = "token.pickle"
+TOKEN_PATH = "token-sheets.pickle"
 FORMAT_SHEET_ID = "1UDTMiw0LnLwqUBNc4O2_FAAX5UylCy-VXXRxEojK4IA"
 
 def _chdir_auth():
