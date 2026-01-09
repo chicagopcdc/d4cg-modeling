@@ -2208,6 +2208,7 @@
                         "cns_v1.2-approved",
                         "ews_v2.0-approved",
                         "gct_v2.0-approved",
+                        "ls_v1.0-draft",
                         "nbl_v2.0-approved",
                         "nrsts_v2.0-approved",
                         "pre_v1.0-approved",
@@ -3152,6 +3153,7 @@
                 "tnm_tumor_t",
                 "tnm_node_n",
                 "tnm_metastasis_m",
+                "tnm_overall",
                 "h_stage",
                 "group_system",
                 "group",
@@ -3290,6 +3292,11 @@
                         "npc_v1.0-approved",
                         "pre_v1.0-approved",
                         "rb_v1.2-approved"
+                    ]
+                },
+                "tnm_overall": {
+                    "in_subset": [
+                        "ls_v1.0-draft"
                     ]
                 },
                 "h_stage": {
@@ -8104,6 +8111,12 @@
         "tnm_finding": {
             "slot_uri": "",
             "range": "TnmFindingEnum",
+            "comments": [],
+            "annotations": {}
+        },
+        "tnm_overall": {
+            "slot_uri": "",
+            "range": "TnmOverallEnum",
             "comments": [],
             "annotations": {}
         },
@@ -28627,7 +28640,7 @@
                     "comments": [],
                     "in_subset": [
                         "pre_v1.0-approved"
-                    ]
+                    ]      
                 },
                 "MYC Amplification": {
                     "meaning": "ncit:C36641",
@@ -28672,6 +28685,13 @@
                     "in_subset": [
                         "aml_v2.0-approved",
                         "pre_v1.0-approved"
+                    ]
+                },
+                "Mutated": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "ls_v1.0-draft"
                     ]
                 },
                 "N-RAS Mutation": {
@@ -29555,7 +29575,8 @@
                     "meaning": "ncit:C62195",
                     "comments": [],
                     "in_subset": [
-                        "aml_v2.0-approved"
+                        "aml_v2.0-approved",
+                        "ls_v1.0-draft"
                     ]
                 },
                 "X Chromosome Inversion": {
@@ -30143,6 +30164,7 @@
                     "comments": [],
                     "in_subset": [
                         "aml_v2.0-approved",
+                        "ls_v1.0-draft",
                         "nrsts_v2.0-approved"
                     ]
                 }
@@ -31380,7 +31402,6 @@
                     "comments": [],
                     "in_subset": [
                         "cns_v1.2-approved",
-                        "ls_v1.0-draft",
                         "rb_v1.2-approved"
                     ]
                 },
@@ -31389,7 +31410,6 @@
                     "comments": [],
                     "in_subset": [
                         "cns_v1.2-approved",
-                        "ls_v1.0-draft",
                         "rb_v1.2-approved"
                     ]
                 },
@@ -31402,12 +31422,18 @@
                         "rb_v1.2-approved"
                     ]
                 },
+                "Mistmatch": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "ls_v1.0-draft"
+                    ]
+                },
                 "Promoter": {
                     "meaning": "ncit:C13297",
                     "comments": [],
                     "in_subset": [
                         "cns_v1.2-approved",
-                        "ls_v1.0-draft",
                         "rb_v1.2-approved"
                     ]
                 },
@@ -31415,8 +31441,7 @@
                     "meaning": "ncit:C45574",
                     "comments": [],
                     "in_subset": [
-                        "cns_v1.2-approved",
-                        "ls_v1.0-draft"
+                        "cns_v1.2-approved"
                     ]
                 }
             }
@@ -34224,6 +34249,13 @@
                         "fa_v1.0-draft"
                     ]
                 },
+                "Colon/Rectal/Appendiceal": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "ls_v1.0-draft"
+                    ]
+                },
                 "Comb. hepatocel. carcinoma & cholangiocarcinoma": {
                     "meaning": "icdo:8180/3",
                     "comments": [],
@@ -35966,6 +35998,13 @@
                     ]
                 },
                 "High-grade dysplasia": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "ls_v1.0-draft"
+                    ]
+                },
+                "High Grade Papillary Serous": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
@@ -41622,7 +41661,6 @@
                     "in_subset": [
                         "fa_v1.0-draft",
                         "gct_v2.0-approved",
-                        "ls_v1.0-draft",
                         "npc_v1.0-approved",
                         "pre_v1.0-approved"
                     ]
@@ -41633,7 +41671,6 @@
                     "in_subset": [
                         "fa_v1.0-draft",
                         "gct_v2.0-approved",
-                        "ls_v1.0-draft",
                         "npc_v1.0-approved",
                         "pre_v1.0-approved"
                     ]
@@ -41644,7 +41681,6 @@
                     "in_subset": [
                         "fa_v1.0-draft",
                         "gct_v2.0-approved",
-                        "ls_v1.0-draft",
                         "npc_v1.0-approved",
                         "pre_v1.0-approved"
                     ]
@@ -41655,7 +41691,6 @@
                     "in_subset": [
                         "fa_v1.0-draft",
                         "gct_v2.0-approved",
-                        "ls_v1.0-draft",
                         "npc_v1.0-approved",
                         "pre_v1.0-approved"
                     ]
@@ -41666,7 +41701,6 @@
                     "in_subset": [
                         "fa_v1.0-draft",
                         "gct_v2.0-approved",
-                        "ls_v1.0-draft",
                         "npc_v1.0-approved",
                         "pre_v1.0-approved"
                     ]
@@ -41677,7 +41711,6 @@
                     "in_subset": [
                         "fa_v1.0-draft",
                         "gct_v2.0-approved",
-                        "ls_v1.0-draft",
                         "npc_v1.0-approved",
                         "pre_v1.0-approved"
                     ]
@@ -41688,7 +41721,6 @@
                     "in_subset": [
                         "fa_v1.0-draft",
                         "gct_v2.0-approved",
-                        "ls_v1.0-draft",
                         "npc_v1.0-approved",
                         "pre_v1.0-approved"
                     ]
@@ -41699,7 +41731,6 @@
                     "in_subset": [
                         "fa_v1.0-draft",
                         "gct_v2.0-approved",
-                        "ls_v1.0-draft",
                         "npc_v1.0-approved",
                         "pre_v1.0-approved"
                     ]
@@ -41710,7 +41741,6 @@
                     "in_subset": [
                         "fa_v1.0-draft",
                         "gct_v2.0-approved",
-                        "ls_v1.0-draft",
                         "npc_v1.0-approved",
                         "pre_v1.0-approved"
                     ]
@@ -41721,7 +41751,6 @@
                     "in_subset": [
                         "fa_v1.0-draft",
                         "gct_v2.0-approved",
-                        "ls_v1.0-draft",
                         "npc_v1.0-approved",
                         "pre_v1.0-approved"
                     ]
@@ -41732,7 +41761,6 @@
                     "in_subset": [
                         "fa_v1.0-draft",
                         "gct_v2.0-approved",
-                        "ls_v1.0-draft",
                         "npc_v1.0-approved",
                         "pre_v1.0-approved"
                     ]
@@ -41743,7 +41771,6 @@
                     "in_subset": [
                         "fa_v1.0-draft",
                         "gct_v2.0-approved",
-                        "ls_v1.0-draft",
                         "npc_v1.0-approved",
                         "pre_v1.0-approved"
                     ]
@@ -41754,7 +41781,6 @@
                     "in_subset": [
                         "fa_v1.0-draft",
                         "gct_v2.0-approved",
-                        "ls_v1.0-draft",
                         "npc_v1.0-approved",
                         "pre_v1.0-approved"
                     ]
@@ -42419,6 +42445,41 @@
                         "pre_v1.0-approved"
                     ]
                 },
+                "Group 1": {
+                    "meaning": "ncit:C137992",
+                    "comments": [],
+                    "in_subset": [
+                        "ls_v1.0-draft"
+                    ]
+                },
+                "Group 2": {
+                    "meaning": "ncit:C137993",
+                    "comments": [],
+                    "in_subset": [
+                        "ls_v1.0-draft"
+                    ]
+                },
+                "Group 3": {
+                    "meaning": "ncit:C137994",
+                    "comments": [],
+                    "in_subset": [
+                        "ls_v1.0-draft"
+                    ]
+                },
+                "Group 4": {
+                    "meaning": "ncit:C137995",
+                    "comments": [],
+                    "in_subset": [
+                        "ls_v1.0-draft"
+                    ]
+                },
+                "Group 5": {
+                    "meaning": "ncit:C137996",
+                    "comments": [],
+                    "in_subset": [
+                        "ls_v1.0-draft"
+                    ]
+                },
                 "Lugano Stage >> Stage 1": {
                     "meaning": "ncit:C141180",
                     "comments": [],
@@ -42745,6 +42806,48 @@
                         "pre_v1.0-approved"
                     ]
                 },
+                "Stage IIa": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "ls_v1.0-draft"
+                    ]
+                },
+                "Stage IIb": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "ls_v1.0-draft"
+                    ]
+                },
+                "Stage IIc": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "ls_v1.0-draft"
+                    ]
+                },
+                "Stage IIIa": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "ls_v1.0-draft"
+                    ]
+                },
+                "Stage IIIb": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "ls_v1.0-draft"
+                    ]
+                },
+                "Stage IIIc": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "ls_v1.0-draft"
+                    ]
+                },
                 "St. Jude Stage >> Stage 1": {
                     "meaning": "C141218",
                     "comments": [],
@@ -42843,6 +42946,7 @@
                     "in_subset": [
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
+                        "ls_v1.0-draft",
                         "nbl_v2.0-approved",
                         "pre_v1.0-approved"
                     ]
@@ -42853,6 +42957,7 @@
                     "in_subset": [
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
+                        "ls_v1.0-draft",
                         "nbl_v2.0-approved",
                         "pre_v1.0-approved"
                     ]
@@ -42935,6 +43040,45 @@
                     "comments": [],
                     "in_subset": [
                         "rms_v3.0-approved"
+                    ]
+                }
+            }
+        },
+        "TnmOverallEnum": {
+            "permissible_values": {
+                "I": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "ls_v1.0-draft"
+                    ]
+                },
+                "II": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "ls_v1.0-draft"
+                    ]
+                },
+                "III": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "ls_v1.0-draft"
+                    ]
+                },
+                "Unknown": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "ls_v1.0-draft"
+                    ]
+                },
+                "Not Reported": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "ls_v1.0-draft"
                     ]
                 }
             }
@@ -60837,13 +60981,6 @@
                         "pre_v1.0-approved"
                     ]
                 },
-                "AJCC": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
-                        "ls_v1.0-draft"
-                    ]
-                },
                 "AJCC v6 Stage": {
                     "meaning": "ncit:C90529",
                     "comments": [],
@@ -60940,6 +61077,13 @@
                         "pre_v1.0-approved"
                     ]
                 },
+                "Gleason Grading System": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "ls_v1.0-draft"
+                    ]
+                },
                 "INRGSS": {
                     "meaning": "ncit:C133427",
                     "comments": [],
@@ -61020,6 +61164,13 @@
                     "comments": [],
                     "in_subset": [
                         "lt_v1.0-approved"
+                    ]
+                },
+                "TNM Staging System": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "ls_v1.0-draft"
                     ]
                 },
                 "Toronto Childhood Cancer Stage Guidelines": {
@@ -63904,7 +64055,6 @@
                     "comments": [],
                     "in_subset": [
                         "fa_v1.0-draft",
-                        "ls_v1.0-draft",
                         "rb_v1.2-approved"
                     ]
                 },
@@ -63913,7 +64063,6 @@
                     "comments": [],
                     "in_subset": [
                         "fa_v1.0-draft",
-                        "ls_v1.0-draft",
                         "rb_v1.2-approved"
                     ]
                 },
@@ -63922,7 +64071,6 @@
                     "comments": [],
                     "in_subset": [
                         "fa_v1.0-draft",
-                        "ls_v1.0-draft",
                         "rb_v1.2-approved"
                     ]
                 },
@@ -63941,7 +64089,6 @@
                     "comments": [],
                     "in_subset": [
                         "fa_v1.0-draft",
-                        "ls_v1.0-draft",
                         "npc_v1.0-approved",
                         "rb_v1.2-approved"
                     ]
@@ -63951,7 +64098,6 @@
                     "comments": [],
                     "in_subset": [
                         "fa_v1.0-draft",
-                        "ls_v1.0-draft",
                         "npc_v1.0-approved",
                         "rb_v1.2-approved"
                     ]
@@ -63969,7 +64115,6 @@
                     "comments": [],
                     "in_subset": [
                         "fa_v1.0-draft",
-                        "ls_v1.0-draft",
                         "rb_v1.2-approved"
                     ]
                 },
@@ -63978,7 +64123,6 @@
                     "comments": [],
                     "in_subset": [
                         "fa_v1.0-draft",
-                        "ls_v1.0-draft",
                         "rb_v1.2-approved"
                     ]
                 },
@@ -63987,7 +64131,6 @@
                     "comments": [],
                     "in_subset": [
                         "fa_v1.0-draft",
-                        "ls_v1.0-draft",
                         "rb_v1.2-approved"
                     ]
                 },
@@ -63996,7 +64139,6 @@
                     "comments": [],
                     "in_subset": [
                         "fa_v1.0-draft",
-                        "ls_v1.0-draft",
                         "rb_v1.2-approved"
                     ]
                 },
@@ -64005,7 +64147,6 @@
                     "comments": [],
                     "in_subset": [
                         "fa_v1.0-draft",
-                        "ls_v1.0-draft",
                         "rb_v1.2-approved"
                     ]
                 },
@@ -64024,7 +64165,6 @@
                     "comments": [],
                     "in_subset": [
                         "fa_v1.0-draft",
-                        "ls_v1.0-draft",
                         "rb_v1.2-approved"
                     ]
                 },
@@ -64033,7 +64173,6 @@
                     "comments": [],
                     "in_subset": [
                         "fa_v1.0-draft",
-                        "ls_v1.0-draft",
                         "rb_v1.2-approved"
                     ]
                 },
@@ -64042,7 +64181,6 @@
                     "comments": [],
                     "in_subset": [
                         "fa_v1.0-draft",
-                        "ls_v1.0-draft",
                         "rb_v1.2-approved"
                     ]
                 },
@@ -64051,7 +64189,6 @@
                     "comments": [],
                     "in_subset": [
                         "fa_v1.0-draft",
-                        "ls_v1.0-draft",
                         "rb_v1.2-approved"
                     ]
                 },
@@ -64121,7 +64258,6 @@
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
-                        "ls_v1.0-draft",
                         "npc_v1.0-approved"
                     ]
                 },
@@ -64129,7 +64265,6 @@
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
-                        "ls_v1.0-draft",
                         "npc_v1.0-approved"
                     ]
                 },
@@ -64172,7 +64307,6 @@
                     "meaning": "ncit:C48701",
                     "comments": [],
                     "in_subset": [
-                        "ls_v1.0-draft",
                         "rb_v1.2-approved"
                     ]
                 },
@@ -64180,7 +64314,6 @@
                     "meaning": "ncit:C48702",
                     "comments": [],
                     "in_subset": [
-                        "ls_v1.0-draft",
                         "rb_v1.2-approved"
                     ]
                 },
@@ -64188,7 +64321,6 @@
                     "meaning": "ncit:C48703",
                     "comments": [],
                     "in_subset": [
-                        "ls_v1.0-draft",
                         "rb_v1.2-approved"
                     ]
                 },
@@ -64196,7 +64328,6 @@
                     "meaning": "ncit:C188301",
                     "comments": [],
                     "in_subset": [
-                        "ls_v1.0-draft",
                         "rb_v1.2-approved"
                     ]
                 },
@@ -64204,7 +64335,6 @@
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
-                        "ls_v1.0-draft",
                         "rb_v1.2-approved"
                     ]
                 },
@@ -64213,8 +64343,14 @@
                     "comments": [],
                     "in_subset": [
                         "fa_v1.0-draft",
-                        "ls_v1.0-draft",
                         "rb_v1.2-approved"
+                    ]
+                },
+                "M2": {
+                    "meaning": "ncit:C48704",
+                    "comments": [],
+                    "in_subset": [
+                        "ls_v1.0-draft"
                     ]
                 }
             }
