@@ -5885,6 +5885,7 @@
                 "nbl_v2.0-approved",
                 "npc_v1.0-approved",
                 "nrsts_v2.0-approved",
+                "os_v2.0-approved",
                 "rb_v1.2-approved",
                 "rms_v3.0-approved"
             ],
@@ -5902,6 +5903,7 @@
                         "nbl_v2.0-approved",
                         "npc_v1.0-approved",
                         "nrsts_v2.0-approved",
+                        "os_v2.0-approved",
                         "rb_v1.2-approved",
                         "rms_v3.0-approved"
                     ]
@@ -5916,6 +5918,7 @@
                         "nbl_v2.0-approved",
                         "npc_v1.0-approved",
                         "nrsts_v2.0-approved",
+                        "os_v2.0-approved",
                         "rb_v1.2-approved",
                         "rms_v3.0-approved"
                     ]
@@ -5929,6 +5932,7 @@
                         "hl_v2.0-approved",
                         "npc_v1.0-approved",
                         "nrsts_v2.0-approved",
+                        "os_v2.0-approved",
                         "rb_v1.2-approved",
                         "rms_v3.0-approved"
                     ]
@@ -5975,6 +5979,7 @@
                         "nbl_v2.0-approved",
                         "npc_v1.0-approved",
                         "nrsts_v2.0-approved",
+                        "os_v2.0-approved",
                         "rb_v1.2-approved",
                         "rms_v3.0-approved"
                     ]
@@ -5992,6 +5997,7 @@
                         "cns_v1.2-approved",
                         "ews_v2.0-approved",
                         "gct_v2.0-approved",
+                        "os_v2.0-approved",
                         "rb_v1.2-approved"
                     ]
                 },
@@ -6000,6 +6006,7 @@
                         "cns_v1.2-approved",
                         "ews_v2.0-approved",
                         "gct_v2.0-approved",
+                        "os_v2.0-approved",
                         "rb_v1.2-approved"
                     ]
                 },
@@ -6071,13 +6078,15 @@
                 "necrosis": {
                     "in_subset": [
                         "ews_v2.0-approved",
-                        "nrsts_v2.0-approved"
+                        "nrsts_v2.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "necrosis_pct": {
                     "in_subset": [
                         "ews_v2.0-approved",
-                        "nrsts_v2.0-approved"
+                        "nrsts_v2.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "mri_sequence": {
@@ -56268,6 +56277,7 @@
                         "ews_v2.0-approved",
                         "npc_v1.0-approved",
                         "nrsts_v2.0-approved",
+                        "os_v2.0-approved",
                         "rms_v3.0-approved"
                     ]
                 },
@@ -56397,7 +56407,8 @@
                     "comments": [],
                     "in_subset": [
                         "ews_v2.0-approved",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "RECIST >> Partial Response": {
@@ -56405,7 +56416,8 @@
                     "comments": [],
                     "in_subset": [
                         "ews_v2.0-approved",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "RECIST >> Progressive Disease": {
@@ -56413,7 +56425,8 @@
                     "comments": [],
                     "in_subset": [
                         "ews_v2.0-approved",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "RECIST >> Stable Disease": {
@@ -56421,7 +56434,8 @@
                     "comments": [],
                     "in_subset": [
                         "ews_v2.0-approved",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "System NOS >> Complete Response": {
@@ -56921,7 +56935,8 @@
                     "comments": [],
                     "in_subset": [
                         "ews_v2.0-approved",
-                        "gct_v2.0-approved"
+                        "gct_v2.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "WHO": {
@@ -57040,14 +57055,16 @@
                     "meaning": "ncit:C180353",
                     "comments": [],
                     "in_subset": [
-                        "ews_v2.0-approved"
+                        "ews_v2.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "> 90% Necrosis": {
                     "meaning": "ncit:C180348",
                     "comments": [],
                     "in_subset": [
-                        "ews_v2.0-approved"
+                        "ews_v2.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 ">=50% Necrosis": {
