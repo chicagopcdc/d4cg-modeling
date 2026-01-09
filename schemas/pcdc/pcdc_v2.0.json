@@ -5291,6 +5291,7 @@
                         "hl_v2.0-approved",
                         "npc_v1.0-approved",
                         "nrsts_v2.0-approved",
+                        "os_v2.0-approved",
                         "rb_v1.2-approved",
                         "rms_v3.0-approved"
                     ]
@@ -5436,7 +5437,8 @@
                 },
                 "transposition_organ": {
                     "in_subset": [
-                        "ews_v2.0-approved"
+                        "ews_v2.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "indication": {
@@ -47059,6 +47061,20 @@
                         "os_v2.0-approved"
                     ]
                 },
+                "Colon": {
+                    "meaning": "ncit:C12382",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "Cutaneous": {
+                    "meaning": "ncit:C13316",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
                 "Distant Lymph Nodes": {
                     "meaning": "",
                     "comments": [],
@@ -47071,6 +47087,55 @@
                     "comments": [],
                     "in_subset": [
                         "nrsts_v2.0-approved"
+                    ]
+                },
+                "Dorsal Spine": {
+                    "meaning": "ncit:C32472",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "Duodenum": {
+                    "meaning": "ncit:C12263",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "Elbow": {
+                    "meaning": "ncit:C32497",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "Elbow Joint": {
+                    "meaning": "ncit:C32497",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "Epididymis": {
+                    "meaning": "ncit:C12328",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "Esophagus": {
+                    "meaning": "ncit:C12389",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "Ethmoid": {
+                    "meaning": "ncit:C12711",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
                     ]
                 },
                 "Exact Volume Unknown": {
@@ -47137,6 +47202,34 @@
                         "rms_v3.0-approved"
                     ]
                 },
+                "Fallopian Tube": {
+                    "meaning": "ncit:C12403",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "Femur": {
+                    "meaning": "ncit:C12717",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "Fibula": {
+                    "meaning": "ncit:C12718",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "Finger": {
+                    "meaning": "ncit:C32608",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
                 "Focal": {
                     "meaning": "ncit:C28224",
                     "comments": [],
@@ -47145,17 +47238,33 @@
                     ]
                 },
                 "Foot": {
-                    "meaning": "",
+                    "meaning": "ncit:C32622",
                     "comments": [],
                     "in_subset": [
                         "nrsts_v2.0-approved",
-                        "rms_v3.0-approved"
+                        "rms_v3.0-approved",
+                        "os_v2.0-approved"
+                    ]
+                },
+                "Foot Bone": {
+                    "meaning": "ncit:C13068",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "Foot Phalanges": {
+                    "meaning": "ncit:C52772",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
                     ]
                 },
                 "Forearm": {
-                    "meaning": "",
+                    "meaning": "ncit:C32628",
                     "comments": [],
                     "in_subset": [
+                        "os_v2.0-approved",
                         "rms_v3.0-approved"
                     ]
                 },
@@ -47166,12 +47275,55 @@
                         "gct_v2.0-approved"
                     ]
                 },
+                "Gallbladder": {
+                    "meaning": "ncit:C12377",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "Gastrointestinal Tract": {
+                    "meaning": "ncit:C34082",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "Groin": {
+                    "meaning": "ncit:C12726",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "Gynecological Area": {
+                    "meaning": "ncit:C13039",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
                 "Hand": {
-                    "meaning": "",
+                    "meaning": "ncit:C32712",
                     "comments": [],
                     "in_subset": [
                         "nrsts_v2.0-approved",
-                        "rms_v3.0-approved"
+                        "rms_v3.0-approved",
+                        "os_v2.0-approved"
+                    ]
+                },
+                "Hand Bone": {
+                    "meaning": "ncit:C52771",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "Hand Phalanges": {
+                    "meaning": "ncit:C32868",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
                     ]
                 },
                 "Head": {
@@ -47187,7 +47339,15 @@
                     "in_subset": [
                         "ews_v2.0-approved",
                         "gct_v2.0-approved",
+                        "os_v2.0-approved",
                         "rb_v1.2-approved"
+                    ]
+                },
+                "Heart": {
+                    "meaning": "ncit:C12727",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
                     ]
                 },
                 "Heart, Pericardium": {
@@ -47204,6 +47364,13 @@
                         "nrsts_v2.0-approved"
                     ]
                 },
+                "Humerus": {
+                    "meaning": "ncit:C12731",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
                 "Hypopharynx": {
                     "meaning": "",
                     "comments": [],
@@ -47216,6 +47383,13 @@
                     "comments": [],
                     "in_subset": [
                         "hl_v2.0-approved"
+                    ]
+                },
+                "Inferior Limb": {
+                    "meaning": "ncit:C12982",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
                     ]
                 },
                 "Infratemporal Fossa/Pterygopalatine": {
@@ -47248,31 +47422,49 @@
                     ]
                 },
                 "Kidney": {
-                    "meaning": "",
+                    "meaning": "ncit:C12415",
                     "comments": [],
                     "in_subset": [
+                        "os_v2.0-approved",
                         "rms_v3.0-approved"
                     ]
                 },
                 "Knee": {
-                    "meaning": "",
+                    "meaning": "ncit:C32898",
                     "comments": [],
                     "in_subset": [
+                        "os_v2.0-approved",
                         "rms_v3.0-approved"
+                    ]
+                },
+                "Knee Joint": {
+                    "meaning": "ncit:C32898",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "Large Vessels": {
+                    "meaning": "ncit:C102955",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
                     ]
                 },
                 "Larynx": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
+                        "os_v2.0-approved",
                         "rms_v3.0-approved"
                     ]
                 },
                 "Leg": {
-                    "meaning": "",
+                    "meaning": "ncit:C12392",
                     "comments": [],
                     "in_subset": [
                         "nrsts_v2.0-approved",
+                        "os_v2.0-approved",
                         "rms_v3.0-approved"
                     ]
                 },
@@ -47318,7 +47510,8 @@
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
                         "npc_v1.0-approved",
-                        "nrsts_v2.0-approved"
+                        "nrsts_v2.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Liver/Biliary Tract": {
@@ -47340,6 +47533,7 @@
                     "comments": [],
                     "in_subset": [
                         "ews_v2.0-approved",
+                        "os_v2.0-approved",
                         "rb_v1.2-approved"
                     ]
                 },
@@ -47350,6 +47544,13 @@
                         "rms_v3.0-approved"
                     ]
                 },
+                "Lumbar Spine": {
+                    "meaning": "ncit:C69314",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
                 "Lung": {
                     "meaning": "ncit:C12468",
                     "comments": [],
@@ -47358,6 +47559,7 @@
                         "hl_v2.0-approved",
                         "npc_v1.0-approved",
                         "nrsts_v2.0-approved",
+                        "os_v2.0-approved",
                         "rb_v1.2-approved",
                         "rms_v3.0-approved"
                     ]
@@ -47366,7 +47568,22 @@
                     "meaning": "ncit:C12745",
                     "comments": [],
                     "in_subset": [
+                        "os_v2.0-approved",
                         "rb_v1.2-approved"
+                    ]
+                },
+                "Mandible": {
+                    "meaning": "ncit:C12290",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "Maxilla": {
+                    "meaning": "ncit:C26470",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
                     ]
                 },
                 "Mediastinum": {
@@ -47377,11 +47594,32 @@
                         "hl_v2.0-approved"
                     ]
                 },
+                "Meninges": {
+                    "meaning": "ncit:C12348",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
                 "Mesenteric or Hepatis Porta": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
                         "hl_v2.0-approved"
+                    ]
+                },
+                "Metacarpals": {
+                    "meaning": "ncit:C12751",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "Metatarsals": {
+                    "meaning": "ncit:C12752",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
                     ]
                 },
                 "Middle Ear": {
@@ -47405,6 +47643,13 @@
                         "rms_v3.0-approved"
                     ]
                 },
+                "Nasal Septum": {
+                    "meaning": "ncit:C33160",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
                 "Nasopharynx": {
                     "meaning": "",
                     "comments": [],
@@ -47419,6 +47664,7 @@
                     "in_subset": [
                         "hl_v2.0-approved",
                         "nrsts_v2.0-approved",
+                        "os_v2.0-approved",
                         "rms_v3.0-approved"
                     ]
                 },
@@ -47433,6 +47679,7 @@
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
+                        "os_v2.0-approved",
                         "rms_v3.0-approved"
                     ]
                 },
@@ -47440,6 +47687,7 @@
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
+                        "os_v2.0-approved",
                         "rms_v3.0-approved"
                     ]
                 },
@@ -47455,7 +47703,15 @@
                     "comments": [],
                     "in_subset": [
                         "gct_v2.0-approved",
+                        "os_v2.0-approved",
                         "rms_v3.0-approved"
+                    ]
+                },
+                "Pancreas": {
+                    "meaning": "ncit:C12393",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
                     ]
                 },
                 "Paraaortic": {
@@ -47463,6 +47719,13 @@
                     "comments": [],
                     "in_subset": [
                         "hl_v2.0-approved"
+                    ]
+                },
+                "Paranasal Fossa": {
+                    "meaning": "ncit:C12763",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
                     ]
                 },
                 "Paranasal Sinuses": {
@@ -47488,9 +47751,10 @@
                     ]
                 },
                 "Paratesticular": {
-                    "meaning": "",
+                    "meaning": "ncit:C162491",
                     "comments": [],
                     "in_subset": [
+                        "os_v2.0-approved",
                         "rms_v3.0-approved"
                     ]
                 },
@@ -47515,6 +47779,13 @@
                         "rms_v3.0-approved"
                     ]
                 },
+                "Patella": {
+                    "meaning": "ncit:C33282",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
                 "Pelvis": {
                     "meaning": "ncit:C12767",
                     "comments": [],
@@ -47522,8 +47793,16 @@
                         "ews_v2.0-approved",
                         "hl_v2.0-approved",
                         "nrsts_v2.0-approved",
+                        "os_v2.0-approved",
                         "rb_v1.2-approved",
                         "rms_v3.0-approved"
+                    ]
+                },
+                "Penis": {
+                    "meaning": "ncit:C12409",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
                     ]
                 },
                 "Perineum": {
@@ -47535,10 +47814,11 @@
                     ]
                 },
                 "Peritoneum": {
-                    "meaning": "",
+                    "meaning": "ncit:C12770",
                     "comments": [],
                     "in_subset": [
-                        "nrsts_v2.0-approved"
+                        "nrsts_v2.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Pineal": {
@@ -47552,7 +47832,8 @@
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
-                        "nrsts_v2.0-approved"
+                        "nrsts_v2.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Pleural Effusion": {
@@ -47574,7 +47855,22 @@
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
+                        "os_v2.0-approved",
                         "rms_v3.0-approved"
+                    ]
+                },
+                "Radius": {
+                    "meaning": "ncit:C12777",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "Rectum": {
+                    "meaning": "ncit:C12390",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
                     ]
                 },
                 "Regional Lymph Nodes, NOS": {
@@ -47596,6 +47892,7 @@
                     "comments": [],
                     "in_subset": [
                         "gct_v2.0-approved",
+                        "os_v2.0-approved",
                         "rb_v1.2-approved",
                         "rms_v3.0-approved"
                     ]
@@ -47607,6 +47904,13 @@
                         "npc_v1.0-approved"
                     ]
                 },
+                "Rib": {
+                    "meaning": "ncit:C12782",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
                 "Sacrococcygeal": {
                     "meaning": "ncit:C33506",
                     "comments": [],
@@ -47614,11 +47918,33 @@
                         "gct_v2.0-approved"
                     ]
                 },
+                "Sacrum": {
+                    "meaning": "ncit:C33508",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "Salivary Gland": {
+                    "meaning": "ncit:C12426",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
                 "Scalp": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
+                        "os_v2.0-approved",
                         "rms_v3.0-approved"
+                    ]
+                },
+                "Scapula": {
+                    "meaning": "ncit:C12783",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
                     ]
                 },
                 "Shoulder": {
@@ -47627,6 +47953,41 @@
                     "in_subset": [
                         "nrsts_v2.0-approved",
                         "rms_v3.0-approved"
+                    ]
+                },
+                "Shoulder Girdle": {
+                    "meaning": "ncit:C33547",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "Shoulder Joint": {
+                    "meaning": "ncit:C33548",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "Skull": {
+                    "meaning": "ncit:C12789",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "Skull and Face Bone": {
+                    "meaning": "ncit:C12386",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "Small Intestine": {
+                    "meaning": "ncit:C12386",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
                     ]
                 },
                 "Soft Tissue": {
@@ -47647,7 +48008,15 @@
                     "meaning": "ncit:C12998",
                     "comments": [],
                     "in_subset": [
-                        "ews_v2.0-approved"
+                        "ews_v2.0-approved",
+                        "os_v2.0-approved"
+                    ]
+                },
+                "Spleen": {
+                    "meaning": "ncit:C12432",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
                     ]
                 },
                 "Splenic Hilar or Spleen": {
@@ -47657,11 +48026,39 @@
                         "hl_v2.0-approved"
                     ]
                 },
+                "Sternum": {
+                    "meaning": "ncit:C12793",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "Stomach": {
+                    "meaning": "ncit:C12391",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "Superior Maxilla": {
+                    "meaning": "ncit:C33682",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
                 "Suprasellar/Neurohypophyseal": {
                     "meaning": "ncit:C177357",
                     "comments": [],
                     "in_subset": [
                         "gct_v2.0-approved"
+                    ]
+                },
+                "Tarsals": {
+                    "meaning": "ncit:C12796",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
                     ]
                 },
                 "Temporal Cortex": {
@@ -47675,7 +48072,8 @@
                     "meaning": "ncit:C12412",
                     "comments": [],
                     "in_subset": [
-                        "gct_v2.0-approved"
+                        "gct_v2.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Thalamus": {
@@ -47690,6 +48088,7 @@
                     "comments": [],
                     "in_subset": [
                         "nrsts_v2.0-approved",
+                        "os_v2.0-approved",
                         "rms_v3.0-approved"
                     ]
                 },
@@ -47705,7 +48104,15 @@
                     "comments": [],
                     "in_subset": [
                         "rb_v1.2-approved",
+                        "os_v2.0-approved",
                         "rms_v3.0-approved"
+                    ]
+                },
+                "Thyroid": {
+                    "meaning": "ncit:C12400",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
                     ]
                 },
                 "Thyroid and Parathyroid": {
@@ -47713,6 +48120,27 @@
                     "comments": [],
                     "in_subset": [
                         "rms_v3.0-approved"
+                    ]
+                },
+                "Tibia": {
+                    "meaning": "ncit:C12800",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "Toe": {
+                    "meaning": "ncit:C33788",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "Tonsil": {
+                    "meaning": "ncit:C12802",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
                     ]
                 },
                 "Total Body": {
@@ -47727,6 +48155,13 @@
                     "comments": [],
                     "in_subset": [
                         "fa_v1.0-draft"
+                    ]
+                },
+                "Trachea": {
+                    "meaning": "ncit:C12428",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
                     ]
                 },
                 "Trunk": {
@@ -47744,11 +48179,26 @@
                         "rb_v1.2-approved"
                     ]
                 },
+                "Ulna": {
+                    "meaning": "ncit:C12809",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "Upper Airway": {
+                    "meaning": "ncit:C33839",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
                 "Upper Arm": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
                         "nrsts_v2.0-approved",
+                        "os_v2.0-approved",
                         "rms_v3.0-approved"
                     ]
                 },
@@ -47757,7 +48207,15 @@
                     "comments": [],
                     "in_subset": [
                         "ews_v2.0-approved",
+                        "os_v2.0-approved",
                         "rb_v1.2-approved"
+                    ]
+                },
+                "Ureter": {
+                    "meaning": "ncit:C12416",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
                     ]
                 },
                 "Urogenital": {
@@ -47771,6 +48229,7 @@
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
+                        "os_v2.0-approved",
                         "rms_v3.0-approved"
                     ]
                 },
@@ -47779,14 +48238,22 @@
                     "comments": [],
                     "in_subset": [
                         "gct_v2.0-approved",
+                        "os_v2.0-approved",
                         "rms_v3.0-approved"
                     ]
                 },
-                "Vulva": {
-                    "meaning": "",
+                "Viscera": {
+                    "meaning": "ncit:C28287",
                     "comments": [],
                     "in_subset": [
-                        "rms_v3.0-approved"
+                        "os_v2.0-approved"
+                    ]
+                },
+                "Vulva": {
+                    "meaning": "ncit:C12408",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
                     ]
                 },
                 "Whole Brain": {
@@ -47817,6 +48284,20 @@
                         "cns_v1.2-approved"
                     ]
                 },
+                "Wrist": {
+                    "meaning": "ncit:C33894",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "Wrist Joint": {
+                    "meaning": "ncit:C33894",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
                 "Other": {
                     "meaning": "ncit:C17649",
                     "comments": [],
@@ -47824,6 +48305,7 @@
                         "aml_v2.0-approved",
                         "hl_v2.0-approved",
                         "nrsts_v2.0-approved",
+                        "os_v2.0-approved",
                         "rms_v3.0-approved"
                     ]
                 },
@@ -47836,6 +48318,7 @@
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
                         "nrsts_v2.0-approved",
+                        "os_v2.0-approved",
                         "rb_v1.2-approved",
                         "rms_v3.0-approved"
                     ]
@@ -47849,6 +48332,7 @@
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
                         "nrsts_v2.0-approved",
+                        "os_v2.0-approved",
                         "rb_v1.2-approved",
                         "rms_v3.0-approved"
                     ]
@@ -54711,6 +55195,7 @@
                         "gct_v2.0-approved",
                         "npc_v1.0-approved",
                         "nrsts_v2.0-approved",
+                        "os_v2.0-approved",
                         "rb_v1.2-approved",
                         "rms_v3.0-approved"
                     ]
@@ -54726,6 +55211,7 @@
                         "hl_v2.0-approved",
                         "npc_v1.0-approved",
                         "nrsts_v2.0-approved",
+                        "os_v2.0-approved",
                         "rb_v1.2-approved",
                         "rms_v3.0-approved"
                     ]
@@ -54746,6 +55232,7 @@
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
                         "nrsts_v2.0-approved",
+                        "os_v2.0-approved",
                         "rb_v1.2-approved",
                         "rms_v3.0-approved"
                     ]
@@ -54758,6 +55245,7 @@
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
                         "npc_v1.0-approved",
+                        "os_v2.0-approved",
                         "rb_v1.2-approved"
                     ]
                 }
@@ -61037,7 +61525,8 @@
                         "ews_v2.0-approved",
                         "fa_v1.0-draft",
                         "hl_v2.0-approved",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "EBRT, Double Scattering": {
@@ -61057,7 +61546,8 @@
                         "ews_v2.0-approved",
                         "fa_v1.0-draft",
                         "hl_v2.0-approved",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "EBRT, NOS": {
@@ -61098,23 +61588,18 @@
                     ],
                     "in_subset": [
                         "fa_v1.0-draft",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "EBRT, Stereotactic Radiosurgery": {
                     "meaning": "ncit:C15358",
                     "comments": [],
                     "in_subset": [
-                        "ews_v2.0-approved",
-                        "npc_v1.0-approved"
-                    ]
-                },
-                "EBRT, Stereotactic radiosurgery": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
                         "cns_v1.2-approved",
+                        "ews_v2.0-approved",
                         "fa_v1.0-draft",
+                        "npc_v1.0-approved",
                         "rb_v1.2-approved"
                     ]
                 },
@@ -61253,7 +61738,8 @@
                         "cns_v1.2-approved",
                         "ews_v2.0-approved",
                         "fa_v1.0-draft",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "cGy": {
@@ -62695,21 +63181,24 @@
                     "meaning": "ncit:C12404",
                     "comments": [],
                     "in_subset": [
-                        "ews_v2.0-approved"
+                        "ews_v2.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Unknown": {
                     "meaning": "ncit:C17998",
                     "comments": [],
                     "in_subset": [
-                        "ews_v2.0-approved"
+                        "ews_v2.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Not Reported": {
                     "meaning": "ncit:C43234",
                     "comments": [],
                     "in_subset": [
-                        "ews_v2.0-approved"
+                        "ews_v2.0-approved",
+                        "os_v2.0-approved"
                     ]
                 }
             }
