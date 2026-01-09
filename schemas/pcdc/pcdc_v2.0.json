@@ -5838,6 +5838,7 @@
                 "response_method",
                 "response_category",
                 "response_system",
+                "response_system_version",
                 "response",
                 "mibg_score_type",
                 "mibg_score",
@@ -5976,6 +5977,14 @@
                     ]
                 },
                 "response_system": {
+                    "in_subset": [
+                        "cns_v1.2-approved",
+                        "ews_v2.0-approved",
+                        "gct_v2.0-approved",
+                        "rb_v1.2-approved"
+                    ]
+                },
+                "response_system_version": {
                     "in_subset": [
                         "cns_v1.2-approved",
                         "ews_v2.0-approved",
@@ -8982,6 +8991,14 @@
             "comments": [],
             "annotations": {
                 "tier_priority": "rb_v1.2-approved"
+            }
+        },
+        "response_system_version": {
+            "slot_uri": "ncit:C175042",
+            "range": "string",
+            "comments": [],
+            "annotations": {
+                "tier_optional": "npc_v1.0-approved"
             }
         },
         "mibg_score_type": {
