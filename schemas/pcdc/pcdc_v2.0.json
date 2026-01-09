@@ -5291,6 +5291,7 @@
                         "hl_v2.0-approved",
                         "npc_v1.0-approved",
                         "nrsts_v2.0-approved",
+                        "os_v2.0-approved",
                         "rb_v1.2-approved",
                         "rms_v3.0-approved"
                     ]
@@ -5436,7 +5437,8 @@
                 },
                 "transposition_organ": {
                     "in_subset": [
-                        "ews_v2.0-approved"
+                        "ews_v2.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "indication": {
@@ -55193,6 +55195,7 @@
                         "gct_v2.0-approved",
                         "npc_v1.0-approved",
                         "nrsts_v2.0-approved",
+                        "os_v2.0-approved",
                         "rb_v1.2-approved",
                         "rms_v3.0-approved"
                     ]
@@ -55208,6 +55211,7 @@
                         "hl_v2.0-approved",
                         "npc_v1.0-approved",
                         "nrsts_v2.0-approved",
+                        "os_v2.0-approved",
                         "rb_v1.2-approved",
                         "rms_v3.0-approved"
                     ]
@@ -55228,6 +55232,7 @@
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
                         "nrsts_v2.0-approved",
+                        "os_v2.0-approved",
                         "rb_v1.2-approved",
                         "rms_v3.0-approved"
                     ]
@@ -55240,6 +55245,7 @@
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
                         "npc_v1.0-approved",
+                        "os_v2.0-approved",
                         "rb_v1.2-approved"
                     ]
                 }
@@ -61519,7 +61525,8 @@
                         "ews_v2.0-approved",
                         "fa_v1.0-draft",
                         "hl_v2.0-approved",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "EBRT, Double Scattering": {
@@ -61539,7 +61546,8 @@
                         "ews_v2.0-approved",
                         "fa_v1.0-draft",
                         "hl_v2.0-approved",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "EBRT, NOS": {
@@ -61580,23 +61588,18 @@
                     ],
                     "in_subset": [
                         "fa_v1.0-draft",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "EBRT, Stereotactic Radiosurgery": {
                     "meaning": "ncit:C15358",
                     "comments": [],
                     "in_subset": [
-                        "ews_v2.0-approved",
-                        "npc_v1.0-approved"
-                    ]
-                },
-                "EBRT, Stereotactic radiosurgery": {
-                    "meaning": "",
-                    "comments": [],
-                    "in_subset": [
                         "cns_v1.2-approved",
+                        "ews_v2.0-approved",
                         "fa_v1.0-draft",
+                        "npc_v1.0-approved",
                         "rb_v1.2-approved"
                     ]
                 },
@@ -61735,7 +61738,8 @@
                         "cns_v1.2-approved",
                         "ews_v2.0-approved",
                         "fa_v1.0-draft",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "cGy": {
@@ -63177,21 +63181,24 @@
                     "meaning": "ncit:C12404",
                     "comments": [],
                     "in_subset": [
-                        "ews_v2.0-approved"
+                        "ews_v2.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Unknown": {
                     "meaning": "ncit:C17998",
                     "comments": [],
                     "in_subset": [
-                        "ews_v2.0-approved"
+                        "ews_v2.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Not Reported": {
                     "meaning": "ncit:C43234",
                     "comments": [],
                     "in_subset": [
-                        "ews_v2.0-approved"
+                        "ews_v2.0-approved",
+                        "os_v2.0-approved"
                     ]
                 }
             }
