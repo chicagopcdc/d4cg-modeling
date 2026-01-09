@@ -2983,7 +2983,6 @@
                 "diagnosis_category": {
                     "in_subset": [
                         "cns_v1.2-approved",
-                        "ews_v2.0-approved",
                         "lt_v1.0-approved"
                     ]
                 },
@@ -3434,6 +3433,7 @@
                 "myeloid_sarcoma_involvement",
                 "bulky_disease",
                 "pleural_effusion",
+                "peritoneal_effusion",
                 "pericardial_effusion",
                 "bulk_nodal_aggregate",
                 "med_ratio",
@@ -3684,7 +3684,6 @@
                 },
                 "measurement1_axis": {
                     "in_subset": [
-                        "ews_v2.0-approved",
                         "hl_v2.0-approved",
                         "ls_v1.0-draft",
                         "rb_v1.2-approved"
@@ -3706,7 +3705,6 @@
                 },
                 "measurement2_axis": {
                     "in_subset": [
-                        "ews_v2.0-approved",
                         "hl_v2.0-approved",
                         "ls_v1.0-draft",
                         "rb_v1.2-approved"
@@ -3728,7 +3726,6 @@
                 },
                 "measurement3_axis": {
                     "in_subset": [
-                        "ews_v2.0-approved",
                         "hl_v2.0-approved",
                         "ls_v1.0-draft",
                         "rb_v1.2-approved"
@@ -3760,7 +3757,13 @@
                 },
                 "pleural_effusion": {
                     "in_subset": [
+                        "ews_v2.0-approved",
                         "hl_v2.0-approved"
+                    ]
+                },
+                "peritoneal_effusion": {
+                    "in_subset": [
+                        "ews_v2.0-approved"
                     ]
                 },
                 "pericardial_effusion": {
@@ -8263,6 +8266,12 @@
             "annotations": {
                 "tier_mandatory": "hl_v2.0-approved"
             }
+        },
+        "peritoneal_effusion": {
+            "slot_uri": "ncit:C34402",
+            "range": "YesNoEnum",
+            "comments": [],
+            "annotations": {}
         },
         "pericardial_effusion": {
             "slot_uri": "ncit:C3319",
@@ -25674,6 +25683,7 @@
                     "meaning": "ncit:C74660",
                     "comments": [],
                     "in_subset": [
+                        "ews_v2.0-approved",
                         "gct_v2.0-approved"
                     ]
                 },
@@ -26776,6 +26786,7 @@
                     "meaning": "ncit:C185197",
                     "comments": [],
                     "in_subset": [
+                        "ews_v2.0-approved",
                         "fa_v1.0-draft",
                         "gct_v2.0-approved"
                     ]
@@ -26792,6 +26803,7 @@
                     "meaning": "ncit:C77613",
                     "comments": [],
                     "in_subset": [
+                        "ews_v2.0-approved",
                         "gct_v2.0-approved"
                     ]
                 },
@@ -50332,7 +50344,6 @@
                         "D4CGNote: Disease-specific, not a universal axis."
                     ],
                     "in_subset": [
-                        "ews_v2.0-approved",
                         "rb_v1.2-approved"
                     ]
                 },
@@ -50342,7 +50353,6 @@
                         "D4CGNote: This value is synonymous with 'Height'."
                     ],
                     "in_subset": [
-                        "ews_v2.0-approved",
                         "hl_v2.0-approved",
                         "rb_v1.2-approved"
                     ]
@@ -60842,13 +60852,6 @@
                     "comments": [],
                     "in_subset": [
                         "ls_v1.0-draft"
-                    ]
-                },
-                "Ewing Sarcoma": {
-                    "meaning": "ncit:C4817",
-                    "comments": [],
-                    "in_subset": [
-                        "ews_v2.0-approved"
                     ]
                 },
                 "Fibrolamellar carcinoma": {
