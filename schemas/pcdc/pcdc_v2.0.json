@@ -11455,6 +11455,13 @@
                         "aml_v2.0-approved"
                     ]
                 },
+                "BOCG": {
+                    "meaning": "ncit:C180373",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
                 "CBTN": {
                     "meaning": "ncit:C192778",
                     "comments": [],
@@ -11519,11 +11526,19 @@
                         "rms_v3.0-approved"
                     ]
                 },
+                "COSS-GPOH": {
+                    "meaning": "ncit:C186743",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
                 "CRCTU": {
                     "meaning": "ncit:C174966",
                     "comments": [],
                     "in_subset": [
-                        "ews_v2.0-approved"
+                        "ews_v2.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "CWS": {
@@ -11684,6 +11699,13 @@
                         "rb_v1.2-approved"
                     ]
                 },
+                "GEIS": {
+                    "meaning": "ncit:C180341",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
                 "GPOH": {
                     "meaning": "ncit:C174960",
                     "comments": [],
@@ -11691,7 +11713,8 @@
                         "ews_v2.0-approved",
                         "lt_v1.0-approved",
                         "nbl_v2.0-approved",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "IDIPGR": {
@@ -11806,7 +11829,8 @@
                     "comments": [],
                     "in_subset": [
                         "aml_v2.0-approved",
-                        "gct_v2.0-approved"
+                        "gct_v2.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Massachusetts General Hospital": {
@@ -11974,7 +11998,8 @@
                     "meaning": "ncit:C174961",
                     "comments": [],
                     "in_subset": [
-                        "ews_v2.0-approved"
+                        "ews_v2.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "STSC": {
@@ -12038,7 +12063,8 @@
                     "meaning": "ncit:C174967",
                     "comments": [],
                     "in_subset": [
-                        "ews_v2.0-approved"
+                        "ews_v2.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "UK": {
@@ -14764,11 +14790,25 @@
                         "cns_v1.2-approved"
                     ]
                 },
+                "CCG-782": {
+                     "meaning": "C180364",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
                 "CCG-921": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
                         "cns_v1.2-approved"
+                    ]
+                },
+                "CCG-7942": {
+                     "meaning": "C180365",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
                     ]
                 },
                 "CCG-9921": {
@@ -15175,7 +15215,7 @@
                         "cns_v1.2-approved"
                     ]
                 },
-                "EURAMOS1": {
+                "AOST0331/EURAMOS1": {
                     "meaning": "ncit:C180361",
                     "comments": [
                         "(os_v2.0-approved) ConsortiumNote: also known by COG study id AOST0331"
@@ -15485,6 +15525,13 @@
                     ],
                     "in_subset": [
                         "lt_v1.0-approved"
+                    ]
+                },
+                "INT133": {
+                    "meaning": "C180366",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
                     ]
                 },
                 "IRS-III": {
@@ -16035,6 +16082,13 @@
                     "in_subset": [
                         "gct_v2.0-approved",
                         "nbl_v2.0-approved"
+                    ]
+                },
+                "P9754": {
+                    "meaning": "ncit:C180368",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
                     ]
                 },
                 "P9761": {
@@ -16646,6 +16700,13 @@
                     ],
                     "in_subset": [
                         "fa_v1.0-draft"
+                    ]
+                },
+                "REOBONE": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
                     ]
                 },
                 "REMATCH": {
@@ -18814,6 +18875,41 @@
                         "cns_v1.2-approved"
                     ]
                 },
+                "AOST0221": {
+                    "meaning": "C180360",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "AOST0121": {
+                    "meaning": "C180358",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "AOST01P1": {
+                    "meaning": "C180359",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "AOST1321": {
+                    "meaning": "C180362",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "AOST1421": {
+                    "meaning": "C180363",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
                 "AOST0331:Maintenance therapy group 1 arm I (Cisplatin, Doxorubicin Hydrochloride, Methotrexate)": {
                     "meaning": "",
                     "comments": [],
@@ -19624,6 +19720,20 @@
                     "comments": [],
                     "in_subset": [
                         "npc_v1.0-approved"
+                    ]
+                },
+                "DOX": {
+                    "meaning": "C1326",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "DOX-IFOS": {
+                    "meaning": "C63686",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
                     ]
                 },
                 "EE99:Not Randomized": {
@@ -21703,6 +21813,20 @@
                     "comments": [],
                     "in_subset": [
                         "nbl_v2.0-approved"
+                    ]
+                },
+                "REG-ACTIVE": {
+                    "meaning": "C186778",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "REG-PLACEBO": {
+                    "meaning": "C186779",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
                     ]
                 },
                 "REMATCH:Left ventricular assist device (Left ventricular assist device)": {
