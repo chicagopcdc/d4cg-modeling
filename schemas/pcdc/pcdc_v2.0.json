@@ -5885,6 +5885,7 @@
                 "nbl_v2.0-approved",
                 "npc_v1.0-approved",
                 "nrsts_v2.0-approved",
+                "os_v2.0-approved",
                 "rb_v1.2-approved",
                 "rms_v3.0-approved"
             ],
@@ -5902,6 +5903,7 @@
                         "nbl_v2.0-approved",
                         "npc_v1.0-approved",
                         "nrsts_v2.0-approved",
+                        "os_v2.0-approved",
                         "rb_v1.2-approved",
                         "rms_v3.0-approved"
                     ]
@@ -5916,6 +5918,7 @@
                         "nbl_v2.0-approved",
                         "npc_v1.0-approved",
                         "nrsts_v2.0-approved",
+                        "os_v2.0-approved",
                         "rb_v1.2-approved",
                         "rms_v3.0-approved"
                     ]
@@ -5929,6 +5932,7 @@
                         "hl_v2.0-approved",
                         "npc_v1.0-approved",
                         "nrsts_v2.0-approved",
+                        "os_v2.0-approved",
                         "rb_v1.2-approved",
                         "rms_v3.0-approved"
                     ]
@@ -5975,6 +5979,7 @@
                         "nbl_v2.0-approved",
                         "npc_v1.0-approved",
                         "nrsts_v2.0-approved",
+                        "os_v2.0-approved",
                         "rb_v1.2-approved",
                         "rms_v3.0-approved"
                     ]
@@ -5992,6 +5997,7 @@
                         "cns_v1.2-approved",
                         "ews_v2.0-approved",
                         "gct_v2.0-approved",
+                        "os_v2.0-approved",
                         "rb_v1.2-approved"
                     ]
                 },
@@ -6000,6 +6006,7 @@
                         "cns_v1.2-approved",
                         "ews_v2.0-approved",
                         "gct_v2.0-approved",
+                        "os_v2.0-approved",
                         "rb_v1.2-approved"
                     ]
                 },
@@ -6071,13 +6078,15 @@
                 "necrosis": {
                     "in_subset": [
                         "ews_v2.0-approved",
-                        "nrsts_v2.0-approved"
+                        "nrsts_v2.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "necrosis_pct": {
                     "in_subset": [
                         "ews_v2.0-approved",
-                        "nrsts_v2.0-approved"
+                        "nrsts_v2.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "mri_sequence": {
@@ -6195,7 +6204,6 @@
                 "ae_code_system",
                 "ae_system_version",
                 "ae_grade",
-                "attribution",
                 "outcome",
                 "icu",
                 "supportive_medication",
@@ -6230,6 +6238,7 @@
                 "hl_v2.0-approved",
                 "lt_v1.0-approved",
                 "npc_v1.0-approved",
+                "os_v2.0-approved",
                 "rb_v1.2-approved"
             ],
             "annotations": {
@@ -6244,6 +6253,7 @@
                         "hl_v2.0-approved",
                         "lt_v1.0-approved",
                         "npc_v1.0-approved",
+                        "os_v2.0-approved",
                         "rb_v1.2-approved"
                     ]
                 },
@@ -6255,6 +6265,7 @@
                         "hl_v2.0-approved",
                         "lt_v1.0-approved",
                         "npc_v1.0-approved",
+                        "os_v2.0-approved",
                         "rb_v1.2-approved"
                     ]
                 },
@@ -6266,6 +6277,7 @@
                         "hl_v2.0-approved",
                         "lt_v1.0-approved",
                         "npc_v1.0-approved",
+                        "os_v2.0-approved",
                         "rb_v1.2-approved"
                     ]
                 },
@@ -6303,7 +6315,8 @@
                         "aml_v2.0-approved",
                         "ews_v2.0-approved",
                         "hl_v2.0-approved",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "ae_code_system": {
@@ -6311,14 +6324,16 @@
                         "aml_v2.0-approved",
                         "ews_v2.0-approved",
                         "hl_v2.0-approved",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "ae_system_version": {
                     "in_subset": [
                         "aml_v2.0-approved",
                         "hl_v2.0-approved",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "ae_grade": {
@@ -6328,15 +6343,18 @@
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
                         "npc_v1.0-approved",
+                        "os_v2.0-approved",
                         "rb_v1.2-approved"
                     ]
                 },
-                "attribution": {
+                "ae_attribution": {
                     "in_subset": [
                         "aml_v2.0-approved",
                         "ews_v2.0-approved",
                         "gct_v2.0-approved",
-                        "npc_v1.0-approved"
+                        "hl_v2.0-approved",
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "outcome": {
@@ -6409,11 +6427,6 @@
                     ]
                 },
                 "ae_reported": {
-                    "in_subset": [
-                        "hl_v2.0-approved"
-                    ]
-                },
-                "ae_attribution": {
                     "in_subset": [
                         "hl_v2.0-approved"
                     ]
@@ -6715,6 +6728,37 @@
                 "le_ctcae_version": {
                     "in_subset": [
                         "hl_v2.0-approved"
+                    ]
+                }
+            }
+        },
+        "PatientReportedOutcomesMetada": {
+            "slots": [
+                "subjects_submitter_id",
+                "pro_study_id",
+                "pro_measures"
+            ],
+            "comments": [],
+            "in_subset": [
+                "os_v2.0-approved"
+            ],
+            "annotations": {
+                "domain": "monitoring"
+            },
+            "slot_usage": {
+                "subjects_submitter_id": {
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "pro_study_id": {
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "pro_measure": {
+                    "in_subset": [
+                        "os_v2.0-approved"
                     ]
                 }
             }
@@ -11181,6 +11225,18 @@
             "range": "decimal",
             "comments": [],
             "annotations": {}
+        },
+        "pro_study_id": {
+            "slot_uri": "",
+            "range": "string",
+            "comments": [],
+            "annotations": {}
+        },
+        "pro_measure": {
+            "slot_uri": "",
+            "range": "ProMeasureEnum",
+            "comments": [],
+            "annotations": {}
         }
     },
     "enums": {
@@ -11399,6 +11455,13 @@
                         "aml_v2.0-approved"
                     ]
                 },
+                "BOCG": {
+                    "meaning": "ncit:C180373",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
                 "CBTN": {
                     "meaning": "ncit:C192778",
                     "comments": [],
@@ -11463,11 +11526,19 @@
                         "rms_v3.0-approved"
                     ]
                 },
+                "COSS-GPOH": {
+                    "meaning": "ncit:C186743",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
                 "CRCTU": {
                     "meaning": "ncit:C174966",
                     "comments": [],
                     "in_subset": [
-                        "ews_v2.0-approved"
+                        "ews_v2.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "CWS": {
@@ -11628,6 +11699,13 @@
                         "rb_v1.2-approved"
                     ]
                 },
+                "GEIS": {
+                    "meaning": "ncit:C180341",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
                 "GPOH": {
                     "meaning": "ncit:C174960",
                     "comments": [],
@@ -11635,7 +11713,8 @@
                         "ews_v2.0-approved",
                         "lt_v1.0-approved",
                         "nbl_v2.0-approved",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "IDIPGR": {
@@ -11750,7 +11829,8 @@
                     "comments": [],
                     "in_subset": [
                         "aml_v2.0-approved",
-                        "gct_v2.0-approved"
+                        "gct_v2.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Massachusetts General Hospital": {
@@ -11918,7 +11998,8 @@
                     "meaning": "ncit:C174961",
                     "comments": [],
                     "in_subset": [
-                        "ews_v2.0-approved"
+                        "ews_v2.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "STSC": {
@@ -11982,7 +12063,8 @@
                     "meaning": "ncit:C174967",
                     "comments": [],
                     "in_subset": [
-                        "ews_v2.0-approved"
+                        "ews_v2.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "UK": {
@@ -14708,11 +14790,25 @@
                         "cns_v1.2-approved"
                     ]
                 },
+                "CCG-782": {
+                     "meaning": "C180364",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
                 "CCG-921": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
                         "cns_v1.2-approved"
+                    ]
+                },
+                "CCG-7942": {
+                     "meaning": "C180365",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
                     ]
                 },
                 "CCG-9921": {
@@ -15119,7 +15215,7 @@
                         "cns_v1.2-approved"
                     ]
                 },
-                "EURAMOS1": {
+                "AOST0331/EURAMOS1": {
                     "meaning": "ncit:C180361",
                     "comments": [
                         "(os_v2.0-approved) ConsortiumNote: also known by COG study id AOST0331"
@@ -15429,6 +15525,13 @@
                     ],
                     "in_subset": [
                         "lt_v1.0-approved"
+                    ]
+                },
+                "INT133": {
+                    "meaning": "C180366",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
                     ]
                 },
                 "IRS-III": {
@@ -15979,6 +16082,13 @@
                     "in_subset": [
                         "gct_v2.0-approved",
                         "nbl_v2.0-approved"
+                    ]
+                },
+                "P9754": {
+                    "meaning": "ncit:C180368",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
                     ]
                 },
                 "P9761": {
@@ -16590,6 +16700,13 @@
                     ],
                     "in_subset": [
                         "fa_v1.0-draft"
+                    ]
+                },
+                "REGOBONE": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
                     ]
                 },
                 "REMATCH": {
@@ -18758,6 +18875,41 @@
                         "cns_v1.2-approved"
                     ]
                 },
+                "AOST0221": {
+                    "meaning": "C180360",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "AOST0121": {
+                    "meaning": "C180358",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "AOST01P1": {
+                    "meaning": "C180359",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "AOST1321": {
+                    "meaning": "C180362",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "AOST1421": {
+                    "meaning": "C180363",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
                 "AOST0331:Maintenance therapy group 1 arm I (Cisplatin, Doxorubicin Hydrochloride, Methotrexate)": {
                     "meaning": "",
                     "comments": [],
@@ -19568,6 +19720,20 @@
                     "comments": [],
                     "in_subset": [
                         "npc_v1.0-approved"
+                    ]
+                },
+                "DOX": {
+                    "meaning": "C1326",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "DOX-IFOS": {
+                    "meaning": "C63686",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
                     ]
                 },
                 "EE99:Not Randomized": {
@@ -21647,6 +21813,20 @@
                     "comments": [],
                     "in_subset": [
                         "nbl_v2.0-approved"
+                    ]
+                },
+                "REG-ACTIVE": {
+                    "meaning": "C186778",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "REG-PLACEBO": {
+                    "meaning": "C186779",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
                     ]
                 },
                 "REMATCH:Left ventricular assist device (Left ventricular assist device)": {
@@ -56268,6 +56448,7 @@
                         "ews_v2.0-approved",
                         "npc_v1.0-approved",
                         "nrsts_v2.0-approved",
+                        "os_v2.0-approved",
                         "rms_v3.0-approved"
                     ]
                 },
@@ -56397,7 +56578,8 @@
                     "comments": [],
                     "in_subset": [
                         "ews_v2.0-approved",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "RECIST >> Partial Response": {
@@ -56405,7 +56587,8 @@
                     "comments": [],
                     "in_subset": [
                         "ews_v2.0-approved",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "RECIST >> Progressive Disease": {
@@ -56413,7 +56596,8 @@
                     "comments": [],
                     "in_subset": [
                         "ews_v2.0-approved",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "RECIST >> Stable Disease": {
@@ -56421,7 +56605,8 @@
                     "comments": [],
                     "in_subset": [
                         "ews_v2.0-approved",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "System NOS >> Complete Response": {
@@ -56921,7 +57106,8 @@
                     "comments": [],
                     "in_subset": [
                         "ews_v2.0-approved",
-                        "gct_v2.0-approved"
+                        "gct_v2.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "WHO": {
@@ -57040,14 +57226,16 @@
                     "meaning": "ncit:C180353",
                     "comments": [],
                     "in_subset": [
-                        "ews_v2.0-approved"
+                        "ews_v2.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "> 90% Necrosis": {
                     "meaning": "ncit:C180348",
                     "comments": [],
                     "in_subset": [
-                        "ews_v2.0-approved"
+                        "ews_v2.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 ">=50% Necrosis": {
@@ -66527,7 +66715,8 @@
                     "meaning": "ncit:C49704",
                     "comments": [],
                     "in_subset": [
-                        "hl_v2.0-approved"
+                        "hl_v2.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "ICD": {
@@ -66550,6 +66739,20 @@
                     "in_subset": [
                         "hl_v2.0-approved"
                     ]
+                },
+                "Unknown": {
+                    "meaning": "ncit:C17998",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "Not Reported": {
+                    "meaning": "ncit:C43234",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
                 }
             }
         },
@@ -66561,6 +66764,7 @@
                     "in_subset": [
                         "aml_v2.0-approved",
                         "ews_v2.0-approved",
+                        "os_v2.0-approved",
                         "rb_v1.2-approved"
                     ]
                 },
@@ -66570,6 +66774,7 @@
                     "in_subset": [
                         "aml_v2.0-approved",
                         "ews_v2.0-approved",
+                        "os_v2.0-approved",
                         "rb_v1.2-approved"
                     ]
                 },
@@ -66579,6 +66784,7 @@
                     "in_subset": [
                         "aml_v2.0-approved",
                         "ews_v2.0-approved",
+                        "os_v2.0-approved",
                         "rb_v1.2-approved"
                     ]
                 },
@@ -66588,6 +66794,7 @@
                     "in_subset": [
                         "aml_v2.0-approved",
                         "ews_v2.0-approved",
+                        "os_v2.0-approved",
                         "rb_v1.2-approved"
                     ]
                 },
@@ -66597,6 +66804,7 @@
                     "in_subset": [
                         "aml_v2.0-approved",
                         "ews_v2.0-approved",
+                        "os_v2.0-approved",
                         "rb_v1.2-approved"
                     ]
                 },
@@ -66693,7 +66901,8 @@
                     "comments": [],
                     "in_subset": [
                         "hl_v2.0-approved",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Possible": {
@@ -66701,7 +66910,8 @@
                     "comments": [],
                     "in_subset": [
                         "hl_v2.0-approved",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Probable": {
@@ -66709,7 +66919,8 @@
                     "comments": [],
                     "in_subset": [
                         "hl_v2.0-approved",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Unlikely": {
@@ -66717,7 +66928,8 @@
                     "comments": [],
                     "in_subset": [
                         "hl_v2.0-approved",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Unrelated": {
@@ -66725,14 +66937,23 @@
                     "comments": [],
                     "in_subset": [
                         "hl_v2.0-approved",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Unknown": {
                     "meaning": "ncit:C17998",
                     "comments": [],
                     "in_subset": [
-                        "hl_v2.0-approved"
+                        "hl_v2.0-approved",
+                        "os_v2.0-approved"
+                    ]
+                },
+                "Not Reported": {
+                    "meaning": "ncit:C43234",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
                     ]
                 }
             }
@@ -70031,6 +70252,66 @@
                     "comments": [],
                     "in_subset": [
                         "ls_v1.0-draft"
+                    ]
+                }
+            }
+        },
+        "ProMeasureEnum": {
+            "permissible_values": {
+                "SAM": {
+                    "meaning": "ncit:C186690",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "TESS Upper Extremity": {
+                    "meaning": "ncit:C121219",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "TESS Lower Extremity": {
+                    "meaning": "ncit:C121218",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "EORTC QLQ-C30": {
+                    "meaning": "ncit:C120497",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "Global Rating of Change": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "Other": {
+                   "meaning": "ncit:C17649",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "Unknown": {
+                    "meaning": "ncit:C17998",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "Not Reported": {
+                    "meaning": "ncit:C43234",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
                     ]
                 }
             }
