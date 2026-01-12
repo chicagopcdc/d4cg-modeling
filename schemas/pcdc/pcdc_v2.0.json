@@ -6204,7 +6204,6 @@
                 "ae_code_system",
                 "ae_system_version",
                 "ae_grade",
-                "attribution",
                 "outcome",
                 "icu",
                 "supportive_medication",
@@ -6239,6 +6238,7 @@
                 "hl_v2.0-approved",
                 "lt_v1.0-approved",
                 "npc_v1.0-approved",
+                "os_v2.0-approved",
                 "rb_v1.2-approved"
             ],
             "annotations": {
@@ -6253,6 +6253,7 @@
                         "hl_v2.0-approved",
                         "lt_v1.0-approved",
                         "npc_v1.0-approved",
+                        "os_v2.0-approved",
                         "rb_v1.2-approved"
                     ]
                 },
@@ -6264,6 +6265,7 @@
                         "hl_v2.0-approved",
                         "lt_v1.0-approved",
                         "npc_v1.0-approved",
+                        "os_v2.0-approved",
                         "rb_v1.2-approved"
                     ]
                 },
@@ -6275,6 +6277,7 @@
                         "hl_v2.0-approved",
                         "lt_v1.0-approved",
                         "npc_v1.0-approved",
+                        "os_v2.0-approved",
                         "rb_v1.2-approved"
                     ]
                 },
@@ -6312,7 +6315,8 @@
                         "aml_v2.0-approved",
                         "ews_v2.0-approved",
                         "hl_v2.0-approved",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "ae_code_system": {
@@ -6320,14 +6324,16 @@
                         "aml_v2.0-approved",
                         "ews_v2.0-approved",
                         "hl_v2.0-approved",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "ae_system_version": {
                     "in_subset": [
                         "aml_v2.0-approved",
                         "hl_v2.0-approved",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "ae_grade": {
@@ -6337,15 +6343,18 @@
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
                         "npc_v1.0-approved",
+                        "os_v2.0-approved",
                         "rb_v1.2-approved"
                     ]
                 },
-                "attribution": {
+                "ae_attribution": {
                     "in_subset": [
                         "aml_v2.0-approved",
                         "ews_v2.0-approved",
                         "gct_v2.0-approved",
-                        "npc_v1.0-approved"
+                        "hl_v2.0-approved",
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "outcome": {
@@ -6418,11 +6427,6 @@
                     ]
                 },
                 "ae_reported": {
-                    "in_subset": [
-                        "hl_v2.0-approved"
-                    ]
-                },
-                "ae_attribution": {
                     "in_subset": [
                         "hl_v2.0-approved"
                     ]
@@ -6724,6 +6728,37 @@
                 "le_ctcae_version": {
                     "in_subset": [
                         "hl_v2.0-approved"
+                    ]
+                }
+            }
+        },
+        "PatientReportedOutcomesMetada": {
+            "slots": [
+                "subjects_submitter_id",
+                "pro_study_id",
+                "pro_measures"
+            ],
+            "comments": [],
+            "in_subset": [
+                "os_v2.0-approved"
+            ],
+            "annotations": {
+                "domain": "monitoring"
+            },
+            "slot_usage": {
+                "subjects_submitter_id": {
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "pro_study_id": {
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "pro_measure": {
+                    "in_subset": [
+                        "os_v2.0-approved"
                     ]
                 }
             }
@@ -11188,6 +11223,18 @@
         "small_bowel_polyps_total": {
             "slot_uri": "",
             "range": "decimal",
+            "comments": [],
+            "annotations": {}
+        },
+        "pro_study_id": {
+            "slot_uri": "",
+            "range": "string",
+            "comments": [],
+            "annotations": {}
+        },
+        "pro_measure": {
+            "slot_uri": "",
+            "range": "ProMeasureEnum",
             "comments": [],
             "annotations": {}
         }
@@ -66544,7 +66591,8 @@
                     "meaning": "ncit:C49704",
                     "comments": [],
                     "in_subset": [
-                        "hl_v2.0-approved"
+                        "hl_v2.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "ICD": {
@@ -66567,6 +66615,20 @@
                     "in_subset": [
                         "hl_v2.0-approved"
                     ]
+                },
+                "Unknown": {
+                    "meaning": "ncit:C17998",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "Not Reported": {
+                    "meaning": "ncit:C43234",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
                 }
             }
         },
@@ -66578,6 +66640,7 @@
                     "in_subset": [
                         "aml_v2.0-approved",
                         "ews_v2.0-approved",
+                        "os_v2.0-approved",
                         "rb_v1.2-approved"
                     ]
                 },
@@ -66587,6 +66650,7 @@
                     "in_subset": [
                         "aml_v2.0-approved",
                         "ews_v2.0-approved",
+                        "os_v2.0-approved",
                         "rb_v1.2-approved"
                     ]
                 },
@@ -66596,6 +66660,7 @@
                     "in_subset": [
                         "aml_v2.0-approved",
                         "ews_v2.0-approved",
+                        "os_v2.0-approved",
                         "rb_v1.2-approved"
                     ]
                 },
@@ -66605,6 +66670,7 @@
                     "in_subset": [
                         "aml_v2.0-approved",
                         "ews_v2.0-approved",
+                        "os_v2.0-approved",
                         "rb_v1.2-approved"
                     ]
                 },
@@ -66614,6 +66680,7 @@
                     "in_subset": [
                         "aml_v2.0-approved",
                         "ews_v2.0-approved",
+                        "os_v2.0-approved",
                         "rb_v1.2-approved"
                     ]
                 },
@@ -66710,7 +66777,8 @@
                     "comments": [],
                     "in_subset": [
                         "hl_v2.0-approved",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Possible": {
@@ -66718,7 +66786,8 @@
                     "comments": [],
                     "in_subset": [
                         "hl_v2.0-approved",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Probable": {
@@ -66726,7 +66795,8 @@
                     "comments": [],
                     "in_subset": [
                         "hl_v2.0-approved",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Unlikely": {
@@ -66734,7 +66804,8 @@
                     "comments": [],
                     "in_subset": [
                         "hl_v2.0-approved",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Unrelated": {
@@ -66742,14 +66813,23 @@
                     "comments": [],
                     "in_subset": [
                         "hl_v2.0-approved",
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "os_v2.0-approved"
                     ]
                 },
                 "Unknown": {
                     "meaning": "ncit:C17998",
                     "comments": [],
                     "in_subset": [
-                        "hl_v2.0-approved"
+                        "hl_v2.0-approved",
+                        "os_v2.0-approved"
+                    ]
+                },
+                "Not Reported": {
+                    "meaning": "ncit:C43234",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
                     ]
                 }
             }
@@ -70048,6 +70128,66 @@
                     "comments": [],
                     "in_subset": [
                         "ls_v1.0-draft"
+                    ]
+                }
+            }
+        },
+        "ProMeasureEnum": {
+            "permissible_values": {
+                "SAM": {
+                    "meaning": "ncit:C186690",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "TESS Upper Extremity": {
+                    "meaning": "ncit:C121219",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "TESS Lower Extremity": {
+                    "meaning": "ncit:C121218",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "EORTC QLQ-C30": {
+                    "meaning": "ncit:C120497",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "Global Rating of Change": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "Other": {
+                   "meaning": "ncit:C17649",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "Unknown": {
+                    "meaning": "ncit:C17998",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "Not Reported": {
+                    "meaning": "ncit:C43234",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
                     ]
                 }
             }
