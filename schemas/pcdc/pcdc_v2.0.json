@@ -6743,7 +6743,7 @@
             "slots": [
                 "subjects_submitter_id",
                 "pro_study_id",
-                "pro_measures"
+                "pro_measure"
             ],
             "comments": [],
             "in_subset": [
