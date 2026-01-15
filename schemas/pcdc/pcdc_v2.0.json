@@ -14468,6 +14468,41 @@
                         "nbl_v2.0-approved"
                     ]
                 },
+                "AOST0221": {
+                    "meaning": "ncit:C180360",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "AOST0121": {
+                    "meaning": "ncit:C180358",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "AOST01P1": {
+                    "meaning": "ncit:C180359",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "AOST1321": {
+                    "meaning": "ncit:C180362",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
+                "AOST1421": {
+                    "meaning": "ncit:C180363",
+                    "comments": [],
+                    "in_subset": [
+                        "os_v2.0-approved"
+                    ]
+                },
                 "APEC14B1": {
                     "meaning": "",
                     "comments": [],
@@ -18873,41 +18908,6 @@
                     "comments": [],
                     "in_subset": [
                         "cns_v1.2-approved"
-                    ]
-                },
-                "AOST0221": {
-                    "meaning": "ncit:C180360",
-                    "comments": [],
-                    "in_subset": [
-                        "os_v2.0-approved"
-                    ]
-                },
-                "AOST0121": {
-                    "meaning": "ncit:C180358",
-                    "comments": [],
-                    "in_subset": [
-                        "os_v2.0-approved"
-                    ]
-                },
-                "AOST01P1": {
-                    "meaning": "ncit:C180359",
-                    "comments": [],
-                    "in_subset": [
-                        "os_v2.0-approved"
-                    ]
-                },
-                "AOST1321": {
-                    "meaning": "ncit:C180362",
-                    "comments": [],
-                    "in_subset": [
-                        "os_v2.0-approved"
-                    ]
-                },
-                "AOST1421": {
-                    "meaning": "ncit:C180363",
-                    "comments": [],
-                    "in_subset": [
-                        "os_v2.0-approved"
                     ]
                 },
                 "AOST0331:Maintenance therapy group 1 arm I (Cisplatin, Doxorubicin Hydrochloride, Methotrexate)": {
