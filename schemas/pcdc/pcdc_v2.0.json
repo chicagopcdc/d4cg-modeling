@@ -11461,6 +11461,13 @@
                         "ls_v1.0-draft"
                     ]
                 },
+                "Beaumont Health Corewell Health": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "ls_v1.0-draft"
+                    ]
+                },
                 "BFM-SG": {
                     "meaning": "ncit:C168888",
                     "comments": [],
@@ -57907,6 +57914,27 @@
                     "comments": [],
                     "in_subset": [
                         "pre_v1.0-approved"
+                    ]
+                },
+                "Acute Lymphoblastic Leukemia": {
+                    "meaning": "ncit:C3167",
+                    "comments": [],
+                    "in_subset": [
+                        "ls_v1.0-draft"
+                    ]
+                },
+                "Acute Myeloid Leukemia": {
+                    "meaning": "ncit:C3171",
+                    "comments": [],
+                    "in_subset": [
+                        "ls_v1.0-draft"
+                    ]
+                },
+                "Acoustic Neuroma": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "ls_v1.0-draft"
                     ]
                 },
                 "Adenomatous Polyposis Coli": {
