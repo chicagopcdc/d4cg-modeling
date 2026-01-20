@@ -11448,6 +11448,13 @@
                         "ls_v1.0-draft"
                     ]
                 },
+                "Beaumont Health Corewell Health": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "ls_v1.0-draft"
+                    ]
+                },
                 "BFM-SG": {
                     "meaning": "ncit:C168888",
                     "comments": [],
@@ -57709,6 +57716,27 @@
                         "rb_v1.2-approved"
                     ]
                 },
+                "Acoustic Neuroma": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "ls_v1.0-draft"
+                    ]
+                },
+                "Acute Lymphoblastic Leukemia": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "ls_v1.0-draft"
+                    ]
+                },
+                "Acute Myeloid Leukemia": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "ls_v1.0-draft"
+                    ]
+                },
                 "ALL (Low Hypodiploid)": {
                     "meaning": "",
                     "comments": [],
@@ -57781,6 +57809,20 @@
                     ]
                 },
                 "Anal Anomaly, NOS": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "fa_v1.0-draft"
+                    ]
+                },
+                "Angiosarcoma": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "fa_v1.0-draft"
+                    ]
+                },
+                "Appendiceal": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
