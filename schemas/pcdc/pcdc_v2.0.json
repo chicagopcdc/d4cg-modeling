@@ -57819,14 +57819,17 @@
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
-                        "fa_v1.0-draft"
+                        "fa_v1.0-draft",
+                        "ls_v1.0-draft"
                     ]
                 },
                 "Appendiceal": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
-                        "fa_v1.0-draft"
+                        "fa_v1.0-draft",
+                        "ls_v1.0-draft"
+
                     ]
                 },
                 "Ataxia Telangiectasia Syndrome": {
