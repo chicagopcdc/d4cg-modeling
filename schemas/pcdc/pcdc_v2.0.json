@@ -395,7 +395,6 @@
                     "in_subset": [
                         "aml_v2.0-approved",
                         "cns_v1.2-approved",
-                        "fa_v1.0-draft",
                         "ls_v1.0-draft",
                         "npc_v1.0-approved"
                     ]
@@ -1427,7 +1426,6 @@
                 },
                 "laterality": {
                     "in_subset": [
-                        "fa_v1.0-draft",
                         "hl_v2.0-approved",
                         "rb_v1.2-approved"
                     ]
@@ -1594,7 +1592,7 @@
                 "result_numeric",
                 "vital_measurement_result_unit",
                 "anthropometric_measurement_result_unit",
-                "gestational_age_at_birth_weeks"
+                "gestational_age_at_birth"
             ],
             "comments": [
                 "D4CGNote: One observation/row per measurement when instantiated"
@@ -1659,7 +1657,6 @@
                 },
                 "vital_measurement_type": {
                     "in_subset": [
-                        "fa_v1.0-draft",
                         "os_v2.0-approved"
                     ]
                 },
@@ -1707,7 +1704,6 @@
                 },
                 "vital_measurement_result_unit": {
                     "in_subset": [
-                        "fa_v1.0-draft",
                         "os_v2.0-approved"
                     ]
                 },
@@ -1725,7 +1721,7 @@
                         "ls_v1.0-draft"
                     ]
                 },
-                "gestational_age_at_birth_weeks": {
+                "gestational_age_at_birth": {
                     "in_subset": [
                         "fa_v1.0-draft"
                     ]
@@ -1737,6 +1733,7 @@
                 "subjects_submitter_id",
                 "timings_submitter_id",
                 "age_at_lab",
+                "laboratory_test_status",
                 "laboratory_test",
                 "laboratory_test_method",
                 "laboratory_test_specimen",
@@ -1822,6 +1819,11 @@
                         "rb_v1.2-approved"
                     ]
                 },
+                "laboratory_test_status": {
+                    "in_subset": [
+                        "fa_v1.0-draft"
+                    ]
+                },
                 "laboratory_test": {
                     "in_subset": [
                         "aml_v2.0-approved",
@@ -1840,6 +1842,7 @@
                 "laboratory_test_method": {
                     "in_subset": [
                         "aml_v2.0-approved",
+                        "fa_v1.0-draft",
                         "gct_v2.0-approved",
                         "hl_v2.0-approved",
                         "rb_v1.2-approved"
@@ -4860,7 +4863,6 @@
                 "administration_status": {
                     "in_subset": [
                         "ews_v2.0-approved",
-                        "fa_v1.0-draft",
                         "npc_v1.0-approved",
                         "rb_v1.2-approved"
                     ]
@@ -6834,6 +6836,7 @@
             "inlined": false,
             "multivalued": true,
             "annotations": {
+                "tier_priority": "fa_v1.0-draft",
                 "tier_optional": "ls_v1.0-draft"
             }
         },
@@ -7324,7 +7327,9 @@
         "family_medical_history_condition": {
             "slot_uri": "ncit:C18772",
             "range": "string",
-            "comments": [],
+            "comments": [
+                "(fa_v1.0-draft) ConsortiumNote: Prioritize the following conditions: Fanconi Anemia, Squamous Cell Carcinoma, Breast Cancer, Ovarian Cancer, Leukemia, Cancer, NOS, Vertebral Anomaly, Anal Anomaly, Cardiac Structure Anomaly, Esophageal or Duodenal Atresia, Renal Anomaly, Upper Limb Anomaly, Hydrocephalus, Skin Pigmentation, Small Head, Small Eyes, Nervous System Abnormality, Otological Abnormality, and Short Stature."
+            ],
             "annotations": {
                 "tier_mandatory": "fa_v1.0-draft",
                 "tier_priority": "npc_v1.0-approved,rb_v1.2-approved",
@@ -7439,6 +7444,12 @@
         "medication_category": {
             "slot_uri": "ncit:C459",
             "range": "MedicationCategoryEnum",
+            "comments": [],
+            "annotations": {}
+        },
+        "laboratory_test_status": {
+            "slot_uri": "",
+            "range": "YesNoEnum",
             "comments": [],
             "annotations": {}
         },
@@ -10009,10 +10020,12 @@
                 "tier_optional": "rb_v1.2-approved"
             }
         },
-        "gestational_age_at_birth_weeks": {
+        "gestational_age_at_birth": {
             "slot_uri": "ncit:C124435",
             "range": "integer",
-            "comments": [],
+            "comments": [
+                "(fa_v1.0-draft) ConsortiumNote: Gestational age in days."
+            ],
             "annotations": {}
         },
         "breakage_source_lab": {
@@ -11502,6 +11515,13 @@
                     ]
                 },
                 "CIBER": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "fa_v1.0-draft"
+                    ]
+                },
+                "CMC Vellore": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
@@ -15124,6 +15144,13 @@
                     "comments": [
                         "(fa_v1.0-draft) ConsortiumNote: DATA_CONTRIBUTOR_ID == Christian Medical College and Hospital"
                     ],
+                    "in_subset": [
+                        "fa_v1.0-draft"
+                    ]
+                },
+                "CMC Vellore FA Registry": {
+                    "meaning": "",
+                    "comments": [],
                     "in_subset": [
                         "fa_v1.0-draft"
                     ]
@@ -24175,6 +24202,20 @@
                         "rb_v1.2-approved"
                     ]
                 },
+                "Kidney Failure": {
+                    "meaning": "ncit:C4376",
+                    "comments": [],
+                    "in_subset": [
+                        "fa_v1.0-draft"
+                    ]
+                },
+                "Liver Failure": {
+                    "meaning": "ncit:C26922",
+                    "comments": [],
+                    "in_subset": [
+                        "fa_v1.0-draft"
+                    ]
+                },
                 "Multi-Organ Failure": {
                     "meaning": "ncit:C75568",
                     "comments": [],
@@ -24560,7 +24601,6 @@
                     "meaning": "ncit:C25299",
                     "comments": [],
                     "in_subset": [
-                        "fa_v1.0-draft",
                         "os_v2.0-approved"
                     ]
                 },
@@ -24568,7 +24608,6 @@
                     "meaning": "ncit:C25749",
                     "comments": [],
                     "in_subset": [
-                        "fa_v1.0-draft",
                         "os_v2.0-approved"
                     ]
                 },
@@ -24576,7 +24615,6 @@
                     "meaning": "ncit:C49678",
                     "comments": [],
                     "in_subset": [
-                        "fa_v1.0-draft",
                         "os_v2.0-approved"
                     ]
                 },
@@ -24584,7 +24622,6 @@
                     "meaning": "ncit:C25298",
                     "comments": [],
                     "in_subset": [
-                        "fa_v1.0-draft",
                         "os_v2.0-approved"
                     ]
                 },
@@ -24592,7 +24629,6 @@
                     "meaning": "ncit:C25206",
                     "comments": [],
                     "in_subset": [
-                        "fa_v1.0-draft",
                         "os_v2.0-approved"
                     ]
                 }
@@ -24664,7 +24700,6 @@
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
-                        "fa_v1.0-draft",
                         "os_v2.0-approved"
                     ]
                 },
@@ -24672,7 +24707,6 @@
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
-                        "fa_v1.0-draft",
                         "os_v2.0-approved"
                     ]
                 },
@@ -24680,7 +24714,6 @@
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
-                        "fa_v1.0-draft",
                         "os_v2.0-approved"
                     ]
                 },
@@ -24688,7 +24721,6 @@
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
-                        "fa_v1.0-draft",
                         "os_v2.0-approved"
                     ]
                 }
@@ -26960,6 +26992,27 @@
                         "rb_v1.2-approved"
                     ]
                 },
+                "Bone Marrow Aspirate": {
+                    "meaning": "ncit:C133261",
+                    "comments": [],
+                    "in_subset": [
+                        "fa_v1.0-draft"
+                    ]
+                },
+                "Bone Marrow Core/Trephine Biopsy": {
+                    "meaning": "ncit:C159488",
+                    "comments": [],
+                    "in_subset": [
+                        "fa_v1.0-draft"
+                    ]
+                },
+                "Buccal Mucosa": {
+                    "meaning": "ncit:C12505",
+                    "comments": [],
+                    "in_subset": [
+                        "fa_v1.0-draft"
+                    ]
+                },
                 "Cell Free DNA BCT": {
                     "meaning": "",
                     "comments": [],
@@ -26977,11 +27030,53 @@
                         "rb_v1.2-approved"
                     ]
                 },
+                "Cervical Specimen": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "fa_v1.0-draft"
+                    ]
+                },
+                "Chorionic Villus Sampling": {
+                    "meaning": "ncit:C92755",
+                    "comments": [],
+                    "in_subset": [
+                        "fa_v1.0-draft"
+                    ]
+                },
+                "Cord Blood": {
+                    "meaning": "ncit:C13300",
+                    "comments": [],
+                    "in_subset": [
+                        "fa_v1.0-draft"
+                    ]
+                },
+                "Fetal Amniocytes": {
+                    "meaning": "ncit:C12497",
+                    "comments": [],
+                    "in_subset": [
+                        "fa_v1.0-draft"
+                    ]
+                },
                 "K2EDTA": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
                         "pre_v1.0-approved"
+                    ]
+                },
+                "Oral Brush Lesion": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "fa_v1.0-draft"
+                    ]
+                },
+                "Oral Brush Normal Appearing Mucosa": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "fa_v1.0-draft"
                     ]
                 },
                 "Peritoneal Fluid": {
@@ -27007,6 +27102,13 @@
                     "in_subset": [
                         "ews_v2.0-approved",
                         "gct_v2.0-approved"
+                    ]
+                },
+                "Primary Fibroblast": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "fa_v1.0-draft"
                     ]
                 },
                 "Saliva": {
@@ -27124,12 +27226,26 @@
                         "aml_v2.0-approved"
                     ]
                 },
+                "Morphology/Histology": {
+                    "meaning": "ncit:C17943",
+                    "comments": [],
+                    "in_subset": [
+                        "fa_v1.0-draft"
+                    ]
+                },
                 "PCR": {
                     "meaning": "ncit:C17003",
                     "comments": [],
                     "in_subset": [
                         "ews_v2.0-approved",
                         "hl_v2.0-approved"
+                    ]
+                },
+                "Ploidy": {
+                    "meaning": "ncit:C18303",
+                    "comments": [],
+                    "in_subset": [
+                        "fa_v1.0-draft"
                     ]
                 },
                 "ddPCR": {
