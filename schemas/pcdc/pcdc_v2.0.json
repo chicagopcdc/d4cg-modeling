@@ -11448,6 +11448,13 @@
                         "ls_v1.0-draft"
                     ]
                 },
+                "Beaumont Health Corewell Health": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "ls_v1.0-draft"
+                    ]
+                },
                 "BFM-SG": {
                     "meaning": "ncit:C168888",
                     "comments": [],
@@ -57709,6 +57716,27 @@
                         "rb_v1.2-approved"
                     ]
                 },
+                "Acoustic Neuroma": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "ls_v1.0-draft"
+                    ]
+                },
+                "Acute Lymphoblastic Leukemia": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "ls_v1.0-draft"
+                    ]
+                },
+                "Acute Myeloid Leukemia": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "ls_v1.0-draft"
+                    ]
+                },
                 "ALL (Low Hypodiploid)": {
                     "meaning": "",
                     "comments": [],
@@ -57787,6 +57815,27 @@
                         "fa_v1.0-draft"
                     ]
                 },
+                "Angiosarcoma": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "ls_v1.0-draft"
+                    ]
+                },
+                "Appendiceal": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "ls_v1.0-draft"
+                    ]
+                },
+                "Astrocytoma": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "ls_v1.0-draft"
+                    ]
+                },
                 "Ataxia Telangiectasia Syndrome": {
                     "meaning": "ncit:C2887",
                     "comments": [],
@@ -57826,7 +57875,8 @@
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
-                        "npc_v1.0-approved"
+                        "npc_v1.0-approved",
+                        "ls_v1.0-draft"                       
                     ]
                 },
                 "Beckwith-Wiedemann Syndrome": {
@@ -57875,12 +57925,26 @@
                         "pre_v1.0-approved"
                     ]
                 },
+                "Bone, NOS": {
+                    "meaning": "ncit:C131533",
+                    "comments": [],
+                    "in_subset": [
+                        "ls_v1.0-draft"
+                    ]                    
+                },
                 "Botryoid Rhabdomyosarcoma Of The Urogenital Tract (Fusion-Negative)": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
                         "npc_v1.0-approved"
                     ]
+                },
+                "Brain, NOS": {
+                    "meaning": "ncit:C131533",
+                    "comments": [],
+                    "in_subset": [
+                        "ls_v1.0-draft"
+                    ]                       
                 },
                 "Breast Cancer": {
                     "meaning": "ncit:C4872",
@@ -58175,6 +58239,13 @@
                         "fa_v1.0-draft"
                     ]
                 },
+                "Ewing Sarcoma": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "ls_v1.0-draft"
+                    ]                    
+                },
                 "Familial Adenomatous Polyposis": {
                     "meaning": "ncit:C3339",
                     "comments": [],
@@ -58457,6 +58528,13 @@
                         "npc_v1.0-approved"
                     ]
                 },
+                "Intraocular Melanoma": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "ls_v1.0-draft"
+                    ]                    
+                },
                 "Juvenile Idiopathic Arthritis": {
                     "meaning": "ncit:C114357",
                     "comments": [],
@@ -58484,6 +58562,13 @@
                     "in_subset": [
                         "npc_v1.0-approved"
                     ]
+                },
+                "Kidney (Renal Cell)": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "ls_v1.0-draft"
+                    ]                    
                 },
                 "Klinefelter Syndrome": {
                     "meaning": "ncit:C34752",
@@ -58661,7 +58746,8 @@
                     "comments": [],
                     "in_subset": [
                         "npc_v1.0-approved",
-                        "rb_v1.2-approved"
+                        "rb_v1.2-approved",
+                        "ls_v1.0-draft"
                     ]
                 },
                 "Meningioma": {
@@ -58713,6 +58799,13 @@
                         "pre_v1.0-approved"
                     ]
                 },
+                "Multiple Myeloma / Plasma Cell": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "ls_v1.0-draft"
+                    ]
+                },
                 "Multiple Osteochondromas": {
                     "meaning": "ncit:C53457",
                     "comments": [],
@@ -58734,6 +58827,13 @@
                     "in_subset": [
                         "npc_v1.0-approved"
                     ]
+                },
+                "Myelodysplastic / Myeloproliferative Cancers": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "ls_v1.0-draft"
+                    ]                    
                 },
                 "Myeloproliferative Neoplasms (except CML)": {
                     "meaning": "",
@@ -58784,6 +58884,13 @@
                         "fa_v1.0-draft"
                     ]
                 },
+                "Neuroblastoma": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "ls_v1.0-draft"
+                    ]                    
+                },
                 "Neuroendocrine Tumor": {
                     "meaning": "",
                     "comments": [],
@@ -58828,6 +58935,13 @@
                         "pre_v1.0-approved"
                     ]
                 },
+                "Non-Hodgkin Lymphoma": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "ls_v1.0-draft"
+                    ]                    
+                },
                 "Noonan Syndrome": {
                     "meaning": "ncit:C34854",
                     "comments": [],
@@ -58862,7 +58976,8 @@
                     "meaning": "ncit:C9145",
                     "comments": [],
                     "in_subset": [
-                        "rb_v1.2-approved"
+                        "rb_v1.2-approved",
+                        "ls_v1.0-draft"
                     ]
                 },
                 "Other Cancer": {
@@ -58883,7 +58998,8 @@
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
-                        "fa_v1.0-draft"
+                        "fa_v1.0-draft",
+                        "ls_v1.0-draft"
                     ]
                 },
                 "PIK3CA-Related Overgrowth Spectrum": {
@@ -58973,6 +59089,13 @@
                         "lt_v1.0-approved"
                     ]
                 },
+                "Primary Peritoneal": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "ls_v1.0-draft"
+                    ]                    
+                },
                 "Psoriasis": {
                     "meaning": "ncit:C3346",
                     "comments": [],
@@ -59020,6 +59143,7 @@
                     "comments": [],
                     "in_subset": [
                         "npc_v1.0-approved",
+                        "ls_v1.0-draft",
                         "rb_v1.2-approved"
                     ]
                 },
@@ -59055,6 +59179,7 @@
                     "meaning": "ncit:C3359",
                     "comments": [],
                     "in_subset": [
+                        "ls_v1.0-draft",
                         "rb_v1.2-approved"
                     ]
                 },
@@ -59079,6 +59204,20 @@
                     "in_subset": [
                         "pre_v1.0-approved"
                     ]
+                },
+                "Sarcoma, NOS": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "ls_v1.0-draft"
+                    ]                    
+                },
+                "Salivary Gland": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "ls_v1.0-draft"
+                    ]                    
                 },
                 "SAMD9L-Related Myelodysplastic Syndrome Predisposition": {
                     "meaning": "ncit:C178390",
@@ -59115,6 +59254,13 @@
                     "in_subset": [
                         "npc_v1.0-approved"
                     ]
+                },
+                "Sebaceous Adenocarcinoma": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "ls_v1.0-draft"
+                    ]                    
                 },
                 "Secondary Malignancy": {
                     "meaning": "",
@@ -59165,12 +59311,26 @@
                         "pre_v1.0-approved"
                     ]
                 },
+                "Skin, NOS": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "ls_v1.0-draft"
+                    ]                    
+                },
                 "Skin Pigmentation": {
                     "meaning": "",
                     "comments": [],
                     "in_subset": [
                         "fa_v1.0-draft"
                     ]
+                },
+                "Small Bowel": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "ls_v1.0-draft"
+                    ]                    
                 },
                 "Small Cell Carcin Of The Ovary Hypercalcemic Type": {
                     "meaning": "",
@@ -59197,6 +59357,7 @@
                     "meaning": "ncit:C9306",
                     "comments": [],
                     "in_subset": [
+                        "ls_v1.0-draft",
                         "rb_v1.2-approved"
                     ]
                 },
@@ -59206,6 +59367,13 @@
                     "in_subset": [
                         "pre_v1.0-approved"
                     ]
+                },
+                "Stomach": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "ls_v1.0-draft"
+                    ]                    
                 },
                 "Squamous Cell Carcinoma": {
                     "meaning": "",
@@ -59241,6 +59409,20 @@
                     "in_subset": [
                         "hl_v2.0-approved"
                     ]
+                },
+                "Testicular": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "ls_v1.0-draft"
+                    ]        
+                },
+                "Thymoma / Thymic Carcinoma": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "ls_v1.0-draft"
+                    ]                                
                 },
                 "Thyroid Cancer": {
                     "meaning": "ncit:C4815",
@@ -59307,6 +59489,20 @@
                         "fa_v1.0-draft"
                     ]
                 },
+                "Urethral": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "ls_v1.0-draft"
+                    ]      
+                },
+                "Urinary Tract, NOS": {
+                    "meaning": "",
+                    "comments": [],
+                    "in_subset": [
+                        "ls_v1.0-draft"
+                    ]                                                 
+                },
                 "Vertebral Anomaly, NOS": {
                     "meaning": "",
                     "comments": [],
@@ -59326,7 +59522,7 @@
                     "comments": [],
                     "in_subset": [
                         "pre_v1.0-approved"
-                    ]
+                    ]                 
                 },
                 "WAGR Syndrome": {
                     "meaning": "ncit:C3718",
