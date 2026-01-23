@@ -1967,6 +1967,7 @@
                 "cascade_testing",
                 "genetic_analysis_method",
                 "genetic_analysis_specimen",
+                "molecular_analysis_sample_source",
                 "specimen_classification",
                 "biological_analyte",
                 "source_pct",
@@ -2133,6 +2134,15 @@
                         "fa_v1.0-draft",
                         "nbl_v2.0-approved",
                         "rb_v1.2-approved",
+                        "rms_v3.0-approved"
+                    ]
+                },
+                "molecular_analysis_sample_source": {
+                    "in_subset": [
+                        "aml_v2.0-approved",
+                        "gct_v2.0-approved",
+                        "nbl_v2.0-approved",
+                        "nrsts_v2.0-approved",
                         "rms_v3.0-approved"
                     ]
                 },
@@ -7654,6 +7664,14 @@
                 "tier_optional": "ls_v1.0-draft"
             }
         },
+        "molecular_analysis_sample_source": {
+            "slot_uri": "ncit:C178080",
+            "range": "string",
+            "comments": [],
+            "annotations": {
+                "tier_optional": "rb_v1.2-approved,ls_v1.0-draft"
+            }
+        },
         "iscn": {
             "slot_uri": "ncit:C156450",
             "range": "string",
@@ -9576,8 +9594,7 @@
         "sedation_type": {
             "slot_uri": "",
             "range": "SedationTypeEnum",
-            "comments": [
-            ],
+            "comments": [],
             "annotations": {}
         },
         "mri_sequence": {
@@ -11310,7 +11327,7 @@
             }
         },
         "ActiveResolvedEnum": {
-            "permissible_values":{
+            "permissible_values": {
                 "Active": {
                     "meaning": "",
                     "comments": [],
@@ -14826,7 +14843,7 @@
                     ]
                 },
                 "CCG-782": {
-                     "meaning": "C180364",
+                    "meaning": "C180364",
                     "comments": [],
                     "in_subset": [
                         "os_v2.0-approved"
@@ -14840,7 +14857,7 @@
                     ]
                 },
                 "CCG-7942": {
-                     "meaning": "C180365",
+                    "meaning": "C180365",
                     "comments": [],
                     "in_subset": [
                         "os_v2.0-approved"
@@ -23352,7 +23369,7 @@
                     "comments": [],
                     "in_subset": [
                         "ls_v1.0-draft"
-                  ]
+                    ]
                 },
                 "Immunotherapy": {
                     "meaning": "ncit:C15262",
@@ -42191,7 +42208,7 @@
                     "in_subset": [
                         "pre_v1.0-approved"
                     ]
-                }, 
+                },
                 "Childrens Oncology Group/National Wilms Tumor Study Group Staging System >> Stage 1": {
                     "meaning": "ncit:C198025",
                     "comments": [],
@@ -46996,7 +47013,7 @@
                         "os_v2.0-approved"
                     ]
                 },
-                 "Adrenal Gland": {
+                "Adrenal Gland": {
                     "meaning": "ncit:C12666",
                     "comments": [],
                     "in_subset": [
@@ -70294,7 +70311,7 @@
                     ]
                 },
                 "Other": {
-                   "meaning": "ncit:C17649",
+                    "meaning": "ncit:C17649",
                     "comments": [],
                     "in_subset": [
                         "os_v2.0-approved"
