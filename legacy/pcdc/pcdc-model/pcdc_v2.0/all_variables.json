@@ -118,7 +118,7 @@
             "subsequent_malignant_neoplasm": "One row per subject per subsequent malignancy"
         }
     },
-    "subject_characteristics.HONEST_BROKER_SUBJECT_ID": {
+    "subject_characteristics.subjects_submitter_id": {
         "sources": [
             "aml_v2.0",
             "gct_v2.0",
@@ -11247,7 +11247,7 @@
             }
         }
     },
-    "time_period.HONEST_BROKER_SUBJECT_ID": {
+    "time_period.subjects_submitter_id": {
         "sources": [
             "aml_v2.0",
             "gct_v2.0",
@@ -11336,7 +11336,7 @@
         },
         "codes": {},
         "descriptions": {
-            "An ID provided by the data contributor that identifies a unique time period and that is referenced throughout subsequent tabels in the TIME_PERIOD_SUBMITTER_ID variables.": [
+            "An ID provided by the data contributor that identifies a unique time period and that is referenced throughout subsequent tabels in the timings_submitter_id variables.": [
                 "aml_v2.0",
                 "gct_v2.0",
                 "hl_v2.0",
@@ -12437,7 +12437,7 @@
             ]
         }
     },
-    "off_protocol_therapy/study.HONEST_BROKER_SUBJECT_ID": {
+    "off_protocol_therapy/study.subjects_submitter_id": {
         "sources": [
             "aml_v2.0"
         ],
@@ -12491,7 +12491,7 @@
             "aml_v2.0": []
         }
     },
-    "off_protocol_therapy/study.TIME_PERIOD_SUBMITTER_ID": {
+    "off_protocol_therapy/study.timings_submitter_id": {
         "sources": [
             "aml_v2.0"
         ],
@@ -12890,7 +12890,7 @@
             }
         }
     },
-    "demographics.HONEST_BROKER_SUBJECT_ID": {
+    "demographics.subjects_submitter_id": {
         "sources": [
             "aml_v2.0",
             "gct_v2.0",
@@ -13970,7 +13970,7 @@
             }
         }
     },
-    "medical_history.HONEST_BROKER_SUBJECT_ID": {
+    "medical_history.subjects_submitter_id": {
         "sources": [
             "aml_v2.0",
             "gct_v2.0",
@@ -15163,7 +15163,7 @@
             }
         }
     },
-    "survival_characteristics.HONEST_BROKER_SUBJECT_ID": {
+    "survival_characteristics.subjects_submitter_id": {
         "sources": [
             "aml_v2.0",
             "gct_v2.0",
@@ -15289,7 +15289,7 @@
             "rms_v2.0": []
         }
     },
-    "survival_characteristics.TIME_PERIOD_SUBMITTER_ID": {
+    "survival_characteristics.timings_submitter_id": {
         "sources": [
             "aml_v2.0",
             "gct_v2.0",
@@ -16669,7 +16669,7 @@
             }
         }
     },
-    "vitals_and_anthropometrics.HONEST_BROKER_SUBJECT_ID": {
+    "vitals_and_anthropometrics.subjects_submitter_id": {
         "sources": [
             "aml_v2.0",
             "gct_v2.0",
@@ -16757,7 +16757,7 @@
             ]
         }
     },
-    "vitals_and_anthropometrics.TIME_PERIOD_SUBMITTER_ID": {
+    "vitals_and_anthropometrics.timings_submitter_id": {
         "sources": [
             "aml_v2.0",
             "gct_v2.0",
@@ -17243,7 +17243,7 @@
             }
         }
     },
-    "function_test.HONEST_BROKER_SUBJECT_ID": {
+    "function_test.subjects_submitter_id": {
         "sources": [
             "aml_v2.0",
             "hl_v2.0"
@@ -17311,7 +17311,7 @@
             "hl_v2.0": []
         }
     },
-    "function_test.TIME_PERIOD_SUBMITTER_ID": {
+    "function_test.timings_submitter_id": {
         "sources": [
             "aml_v2.0",
             "hl_v2.0"
@@ -17869,7 +17869,7 @@
             }
         }
     },
-    "laboratory_test.HONEST_BROKER_SUBJECT_ID": {
+    "laboratory_test.subjects_submitter_id": {
         "sources": [
             "aml_v2.0",
             "gct_v2.0",
@@ -17966,7 +17966,7 @@
             "nbl_v2.0": []
         }
     },
-    "laboratory_test.TIME_PERIOD_SUBMITTER_ID": {
+    "laboratory_test.timings_submitter_id": {
         "sources": [
             "aml_v2.0",
             "gct_v2.0",
@@ -20153,7 +20153,7 @@
             }
         }
     },
-    "molecular_analysis.HONEST_BROKER_SUBJECT_ID": {
+    "molecular_analysis.subjects_submitter_id": {
         "sources": [
             "aml_v2.0",
             "gct_v2.0",
@@ -20266,7 +20266,7 @@
             "rms_v2.0": []
         }
     },
-    "molecular_analysis.TIME_PERIOD_SUBMITTER_ID": {
+    "molecular_analysis.timings_submitter_id": {
         "sources": [
             "aml_v2.0",
             "gct_v2.0",
@@ -20302,6 +20302,56 @@
             "nbl_v2.0": [
                 "New VD"
             ]
+        }
+    },
+    "molecular_analysis.MOLECULAR_ANALYSIS_SAMPLE_SOURCE": {
+        "sources": [
+            "aml_v2.0",
+            "gct_v2.0",
+            "nbl_v2.0",
+            "nrsts_v2.0",
+            "rms_v2.0"
+        ],
+        "types": {
+            "Code": [
+                "aml_v2.0",
+                "gct_v2.0",
+                "nbl_v2.0",
+                "nrsts_v2.0",
+                "rms_v2.0"
+            ]
+        },
+        "codes": {
+            "ncit:C178080": [
+                "aml_v2.0",
+                "gct_v2.0",
+                "nbl_v2.0",
+                "nrsts_v2.0",
+                "rms_v2.0"
+            ]
+        },
+        "descriptions": {
+            "The anatomic source of the molecular analysis sample.": [
+                "aml_v2.0",
+                "gct_v2.0",
+                "nbl_v2.0",
+                "nrsts_v2.0",
+                "rms_v2.0"
+            ]
+        },
+        "inotes": {
+            "aml_v2.0": [],
+            "gct_v2.0": [],
+            "nbl_v2.0": [],
+            "nrsts_v2.0": [],
+            "rms_v2.0": []
+        },
+        "mappings": {
+            "aml_v2.0": [],
+            "gct_v2.0": [],
+            "nbl_v2.0": [],
+            "nrsts_v2.0": [],
+            "rms_v2.0": []
         }
     },
     "molecular_analysis.MOLECULAR_ANALYSIS_METHOD": {
@@ -23053,7 +23103,7 @@
             "rms_v2.0": []
         }
     },
-    "molecular_analysis.GENE1": {
+    "molecular_analysis.gene": {
         "sources": [
             "aml_v2.0",
             "gct_v2.0",
@@ -23070,10 +23120,9 @@
         },
         "codes": {
             "ncit:C173595": [
-                "aml_v2.0"
-            ],
-            "ncit:C17595": [
-                "gct_v2.0"
+                "aml_v2.0",
+                "gct_v2.0",
+                "rms_v2.0"
             ]
         },
         "descriptions": {
@@ -23099,7 +23148,7 @@
             "rms_v2.0": []
         }
     },
-    "molecular_analysis.GENE2": {
+    "molecular_analysis.gene_fusion_partner": {
         "sources": [
             "aml_v2.0",
             "gct_v2.0",
@@ -23363,11 +23412,13 @@
                 "sources": [
                     "aml_v2.0",
                     "gct_v2.0",
-                    "nbl_v2.0"
+                    "nbl_v2.0",
+                    "rms_v2.0"
                 ],
                 "codes": {
                     "ncit:C40207": [
-                        "aml_v2.0"
+                        "aml_v2.0",
+                        "rms_v2.0"
                     ],
                     "ncit:40207": [
                         "gct_v2.0"
@@ -23376,7 +23427,8 @@
                 "descriptions": {
                     "Variation in the number of copies of a particular sequence within the genetic material of an individual. Large-scale copy number polymorphisms are common and widely distributed in the human genome.": [
                         "aml_v2.0",
-                        "gct_v2.0"
+                        "gct_v2.0",
+                        "rms_v2.0"
                     ],
                     "": [
                         "nbl_v2.0"
@@ -23385,12 +23437,14 @@
                 "inotes": {
                     "aml_v2.0": [],
                     "gct_v2.0": [],
-                    "nbl_v2.0": []
+                    "nbl_v2.0": [],
+                    "rms_v2.0": []
                 },
                 "mappings": {
                     "aml_v2.0": [],
                     "gct_v2.0": [],
-                    "nbl_v2.0": []
+                    "nbl_v2.0": [],
+                    "rms_v2.0": []
                 }
             },
             "Rearrangement": {
@@ -23674,27 +23728,6 @@
                 },
                 "mappings": {
                     "nbl_v2.0": [],
-                    "rms_v2.0": []
-                }
-            },
-            "Copy Integer Alteration": {
-                "sources": [
-                    "rms_v2.0"
-                ],
-                "codes": {
-                    "C40207": [
-                        "rms_v2.0"
-                    ]
-                },
-                "descriptions": {
-                    "Variation in the Integer of copies of a particular sequence within the genetic material of an individual. Large-scale copy Integer polymorphisms are common and widely distributed in the human genome.": [
-                        "rms_v2.0"
-                    ]
-                },
-                "inotes": {
-                    "rms_v2.0": []
-                },
-                "mappings": {
                     "rms_v2.0": []
                 }
             }
@@ -23989,7 +24022,7 @@
             "nbl_v2.0": []
         }
     },
-    "diagnosis.HONEST_BROKER_SUBJECT_ID": {
+    "diagnosis.subjects_submitter_id": {
         "sources": [
             "aml_v2.0",
             "gct_v2.0",
@@ -24121,7 +24154,7 @@
             ]
         }
     },
-    "diagnosis.TIME_PERIOD_SUBMITTER_ID": {
+    "diagnosis.timings_submitter_id": {
         "sources": [
             "aml_v2.0",
             "gct_v2.0",
@@ -28157,7 +28190,7 @@
             }
         }
     },
-    "disease_site_assessment.HONEST_BROKER_SUBJECT_ID": {
+    "disease_site_assessment.subjects_submitter_id": {
         "sources": [
             "aml_v2.0",
             "gct_v2.0",
@@ -28253,7 +28286,7 @@
             ]
         }
     },
-    "disease_site_assessment.TIME_PERIOD_SUBMITTER_ID": {
+    "disease_site_assessment.timings_submitter_id": {
         "sources": [
             "aml_v2.0",
             "gct_v2.0",
@@ -31629,7 +31662,7 @@
             }
         }
     },
-    "medication.HONEST_BROKER_SUBJECT_ID": {
+    "medication.subjects_submitter_id": {
         "sources": [
             "aml_v2.0",
             "gct_v2.0",
@@ -31767,7 +31800,7 @@
             ]
         }
     },
-    "medication.TIME_PERIOD_SUBMITTER_ID": {
+    "medication.timings_submitter_id": {
         "sources": [
             "aml_v2.0",
             "gct_v2.0",
@@ -34171,7 +34204,7 @@
             }
         }
     },
-    "radiation_therapy.HONEST_BROKER_SUBJECT_ID": {
+    "radiation_therapy.subjects_submitter_id": {
         "sources": [
             "aml_v2.0",
             "gct_v2.0",
@@ -34320,7 +34353,7 @@
             "hl_v2.0": []
         }
     },
-    "radiation_therapy.TIME_PERIOD_SUBMITTER_ID": {
+    "radiation_therapy.timings_submitter_id": {
         "sources": [
             "aml_v2.0",
             "gct_v2.0",
@@ -36553,7 +36586,7 @@
             }
         }
     },
-    "stem_cell_transplant.HONEST_BROKER_SUBJECT_ID": {
+    "stem_cell_transplant.subjects_submitter_id": {
         "sources": [
             "aml_v2.0",
             "gct_v2.0",
@@ -36637,7 +36670,7 @@
             "hl_v2.0": []
         }
     },
-    "stem_cell_transplant.TIME_PERIOD_SUBMITTER_ID": {
+    "stem_cell_transplant.timings_submitter_id": {
         "sources": [
             "aml_v2.0",
             "gct_v2.0",
@@ -38409,7 +38442,7 @@
             }
         }
     },
-    "transfusion_medicine_procedures.HONEST_BROKER_SUBJECT_ID": {
+    "transfusion_medicine_procedures.subjects_submitter_id": {
         "sources": [
             "aml_v2.0"
         ],
@@ -38463,7 +38496,7 @@
             "aml_v2.0": []
         }
     },
-    "transfusion_medicine_procedures.TIME_PERIOD_SUBMITTER_ID": {
+    "transfusion_medicine_procedures.timings_submitter_id": {
         "sources": [
             "aml_v2.0"
         ],
@@ -38757,7 +38790,7 @@
             }
         }
     },
-    "cellular_immunotherapy.HONEST_BROKER_SUBJECT_ID": {
+    "cellular_immunotherapy.subjects_submitter_id": {
         "sources": [
             "aml_v2.0"
         ],
@@ -38811,7 +38844,7 @@
             "aml_v2.0": []
         }
     },
-    "cellular_immunotherapy.TIME_PERIOD_SUBMITTER_ID": {
+    "cellular_immunotherapy.timings_submitter_id": {
         "sources": [
             "aml_v2.0"
         ],
@@ -38970,7 +39003,7 @@
             }
         }
     },
-    "minimal_residual_disease.HONEST_BROKER_SUBJECT_ID": {
+    "minimal_residual_disease.subjects_submitter_id": {
         "sources": [
             "aml_v2.0"
         ],
@@ -39022,7 +39055,7 @@
             "aml_v2.0": []
         }
     },
-    "minimal_residual_disease.TIME_PERIOD_SUBMITTER_ID": {
+    "minimal_residual_disease.timings_submitter_id": {
         "sources": [
             "aml_v2.0"
         ],
@@ -40810,7 +40843,7 @@
             }
         }
     },
-    "subject_response.HONEST_BROKER_SUBJECT_ID": {
+    "subject_response.subjects_submitter_id": {
         "sources": [
             "aml_v2.0",
             "gct_v2.0",
@@ -40924,7 +40957,7 @@
             "rms_v2.0": []
         }
     },
-    "subject_response.TIME_PERIOD_SUBMITTER_ID": {
+    "subject_response.timings_submitter_id": {
         "sources": [
             "aml_v2.0",
             "gct_v2.0",
@@ -41996,7 +42029,7 @@
             }
         }
     },
-    "adverse_events.HONEST_BROKER_SUBJECT_ID": {
+    "adverse_events.subjects_submitter_id": {
         "sources": [
             "aml_v2.0",
             "gct_v2.0",
@@ -42120,7 +42153,7 @@
             "hl_v2.0": []
         }
     },
-    "adverse_events.TIME_PERIOD_SUBMITTER_ID": {
+    "adverse_events.timings_submitter_id": {
         "sources": [
             "aml_v2.0",
             "gct_v2.0",
@@ -44803,7 +44836,7 @@
             }
         }
     },
-    "subsequent_malignant_neoplasm.HONEST_BROKER_SUBJECT_ID": {
+    "subsequent_malignant_neoplasm.subjects_submitter_id": {
         "sources": [
             "aml_v2.0",
             "nbl_v2.0",
@@ -45916,7 +45949,7 @@
             "gct_v2.0": []
         }
     },
-    "immunohistochemistry.HONEST_BROKER_SUBJECT_ID": {
+    "immunohistochemistry.subjects_submitter_id": {
         "sources": [
             "gct_v2.0",
             "hl_v2.0"
@@ -45984,7 +46017,7 @@
             "hl_v2.0": []
         }
     },
-    "immunohistochemistry.TIME_PERIOD_SUBMITTER_ID": {
+    "immunohistochemistry.timings_submitter_id": {
         "sources": [
             "gct_v2.0",
             "hl_v2.0"
@@ -47058,7 +47091,7 @@
             }
         }
     },
-    "staging.HONEST_BROKER_SUBJECT_ID": {
+    "staging.subjects_submitter_id": {
         "sources": [
             "gct_v2.0",
             "hl_v2.0",
@@ -47154,7 +47187,7 @@
             "rms_v2.0": []
         }
     },
-    "staging.TIME_PERIOD_SUBMITTER_ID": {
+    "staging.timings_submitter_id": {
         "sources": [
             "gct_v2.0",
             "hl_v2.0",
@@ -48761,7 +48794,7 @@
             }
         }
     },
-    "disease_characteristics.HONEST_BROKER_SUBJECT_ID": {
+    "disease_characteristics.subjects_submitter_id": {
         "sources": [
             "gct_v2.0",
             "hl_v2.0",
@@ -48805,7 +48838,7 @@
             ]
         }
     },
-    "disease_characteristics.TIME_PERIOD_SUBMITTER_ID": {
+    "disease_characteristics.timings_submitter_id": {
         "sources": [
             "gct_v2.0",
             "hl_v2.0",
@@ -49933,7 +49966,7 @@
             "gct_v2.0": []
         }
     },
-    "biopsy_and_surgical_procedures.HONEST_BROKER_SUBJECT_ID": {
+    "biopsy_and_surgical_procedures.subjects_submitter_id": {
         "sources": [
             "gct_v2.0",
             "hl_v2.0",
@@ -50031,7 +50064,7 @@
             "rms_v2.0": []
         }
     },
-    "biopsy_and_surgical_procedures.TIME_PERIOD_SUBMITTER_ID": {
+    "biopsy_and_surgical_procedures.timings_submitter_id": {
         "sources": [
             "gct_v2.0",
             "hl_v2.0",
@@ -54105,7 +54138,7 @@
             }
         }
     },
-    "off_protocol_therapy_or_study.HONEST_BROKER_SUBJECT_ID": {
+    "off_protocol_therapy_or_study.subjects_submitter_id": {
         "sources": [
             "hl_v2.0"
         ],
@@ -54159,7 +54192,7 @@
             "hl_v2.0": []
         }
     },
-    "off_protocol_therapy_or_study.TIME_PERIOD_SUBMITTER_ID": {
+    "off_protocol_therapy_or_study.timings_submitter_id": {
         "sources": [
             "hl_v2.0"
         ],
@@ -54687,7 +54720,7 @@
             }
         }
     },
-    "family_medical_history.HONEST_BROKER_SUBJECT_ID": {
+    "family_medical_history.subjects_submitter_id": {
         "sources": [
             "hl_v2.0"
         ],
@@ -58444,7 +58477,7 @@
             }
         }
     },
-    "protocol_treatment_modifications.HONEST_BROKER_SUBJECT_ID": {
+    "protocol_treatment_modifications.subjects_submitter_id": {
         "sources": [
             "hl_v2.0"
         ],
@@ -58496,7 +58529,7 @@
             ]
         }
     },
-    "protocol_treatment_modifications.TIME_PERIOD_SUBMITTER_ID": {
+    "protocol_treatment_modifications.timings_submitter_id": {
         "sources": [
             "hl_v2.0"
         ],
@@ -61794,7 +61827,7 @@
             ]
         }
     },
-    "transfusion_medicine_procedure.HONEST_BROKER_SUBJECT_ID": {
+    "transfusion_medicine_procedure.subjects_submitter_id": {
         "sources": [
             "hl_v2.0"
         ],
@@ -61848,7 +61881,7 @@
             "hl_v2.0": []
         }
     },
-    "transfusion_medicine_procedure.TIME_PERIOD_SUBMITTER_ID": {
+    "transfusion_medicine_procedure.timings_submitter_id": {
         "sources": [
             "hl_v2.0"
         ],
@@ -67924,7 +67957,7 @@
             }
         }
     },
-    "subsequent_malignant_neoplasm.TIME_PERIOD_SUBMITTER_ID": {
+    "subsequent_malignant_neoplasm.timings_submitter_id": {
         "sources": [
             "nbl_v2.0"
         ],
